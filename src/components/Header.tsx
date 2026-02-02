@@ -1,42 +1,80 @@
+import React from "react";
 import { Button } from "@/components/ui/button";
-import { Zap } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Header = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 glass">
+    <header className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/50">
       <div className="container mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
+          {/* Logo */}
           <a href="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-xl gradient-hero-bg flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
-              <Zap className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <span className="text-2xl font-display font-bold text-foreground">
-              pzaz<span className="gradient-text">.io</span>
+            <span className="text-2xl font-bold text-foreground">
+              Pzaz<span className="gradient-text">.io</span>
             </span>
           </a>
 
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors font-medium">
+            <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors font-medium text-sm">
               Features
             </a>
-            <a href="#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors font-medium">
-              How it works
+            <a href="#products" className="text-muted-foreground hover:text-foreground transition-colors font-medium text-sm">
+              Products
             </a>
-            <a href="#testimonials" className="text-muted-foreground hover:text-foreground transition-colors font-medium">
-              Testimonials
+            <a href="#workflow" className="text-muted-foreground hover:text-foreground transition-colors font-medium text-sm">
+              Workflow
+            </a>
+            <a href="#integrations" className="text-muted-foreground hover:text-foreground transition-colors font-medium text-sm">
+              Integrations
             </a>
           </div>
 
-          <div className="flex items-center gap-3">
-            <Button variant="ghost" className="hidden sm:inline-flex">
+          {/* CTA Buttons */}
+          <div className="hidden md:flex items-center gap-3">
+            <Button variant="ghost" size="sm">
               Log in
             </Button>
-            <Button variant="hero" size="default">
-              Get Started
+            <Button variant="default" size="sm">
+              Start for Free
             </Button>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-2"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </nav>
       </div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-background border-t border-border/50"
+          >
+            <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
+              <a href="#features" className="text-foreground font-medium py-2">Features</a>
+              <a href="#products" className="text-foreground font-medium py-2">Products</a>
+              <a href="#workflow" className="text-foreground font-medium py-2">Workflow</a>
+              <a href="#integrations" className="text-foreground font-medium py-2">Integrations</a>
+              <hr className="border-border/50" />
+              <Button variant="ghost" className="justify-start">Log in</Button>
+              <Button variant="default">Start for Free</Button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };
