@@ -1,29 +1,51 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Bot, Cloud, Coins } from "lucide-react";
+import { Bot, Cloud, Coins, Music, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const aiOptions = [
   {
     icon: <Bot className="w-8 h-8" />,
     name: "AI Producer",
-    description: "Your AI production partner that helps with breakdowns, scheduling suggestions, and creative decisions.",
+    description: "Your AI production partner — from storyboard to screen in record time. Includes character builder with AI voices, location & sky designers, and AudioPilot.",
     price: "€99",
-    period: "/ month"
+    period: "/ month",
+    tag: "NEW",
+    features: ["AI-driven storyboards", "Character & voice builder", "Weather simulation", "Private AI learning"]
   },
   {
     icon: <Cloud className="w-8 h-8" />,
-    name: "Private AI Cloud",
-    description: "NDA-safe, isolated AI environment for sensitive productions and studio confidentiality.",
+    name: "Private LLM",
+    description: "Fully isolated AI environment — ideal for studios with NDAs or sensitive IP. Guarantees compliance with film financing and production confidentiality.",
     price: "€249",
-    period: "/ month"
+    period: "/ month",
+    tag: "ENTERPRISE",
+    features: ["Dedicated AI instance", "Total data privacy", "NDA-compliant", "Enhanced performance"]
+  },
+  {
+    icon: <Music className="w-8 h-8" />,
+    name: "AudioPilot",
+    description: "Audio design companion for pre-visualization. Automatically generates soundscapes and atmospheres per scene to help align creative vision early.",
+    price: "€29",
+    period: "/ month",
+    tag: "NEW",
+    features: ["AI soundscapes per scene", "Matches tone & mood", "Pairs with Storyboard"]
+  },
+  {
+    icon: <Users className="w-8 h-8" />,
+    name: "Extra User",
+    description: "Expand your team instantly — no new setup needed. Every user inherits all purchased tools with expanded storage and video conferencing.",
+    price: "€29",
+    period: "/ user / month",
+    features: ["Inherits all tools", "Expanded storage", "Video conferencing", "Permission management"]
   },
   {
     icon: <Coins className="w-8 h-8" />,
     name: "AI Credits",
-    description: "Pay only for what you generate. Perfect for occasional AI assistance without commitment.",
-    price: "Usage",
-    period: "-based"
+    description: "Scalable AI usage across tools — pay only for what you generate. Flexible credit system for text, image, and video generation.",
+    price: "Pay",
+    period: "per use",
+    features: ["Flexible credit system", "Track consumption", "Multi-tool compatible"]
   }
 ];
 
@@ -44,7 +66,7 @@ const PricingAI = () => {
         >
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent-foreground text-sm font-medium mb-6">
             <Bot className="w-4 h-4" />
-            Optional Add-on
+            Add-ons & Extras
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             Add speed when you're ready
@@ -55,7 +77,7 @@ const PricingAI = () => {
         </motion.div>
 
         {/* AI Options Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {aiOptions.map((option, index) => (
             <motion.div
               key={option.name}
@@ -66,15 +88,35 @@ const PricingAI = () => {
               className="relative group"
             >
               <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative p-8 rounded-2xl border border-border bg-card h-full flex flex-col">
-                <div className="w-16 h-16 rounded-2xl gradient-bg flex items-center justify-center text-primary-foreground mb-6">
+              <div className="relative p-6 rounded-2xl border border-border bg-card h-full flex flex-col">
+                {/* Tag */}
+                {option.tag && (
+                  <span className={`absolute top-4 right-4 px-2 py-0.5 rounded text-xs font-bold ${
+                    option.tag === "NEW" ? "bg-primary/20 text-primary" : "bg-accent/20 text-accent-foreground"
+                  }`}>
+                    {option.tag}
+                  </span>
+                )}
+                
+                <div className="w-14 h-14 rounded-2xl gradient-bg flex items-center justify-center text-primary-foreground mb-5">
                   {option.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-2">{option.name}</h3>
-                <p className="text-muted-foreground text-sm mb-6 flex-grow">{option.description}</p>
+                <p className="text-muted-foreground text-sm mb-4 flex-grow">{option.description}</p>
+                
+                {/* Features */}
+                <div className="space-y-2 mb-5">
+                  {option.features.map((feature, i) => (
+                    <div key={i} className="flex items-center gap-2 text-xs text-muted-foreground">
+                      <div className="w-1 h-1 rounded-full bg-primary" />
+                      {feature}
+                    </div>
+                  ))}
+                </div>
+                
                 <div className="flex items-baseline gap-1 mb-4">
-                  <span className="text-3xl font-bold text-foreground">{option.price}</span>
-                  <span className="text-muted-foreground">{option.period}</span>
+                  <span className="text-2xl font-bold text-foreground">{option.price}</span>
+                  <span className="text-muted-foreground text-sm">{option.period}</span>
                 </div>
                 <Button variant="outline" className="w-full">
                   Add to plan
