@@ -36,7 +36,7 @@ const ProblemSection = () => {
           >
             {/* Fragmented tools */}
             <div className="bg-transparent py-8 px-[60px] border border-[#D4BAF4] rounded-[38px]">
-              <h3 className="text-xl font-semibold mb-6 text-foreground">
+              <h3 className="font-lato font-bold text-2xl leading-[70px] tracking-normal text-foreground">
                 This is no longer a tooling problem.
               </h3>
               <div className="space-y-4">
