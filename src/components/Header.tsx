@@ -40,7 +40,7 @@ const Header = () => {
             <Button variant="ghost" size="sm">
               Log in
             </Button>
-            <Button variant="default" size="sm">
+            <Button variant="default" size="sm" style={{ background: "linear-gradient(247.38deg, #29FADF -2.17%, #8B1DFF 84.87%)" }}>
               Start for Free
             </Button>
           </div>
