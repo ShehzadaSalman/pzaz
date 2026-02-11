@@ -9,7 +9,7 @@ const ProblemSection = () => {
       {/* <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl pointer-events-none -translate-y-1/2" /> */}
       
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           {/* Section header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -32,29 +32,29 @@ const ProblemSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid md:grid-cols-2 gap-8 mb-12"
+            className="grid md:grid-cols-2  mb-12"
           >
             {/* Fragmented tools */}
-            <div className="bg-transparent py-8 px-[60px] border border-[#D4BAF4] rounded-[38px]">
-              <h3 className="font-lato font-bold text-2xl leading-[70px] tracking-normal text-foreground">
+            <div className="bg-white/30 py-8  px-[60px] pb-[50px] border border-[#D4BAF4] rounded-[38px]">
+              <h3 className="font-lato font-bold text-2xl pt-4 pb-8 tracking-normal text-foreground">
                 This is no longer a tooling problem.
               </h3>
               <div className="space-y-4">
-                <div className="flex items-center gap-4 p-3 bg-destructive/5 rounded-lg border border-destructive/20">
-                  <img src={iconWarning} alt="" className="w-5 h-5" />
-                  <span className="text-sm">Scripts live in one tool.</span>
+                <div className="flex items-center gap-4 h-[70px] p-6 bg-[#EF6F9B]/5 rounded-lg border border-[#EF6F9B]">
+                  <img src={iconWarning} alt="" className="w-6 h-6" />
+                  <span className="text-[20px] font-lato">Scripts live in one tool.</span>
                 </div>
-                <div className="flex items-center gap-4 p-3 bg-destructive/5 rounded-lg border border-destructive/20">
-                  <img src={iconWarning} alt="" className="w-5 h-5" />
-                  <span className="text-sm">Budgets in another.</span>
+                <div className="flex items-center gap-4 h-[70px] p-6 bg-[#EF6F9B]/5 rounded-lg border border-[#EF6F9B]">
+                  <img src={iconWarning} alt="" className="w-6 h-6" />
+                  <span className="text-[20px] font-lato">Budgets in another.</span>
                 </div>
-                <div className="flex items-center gap-4 p-3 bg-destructive/5 rounded-lg border border-destructive/20">
-                  <img src={iconWarning} alt="" className="w-5 h-5" />
-                  <span className="text-sm">Schedules somewhere else.</span>
+                <div className="flex items-center gap-4 h-[70px] p-6 bg-[#EF6F9B]/5 rounded-lg border border-[#EF6F9B]">
+                  <img src={iconWarning} alt="" className="w-6 h-6" />
+                  <span className="text-[20px] font-lato">Schedules somewhere else.</span>
                 </div>
-                <div className="flex items-center gap-4 p-3 bg-destructive/5 rounded-lg border border-destructive/20">
-                  <img src={iconWarning} alt="" className="w-5 h-5" />
-                  <span className="text-sm">Files and feedback everywhere.</span>
+                <div className="flex items-center gap-4 h-[70px] p-6 bg-[#EF6F9B]/5 rounded-lg border border-[#EF6F9B]">
+                  <img src={iconWarning} alt="" className="w-6 h-6" />
+                  <span className="text-[20px] font-lato">Files and feedback everywhere.</span>
                 </div>
               </div>
             </div>
