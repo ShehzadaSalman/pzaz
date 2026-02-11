@@ -35,7 +35,7 @@ const ProblemSection = () => {
             className="grid md:grid-cols-2 gap-8 mb-12"
           >
             {/* Fragmented tools */}
-            <div className="bg-transparent rounded-3xl p-8 border border-[#3207BC]">
+            <div className="bg-transparent rounded-3xl p-8 border border-[#D4BAF4]">
               <h3 className="text-xl font-semibold mb-6 text-foreground">
                 This is no longer a tooling problem.
               </h3>
