@@ -16,7 +16,7 @@ const Header = () => {
           {/* Logo */}
           <a href="/" className="flex items-center group" style={{ gap: 16 }}>
             <img src={pzazLogo} alt="Pzaz" className="h-8" />
-            <Pill text="Script" style={{ backgroundColor: "#F7F2FD", color: "hsl(var(--primary))" }} />
+            <Pill text="Script" style={{ backgroundColor: "#F7F2FD", color: "#7C3AED" }} />
           </a>
 
           {/* Desktop Navigation */}
