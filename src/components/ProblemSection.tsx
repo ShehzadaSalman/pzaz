@@ -73,11 +73,11 @@ const ProblemSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid md:grid-cols-2 mb-12"
+            className="flex items-center mb-12"
           >
 
             {/* The result */}
-            <div className="bg-card rounded-2xl p-8 border border-border/50">
+            <div className="flex-1 bg-card rounded-2xl p-8 border border-border/50">
               <h3 className="text-xl font-semibold mb-6 text-primary">
                 It's an AI and workflow problem.
               </h3>
@@ -91,6 +91,9 @@ const ProblemSection = () => {
                 Film is still a human craft, but the tools behind it are fragmented. When one scene changes, everything else should update automatically.
               </p>
             </div>
+
+            {/* Horizontal divider line */}
+            <div className="w-[60px] h-[4px] bg-[#AF55FB] flex-shrink-0" />
 
             {/* AI workflow illustration */}
             <div className="flex items-center justify-center -ml-[80px]">
