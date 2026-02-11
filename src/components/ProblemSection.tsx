@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import iconWarning from "@/assets/icon-warning.svg";
 import fragmentedTools from "@/assets/fragmented-tools.png";
+import aiWorkflowPuzzle from "@/assets/ai-workflow-puzzle.png";
 
 const ProblemSection = () => {
   return (
@@ -72,7 +73,7 @@ const ProblemSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid md:grid-cols-2 gap-8 mb-12"
+            className="grid md:grid-cols-2 mb-12"
           >
 
             {/* The result */}
@@ -91,6 +92,10 @@ const ProblemSection = () => {
               </p>
             </div>
 
+            {/* AI workflow illustration */}
+            <div className="flex items-center justify-center -ml-[80px]">
+              <img src={aiWorkflowPuzzle} alt="AI workflow puzzle illustration" className="max-w-full h-auto" />
+            </div>
 
           </motion.div>
 
