@@ -19,16 +19,16 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#features" className="transition-colors font-medium text-sm text-secondary-foreground">
+            <a href="#features" className="transition-colors font-medium text-sm" style={{ color: "#20124D" }}>
               Features
             </a>
-            <a href="#products" className="transition-colors font-medium text-sm text-secondary-foreground">
+            <a href="#products" className="transition-colors font-medium text-sm" style={{ color: "#20124D" }}>
               Products
             </a>
-            <a href="#workflow" className="transition-colors font-medium text-sm text-secondary-foreground">
+            <a href="#workflow" className="transition-colors font-medium text-sm" style={{ color: "#20124D" }}>
               Workflow
             </a>
-            <a href="#integrations" className="transition-colors font-medium text-sm text-secondary-foreground">
+            <a href="#integrations" className="transition-colors font-medium text-sm" style={{ color: "#20124D" }}>
               Integrations
             </a>
           </div>
