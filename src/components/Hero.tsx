@@ -66,7 +66,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-sm text-muted-foreground"
+            className="font-lato font-normal text-[16px] leading-[30px] tracking-normal text-center text-[#878787]"
           >
             No credit card. Up and running in 15 minutes.
           </motion.p>
