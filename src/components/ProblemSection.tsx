@@ -4,7 +4,7 @@ import { FileText, Calculator, Calendar, MessagesSquare } from "lucide-react";
 
 const ProblemSection = () => {
   return (
-    <section className="section-padding bg-secondary/30 relative overflow-hidden">
+    <section className="section-padding bg-[#FBFBFB] relative overflow-hidden">
       {/* Background accent */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl pointer-events-none -translate-y-1/2" />
       
@@ -18,10 +18,10 @@ const ProblemSection = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-balance">
-              Plans change. <span className="gradient-text">Productions break.</span>
+            <h2 className="font-lato font-extrabold text-5xl leading-[70px] tracking-normal">
+              Plans change. <span className="font-lato font-extrabold text-[48px] leading-[70px] tracking-normal text-transparent bg-clip-text bg-gradient-to-r to-[#409DFF] from-[#3207BC]">Productions break.</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-[#878787] max-w-2xl mx-auto leading-relaxed">
               Film productions don't slow down because of creativity. They slow down because every change triggers manual rework.
             </p>
           </motion.div>
