@@ -59,6 +59,16 @@ const ProblemSection = () => {
               </div>
             </div>
 
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="grid md:grid-cols-2 gap-8 mb-12"
+          >
+
             {/* The result */}
             <div className="bg-card rounded-2xl p-8 border border-border/50">
               <h3 className="text-xl font-semibold mb-6 text-primary">
@@ -74,6 +84,8 @@ const ProblemSection = () => {
                 Film is still a human craft, but the tools behind it are fragmented. When one scene changes, everything else should update automatically.
               </p>
             </div>
+
+
           </motion.div>
 
           {/* Key insight */}
