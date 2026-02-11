@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import pzazLogo from "@/assets/pzaz-logo.png";
+import iconSurvey from "@/assets/icon-survey.svg";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -41,6 +42,7 @@ const Header = () => {
               Log in
             </Button>
             <Button variant="default" size="sm" style={{ background: "linear-gradient(247.38deg, #29FADF -2.17%, #8B1DFF 84.87%)" }}>
+              <img src={iconSurvey} alt="" className="w-4 h-4" />
               Start for Free
             </Button>
           </div>
