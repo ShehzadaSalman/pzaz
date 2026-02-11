@@ -49,7 +49,7 @@ const Hero = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6"
           >
             <Button size="lg" className="group text-base px-8" style={{ background: "linear-gradient(247.38deg, #29FADF -2.17%, #8B1DFF 84.87%)" }}>
-              <img src={iconSurvey} alt="" className="w-5 h-5" />
+              <img src={iconSurvey} alt="" className="w-6 h-6" />
               Start for Free
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
