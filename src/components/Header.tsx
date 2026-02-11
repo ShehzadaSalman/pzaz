@@ -21,16 +21,16 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#features" className="transition-colors font-medium text-sm" style={{ color: "#20124D" }}>
+            <a href="#features" className="transition-colors" style={{ color: "#20124D", fontFamily: "'Lato', sans-serif", fontWeight: 400, fontSize: 14, lineHeight: "24px" }}>
               Features
             </a>
-            <a href="#products" className="transition-colors font-medium text-sm" style={{ color: "#20124D" }}>
+            <a href="#products" className="transition-colors" style={{ color: "#20124D", fontFamily: "'Lato', sans-serif", fontWeight: 400, fontSize: 14, lineHeight: "24px" }}>
               Products
             </a>
-            <a href="#workflow" className="transition-colors font-medium text-sm" style={{ color: "#20124D" }}>
+            <a href="#workflow" className="transition-colors" style={{ color: "#20124D", fontFamily: "'Lato', sans-serif", fontWeight: 400, fontSize: 14, lineHeight: "24px" }}>
               Workflow
             </a>
-            <a href="#integrations" className="transition-colors font-medium text-sm" style={{ color: "#20124D" }}>
+            <a href="#integrations" className="transition-colors" style={{ color: "#20124D", fontFamily: "'Lato', sans-serif", fontWeight: 400, fontSize: 14, lineHeight: "24px" }}>
               Integrations
             </a>
           </div>
