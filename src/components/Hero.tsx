@@ -54,8 +54,8 @@ const Hero = () => {
               Import a Script
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" strokeWidth={3} />
             </Button>
-            <Button variant="outline" size="lg" className="group px-8 font-lato font-black text-xl leading-[25px]">
-              <img src={ctaPlayIcon} alt="" className="w-5 h-5" />
+            <Button variant="outline" size="lg" className="group px-8 font-lato font-black text-xl leading-[25px] text-primary hover:text-primary-foreground">
+              <img src={ctaPlayIcon} alt="" className="w-5 h-5 transition-all [filter:none] group-hover:[filter:brightness(0)_invert(1)]" />
               Book Studio Demo
             </Button>
           </motion.div>
