@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import pzazLogo from "@/assets/pzaz-logo.png";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -13,9 +14,7 @@ const Header = () => {
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <a href="/" className="flex items-center gap-2 group">
-            <span className="text-2xl font-bold text-foreground">
-              Pzaz<span className="gradient-text">.io</span>
-            </span>
+            <img src={pzazLogo} alt="Pzaz" className="h-8" />
           </a>
 
           {/* Desktop Navigation */}

@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import pzazLogo from "@/assets/pzaz-logo.png";
 
 const BlogHeader = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -14,9 +15,7 @@ const BlogHeader = () => {
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <span className="text-2xl font-bold text-foreground">
-              Pzaz<span className="gradient-text">.io</span>
-            </span>
+            <img src={pzazLogo} alt="Pzaz" className="h-8" />
           </Link>
 
           {/* Desktop Navigation */}

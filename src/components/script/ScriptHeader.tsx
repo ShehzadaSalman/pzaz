@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, FileText } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import pzazLogo from "@/assets/pzaz-logo.png";
 
 const ScriptHeader = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -13,9 +14,7 @@ const ScriptHeader = () => {
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <span className="text-2xl font-bold text-foreground">
-              Pzaz<span className="gradient-text">.io</span>
-            </span>
+            <img src={pzazLogo} alt="Pzaz" className="h-8" />
             <span className="text-xs font-medium text-muted-foreground bg-secondary px-2 py-0.5 rounded-full">
               Script
             </span>
