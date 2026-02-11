@@ -21,7 +21,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors font-medium text-sm">
+            <a href="#features" className="hover:text-foreground transition-colors font-medium text-sm" style={{ color: "#20124D" }}>
               Features
             </a>
             <a href="#products" className="text-muted-foreground hover:text-foreground transition-colors font-medium text-sm">
