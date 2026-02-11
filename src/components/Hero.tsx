@@ -48,7 +48,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6"
           >
-            <Button size="lg" className="group text-base px-8" style={{ background: "linear-gradient(247.38deg, #29FADF -2.17%, #8B1DFF 84.87%)" }}>
+            <Button size="lg" className="group px-8" style={{ background: "linear-gradient(247.38deg, #29FADF -2.17%, #8B1DFF 84.87%)", fontFamily: "'Lato', sans-serif", fontWeight: 900, fontSize: 20, lineHeight: "25px" }}>
               <img src={iconSurvey} alt="" className="w-6 h-6" />
               Start for Free
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
