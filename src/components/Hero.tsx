@@ -56,7 +56,7 @@ const Hero = () => {
             </Button>
             <Button variant="outline" size="lg" className="group text-base px-8">
               <img src={ctaPlayIcon} alt="" className="w-5 h-5" />
-              Book a Demo
+              Book Studio Demo
             </Button>
           </motion.div>
 
