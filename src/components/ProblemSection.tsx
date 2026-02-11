@@ -6,7 +6,7 @@ const ProblemSection = () => {
   return (
     <section className="section-padding bg-[#FBFBFB] relative overflow-hidden">
       {/* Background accent */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl pointer-events-none -translate-y-1/2" />
+      {/* <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl pointer-events-none -translate-y-1/2" /> */}
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
