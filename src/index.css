@@ -140,6 +140,10 @@
     background: var(--gradient-hero);
   }
 
+  .gradient-cta-bg {
+    background: linear-gradient(247.38deg, #29FADF -2.17%, #8B1DFF 84.87%);
+  }
+
   .glass {
     background: hsl(var(--background) / 0.85);
     backdrop-filter: blur(20px);
