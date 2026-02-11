@@ -4,6 +4,7 @@ import { ArrowRight, Play } from "lucide-react";
 import { motion } from "framer-motion";
 import iconSurvey from "@/assets/icon-survey.svg";
 import ctaPlayIcon from "@/assets/cta-play-icon.svg";
+import productionWorkspace from "@/assets/production-workspace.png";
 
 const Hero = () => {
   return (
@@ -78,42 +79,8 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4, ease: [0.4, 0, 0.2, 1] }}
           className="mt-16 lg:mt-24 max-w-6xl mx-auto"
         >
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border/50 bg-card">
-            <div className="absolute inset-0 gradient-hero-bg opacity-5" />
-            <div className="p-2">
-              <div className="bg-muted/50 rounded-xl aspect-[16/9] flex items-center justify-center relative overflow-hidden">
-                {/* Mock dashboard UI */}
-                <div className="absolute inset-4 bg-background rounded-lg shadow-inner flex">
-                  {/* Sidebar */}
-                  <div className="w-16 lg:w-48 border-r border-border/50 p-3 hidden sm:block">
-                    <div className="w-8 h-8 rounded-lg gradient-bg mb-4" />
-                    <div className="space-y-2">
-                      {[...Array(5)].map((_, i) => (
-                        <div key={i} className="h-2 bg-muted rounded w-full" style={{ width: `${70 + Math.random() * 30}%` }} />
-                      ))}
-                    </div>
-                  </div>
-                  {/* Main content */}
-                  <div className="flex-1 p-4 lg:p-6">
-                    <div className="h-3 bg-muted rounded w-1/3 mb-4" />
-                    <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 mb-6">
-                      {[...Array(3)].map((_, i) => (
-                        <div key={i} className="aspect-video bg-muted rounded-lg" />
-                      ))}
-                    </div>
-                    <div className="space-y-2">
-                      {[...Array(4)].map((_, i) => (
-                        <div key={i} className="h-2 bg-muted rounded" style={{ width: `${60 + Math.random() * 40}%` }} />
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                {/* Overlay text */}
-                <div className="absolute inset-0 flex items-center justify-center bg-background/80 backdrop-blur-sm">
-                  <p className="text-muted-foreground text-lg font-medium">Your production workspace</p>
-                </div>
-              </div>
-            </div>
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border/50">
+            <img src={productionWorkspace} alt="Your production workspace" className="w-full h-auto" />
           </div>
         </motion.div>
       </div>
