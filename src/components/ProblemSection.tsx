@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import iconWarning from "@/assets/icon-warning.svg";
+import fragmentedTools from "@/assets/fragmented-tools.png";
 
 const ProblemSection = () => {
   return (
@@ -57,6 +58,11 @@ const ProblemSection = () => {
                   <span className="text-[20px] font-lato">Files and feedback everywhere.</span>
                 </div>
               </div>
+            </div>
+
+            {/* Fragmented tools illustration */}
+            <div className="flex items-center justify-center">
+              <img src={fragmentedTools} alt="Fragmented tools illustration" className="max-w-full h-auto" />
             </div>
 
           </motion.div>
