@@ -61,7 +61,7 @@ const ProblemSection = () => {
             </div>
 
             {/* Fragmented tools illustration */}
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center -ml-[100px]">
               <img src={fragmentedTools} alt="Fragmented tools illustration" className="max-w-full h-auto" />
             </div>
 
