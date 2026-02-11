@@ -37,7 +37,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
-            className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
+            className="font-lato font-normal text-[20px] leading-[30px] tracking-normal text-center text-muted-foreground max-w-2xl mx-auto mb-10"
           >
             Pzaz helps you write smarter, plan faster, and avoid costly mistakes. 
             AI works with you, not instead of you, turning your script into a full production plan.
