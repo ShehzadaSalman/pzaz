@@ -52,7 +52,7 @@ const Hero = () => {
             <Button size="lg" className="group px-8">
               <img src={iconSurvey} alt="" className="w-5 h-5" />
               Import a Script
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" strokeWidth={3} />
             </Button>
             <Button variant="outline" size="lg" className="group px-8 font-lato font-black text-xl leading-[25px]">
               <img src={ctaPlayIcon} alt="" className="w-5 h-5" />
