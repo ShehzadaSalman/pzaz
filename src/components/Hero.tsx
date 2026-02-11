@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import { motion } from "framer-motion";
 import iconSurvey from "@/assets/icon-survey.svg";
+import ctaPlayIcon from "@/assets/cta-play-icon.svg";
 
 const Hero = () => {
   return (
@@ -54,7 +55,7 @@ const Hero = () => {
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button variant="outline" size="lg" className="group text-base px-8">
-              <Play className="w-4 h-4 mr-2" />
+              <img src={ctaPlayIcon} alt="" className="w-5 h-5" />
               Book a Demo
             </Button>
           </motion.div>
