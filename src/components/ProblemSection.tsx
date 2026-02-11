@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FileText, Calculator, Calendar, MessagesSquare } from "lucide-react";
+import iconWarning from "@/assets/icon-warning.svg";
 
 const ProblemSection = () => {
   return (
@@ -41,19 +41,19 @@ const ProblemSection = () => {
               </h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-4 p-3 bg-destructive/5 rounded-lg border border-destructive/20">
-                  <FileText className="w-5 h-5 text-destructive" />
+                  <img src={iconWarning} alt="" className="w-5 h-5" />
                   <span className="text-sm">Scripts live in one tool.</span>
                 </div>
                 <div className="flex items-center gap-4 p-3 bg-destructive/5 rounded-lg border border-destructive/20">
-                  <Calculator className="w-5 h-5 text-destructive" />
+                  <img src={iconWarning} alt="" className="w-5 h-5" />
                   <span className="text-sm">Budgets in another.</span>
                 </div>
                 <div className="flex items-center gap-4 p-3 bg-destructive/5 rounded-lg border border-destructive/20">
-                  <Calendar className="w-5 h-5 text-destructive" />
+                  <img src={iconWarning} alt="" className="w-5 h-5" />
                   <span className="text-sm">Schedules somewhere else.</span>
                 </div>
                 <div className="flex items-center gap-4 p-3 bg-destructive/5 rounded-lg border border-destructive/20">
-                  <MessagesSquare className="w-5 h-5 text-destructive" />
+                  <img src={iconWarning} alt="" className="w-5 h-5" />
                   <span className="text-sm">Files and feedback everywhere.</span>
                 </div>
               </div>
