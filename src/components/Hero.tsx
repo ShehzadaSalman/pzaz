@@ -50,7 +50,7 @@ const Hero = () => {
           >
             <Button size="lg" className="group px-8" style={{ background: "linear-gradient(247.38deg, #29FADF -2.17%, #8B1DFF 84.87%)", fontFamily: "'Lato', sans-serif", fontWeight: 900, fontSize: 20, lineHeight: "25px" }}>
               <img src={iconSurvey} alt="" className="w-6 h-6" />
-              Start for Free
+              Import a Script
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button variant="outline" size="lg" className="group text-base px-8">

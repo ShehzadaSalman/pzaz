@@ -43,7 +43,7 @@ const Header = () => {
             </Button>
             <Button variant="default" size="sm" style={{ background: "linear-gradient(247.38deg, #29FADF -2.17%, #8B1DFF 84.87%)" }}>
               <img src={iconSurvey} alt="" className="w-4 h-4" />
-              Start for Free
+              Import a Script
             </Button>
           </div>
 
