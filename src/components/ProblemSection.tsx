@@ -81,10 +81,10 @@ const ProblemSection = () => {
               <h3 className="font-lato font-bold text-[24px] leading-normal tracking-normal text-[#A805FF] mb-[30px]">
                 It's an AI and workflow problem.
               </h3>
-              <p className="text-muted-foreground leading-relaxed mb-6">
+              <p className="font-lato font-normal text-[20px] leading-[30px] tracking-normal text-[#878787] mb-6">
                 Every change creates rework. Every rework costs time, money, and energy.
               </p>
-              <p className="text-muted-foreground leading-relaxed mb-6">
+              <p className="font-lato font-normal text-[20px] leading-[30px] tracking-normal text-[#878787] mb-6">
                 This isn't a talent problem. It's a workflow problem.
               </p>
               <div className="bg-[#F7F2FD] rounded-[12px] py-[21px] pl-[36px] pr-[8px]">
