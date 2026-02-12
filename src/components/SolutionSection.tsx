@@ -76,7 +76,11 @@ const SolutionSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
+<<<<<<< HEAD
           className="grid md:grid-cols-2 gap-[45px] max-w-4xl mx-auto mb-16"
+=======
+          className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto mb-16"
+>>>>>>> 7a7aca8 (updated the container width)
         >
           {benefits.map((benefit, index) => (
             <SolutionCard
