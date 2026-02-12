@@ -20,8 +20,8 @@ const ProblemSection = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="font-lato font-extrabold text-5xl leading-[70px] tracking-normal">
-              Plans change. <span className="font-lato font-extrabold text-[48px] leading-[70px] tracking-normal text-transparent bg-clip-text bg-gradient-to-r to-[#409DFF] from-[#3207BC]">Productions break.</span>
+             <h2 className="font-lato font-extrabold text-5xl tracking-normal py-[10px]">
+               Plans change. <span className="font-lato font-extrabold text-[48px] tracking-normal text-transparent bg-clip-text bg-gradient-to-r to-[#409DFF] from-[#3207BC]">Productions break.</span>
             </h2>
             <p className="text-lg text-[#878787] max-w-2xl mx-auto leading-relaxed">
               Film productions don't slow down because of creativity. They slow down because every change triggers manual rework.
