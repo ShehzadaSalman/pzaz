@@ -6,13 +6,14 @@ const footerLinks = {
   Resources: ["Documentation", "Guides", "Community", "Support"],
   Company: ["About", "Careers", "Press", "Contact"],
   Legal: ["Privacy", "Terms", "Security"],
+  Social: ["YouTube", "Instagram", "Facebook", "LinkedIn"],
 };
 
 const Footer = () => {
   return (
     <footer className="py-16 border-t border-border/50 bg-[#F8F8FC]">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-8 mb-12">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <a href="/" className="flex items-center gap-2 mb-4">
@@ -41,19 +42,8 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="pt-8 border-t border-border/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="pt-8 border-t border-border/50 flex items-center">
           <p className="text-[12px] leading-[12px] font-normal align-middle text-[#20124D]" style={{ fontFamily: "'Open Sans', sans-serif" }}>© {new Date().getFullYear()} Pzaz.io. All rights reserved.</p>
-          <div className="flex items-center gap-6">
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Twitter
-            </a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              LinkedIn
-            </a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Instagram
-            </a>
-          </div>
         </div>
       </div>
     </footer>
