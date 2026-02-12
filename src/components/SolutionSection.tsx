@@ -9,6 +9,8 @@ import cardIconSchedule from "@/assets/card-icon-schedule.svg";
 import solutionCardSchedule from "@/assets/solution-card-schedule.png";
 import cardIconBudget from "@/assets/card-icon-budget.svg";
 import solutionCardBudget from "@/assets/solution-card-budget.png";
+import cardIconTeam from "@/assets/card-icon-team.svg";
+import solutionCardTeam from "@/assets/solution-card-team.png";
 
 const benefits = [
   {
@@ -32,8 +34,8 @@ const benefits = [
   {
     trigger: "Share with your team",
     result: "everyone works from the same version, live.",
-    icon: cardIconScript,
-    image: solutionCardPreview,
+    icon: cardIconTeam,
+    image: solutionCardTeam,
   },
 ];
 
