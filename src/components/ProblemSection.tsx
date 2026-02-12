@@ -87,9 +87,11 @@ const ProblemSection = () => {
               <p className="text-muted-foreground leading-relaxed mb-6">
                 This isn't a talent problem. It's a workflow problem.
               </p>
-              <p className="text-foreground leading-relaxed font-medium">
-                Film is still a human craft, but the tools behind it are fragmented. When one scene changes, everything else should update automatically.
-              </p>
+              <div className="bg-[#F7F2FD] rounded-[12px] py-[21px] pl-[36px] pr-[8px]">
+                <p className="font-lato font-normal text-[20px] leading-[30px] tracking-normal text-[#5C28A3]">
+                  Film is still a human craft, but the tools behind it are fragmented. When one scene changes, everything else should update automatically.
+                </p>
+              </div>
             </div>
 
             {/* Horizontal divider line */}
