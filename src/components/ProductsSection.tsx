@@ -104,7 +104,7 @@ const ProductsSection = () => {
                 Explore {product.name.split(" ")[1]}
                 <ArrowIcon className={`ml-2 group-hover/btn:translate-x-1 ${product.highlight ? "text-white" : "text-[#4827AF] group-hover/btn:text-white"}`} />
               </Button>
-              {index === 1 && (
+              {(index === 0 || index === 1) && (
                 <p className="font-lato font-normal text-[14px] text-[#878787] text-center mt-3">
                   Upgrade anytime. Your project stays intact.
                 </p>
