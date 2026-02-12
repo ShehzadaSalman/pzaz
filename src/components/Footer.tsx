@@ -1,4 +1,5 @@
 import React from "react";
+import pzazLogo from "@/assets/pzaz-logo.png";
 
 const footerLinks = {
   Product: ["Studio", "Budget", "Storyboard", "Pricing"],
@@ -15,9 +16,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <a href="/" className="flex items-center gap-2 mb-4">
-              <span className="text-xl font-bold">
-                Pzaz<span className="gradient-text">.io</span>
-              </span>
+              <img src={pzazLogo} alt="Pzaz" className="h-8" />
             </a>
             <p className="text-sm text-muted-foreground leading-relaxed">
               One intelligent workflow from script to shoot.
