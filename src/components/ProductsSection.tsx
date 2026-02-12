@@ -75,7 +75,7 @@ const ProductsSection = () => {
         </motion.p>
 
         {/* Products grid */}
-        <div className="grid lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-3 gap-[46px] max-w-6xl mx-auto">
           {products.map((product, index) => (
             <motion.div
               key={product.name}
