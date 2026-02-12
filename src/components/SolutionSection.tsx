@@ -49,8 +49,6 @@ const outcomes = [
 const SolutionSection = () => {
   return (
     <section id="features" className="section-padding relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
       
       <div className="container mx-auto px-6 relative z-10">
         {/* Section header */}
@@ -76,7 +74,7 @@ const SolutionSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid md:grid-cols-2 gap-[45px] max-w-6xl mx-auto mb-16"
+          className="grid md:grid-cols-2 gap-[45px] max-w-6xl mx-auto mb-16 md:mb-[112px]"
         >
           {benefits.map((benefit, index) => (
             <SolutionCard
@@ -99,35 +97,9 @@ const SolutionSection = () => {
           className="text-center"
         >
           <p className="text-xl text-muted-foreground italic">
-            Changes break productions. <span className="text-foreground font-semibold not-italic"> Pzaz keeps it together.</span>
+            You stay in control. <span className="text-foreground font-semibold not-italic"> The system handles the coordination.</span>
           </p>
         </motion.div>
-
-        {/* Outcomes */}
-        {/* <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="max-w-3xl mx-auto"
-        >
-          <div className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 rounded-2xl p-8 border border-primary/20">
-            <h3 className="text-xl font-semibold text-center mb-6">Work smarter. Stay stress-free.</h3>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {outcomes.map((outcome, index) => (
-                <div key={outcome} className="flex items-center gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                    <Check className="w-4 h-4 text-primary" />
-                  </div>
-                  <span className="text-foreground">{outcome}</span>
-                </div>
-              ))}
-            </div>
-            <p className="text-center mt-6 text-muted-foreground font-medium">
-              All your tools, working together, from day one.
-            </p>
-          </div>
-        </motion.div> */}
       </div>
     </section>
   );

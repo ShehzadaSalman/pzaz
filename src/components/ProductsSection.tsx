@@ -30,7 +30,7 @@ const products = [
 
 const ProductsSection = () => {
   return (
-    <section id="products" className="section-padding bg-secondary/30 relative overflow-hidden">
+    <section id="products" className="section-padding bg-[#F9F4FF] relative overflow-hidden">
       <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl pointer-events-none -translate-y-1/2" />
       
       <div className="container mx-auto px-6 relative z-10">
@@ -40,11 +40,14 @@ const ProductsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-9"
         >
-          <Pill text="Products" className="bg-primary/10 text-primary mb-4" />
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-balance">
-            Built for filmmakers who <span className="gradient-text">actually finish films.</span>
+          <Pill text="Products" className="bg-white text-primary mb-4" />
+          <h2 className="font-lato font-extrabold text-[48px] tracking-normal py-[10px] text-balance">
+            Built for filmmakers who{" "}
+            <span className="font-lato font-extrabold text-[48px] tracking-normal gradient-text">
+              actually finish films.
+            </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Pzaz is made for filmmaker entrepreneurs, directors, producers, and teams who understand that making a film isn't just about creativity — it's about execution.
@@ -57,9 +60,12 @@ const ProductsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-center text-xl font-semibold mb-12"
+          className="font-lato font-bold text-[24px] tracking-normal text-center md:mb-[74px]"
         >
-          Start with everything — or just what you need.
+          Start with everything —{" "}
+          <span className="font-lato font-normal italic text-[24px] tracking-normal text-[#878787]">
+            or just what you need.
+          </span>
         </motion.p>
 
         {/* Products grid */}

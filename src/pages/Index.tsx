@@ -7,6 +7,7 @@ import ProductsSection from "@/components/ProductsSection";
 import IntegrationsSection from "@/components/IntegrationsSection";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import WorkSmarterSection from "@/components/ui/WorkSmarterSection";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
         <Hero />
         <ProblemSection />
         <SolutionSection />
+        <WorkSmarterSection />
         <ProductsSection />
         <IntegrationsSection />
         <CTA />
