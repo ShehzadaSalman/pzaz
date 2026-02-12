@@ -48,7 +48,7 @@ const SolutionSection = () => {
           <h2 className="font-lato font-extrabold text-[48px] leading-[70px] tracking-normal mb-6 text-balance">
             One connected <span className="font-lato font-extrabold text-[48px] leading-[70px] tracking-normal text-transparent bg-clip-text bg-gradient-to-l from-[#409DFF] to-[#3207BC]">production system.</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="font-lato font-normal text-[20px] leading-[30px] tracking-normal text-center text-[#878787] max-w-3xl mx-auto">
             Pzaz keeps your film together. Not three apps. Not ten tools. One live environment where script, schedule, budget, storyboard, and team stay in sync.
           </p>
         </motion.div>
