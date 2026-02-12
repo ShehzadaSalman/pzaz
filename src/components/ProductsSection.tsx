@@ -11,6 +11,7 @@ const products = [
   {
     customIcon: cardIconBudget,
     name: "Pzaz Budget",
+    price: "€49/mo",
     tagline: "Professional budgeting & cost control",
     description: "For producers and line producers who need clarity and confidence. Turn your script into a structured production budget that stays in sync as plans change.",
     highlight: false,
@@ -18,6 +19,7 @@ const products = [
   {
     customIcon: cardIconStoryboard,
     name: "Pzaz Storyboard",
+    price: "€39/mo",
     tagline: "Visualize the film before you shoot",
     description: "For directors and visual storytellers. Turn scenes into storyboards in seconds and refine shots collaboratively before production starts.",
     highlight: false,
@@ -25,6 +27,7 @@ const products = [
   {
     customIcon: cardIconStudio,
     name: "Pzaz Studio",
+    price: "€129/mo",
     tagline: "All-in-one production system",
     description: "For full productions and teams that need everything connected in real time. Script, schedule, budget, storyboard, and collaboration in one live workspace.",
     highlight: true,
@@ -88,7 +91,10 @@ const ProductsSection = () => {
                 </div>
               )}
               
-              <img src={product.customIcon} alt={product.name} className="w-[60px] h-[60px] mb-6" />
+              <div className="flex items-center justify-between mb-6">
+                <img src={product.customIcon} alt={product.name} className="w-[60px] h-[60px]" />
+                <span className="font-lato font-normal text-[24px] text-[#4D029B]">{product.price}</span>
+              </div>
               
               <h3 className="font-lato font-bold text-[32px] text-[#4D029B] mb-2">{product.name}</h3>
               <p className="font-lato font-bold text-[16px] text-[#A805FF] mb-4">{product.tagline}</p>
