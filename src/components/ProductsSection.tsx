@@ -6,13 +6,6 @@ import { Pill } from "@/components/ui/pill";
 
 const products = [
   {
-    icon: Layers,
-    name: "Pzaz Studio",
-    tagline: "All-in-one production system",
-    description: "For full productions and teams that need everything connected in real time. Script, schedule, budget, storyboard, and collaboration in one live workspace.",
-    highlight: true,
-  },
-  {
     icon: DollarSign,
     name: "Pzaz Budget",
     tagline: "Professional budgeting & cost control",
@@ -25,6 +18,13 @@ const products = [
     tagline: "Visualize the film before you shoot",
     description: "For directors and visual storytellers. Turn scenes into storyboards in seconds and refine shots collaboratively before production starts.",
     highlight: false,
+  },
+  {
+    icon: Layers,
+    name: "Pzaz Studio",
+    tagline: "All-in-one production system",
+    description: "For full productions and teams that need everything connected in real time. Script, schedule, budget, storyboard, and collaboration in one live workspace.",
+    highlight: true,
   },
 ];
 
