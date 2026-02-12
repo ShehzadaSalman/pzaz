@@ -73,7 +73,7 @@ const ProblemSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex items-center mb-12"
+            className="grid grid-cols-[1fr_auto_1fr] items-center mb-12"
           >
 
             {/* The result */}
@@ -93,7 +93,9 @@ const ProblemSection = () => {
             </div>
 
             {/* Horizontal divider line */}
-            <div className="w-[60px] h-[4px] bg-[#AF55FB] flex-shrink-0" />
+            <div className="flex items-center justify-center">
+              <div className="w-[150px] h-[4px] border-[4px] border-solid border-[#AF55FB]" />
+            </div>
 
             {/* AI workflow illustration */}
             <div className="flex items-center justify-center -ml-[80px]">
