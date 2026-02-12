@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <footer className="py-16 border-t border-[#e0e0e0] bg-[#F8F8FC]">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-8 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-8 mb-12 md:px-12">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <a href="/" className="flex items-center gap-2 mb-4">
