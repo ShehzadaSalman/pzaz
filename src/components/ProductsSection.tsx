@@ -91,7 +91,7 @@ const ProductsSection = () => {
               <img src={product.customIcon} alt={product.name} className="w-[60px] h-[60px] mb-6" />
               
               <h3 className="font-lato font-bold text-[32px] text-[#4D029B] mb-2">{product.name}</h3>
-              <p className="text-primary font-medium mb-4">{product.tagline}</p>
+              <p className="font-lato font-bold text-[16px] text-[#A805FF] mb-4">{product.tagline}</p>
               <p className="text-muted-foreground leading-relaxed mb-6">{product.description}</p>
               
               <Button variant={product.highlight ? "default" : "outline"} className="group/btn w-full">
