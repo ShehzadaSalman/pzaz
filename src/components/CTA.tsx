@@ -34,7 +34,7 @@ const CTA = () => {
                 Join 10,000+ creators who've already transformed their digital presence. Start free, no credit card required.
               </p>
 
-              <div className="mx-auto mb-10 w-full max-w-md rounded-2xl p-8" style={{ background: 'radial-gradient(88.07% 62.52% at 50% 0%, #9D87FF 0%, #5C28A4 95%)' }}>
+              <div className="mx-auto mb-10 w-full max-w-md">
                 <img src={languagesImg} alt="Languages" className="w-full h-auto" />
               </div>
 
