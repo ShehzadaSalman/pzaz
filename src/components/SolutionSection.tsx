@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Check, ArrowRight } from "lucide-react";
+import { Pill } from "@/components/ui/pill";
 
 const benefits = [
   {
@@ -43,9 +44,7 @@ const SolutionSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-            The Solution
-          </span>
+          <Pill text="The Solution" className="bg-primary/10 text-primary mb-4" />
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-balance">
             One connected <span className="gradient-text">production system.</span>
           </h2>
