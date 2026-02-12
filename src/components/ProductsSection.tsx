@@ -83,7 +83,7 @@ const ProductsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 * index }}
-              className={`group relative rounded-[38px] p-8 border-2 border-[#D4BAF4] bg-white transition-all duration-300 hover:shadow-xl`}
+              className={`group relative rounded-[38px] p-8 border-2 border-[#D4BAF4] bg-white transition-all duration-300 hover:shadow-xl flex flex-col`}
             >
               {product.highlight && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full">
@@ -98,7 +98,7 @@ const ProductsSection = () => {
               
               <h3 className="font-lato font-bold text-[32px] text-[#4D029B] mb-2">{product.name}</h3>
               <p className="font-lato font-bold text-[16px] text-[#A805FF] mb-4">{product.tagline}</p>
-              <p className="font-lato font-normal text-[16px] text-[#878787] leading-relaxed mb-6">{product.description}</p>
+              <p className="font-lato font-normal text-[16px] text-[#878787] leading-relaxed mb-6 flex-grow">{product.description}</p>
               
               <Button variant={product.highlight ? "default" : "outline"} className="group/btn w-full">
                 Explore {product.name.split(" ")[1]}
