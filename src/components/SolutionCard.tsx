@@ -26,7 +26,7 @@ const SolutionCard: React.FC<SolutionCardProps> = ({ icon, trigger, result, imag
           {trigger}
         </span>
         <ArrowRight className="w-5 h-5 text-[#5C28A3] flex-shrink-0" />
-        <span className="font-lato font-normal text-[20px] leading-[23px] text-foreground">
+        <span className="font-lato font-normal text-[20px] leading-[23px] text-[#878787]">
           {result}
         </span>
       </div>
