@@ -98,7 +98,7 @@ const ProductsSection = () => {
               
               <h3 className="font-lato font-bold text-[32px] text-[#4D029B] mb-2">{product.name}</h3>
               <p className="font-lato font-bold text-[16px] text-[#A805FF] mb-4">{product.tagline}</p>
-              <p className="text-muted-foreground leading-relaxed mb-6">{product.description}</p>
+              <p className="font-lato font-normal text-[16px] text-[#878787] leading-relaxed mb-6">{product.description}</p>
               
               <Button variant={product.highlight ? "default" : "outline"} className="group/btn w-full">
                 Explore {product.name.split(" ")[1]}
