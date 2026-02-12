@@ -77,7 +77,7 @@ const ProblemSection = () => {
           >
 
             {/* The result */}
-            <div className="bg-card rounded-[38px] pt-8 px-[60px] pb-[60px] border border-[#D4BAF4]">
+            <div className="bg-card rounded-[38px] pt-8 px-[60px] pb-[60px] border border-[#D4BAF4] relative z-10">
               <h3 className="font-lato font-bold text-[24px] leading-normal tracking-normal text-[#A805FF] mb-[30px]">
                 It's an AI and workflow problem.
               </h3>
