@@ -77,7 +77,7 @@ const ProblemSection = () => {
           >
 
             {/* The result */}
-            <div className="flex-1 bg-card rounded-2xl p-8 border border-[#D4BAF4]">
+            <div className="flex-1 bg-card rounded-[38px] pt-8 px-[60px] pb-[60px] border border-[#D4BAF4]">
               <h3 className="text-xl font-semibold mb-6 text-primary">
                 It's an AI and workflow problem.
               </h3>
