@@ -102,7 +102,7 @@ const ProductsSection = () => {
               
               <Button variant={product.highlight ? "product-card-gradient" : "product-card"} size="product-card" className="group/btn mt-auto">
                 Explore {product.name.split(" ")[1]}
-                <ArrowRight className={`w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform ${product.highlight ? "text-white" : "text-[#4827AF]"}`} style={product.highlight ? undefined : { WebkitTextFillColor: 'unset' }} />
+                <ArrowRight className={`w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform ${product.highlight ? "text-white" : "text-[#4827AF] group-hover/btn:text-white"}`} />
               </Button>
             </motion.div>
           ))}
