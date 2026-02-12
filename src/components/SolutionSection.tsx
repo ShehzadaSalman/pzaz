@@ -90,24 +90,21 @@ const SolutionSection = () => {
           ))}
         </motion.div>
 
-        {/* Key message */}
+        {/* Key insight */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mb-12"
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="text-center"
         >
-          <p className="text-2xl font-semibold text-foreground mb-2">
-            No re-entry. No version chaos.
-          </p>
-          <p className="text-lg text-muted-foreground">
-            You stay in control. The system handles the coordination.
+          <p className="text-xl text-muted-foreground italic">
+            Changes break productions. <span className="text-foreground font-semibold not-italic"> Pzaz keeps it together.</span>
           </p>
         </motion.div>
 
         {/* Outcomes */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -130,7 +127,7 @@ const SolutionSection = () => {
               All your tools, working together, from day one.
             </p>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
