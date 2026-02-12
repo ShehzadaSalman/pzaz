@@ -34,7 +34,7 @@ const ProblemSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid md:grid-cols-2  mb-12"
+            className="grid md:grid-cols-2  mb-12 md:mb-[112px]"
           >
             {/* Fragmented tools */}
             <div className="bg-white/30 py-8  px-[60px] pb-[50px] border border-[#D4BAF4] rounded-[38px] relative z-10">
@@ -73,7 +73,7 @@ const ProblemSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid md:grid-cols-2 items-center mb-12"
+            className="grid md:grid-cols-2 items-center mb-12 md:mb-[112px]"
           >
 
             {/* The result */}
@@ -114,7 +114,7 @@ const ProblemSection = () => {
             className="text-center"
           >
             <p className="text-xl text-muted-foreground italic">
-              Today, it doesn't. <span className="text-foreground font-semibold not-italic">But with Pzaz, it will.</span>
+              Changes break productions. <span className="text-foreground font-semibold not-italic"> Pzaz keeps it together.</span>
             </p>
           </motion.div>
         </div>
