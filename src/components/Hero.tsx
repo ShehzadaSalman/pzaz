@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
+import { Play } from "lucide-react";
+import ArrowIcon from "@/components/ui/ArrowIcon";
 import { motion } from "framer-motion";
 import iconSurvey from "@/assets/icon-survey.svg";
 import ctaPlayIcon from "@/assets/cta-play-icon.svg";
@@ -53,7 +54,7 @@ const Hero = () => {
             <Button size="lg" className="group px-8">
               <img src={iconSurvey} alt="" className="w-5 h-5" />
               Import a Script
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" strokeWidth={3} />
+              <ArrowIcon className="ml-2 w-5 h-5 group-hover:translate-x-1 text-white" />
             </Button>
             <Button variant="outline" size="lg" className="group px-8 font-lato font-black text-xl leading-[25px] text-primary hover:text-primary-foreground">
               <img src={ctaPlayIcon} alt="" className="w-5 h-5 transition-all group-hover:[filter:brightness(0)_invert(1)]" />
