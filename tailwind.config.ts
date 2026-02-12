@@ -19,6 +19,9 @@ export default {
         lato: ['Lato', 'sans-serif'],
       },
       colors: {
+        brand: {
+          purple: "#5C28A3",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

@@ -40,9 +40,13 @@ const PricingCTA = () => {
                 Your work stays connected forever. No rebuilding, no re-entry, no broken handovers.
               </p>
 
-              <Button variant="hero-outline" size="xl" className="group bg-white/10">
+              <Button
+                variant="outline"
+                size="xl"
+                className="group bg-white/10 text-white border-white/30 hover:bg-white/20"
+                postfixIcon={<ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
+              >
                 Start free
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
           </motion.div>

@@ -9,7 +9,7 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "CHOKIDAR_USEPOLLING=1 storybook dev -p 6008",
     "build-storybook": "storybook build",
     "test": "vitest run",
     "test:watch": "vitest"

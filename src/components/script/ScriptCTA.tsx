@@ -48,12 +48,16 @@ const ScriptCTA = () => {
 
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Button variant="hero-outline" size="xl" className="group bg-white/10">
-                  <FileText className="w-5 h-5 mr-2" />
+                <Button
+                  variant="outline"
+                  size="xl"
+                  className="group bg-white/10 text-white border-white/30 hover:bg-white/20"
+                  prefixIcon={<FileText className="w-5 h-5" />}
+                  postfixIcon={<ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
+                >
                   Get started free
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <Button variant="hero-outline" size="xl">
+                <Button variant="outline" size="xl" className="text-white border-white/30 hover:bg-white/10">
                   Book a demo
                 </Button>
               </div>

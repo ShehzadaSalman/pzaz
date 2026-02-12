@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Pill } from "@/components/ui/pill";
 import { Button } from "@/components/ui/button";
+import SectionHeader from "@/components/SectionHeader";
 import integrationsHub from "@/assets/integrations-hub.png";
 
 const IntegrationsSection = () => {
@@ -15,13 +15,13 @@ const IntegrationsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <Pill text="Integrations" className="bg-primary/10 text-primary mb-4" />
-          <h2 className="font-lato font-extrabold text-[48px] tracking-normal py-[10px]">
-            Works with your existing tools
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            No lock-in. No barriers. Just filmmaking.
-          </p>
+          <SectionHeader
+            pillText="Integrations"
+            pillClassName="bg-primary/10 text-primary mb-0"
+            title="Works with your existing tools"
+            description="No lock-in. No barriers. Just filmmaking."
+            descriptionClassName="text-lg text-muted-foreground"
+          />
         </motion.div>
 
         <motion.div
@@ -36,8 +36,11 @@ const IntegrationsSection = () => {
             alt="Integrations hub showing Final Draft, Google Maps, PDF, and CSV connections"
             className="max-w-2xl w-full h-auto mt-[70px]"
           />
-
-          <Button variant="outline" className="mt-[40px]">
+          <Button
+            variant="outline"
+            size="lg"
+            className=" px-8 font-lato font-black text-xl leading-[25px] text-primary hover:text-primary-foreground"
+          >
             Contact Us
           </Button>
         </motion.div>

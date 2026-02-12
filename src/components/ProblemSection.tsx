@@ -3,13 +3,11 @@ import { motion } from "framer-motion";
 import iconWarning from "@/assets/icon-warning.svg";
 import fragmentedTools from "@/assets/fragmented-tools.png";
 import aiWorkflowPuzzle from "@/assets/ai-workflow-puzzle.png";
+import SectionHeader from "@/components/SectionHeader";
 
 const ProblemSection = () => {
   return (
-    <section className="section-padding bg-[#FBFBFB] relative overflow-hidden">
-      {/* Background accent */}
-      {/* <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl pointer-events-none -translate-y-1/2" /> */}
-      
+    <section className="section-padding bg-[#FBFBFB] relative overflow-hidden"> 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Section header */}
@@ -20,12 +18,19 @@ const ProblemSection = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-             <h2 className="font-lato font-extrabold text-5xl tracking-normal py-[10px]">
-               Plans change. <span className="font-lato font-extrabold text-[48px] tracking-normal text-transparent bg-clip-text bg-gradient-to-r to-[#409DFF] from-[#3207BC]">Productions break.</span>
-            </h2>
-            <p className="text-lg text-[#878787] max-w-2xl mx-auto leading-relaxed">
-              Film productions don't slow down because of creativity. They slow down because every change triggers manual rework.
-            </p>
+            <SectionHeader
+              title={
+                <>
+                  Plans change.{" "}
+                  <span className="font-lato font-extrabold text-[48px] tracking-normal text-transparent bg-clip-text bg-gradient-to-r to-[#409DFF] from-[#3207BC]">
+                    Productions break.
+                  </span>
+                </>
+              }
+              titleClassName="text-5xl"
+              description="Film productions don't slow down because of creativity. They slow down because every change triggers manual rework."
+              descriptionClassName="text-lg text-[#878787] max-w-2xl mx-auto leading-relaxed"
+            />
           </motion.div>
 
           {/* Problem visualization */}

@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import ArrowIcon from "@/components/ui/ArrowIcon";
 import { Button } from "@/components/ui/button";
-import { Pill } from "@/components/ui/pill";
+import SectionHeader from "@/components/SectionHeader";
 import cardIconBudget from "@/assets/card-icon-budget-product.svg";
 import cardIconStoryboard from "@/assets/card-icon-storyboard.svg";
 import cardIconStudio from "@/assets/card-icon-studio.svg";
@@ -48,16 +48,21 @@ const ProductsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-9"
         >
-          <Pill text="Products" className="bg-white text-primary mb-4" />
-          <h2 className="font-lato font-extrabold text-[48px] tracking-normal py-[10px] text-balance">
-            Built for filmmakers who{" "}
-            <span className="font-lato font-extrabold text-[48px] tracking-normal gradient-text">
-              actually finish films.
-            </span>
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Pzaz is made for filmmaker entrepreneurs, directors, producers, and teams who understand that making a film isn't just about creativity — it's about execution.
-          </p>
+          <SectionHeader
+            pillText="Products"
+            pillClassName="bg-white text-primary mb-0"
+            title={
+              <>
+                Built for filmmakers who{" "}
+                <span className="font-lato font-extrabold text-[48px] tracking-normal gradient-text">
+                  actually finish films.
+                </span>
+              </>
+            }
+            titleClassName="text-balance"
+            description="Pzaz is made for filmmaker entrepreneurs, directors, producers, and teams who understand that making a film isn't just about creativity — it's about execution."
+            descriptionClassName="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed"
+          />
         </motion.div>
 
         {/* Subtitle */}

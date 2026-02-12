@@ -1,8 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
-import { Pill } from "@/components/ui/pill";
 import SolutionCard from "@/components/SolutionCard";
+import SectionHeader from "@/components/SectionHeader";
 import cardIconScript from "@/assets/card-icon-script.svg";
 import solutionCardPreview from "@/assets/solution-card-preview.png";
 import cardIconSchedule from "@/assets/card-icon-schedule.svg";
@@ -39,12 +38,12 @@ const benefits = [
   },
 ];
 
-const outcomes = [
-  "Reduce mistakes before they happen.",
-  "Cut handoffs between departments.",
-  "Save time on every change.",
-  "Avoid unnecessary costs.",
-];
+// const outcomes = [
+//   "Reduce mistakes before they happen.",
+//   "Cut handoffs between departments.",
+//   "Save time on every change.",
+//   "Avoid unnecessary costs.",
+// ];
 
 const SolutionSection = () => {
   return (
@@ -59,13 +58,21 @@ const SolutionSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <Pill text="The Solution" className="bg-primary/10 text-primary mb-0" />
-          <h2 className="font-lato font-extrabold text-[48px] tracking-normal mb-0 py-[10px] text-balance">
-            One connected <span className="font-lato font-extrabold text-[48px] tracking-normal text-transparent bg-clip-text bg-gradient-to-l from-[#409DFF] to-[#3207BC]">production system.</span>
-          </h2>
-          <p className="font-lato font-normal text-[20px] leading-[30px] tracking-normal text-center text-[#878787] max-w-3xl mx-auto">
-            Pzaz keeps your film together. Not three apps. Not ten tools. One live environment where script, schedule, budget, storyboard, and team stay in sync.
-          </p>
+          <SectionHeader
+            pillText="The Solution"
+            pillClassName="bg-primary/10 text-primary mb-0"
+            title={
+              <>
+                One connected{" "}
+                <span className="font-lato font-extrabold text-[48px] tracking-normal text-transparent bg-clip-text bg-gradient-to-l from-[#409DFF] to-[#3207BC]">
+                  production system.
+                </span>
+              </>
+            }
+            titleClassName="mb-0 text-balance"
+            description="Pzaz keeps your film together. Not three apps. Not ten tools. One live environment where script, schedule, budget, storyboard, and team stay in sync."
+            descriptionClassName="text-center"
+          />
         </motion.div>
 
         {/* Benefits grid */}

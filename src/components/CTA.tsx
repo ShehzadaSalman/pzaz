@@ -1,13 +1,15 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import languagesImg from "@/assets/languages.png";
+import SectionHeader from "@/components/SectionHeader";
+import iconStar from "@/assets/material-symbols_family-star.svg";
 
 const CTA = () => {
   return (
     <section className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto">
-          <div className="relative rounded-3xl overflow-hidden">
+        <div className="max-w-6xl mx-auto">
+          <div className="relative rounded-[38px] overflow-hidden">
             {/* Background gradient */}
             <div className="absolute inset-0 gradient-hero-bg animate-gradient" />
             
@@ -19,31 +21,36 @@ const CTA = () => {
             {/* Glow effect */}
             <div className="absolute -top-1/2 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-white/20 rounded-full blur-3xl pointer-events-none" />
 
-            <div className="relative p-12 sm:p-16 text-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm mb-8">
-                <Sparkles className="w-4 h-4 text-primary-foreground" />
-                <span className="text-sm font-medium text-primary-foreground">Free 14-day trial</span>
-              </div>
-
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-primary-foreground mb-6">
-                Ready to add some
-                <br />pizzazz?
-              </h2>
-
-              <p className="text-xl text-primary-foreground/80 max-w-xl mx-auto mb-10">
-                Join 10,000+ creators who've already transformed their digital presence. Start free, no credit card required.
-              </p>
+            <div className="relative p-16 md:py-24 pb-12 text-center">
+              <SectionHeader
+                pillText="Free 14-day trial"
+                pillClassName="bg-white text-primary mb-0"
+                pillIcon={<img src={iconStar} alt="" className="w-4 h-4" />}
+                title={
+                  <>
+                    Ready to add some
+                    pizzazz?
+                  </>
+                }
+                titleClassName="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-primary-foreground mb-0"
+                description="Join 10,000+ creators who've already transformed their digital presence. Start free, no credit card required."
+                descriptionClassName="text-xl text-primary-foreground/80 max-w-xl mx-auto mb-10"
+              />
 
               <div className="mx-auto mb-10 w-full max-w-md">
                 <img src={languagesImg} alt="Languages" className="w-full h-auto" />
               </div>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Button variant="hero-outline" size="xl" className="group bg-white/10">
+                <Button
+                  variant="outline"
+                  size="xl"
+                  className="group bg-white/10 text-white border-white/30 hover:bg-white/20"
+                  postfixIcon={<ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
+                >
                   Get started free
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <Button variant="hero-outline" size="xl">
+                <Button variant="outline" size="xl" className="text-white border-white/30 hover:bg-white/10">
                   Schedule a demo
                 </Button>
               </div>
