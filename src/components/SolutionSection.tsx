@@ -44,7 +44,7 @@ const SolutionSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <Pill text="The Solution" className="bg-primary/10 text-primary mb-4" />
+          <Pill text="The Solution" className="bg-primary/10 text-primary mb-0" />
           <h2 className="font-lato font-extrabold text-[48px] leading-[70px] tracking-normal mb-0 text-balance">
             One connected <span className="font-lato font-extrabold text-[48px] leading-[70px] tracking-normal text-transparent bg-clip-text bg-gradient-to-l from-[#409DFF] to-[#3207BC]">production system.</span>
           </h2>
