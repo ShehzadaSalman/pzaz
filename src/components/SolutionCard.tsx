@@ -22,7 +22,7 @@ const SolutionCard: React.FC<SolutionCardProps> = ({ icon, trigger, result, imag
       {/* Title row */}
       <div className="flex items-center gap-3 px-[34px] pt-[34px] pb-4">
         <img src={icon} alt="" className="w-[45px] h-[45px] flex-shrink-0" />
-        <span className="font-lato font-bold text-[20px] leading-[23px] text-foreground">
+        <span className="font-lato font-bold text-[20px] leading-[23px] text-foreground flex-shrink-0">
           {trigger}
         </span>
         <ArrowRight className="w-5 h-5 text-[#5C28A3] flex-shrink-0" />
