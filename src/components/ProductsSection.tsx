@@ -1,10 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Layers } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Pill } from "@/components/ui/pill";
 import cardIconBudget from "@/assets/card-icon-budget-product.svg";
 import cardIconStoryboard from "@/assets/card-icon-storyboard.svg";
+import cardIconStudio from "@/assets/card-icon-studio.svg";
 
 const products = [
   {
@@ -22,7 +23,7 @@ const products = [
     highlight: false,
   },
   {
-    icon: Layers,
+    customIcon: cardIconStudio,
     name: "Pzaz Studio",
     tagline: "All-in-one production system",
     description: "For full productions and teams that need everything connected in real time. Script, schedule, budget, storyboard, and collaboration in one live workspace.",
@@ -87,15 +88,7 @@ const ProductsSection = () => {
                 </div>
               )}
               
-              {'customIcon' in product && product.customIcon ? (
-                <img src={product.customIcon} alt={product.name} className="w-[60px] h-[60px] mb-6" />
-              ) : (
-                <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${
-                  product.highlight ? "gradient-bg" : "bg-primary/10"
-                }`}>
-                  {'icon' in product && product.icon && <product.icon className={`w-7 h-7 ${product.highlight ? "text-primary-foreground" : "text-primary"}`} />}
-                </div>
-              )}
+              <img src={product.customIcon} alt={product.name} className="w-[60px] h-[60px] mb-6" />
               
               <h3 className="text-2xl font-bold mb-2">{product.name}</h3>
               <p className="text-primary font-medium mb-4">{product.tagline}</p>
