@@ -113,6 +113,19 @@ const ProductsSection = () => {
           ))}
         </div>
 
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="flex justify-center mt-12"
+        >
+          <Button variant="thin-cta" size="thin-cta" className="group/btn">
+            Explore All Products
+            <ArrowIcon className="ml-2 text-white group-hover/btn:translate-x-1" />
+          </Button>
+        </motion.div>
       </div>
     </section>
   );

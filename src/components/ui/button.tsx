@@ -21,6 +21,7 @@ const buttonVariants = cva(
         glow: "gradient-hero-bg text-primary-foreground glow hover:shadow-xl",
         "product-card": "border border-[#5C28A3] bg-transparent font-lato font-black text-[16px] tracking-[0.05em] rounded-[10px] text-[#4827AF] hover:bg-[#5C28A3] hover:text-white",
         "product-card-gradient": "gradient-cta-bg text-white font-lato font-black text-[16px] tracking-[0.05em] rounded-[10px] border-0",
+        "thin-cta": "bg-[#4D029B] border border-[#5C28A3] text-white font-lato font-black text-[16px] tracking-[0.05em] rounded-[10px] hover:bg-[#5C28A3] hover:shadow-lg",
       },
       size: {
         default: "h-10 px-5 py-2",
@@ -29,6 +30,7 @@ const buttonVariants = cva(
         xl: "h-14 rounded-xl px-10 text-lg",
         icon: "h-10 w-10",
         "product-card": "h-[57px] px-10 py-4 w-full",
+        "thin-cta": "h-[33px] px-10 py-4",
       },
     },
     defaultVariants: {
