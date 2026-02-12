@@ -7,6 +7,8 @@ import cardIconScript from "@/assets/card-icon-script.svg";
 import solutionCardPreview from "@/assets/solution-card-preview.png";
 import cardIconSchedule from "@/assets/card-icon-schedule.svg";
 import solutionCardSchedule from "@/assets/solution-card-schedule.png";
+import cardIconBudget from "@/assets/card-icon-budget.svg";
+import solutionCardBudget from "@/assets/solution-card-budget.png";
 
 const benefits = [
   {
@@ -24,8 +26,8 @@ const benefits = [
   {
     trigger: "Build your budget",
     result: "AI pre-fills the structure.",
-    icon: cardIconScript,
-    image: solutionCardPreview,
+    icon: cardIconBudget,
+    image: solutionCardBudget,
   },
   {
     trigger: "Share with your team",
