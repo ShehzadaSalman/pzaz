@@ -34,10 +34,10 @@ const IntegrationsSection = () => {
           <img
             src={integrationsHub}
             alt="Integrations hub showing Final Draft, Google Maps, PDF, and CSV connections"
-            className="max-w-2xl w-full h-auto"
+            className="max-w-2xl w-full h-auto mt-[70px]"
           />
 
-          <Button variant="outline" className="mt-10">
+          <Button variant="outline" className="mt-[40px]">
             Contact Us
           </Button>
         </motion.div>
