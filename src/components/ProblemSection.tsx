@@ -78,7 +78,7 @@ const ProblemSection = () => {
 
             {/* The result */}
             <div className="flex-1 bg-card rounded-[38px] pt-8 px-[60px] pb-[60px] border border-[#D4BAF4]">
-              <h3 className="font-lato font-bold text-[24px] leading-[70px] tracking-normal text-[#A805FF]">
+              <h3 className="font-lato font-bold text-[24px] leading-normal tracking-normal text-[#A805FF]">
                 It's an AI and workflow problem.
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
