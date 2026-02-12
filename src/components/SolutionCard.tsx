@@ -20,7 +20,7 @@ const SolutionCard: React.FC<SolutionCardProps> = ({ icon, trigger, result, imag
       className="group rounded-2xl bg-[#F6FCFC] border border-[#E6D7F7] overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all duration-300 flex flex-col"
     >
       {/* Title row */}
-      <div className="flex items-center gap-3 px-6 pt-6 pb-4">
+      <div className="flex items-center gap-3 px-[34px] pt-[34px] pb-4">
         <img src={icon} alt="" className="w-[45px] h-[45px] flex-shrink-0" />
         <span className="font-lato font-bold text-[20px] leading-[23px] text-foreground">
           {trigger}
@@ -32,7 +32,7 @@ const SolutionCard: React.FC<SolutionCardProps> = ({ icon, trigger, result, imag
       </div>
 
       {/* Preview image - bottom aligned */}
-      <div className="mt-auto px-6 pb-0">
+      <div className="mt-auto px-[34px] pb-0">
         <div className="rounded-t-xl overflow-hidden">
           <img
             src={image}
