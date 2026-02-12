@@ -11,7 +11,7 @@ const footerLinks = {
 
 const Footer = () => {
   return (
-    <footer className="py-16 border-t border-border/50 bg-[#F8F8FC]">
+    <footer className="py-16 border-t border-[#e0e0e0] bg-[#F8F8FC]">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-6 gap-8 mb-12">
           {/* Brand */}
@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="pt-8 border-t border-border/50 flex items-center">
+        <div className="pt-8 border-t border-[#e0e0e0] flex items-center">
           <p className="text-[12px] leading-[12px] font-normal align-middle text-[#20124D]" style={{ fontFamily: "'Open Sans', sans-serif" }}>© {new Date().getFullYear()} Pzaz.io. All rights reserved.</p>
         </div>
       </div>
