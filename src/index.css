@@ -200,6 +200,15 @@
     animation: slide-up 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
 
+  .bg-radial-shadow {
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(170, 166, 255, 0.6) 0%,
+      rgba(170, 166, 255, 0.121655) 69.96%,
+      rgba(170, 166, 255, 0) 90.38%
+    );
+  }
+
   @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-20px); }

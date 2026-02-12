@@ -97,7 +97,10 @@ const ProblemSection = () => {
             {/* Divider + AI workflow illustration */}
             <div className="flex items-center justify-center -ml-[80px] overflow-hidden">
               <div className="w-[150px] min-w-[150px] h-[4px] border-[4px] border-solid border-[#AF55FB]" />
-              <img src={aiWorkflowPuzzle} alt="AI workflow puzzle illustration" className="max-w-[calc(100%-150px)] h-auto object-contain" />
+              <div className="relative">
+                <div className="absolute inset-0 bg-radial-shadow scale-125 pointer-events-none" />
+                <img src={aiWorkflowPuzzle} alt="AI workflow puzzle illustration" className="relative max-w-full h-auto object-contain" />
+              </div>
             </div>
 
           </motion.div>
