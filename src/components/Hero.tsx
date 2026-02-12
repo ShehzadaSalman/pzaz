@@ -27,7 +27,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-            className="font-lato font-extrabold text-[64px] leading-[70px] tracking-normal text-center mb-6 text-balance md:pt-[60px]">
+            className="font-lato font-extrabold text-5xl leading-[50px] md:text-[64px]  md:leading-[70px] md:tracking-normal text-center mb-6 text-balance md:pt-[60px]">
 
             One intelligent workflow{" "}
             <span className="gradient-text">from script to shoot.</span>
