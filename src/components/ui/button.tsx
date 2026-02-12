@@ -19,7 +19,8 @@ const buttonVariants = cva(
         "hero-outline": "border-2 border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 backdrop-blur-sm",
         glass: "glass text-foreground hover:bg-background/90",
         glow: "gradient-hero-bg text-primary-foreground glow hover:shadow-xl",
-        "product-card": "border border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground font-lato font-black rounded-[10px]",
+        "product-card": "border border-[#5C28A3] bg-transparent text-[#5C28A3] hover:bg-[#5C28A3] hover:text-white font-lato font-black rounded-[10px]",
+        "product-card-gradient": "gradient-cta-bg text-white font-lato font-black rounded-[10px] border-0",
       },
       size: {
         default: "h-10 px-5 py-2",
