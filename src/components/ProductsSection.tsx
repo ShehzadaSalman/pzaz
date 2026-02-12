@@ -119,7 +119,7 @@ const ProductsSection = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="flex justify-center mt-12"
+          className="flex justify-center mt-[60px]"
         >
           <Button variant="thin-cta" size="thin-cta" className="group/btn">
             Explore All Products
