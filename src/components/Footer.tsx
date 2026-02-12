@@ -18,7 +18,7 @@ const Footer = () => {
             <a href="/" className="flex items-center gap-2 mb-4">
               <img src={pzazLogo} alt="Pzaz" className="h-8" />
             </a>
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-sm font-normal leading-relaxed text-[#4E2273]">
               One intelligent workflow from script to shoot. Pzaz is <i>where films are made.</i>
             </p>
           </div>
