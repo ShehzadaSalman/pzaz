@@ -17,12 +17,12 @@ const SolutionCard: React.FC<SolutionCardProps> = ({ icon, trigger, result, imag
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: 0.1 * index }}
-      className="group rounded-[16px] bg-[#F6FCFC] border border-[#E6D7F7] overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col"
+      className="group rounded-2xl bg-[#F6FCFC] border border-border/50 overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all duration-300 flex flex-col"
     >
       {/* Title row */}
       <div className="flex items-center gap-3 px-6 pt-6 pb-4">
         <img src={icon} alt="" className="w-[45px] h-[45px] flex-shrink-0" />
-        <span className="font-lato font-bold text-[20px] leading-[23px] text-foreground whitespace-nowrap flex-shrink-0">
+        <span className="font-lato font-bold text-[20px] leading-[23px] text-foreground">
           {trigger}
         </span>
         <ArrowRight className="w-5 h-5 text-[#5C28A3] flex-shrink-0" />
