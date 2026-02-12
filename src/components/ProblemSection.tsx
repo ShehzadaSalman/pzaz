@@ -73,11 +73,11 @@ const ProblemSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid grid-cols-[1fr_auto_1fr] items-center mb-12"
+            className="grid md:grid-cols-2 items-center mb-12"
           >
 
             {/* The result */}
-            <div className="flex-1 bg-card rounded-[38px] pt-8 px-[60px] pb-[60px] border border-[#D4BAF4]">
+            <div className="bg-card rounded-[38px] pt-8 px-[60px] pb-[60px] border border-[#D4BAF4]">
               <h3 className="font-lato font-bold text-[24px] leading-normal tracking-normal text-[#A805FF] mb-[30px]">
                 It's an AI and workflow problem.
               </h3>
@@ -94,13 +94,9 @@ const ProblemSection = () => {
               </div>
             </div>
 
-            {/* Horizontal divider line */}
-            <div className="flex items-center justify-center">
-              <div className="w-[150px] h-[4px] border-[4px] border-solid border-[#AF55FB]" />
-            </div>
-
-            {/* AI workflow illustration */}
+            {/* Divider + AI workflow illustration */}
             <div className="flex items-center justify-center -ml-[80px]">
+              <div className="w-[150px] h-[4px] border-[4px] border-solid border-[#AF55FB]" />
               <img src={aiWorkflowPuzzle} alt="AI workflow puzzle illustration" className="max-w-full h-auto" />
             </div>
 
