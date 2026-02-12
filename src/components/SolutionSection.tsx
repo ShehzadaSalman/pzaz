@@ -45,8 +45,8 @@ const SolutionSection = () => {
           className="text-center mb-16"
         >
           <Pill text="The Solution" className="bg-primary/10 text-primary mb-4" />
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-balance">
-            One connected <span className="gradient-text">production system.</span>
+          <h2 className="font-lato font-extrabold text-[48px] leading-[70px] tracking-normal mb-6 text-balance">
+            One connected <span className="font-lato font-extrabold text-[48px] leading-[70px] tracking-normal text-transparent bg-clip-text bg-gradient-to-l from-[#409DFF] to-[#3207BC]">production system.</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Pzaz keeps your film together. Not three apps. Not ten tools. One live environment where script, schedule, budget, storyboard, and team stay in sync.
