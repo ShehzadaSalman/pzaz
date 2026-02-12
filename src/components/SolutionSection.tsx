@@ -1,24 +1,35 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Check, ArrowRight } from "lucide-react";
+import { Check } from "lucide-react";
 import { Pill } from "@/components/ui/pill";
+import SolutionCard from "@/components/SolutionCard";
+import cardIconScript from "@/assets/card-icon-script.svg";
+import solutionCardPreview from "@/assets/solution-card-preview.png";
 
 const benefits = [
   {
     trigger: "Write a scene",
     result: "the breakdown updates.",
+    icon: cardIconScript,
+    image: solutionCardPreview,
   },
   {
     trigger: "Adjust a scene",
     result: "schedules and budgets stay aligned.",
+    icon: cardIconScript,
+    image: solutionCardPreview,
   },
   {
     trigger: "Build your budget",
     result: "AI pre-fills the structure.",
+    icon: cardIconScript,
+    image: solutionCardPreview,
   },
   {
     trigger: "Share with your team",
     result: "everyone works from the same version, live.",
+    icon: cardIconScript,
+    image: solutionCardPreview,
   },
 ];
 
@@ -62,20 +73,14 @@ const SolutionSection = () => {
           className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-16"
         >
           {benefits.map((benefit, index) => (
-            <motion.div
+            <SolutionCard
               key={benefit.trigger}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 * index }}
-              className="group p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300"
-            >
-              <div className="flex items-center gap-3">
-                <span className="text-foreground font-semibold">{benefit.trigger}</span>
-                <ArrowRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform" />
-                <span className="text-muted-foreground">{benefit.result}</span>
-              </div>
-            </motion.div>
+              icon={benefit.icon}
+              trigger={benefit.trigger}
+              result={benefit.result}
+              image={benefit.image}
+              index={index}
+            />
           ))}
         </motion.div>
 
