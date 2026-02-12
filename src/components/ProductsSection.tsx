@@ -1,12 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Layers, DollarSign, Film } from "lucide-react";
+import { ArrowRight, Layers, Film } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Pill } from "@/components/ui/pill";
+import cardIconBudget from "@/assets/card-icon-budget-product.svg";
 
 const products = [
   {
-    icon: DollarSign,
+    customIcon: cardIconBudget,
     name: "Pzaz Budget",
     tagline: "Professional budgeting & cost control",
     description: "For producers and line producers who need clarity and confidence. Turn your script into a structured production budget that stays in sync as plans change.",
@@ -85,11 +86,15 @@ const ProductsSection = () => {
                 </div>
               )}
               
-              <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${
-                product.highlight ? "gradient-bg" : "bg-primary/10"
-              }`}>
-                <product.icon className={`w-7 h-7 ${product.highlight ? "text-primary-foreground" : "text-primary"}`} />
-              </div>
+              {'customIcon' in product && product.customIcon ? (
+                <img src={product.customIcon} alt={product.name} className="w-[60px] h-[60px] mb-6" />
+              ) : (
+                <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${
+                  product.highlight ? "gradient-bg" : "bg-primary/10"
+                }`}>
+                  {'icon' in product && product.icon && <product.icon className={`w-7 h-7 ${product.highlight ? "text-primary-foreground" : "text-primary"}`} />}
+                </div>
+              )}
               
               <h3 className="text-2xl font-bold mb-2">{product.name}</h3>
               <p className="text-primary font-medium mb-4">{product.tagline}</p>
