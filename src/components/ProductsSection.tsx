@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Layers, DollarSign, Film } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Pill } from "@/components/ui/pill";
 
 const products = [
   {
@@ -41,9 +42,7 @@ const ProductsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-            Products
-          </span>
+          <Pill text="Products" className="bg-primary/10 text-primary mb-4" />
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-balance">
             Built for filmmakers who <span className="gradient-text">actually finish films.</span>
           </h2>

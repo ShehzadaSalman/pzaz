@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FileText, DollarSign, FileOutput, MapPin, Globe } from "lucide-react";
+import { Pill } from "@/components/ui/pill";
 
 const integrations = [
   { name: "Final Draft", icon: FileText },
@@ -23,9 +24,7 @@ const IntegrationsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-            Integrations
-          </span>
+          <Pill text="Integrations" className="bg-primary/10 text-primary mb-4" />
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             Works with your existing tools
           </h2>
