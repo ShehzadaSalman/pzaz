@@ -17,7 +17,7 @@ const SolutionCard: React.FC<SolutionCardProps> = ({ icon, trigger, result, imag
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: 0.1 * index }}
-      className="group rounded-2xl bg-[#F6FCFC] border border-border/50 overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all duration-300 flex flex-col"
+      className="group rounded-2xl bg-[#F6FCFC] border border-[#E6D7F7] overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all duration-300 flex flex-col"
     >
       {/* Title row */}
       <div className="flex items-center gap-3 px-6 pt-6 pb-4">
