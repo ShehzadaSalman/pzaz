@@ -99,7 +99,7 @@ const ProblemSection = () => {
               <div className="w-[150px] min-w-[150px] h-[4px] border-[4px] border-solid border-[#AF55FB]" />
               <div className="relative">
                 <div className="absolute inset-0 bg-radial-shadow scale-125 pointer-events-none" />
-                <img src={aiWorkflowPuzzle} alt="AI workflow puzzle illustration" className="relative max-w-full h-auto object-contain" />
+                <img src={aiWorkflowPuzzle} alt="AI workflow puzzle illustration" className="relative w-[383px] h-[430px] object-contain" />
               </div>
             </div>
 
