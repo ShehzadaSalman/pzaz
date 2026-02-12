@@ -1,9 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Layers, Film } from "lucide-react";
+import { ArrowRight, Layers } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Pill } from "@/components/ui/pill";
 import cardIconBudget from "@/assets/card-icon-budget-product.svg";
+import cardIconStoryboard from "@/assets/card-icon-storyboard.svg";
 
 const products = [
   {
@@ -14,7 +15,7 @@ const products = [
     highlight: false,
   },
   {
-    icon: Film,
+    customIcon: cardIconStoryboard,
     name: "Pzaz Storyboard",
     tagline: "Visualize the film before you shoot",
     description: "For directors and visual storytellers. Turn scenes into storyboards in seconds and refine shots collaboratively before production starts.",
