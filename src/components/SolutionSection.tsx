@@ -5,6 +5,8 @@ import { Pill } from "@/components/ui/pill";
 import SolutionCard from "@/components/SolutionCard";
 import cardIconScript from "@/assets/card-icon-script.svg";
 import solutionCardPreview from "@/assets/solution-card-preview.png";
+import cardIconSchedule from "@/assets/card-icon-schedule.svg";
+import solutionCardSchedule from "@/assets/solution-card-schedule.png";
 
 const benefits = [
   {
@@ -16,8 +18,8 @@ const benefits = [
   {
     trigger: "Adjust a scene",
     result: "schedules and budgets stay aligned.",
-    icon: cardIconScript,
-    image: solutionCardPreview,
+    icon: cardIconSchedule,
+    image: solutionCardSchedule,
   },
   {
     trigger: "Build your budget",
