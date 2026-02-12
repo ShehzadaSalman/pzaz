@@ -100,7 +100,7 @@ const ProductsSection = () => {
               <p className="font-lato font-bold text-[16px] text-[#A805FF] mb-4">{product.tagline}</p>
               <p className="font-lato font-normal text-[16px] text-[#878787] leading-relaxed mb-6 flex-grow">{product.description}</p>
               
-              <Button variant={product.highlight ? "default" : "outline"} className="group/btn w-full">
+              <Button variant="product-card" size="product-card" className="group/btn mt-auto">
                 Explore {product.name.split(" ")[1]}
                 <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
               </Button>
