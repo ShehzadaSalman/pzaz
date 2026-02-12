@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
+import languagesImg from "@/assets/languages.png";
 
 const CTA = () => {
   return (
@@ -32,6 +33,10 @@ const CTA = () => {
               <p className="text-xl text-primary-foreground/80 max-w-xl mx-auto mb-10">
                 Join 10,000+ creators who've already transformed their digital presence. Start free, no credit card required.
               </p>
+
+              <div className="mx-auto mb-10 w-full max-w-md rounded-2xl p-8" style={{ background: 'radial-gradient(88.07% 62.52% at 50% 0%, #9D87FF 0%, #5C28A4 95%)' }}>
+                <img src={languagesImg} alt="Languages" className="w-full h-auto" />
+              </div>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button variant="hero-outline" size="xl" className="group bg-white/10">
