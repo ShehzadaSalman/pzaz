@@ -42,7 +42,7 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="pt-8 border-t border-border/50 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} Pzaz.io. All rights reserved.</p>
+          <p className="text-[12px] leading-[12px] font-normal align-middle text-[#20124D]" style={{ fontFamily: "'Open Sans', sans-serif" }}>© {new Date().getFullYear()} Pzaz.io. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Twitter
