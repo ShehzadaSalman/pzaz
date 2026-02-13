@@ -3,10 +3,7 @@ import { motion } from "framer-motion";
 import { Clapperboard, DollarSign, MapPin, CheckCircle } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
 import flowchartIcon from "@/assets/icon-flowchart.svg";
-import cardIconScript from "@/assets/card-icon-script.svg";
-import cardIconSchedule from "@/assets/card-icon-schedule.svg";
 import cardIconBudget from "@/assets/card-icon-budget.svg";
-import cardIconTeam from "@/assets/card-icon-team.svg";
 
 const benefits = [
   { icon: Clapperboard, text: "Drive breakdowns" },
@@ -16,10 +13,10 @@ const benefits = [
 ];
 
 const scriptCards = [
-  { icon: cardIconScript, title: "Import a script", image: "" },
-  { icon: cardIconSchedule, title: "Tag a scene", image: "" },
+  { icon: cardIconBudget, title: "Import a script", image: "" },
+  { icon: cardIconBudget, title: "Tag a scene", image: "" },
   { icon: cardIconBudget, title: "Compare drafts", image: "" },
-  { icon: cardIconTeam, title: "Share with production", image: "" },
+  { icon: cardIconBudget, title: "Share with production", image: "" },
 ];
 
 const ScriptShift = () => {
