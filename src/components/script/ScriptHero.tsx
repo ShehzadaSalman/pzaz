@@ -31,7 +31,8 @@ const ScriptHero = () => {
           >
             <Pill
               text="Scriptwriting Software for Film Productions"
-              className="bg-primary/10 text-primary mb-8"
+              className="text-primary mb-8"
+              style={{ backgroundColor: '#E4E4FE' }}
             />
           </motion.div>
 
