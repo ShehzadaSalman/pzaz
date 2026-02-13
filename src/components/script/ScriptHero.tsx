@@ -13,7 +13,7 @@ const ScriptHero = () => {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(50.01% 50.01% at 50% 0%, rgba(170, 166, 255, 0.6) 0%, rgba(170, 166, 255, 0.121655) 69.96%, rgba(170, 166, 255, 0) 90.38%)",
+            "radial-gradient(50.01% 50.01% at 50% 0%, rgba(170, 166, 255, 0.25) 0%, rgba(170, 166, 255, 0.05) 69.96%, rgba(170, 166, 255, 0) 90.38%)",
         }}
       />
 
