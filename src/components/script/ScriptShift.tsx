@@ -1,7 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Lightbulb, Clapperboard, DollarSign, MapPin, CheckCircle } from "lucide-react";
+import { Clapperboard, DollarSign, MapPin, CheckCircle } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
+import flowchartIcon from "@/assets/icon-flowchart.svg";
 
 const benefits = [
   { icon: Clapperboard, text: "Drive breakdowns" },
@@ -28,7 +29,7 @@ const ScriptShift = () => {
           >
             <SectionHeader
               pillText="The Critical Reframe"
-              pillIcon={<Lightbulb className="w-4 h-4" />}
+              pillIcon={<img src={flowchartIcon} alt="" className="w-4 h-4" />}
               pillClassName="bg-primary/10 text-primary"
               title={
                 <>
