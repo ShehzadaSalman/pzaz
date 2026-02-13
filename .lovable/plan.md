@@ -1,27 +1,58 @@
 
 
-## Add Pzaz Logo to All Navigation Headers
+# Pre-rendering and SEO Implementation Plan
 
-### What will change
-Replace the text-only "Pzaz.io" logo in all four header components with the uploaded Pzaz logo image, keeping the existing text as a fallback/complement.
+## Overview
+Generate static HTML at build time for every route so search engines see full page content instead of an empty `<div id="root"></div>`.
 
-### Steps
+## Steps
 
-1. **Copy the logo file** into `src/assets/pzaz-logo.png`
+### 1. Install Dependencies
+- `react-helmet-async` -- per-page meta tags
+- `vite-plugin-prerender` -- static HTML generation at build time
 
-2. **Update all 4 header components** to import and display the logo image:
-   - `src/components/Header.tsx` (homepage)
-   - `src/components/blog/BlogHeader.tsx` (blog pages)
-   - `src/components/pricing/PricingHeader.tsx` (pricing page)
-   - `src/components/script/ScriptHeader.tsx` (script page)
+### 2. Update `index.html`
+Replace generic "Lovable App" metadata with Pzaz branding as the default fallback:
+- Title: "Pzaz | Film Production Management Software"
+- Description, Open Graph, and Twitter card tags updated to Pzaz content
 
-   In each file:
-   - Add `import pzazLogo from "@/assets/pzaz-logo.png"`
-   - Replace the text-only logo with an `<img>` tag using the imported asset, sized appropriately (approximately h-8) with alt text "Pzaz"
-   - For PricingHeader and ScriptHeader, keep the small badge label ("Pricing" / "Script") next to the logo
+### 3. Wrap App with HelmetProvider (`src/App.tsx`)
+Add `HelmetProvider` from `react-helmet-async` around the app so per-page `<Helmet>` blocks work.
 
-### Technical details
-- The image will be placed in `src/assets/` for proper Vite bundling and optimization
-- All four headers follow the same structure, so the change is identical across them
-- No new dependencies required
+### 4. Add `<Helmet>` to Each Page
+Each page gets unique title, description, and OG tags:
+
+| Page | Title |
+|------|-------|
+| Index | Pzaz -- Film Production Management Software |
+| Script | Script Writing Tool -- Pzaz |
+| Pricing | Pricing -- Pzaz |
+| Blog | Blog -- Pzaz |
+| BlogArticle | (dynamic from article data) |
+
+### 5. Configure Pre-rendering (`vite.config.ts`)
+Add `vite-plugin-prerender` to the Vite plugins (production only) with all routes:
+- `/`, `/script`, `/pricing`, `/blog`
+- All 6 blog article slugs from `blogData.ts`
+
+The plugin uses Puppeteer at build time to render each route and save the output as static HTML.
+
+### 6. Create `public/sitemap.xml`
+List all routes with `<lastmod>` dates so search engines can discover every page.
+
+## Files Modified
+- `index.html` -- update meta tags
+- `src/App.tsx` -- add HelmetProvider
+- `src/pages/Index.tsx` -- add Helmet block
+- `src/pages/Script.tsx` -- add Helmet block
+- `src/pages/Pricing.tsx` -- add Helmet block
+- `src/pages/Blog.tsx` -- add Helmet block
+- `src/pages/BlogArticle.tsx` -- add Helmet block with dynamic data
+- `vite.config.ts` -- add pre-render plugin
+
+## Files Created
+- `public/sitemap.xml`
+
+## Result
+After build, each route has a fully rendered HTML file. Search engines see real content, proper titles, and descriptions. Users still get the fast SPA experience with React hydration.
 
