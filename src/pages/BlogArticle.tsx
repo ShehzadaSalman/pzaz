@@ -1,6 +1,5 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import BlogHeader from "@/components/blog/BlogHeader";
 import ArticleHero from "@/components/blog/ArticleHero";
 import ArticleContent from "@/components/blog/ArticleContent";
@@ -27,12 +26,6 @@ const BlogArticle = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>{article.title} | Pzaz</title>
-        <meta name="description" content={article.excerpt} />
-        <meta property="og:title" content={`${article.title} | Pzaz`} />
-        <meta property="og:description" content={article.excerpt} />
-      </Helmet>
       <BlogHeader />
       <article>
         <ArticleHero article={article} />
