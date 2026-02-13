@@ -13,7 +13,7 @@ const outcomes = [
 
 const WorkSmarterSection = () => {
   return (
-    <section className="bg-[#FBFBFB] pt-[138px] pb-[190px] border-t border-[#E3D6F5]">
+    <section className="bg-[#FBFBFB] py-12 md:pt-[138px] md:pb-[190px] border-t border-[#E3D6F5]">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -24,7 +24,7 @@ const WorkSmarterSection = () => {
         >
           <SectionHeader
             title="Work Smarter. Stay Stress Free"
-            titleClassName="leading-[70px]"
+            titleClassName=""
             description="All your tools, working together, from day one."
           />
 

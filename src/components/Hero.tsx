@@ -52,9 +52,9 @@ const Hero = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
 
             <Button size="lg" className="group px-8">
-              <img src={iconSurvey} alt="" className="w-5 h-5" />
-              Import a Script
-              <ArrowIcon className="ml-2 w-5 h-5 group-hover:translate-x-1 text-white" />
+              {/* <img src={iconSurvey} alt="" className="w-5 h-5" /> */}
+              Start For Free
+              <ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />
             </Button>
             <Button
               variant="outline"

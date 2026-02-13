@@ -35,7 +35,7 @@ const SectionHeader = ({
       {pillText ? <Pill text={pillText} icon={pillIcon} className={pillClassName} /> : null}
       <h2
         className={cn(
-          "font-lato font-extrabold text-2xl md:text-[48px] tracking-normal py-[13px]",
+          "font-lato font-extrabold text-5xl md:text-[48px] tracking-normal py-[13px]",
           titleAlignClass,
           titleClassName,
         )}

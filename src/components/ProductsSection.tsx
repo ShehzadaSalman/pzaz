@@ -71,7 +71,7 @@ const ProductsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="font-lato font-bold text-[24px] tracking-normal text-center md:mb-[74px]"
+          className="font-lato font-bold mb-12  text-[24px] tracking-normal text-center md:mb-[74px]"
         >
           Start with everything —{" "}
           <span className="font-lato font-normal italic text-[24px] tracking-normal text-[#878787]">
@@ -89,6 +89,7 @@ const ProductsSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 * index }}
               className={`group relative rounded-[38px] p-8 ${index === 2 ? 'pb-[54px]' : 'pb-[17px]'} border-2 border-[#D4BAF4] bg-white transition-all duration-300 hover:shadow-xl flex flex-col`}
+              style={index === 2 ? { background: "radial-gradient(181.71% 129% at 50% -66.48%, #D1CFFF 0%, #FFFFFF 95%)" } : undefined}
             >
               {product.highlight && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full">

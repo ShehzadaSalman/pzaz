@@ -20,13 +20,13 @@ const SolutionCard: React.FC<SolutionCardProps> = ({ icon, trigger, result, imag
       className="group rounded-2xl bg-[#F6FCFC] border border-[#E6D7F7] overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all duration-300 flex flex-col"
     >
       {/* Title row */}
-      <div className="flex items-center gap-3 px-[34px] pt-[34px] pb-4">
+      <div className="flex flex-wrap md:flex-nowrap items-center gap-3 px-[34px] pt-[34px] pb-4">
         <img src={icon} alt="" className="w-[45px] h-[45px] flex-shrink-0" />
         <span className="font-lato font-bold text-[20px] leading-[23px] text-foreground flex-shrink-0">
           {trigger}
         </span>
-        <ArrowRight className="w-5 h-5 text-[#5C28A3] flex-shrink-0" />
-        <span className="font-lato font-normal text-[20px] leading-[23px] text-[#878787]">
+        <ArrowRight className="w-5 h-5 hidden md:block text-[#5C28A3] flex-shrink-0" />
+        <span className="font-lato pl-12 md:pl-0  font-normal text-[20px] leading-[23px] text-[#878787]">
           {result}
         </span>
       </div>

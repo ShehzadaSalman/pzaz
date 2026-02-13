@@ -17,7 +17,7 @@ const Header = () => {
           {/* Logo */}
           <a href="/" className="flex items-center group" style={{ gap: 16 }}>
             <img src={pzazLogo} alt="Pzaz" className="h-8" />
-            <Pill text="Script" style={{ backgroundColor: "#F7F2FD", color: "#5C28A3", paddingLeft: 14, paddingRight: 14 }} />
+            {/* <Pill text="Script" style={{ backgroundColor: "#F7F2FD", color: "#5C28A3", paddingLeft: 14, paddingRight: 14 }} /> */}
           </a>
 
           {/* Desktop Navigation */}
@@ -42,8 +42,8 @@ const Header = () => {
               Log in
             </Button>
             <Button variant="default" size="sm">
-              <img src={iconSurvey} alt="" className="w-4 h-4" />
-              Import a Script
+              {/* <img src={iconSurvey} alt="" className="w-4 h-4" /> */}
+              Start for Free
             </Button>
           </div>
 

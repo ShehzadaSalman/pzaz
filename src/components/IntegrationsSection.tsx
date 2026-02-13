@@ -39,7 +39,7 @@ const IntegrationsSection = () => {
           <Button
             variant="outline"
             size="lg"
-            className=" px-8 font-lato font-black text-xl leading-[25px] text-primary hover:text-primary-foreground"
+            className=" px-8 mt-12 font-lato font-black text-xl leading-[25px] text-primary hover:text-primary-foreground"
           >
             Contact Us
           </Button>

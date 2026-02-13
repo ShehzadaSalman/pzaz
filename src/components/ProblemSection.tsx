@@ -27,7 +27,7 @@ const ProblemSection = () => {
                   </span>
                 </>
               }
-              titleClassName="text-5xl"
+              titleClassName=""
               description="Film productions don't slow down because of creativity. They slow down because every change triggers manual rework."
               descriptionClassName="text-lg text-[#878787] max-w-2xl mx-auto leading-relaxed"
             />
@@ -42,7 +42,7 @@ const ProblemSection = () => {
             className="grid md:grid-cols-2  mb-12 md:mb-[112px]"
           >
             {/* Fragmented tools */}
-            <div className="bg-white/30 py-8  px-[60px] pb-[50px] border border-[#D4BAF4] rounded-[38px] relative z-10">
+            <div className="bg-white/30 py-8 px-8 md:px-[60px] md:pb-[50px] border border-[#D4BAF4] rounded-[38px] relative z-10">
               <h3 className="font-lato font-bold text-2xl pt-4 pb-8 tracking-normal text-foreground">
                 This is no longer a tooling problem.
               </h3>
@@ -82,7 +82,7 @@ const ProblemSection = () => {
           >
 
             {/* The result */}
-            <div className="bg-card rounded-[38px] pt-12 px-[60px] pb-[60px] border border-[#D4BAF4] relative z-10">
+            <div className="bg-card rounded-[38px] p-8  md:pt-12 md:px-[60px] md:pb-[60px] border border-[#D4BAF4] relative z-10">
               <h3 className="font-lato font-bold text-2xl leading-normal tracking-normal text-[#A805FF] pb-8">
                 It's an AI and workflow problem.
               </h3>
