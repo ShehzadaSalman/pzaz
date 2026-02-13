@@ -15,11 +15,13 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 glass" style={{ borderBottom: '1px solid #D4BAF4' }}>
       <div className="max-w-6xl mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
-          {/* Logo */}
-          <a href="/" className="flex items-center group" style={{ gap: 16 }}>
-            <img src={pzazLogo} alt="Pzaz" className="h-8" />
-          </a>
-          <LanguageDropdown />
+          {/* Logo + Language */}
+          <div className="flex items-center gap-4">
+            <a href="/" className="flex items-center group" style={{ gap: 16 }}>
+              <img src={pzazLogo} alt="Pzaz" className="h-8" />
+            </a>
+            <LanguageDropdown />
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
