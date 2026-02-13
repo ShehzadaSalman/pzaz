@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Lightbulb, Clapperboard, Calendar, DollarSign, MapPin, CheckCircle } from "lucide-react";
+import { Lightbulb, Clapperboard, DollarSign, MapPin, CheckCircle } from "lucide-react";
+import SectionHeader from "@/components/SectionHeader";
 
 const benefits = [
   { icon: Clapperboard, text: "Drive breakdowns" },
@@ -25,19 +26,22 @@ const ScriptShift = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-              <Lightbulb className="w-4 h-4" />
-              The Critical Reframe
-            </span>
-            
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8">
-              A script isn't just a document.{" "}
-              <span className="gradient-text">It's the foundation of every production decision.</span>
-            </h2>
-
-            <p className="text-lg text-muted-foreground mb-10">
-              For studios, the script should:
-            </p>
+            <SectionHeader
+              pillText="The Critical Reframe"
+              pillIcon={<Lightbulb className="w-4 h-4" />}
+              pillClassName="bg-primary/10 text-primary"
+              title={
+                <>
+                  A script isn't just a document.{" "}
+                  <span className="font-lato font-extrabold text-[48px] tracking-normal text-transparent bg-clip-text bg-gradient-to-l from-[#409DFF] to-[#3207BC]">
+                    It's the foundation of every production decision.
+                  </span>
+                </>
+              }
+              description="For studios, the script should:"
+              descriptionClassName="text-lg text-muted-foreground"
+              className="mb-10"
+            />
 
             {/* Benefits grid */}
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
