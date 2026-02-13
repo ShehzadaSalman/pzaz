@@ -3,12 +3,23 @@ import { motion } from "framer-motion";
 import { Clapperboard, DollarSign, MapPin, CheckCircle } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
 import flowchartIcon from "@/assets/icon-flowchart.svg";
+import cardIconScript from "@/assets/card-icon-script.svg";
+import cardIconSchedule from "@/assets/card-icon-schedule.svg";
+import cardIconBudget from "@/assets/card-icon-budget.svg";
+import cardIconTeam from "@/assets/card-icon-team.svg";
 
 const benefits = [
   { icon: Clapperboard, text: "Drive breakdowns" },
   { icon: DollarSign, text: "Inform budgets and schedules" },
   { icon: MapPin, text: "Reveal scope and risk early" },
   { icon: CheckCircle, text: "Remain authoritative from development through delivery" },
+];
+
+const scriptCards = [
+  { icon: cardIconScript, title: "Import a script", image: "" },
+  { icon: cardIconSchedule, title: "Tag a scene", image: "" },
+  { icon: cardIconBudget, title: "Compare drafts", image: "" },
+  { icon: cardIconTeam, title: "Share with production", image: "" },
 ];
 
 const ScriptShift = () => {
@@ -44,7 +55,34 @@ const ScriptShift = () => {
               className="mb-10"
             />
 
-            {/* Benefits grid */}
+            {/* Script Solution Cards */}
+            <div className="grid md:grid-cols-2 gap-[45px] max-w-6xl mx-auto mb-12">
+              {scriptCards.map((card, index) => (
+                <motion.div
+                  key={card.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.1 * index }}
+                  className="group rounded-2xl bg-white border border-[#E6D7F7] overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all duration-300 flex flex-col"
+                >
+                  {/* Title row */}
+                  <div className="flex items-center gap-3 px-[34px] pt-[34px] pb-4">
+                    <img src={card.icon} alt="" className="w-[45px] h-[45px] flex-shrink-0" />
+                    <span className="font-lato font-bold text-[20px] leading-[23px] text-foreground">
+                      {card.title}
+                    </span>
+                  </div>
+
+                  {/* Placeholder image area */}
+                  <div className="mt-auto px-[34px] pb-0">
+                    <div className="rounded-t-xl overflow-hidden bg-muted h-[200px] flex items-center justify-center">
+                      <span className="text-sm text-muted-foreground">Image placeholder</span>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
               {benefits.map((benefit, index) => (
                 <motion.div
