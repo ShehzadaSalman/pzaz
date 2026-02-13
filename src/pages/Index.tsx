@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ProblemSection from "@/components/ProblemSection";
@@ -12,6 +13,12 @@ import WorkSmarterSection from "@/components/ui/WorkSmarterSection";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Pzaz | Film Production Management Software</title>
+        <meta name="description" content="Pzaz is the all-in-one film production management platform. Plan budgets, schedules, scripts, and teams — smarter and faster." />
+        <meta property="og:title" content="Pzaz | Film Production Management Software" />
+        <meta property="og:description" content="Pzaz is the all-in-one film production management platform. Plan budgets, schedules, scripts, and teams — smarter and faster." />
+      </Helmet>
       <Header />
       <main>
         <Hero />
