@@ -16,10 +16,10 @@ const benefits = [
 ];
 
 const scriptCards = [
-  { icon: cardIconBudget, title: "Import a script", image: solutionCardPreview },
-  { icon: cardIconBudget, title: "Tag a scene", image: solutionCardSchedule },
-  { icon: cardIconBudget, title: "Compare drafts", image: solutionCardBudget },
-  { icon: cardIconBudget, title: "Share with production", image: solutionCardTeam },
+  { icon: cardIconBudget, title: "Drive breakdowns", image: solutionCardPreview },
+  { icon: cardIconBudget, title: "Inform budgets and schedules", image: solutionCardSchedule },
+  { icon: cardIconBudget, title: "Reveal scope and risk early", image: solutionCardBudget },
+  { icon: cardIconBudget, title: "Remain authoritative from development through delivery", image: solutionCardTeam },
 ];
 
 const ScriptShift = () => {
