@@ -6,6 +6,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import pzazLogo from "@/assets/pzaz-logo.png";
 import iconSurvey from "@/assets/icon-survey.svg";
+import LanguageDropdown from "@/components/LanguageDropdown";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -17,8 +18,8 @@ const Header = () => {
           {/* Logo */}
           <a href="/" className="flex items-center group" style={{ gap: 16 }}>
             <img src={pzazLogo} alt="Pzaz" className="h-8" />
-            {/* <Pill text="Script" style={{ backgroundColor: "#F7F2FD", color: "#5C28A3", paddingLeft: 14, paddingRight: 14 }} /> */}
           </a>
+          <LanguageDropdown />
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
