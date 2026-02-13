@@ -5,6 +5,7 @@ import { Pill } from "@/components/ui/pill";
 import { motion } from "framer-motion";
 import ArrowIcon from "@/components/ui/ArrowIcon";
 import ctaPlayIcon from "@/assets/cta-play-icon.svg";
+import aiResearchIcon from "@/assets/ai-research-icon.svg";
 
 const ScriptHero = () => {
   return (
@@ -31,8 +32,8 @@ const ScriptHero = () => {
           >
             <Pill
               text="Scriptwriting Software for Film Productions"
-              className="text-primary mb-8"
-              style={{ backgroundColor: '#E4E4FE' }}
+              className="text-primary mb-8 bg-[#E4E4FE]"
+              icon={<img src={aiResearchIcon} alt="" className="w-4 h-4" />}
             />
           </motion.div>
 
