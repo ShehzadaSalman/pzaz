@@ -30,7 +30,7 @@ const Hero = () => {
             className="font-lato font-extrabold text-5xl leading-[50px] md:text-[64px]  md:leading-[70px] md:tracking-normal text-center mb-6 text-balance md:pt-[60px]">
 
             One intelligent workflow{" "}
-            <span className="gradient-text">from script to shoot.</span>
+            <span className="bg-clip-text text-transparent" style={{ backgroundImage: 'linear-gradient(247.38deg, #29FADF -2.17%, #8B1DFF 84.87%)' }}>from script to shoot.</span>
           </motion.h1>
 
           {/* Subheadline */}
