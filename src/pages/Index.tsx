@@ -1,29 +1,26 @@
 import React from "react";
-import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ProblemSection from "@/components/ProblemSection";
 import SolutionSection from "@/components/SolutionSection";
 import ProductsSection from "@/components/ProductsSection";
 import IntegrationsSection from "@/components/IntegrationsSection";
+import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
-import Footer from "@/components/Footer";
 import WorkSmarterSection from "@/components/ui/WorkSmarterSection";
+import PageLayout from "@/components/layout/PageLayout";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <main>
-        <Hero />
-        <ProblemSection />
-        <SolutionSection />
-        <WorkSmarterSection />
-        <ProductsSection />
-        <IntegrationsSection />
-        <CTA />
-      </main>
-      <Footer />
-    </div>
+    <PageLayout>
+      <Hero />
+      <ProblemSection />
+      <SolutionSection />
+      <WorkSmarterSection />
+      <ProductsSection />
+      <IntegrationsSection />
+      <FAQ />
+      <CTA />
+    </PageLayout>
   );
 };
 

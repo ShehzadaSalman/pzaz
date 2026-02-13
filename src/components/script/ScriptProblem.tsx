@@ -1,6 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { AlertTriangle, FileX, RefreshCcw, Users, Clock } from "lucide-react";
+import SectionHeader from "@/components/SectionHeader";
+import iconWarning from "@/assets/icon-warning.svg";
+import fragmentedTools from "@/assets/fragmented-tools.png";
+
 
 const problems = [
   {
@@ -23,56 +27,70 @@ const problems = [
 
 const ScriptProblem = () => {
   return (
-    <section className="section-padding bg-secondary/30 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-destructive/5 rounded-full blur-3xl pointer-events-none" />
+    <section className="section-padding bg-[#fbfbfb] relative overflow-hidden">
       
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto"
+          className="max-w-6xl mx-auto"
         >
-          {/* Section badge */}
-          <div className="flex justify-center mb-6">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-destructive/10 text-destructive text-sm font-medium">
-              <AlertTriangle className="w-4 h-4" />
-              The Studio Reality
-            </span>
-          </div>
+          <SectionHeader
+            pillText="The Studio Reality"
+            pillIcon={<AlertTriangle className="w-4 h-4" />}
+            pillClassName="bg-[#FF404017] text-[#EB5757] [&>span:first-child>svg]:text-[#FF4040]"
+            title={
+              <>
+                Studios don’t struggle with writing.{" "}
+                <span className="text-[#FF4040]">They struggle with translation.</span>
+              </>
+            }
+            description="Scripts arrive as PDFs or Final Draft files. Production begins somewhere else — in breakdowns, schedules, budgets, and spreadsheets."
+            className="mb-12"
+          />
 
-          {/* Headline */}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-6 text-balance">
-            Studios don't struggle with writing.{" "}
-            <span className="text-destructive">They struggle with translation.</span>
-          </h2>
-
-          {/* Description */}
-          <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12 leading-relaxed">
-            Scripts arrive as PDFs or Final Draft files. Production begins somewhere else — 
-            in breakdowns, schedules, budgets, and spreadsheets. Between those steps:
-          </p>
-
-          {/* Problem cards */}
-          <div className="grid sm:grid-cols-2 gap-4 mb-12">
-            {problems.map((problem, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.1 * index }}
-                className="flex items-center gap-4 p-5 rounded-xl bg-card border border-border/50 hover:border-destructive/30 transition-colors"
-              >
-                <div className="w-10 h-10 rounded-lg bg-destructive/10 flex items-center justify-center flex-shrink-0">
-                  <problem.icon className="w-5 h-5 text-destructive" />
+          {/* Problem visualization */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="grid md:grid-cols-2  mb-12 md:mb-[112px]"
+          >
+            {/* Fragmented tools */}
+            <div className="bg-white/30 py-8 px-8 md:px-[60px] md:pb-[50px] border border-[#D4BAF4] rounded-[38px] relative z-10">
+              <h3 className="font-lato font-bold text-2xl pt-4 pb-8 tracking-normal text-foreground">
+                This is no longer a tooling problem.
+              </h3>
+              <div className="space-y-4">
+                <div className="flex items-center gap-4 h-[70px] p-6 bg-[#FDF2F5] rounded-lg border border-[#EF6F9B]">
+                  <img src={iconWarning} alt="" className="w-6 h-6" />
+                  <span className="text-[20px] font-lato">Scripts live in one tool.</span>
                 </div>
-                <p className="text-foreground font-medium">{problem.text}</p>
-              </motion.div>
-            ))}
-          </div>
+                <div className="flex items-center gap-4 h-[70px] p-6 bg-[#FDF2F5] rounded-lg border border-[#EF6F9B]">
+                  <img src={iconWarning} alt="" className="w-6 h-6" />
+                  <span className="text-[20px] font-lato">Budgets in another.</span>
+                </div>
+                <div className="flex items-center gap-4 h-[70px] p-6 bg-[#FDF2F5] rounded-lg border border-[#EF6F9B]">
+                  <img src={iconWarning} alt="" className="w-6 h-6" />
+                  <span className="text-[20px] font-lato">Schedules somewhere else.</span>
+                </div>
+                <div className="flex items-center gap-4 h-[70px] p-6 bg-[#FDF2F5] rounded-lg border border-[#EF6F9B]">
+                  <img src={iconWarning} alt="" className="w-6 h-6" />
+                  <span className="text-[20px] font-lato">Files and feedback everywhere.</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Fragmented tools illustration */}
+            <div className="flex items-center justify-center -ml-[80px]">
+              <img src={fragmentedTools} alt="Fragmented tools illustration" className="max-w-full h-auto" />
+            </div>
+
+          </motion.div>
+
 
           {/* Bottom statement */}
           <motion.div

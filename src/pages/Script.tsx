@@ -1,5 +1,4 @@
 import React from "react";
-import ScriptHeader from "@/components/script/ScriptHeader";
 import ScriptHero from "@/components/script/ScriptHero";
 import ScriptProblem from "@/components/script/ScriptProblem";
 import ScriptShift from "@/components/script/ScriptShift";
@@ -10,26 +9,22 @@ import ScriptPricing from "@/components/script/ScriptPricing";
 import ScriptTestimonials from "@/components/script/ScriptTestimonials";
 import ScriptFAQ from "@/components/script/ScriptFAQ";
 import ScriptCTA from "@/components/script/ScriptCTA";
-import Footer from "@/components/Footer";
+import PageLayout from "@/components/layout/PageLayout";
 
 const Script = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <ScriptHeader />
-      <main>
-        <ScriptHero />
-        <ScriptProblem />
-        <ScriptShift />
-        <ScriptUSPs />
-        <ScriptFeatures />
-        <ScriptAI />
-        <ScriptPricing />
-        <ScriptTestimonials />
-        <ScriptFAQ />
-        <ScriptCTA />
-      </main>
-      <Footer />
-    </div>
+    <PageLayout>
+      <ScriptHero />
+      <ScriptProblem />
+      <ScriptShift />
+      <ScriptUSPs />
+      <ScriptFeatures />
+      <ScriptAI />
+      <ScriptPricing />
+      <ScriptTestimonials />
+      <ScriptFAQ />
+      <ScriptCTA />
+    </PageLayout>
   );
 };
 

@@ -1,17 +1,21 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, FileText, Play, Sparkles } from "lucide-react";
+import { FileText, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
+import ArrowIcon from "@/components/ui/ArrowIcon";
+import ctaPlayIcon from "@/assets/cta-play-icon.svg";
 
 const ScriptHero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Gradient background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1400px] h-[700px] bg-gradient-to-b from-primary/15 via-primary/5 to-transparent rounded-full blur-3xl" />
-        <div className="absolute top-1/4 -left-32 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl animate-float" />
-        <div className="absolute top-1/3 -right-32 w-[500px] h-[500px] bg-accent/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '-3s' }} />
-      </div>
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(50.01% 50.01% at 50% 0%, rgba(170, 166, 255, 0.6) 0%, rgba(170, 166, 255, 0.121655) 69.96%, rgba(170, 166, 255, 0) 90.38%)",
+        }}
+      />
 
       {/* Subtle grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border)/0.5)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.5)_1px,transparent_1px)] bg-[size:80px_80px] opacity-30" />
@@ -59,14 +63,23 @@ const ScriptHero = () => {
             transition={{ duration: 0.6, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6"
           >
-            <Button size="lg" className="group text-base px-8">
-              <FileText className="w-4 h-4 mr-2" />
-              Import a Script
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+            <Button size="lg" className="group px-8">
+              Start For Free
+              <ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />
             </Button>
-            <Button variant="outline" size="lg" className="group text-base px-8">
-              <Play className="w-4 h-4 mr-2" />
-              Book a Studio Demo
+            <Button
+              variant="outline"
+              size="lg"
+              className="group px-8 font-lato font-black text-xl leading-[25px] text-primary hover:text-primary-foreground"
+              prefixIcon={
+                <img
+                  src={ctaPlayIcon}
+                  alt=""
+                  className="w-5 h-5 transition-all group-hover:[filter:brightness(0)_invert(1)]"
+                />
+              }
+            >
+              Book Studio Demo
             </Button>
           </motion.div>
 
