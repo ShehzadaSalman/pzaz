@@ -4,7 +4,10 @@ import { Clapperboard, DollarSign, MapPin, CheckCircle } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
 import flowchartIcon from "@/assets/icon-flowchart.svg";
 import cardIconBudget from "@/assets/card-icon-budget.svg";
-
+import solutionCardPreview from "@/assets/solution-card-preview.png";
+import solutionCardSchedule from "@/assets/solution-card-schedule.png";
+import solutionCardBudget from "@/assets/solution-card-budget.png";
+import solutionCardTeam from "@/assets/solution-card-team.png";
 const benefits = [
   { icon: Clapperboard, text: "Drive breakdowns" },
   { icon: DollarSign, text: "Inform budgets and schedules" },
@@ -13,10 +16,10 @@ const benefits = [
 ];
 
 const scriptCards = [
-  { icon: cardIconBudget, title: "Import a script", image: "" },
-  { icon: cardIconBudget, title: "Tag a scene", image: "" },
-  { icon: cardIconBudget, title: "Compare drafts", image: "" },
-  { icon: cardIconBudget, title: "Share with production", image: "" },
+  { icon: cardIconBudget, title: "Import a script", image: solutionCardPreview },
+  { icon: cardIconBudget, title: "Tag a scene", image: solutionCardSchedule },
+  { icon: cardIconBudget, title: "Compare drafts", image: solutionCardBudget },
+  { icon: cardIconBudget, title: "Share with production", image: solutionCardTeam },
 ];
 
 const ScriptShift = () => {
@@ -73,8 +76,8 @@ const ScriptShift = () => {
 
                   {/* Placeholder image area */}
                   <div className="mt-auto px-[34px] pb-0">
-                    <div className="rounded-t-xl overflow-hidden bg-muted h-[200px] flex items-center justify-center">
-                      <span className="text-sm text-muted-foreground">Image placeholder</span>
+                    <div className="rounded-t-xl overflow-hidden">
+                      <img src={card.image} alt={`${card.title} preview`} className="w-full h-auto object-cover" />
                     </div>
                   </div>
                 </motion.div>
