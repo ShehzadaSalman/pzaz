@@ -28,13 +28,13 @@ const LanguageDropdown = () => {
     <div className="relative" ref={ref}>
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-2 px-3 py-1.5 rounded-md hover:bg-muted/50 transition-colors"
+        className="flex items-center gap-2 px-3 py-1.5 rounded-md bg-[#f9f9f9] hover:bg-[#f0f0f0] transition-colors"
       >
         <img src={globeIcon} alt="" className="w-4 h-4" />
-        <span className="text-[14px] font-normal text-[#989BA0]">
+        <span className="text-[14px] font-normal text-[#3E3A4D]">
           {selected.label}
         </span>
-        <ChevronDown className="w-3.5 h-3.5 text-[#989BA0]" />
+        <ChevronDown className="w-3.5 h-3.5 text-[#3E3A4D]" />
       </button>
 
       {open && (
