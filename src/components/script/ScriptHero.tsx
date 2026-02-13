@@ -41,7 +41,7 @@ const ScriptHero = () => {
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 text-balance"
           >
             Turn scripts into productions.{" "}
-            <span className="gradient-text">Faster. With less risk.</span>
+            <span className="bg-clip-text text-transparent" style={{ backgroundImage: 'linear-gradient(247.38deg, #29FADF -2.17%, #8B1DFF 84.87%)' }}>Faster. With less risk.</span>
           </motion.h1>
 
           {/* Subheadline */}
