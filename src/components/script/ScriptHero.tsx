@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { FileText, Sparkles } from "lucide-react";
+import { FileText } from "lucide-react";
+import { Pill } from "@/components/ui/pill";
 import { motion } from "framer-motion";
 import ArrowIcon from "@/components/ui/ArrowIcon";
 import ctaPlayIcon from "@/assets/cta-play-icon.svg";
@@ -27,10 +28,11 @@ const ScriptHero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8"
           >
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Scriptwriting Software for Film Productions</span>
+            <Pill
+              text="Scriptwriting Software for Film Productions"
+              className="bg-primary/10 text-primary mb-8"
+            />
           </motion.div>
 
           {/* Headline */}
