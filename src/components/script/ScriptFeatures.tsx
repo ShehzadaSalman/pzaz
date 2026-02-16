@@ -10,6 +10,7 @@ import {
   Gift,
   GripVertical
 } from "lucide-react";
+import SectionHeader from "@/components/SectionHeader";
 
 const features = [
   { icon: Cloud, title: "Autosave & cloud storage" },
@@ -35,13 +36,18 @@ const ScriptFeatures = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-              Essential Features
-            </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-              Everything you need.{" "}
-              <span className="gradient-text">Nothing you don't.</span>
-            </h2>
+            <SectionHeader
+              pillText="Essential Features"
+              pillClassName="bg-primary/10 text-primary"
+              title={
+                <>
+                  Everything you need.{" "}
+                  <span className="font-lato font-extrabold text-[48px] tracking-normal text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
+                    Nothing you don't.
+                  </span>
+                </>
+              }
+            />
           </motion.div>
 
           {/* Features grid */}
