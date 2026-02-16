@@ -84,8 +84,8 @@ const ScriptShift = () => {
               ))}
             </div>
 
-            <p className="text-lg text-muted-foreground italic">
-              Most tools stop at FADE OUT. Production reality starts after.
+            <p className="text-xl text-muted-foreground italic">
+              Most tools stop at FADE OUT. <span className="text-foreground font-semibold not-italic">Production reality starts after.</span>
             </p>
           </motion.div>
 
