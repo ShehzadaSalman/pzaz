@@ -17,7 +17,7 @@ const ScriptHeader = () => {
           <div className="flex items-center gap-4">
             <Link to="/" className="flex items-center gap-2 group">
               <img src={pzazLogo} alt="Pzaz" className="h-8" />
-              <span className="text-xs font-medium text-muted-foreground bg-secondary px-2 py-0.5 rounded-full">
+              <span className="text-xs font-medium px-2 py-0.5 rounded-full" style={{ color: '#5C28A3', backgroundColor: '#F7F2FD' }}>
                 Script
               </span>
             </Link>
