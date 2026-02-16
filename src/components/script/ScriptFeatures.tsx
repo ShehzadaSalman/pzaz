@@ -1,26 +1,18 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { 
-  Cloud, 
-  Lock, 
-  FileInput, 
-  RotateCcw, 
-  Search, 
-  Maximize, 
-  Gift,
-  GripVertical
-} from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
+import cardIconBudget from "@/assets/card-icon-budget.svg";
+import solutionCardPreview from "@/assets/solution-card-preview.png";
 
 const features = [
-  { icon: Cloud, title: "Autosave & cloud storage" },
-  { icon: Lock, title: "Secure script storage" },
-  { icon: FileInput, title: "Flexible import & export", subtitle: "FDX, PDF, RTF, TXT, Fountain" },
-  { icon: RotateCcw, title: "Scene undo & renumbering" },
-  { icon: Search, title: "Script indexing for fast navigation" },
-  { icon: Maximize, title: "Full-screen, distraction-free writing" },
-  { icon: Gift, title: "Free updates & upgrades — always" },
-  { icon: GripVertical, title: "Drag & drop scene structure" },
+  { title: "Autosave & cloud storage", image: solutionCardPreview },
+  { title: "Secure script storage", image: solutionCardPreview },
+  { title: "Flexible import & export", subtitle: "FDX, PDF, RTF, TXT, Fountain", image: solutionCardPreview },
+  { title: "Scene undo & renumbering", image: solutionCardPreview },
+  { title: "Script indexing for fast navigation", image: solutionCardPreview },
+  { title: "Full-screen, distraction-free writing", image: solutionCardPreview },
+  { title: "Free updates & upgrades — always", image: solutionCardPreview },
+  { title: "Drag & drop scene structure", image: solutionCardPreview },
 ];
 
 const ScriptFeatures = () => {
@@ -50,25 +42,35 @@ const ScriptFeatures = () => {
             />
           </motion.div>
 
-          {/* Features grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-20">
+          {/* Features grid - 4x2 using Critical Reframe card style */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-[45px] mb-20">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.05 * index }}
-                className="flex items-center gap-3 p-4 rounded-xl bg-card border border-border/50 hover:border-primary/30 transition-colors"
+                transition={{ duration: 0.5, delay: 0.05 * index }}
+                className="group rounded-2xl bg-[#E6D7F7] border border-[#E6D7F7] overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col"
               >
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <feature.icon className="w-5 h-5 text-primary" />
+                {/* Title row */}
+                <div className="flex items-center gap-3 px-[34px] pt-[34px] pb-4">
+                  <img src={cardIconBudget} alt="" className="w-[45px] h-[45px] flex-shrink-0" />
+                  <div>
+                    <span className="font-lato font-bold text-[20px] leading-[23px] text-foreground">
+                      {feature.title}
+                    </span>
+                    {feature.subtitle && (
+                      <p className="font-lato text-[14px] text-[#878787] mt-1">{feature.subtitle}</p>
+                    )}
+                  </div>
                 </div>
-                <div>
-                  <p className="text-sm font-medium text-foreground">{feature.title}</p>
-                  {feature.subtitle && (
-                    <p className="text-xs text-muted-foreground">{feature.subtitle}</p>
-                  )}
+
+                {/* Image area */}
+                <div className="mt-auto px-[34px] pb-0">
+                  <div className="rounded-t-xl overflow-hidden">
+                    <img src={feature.image} alt={`${feature.title} preview`} className="w-full h-auto object-cover" />
+                  </div>
                 </div>
               </motion.div>
             ))}
