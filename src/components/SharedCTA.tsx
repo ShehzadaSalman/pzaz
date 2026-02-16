@@ -13,6 +13,7 @@ interface SharedCTAProps {
   primaryButtonText?: string;
   secondaryButtonText?: string;
   showLanguagesImage?: boolean;
+  backgroundStyle?: React.CSSProperties;
 }
 
 const SharedCTA = ({
@@ -22,6 +23,7 @@ const SharedCTA = ({
   primaryButtonText = "Get started free",
   secondaryButtonText = "Schedule a demo",
   showLanguagesImage = true,
+  backgroundStyle,
 }: SharedCTAProps) => {
   return (
     <section className="py-24 relative overflow-hidden">
@@ -35,7 +37,9 @@ const SharedCTA = ({
             className="relative rounded-[38px] overflow-hidden"
           >
             {/* Background gradient */}
-            <div className="absolute inset-0 gradient-hero-bg animate-gradient" />
+            <div className="absolute inset-0" style={backgroundStyle || undefined}>
+              {!backgroundStyle && <div className="absolute inset-0 gradient-hero-bg animate-gradient" />}
+            </div>
 
             {/* Pattern overlay */}
             <div className="absolute inset-0 opacity-10">
