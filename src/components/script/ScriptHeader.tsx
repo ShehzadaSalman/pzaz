@@ -4,6 +4,7 @@ import { Menu, X, FileText } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import pzazLogo from "@/assets/pzaz-logo.png";
+import LanguageDropdown from "@/components/LanguageDropdown";
 
 const ScriptHeader = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -12,13 +13,16 @@ const ScriptHeader = () => {
     <header className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/50">
       <div className="container mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
-            <img src={pzazLogo} alt="Pzaz" className="h-8" />
-            <span className="text-xs font-medium text-muted-foreground bg-secondary px-2 py-0.5 rounded-full">
-              Script
-            </span>
-          </Link>
+          {/* Logo + Language */}
+          <div className="flex items-center gap-4">
+            <Link to="/" className="flex items-center gap-2 group">
+              <img src={pzazLogo} alt="Pzaz" className="h-8" />
+              <span className="text-xs font-medium text-muted-foreground bg-secondary px-2 py-0.5 rounded-full">
+                Script
+              </span>
+            </Link>
+            <LanguageDropdown />
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
