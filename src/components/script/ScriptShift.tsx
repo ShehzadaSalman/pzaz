@@ -89,30 +89,8 @@ const ScriptShift = () => {
             </p>
           </motion.div>
 
-          {/* The Promise Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative rounded-3xl overflow-hidden"
-          >
-            <div className="absolute inset-0 gradient-hero-bg opacity-90" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_white_1px,_transparent_1px)] bg-[size:24px_24px] opacity-10" />
 
-            <div className="relative p-10 sm:p-16 text-center">
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary-foreground mb-4">
-                Pzaz doesn't replace writing tools.
-              </h3>
-              <p className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground mb-8">
-                It turns scripts into productions.
-              </p>
-              <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
-                Pzaz Script is tool-agnostic, production-first script intelligence. You don't change how writers write.
-                You change how scripts move into production.
-              </p>
-            </div>
-          </motion.div>
+
         </div>
       </div>
     </section>
