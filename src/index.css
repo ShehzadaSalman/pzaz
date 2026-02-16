@@ -175,7 +175,7 @@
   }
 
   .section-padding {
-    @apply py-16 lg:py-32;
+    @apply py-16 lg:py-[88px];
   }
 
   .container-narrow {
