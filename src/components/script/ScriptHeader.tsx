@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, FileText } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import pzazLogo from "@/assets/pzaz-logo.png";
 import LanguageDropdown from "@/components/LanguageDropdown";
+import iconImportScript from "@/assets/icon-import-script.svg";
 
 const ScriptHeader = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -46,7 +47,7 @@ const ScriptHeader = () => {
               Log in
             </Button>
             <Button variant="default" size="sm" className="group">
-              <FileText className="w-4 h-4 mr-1" />
+              <img src={iconImportScript} alt="" className="w-4 h-4 mr-1 [filter:brightness(0)_invert(1)]" />
               Import a Script
             </Button>
           </div>
@@ -78,7 +79,7 @@ const ScriptHeader = () => {
               <hr className="border-border/50" />
               <Button variant="ghost" className="justify-start">Log in</Button>
               <Button variant="default">
-                <FileText className="w-4 h-4 mr-2" />
+                <img src={iconImportScript} alt="" className="w-4 h-4 mr-2 [filter:brightness(0)_invert(1)]" />
                 Import a Script
               </Button>
             </div>
