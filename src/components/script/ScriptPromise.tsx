@@ -20,7 +20,7 @@ const ScriptPromise = () => {
             
 
             <div className="relative p-10 sm:p-16 text-center">
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary-foreground mb-4">
+              <h3 className="font-lato font-extrabold text-[48px] leading-[70px] tracking-normal text-primary-foreground mb-4">
                 Pzaz doesn't replace writing tools.
               </h3>
               <p className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground mb-8">
