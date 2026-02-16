@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import SectionHeader from "@/components/SectionHeader";
 import cardIconBudget from "@/assets/card-icon-budget.svg";
-import solutionCardPreview from "@/assets/solution-card-preview.png";
+import scriptAiPreview from "@/assets/script-ai-preview.png";
 
 const aiCards = [
   {
@@ -84,7 +84,7 @@ const ScriptAI = () => {
             className="flex justify-end"
           >
             <img
-              src={solutionCardPreview}
+              src={scriptAiPreview}
               alt="AI scriptwriting tools preview"
               className="w-full h-auto rounded-2xl"
             />
