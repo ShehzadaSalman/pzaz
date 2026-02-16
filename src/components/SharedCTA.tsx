@@ -11,6 +11,7 @@ interface SharedCTAProps {
   title?: React.ReactNode;
   description?: string;
   primaryButtonText?: string;
+  primaryButtonPrefixIcon?: React.ReactNode;
   secondaryButtonText?: string;
   showLanguagesImage?: boolean;
   backgroundStyle?: React.CSSProperties;
@@ -21,6 +22,7 @@ const SharedCTA = ({
   title = <>Ready to add some pizzazz?</>,
   description = "Join 10,000+ creators who've already transformed their digital presence. Start free, no credit card required.",
   primaryButtonText = "Get started free",
+  primaryButtonPrefixIcon,
   secondaryButtonText = "Schedule a demo",
   showLanguagesImage = true,
   backgroundStyle,
@@ -71,6 +73,7 @@ const SharedCTA = ({
                   variant="outline"
                   size="xl"
                   className="group bg-white/10 text-white border-white/30 hover:bg-white/20 rounded-[10px]"
+                  prefixIcon={primaryButtonPrefixIcon}
                   postfixIcon={<ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
                 >
                   {primaryButtonText}
