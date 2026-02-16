@@ -4,7 +4,7 @@ import SharedCTA from "@/components/SharedCTA";
 const ScriptCTA = () => {
   return (
     <SharedCTA
-      pillText="Free to start"
+      pillText="Free for 7 days"
       title={
         <>
           Write your script.
@@ -15,6 +15,7 @@ const ScriptCTA = () => {
       description="Your story deserves a tool built for the future. Start writing today — it's free, no credit card required."
       primaryButtonText="Get started free"
       secondaryButtonText="Book a demo"
+      showLanguagesImage={false}
     />
   );
 };
