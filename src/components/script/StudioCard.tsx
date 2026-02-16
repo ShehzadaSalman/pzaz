@@ -28,7 +28,7 @@ const StudioCard = ({ title, tagline, description, highlight, index = 0 }: Studi
       <p className="font-lato font-bold text-[16px] text-[#A805FF] mb-2">{tagline}</p>
 
       {/* Title */}
-      <h3 className="font-lato font-bold text-[24px] text-black mb-4">{title}</h3>
+      <h3 className="font-lato font-bold text-[20px] text-black mb-4">{title}</h3>
 
       {/* Description */}
       <p className="font-lato font-normal text-[16px] text-[#878787] leading-relaxed mb-4 flex-grow">
@@ -36,8 +36,8 @@ const StudioCard = ({ title, tagline, description, highlight, index = 0 }: Studi
       </p>
 
       {/* Highlight quote */}
-      <div className="rounded-[12px] bg-[#F7F2FD] py-[21px] px-[24px]">
-        <p className="font-lato font-normal text-[14px] text-[#4D029B] italic leading-relaxed">
+      <div className="rounded-[12px] bg-[#F7F2FD] p-[22px]">
+        <p className="font-lato font-normal text-[16px] text-[#4D029B] italic leading-relaxed">
           "{highlight}"
         </p>
       </div>
