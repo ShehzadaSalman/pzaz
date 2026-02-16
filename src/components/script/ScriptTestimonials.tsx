@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Quote, Star } from "lucide-react";
+import SectionHeader from "@/components/SectionHeader";
 
 const testimonials = [
   {
@@ -33,17 +34,19 @@ const ScriptTestimonials = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-              Trusted by Creators
-            </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-              Used by{" "}
-              <span className="gradient-text">industry professionals</span>
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              From screenwriters to directors, creative teams rely on Pzaz to work faster, 
-              stay focused, and move seamlessly into production.
-            </p>
+            <SectionHeader
+              pillText="Trusted by Creators"
+              pillClassName="bg-primary/10 text-primary"
+              title={
+                <>
+                  Used by{" "}
+                  <span className="font-lato font-extrabold text-[48px] tracking-normal text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
+                    industry professionals
+                  </span>
+                </>
+              }
+              description="From screenwriters to directors, creative teams rely on Pzaz to work faster, stay focused, and move seamlessly into production."
+            />
           </motion.div>
 
           {/* Testimonials grid */}
