@@ -55,7 +55,7 @@ const SharedCTA = ({
                 pillClassName="bg-white text-primary mb-0"
                 pillIcon={<img src={iconStar} alt="" className="w-4 h-4" />}
                 title={title}
-                titleClassName="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-primary-foreground mb-0"
+                titleClassName="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-primary-foreground mb-[30px]"
                 description={description}
                 descriptionClassName="text-xl text-primary-foreground/80 max-w-xl mx-auto mb-10"
               />
