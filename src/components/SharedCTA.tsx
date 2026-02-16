@@ -43,21 +43,17 @@ const SharedCTA = ({
               {!backgroundStyle && <div className="absolute inset-0 gradient-hero-bg animate-gradient" />}
             </div>
 
-            {/* Pattern overlay */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_white_1px,_transparent_1px)] bg-[size:24px_24px]" />
-            </div>
 
             {/* Glow effect */}
             <div className="absolute -top-1/2 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-white/20 rounded-full blur-3xl pointer-events-none" />
 
-            <div className="relative p-16 md:py-24 pb-12 text-center">
+            <div className="relative p-8 md:p-16 md:py-24 pb-12 text-center">
               <SectionHeader
                 pillText={pillText}
                 pillClassName="bg-white text-primary mb-0"
                 pillIcon={<img src={iconStar} alt="" className="w-4 h-4" />}
                 title={title}
-                titleClassName="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-primary-foreground mb-[30px]"
+                titleClassName="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-primary-foreground"
                 description={description}
                 descriptionClassName="text-xl text-primary-foreground/80 max-w-xl mx-auto mb-10"
               />

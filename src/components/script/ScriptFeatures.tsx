@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import SectionHeader from "@/components/SectionHeader";
+import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
 import cardIconBudget from "@/assets/card-icon-budget.svg";
 import solutionCardPreview from "@/assets/solution-card-preview.png";
 
@@ -21,26 +21,19 @@ const ScriptFeatures = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section header */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <SectionHeader
-              pillText="Essential Features"
-              pillClassName="bg-primary/10 text-primary"
-              title={
-                <>
-                  Everything you need.{" "}
-                  <span className="font-lato font-extrabold text-[48px] tracking-normal text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                    Nothing you don't.
-                  </span>
-                </>
-              }
-            />
-          </motion.div>
+          <AnimatedSectionHeader
+            wrapperClassName="text-center mb-16"
+            pillText="Essential Features"
+            pillClassName="bg-primary/10 text-primary"
+            title={
+              <>
+                Everything you need.{" "}
+                <span className="font-lato font-extrabold md:text-[48px] tracking-normal text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
+                  Nothing you don't.
+                </span>
+              </>
+            }
+          />
 
           {/* Features grid - 4x2 using Critical Reframe card style */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-[45px]">

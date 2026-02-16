@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 const ScriptPromise = () => {
   return (
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-5xl mx-auto">
+    <div className="max-w-6xl mx-auto px-6 relative z-10">
+      <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -19,13 +19,13 @@ const ScriptPromise = () => {
             
 
             <div className="relative p-10 sm:p-16 text-center">
-              <h3 className="font-lato font-extrabold text-[48px] leading-[70px] tracking-normal text-primary-foreground mb-4">
+            <h3 className="font-lato font-extrabold text-2xl md:text-[48px] md:leading-[70px] tracking-normal text-primary-foreground mb-4">
                 Pzaz doesn't replace writing tools.
               </h3>
-              <p className="font-lato font-extrabold text-[64px] leading-[70px] tracking-normal text-primary-foreground mb-8">
+            <p className="font-lato font-extrabold text-4xl md:text-[64px] md:leading-[70px] tracking-normal text-primary-foreground mb-8">
                 It turns scripts into productions.
               </p>
-              <p className="font-lato font-normal text-[20px] leading-[30px] tracking-normal text-center text-[#ECECEC] max-w-2xl mx-auto">
+            <p className="font-lato font-normal text-normal md:text-[20px] md:leading-[30px] tracking-normal text-center text-[#ECECEC] max-w-2xl mx-auto">
                 Pzaz Script is tool-agnostic, production-first script intelligence. You don't change how writers write.
                 You change how scripts move into production.
               </p>

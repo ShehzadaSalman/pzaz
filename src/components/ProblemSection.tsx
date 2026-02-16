@@ -22,7 +22,7 @@ const ProblemSection = () => {
               title={
                 <>
                   Plans change.{" "}
-                  <span className="font-lato font-extrabold text-[48px] tracking-normal text-transparent bg-clip-text bg-gradient-to-r to-[#409DFF] from-[#3207BC]">
+                  <span className="font-lato font-extrabold  md:text-[48px] tracking-normal text-transparent bg-clip-text bg-gradient-to-r to-[#409DFF] from-[#3207BC]">
                     Productions break.
                   </span>
                 </>

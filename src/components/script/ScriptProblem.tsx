@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { AlertTriangle, FileX, RefreshCcw, Users, Clock } from "lucide-react";
-import SectionHeader from "@/components/SectionHeader";
+import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
 import iconWarning from "@/assets/icon-warning.svg";
 import fragmentedTools from "@/assets/fragmented-tools.png";
 
@@ -37,7 +37,8 @@ const ScriptProblem = () => {
           transition={{ duration: 0.6 }}
           className="max-w-6xl mx-auto"
         >
-          <SectionHeader
+          <AnimatedSectionHeader
+            wrapperClassName="max-w-6xl mx-auto"
             pillText="The Studio Reality"
             pillIcon={<AlertTriangle className="w-4 h-4" />}
             pillClassName="bg-[#FF404017] text-[#EB5757] [&>span:first-child>svg]:text-[#FF4040]"

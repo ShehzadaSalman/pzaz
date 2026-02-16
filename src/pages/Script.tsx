@@ -9,12 +9,11 @@ import ScriptCoreFeatures from "@/components/script/ScriptCoreFeatures";
 import ScriptTestimonials from "@/components/script/ScriptTestimonials";
 import ScriptFAQ from "@/components/script/ScriptFAQ";
 import ScriptCTA from "@/components/script/ScriptCTA";
-import ScriptHeader from "@/components/script/ScriptHeader";
 import PageLayout from "@/components/layout/PageLayout";
 
 const Script = () => {
   return (
-    <PageLayout header={<ScriptHeader />}>
+    <PageLayout>
       <ScriptHero />
       <ScriptProblem />
       <ScriptShift />

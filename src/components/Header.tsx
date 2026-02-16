@@ -4,21 +4,29 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLocation } from "react-router-dom";
 import pzazLogo from "@/assets/pzaz-logo.png";
 import iconSurvey from "@/assets/icon-survey.svg";
 import LanguageDropdown from "@/components/LanguageDropdown";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const isScriptPage = location.pathname === "/script";
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass" style={{ borderBottom: '1px solid #D4BAF4' }}>
-      <div className="max-w-6xl mx-auto px-6 py-4">
+      <div className="max-w-6xl mx-auto px-2  py-4">
         <nav className="flex items-center justify-between">
           {/* Logo + Language */}
           <div className="flex items-center gap-4">
             <a href="/" className="flex items-center group" style={{ gap: 16 }}>
               <img src={pzazLogo} alt="Pzaz" className="h-8" />
+              {isScriptPage && (
+                <span className="text-xs font-medium px-2 py-0.5 rounded-full" style={{ color: "#5C28A3", backgroundColor: "#F7F2FD" }}>
+                  Script
+                </span>
+              )}
             </a>
             <LanguageDropdown />
           </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import SectionHeader from "@/components/SectionHeader";
+import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
 
 const coreFeatures = [
   {
@@ -29,27 +29,21 @@ const ScriptCoreFeatures = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           {/* Core Experience Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <SectionHeader
-              pillText="Core Experience"
-              pillClassName="bg-primary/10 text-primary"
-              title={
-                <>
-                  Complete Script{" "}
-                  <span className="font-lato font-extrabold text-[48px] tracking-normal text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                    Lifecycle Solution
-                  </span>
-                </>
-              }
-              description="One platform. The complete script lifecycle. Everything your script needs — from the first idea to production — in one intuitive workspace."
-            />
-          </motion.div>
+          <AnimatedSectionHeader
+            wrapperClassName="text-center mb-12"
+            pillText="Core Experience"
+            pillClassName="bg-primary/10 text-primary"
+            title={
+              <>
+                Complete Script{" "}
+                <span className="font-lato font-extrabold md:text-[48px] tracking-normal text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
+                  Lifecycle Solution
+                </span>
+              </>
+            }
+            description="One platform. The complete script lifecycle. Everything your script needs — from the first idea to production — in one intuitive workspace."
+            motionProps={{ initial: { opacity: 0, y: 30 } }}
+          />
 
           {/* Core feature cards */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-[29px]">

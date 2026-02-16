@@ -54,7 +54,7 @@ const ProductsSection = () => {
             title={
               <>
                 Built for filmmakers who{" "}
-                <span className="font-lato font-extrabold text-[48px] tracking-normal gradient-text">
+                <span className="font-lato font-extrabold md:text-[48px] tracking-normal gradient-text">
                   actually finish films.
                 </span>
               </>

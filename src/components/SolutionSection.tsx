@@ -64,7 +64,7 @@ const SolutionSection = () => {
             title={
               <>
                 One connected{" "}
-                <span className="font-lato font-extrabold text-[48px] tracking-normal text-transparent bg-clip-text bg-gradient-to-l from-[#409DFF] to-[#3207BC]">
+                <span className="font-lato font-extrabold md:text-[48px] tracking-normal text-transparent bg-clip-text bg-gradient-to-l from-[#409DFF] to-[#3207BC]">
                   production system.
                 </span>
               </>

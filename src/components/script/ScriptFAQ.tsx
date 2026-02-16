@@ -6,7 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import SectionHeader from "@/components/SectionHeader";
+import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
 
 const faqs = [
   {
@@ -41,27 +41,20 @@ const ScriptFAQ = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto">
           {/* Section header */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <SectionHeader
-              pillText="FAQs"
-              pillClassName="bg-primary/10 text-primary"
-              title={
-                <>
-                  Frequently asked{" "}
-                  <span className="font-lato font-extrabold text-[48px] tracking-normal text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                    questions
-                  </span>
-                </>
-              }
-              description="Everything you need to know about Pzaz Script."
-            />
-          </motion.div>
+          <AnimatedSectionHeader
+            wrapperClassName="text-center mb-12"
+            pillText="FAQs"
+            pillClassName="bg-primary/10 text-primary"
+            title={
+              <>
+                Frequently asked{" "}
+                <span className="font-lato font-extrabold text-[48px] tracking-normal text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
+                  questions
+                </span>
+              </>
+            }
+            description="Everything you need to know about Pzaz Script."
+          />
 
           {/* FAQ Accordion */}
           <motion.div

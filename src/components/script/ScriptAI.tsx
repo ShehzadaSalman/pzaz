@@ -51,7 +51,7 @@ const ScriptAI = () => {
               className="mb-8"
             />
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-4">
               {aiCards.map((card, index) => (
                 <motion.div
                   key={card.title}

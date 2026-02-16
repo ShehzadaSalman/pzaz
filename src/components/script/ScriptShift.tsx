@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Clapperboard, DollarSign, MapPin, CheckCircle } from "lucide-react";
-import SectionHeader from "@/components/SectionHeader";
+import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
 import flowchartIcon from "@/assets/icon-flowchart.svg";
 import cardIconBudget from "@/assets/card-icon-budget.svg";
 import solutionCardPreview from "@/assets/solution-card-preview.png";
@@ -43,7 +43,8 @@ const ScriptShift = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <SectionHeader
+            <AnimatedSectionHeader
+              wrapperClassName="text-center"
               pillText="The Critical Reframe"
               pillIcon={<img src={flowchartIcon} alt="" className="w-4 h-4" />}
               pillClassName="bg-primary/10 text-primary"
