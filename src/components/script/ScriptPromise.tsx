@@ -26,7 +26,7 @@ const ScriptPromise = () => {
               <p className="font-lato font-extrabold text-[64px] leading-[70px] tracking-normal text-primary-foreground mb-8">
                 It turns scripts into productions.
               </p>
-              <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
+              <p className="font-lato font-normal text-[20px] leading-[30px] tracking-normal text-center text-[#ECECEC] max-w-2xl mx-auto">
                 Pzaz Script is tool-agnostic, production-first script intelligence. You don't change how writers write.
                 You change how scripts move into production.
               </p>
