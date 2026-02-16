@@ -4,6 +4,7 @@ import ScriptProblem from "@/components/script/ScriptProblem";
 import ScriptShift from "@/components/script/ScriptShift";
 import ScriptPromise from "@/components/script/ScriptPromise";
 import ScriptUSPs from "@/components/script/ScriptUSPs";
+import ScriptAI from "@/components/script/ScriptAI";
 import ScriptFeatures from "@/components/script/ScriptFeatures";
 import ScriptTestimonials from "@/components/script/ScriptTestimonials";
 import ScriptFAQ from "@/components/script/ScriptFAQ";
@@ -18,6 +19,7 @@ const Script = () => {
       <ScriptShift />
       <ScriptPromise />
       <ScriptUSPs />
+      <ScriptAI />
       <ScriptFeatures />
       <ScriptTestimonials />
       <ScriptFAQ />
