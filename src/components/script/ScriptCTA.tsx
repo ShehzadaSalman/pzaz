@@ -16,6 +16,7 @@ const ScriptCTA = () => {
       primaryButtonText="Get started free"
       secondaryButtonText="Book a demo"
       showLanguagesImage={false}
+      backgroundStyle={{ background: "radial-gradient(88.07% 62.52% at 50% 0%, #9D87FF 0%, #5C28A4 95%)" }}
     />
   );
 };
