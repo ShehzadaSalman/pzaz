@@ -32,7 +32,7 @@ const ScriptHero = () => {
           >
             <Pill
               text="Scriptwriting Software for Film Productions"
-              className="text-primary mb-8 mt-[15px] bg-[#E4E4FE]"
+              className="text-primary mb-8 mt-[15px] bg-[#E4E4FE] border border-[#8651EF42]"
               icon={<img src={aiResearchIcon} alt="" className="w-4 h-4" />}
             />
           </motion.div>
