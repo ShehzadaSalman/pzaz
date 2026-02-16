@@ -70,12 +70,12 @@ const SharedCTA = ({
                 <Button
                   variant="outline"
                   size="xl"
-                  className="group bg-white/10 text-white border-white/30 hover:bg-white/20"
+                  className="group bg-white/10 text-white border-white/30 hover:bg-white/20 rounded-[10px]"
                   postfixIcon={<ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
                 >
                   {primaryButtonText}
                 </Button>
-                <Button variant="outline" size="xl" className="text-white border-white/30 hover:bg-white/10">
+                <Button variant="outline" size="xl" className="text-white border-white/30 hover:bg-white/10 rounded-[10px]">
                   {secondaryButtonText}
                 </Button>
               </div>
