@@ -84,16 +84,19 @@ const ScriptFeatures = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-              Core Experience
-            </span>
-            <h3 className="text-2xl sm:text-3xl font-bold mb-4">
-              Complete Script Lifecycle Solution
-            </h3>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              One platform. The complete script lifecycle. Everything your script needs — 
-              from the first idea to production — in one intuitive workspace.
-            </p>
+            <SectionHeader
+              pillText="Core Experience"
+              pillClassName="bg-primary/10 text-primary"
+              title={
+                <>
+                  Complete Script{" "}
+                  <span className="font-lato font-extrabold text-[48px] tracking-normal text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
+                    Lifecycle Solution
+                  </span>
+                </>
+              }
+              description="One platform. The complete script lifecycle. Everything your script needs — from the first idea to production — in one intuitive workspace."
+            />
           </motion.div>
 
           {/* Core feature cards */}
