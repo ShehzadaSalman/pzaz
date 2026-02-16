@@ -8,6 +8,8 @@ import solutionCardPreview from "@/assets/solution-card-preview.png";
 import solutionCardSchedule from "@/assets/solution-card-schedule.png";
 import solutionCardBudget from "@/assets/solution-card-budget.png";
 import solutionCardTeam from "@/assets/solution-card-team.png";
+import ScriptPromise from "@/components/script/ScriptPromise";
+
 const benefits = [
   { icon: Clapperboard, text: "Drive breakdowns" },
   { icon: DollarSign, text: "Inform budgets and schedules" },
@@ -26,10 +28,13 @@ const ScriptShift = () => {
   return (
     <section className="section-padding relative overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background pointer-events-none" />
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{ background: "linear-gradient(180deg, #FFFFFF 0%, #F9F5FE 18.27%, #FFFFFF 100%)" }}
+      />
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           {/* The Shift Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -56,7 +61,7 @@ const ScriptShift = () => {
             />
 
             {/* Script Solution Cards */}
-            <div className="grid md:grid-cols-2 gap-[45px] max-w-6xl mx-auto mb-12">
+            <div className="grid md:grid-cols-2 gap-[45px] max-w-6xl mx-auto mb-12 md:mb-[117px]">
               {scriptCards.map((card, index) => (
                 <motion.div
                   key={card.title}
@@ -93,6 +98,7 @@ const ScriptShift = () => {
 
         </div>
       </div>
+      <ScriptPromise />
     </section>
   );
 };

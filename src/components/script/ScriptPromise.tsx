@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 
 const ScriptPromise = () => {
   return (
-    <section className="section-padding relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-5xl mx-auto">
           <motion.div
@@ -33,8 +32,7 @@ const ScriptPromise = () => {
             </div>
           </motion.div>
         </div>
-      </div>
-    </section>
+    </div>
   );
 };
 
