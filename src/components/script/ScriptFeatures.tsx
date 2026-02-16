@@ -100,7 +100,7 @@ const ScriptFeatures = () => {
           </motion.div>
 
           {/* Core feature cards */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-[45px]">
             {[
               {
                 title: "From concept to screen",
@@ -125,10 +125,11 @@ const ScriptFeatures = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 * index }}
-                className="p-6 rounded-2xl bg-gradient-to-b from-primary/5 to-card border border-border/50 hover:border-primary/30 transition-all"
+                className="p-8 rounded-[38px] border-2 border-[#D4BAF4] transition-all hover:shadow-lg"
+                style={{ background: "radial-gradient(circle, #D1CFFF, #FFFFFF)" }}
               >
-                <h4 className="text-lg font-bold mb-3">{item.title}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                <h4 className="font-lato font-bold text-[30px] leading-[42px] text-[#4D029B] mb-3">{item.title}</h4>
+                <p className="font-lato font-normal text-[16px] leading-[24px] text-[#878787]">{item.description}</p>
               </motion.div>
             ))}
           </div>
