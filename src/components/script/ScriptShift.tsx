@@ -69,7 +69,7 @@ const ScriptShift = () => {
                   {/* Title row */}
                   <div className="flex items-center gap-3 px-[34px] pt-[34px] pb-4">
                     <img src={card.icon} alt="" className="w-[45px] h-[45px] flex-shrink-0" />
-                    <span className="font-lato font-bold text-[20px] leading-[23px] text-foreground">
+                    <span className="font-lato font-bold text-[20px] leading-[23px] text-foreground text-left">
                       {card.title}
                     </span>
                   </div>
