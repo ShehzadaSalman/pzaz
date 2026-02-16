@@ -2,6 +2,7 @@ import React from "react";
 import ScriptHero from "@/components/script/ScriptHero";
 import ScriptProblem from "@/components/script/ScriptProblem";
 import ScriptShift from "@/components/script/ScriptShift";
+import ScriptPromise from "@/components/script/ScriptPromise";
 import ScriptUSPs from "@/components/script/ScriptUSPs";
 import ScriptFeatures from "@/components/script/ScriptFeatures";
 import ScriptAI from "@/components/script/ScriptAI";
@@ -17,6 +18,7 @@ const Script = () => {
       <ScriptHero />
       <ScriptProblem />
       <ScriptShift />
+      <ScriptPromise />
       <ScriptUSPs />
       <ScriptFeatures />
       <ScriptAI />
