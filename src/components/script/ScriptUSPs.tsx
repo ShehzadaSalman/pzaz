@@ -15,6 +15,7 @@ import {
   Target
 } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
+import StudioCard from "@/components/script/StudioCard";
 
 const usps = [
   {
@@ -134,28 +135,17 @@ const ScriptUSPs = () => {
         </motion.div>
 
         {/* USP Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-[46px] max-w-7xl mx-auto">
           {usps.map((usp, index) => (
-            <motion.div
+            <StudioCard
               key={usp.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.05 * index }}
-              className="group relative rounded-2xl p-6 bg-card border border-border/50 hover:border-primary/30 hover:shadow-xl transition-all duration-300"
-            >
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                  <usp.icon className="w-6 h-6 text-primary" />
-                </div>
-                <div className="flex-1">
-                  <p className="text-xs font-medium text-primary mb-1">{usp.tagline}</p>
-                  <h3 className="text-lg font-bold mb-2">{usp.title}</h3>
-                  <p className="text-sm text-muted-foreground mb-3">{usp.description}</p>
-                  <p className="text-sm text-foreground/80 font-medium italic">"{usp.highlight}"</p>
-                </div>
-              </div>
-            </motion.div>
+              icon={usp.icon}
+              title={usp.title}
+              tagline={usp.tagline}
+              description={usp.description}
+              highlight={usp.highlight}
+              index={index}
+            />
           ))}
         </div>
       </div>
