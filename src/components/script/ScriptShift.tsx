@@ -83,23 +83,6 @@ const ScriptShift = () => {
                 </motion.div>
               ))}
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-              {benefits.map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.1 * index }}
-                  className="flex flex-col items-center gap-3 p-6 rounded-xl bg-card border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all"
-                >
-                  <div className="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center">
-                    <benefit.icon className="w-6 h-6 text-primary-foreground" />
-                  </div>
-                  <p className="text-foreground font-medium text-center">{benefit.text}</p>
-                </motion.div>
-              ))}
-            </div>
 
             <p className="text-lg text-muted-foreground italic">
               Most tools stop at FADE OUT. Production reality starts after.
