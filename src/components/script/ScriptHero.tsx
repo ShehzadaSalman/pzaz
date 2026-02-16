@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import ArrowIcon from "@/components/ui/ArrowIcon";
 import ctaPlayIcon from "@/assets/cta-play-icon.svg";
 import aiResearchIcon from "@/assets/ai-research-icon.svg";
+import iconImportScript from "@/assets/icon-import-script.svg";
 
 const ScriptHero = () => {
   return (
@@ -67,8 +68,10 @@ const ScriptHero = () => {
             transition={{ duration: 0.6, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6"
           >
-            <Button size="lg" className="group px-8">
-              Start For Free
+            <Button size="lg" className="group px-8"
+              prefixIcon={<img src={iconImportScript} alt="" className="w-5 h-5" />}
+            >
+              Import a Script
               <ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />
             </Button>
             <Button
