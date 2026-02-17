@@ -3,36 +3,36 @@ import { Button } from "@/components/ui/button";
 import ArrowIcon from "@/components/ui/ArrowIcon";
 import { AnimatePresence, motion } from "framer-motion";
 import ctaPlayIcon from "@/assets/cta-play-icon.svg";
-import aiGeneratorImage from "@/assets/home-banner/AI genertaor.png";
-import charactersImage from "@/assets/home-banner/Characters.png";
-import ideationBoardImage from "@/assets/home-banner/Ideation board.png";
-import scenePropertiesImage from "@/assets/home-banner/Scene properties.png";
-import scriptImage from "@/assets/home-banner/Script.png";
-import updatedBudgetImage from "@/assets/home-banner/Updated Budget 0.2.png";
+import banner1 from "@/assets/home-banner/banner1.png";
+import banner2 from "@/assets/home-banner/banner2.png";
+import banner3 from "@/assets/home-banner/banner3.png";
+import banner4 from "@/assets/home-banner/banner4.png";
+import banner5 from "@/assets/home-banner/banner5.png";
+import banner6 from "@/assets/home-banner/banner6.png";
 
 const heroSlides = [
   {
-    image: aiGeneratorImage,
+    image: banner1,
     imageAlt: "AI generator view",
   },
   {
-    image: charactersImage,
+    image: banner2,
     imageAlt: "Characters view",
   },
   {
-    image: ideationBoardImage,
+    image: banner3,
     imageAlt: "Ideation board view",
   },
   {
-    image: scenePropertiesImage,
+    image: banner4,
     imageAlt: "Scene properties view",
   },
   {
-    image: scriptImage,
+    image: banner5,
     imageAlt: "Script editor view",
   },
   {
-    image: updatedBudgetImage,
+    image: banner6,
     imageAlt: "Updated budget view",
   },
 ];
