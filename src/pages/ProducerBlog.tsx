@@ -66,7 +66,7 @@ const ProducerBlog = () => {
 
         {totalPages >= 1 && (
           <Pagination className="mt-12">
-            <PaginationContent className="rounded-xl bg-white p-2 shadow-sm">
+            <PaginationContent className=" bg-white p-2">
               <PaginationItem>
                 <PaginationPrevious
                   href="#"
@@ -111,7 +111,7 @@ const ProducerBlog = () => {
                     }}
                     className={
                       pageNumber === currentPage
-                        ? "border-brand-purple bg-brand-purple text-white hover:bg-brand-purple"
+                        ? "border-brand-purple bg-brand-purple  hover:bg-brand-purple"
                         : "text-brand-purple hover:bg-brand-purple/10"
                     }
                   >
