@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import ArrowIcon from "@/components/ui/ArrowIcon";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import ctaPlayIcon from "@/assets/cta-play-icon.svg";
 import banner1 from "@/assets/home-banner/banner1.png";
 import banner2 from "@/assets/home-banner/banner2.png";
@@ -38,17 +38,40 @@ const heroSlides = [
 ];
 
 const Hero = () => {
+  const [targetSlide, setTargetSlide] = useState(0);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [loadedSlides, setLoadedSlides] = useState<boolean[]>(
+    heroSlides.map((_, index) => index === 0)
+  );
 
   useEffect(() => {
     const slideInterval = setInterval(() => {
-      setCurrentSlide((previousSlide) => (previousSlide + 1) % heroSlides.length);
+      setTargetSlide((previousSlide) => (previousSlide + 1) % heroSlides.length);
     }, 5500);
 
     return () => clearInterval(slideInterval);
   }, []);
 
-  const activeSlideImage = heroSlides[currentSlide];
+  useEffect(() => {
+    heroSlides.forEach((slide, index) => {
+      if (index === 0) return;
+      const image = new Image();
+      image.src = slide.image;
+      image.onload = () => {
+        setLoadedSlides((previousLoaded) => {
+          if (previousLoaded[index]) return previousLoaded;
+          const nextLoaded = [...previousLoaded];
+          nextLoaded[index] = true;
+          return nextLoaded;
+        });
+      };
+    });
+  }, []);
+
+  useEffect(() => {
+    if (!loadedSlides[targetSlide]) return;
+    setCurrentSlide(targetSlide);
+  }, [loadedSlides, targetSlide]);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-[60px]">
@@ -138,20 +161,34 @@ const Hero = () => {
               src={heroSlides[0].image}
               alt=""
               aria-hidden="true"
+              loading="eager"
+              decoding="async"
               className="w-full h-auto opacity-0 pointer-events-none select-none"
             />
-            <AnimatePresence initial={false}>
+            {heroSlides.map((slide, index) => (
               <motion.img
-                key={currentSlide}
-                src={activeSlideImage.image}
-                alt={activeSlideImage.imageAlt}
+                key={slide.image}
+                src={slide.image}
+                alt={slide.imageAlt}
+                loading={index === 0 ? "eager" : "lazy"}
+                decoding="async"
+                onLoad={() => {
+                  setLoadedSlides((previousLoaded) => {
+                    if (previousLoaded[index]) return previousLoaded;
+                    const nextLoaded = [...previousLoaded];
+                    nextLoaded[index] = true;
+                    return nextLoaded;
+                  });
+                }}
                 className="absolute inset-0 w-full h-full object-cover"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+                initial={false}
+                animate={{
+                  opacity: currentSlide === index ? 1 : 0,
+                  scale: currentSlide === index ? 1 : 1.015,
+                }}
+                transition={{ duration: 0.95, ease: [0.22, 1, 0.36, 1] }}
               />
-            </AnimatePresence>
+            ))}
           </div>
         </motion.div>
       </div>
