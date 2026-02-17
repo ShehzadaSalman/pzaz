@@ -17,6 +17,7 @@ export default {
         sans: ['Lato', 'system-ui', 'sans-serif'],
         display: ['DM Sans', 'system-ui', 'sans-serif'],
         bebas: ['Bebas Neue', 'sans-serif'],
+        gloock: ['Gloock', 'serif'],
         lato: ['Lato', 'sans-serif'],
       },
       colors: {
