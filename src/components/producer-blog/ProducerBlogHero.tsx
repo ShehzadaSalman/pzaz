@@ -52,14 +52,14 @@ const ProducerBlogHero = () => {
               onClick={() => setActive(active === cat ? null : cat)}
               className={`rounded-[10px] px-5 py-2.5 text-sm font-medium transition-colors ${
                 active === cat
-                  ? "bg-[#4827AF] text-white"
-                  : "bg-[#D7D7DC] text-[#4A4A4F] hover:bg-[#CCCCD2]"
+                  ? "bg-brand-purple text-white"
+                  : "bg-brand-purple/10 text-brand-purple hover:bg-brand-purple/20"
               }`}
             >
               {cat}
             </button>
           ))}
-          <button className="rounded-[10px] bg-[#D7D7DC] px-5 py-2.5 text-sm font-medium text-[#4A4A4F] hover:bg-[#CCCCD2] inline-flex items-center gap-1.5 transition-colors">
+          <button className="rounded-[10px] bg-brand-purple/10 px-5 py-2.5 text-sm font-medium text-brand-purple hover:bg-brand-purple/20 inline-flex items-center gap-1.5 transition-colors">
             Share
             <CornerUpRight className="h-4 w-4" />
           </button>
