@@ -74,7 +74,7 @@ const ProducerBlog = () => {
                     event.preventDefault();
                     if (currentPage > 1) goToPage(currentPage - 1);
                   }}
-                  className={`text-brand-purple hover:bg-brand-purple/10 ${
+                  className={`text-brand-purple hover:text-brand-purple hover:bg-brand-purple/10 ${
                     currentPage === 1 ? "pointer-events-none opacity-50" : ""
                   }`}
                 />
@@ -89,7 +89,7 @@ const ProducerBlog = () => {
                         event.preventDefault();
                         goToPage(1);
                       }}
-                      className="text-brand-purple hover:bg-brand-purple/10"
+                      className="text-brand-purple hover:text-brand-purple hover:bg-brand-purple/10"
                     >
                       1
                     </PaginationLink>
@@ -111,8 +111,8 @@ const ProducerBlog = () => {
                     }}
                     className={
                       pageNumber === currentPage
-                        ? "border-brand-purple bg-brand-purple  hover:bg-brand-purple"
-                        : "text-brand-purple hover:bg-brand-purple/10"
+                        ? "border-brand-purple bg-brand-purple hover:text-brand-purple "
+                        : "text-brand-purple hover:bg-brand-purple/10 hover:text-brand-purple"
                     }
                   >
                     {pageNumber}
@@ -132,7 +132,7 @@ const ProducerBlog = () => {
                         event.preventDefault();
                         goToPage(totalPages);
                       }}
-                      className="text-brand-purple hover:bg-brand-purple/10"
+                      className="text-brand-purple hover:text-brand-purple"
                     >
                       {totalPages}
                     </PaginationLink>
@@ -147,7 +147,7 @@ const ProducerBlog = () => {
                     event.preventDefault();
                     if (currentPage < totalPages) goToPage(currentPage + 1);
                   }}
-                  className={`text-brand-purple hover:bg-brand-purple/10 ${
+                  className={`text-brand-purple hover:bg-brand-purple/10 hover:text-brand-purple ${
                     currentPage === totalPages ? "pointer-events-none opacity-50" : ""
                   }`}
                 />

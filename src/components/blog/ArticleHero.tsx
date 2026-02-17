@@ -95,6 +95,7 @@ const ArticleHero = ({ article }: ArticleHeroProps) => {
               <img
                 src={article.featuredImage}
                 alt={article.title}
+                referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"
               />
             </div>

@@ -12,43 +12,55 @@ const ArticleContent = ({ article }: ArticleContentProps) => {
   const renderContent = (content: string) => {
     const lines = content.trim().split("\n");
     const elements: React.ReactNode[] = [];
-    let inBlockquote = false;
     let inList = false;
     let listItems: string[] = [];
+    const imagePattern = /^!\[(.*?)\]\((https?:\/\/.+?)\)$/;
+
+    const flushList = (key: string) => {
+      if (!inList || listItems.length === 0) return;
+      elements.push(
+        <ul key={key} className="list-disc list-inside space-y-2 text-muted-foreground mb-6 ml-4">
+          {listItems.map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
+        </ul>
+      );
+      listItems = [];
+      inList = false;
+    };
 
     lines.forEach((line, index) => {
       const trimmedLine = line.trim();
+      const imageMatch = trimmedLine.match(imagePattern);
+
+      if (imageMatch) {
+        flushList(`list-before-image-${index}`);
+        const [, alt, src] = imageMatch;
+        elements.push(
+          <figure key={`image-${index}`} className="my-8">
+            <img
+              src={src}
+              alt={alt || "Article image"}
+              loading="lazy"
+              decoding="async"
+              referrerPolicy="no-referrer"
+              className="w-full rounded-xl border border-border/60"
+            />
+          </figure>
+        );
+        return;
+      }
 
       // Headers
       if (trimmedLine.startsWith("## ")) {
-        if (inList) {
-          elements.push(
-            <ul key={`list-${index}`} className="list-disc list-inside space-y-2 text-muted-foreground mb-6 ml-4">
-              {listItems.map((item, i) => (
-                <li key={i}>{item}</li>
-              ))}
-            </ul>
-          );
-          listItems = [];
-          inList = false;
-        }
+        flushList(`list-${index}`);
         elements.push(
           <h2 key={index} className="text-2xl font-bold text-foreground mt-10 mb-4">
             {trimmedLine.replace("## ", "")}
           </h2>
         );
       } else if (trimmedLine.startsWith("### ")) {
-        if (inList) {
-          elements.push(
-            <ul key={`list-${index}`} className="list-disc list-inside space-y-2 text-muted-foreground mb-6 ml-4">
-              {listItems.map((item, i) => (
-                <li key={i}>{item}</li>
-              ))}
-            </ul>
-          );
-          listItems = [];
-          inList = false;
-        }
+        flushList(`list-${index}`);
         elements.push(
           <h3 key={index} className="text-xl font-bold text-foreground mt-8 mb-3">
             {trimmedLine.replace("### ", "")}
@@ -78,17 +90,7 @@ const ArticleContent = ({ article }: ArticleContentProps) => {
       }
       // Regular paragraphs
       else if (trimmedLine.length > 0) {
-        if (inList) {
-          elements.push(
-            <ul key={`list-${index}`} className="list-disc list-inside space-y-2 text-muted-foreground mb-6 ml-4">
-              {listItems.map((item, i) => (
-                <li key={i}>{item}</li>
-              ))}
-            </ul>
-          );
-          listItems = [];
-          inList = false;
-        }
+        flushList(`list-${index}`);
         // Handle inline bold
         const formattedLine = trimmedLine.replace(
           /\*\*(.*?)\*\*/g,
@@ -105,15 +107,7 @@ const ArticleContent = ({ article }: ArticleContentProps) => {
     });
 
     // Flush remaining list items
-    if (inList && listItems.length > 0) {
-      elements.push(
-        <ul key="final-list" className="list-disc list-inside space-y-2 text-muted-foreground mb-6 ml-4">
-          {listItems.map((item, i) => (
-            <li key={i}>{item}</li>
-          ))}
-        </ul>
-      );
-    }
+    flushList("final-list");
 
     return elements;
   };

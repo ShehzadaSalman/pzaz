@@ -47,7 +47,7 @@ const Hero = () => {
   useEffect(() => {
     const slideInterval = setInterval(() => {
       setTargetSlide((previousSlide) => (previousSlide + 1) % heroSlides.length);
-    }, 5500);
+    }, 3500);
 
     return () => clearInterval(slideInterval);
   }, []);
