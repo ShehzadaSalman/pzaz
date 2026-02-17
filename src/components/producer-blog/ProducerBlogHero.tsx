@@ -25,7 +25,7 @@ const ProducerBlogHero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="font-gloock font-bold text-[64px] md:text-[96px] leading-[1] bg-clip-text text-transparent mb-4"
+          className="font-gloock font-medium text-[64px] md:text-[96px] leading-[1] bg-clip-text text-transparent mb-4"
           style={{ backgroundImage: 'linear-gradient(91deg, #5C28A4 9.57%, #00D1FF 85.93%)' }}
         >
           The Film Maker Entrepreneur
