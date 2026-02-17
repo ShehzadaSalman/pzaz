@@ -1,13 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Play } from "lucide-react";
 import ArrowIcon from "@/components/ui/ArrowIcon";
-import { motion } from "framer-motion";
-import iconSurvey from "@/assets/icon-survey.svg";
+import { AnimatePresence, motion } from "framer-motion";
 import ctaPlayIcon from "@/assets/cta-play-icon.svg";
 import productionWorkspace from "@/assets/production-workspace.png";
 
+const heroSlides = [
+  {
+    image: productionWorkspace,
+    imageAlt: "Your production workspace",
+  },
+  {
+    image: productionWorkspace,
+    imageAlt: "Your production workspace",
+  },
+  {
+    image: productionWorkspace,
+    imageAlt: "Your production workspace",
+  },
+];
+
 const Hero = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const slideInterval = setInterval(() => {
+      setCurrentSlide((previousSlide) => (previousSlide + 1) % heroSlides.length);
+    }, 5500);
+
+    return () => clearInterval(slideInterval);
+  }, []);
+
+  const activeSlideImage = heroSlides[currentSlide];
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-[60px]">
       {/* Gradient background */}
@@ -27,10 +52,12 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-            className="font-lato font-extrabold text-5xl leading-[50px] md:text-[64px]  md:leading-[70px] md:tracking-normal text-center mb-6 text-balance md:pt-[60px]">
-
+            className="font-lato font-extrabold text-5xl leading-[50px] md:text-[64px]  md:leading-[70px] md:tracking-normal text-center mb-6 text-balance md:pt-[60px]"
+          >
             One intelligent workflow{" "}
-            <span className="bg-clip-text text-transparent" style={{ backgroundImage: 'linear-gradient(247.38deg, #29FADF -2.17%, #8B1DFF 84.87%)' }}>from script to shoot.</span>
+            <span className="bg-clip-text text-transparent" style={{ backgroundImage: "linear-gradient(247.38deg, #29FADF -2.17%, #8B1DFF 84.87%)" }}>
+              from script to shoot.
+            </span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -38,9 +65,9 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
-            className="font-lato font-normal text-[20px] leading-[30px] tracking-normal text-center max-w-3xl mx-auto mb-10 text-muted-foreground">
-
-            Pzaz helps you write smarter, plan faster, and avoid costly mistakes. 
+            className="font-lato font-normal text-[20px] leading-[30px] tracking-normal text-center max-w-3xl mx-auto mb-10 text-muted-foreground"
+          >
+            Pzaz helps you write smarter, plan faster, and avoid costly mistakes.
             AI works with you, not instead of you, turning your script into a full production plan.
           </motion.p>
 
@@ -49,10 +76,9 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6"
+          >
             <Button size="lg" className="group px-8">
-              {/* <img src={iconSurvey} alt="" className="w-5 h-5" /> */}
               Start For Free
               <ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />
             </Button>
@@ -77,21 +103,32 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="font-lato font-normal text-[16px] leading-[30px] tracking-normal text-center text-[#878787]">
-
+            className="font-lato font-normal text-[16px] leading-[30px] tracking-normal text-center text-[#878787]"
+          >
             No credit card. Up and running in 15 minutes.
           </motion.p>
         </div>
 
-        {/* Hero Visual */}
+        {/* Hero Visual Carousel */}
         <motion.div
           initial={{ opacity: 0, y: 50, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4, ease: [0.4, 0, 0.2, 1] }}
-          className="mt-16 lg:mt-24 max-w-6xl mx-auto">
-
+          className="mt-16 lg:mt-24 max-w-6xl mx-auto"
+        >
           <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border/50">
-            <img src={productionWorkspace} alt="Your production workspace" className="w-full h-auto" />
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={currentSlide}
+                src={activeSlideImage.image}
+                alt={activeSlideImage.imageAlt}
+                className="w-full h-auto"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+              />
+            </AnimatePresence>
           </div>
         </motion.div>
       </div>
