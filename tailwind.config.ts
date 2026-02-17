@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         sans: ['Lato', 'system-ui', 'sans-serif'],
         display: ['DM Sans', 'system-ui', 'sans-serif'],
+        bebas: ['Bebas Neue', 'sans-serif'],
         lato: ['Lato', 'sans-serif'],
       },
       colors: {
