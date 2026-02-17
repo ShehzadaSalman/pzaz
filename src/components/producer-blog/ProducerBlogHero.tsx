@@ -25,7 +25,8 @@ const ProducerBlogHero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="font-lato font-black text-[48px] md:text-[72px] leading-[1.05] bg-gradient-to-r from-[#3207BC] to-[#409DFF] bg-clip-text text-transparent mb-4"
+          className="font-bebas text-[64px] md:text-[96px] leading-[1] bg-clip-text text-transparent mb-4"
+          style={{ backgroundImage: 'linear-gradient(91deg, #5C28A4 9.57%, #00D1FF 85.93%)' }}
         >
           The Film Maker Entrepreneur
         </motion.h1>
