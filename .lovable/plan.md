@@ -1,58 +1,57 @@
 
 
-# Pre-rendering and SEO Implementation Plan
+## Producer Blog Page Build-Out
 
-## Overview
-Generate static HTML at build time for every route so search engines see full page content instead of an empty `<div id="root"></div>`.
+### Section 1: Hero Section (matching the reference screenshot)
 
-## Steps
+Create a new `ProducerBlogHero` component at `src/components/producer-blog/ProducerBlogHero.tsx`:
 
-### 1. Install Dependencies
-- `react-helmet-async` -- per-page meta tags
-- `vite-plugin-prerender` -- static HTML generation at build time
+- **Title**: "The Film Maker Entrepreneur" -- styled with a gradient (purple-to-blue, matching the screenshot) using a large serif/display font
+- **Subtitle**: "Interviews, Industry and Info. Get Pzazzed !" in italic, dark text
+- **Category filter bar**: A horizontal row of pill/button-style category filters:
+  - Comparisons & Analysis
+  - Discoveries & Beginnings
+  - Film Business School
+  - Filmmaker Interviews
+  - How-Tos & Insights
+  - News & Updates
+  - Production & Producing
+  - Art Of Film
+  - Share (with an arrow icon)
+- Categories styled as rounded rectangular buttons with a light gray background (`#D7D7DC` or similar), matching the screenshot
+- Background: light gradient from purple tint at top to light gray
 
-### 2. Update `index.html`
-Replace generic "Lovable App" metadata with Pzaz branding as the default fallback:
-- Title: "Pzaz | Film Production Management Software"
-- Description, Open Graph, and Twitter card tags updated to Pzaz content
+### Section 2: 3-Column Blog Card Grid
 
-### 3. Wrap App with HelmetProvider (`src/App.tsx`)
-Add `HelmetProvider` from `react-helmet-async` around the app so per-page `<Helmet>` blocks work.
+Below the hero, add a grid section with 6 `BlogCard` components in a 3-column layout (`grid-cols-1 md:grid-cols-2 lg:grid-cols-3`).
 
-### 4. Add `<Helmet>` to Each Page
-Each page gets unique title, description, and OG tags:
+- The existing `BlogCard` component has `max-w-[980px]` and large text sizes designed for a full-width featured layout. For the 3-column grid, the card will need its max-width constraint removed and text sizes scaled down so cards fit properly in a grid column.
+- Create a smaller variant or adjust the existing `BlogCard` to accept a `variant` prop (e.g., `"featured"` vs `"grid"`), or create a new `ProducerBlogCard` component with grid-appropriate sizing.
+- Use placeholder data for the 6 cards (from existing `blogData.ts` posts).
 
-| Page | Title |
-|------|-------|
-| Index | Pzaz -- Film Production Management Software |
-| Script | Script Writing Tool -- Pzaz |
-| Pricing | Pricing -- Pzaz |
-| Blog | Blog -- Pzaz |
-| BlogArticle | (dynamic from article data) |
+### Files to Create
+1. `src/components/producer-blog/ProducerBlogHero.tsx` -- Hero with gradient title, subtitle, and category filter bar
+2. Update `src/pages/ProducerBlog.tsx` -- Import hero + render grid of 6 BlogCards
 
-### 5. Configure Pre-rendering (`vite.config.ts`)
-Add `vite-plugin-prerender` to the Vite plugins (production only) with all routes:
-- `/`, `/script`, `/pricing`, `/blog`
-- All 6 blog article slugs from `blogData.ts`
+### Files to Modify
+3. `src/components/blog/BlogCard.tsx` -- Add an optional `compact` or `variant` prop to support smaller grid sizing (remove max-width, reduce text sizes) so it works in a 3-column layout
 
-The plugin uses Puppeteer at build time to render each route and save the output as static HTML.
+### Technical Details
 
-### 6. Create `public/sitemap.xml`
-List all routes with `<lastmod>` dates so search engines can discover every page.
+**ProducerBlogHero layout:**
+- Centered text, `pt-28 md:pt-32 pb-12`
+- Title: gradient text using `bg-gradient-to-r from-[#3207BC] to-[#409DFF]` with `bg-clip-text text-transparent`, large serif font size (~60-80px)
+- Subtitle: italic, `text-[#4A4A4F]`, ~24px
+- Category bar: flex-wrap row of buttons, light gray bg, rounded corners, centered, with gap spacing
+- "Share" button includes a small arrow/share icon
 
-## Files Modified
-- `index.html` -- update meta tags
-- `src/App.tsx` -- add HelmetProvider
-- `src/pages/Index.tsx` -- add Helmet block
-- `src/pages/Script.tsx` -- add Helmet block
-- `src/pages/Pricing.tsx` -- add Helmet block
-- `src/pages/Blog.tsx` -- add Helmet block
-- `src/pages/BlogArticle.tsx` -- add Helmet block with dynamic data
-- `vite.config.ts` -- add pre-render plugin
+**BlogCard grid variant:**
+- Remove `max-w-[980px]` and `mx-auto` when in grid mode
+- Scale title from 48-60px down to ~20-24px
+- Scale excerpt from 28-44px down to ~14-16px
+- Keep the same card structure (image, category pill, title, excerpt)
 
-## Files Created
-- `public/sitemap.xml`
-
-## Result
-After build, each route has a fully rendered HTML file. Search engines see real content, proper titles, and descriptions. Users still get the fast SPA experience with React hydration.
+**ProducerBlog page:**
+- Hero section at top
+- Grid section: `container mx-auto px-6`, 3-column grid with gap, 6 BlogCard instances using data from `blogPosts` in `blogData.ts`
 
