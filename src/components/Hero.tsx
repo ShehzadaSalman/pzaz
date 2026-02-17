@@ -117,12 +117,18 @@ const Hero = () => {
           className="mt-16 lg:mt-24 max-w-6xl mx-auto"
         >
           <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border/50">
-            <AnimatePresence mode="wait">
+            <img
+              src={productionWorkspace}
+              alt=""
+              aria-hidden="true"
+              className="w-full h-auto opacity-0 pointer-events-none select-none"
+            />
+            <AnimatePresence initial={false}>
               <motion.img
                 key={currentSlide}
                 src={activeSlideImage.image}
                 alt={activeSlideImage.imageAlt}
-                className="w-full h-auto"
+                className="absolute inset-0 w-full h-full object-cover"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
