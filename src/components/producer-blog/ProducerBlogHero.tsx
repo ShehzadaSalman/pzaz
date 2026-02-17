@@ -35,7 +35,7 @@ const ProducerBlogHero = () => {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="italic text-[20px] md:text-[24px] text-[#4A4A4F] mb-10"
+          className="font-gloock text-[46px] text-black mb-10"
         >
           Interviews, Industry and Info. Get Pzazzed !
         </motion.p>
