@@ -31,9 +31,11 @@ const ProducerBlog = () => {
     const nextPage = Math.min(Math.max(page, 1), totalPages);
     if (nextPage === 1) {
       setSearchParams({});
+      window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
     setSearchParams({ page: String(nextPage) });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const pageNumbers = (() => {
