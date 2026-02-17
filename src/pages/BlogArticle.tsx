@@ -1,12 +1,11 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import BlogHeader from "@/components/blog/BlogHeader";
 import ArticleHero from "@/components/blog/ArticleHero";
 import ArticleContent from "@/components/blog/ArticleContent";
 import ArticleAuthor from "@/components/blog/ArticleAuthor";
 import ArticleRelated from "@/components/blog/ArticleRelated";
 import BlogNewsletter from "@/components/blog/BlogNewsletter";
-import Footer from "@/components/Footer";
+import PageLayout from "@/components/layout/PageLayout";
 import { blogPosts } from "@/data/blogData";
 
 const BlogArticle = () => {
@@ -25,17 +24,15 @@ const BlogArticle = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background">
-      <BlogHeader />
+    <PageLayout>
       <article>
         <ArticleHero article={article} />
         <ArticleContent article={article} />
-        <ArticleAuthor author={article.author} />
+        {/* <ArticleAuthor author={article.author} /> */}
         <ArticleRelated currentSlug={slug || ""} category={article.category} />
       </article>
-      <BlogNewsletter />
-      <Footer />
-    </div>
+      {/* <BlogNewsletter /> */}
+    </PageLayout>
   );
 };
 

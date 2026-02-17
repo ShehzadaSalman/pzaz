@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Clock, Calendar, ArrowLeft, Share2 } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -11,6 +11,29 @@ interface ArticleHeroProps {
 }
 
 const ArticleHero = ({ article }: ArticleHeroProps) => {
+  const [showShareMenu, setShowShareMenu] = useState(false);
+  const shareMenuRef = useRef<HTMLDivElement>(null);
+  const shareUrl = typeof window !== "undefined" ? window.location.href : "";
+  const encodedUrl = encodeURIComponent(shareUrl);
+  const encodedText = encodeURIComponent(article.title);
+  const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
+  const twitterUrl = `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedText}`;
+  const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
+  const redditUrl = `https://www.reddit.com/submit?url=${encodedUrl}&title=${encodedText}`;
+  const whatsappUrl = `https://wa.me/?text=${encodedText}%20${encodedUrl}`;
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (!shareMenuRef.current) return;
+      if (!shareMenuRef.current.contains(event.target as Node)) {
+        setShowShareMenu(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
     <section className="pt-28 pb-12">
       <div className="container mx-auto px-6">
@@ -22,7 +45,7 @@ const ArticleHero = ({ article }: ArticleHeroProps) => {
             transition={{ duration: 0.4 }}
             className="mb-8"
           >
-            <Link to="/blog">
+            <Link to="/producer-blog">
               <Button variant="ghost" size="sm" className="gap-2">
                 <ArrowLeft className="w-4 h-4" />
                 Back to Blog
@@ -58,11 +81,6 @@ const ArticleHero = ({ article }: ArticleHeroProps) => {
               {article.title}
             </h1>
 
-            {/* Excerpt */}
-            <p className="text-xl text-muted-foreground mb-8">
-              {article.excerpt}
-            </p>
-
             {/* Author and share */}
             <div className="flex items-center justify-between flex-wrap gap-4 pb-8 border-b border-border">
               <div className="flex items-center gap-4">
@@ -73,14 +91,64 @@ const ArticleHero = ({ article }: ArticleHeroProps) => {
                 />
                 <div>
                   <p className="font-semibold text-foreground">{article.author.name}</p>
-                  <p className="text-sm text-muted-foreground">{article.author.role}</p>
                 </div>
               </div>
               
-              <Button variant="outline" size="sm" className="gap-2">
-                <Share2 className="w-4 h-4" />
-                Share
-              </Button>
+              <div className="relative" ref={shareMenuRef}>
+                <Button
+                  variant="secondary"
+                  size="sm"
+                  className="gap-2"
+                  onClick={() => setShowShareMenu((previous) => !previous)}
+                >
+                  <Share2 className="w-4 h-4" />
+                  Share
+                </Button>
+                {showShareMenu && (
+                  <div className="absolute right-0 mt-2 w-44 rounded-md border border-border bg-background p-2 shadow-md z-20">
+                    <a
+                      href={facebookUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block rounded px-3 py-2 text-sm text-foreground hover:bg-muted"
+                    >
+                      Share on Facebook
+                    </a>
+                    <a
+                      href={twitterUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block rounded px-3 py-2 text-sm text-foreground hover:bg-muted"
+                    >
+                      Share on X
+                    </a>
+                    <a
+                      href={linkedInUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block rounded px-3 py-2 text-sm text-foreground hover:bg-muted"
+                    >
+                      Share on LinkedIn
+                    </a>
+                    <a
+                      href={redditUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block rounded px-3 py-2 text-sm text-foreground hover:bg-muted"
+                    >
+                      Share on Reddit
+                    </a>
+                    <a
+                      href={whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block rounded px-3 py-2 text-sm text-foreground hover:bg-muted"
+                    >
+                      Share on WhatsApp
+                    </a>
+                  </div>
+                )}
+              </div>
             </div>
           </motion.div>
 

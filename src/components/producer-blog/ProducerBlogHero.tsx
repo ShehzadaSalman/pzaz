@@ -1,21 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { CornerUpRight } from "lucide-react";
+import { categories } from "@/data/blogData";
 
-const categories = [
-  "Comparisons & Analysis",
-  "Discoveries & Beginnings",
-  "Film Business School",
-  "Filmmaker Interviews",
-  "How-Tos & Insights",
-  "News & Updates",
-  "Production & Producing",
-  "Art Of Film",
-];
+interface ProducerBlogHeroProps {
+  activeCategory: string;
+  onCategoryChange: (categoryId: string) => void;
+}
 
-const ProducerBlogHero = () => {
-  const [active, setActive] = useState<string | null>(null);
-
+const ProducerBlogHero = ({ activeCategory, onCategoryChange }: ProducerBlogHeroProps) => {
   return (
     <section className="pt-28 md:pt-32 pb-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#F0EAFF] via-[#F5F5F7] to-transparent pointer-events-none" />
@@ -46,17 +39,17 @@ const ProducerBlogHero = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex flex-wrap items-center justify-center gap-3"
         >
-          {categories.map((cat) => (
+          {categories.map((category) => (
             <button
-              key={cat}
-              onClick={() => setActive(active === cat ? null : cat)}
+              key={category.id}
+              onClick={() => onCategoryChange(category.id)}
               className={`rounded-[10px] px-5 py-2.5 text-sm font-medium transition-colors ${
-                active === cat
+                activeCategory === category.id
                   ? "bg-brand-purple text-white"
                   : "bg-brand-purple/10 text-brand-purple hover:bg-brand-purple/20"
               }`}
             >
-              {cat}
+              {category.label}
             </button>
           ))}
           <button className="rounded-[10px] bg-brand-purple/10 px-5 py-2.5 text-sm font-medium text-brand-purple hover:bg-brand-purple/20 inline-flex items-center gap-1.5 transition-colors">

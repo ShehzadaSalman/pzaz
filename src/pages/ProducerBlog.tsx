@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PageLayout from "@/components/layout/PageLayout";
 import ProducerBlogHero from "@/components/producer-blog/ProducerBlogHero";
 import BlogCard from "@/components/blog/BlogCard";
@@ -14,18 +14,29 @@ import {
 } from "@/components/ui/pagination";
 import { useSearchParams } from "react-router-dom";
 
-const POSTS_PER_PAGE = 3;
+const POSTS_PER_PAGE = 6;
 
 const ProducerBlog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const totalPages = Math.ceil(blogPosts.length / POSTS_PER_PAGE);
+  const [activeCategory, setActiveCategory] = useState("all");
+  const filteredPosts =
+    activeCategory === "all"
+      ? blogPosts
+      : blogPosts.filter((post) => post.category === activeCategory);
+  const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
 
   const requestedPage = Number(searchParams.get("page") ?? "1");
   const isValidPage = Number.isFinite(requestedPage) && requestedPage >= 1;
   const currentPage = Math.min(isValidPage ? requestedPage : 1, Math.max(totalPages, 1));
 
   const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
-  const displayPosts = blogPosts.slice(startIndex, startIndex + POSTS_PER_PAGE);
+  const displayPosts = filteredPosts.slice(startIndex, startIndex + POSTS_PER_PAGE);
+
+  const handleCategoryChange = (categoryId: string) => {
+    setActiveCategory(categoryId);
+    setSearchParams({});
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const goToPage = (page: number) => {
     const nextPage = Math.min(Math.max(page, 1), totalPages);
@@ -47,7 +58,7 @@ const ProducerBlog = () => {
 
   return (
     <PageLayout>
-      <ProducerBlogHero />
+      <ProducerBlogHero activeCategory={activeCategory} onCategoryChange={handleCategoryChange} />
 
       <section className="max-w-6xl mx-auto px-6 pb-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
