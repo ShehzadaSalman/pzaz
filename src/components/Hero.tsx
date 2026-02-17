@@ -3,20 +3,37 @@ import { Button } from "@/components/ui/button";
 import ArrowIcon from "@/components/ui/ArrowIcon";
 import { AnimatePresence, motion } from "framer-motion";
 import ctaPlayIcon from "@/assets/cta-play-icon.svg";
-import productionWorkspace from "@/assets/production-workspace.png";
+import aiGeneratorImage from "@/assets/home-banner/AI genertaor.png";
+import charactersImage from "@/assets/home-banner/Characters.png";
+import ideationBoardImage from "@/assets/home-banner/Ideation board.png";
+import scenePropertiesImage from "@/assets/home-banner/Scene properties.png";
+import scriptImage from "@/assets/home-banner/Script.png";
+import updatedBudgetImage from "@/assets/home-banner/Updated Budget 0.2.png";
 
 const heroSlides = [
   {
-    image: productionWorkspace,
-    imageAlt: "Your production workspace",
+    image: aiGeneratorImage,
+    imageAlt: "AI generator view",
   },
   {
-    image: productionWorkspace,
-    imageAlt: "Your production workspace",
+    image: charactersImage,
+    imageAlt: "Characters view",
   },
   {
-    image: productionWorkspace,
-    imageAlt: "Your production workspace",
+    image: ideationBoardImage,
+    imageAlt: "Ideation board view",
+  },
+  {
+    image: scenePropertiesImage,
+    imageAlt: "Scene properties view",
+  },
+  {
+    image: scriptImage,
+    imageAlt: "Script editor view",
+  },
+  {
+    image: updatedBudgetImage,
+    imageAlt: "Updated budget view",
   },
 ];
 
@@ -118,7 +135,7 @@ const Hero = () => {
         >
           <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border/50">
             <img
-              src={productionWorkspace}
+              src={heroSlides[0].image}
               alt=""
               aria-hidden="true"
               className="w-full h-auto opacity-0 pointer-events-none select-none"
