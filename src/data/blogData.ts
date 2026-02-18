@@ -1380,4 +1380,48 @@ Sourced from an independent sample of 9,406 independent filmmakers in the US, op
     readingTime: 15,
     featured: false,
   },
+  {
+    id: "22",
+    slug: "february-update",
+    title: "February Update",
+    excerpt: "User-rights, collaborators, scriptwriting elements management, knowledge base, group chats, active user status, and much more in the February update.",
+    content: `## February update
+
+In this update we added User-rights, new type of free users – collaborators, made scriptwriting tool more reliable, knowledge base for Pzaz and website, beta version of group chats, active user status, and much more!
+
+### New Features:
+
+- **New Pricing strategy**: Now we have 3 subscription types, each will have full access to functionality, but will be limited by amount of team-members, and partially by amount of active collaborators.
+- **User-rights**: Now filmspace owner can manage the access rights for all other members and collaborators who participate in their filmspaces. When new member or collaborator invited, there are new abilities to pick initial user-rights for these people.
+- **Collaborator**: New type of user, which is completely free. They have access to limited functionality that picked by owner who invited them. Adding collaborator will not affect subscription price, and then they can be promoted to full-functional team-members.
+- **Scriptwriting tool – Elements management feature**: Now you can do script breakdown by using elements creation tool! With this tool, you can highlight the elements used in script, for later management in close-released beta Finance system.
+- **Knowledge base**: In App, and website too Knowledge base can help you with different questions about functionality or processes that used in Pzaz.
+- **Group chats and chat-popup**: We added group chats in beta, so you can do multiple conversations with different people at one place. Still, it's work-in-progress, but can be used now.
+
+### Updates to Existing Features:
+
+- **Active status icon, and incoming call popup**: Now user can see the incoming call and messages at every part of Pzaz filmspace.
+- New updated design of subscription page, now with showing amount of paid users and total payment amount.
+- Side menu changed, profile menu changed.
+- Now new team-members and collaborators can be invited only by Filmspace owner, from Manage members page.
+- To rename or remove board, you need to hover over 3 lines menu's in board list dropdown, which opens when Team button pressed in Manage section.
+- To add or remove users to board, you need to open this board, and at top-right corner of screen there are 2 buttons for these actions.
+
+### Bug Fixes
+
+- Drag & Drop issues with columns in workflow fixed
+- Goals – adding initiative to key result, layout of cards fixed
+- Fixed some typos across the tool.
+- UI changes related to different tools, overall polishment.
+- A lot of small bugs fixed.
+
+And as usual, stay tuned for more updates and fixes! With every new release, we're improving Pzaz, and everyone's feedback is important!
+    `,
+    category: ["News & Updates", "Production & Producing"],
+    featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/07/release_notes_wide.png",
+    authorName: "Valentine Rozkolodko",
+    publishedAt: "2025-02-18",
+    readingTime: 4,
+    featured: false,
+  },
 ];
