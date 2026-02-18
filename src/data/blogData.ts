@@ -615,4 +615,48 @@ Let the storyboarding begin!
     readingTime: 4,
     featured: false,
   },
+  {
+    id: "9",
+    slug: "pzaz-update-may-system-release",
+    title: "Here are the Latest Updates to the Pzaz Platform",
+    excerpt: "A new wave of updates to Pzaz, designed to streamline your production workflow and give you more control over your creative process.",
+    content: `**Let's bring you up to speed, on our latest product update…**
+
+We're excited to announce a new wave of updates to **Pzaz**, designed to streamline your production workflow and give you more control over your creative process.
+
+Here's what's new in this release:
+
+### The Documents Section Is Back
+
+You asked — we listened. The **Documents section** has returned!
+
+Think of it as your team's personal production wiki:
+
+- Create unlimited pages across unlimited books.
+- Format with headers (H1–H6), bullet points, numbered lists, and hyperlinks.
+- Organize all your project documentation in one central place.
+- From treatments to on-set procedures — it all lives here.
+
+### Crew & Cast — Now in Separate Boards
+
+We've split Crew and Cast into individual boards for **simpler, cleaner management**. No more scrolling through one big list — now everything's exactly where you expect it to be.
+
+### Budget Page — Total Overhaul
+
+We've completely revamped the Budget page with your feedback front and center:
+
+- The export function has been reinstated.
+- There is an easier flow to delete items (with a confirmation prompt).
+- There is improved column layout for easier navigation.
+- The entire user interface has been streamlined for easier use.
+
+Stay tuned for the next product update in the next few weeks.
+    `,
+    category: "News & Updates",
+    featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/07/release_notes_wide.png",
+    authorName: "Vincent Weberink",
+    publishedAt: "2025-05-01",
+    readingTime: 3,
+    featured: false,
+  },
 ];
