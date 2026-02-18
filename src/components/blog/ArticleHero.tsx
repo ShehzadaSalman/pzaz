@@ -86,7 +86,7 @@ const ArticleHero = ({ article }: ArticleHeroProps) => {
             {/* Author and share */}
             <div className="flex items-center justify-between flex-wrap gap-4 pb-8 border-b border-border">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center text-sm font-semibold text-foreground">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center text-sm font-semibold text-white" style={{ backgroundColor: "#5C28A4" }}>
                   {article.authorName
                     .split(" ")
                     .map((part) => part[0])
