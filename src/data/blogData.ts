@@ -552,4 +552,67 @@ Sourced using Artios from an independent sample of 130,979 independent filmmaker
     readingTime: 13,
     featured: false,
   },
+  {
+    id: "8",
+    slug: "visualize-your-story-like-a-pro-introducing-pzaz-storyboards",
+    title: "Visualize Your Story Like a Pro: Introducing Pzaz Storyboards",
+    excerpt: "We're excited to announce the launch of a brand-new feature in Pzaz that will revolutionize how you plan and visualize your film projects — say hello to Storyboards!",
+    content: `## 🎬 Introducing the New Storyboard Feature on Pzaz
+
+We're excited to announce the launch of a brand-new feature in Pzaz that will revolutionize how you plan and visualize your film projects — say hello to **Storyboards**, now live in the platform!
+
+### Where to Find It
+
+You'll find the **Storyboard** feature in the **new "Pre-production" section** in the left-hand navigation menu. This is your one-stop hub for visual planning and shot organisation before the cameras start rolling.
+
+### Two Ways to Create Your Storyboard
+
+You can get started with storyboarding in two flexible ways:
+
+**1. Auto-Generate from Your Master Script**
+
+Upload your script, and Pzaz will automatically extract your scenes. Each scene becomes its own storyboard — ready for you to start adding individual shots, camera angles, and scene details. This option is perfect if you're working from a fully written script and want to fast-track the visual planning process.
+
+**2. Build It from Scratch**
+
+Prefer to start fresh? Create a custom storyboard and manually add scenes to it. This method is ideal for creatives working on experimental projects, documentaries, or multiple films within the same space.
+
+### Add Detailed Shots to Each Scene
+
+Once your scenes are set, it's time to dive into the details. Add as many shots as you need to each scene, and record the key production information that your crew will rely on during the shoot, such as:
+
+- **Scene location**
+- **Time of day**
+- **Character dialogue**
+- **Shot details**
+- **Camera info**
+  - Angle
+  - Movement
+  - Shot size
+- **Timing**
+- **Comments and notes**
+
+Each shot can be expanded and enriched with all the information you need to tell your story visually and effectively. Everything is saved and structured, so you can scroll through your storyboard and see all your scenes arranged in chronological order.
+
+### From Script to Schedule, Faster
+
+Pzaz Storyboard makes it easy to move from creative planning to practical production. By keeping your script, visual plan, and production notes in one place, you'll save time, reduce errors, and improve collaboration with your team.
+
+### Try It Today
+
+We're really excited for you to try the Pzaz Storyboarding Tool and experience how it can streamline your film's shooting schedule. Whether you're new to storyboarding or a seasoned filmmaker, this feature gives you the flexibility and depth you need to bring your vision to life.
+
+### Questions or Feedback?
+
+If you have any questions about the storyboard feature — or if you'd like to see more how-to videos — just reach out to our Support team via the Pzaz website, or leave a comment where you watched the walkthrough video. We love hearing from you.
+
+Let the storyboarding begin!
+    `,
+    category: "News & Updates",
+    featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/07/release_notes_wide.png",
+    authorName: "Vincent Weberink",
+    publishedAt: "2024-07-01",
+    readingTime: 4,
+    featured: false,
+  },
 ];
