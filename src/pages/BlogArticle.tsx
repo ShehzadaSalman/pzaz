@@ -30,7 +30,7 @@ const BlogArticle = () => {
       <article>
         <ArticleHero article={article} />
         <ArticleContent article={article} />
-        <ArticleRelated currentSlug={slug || ""} category={article.category} />
+        <ArticleRelated currentSlug={slug || ""} category={Array.isArray(article.category) ? article.category[0] : article.category} />
       </article>
     </PageLayout>
   );

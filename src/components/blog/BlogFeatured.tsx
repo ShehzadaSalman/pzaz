@@ -44,7 +44,7 @@ const BlogFeatured = () => {
               
               <div className="space-y-4">
                 <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                  <span className="text-primary font-medium">{mainPost.category.replace("-", " ").replace(/\b\w/g, l => l.toUpperCase())}</span>
+                  <span className="text-primary font-medium">{(Array.isArray(mainPost.category) ? mainPost.category[0] : mainPost.category)}</span>
                   <div className="flex items-center gap-1">
                     <Clock className="w-4 h-4" />
                     <span>{mainPost.readingTime} min read</span>
@@ -104,7 +104,7 @@ const BlogFeatured = () => {
                 
                 <div className="space-y-4">
                   <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                    <span className="text-primary font-medium">{secondaryPost.category.replace("-", " ").replace(/\b\w/g, l => l.toUpperCase())}</span>
+                    <span className="text-primary font-medium">{(Array.isArray(secondaryPost.category) ? secondaryPost.category[0] : secondaryPost.category)}</span>
                     <div className="flex items-center gap-1">
                       <Clock className="w-4 h-4" />
                       <span>{secondaryPost.readingTime} min read</span>

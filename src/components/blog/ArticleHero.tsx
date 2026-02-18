@@ -61,9 +61,11 @@ const ArticleHero = ({ article }: ArticleHeroProps) => {
           >
             {/* Category and meta */}
             <div className="flex flex-wrap items-center gap-3 mb-6">
-              <Badge variant="secondary" className="text-primary">
-                {article.category}
-              </Badge>
+              {(Array.isArray(article.category) ? article.category : [article.category]).map((cat) => (
+                <Badge key={cat} variant="secondary" className="text-primary">
+                  {cat}
+                </Badge>
+              ))}
               <div className="flex items-center gap-4 text-sm text-muted-foreground">
                 <div className="flex items-center gap-1">
                   <Clock className="w-4 h-4" />
