@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { CornerUpRight } from "lucide-react";
 import { categories } from "@/data/blogData";
 
 interface ProducerBlogHeroProps {
@@ -52,10 +51,6 @@ const ProducerBlogHero = ({ activeCategory, onCategoryChange }: ProducerBlogHero
               {category.label}
             </button>
           ))}
-          <button className="rounded-[10px] bg-brand-purple/10 px-5 py-2.5 text-sm font-medium text-brand-purple hover:bg-brand-purple/20 inline-flex items-center gap-1.5 transition-colors">
-            Share
-            <CornerUpRight className="h-4 w-4" />
-          </button>
         </motion.div>
       </div>
     </section>
