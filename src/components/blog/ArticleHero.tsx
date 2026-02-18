@@ -157,21 +157,40 @@ const ArticleHero = ({ article }: ArticleHeroProps) => {
             </div>
           </motion.div>
 
-          {/* Featured image */}
+          {/* Featured image or YouTube video */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="mt-8"
           >
-            <div className="aspect-[16/9] rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20">
-              <img
-                src={article.featuredImage}
-                alt={article.title}
-                referrerPolicy="no-referrer"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            {article.youtubeVideoId ? (
+              <div
+                className="relative aspect-[16/9] rounded-2xl overflow-hidden"
+                style={{
+                  backgroundImage: article.videoBgImage ? `url(${article.videoBgImage})` : undefined,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
+                <iframe
+                  src={`https://www.youtube.com/embed/${article.youtubeVideoId}`}
+                  title={article.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+            ) : (
+              <div className="aspect-[16/9] rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20">
+                <img
+                  src={article.featuredImage}
+                  alt={article.title}
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            )}
           </motion.div>
         </div>
       </div>

@@ -17,6 +17,8 @@ export interface BlogPost {
   content: string;
   category: BlogCategoryId | BlogCategoryId[];
   featuredImage: string;
+  youtubeVideoId?: string;
+  videoBgImage?: string;
   authorName: string;
   publishedAt: string;
   readingTime: number;
@@ -1057,6 +1059,31 @@ Sourced from 4,436 independent filmmakers in the US via X (formerly Twitter), Re
     authorName: "Ninia Berishvili",
     publishedAt: "2025-04-08",
     readingTime: 18,
+    featured: false,
+  },
+  {
+    id: "13",
+    slug: "vagelis-karampasoglou-telling-stories-that-breathe",
+    title: "Vagelis Karampasoglou: Telling Stories that Breathe",
+    excerpt: "Blending the emotional insight of a performer with the precision of a writer, Karampasoglou approaches storytelling as a deeply personal, almost sacred process.",
+    content: `Vagelis Karampasoglou is not just an actor—he's a storyteller in the truest sense. Blending the emotional insight of a performer with the precision of a writer, his work bridges inner truth and outward expression. Whether he's stepping into a role or crafting a narrative on the page, Karampasoglou approaches storytelling as a deeply personal, almost sacred process.
+
+With a background rooted in theatre and cinema, he has developed a creative voice defined by honesty, vulnerability, and a strong sense of emotional realism. His acting is subtle yet powerful—marked by a quiet intensity that invites audiences to lean in and feel with him, rather than just observe. He treats every role as a dialogue between himself and the world, never falling into the trap of imitation or over-performance.
+
+But acting is only one side of his creative coin. As a writer, Karampasoglou works to capture the same emotional immediacy that drives his performances. His scripts don't aim for spectacle—they aim for connection. He explores themes like identity, fear, love, and miscommunication with nuance, often weaving layers of psychological and emotional complexity into his characters.
+
+What sets him apart is the way he moves between the two crafts—acting and writing—as if they were one. His writing serves his acting, and his acting deepens his writing. The emotional landscape he explores as a performer is mirrored in his scripts, which often center on people at turning points in their lives, struggling with choices, longing, or silence. It's not about creating perfect characters. It's about revealing imperfect truths.
+
+Karampasoglou also champions collaboration. He thrives in environments where actors, writers, and directors work together as equals—where everyone has a voice, and the story evolves as a shared vision. He believes that the most powerful art is made in spaces of trust and emotional safety, where honesty is valued over ego.
+
+At a time when much of the industry still leans toward formula and flash, Vagelis Karampasoglou stands for something else entirely: storytelling that breathes, that heals, and that dares to be real.`,
+    category: "Film Maker Interviews",
+    featuredImage: "https://i.ytimg.com/vi/2-oGv9zDEP8/maxresdefault.jpg",
+    youtubeVideoId: "2-oGv9zDEP8",
+    videoBgImage: "https://i.ytimg.com/vi/2-oGv9zDEP8/maxresdefault.jpg",
+    authorName: "Ninia Berishvili",
+    publishedAt: "2025-04-07",
+    readingTime: 4,
     featured: false,
   },
 ];
