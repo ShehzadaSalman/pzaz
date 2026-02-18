@@ -57,7 +57,7 @@ const BlogCard = ({
           <div className="absolute inset-0 bg-gradient-to-t from-[#1D0F4F]/20 via-transparent to-transparent" />
         </div>
 
-        <div className={`bg-white ${isGrid ? "px-5 py-5" : "px-6 py-8 md:px-12 md:py-10"}`}>
+        <div className={`bg-white rounded-b-[24px] overflow-hidden ${isGrid ? "px-5 py-5" : "px-6 py-8 md:px-12 md:py-10"}`}>
           <div className={`${isGrid ? "mb-3" : "mb-6"} flex items-center justify-between gap-4`}>
             <div className="flex flex-wrap items-center gap-3 md:gap-5">
               <span className={`rounded-[5px] bg-[#e1e1e1] px-2 py-1 font-medium text-[#4F2BA6] ${isGrid ? "text-xs" : "text-sm"}`}>
