@@ -46,7 +46,7 @@ const BlogCard = ({
               <span className={`rounded-[5px] bg-[#e1e1e1] px-2 py-1 font-medium text-[#4F2BA6] ${isGrid ? "text-xs" : "text-sm"}`}>
                 {category}
               </span>
-              <span className={`text-[#8C8C92] ${isGrid ? "text-sm" : "text-xl"}`}>{date}</span>
+              <span className={`text-[#8C8C92] ${isGrid ? "text-sm" : "text-xl"}`}>{new Date(date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</span>
             </div>
             <CornerUpRight className={`text-[#5E2AB5] transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 ${isGrid ? "h-5 w-5" : "h-8 w-8"}`} />
           </div>
