@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Badge } from "@/components/ui/badge";
 import { BlogPost } from "@/data/blogData";
 
 interface ArticleContentProps {
@@ -124,18 +123,6 @@ const ArticleContent = ({ article }: ArticleContentProps) => {
           {/* Article content */}
           <div className="prose prose-lg max-w-none">
             {renderContent(article.content)}
-          </div>
-
-          {/* Tags */}
-          <div className="mt-12 pt-8 border-t border-border">
-            <p className="text-sm font-medium text-foreground mb-3">Tags</p>
-            <div className="flex flex-wrap gap-2">
-              {article.tags.map((tag) => (
-                <Badge key={tag} variant="secondary">
-                  {tag}
-                </Badge>
-              ))}
-            </div>
           </div>
         </motion.div>
       </div>

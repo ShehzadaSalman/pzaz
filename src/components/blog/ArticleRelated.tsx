@@ -2,22 +2,42 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Clock, ArrowRight } from "lucide-react";
-import { blogPosts } from "@/data/blogData";
+import { BlogCategoryId, blogPosts } from "@/data/blogData";
 
 interface ArticleRelatedProps {
   currentSlug: string;
-  category: string;
+  category: BlogCategoryId;
 }
 
 const ArticleRelated = ({ currentSlug, category }: ArticleRelatedProps) => {
-  const relatedPosts = blogPosts
+  const categoryMatchedPosts = blogPosts
     .filter((post) => post.slug !== currentSlug)
-    .filter((post) => post.category === category || post.tags.some(tag => 
-      blogPosts.find(p => p.slug === currentSlug)?.tags.includes(tag)
-    ))
+    .filter((post) => post.category === category)
     .slice(0, 3);
 
-  if (relatedPosts.length === 0) return null;
+  const fallbackPosts = blogPosts
+    .filter((post) => post.slug !== currentSlug)
+    .slice(0, 3);
+
+  const relatedPosts = categoryMatchedPosts.length > 0 ? categoryMatchedPosts : fallbackPosts;
+
+  if (relatedPosts.length === 0) {
+    return (
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex items-center justify-between mb-10">
+              <h2 className="text-2xl font-bold text-foreground">Related Articles</h2>
+              <Link to="/producer-blog" className="text-primary font-medium flex items-center gap-1 hover:gap-2 transition-all">
+                View all <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+            <p className="text-muted-foreground">More articles coming soon.</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="py-16 bg-muted/30">
@@ -25,7 +45,7 @@ const ArticleRelated = ({ currentSlug, category }: ArticleRelatedProps) => {
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center justify-between mb-10">
             <h2 className="text-2xl font-bold text-foreground">Related Articles</h2>
-            <Link to="/blog" className="text-primary font-medium flex items-center gap-1 hover:gap-2 transition-all">
+            <Link to="/producer-blog" className="text-primary font-medium flex items-center gap-1 hover:gap-2 transition-all">
               View all <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -52,7 +72,7 @@ const ArticleRelated = ({ currentSlug, category }: ArticleRelatedProps) => {
                   <div className="space-y-2">
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
                       <span className="text-primary font-medium">
-                        {post.category.replace("-", " ").replace(/\b\w/g, l => l.toUpperCase())}
+                        {post.category}
                       </span>
                       <span>•</span>
                       <div className="flex items-center gap-1">

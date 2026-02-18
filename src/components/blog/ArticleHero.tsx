@@ -62,7 +62,7 @@ const ArticleHero = ({ article }: ArticleHeroProps) => {
             {/* Category and meta */}
             <div className="flex flex-wrap items-center gap-3 mb-6">
               <Badge variant="secondary" className="text-primary">
-                {article.category.replace("-", " ").replace(/\b\w/g, l => l.toUpperCase())}
+                {article.category}
               </Badge>
               <div className="flex items-center gap-4 text-sm text-muted-foreground">
                 <div className="flex items-center gap-1">
@@ -84,13 +84,16 @@ const ArticleHero = ({ article }: ArticleHeroProps) => {
             {/* Author and share */}
             <div className="flex items-center justify-between flex-wrap gap-4 pb-8 border-b border-border">
               <div className="flex items-center gap-4">
-                <img
-                  src={article.author.avatar}
-                  alt={article.author.name}
-                  className="w-12 h-12 rounded-full bg-muted"
-                />
+                <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center text-sm font-semibold text-foreground">
+                  {article.authorName
+                    .split(" ")
+                    .map((part) => part[0])
+                    .join("")
+                    .slice(0, 2)
+                    .toUpperCase()}
+                </div>
                 <div>
-                  <p className="font-semibold text-foreground">{article.author.name}</p>
+                  <p className="font-semibold text-foreground">{article.authorName}</p>
                 </div>
               </div>
               

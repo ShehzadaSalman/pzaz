@@ -14,8 +14,7 @@ const BlogGrid = () => {
     const matchesCategory = activeCategory === "all" || post.category === activeCategory;
     const matchesSearch = 
       post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
@@ -74,7 +73,7 @@ const BlogGrid = () => {
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 text-sm">
                     <span className="text-primary font-medium">
-                      {post.category.replace("-", " ").replace(/\b\w/g, l => l.toUpperCase())}
+                      {post.category}
                     </span>
                     <span className="text-muted-foreground">•</span>
                     <div className="flex items-center gap-1 text-muted-foreground">
@@ -92,13 +91,16 @@ const BlogGrid = () => {
                   </p>
 
                   <div className="flex items-center gap-2 pt-2">
-                    <img
-                      src={post.author.avatar}
-                      alt={post.author.name}
-                      className="w-8 h-8 rounded-full bg-muted"
-                    />
+                    <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center text-[10px] font-semibold text-foreground">
+                      {post.authorName
+                        .split(" ")
+                        .map((part) => part[0])
+                        .join("")
+                        .slice(0, 2)
+                        .toUpperCase()}
+                    </div>
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <span className="font-medium text-foreground">{post.author.name}</span>
+                      <span className="font-medium text-foreground">{post.authorName}</span>
                       <span>•</span>
                       <span>{new Date(post.publishedAt).toLocaleDateString("en-US", { month: "short", day: "numeric" })}</span>
                     </div>

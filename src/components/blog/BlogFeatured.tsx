@@ -60,13 +60,16 @@ const BlogFeatured = () => {
                 </p>
 
                 <div className="flex items-center gap-3 pt-2">
-                  <img
-                    src={mainPost.author.avatar}
-                    alt={mainPost.author.name}
-                    className="w-10 h-10 rounded-full bg-muted"
-                  />
+                  <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-xs font-semibold text-foreground">
+                    {mainPost.authorName
+                      .split(" ")
+                      .map((part) => part[0])
+                      .join("")
+                      .slice(0, 2)
+                      .toUpperCase()}
+                  </div>
                   <div>
-                    <p className="text-sm font-medium text-foreground">{mainPost.author.name}</p>
+                    <p className="text-sm font-medium text-foreground">{mainPost.authorName}</p>
                     <div className="flex items-center gap-1 text-sm text-muted-foreground">
                       <Calendar className="w-3 h-3" />
                       <span>{new Date(mainPost.publishedAt).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}</span>
@@ -117,13 +120,16 @@ const BlogFeatured = () => {
                   </p>
 
                   <div className="flex items-center gap-3 pt-2">
-                    <img
-                      src={secondaryPost.author.avatar}
-                      alt={secondaryPost.author.name}
-                      className="w-10 h-10 rounded-full bg-muted"
-                    />
+                    <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-xs font-semibold text-foreground">
+                      {secondaryPost.authorName
+                        .split(" ")
+                        .map((part) => part[0])
+                        .join("")
+                        .slice(0, 2)
+                        .toUpperCase()}
+                    </div>
                     <div>
-                      <p className="text-sm font-medium text-foreground">{secondaryPost.author.name}</p>
+                      <p className="text-sm font-medium text-foreground">{secondaryPost.authorName}</p>
                       <div className="flex items-center gap-1 text-sm text-muted-foreground">
                         <Calendar className="w-3 h-3" />
                         <span>{new Date(secondaryPost.publishedAt).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}</span>

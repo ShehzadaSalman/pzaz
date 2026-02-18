@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PageLayout from "@/components/layout/PageLayout";
 import ProducerBlogHero from "@/components/producer-blog/ProducerBlogHero";
 import BlogCard from "@/components/blog/BlogCard";
@@ -55,6 +55,10 @@ const ProducerBlog = () => {
     if (currentPage >= totalPages - 2) return [totalPages - 3, totalPages - 2, totalPages - 1, totalPages];
     return [currentPage - 1, currentPage, currentPage + 1];
   })();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, []);
 
   return (
     <PageLayout>

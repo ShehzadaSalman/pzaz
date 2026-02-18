@@ -2,9 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import ArticleHero from "@/components/blog/ArticleHero";
 import ArticleContent from "@/components/blog/ArticleContent";
-import ArticleAuthor from "@/components/blog/ArticleAuthor";
 import ArticleRelated from "@/components/blog/ArticleRelated";
-import BlogNewsletter from "@/components/blog/BlogNewsletter";
 import PageLayout from "@/components/layout/PageLayout";
 import { blogPosts } from "@/data/blogData";
 
@@ -28,10 +26,8 @@ const BlogArticle = () => {
       <article>
         <ArticleHero article={article} />
         <ArticleContent article={article} />
-        {/* <ArticleAuthor author={article.author} /> */}
         <ArticleRelated currentSlug={slug || ""} category={article.category} />
       </article>
-      {/* <BlogNewsletter /> */}
     </PageLayout>
   );
 };
