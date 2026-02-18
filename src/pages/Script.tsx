@@ -10,10 +10,16 @@ import ScriptTestimonials from "@/components/script/ScriptTestimonials";
 import ScriptFAQ from "@/components/script/ScriptFAQ";
 import ScriptCTA from "@/components/script/ScriptCTA";
 import PageLayout from "@/components/layout/PageLayout";
+import SEO from "@/components/SEO";
 
 const Script = () => {
   return (
     <PageLayout>
+      <SEO
+        title="Pzaz Script – AI Screenwriting Software"
+        description="Write, format, and collaborate on screenplays with AI-powered tools. Pzaz Script helps filmmakers go from idea to shooting script faster."
+        url="https://pzaz-sparkle-showcase.lovable.app/script"
+      />
       <ScriptHero />
       <ScriptProblem />
       <ScriptShift />
