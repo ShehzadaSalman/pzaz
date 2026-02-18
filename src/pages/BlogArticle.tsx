@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ArticleHero from "@/components/blog/ArticleHero";
 import ArticleContent from "@/components/blog/ArticleContent";
@@ -9,6 +9,10 @@ import { blogPosts } from "@/data/blogData";
 const BlogArticle = () => {
   const { slug } = useParams<{ slug: string }>();
   const article = blogPosts.find((post) => post.slug === slug);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, [slug]);
 
   if (!article) {
     return (

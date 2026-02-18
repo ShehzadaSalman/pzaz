@@ -205,7 +205,7 @@ Sourced using Artios from an independent sample of 6,260,767 United States indep
     `,
     category: "Comparisons & Analysis",
     featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Blog-image-135.png",
-    authorName: "Marcus Williams",
+    authorName: "Ninia Berishvili",
     publishedAt: "2025-07-28",
     readingTime: 14,
     featured: true,
