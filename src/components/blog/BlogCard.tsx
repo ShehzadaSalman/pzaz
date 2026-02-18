@@ -35,6 +35,7 @@ const BlogCard = ({
           <img
             src={image}
             alt={imageAlt}
+            referrerPolicy="no-referrer"
             className="aspect-[16/9] w-full object-cover opacity-95 transition-transform duration-500 group-hover:scale-[1.02]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#1D0F4F]/20 via-transparent to-transparent" />
