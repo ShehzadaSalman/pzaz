@@ -618,7 +618,7 @@ Let the storyboarding begin!
   {
     id: "9",
     slug: "pzaz-update-may-system-release",
-    title: "Here are the Latest Updates to the Pzaz Platform",
+    title: "Pzaz Update – May 2025 System Release 1",
     excerpt: "A new wave of updates to Pzaz, designed to streamline your production workflow and give you more control over your creative process.",
     content: `**Let's bring you up to speed, on our latest product update…**
 
