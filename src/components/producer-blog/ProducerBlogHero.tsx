@@ -27,7 +27,7 @@ const ProducerBlogHero = ({ activeCategory, onCategoryChange }: ProducerBlogHero
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="font-gloock font-medium text-[46px] text-black mb-10"
+          className="font-gloock font-bold text-[28px] leading-normal md:text-[46px] md:leading-[1] text-black mb-10"
         >
           Interviews, Industry and Info. Get Pzazzed !
         </motion.p>
