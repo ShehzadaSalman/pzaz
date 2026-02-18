@@ -844,4 +844,47 @@ The data was sourced from an independent sample of 16,608 USA independent filmma
     readingTime: 15,
     featured: false,
   },
+  {
+    id: "11",
+    slug: "pzaz-update-april-2025-system-release",
+    title: "Pzaz Update – April 2025 System Release",
+    excerpt: "Let's bring you up to speed on our latest product update, including workflow templates, manage section improvements, and UX overhaul.",
+    content: `
+**Let's bring you up to speed, on our latest product update…**
+
+Hello and greetings, from everyone at the Pzaz team. Today I'm writing to describe what's just changed and been updated inside the Pzaz product in the latest release.
+
+### What's new?
+
+The new release focuses on substantial improvements to the Manage section of the app; improving the overall look and feel of the app; and of course eliminating bugs that our customers have brought to our attention.
+
+### Improvements to the Manage section
+
+- Introducing Workflow Templates – We've improved the Manage section of the app even more, with a new modular template setup. Now you can create custom-tailored workflows for any project type. When a Filmspace owner creates a new workflow, they will now be able to select from more than 10 custom templates designed specifically to meet the needs of different teams and processes from the film industry. This means you can make your workflow boards as unique as your productions!
+- Flagged Cards Made More Visible – Cards that any user marks as "Flagged" will now be clearly highlighted.
+- Urgent Cards will Now be Flagged – Prior to this update, each Card in the Manage section already showed its Due Date, assuming this has been set. Also prior to this update, if a card's due date is for today or earlier, then it is shown in pink; if the due date is for tomorrow or the day after, then it is orange; and if the due date is for further in the future, then the box showing the due date on the card is white. Now, following this update, if a card has a due date that is within the next 2 days then the left border will be coloured. This means it's easier now to see at a glance which cards need urgent attention.
+- Board Archive Update – each board now has its own dedicated archive inside the three-dot menu — no more cluttered central archive!
+- Performance Boosts – Once again in the Manage section, Workflow and Personal boards now use caching, making page loads dramatically faster. From the extensive testing we've done, we really think you will notice the difference…
+
+### User experience overhaul
+
+A cleaner, more intuitive experience is here, including a new main menu arrow for easy collapsing/expanding; an overhaul of how the inbox in the Manage section is organised; adding the "+ Todo" and "+ Card" buttons into the header of each board; relocating the Filmspace selector to the Profile menu; and a lot of subtle CSS updates for a crisper, more consistent feel.
+
+### Bug fixes and more quality improvements
+
+As in every other release, the team has dedicated many hours to squashing small bugs in the user interface. The product is even easier now than it was before.
+
+### Tell us what you think
+
+These product updates are only possible because of the feedback we get from customers. If you have any comments or suggestions on how to make Pzaz even better, please let us know via email or live chat.
+
+Stay tuned for the next product update in the next few weeks.
+    `,
+    category: ["News & Updates", "Production & Producing"],
+    featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/07/release_notes_wide.png",
+    authorName: "Tom Emmerson",
+    publishedAt: "2025-04-01",
+    readingTime: 4,
+    featured: false,
+  },
 ];
