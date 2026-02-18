@@ -22,7 +22,11 @@ const ProducerBlog = () => {
   const filteredPosts =
     activeCategory === "all"
       ? blogPosts
-      : blogPosts.filter((post) => post.category === activeCategory);
+      : blogPosts.filter((post) =>
+          Array.isArray(post.category)
+            ? post.category.includes(activeCategory as any)
+            : post.category === activeCategory
+        );
   const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
 
   const requestedPage = Number(searchParams.get("page") ?? "1");
@@ -71,7 +75,7 @@ const ProducerBlog = () => {
               key={post.id}
               title={post.title}
               excerpt={post.excerpt}
-              category={post.category}
+              category={Array.isArray(post.category) ? post.category[0] : post.category}
               date={post.publishedAt}
               image={post.featuredImage}
               imageAlt={post.title}

@@ -15,7 +15,7 @@ export interface BlogPost {
   title: string;
   excerpt: string;
   content: string;
-  category: BlogCategoryId;
+  category: BlogCategoryId | BlogCategoryId[];
   featuredImage: string;
   authorName: string;
   publishedAt: string;
@@ -608,7 +608,7 @@ If you have any questions about the storyboard feature — or if you'd like to s
 
 Let the storyboarding begin!
     `,
-    category: "News & Updates",
+    category: ["News & Updates", "Production & Producing"],
     featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/07/release_notes_wide.png",
     authorName: "Vincent Weberink",
     publishedAt: "2024-07-01",

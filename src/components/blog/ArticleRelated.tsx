@@ -12,7 +12,7 @@ interface ArticleRelatedProps {
 const ArticleRelated = ({ currentSlug, category }: ArticleRelatedProps) => {
   const categoryMatchedPosts = blogPosts
     .filter((post) => post.slug !== currentSlug)
-    .filter((post) => post.category === category)
+    .filter((post) => Array.isArray(post.category) ? post.category.includes(category) : post.category === category)
     .slice(0, 3);
 
   const fallbackPosts = blogPosts
