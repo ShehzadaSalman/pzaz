@@ -1184,4 +1184,200 @@ For those interested in exploring her work, Lizeth Yarleque's projects can be fo
     readingTime: 7,
     featured: false,
   },
+  {
+    id: "21",
+    slug: "scene-breakdown-statistics-usa-2025",
+    title: "Scene Breakdown Statistics: USA 2025",
+    excerpt: "A data-driven analysis of scene breakdown practices among 9,406 independent filmmakers in the US, revealing key insights on collaboration, tools, and industry trends.",
+    content: `
+Scene breakdowns are an essential tool for analyzing screenplays. While previously they'd be mapped out on paper, scene breakdown software is increasingly used by production managers and scriptwriters to develop a clear structure for each scene in a film.
+
+This software also assists with organizing scripts by including important aspects like characters, character interactions and relationships, settings, and the overarching purpose of scenes. These elements all come together to produce captivating and compelling stories that keep viewers eager to see how the story unfolds.
+
+To learn more about the role of scene breakdowns in filmmaking today, we leveraged AI-driven audience profiling to synthesize insights from opinions expressed online to a high statistical confidence level. Our audience comprised 9,406 independent filmmakers in the US and spanned 12 months, ending on February 17, 2025. The results gave us greater insight into who is responsible for creating scene breakdowns in productions, which details are included, and which departments filmmakers collaborate with to finalise scenes.
+
+## Index
+
+- Production managers take 36.6% responsibility for creating scene breakdowns
+- Lighting is included as a detail in 64.9% of scene breakdowns
+- Independent filmmakers collaborate with editing departments 20.5% of the time when finalising scene breakdowns
+- 48.1% filmmakers consider collaboration to be their most significant scene breakdowns challenge
+- 86.3% filmmakers agree storyboarding best practices make scene breakdowns more accurate
+- 49.5% filmmakers believe collaboration platforms will drive change in scene breakdowns
+- 32.6% of filmmakers produce animated films
+- Over 19.6% of filmmakers are older than 65
+- 52.7% of men involved in the scene breakdown process
+- 23.8% of filmmakers based in the Mid-Atlantic region
+- 33.4% filmmakers earn $120,000 to $200,000 annually
+- About the Data
+
+## Who Is Primarily Responsible For Creating The Scene Breakdowns On Your Productions?
+
+### Production managers take 36.6% responsibility for creating scene breakdowns
+
+When it comes to who takes on the majority of responsibility for writing scene breakdowns for US film productions, production managers top the list. Here is what our audience reported:
+
+![Scene breakdown responsibility chart](https://pzaz.io/producer-blog/wp-content/uploads/2025/02/Screenshot-2025-02-27-at-17.20.17.png)
+
+Production managers are often the unsung heroes of a film, taking on many different roles in the production process, including creating scene breakdowns. In fact, they are the majority of those responsible for doing so (36.6%). Next in line are art directors, who account for 17.5% of the total, and assistant directors, who take responsibility for the scene breakdown process in 16.1% of cases.
+
+Cinematographers and screenwriters take the role of producing scene breakdowns in 14.6% and 5.5% of cases, respectively. According to our data, location managers also assist 5.3% of the time, while surprisingly, script supervisors only create scene breakdowns in 3.5% of scenarios. Producers play the least active role in this all-important task, writing breakdowns just 0.8% of the time.
+
+## What Details Are Included In Your Scene Breakdowns Usually?
+
+### Lighting is included as a detail in 64.9% of scene breakdowns
+
+One of the many purposes of scene breakdowns is to lay out how details like lighting and special effects will enhance narratives and visuals. We looked at the details usually included in scene breakdowns and discovered two key aspects:
+
+![Scene breakdown details chart](https://pzaz.io/producer-blog/wp-content/uploads/2025/02/Screenshot-2025-02-27-at-17.24.02.png)
+
+Lighting is a vital aspect of any film's visual effects, helping to influence the audience's impressions of certain moods, behaviors and appearances of characters. It's also a popular addition to scene breakdowns in 2025, with 64.9% of our audience of independent filmmakers regularly including it in their work.
+
+Interestingly, although employment opportunities for special effects artists and animators are expected to increase by 4% between 2023 and 2033, special effects were only included in 35.1% of breakdowns for our audience.
+
+## Which Departments Do You Collaborate With Most When Finalizing Scene Breakdowns?
+
+### Independent filmmakers collaborate with editing departments 20.5% of the time when finalizing scene breakdowns
+
+Film production involves constant collaboration between filmmakers and various stakeholders. But which departments do filmmakers work with most frequently when finalizing scene breakdowns? This is what our data reveals:
+
+![Department collaboration chart](https://pzaz.io/producer-blog/wp-content/uploads/2025/02/Screenshot-2025-02-27-at-17.33.42.png)
+
+Editing departments play a critical role in finalizing breakdowns of film scenes, with filmmakers in the US collaborating with them 20.5% of the time. Casting departments also collaborate on this process often (19.6%), with costume design teams not far behind at 18.7%.
+
+Sound design, visual effects, and art departments regularly team up with filmmakers to bring life to film scenes across all genres. Location scouting collaborates on scene breakdown finalization in a conservative 3.9% of cases, while script supervision and cinematography teams tend to other matters, assisting with green-lighting just 2.2% and 0.7% of breakdowns, respectively.
+
+These statistics highlight the diverse range of film production departments that help complete scene breakdowns. Editing teams play pivotal roles in this regard, but many other departments also collaborate to add their input and create more concise and engaging breakdowns for some of the world's favorite scenes.
+
+## What Are The Biggest Challenges You Face When Creating Or Using Scene Breakdowns?
+
+### 48.1% filmmakers consider collaboration to be their most significant scene breakdowns challenge
+
+As with every aspect of film production, obstacles are involved with drawing up and implementing scene breakdowns. This is what our audience has struggled with the most:
+
+![Scene breakdown challenges chart](https://pzaz.io/producer-blog/wp-content/uploads/2025/02/Screenshot-2025-02-27-at-17.35.34.png)
+
+Nearly half (48.1%) of our audience said that collaboration is the most notable challenge they face when working with other departments to create and use scene breakdowns.
+
+Time management was a close second, being cited as an obstacle 46.1% of the time. Some filmmakers also battled to navigate their scheduling responsibilities, but this was only an issue for 5.9% of our audience.
+
+## What Best Practices Help Make Scene Breakdowns More Efficient and Accurate?
+
+### 86.3% filmmakers agree storyboarding best practices make scene breakdowns more accurate
+
+Although many filmmakers encounter challenges when creating scene breakdowns, they navigate these issues in many ways. These are the best practices our study uncovered:
+
+![Best practices chart](https://pzaz.io/producer-blog/wp-content/uploads/2025/02/Screenshot-2025-02-27-at-17.37.17.png)
+
+The vast majority of our audience (86.3%) uses storyboarding best practices to make their scene breakdowns as efficient and accurate as possible. They find that creating visual representations of scenes and narratives using tools like panels, shots, and dialogue helps them organize their breakdowns and plan successfully before production kicks off.
+
+8% also found that essential collaboration helped them to create accurate and concise scene breakdowns that assisted them in telling more memorable stories through scenes. Effective communication helped 3.2% of filmmakers, and essential research supported efficient scene breakdown production in 2.2% of cases.
+
+According to our data, using essential checklists seems to be the least helpful best practice, improving breakdown accuracy only 0.4% of the time.
+
+The information highlights that in the US cinema industry in 2025, an astounding percentage of teams rely on storyboarding best practices to guide their scenes and help them make their most compelling films yet.
+
+## What Features Do You Find Most Valuable In A Scene Breakdown Tool?
+
+### 100% of filmmakers find collaboration features the most valuable scene breakdown tool
+
+This graph unanimously shows which features provide our audience with the most value in creating and using scene breakdowns:
+
+![Valuable features chart](https://pzaz.io/producer-blog/wp-content/uploads/2025/02/Screenshot-2025-02-27-at-17.38.50.png)
+
+Every one of our audience of 9,406 independent filmmakers in the US (100%) said that collaboration features are the most valuable scene breakdown tool.
+
+This clearly shows that most filmmakers recognize the importance of combining the talents and skills of many individuals and departments in producing quality cinema.
+
+## What Will Change The Scene Breakdown Process In The Next 3-5 Years?
+
+### 49.5% filmmakers believe collaboration platforms will drive change in scene breakdowns
+
+Many factors are expected to shape the scene breakdown process over the next 3 to 5 years. These are the factors our audience believes will have the strongest influence:
+
+![Future changes chart](https://pzaz.io/producer-blog/wp-content/uploads/2025/02/Screenshot-2025-02-27-at-17.50.20.png)
+
+With collaboration features being the most valuable for our audience, it's interesting that only 49.5% believe collaboration platforms will be the key driver of change in how scene breakdown processes unfold over the next few years. Virtual reality is also expected to play a significant role by 38.8% of our audience.
+
+Artificial intelligence, which is becoming increasingly prevalent in film production, is also set to create major shifts. Our data shows that 11.8% of independent filmmakers are confident that AI integration will improve the clarity, accuracy, and efficacy of scene breakdowns in the near future.
+
+## Which Types Of Films Do You Primarily Produce?
+
+### 32.6% of filmmakers produce animated films
+
+The below graph showcases which types of films our filmmaking audience primarily create:
+
+![Film types chart](https://pzaz.io/producer-blog/wp-content/uploads/2025/02/Screenshot-2025-02-27-at-17.52.30.png)
+
+Recent valuations suggest that the US animation, VFX, and post production market is worth an astronomical $1.46 billion in 2025. This value is expected to reach up to $2.57 billion by 2030, predicting an impressive compound annual growth rate (CAGR) of 12.05% during this forecast period.
+
+It's no wonder, then, that animated films are at the top of the list of film types our audience produces most frequently, at 32.6% of the total. Next in line is the horror genre (29.1%), followed by short films, which 13.9% produce most frequently.
+
+Our research revealed that comedy (11.1%), feature films (8%), indie dramas (3.7%), and documentaries (1.3%) are produced less often. Very few of our audience produce experimental and biopics on a regular basis, citing these as their primary genres just 0.3% and 0.1% of the time, respectively.
+
+## Demographics
+
+## Age
+
+### Over 19.6% of filmmakers are older than 65
+
+As our data reveals, the ages of professionals involved in scene breakdown creation and usage span different age groups fairly evenly:
+
+![Age demographics chart](https://pzaz.io/producer-blog/wp-content/uploads/2025/02/Screenshot-2025-02-27-at-17.55.51.png)
+
+According to Zippia, the average age of filmmakers is 40+, with those in this age group representing 49% of this industry population. However, while traditional data highlights a dominant presence of middle-aged professionals, our findings indicate a growing influence of younger and older filmmakers. The highest percentage of our 9,406 US filmmakers fell into the over-65 age category (19.6%) and the under-25 age category (19.3%). The next most prevalent age group was 45-54, at 17.7%, followed by 55-64, at 16%. Those aged between 35 and 44 made up 14.8%.
+
+In an intriguing development, while the under-25 age group was the second-largest group in our data, the 25-34-year category was the smallest by percentage (12.6%).
+
+## Gender
+
+### 52.7% of men involved in the scene breakdown process
+
+The gender distribution in our audience was relatively even, although men did make up the majority by a small margin. Here's what we found:
+
+![Gender demographics chart](https://pzaz.io/producer-blog/wp-content/uploads/2025/02/Screenshot-2025-02-27-at-17.57.53.png)
+
+Women's presence in the top-grossing film productions of 2024 was significantly lower than men's. While 70% of the year's leading films had at least 10 men in essential production roles, only 8% of these films had the same number of women involved.
+
+The scene breakdown process has a much more even distribution between the genders. Our research found that 52.7% of men were involved in creating breakdowns, which is only marginally ahead of women's involvement at 47.3%. This shows that while gender distribution in filmmaking still has a way to go, women now play a pivotal role in structuring the scenes and storylines of films.
+
+## Region
+
+### 23.8% of filmmakers based in the Mid-Atlantic region
+
+Where does our audience of independent filmmakers work to produce their cinematic masterpieces? This graph shows what we discovered:
+
+![Region demographics chart](https://pzaz.io/producer-blog/wp-content/uploads/2025/02/Screenshot-2025-02-27-at-17.59.16.png)
+
+The majority of independent filmmakers work in the Mid-Atlantic region of the United States (23.8%), and 20% create independent films in the South Atlantic. Those based in the Pacific accounted for 13.4% of our audience, followed closely by filmmakers based in West South Central (13.2%).
+
+Locations like East North Central (10.7%), the Mountain regions (6.1%), New England (5.7%), West North Central (5.4%), and East South Central (1.9%) seem to have smaller concentrations of independent cinematic professionals.
+
+Overall, however, the distribution is exceptionally broad and diverse. This shows a growing trend towards filmmaking democratization, driven by advanced collaboration technologies and remote working tools. It also highlights how audiences seek diverse stories, perspectives and creations from every corner of the US.
+
+## Income
+
+### 33.4% filmmakers earn $120,000 to $200,000 annually
+
+Our data highlights how much independent filmmakers earn in the US in 2025:
+
+![Income demographics chart](https://pzaz.io/producer-blog/wp-content/uploads/2025/02/Screenshot-2025-02-27-at-18.00.25.png)
+
+The film industry is renowned for its high earners, many of whom are actors. However, when it comes to filmmakers' earnings, just a fraction (0.3%) of professionals earn $500,000 to $1 million per year. Only 13.2% bring in between $200,000 and $500,000, with the greatest number (33.4%) earning $120,000 to $200,000.
+
+Salaries under $40,000 a year are rare, with just 2.2% falling into this income bracket. 26% take home $40,000 to $80,000 for their contributions, and 24.9% earn $80,000 to $120,000. With the majority of filmmakers falling into the mid-to high-earning range, this is an encouraging sign for anyone looking to break into the independent film industry professionally.
+
+Based on our overall findings, it's clear that scene breakdowns play a crucial role in structuring and refining film narratives, with production managers leading the process and collaboration emerging as both a challenge and a necessity. As filmmaking continues to evolve, tools that enhance teamwork, such as collaboration features and AI-driven innovations, are expected to shape the future of scene breakdowns.
+
+## About the Data
+
+Sourced from an independent sample of 9,406 independent filmmakers in the US, opinions were expressed online across X, Quora, Reddit, TikTok, Bluesky and Threads. Responses are collected within a 95% confidence interval and 4% margin of error.
+    `,
+    category: "Comparisons & Analysis",
+    featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2025/02/Blog-image-28-Feb-2025.png",
+    authorName: "Ninia",
+    publishedAt: "2025-02-27",
+    readingTime: 15,
+    featured: false,
+  },
 ];
