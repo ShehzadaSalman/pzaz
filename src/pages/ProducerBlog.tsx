@@ -75,7 +75,7 @@ const ProducerBlog = () => {
               date={post.publishedAt}
               image={post.featuredImage}
               imageAlt={post.title}
-              href={`/blog/${post.slug}`}
+              href={`/producer-blog/${post.slug}`}
               variant="grid"
             />
           ))}

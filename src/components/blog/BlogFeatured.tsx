@@ -29,7 +29,7 @@ const BlogFeatured = () => {
             transition={{ duration: 0.5 }}
             className="group"
           >
-            <Link to={`/blog/${mainPost.slug}`}>
+            <Link to={`/producer-blog/${mainPost.slug}`}>
               <div className="relative aspect-[16/10] rounded-2xl overflow-hidden mb-6 bg-gradient-to-br from-primary/20 to-accent/20">
                 <img
                   src={mainPost.featuredImage}
@@ -89,7 +89,7 @@ const BlogFeatured = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="group"
             >
-              <Link to={`/blog/${secondaryPost.slug}`}>
+              <Link to={`/producer-blog/${secondaryPost.slug}`}>
                 <div className="relative aspect-[16/10] rounded-2xl overflow-hidden mb-6 bg-gradient-to-br from-accent/20 to-primary/20">
                   <img
                     src={secondaryPost.featuredImage}

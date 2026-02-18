@@ -61,7 +61,7 @@ const BlogGrid = () => {
               transition={{ duration: 0.4, delay: index * 0.05 }}
               className="group"
             >
-              <Link to={`/blog/${post.slug}`}>
+              <Link to={`/producer-blog/${post.slug}`}>
                 <div className="relative aspect-[16/10] rounded-xl overflow-hidden mb-4 bg-gradient-to-br from-muted to-muted/50">
                   <img
                     src={post.featuredImage}
