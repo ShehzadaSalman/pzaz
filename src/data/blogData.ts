@@ -652,7 +652,7 @@ We've completely revamped the Budget page with your feedback front and center:
 
 Stay tuned for the next product update in the next few weeks.
     `,
-    category: "News & Updates",
+    category: ["News & Updates", "Production & Producing"],
     featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/07/release_notes_wide.png",
     authorName: "Vincent Weberink",
     publishedAt: "2025-05-01",
