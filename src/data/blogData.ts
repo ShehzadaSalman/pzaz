@@ -883,7 +883,7 @@ Stay tuned for the next product update in the next few weeks.
     category: ["News & Updates", "Production & Producing"],
     featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/07/release_notes_wide.png",
     authorName: "Tom Emmerson",
-    publishedAt: "2025-04-01",
+    publishedAt: "2025-04-18",
     readingTime: 4,
     featured: false,
   },
