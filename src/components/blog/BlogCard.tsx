@@ -63,7 +63,7 @@ const BlogCard = ({
               <span className={`rounded-[5px] bg-[#e1e1e1] px-2 py-1 font-medium text-[#4F2BA6] ${isGrid ? "text-xs" : "text-sm"}`}>
                 {category}
               </span>
-              <span className={`text-[#8C8C92] ${isGrid ? "text-sm" : "text-xl"}`}>{new Date(date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</span>
+              <span className="text-[#8C8C92] text-[12px]">{new Date(date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}</span>
             </div>
             <div className="relative" ref={shareMenuRef}>
               <button
