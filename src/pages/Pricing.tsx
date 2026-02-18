@@ -9,10 +9,16 @@ import PricingAI from "@/components/pricing/PricingAI";
 import PricingTrust from "@/components/pricing/PricingTrust";
 import PricingCTA from "@/components/pricing/PricingCTA";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const Pricing = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Pricing – Pzaz"
+        description="Flexible pricing plans for indie filmmakers and production teams. Start free and scale as your productions grow."
+        url="https://pzaz-sparkle-showcase.lovable.app/pricing"
+      />
       <PricingHeader />
       <main>
         <PricingHero />

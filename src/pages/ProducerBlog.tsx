@@ -13,6 +13,7 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 import { useSearchParams } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 const POSTS_PER_PAGE = 6;
 
@@ -66,6 +67,11 @@ const ProducerBlog = () => {
 
   return (
     <PageLayout>
+      <SEO
+        title="Producer Blog – Pzaz"
+        description="Interviews, industry insights, and product updates for independent filmmakers and producers."
+        url="https://pzaz-sparkle-showcase.lovable.app/producer-blog"
+      />
       <ProducerBlogHero activeCategory={activeCategory} onCategoryChange={handleCategoryChange} />
 
       <section className="max-w-6xl mx-auto px-6 pb-20">

@@ -8,10 +8,12 @@ import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import WorkSmarterSection from "@/components/ui/WorkSmarterSection";
 import PageLayout from "@/components/layout/PageLayout";
+import SEO from "@/components/SEO";
 
 const Index = () => {
   return (
     <PageLayout>
+      <SEO />
       <Hero />
       <ProblemSection />
       <SolutionSection />

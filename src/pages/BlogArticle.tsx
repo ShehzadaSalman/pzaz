@@ -4,6 +4,7 @@ import ArticleHero from "@/components/blog/ArticleHero";
 import ArticleContent from "@/components/blog/ArticleContent";
 import ArticleRelated from "@/components/blog/ArticleRelated";
 import PageLayout from "@/components/layout/PageLayout";
+import SEO from "@/components/SEO";
 import { blogPosts } from "@/data/blogData";
 
 const BlogArticle = () => {
@@ -27,6 +28,13 @@ const BlogArticle = () => {
 
   return (
     <PageLayout>
+      <SEO
+        title={`${article.title} | Pzaz`}
+        description={article.excerpt}
+        image={article.featuredImage}
+        url={`https://pzaz-sparkle-showcase.lovable.app/producer-blog/${slug}`}
+        type="article"
+      />
       <article>
         <ArticleHero article={article} />
         <ArticleContent article={article} />
