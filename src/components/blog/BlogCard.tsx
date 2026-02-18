@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { CornerUpRight } from "lucide-react";
+import { CornerUpRight, Share2 } from "lucide-react";
 
 interface BlogCardProps {
   title: string;
@@ -24,6 +24,22 @@ const BlogCard = ({
   variant = "featured",
 }: BlogCardProps) => {
   const isGrid = variant === "grid";
+  const [showShareMenu, setShowShareMenu] = useState(false);
+  const shareMenuRef = useRef<HTMLDivElement>(null);
+
+  const fullUrl = typeof window !== "undefined" ? `${window.location.origin}${href}` : href;
+  const encodedUrl = encodeURIComponent(fullUrl);
+  const encodedText = encodeURIComponent(title);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (shareMenuRef.current && !shareMenuRef.current.contains(event.target as Node)) {
+        setShowShareMenu(false);
+      }
+    };
+    if (showShareMenu) document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [showShareMenu]);
 
   return (
     <article className={isGrid ? "w-full" : "mx-auto w-full max-w-[980px]"}>
@@ -49,7 +65,29 @@ const BlogCard = ({
               </span>
               <span className={`text-[#8C8C92] ${isGrid ? "text-sm" : "text-xl"}`}>{new Date(date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</span>
             </div>
-            <CornerUpRight className={`text-[#5E2AB5] transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 ${isGrid ? "h-5 w-5" : "h-8 w-8"}`} />
+            <div className="relative" ref={shareMenuRef}>
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  setShowShareMenu((prev) => !prev);
+                }}
+                className={`text-[#5E2AB5] hover:bg-[#5E2AB5]/10 rounded-full p-1.5 transition-colors ${isGrid ? "" : ""}`}
+                aria-label="Share article"
+              >
+                <Share2 className={isGrid ? "h-5 w-5" : "h-6 w-6"} />
+              </button>
+              {showShareMenu && (
+                <div className="absolute right-0 mt-2 w-44 rounded-md border border-border bg-white p-2 shadow-md z-20">
+                  <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="block rounded px-3 py-2 text-sm text-foreground hover:bg-muted">Share on Facebook</a>
+                  <a href={`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedText}`} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="block rounded px-3 py-2 text-sm text-foreground hover:bg-muted">Share on X</a>
+                  <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="block rounded px-3 py-2 text-sm text-foreground hover:bg-muted">Share on LinkedIn</a>
+                  <a href={`https://www.reddit.com/submit?url=${encodedUrl}&title=${encodedText}`} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="block rounded px-3 py-2 text-sm text-foreground hover:bg-muted">Share on Reddit</a>
+                  <a href={`https://wa.me/?text=${encodedText}%20${encodedUrl}`} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="block rounded px-3 py-2 text-sm text-foreground hover:bg-muted">Share on WhatsApp</a>
+                </div>
+              )}
+            </div>
           </div>
 
           <h2 className={`font-gloock font-semibold leading-[1.05] text-[#4A4A4F] ${isGrid ? "mb-3 text-[24px] md:text-[28px]" : "mb-6 text-[56px] md:text-[68px]"}`}>
