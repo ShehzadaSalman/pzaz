@@ -1122,4 +1122,66 @@ Stay tuned for more updates and fixes! With every new release, we are improving 
     readingTime: 3,
     featured: false,
   },
+  {
+    id: "20",
+    slug: "from-architecture-to-documentary-film",
+    title: "From Architecture to Documentary Film",
+    excerpt: "Peruvian filmmaker Lizeth Yarleque took an unconventional path into the world of documentary filmmaking, driven by purpose and passion for storytelling.",
+    content: `
+## From Architecture to Documentary Filmmaking: Lizeth Yarleque's Journey of Purpose and Passion
+
+Peruvian filmmaker Lizeth Yarleque took an unconventional path into the world of documentary filmmaking. Trained as an architect and later working as a logistics manager, she seemed set for a traditional career—until a growing passion for storytelling, travel, and visual narratives pulled her in a new direction.
+
+## A Leap of Faith Into Filmmaking
+
+Yarleque's entry into filmmaking came unexpectedly through a short video competition. Winning the contest earned her a fully funded trip to the UK for English studies—an experience that exposed her to the production industry firsthand. While in Belfast, she worked briefly with a local production company, where she gained insight into the professional world of filmmaking.
+
+That experience proved pivotal. Surrounded by seasoned journalists, editors, and producers, Yarleque found herself increasingly drawn to filmmaking's ability to tell stories that resonate deeply. Motivated by what she saw and learned, she made the difficult decision to leave her job and invest her time, energy, and savings into a new career—teaching herself filmmaking skills, buying equipment, and building her portfolio from scratch.
+
+## Storytelling With a Purpose
+
+What sets Yarleque apart is her dedication to telling stories that often go unseen—stories that reflect the richness of Peruvian culture and the humanity of its people. Throughout her career, she has been driven by a desire to counter the often negative, one-dimensional portrayals of Peru seen in international media.
+
+Rather than focusing on crime, corruption, or poverty, she chooses to highlight the country's diversity, traditions, and inspiring individuals. This deliberate approach shapes the kinds of projects she accepts and the stories she pursues.
+
+## Values at the Core of Her Work
+
+Yarleque is known for avoiding projects that could perpetuate negative stereotypes or cause emotional harm—both to the people being filmed and herself. She believes that while exposing difficult truths is important, there is equal value in amplifying positive, uplifting narratives, especially from regions like Latin America that are frequently misrepresented.
+
+She also advocates for ethical practices within the documentary industry, particularly when it comes to compensating those who contribute their stories. For Yarleque, ensuring fair treatment for local communities and contributors is non-negotiable—a stance that sometimes puts her at odds with outdated industry norms where interviewees are expected to participate without any form of compensation.
+
+## A Multifaceted Filmmaker and Fixer
+
+Operating in Peru, where the documentary industry remains relatively small, Yarleque has developed a wide range of skills. She works as a fixer, researcher, camera operator, producer, and even occasionally appears on camera as a correspondent. This versatility allows her to manage entire projects, from scouting stories and securing permits to filming and delivering edited drafts.
+
+Her work spans collaborations with German, American, and Dutch broadcasters, producing content for platforms with diverse audiences—from cultural documentaries to sustainability-focused projects.
+
+## Overcoming Challenges in Latin American Filmmaking
+
+Like many filmmakers in the region, Yarleque faces logistical hurdles—chief among them navigating the complex bureaucratic systems required to secure filming permits. She notes that lengthy approval times are common and that securing the right paperwork is often one of the biggest challenges of any project.
+
+However, these obstacles have also sharpened her problem-solving skills, a necessity in an industry where adaptability can make or break a production.
+
+## Advice to Aspiring Filmmakers
+
+Reflecting on her journey, Yarleque often encourages emerging filmmakers to practice relentlessly—whether filming family gatherings or experimenting with low-budget equipment. She emphasizes that technical skills alone are not enough; success in filmmaking also requires resilience, creative problem-solving, and a deep understanding of people.
+
+She also warns against the belief that contributors to documentary projects should not be paid, describing it as an outdated practice that undermines the very people whose stories make these films possible.
+
+## Projects in Progress and Looking Ahead
+
+Yarleque continues to work on projects for international broadcasters while developing personal documentaries. One current project explores traditional plant medicine practices, a subject she is passionate about bringing to a wider audience.
+
+She also regularly collaborates with foreign crews as a local fixer and researcher, helping international filmmakers navigate the Peruvian landscape and its stories. Her reputation is built not only on her skills but also on the trust she builds with clients and contributors alike.
+
+For those interested in exploring her work, Lizeth Yarleque's projects can be found on her website, **www.humanafilms.com**, where she showcases stories that reveal the beauty, complexity, and humanity of Peru—stories that too often go untold.
+    `,
+    category: "Film Maker Interviews",
+    featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2025/03/Blog-Thumbnail.png",
+    youtubeVideoId: "7krDnm5uo-0",
+    authorName: "Ninia",
+    publishedAt: "2025-03-24",
+    readingTime: 7,
+    featured: false,
+  },
 ];
