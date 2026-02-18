@@ -45,9 +45,9 @@ const BlogCard = ({
     <article className={isGrid ? "w-full" : "mx-auto w-full max-w-[980px]"}>
       <Link
         to={href}
-        className="group block overflow-hidden rounded-[24px] border border-[#D8D9DE] bg-white shadow-[0_18px_50px_rgba(18,18,30,0.08)] h-full"
+        className="group block rounded-[24px] border border-[#D8D9DE] bg-white shadow-[0_18px_50px_rgba(18,18,30,0.08)] h-full"
       >
-        <div className="relative bg-[#1D0F4F]">
+        <div className="relative bg-[#1D0F4F] rounded-t-[24px] overflow-hidden">
           <img
             src={image}
             alt={imageAlt}
@@ -76,10 +76,10 @@ const BlogCard = ({
                 className={`text-[#5E2AB5] hover:bg-[#5E2AB5]/10 rounded-full p-1.5 transition-colors ${isGrid ? "" : ""}`}
                 aria-label="Share article"
               >
-                <Share2 className={isGrid ? "h-5 w-5" : "h-6 w-6"} />
+                <CornerUpRight className={`transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 ${isGrid ? "h-5 w-5" : "h-8 w-8"}`} />
               </button>
               {showShareMenu && (
-                <div className="absolute right-0 mt-2 w-44 rounded-md border border-border bg-white p-2 shadow-md z-20">
+                <div className="absolute right-0 mt-2 w-44 rounded-md border border-border bg-white p-2 shadow-md z-50">
                   <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="block rounded px-3 py-2 text-sm text-foreground hover:bg-muted">Share on Facebook</a>
                   <a href={`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedText}`} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="block rounded px-3 py-2 text-sm text-foreground hover:bg-muted">Share on X</a>
                   <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="block rounded px-3 py-2 text-sm text-foreground hover:bg-muted">Share on LinkedIn</a>
