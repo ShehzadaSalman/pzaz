@@ -1086,4 +1086,40 @@ At a time when much of the industry still leans toward formula and flash, Vageli
     readingTime: 4,
     featured: false,
   },
+  {
+    id: "14",
+    slug: "product-update-march-2025",
+    title: "Product update – March 2025",
+    excerpt: "Get ready for our latest product update! Spring is just around the corner, and we've released a fresh new update to Pzaz with several new features, improvements, and bug fixes.",
+    content: `**Get ready for our latest product update**
+
+Greetings from Pzaz! The start of Spring is just around the corner, and to mark the occasion we've release a fresh new update to Pzaz. This includes several new features, improvements, and bug fixes.
+
+### What's New?
+
+- We've added a new side menu for faster navigation within each feature. This will let you quickly switch between boards, scripts, shooting schedules, and more!
+- We've streamlined elements, equipment, crew & cast, and locations into one tab for better organization.
+- We're adding board templates for easy setup – you will now be able to choose from pre-made templates when creating a board, and we'll be adding more soon based on your needs.
+- Adding a 'main script' feature (preparing for full script breakdown) – from this release forward, you will be able to designate any of your scripts as a 'main script'. This is preparing in future for a new feature where you'll be able to create a full 'break down' of all components from this main script – watch this space.
+- As always, this release also includes a number of bug fixes and user experience improvements.
+
+### Improvements
+
+- Inbox/workflows revamp – we've made several internal code improvements, renamed "Unassigned" to Outbox, and updated the overall design.
+- Refined side menu order – tabs are now grouped logically by function.
+- Budget page enhancements – side menu now includes above and below the line buttons, plus new PDF & XLSX export options.
+- Simplified navigation – the private/team switch has been removed—users should use the side menu instead.
+
+### Bug Fixes
+
+As always, this also includes a number of bug fixes in response to direct feedback from our customers.
+
+Stay tuned for more updates and fixes! With every new release, we are improving Pzaz, and everyone's feedback is important!`,
+    category: ["News & Updates", "Production & Producing"],
+    featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/07/release_notes_wide.png",
+    authorName: "Tom Emmerson",
+    publishedAt: "2025-03-24",
+    readingTime: 3,
+    featured: false,
+  },
 ];
