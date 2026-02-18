@@ -38,18 +38,6 @@ export const authors: Record<string, Author> = {
     avatar: "/placeholder.svg",
     bio: "Former line producer with 15 years in indie film. Now helping filmmakers work smarter with Pzaz.",
   },
-  "marcus-williams": {
-    name: "Marcus Williams",
-    role: "Industry Analyst",
-    avatar: "/placeholder.svg",
-    bio: "Entertainment industry researcher focused on production economics and emerging technologies.",
-  },
-  "elena-rodriguez": {
-    name: "Elena Rodriguez",
-    role: "Filmmaker & Educator",
-    avatar: "/placeholder.svg",
-    bio: "Award-winning documentary filmmaker and film school instructor sharing real-world insights.",
-  },
 };
 
 export const blogPosts: BlogPost[] = [
