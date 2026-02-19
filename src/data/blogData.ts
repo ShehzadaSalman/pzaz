@@ -2563,4 +2563,78 @@ Unsurprisingly, the future looks bright for the world's largest film production 
     readingTime: 12,
     featured: false,
   },
+  {
+    id: "26",
+    slug: "pzaz-major-update",
+    title: "PZAZ – Major Feature Update",
+    excerpt: "Discover the new scriptwriting features, Assist Mode, VOIP calls, and more in this major Pzaz platform update.",
+    content: `
+## Discover the New Scriptwriting Features and Assist Mode!
+
+We're excited to share some major updates that will make your experience with Pzaz even better! Check out the new features and improvements below:
+
+### New Features
+
+**1. Script Editor**
+
+Introducing our redesigned Scriptwriting Tool, made to help you create the script of your dreams! Here's what's new:
+
+- Customize your script thumbnails with colors and images.
+- Easily create copies or drafts of your script.
+- Enjoy a more intuitive, user-friendly interface for smoother navigation.
+- Coming soon: Import your existing scripts directly into the tool and continue where you left off.
+- Export feature will be available soon, making it simple to share your scripts with others.
+- You can now add comments directly to your script! Just highlight the text and click the comment button.
+
+**2. Updated Settings Design**
+
+We've revamped the settings page with a clean, easy-to-navigate design for a smoother user experience.
+
+**3. Invite Button**
+
+Now, inviting team members to your workspace is easier than ever with the new invite feature in the updated settings.
+
+**4. Locations Page**
+
+We've added a Locations page under the Production tab. Here, you can:
+
+- Select locations by region.
+- Leave comments, add images, and manage your shooting locations all in one place.
+
+**5. Elements Section**
+
+Track all the equipment you need for filming in the new Elements section under Production. Simply create items and add details as needed!
+
+**6. Demo Workspace**
+
+Unsure how to use a feature? All new users now can switch to our "Demo" workspace by enabling Assist Mode with a click. We've created this for you to explore and experiment without affecting your own projects.
+
+**7. 1-to-1 Calls (VOIP)**
+
+Our new VOIP functionality now allows seamless one-to-one calls between users.
+
+### Updates to Existing Features
+
+**1. New Script Creation/Import Popup**
+
+We've added a new popup to help you quickly create a script or import an existing one (coming soon).
+
+**2. Empty State Screen**
+
+We've improved the guidance and experience on several pages with new designs to help you start your journey.
+
+**3. General Bug Fixes**
+
+We've fixed various bugs to ensure you have the best experience possible with Pzaz.
+
+### Stay tuned for even more exciting features and improvements coming your way soon!
+    `,
+    category: ["News & Updates", "Production & Producing"],
+    majorCategory: "Production Tips",
+    featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/07/release_notes_wide.png",
+    authorName: "Valentine Rozkolodko",
+    publishedAt: "2024-10-17",
+    readingTime: 4,
+    featured: false,
+  },
 ];
