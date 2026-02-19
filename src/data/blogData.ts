@@ -3038,4 +3038,69 @@ We hope these new features and fixes enhance your filmmaking process. Stay tuned
     readingTime: 3,
     featured: false,
   },
+  {
+    id: "33",
+    slug: "lindsey-paulette-on-filmmaking-opportunities",
+    title: "Lindsey Paulette on Filmmaking Opportunities",
+    excerpt: "An exclusive interview with American writer, producer, and director Lindsey Paulette about seizing opportunities, freelancing, and staying true to yourself in filmmaking.",
+    content: `
+Recently we caught up with Lindsey Paulette to hold a wide-ranging interview about filmmaking. Lindsey is an American writer, producer, and director who hails from Richmond, Virginia.
+
+Lindsey made a very early start in the performing arts, as she began performing on stage at the age of seven. Later, she went on to study film at John Tyler Community College and then at Savannah College of Art and Design. She then went on to graduate from Virginia Commonwealth University's cinema program. Since graduating, Lindsey has successfully directed her first feature length film which premiered earlier this year.
+
+In this interview, we cover a lot of topics including the following:
+
+- We examine Lindsey's preference between the disciplines of writing and directing
+- We talk more in depth about how Lindsey started in theatre, and her education since then
+- We discuss the difference between working in front of and behind the camera
+- Lindsey's advice for people when choosing their career direction
+- The benefits of studying film in college
+- What it's like to be the youngest person on a set, and tips on how to establish one's presence
+- The importance of staying true to oneself
+
+## How Lindsey Manages Her Time as a Freelancer
+
+In our interview, we examine how the life of a freelancer can be busy. "It varies, from month to month, week to week", Lindsey explains. "Sometimes I'm super slammed and I'm really busy with work, and then other times it's a slower period." But as Lindsey explains, that can have advantages too. "During those times I tend to focus more on personal projects."
+
+One of the challenges of this way of working that we explore, is having the time to stay on top of communications, and keep in touch with everyone. This can be particularly challenging for an independent contractor who is working on multiple projects.
+
+## Lindsey Appreciates the Practices of Screenwriting and Directing
+
+Another topic we cover during the interview, is the fact that Lindsey has a background both as screenwriter and also as a director. During our conversation, we explore the question of whether Lindsey has a preference between the two. "It is tough because I really, really enjoy writing", Lindsey begins. "I've obviously been doing that longer because I've been able to access writing for longer." But what about directing? As Lindsey remarks, writing is such a solo process. "One of my favourite things about directing is the collaboration."
+
+## How Lindsey Started in Theatre and Her Background in Education
+
+We talk at length about how Lindsey got started in her profession. Lindsey made a very early start in the performing arts, performing on stage at the age of seven. "I had a lot of confidence and enthusiasm as a child", she explains. "I was very out there and I had a lot of energy, and my mom didn't know what to do with all that."
+
+However, as she got older, Lindsey realised she preferred working behind the camera instead of in front of it. She went on to study film at John Tyler Community College and then at Savannah College of Art and Design, before graduating from Virginia Commonwealth University's cinema program.
+
+## The Difference Between Being an Actor and Working Behind the Camera
+
+We discuss Lindsey's impressions of how being an actor differs from working in a 'behind the camera' role. Working as an actor can make someone a better writer or director, because it gives them more empathy for the actors. "When you've been there before, you understand the anxiety of being in front of a large group of people", Lindsey explains.
+
+## Lindsey's Advice for People When Choosing Their Career Direction
+
+One lesson that becomes clear is that as a creative professional, it's important to have a long-term plan whilst also focusing on the day-to-day. "Right now, I have a lot of projects under my belt. But the plan has always been to continue to build the portfolio and prove that though I might be a young director, I'm also a competent director."
+
+## The Benefits of Studying Film in College
+
+We explore whether studying at film school is necessarily a better path for aspiring filmmakers. Lindsey explains: "I am definitely not someone that thinks that film school is necessary, especially with the technology that we have access to now." However, she emphasised the value of the personal relationships fostered during her time in school—connections that have gone on to help her on production sets.
+
+## Lindsey's Current and Upcoming Projects
+
+2024 is clearly already a busy year for Lindsey. Her first feature film, *The Trip*, was released earlier this year and is currently being screened at multiple film festivals. At the same time, Lindsey has begun development of her next project. "I have a hard time sitting still and relaxing", Lindsey admits. "I feel like I constantly have to be working on something."
+
+## Where to Find Out More About Lindsey
+
+You can browse Lindsey's filmmaker page on IMDB and find all the relevant links to her social accounts and work projects at linktr.ee/LindseyPaulyD.
+    `,
+    category: "Film Maker Interviews",
+    majorCategory: "Filmmaker Interviews",
+    featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/07/release_notes_wide.png",
+    youtubeVideoId: "-WRlmwJ99og",
+    authorName: "Vincent Weberink",
+    publishedAt: "2024-08-09",
+    readingTime: 8,
+    featured: false,
+  },
 ];
