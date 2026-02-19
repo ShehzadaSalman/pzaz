@@ -2900,4 +2900,40 @@ And as always, stay tuned for more updates and fixes! With every new release we 
     readingTime: 3,
     featured: false,
   },
+  {
+    id: "30",
+    slug: "new-updates-and-enhancements",
+    title: "New Functionality – Updates and Enhancements",
+    excerpt: "Introducing the new Tools section with Film Info Tool, shooting days planning improvements, workspace permissions, and various bug fixes.",
+    content: `
+## Introducing New Features: Film Info Tool & QoL Improvements
+
+We're excited to introduce a brand-new section dedicated entirely to **Tools**!
+
+### New Feature – Tools Section
+
+**Film Info Tool:** Explore our extensive film database, filled with detailed information on actors, producers, films, trailers, and more. Plus, you'll soon be able to add your favorite films and people to a favorites section for quick and easy access.
+
+Here's what's new:
+
+- **Shooting Days Planning:** Stay ahead with an enhanced 8-day weather forecast, making your shooting schedules even more reliable. This update ensures you can plan your shooting days with greater precision, adjusting for weather conditions in advance.
+- **Task Creation:** To keep your workflow organized, tasks (To-Dos) can now only be created within specific cards or in the Personal section. This change helps maintain a clean and efficient board, allowing you to focus on what's important.
+- **Workspace Permissions:** If you attempt to access a workspace you don't have permission for, you'll now be greeted with a new "Get Started" screen. This screen offers you the option to select another workspace to join, simplifying navigation and access management.
+- **Side Navigation Menu:** We've refreshed the look of the side navigation menu by updating the colors of the buttons. This small change provides a more modern and visually appealing interface.
+- **Chat Enhancements:** Never miss a message again! We've introduced notifications for new chat messages, ensuring you stay up to date with your conversations.
+
+## Bug Fixes
+
+- **Shooting Plan**: We've fixed an issue where the weather forecast wouldn't update when changing the shooting day. Now, your shooting plans are more accurate than ever.
+
+Stay tuned for more updates, and as always, your feedback is very important for making our tool better!
+    `,
+    category: "News & Updates",
+    majorCategory: "Production Tips",
+    featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/07/release_notes_wide.png",
+    authorName: "Vincent Weberink",
+    publishedAt: "2024-08-23",
+    readingTime: 3,
+    featured: false,
+  },
 ];
