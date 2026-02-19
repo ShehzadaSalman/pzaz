@@ -79,14 +79,7 @@ const ProducerBlog = () => {
           {displayPosts.map((post) => (
             <BlogCard
               key={post.id}
-              title={post.title}
-              excerpt={post.excerpt}
-              category={Array.isArray(post.category) ? post.category[0] : post.category}
-              date={post.publishedAt}
-              image={post.featuredImage}
-              imageAlt={post.title}
-              href={`/producer-blog/${post.slug}`}
-              variant="grid"
+              post={post}
             />
           ))}
         </div>
