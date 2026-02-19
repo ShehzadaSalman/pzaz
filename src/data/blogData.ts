@@ -1446,4 +1446,53 @@ And as usual, stay tuned for more updates and fixes! With every new release, we'
     readingTime: 4,
     featured: false,
   },
+  {
+    id: "20",
+    slug: "from-small-town-greece-to-filmmaking",
+    title: "From Kavala to the Silver Screen",
+    excerpt: "Angelica's path from small-town Greece to filmmaking is a testament to passion and perseverance, proving that creativity and determination can break any barrier.",
+    content: `
+A Journey from Small-Town Greece to Filmmaking—Angelica's path to filmmaking is a testament to passion and perseverance. Growing up in Kavala, Greece, where access to cinema was scarce, her love for film was nurtured through the television in her home. Despite the challenges of limited resources, she transformed her childhood dream into a filmmaking career, proving that creativity and determination can break any barrier.
+
+## Discovering a Love for Film
+
+As a child, Angelica's earliest exposure to movies came from classic Hollywood hits like Dracula and Braveheart. Despite living in a town where the cinema shut down when she was 13, Angelica found solace in television, which became her personal gateway to storytelling.
+
+It wasn't until her mid-20s that she began exploring more artistic films, expanding her taste beyond high-budget Hollywood productions. Her background in electrical engineering initially delayed her foray into filmmaking, but when she realized that engineering wasn't the life she wanted, she embraced the arts wholeheartedly.
+
+## The Journey into Filmmaking
+
+Moving to Thessaloniki, Greece's second-largest city, marked a turning point. There, she was exposed to new artistic possibilities, eventually leading her to study drama. Her career in the arts began with acting, but she soon discovered a deeper love for storytelling. Writing became her next passion, and before long, she was visualizing entire films as she wrote. This natural evolution led her to directing, a medium that allowed her to bring her creative visions to life.
+
+Angelica's filmmaking philosophy is deeply personal. When working on her own scripts, she insists on directing them herself to ensure her vision is realized. However, when collaborating on other projects, she prefers to step into an acting role, respecting the director's vision.
+
+## The Challenges of Filmmaking
+
+Like many independent filmmakers, Angelica has faced significant challenges. One of the biggest was the struggle for funding. Determined to maintain high production quality, she took on various jobs, from waitressing to renting out her home on Airbnb, to finance her projects. Her resilience and resourcefulness enabled her to complete her first feature film, "Be Like Angel Padalos"—a vibrant and experimental piece that blends multiple art forms, including animation, dance, and poetry.
+
+Another major lesson she learned was the importance of a single directorial vision. After experiencing difficulties co-directing a project, she vowed never to split directing responsibilities again. In her view, filmmaking requires clear decision-making, and having multiple directors can lead to conflicts and creative stagnation.
+
+**Defining Success in Film**
+
+For Angelica, success isn't solely about financial gain or awards—it's about creating something meaningful. While her short films have won numerous awards worldwide, the true measure of success for her is knowing she has given her all to a project.
+
+Her first feature film is now complete, and she is focused on securing a premiere at a prestigious film festival. With the right platform, she hopes to gain distribution and reach a wider audience.
+
+## Looking to the Future
+
+Angelica's passion for storytelling doesn't stop here. With multiple scripts ready and waiting, she is eager to bring more of her ideas to life. She remains proactive in seeking funding opportunities, including grants from the Greek government, to turn her dreams into reality.
+
+Her story is a testament to perseverance, creativity, and the power of believing in one's vision. Angelica's journey reminds us that with enough determination, even the most distant dreams can become reality on the big screen.
+
+Curious to hear more about Angelica's journey and filmmaking insights? Watch the full interview on YouTube!
+    `,
+    category: "Film Maker Interviews",
+    majorCategory: "Filmmaker Interviews",
+    featuredImage: "/placeholder.svg",
+    youtubeVideoId: "XByybyrUzPY",
+    authorName: "Ninia",
+    publishedAt: "2025-02-13",
+    readingTime: 5,
+    featured: false,
+  },
 ];
