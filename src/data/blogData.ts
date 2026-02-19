@@ -2857,4 +2857,47 @@ The data was sourced from an independent sample of 4,142,569 people worldwide fr
     readingTime: 14,
     featured: false,
   },
+  {
+    id: "29",
+    slug: "introducing-new-inbox-feature-and-various-bugfixes",
+    title: "Introducing New Inbox Feature and Various Bugfixes",
+    excerpt: "Improvements to existing features, a new powerful Inbox tool to keep you organized, and several bug fixes reported by our users.",
+    content: `
+## New Functionality – Updates and Enhancements
+
+With this release we are bringing you improvements to existing features, introducing a new powerful Inbox tool to keep you organized, also resolving several issues reported by our users. Let's dive into the details of what's new and improved.
+
+## Updates to Existing Features
+
+- **To-do Creation Flow**: Users can now create to-dos exclusively within a card or in the dedicated "Personal" tab section.
+- **Card Creation**: Pressing the + button in the workflow now directly creates a new card.
+- **Chat Notifications**: Notifications are now displayed for incoming chat messages.
+- **UI Improvements**: Minor user interface enhancements and bug fixes.
+- **Welcome Page**: Updated animations and artwork on the welcome page for a more engaging experience.
+
+## New Features
+
+- **Inbox**: Stay on top of tasks related to you! When you're assigned to a task, card, to-do, or mentioned using the @ symbol, a notification will appear in your personal inbox.
+- **Teammate Mentions**: You can now tag other teammates using the @ symbol for better collaboration.
+- **Production – Elements**: This new section allows you to keep track of all the extra things you need for production! Props, equipment, etc – use it to keep track of everything!
+
+## Bug Fixes
+
+- **Goals/OKR Sections**: Enhanced the functionality of the search field for smoother use.
+- **Manage Growthspace**: Fixed an issue where the board-user management UI wasn't reloading properly after removing a user from a board.
+- **Workflow View**: Addressed large gaps between columns when a column contains cards.
+- **Script Feature**: Corrected the display of icons for minimizing the script feature.
+- **Card Functions**: Fixed issues with the icons of function-related buttons on cards.
+- **Invitation Bug**: Resolved an issue preventing invitations for some user workspaces without subscriptions.
+
+And as always, stay tuned for more updates and fixes! With every new release we improve Pzaz and your feedback is important!
+    `,
+    category: "News & Updates",
+    majorCategory: "Production Tips",
+    featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/07/release_notes_wide.png",
+    authorName: "Vincent Weberink",
+    publishedAt: "2024-09-16",
+    readingTime: 3,
+    featured: false,
+  },
 ];
