@@ -3103,4 +3103,75 @@ You can browse Lindsey's filmmaker page on IMDB and find all the relevant links 
     readingTime: 8,
     featured: false,
   },
+  {
+    id: "34",
+    slug: "film-director-dean-midas-on-his-love-for-horror-and-filmmaking-lessons-in-pzaz-interview",
+    title: "Dean Midas on Horror and Filmmaking Lessons",
+    excerpt: "An exclusive interview with horror film director Dean Midas about his love for the genre, producing films on minimal budgets, and balancing filmmaking with work and family life.",
+    content: `
+In this latest interview in the Pzaz video interview series, we talked to Dean Midas. Dean is a well-known and well-regarded horror film director. Dean hails from the North-East of England, and has been featured multiple times in local news and entertainment media for his role in encouraging filmmaking in his local area.
+
+In 2014, Dean produced and acted in his first short film. After that film was well received, since then Dean has gone on to make more horror shorts that have been featured at festivals and in media around the world. He has won several awards for his work, including most recently, Darkus Magazine's North East Film Director of the Year, and BBC Upload's Film Master for 2023. In 2023, his latest short "The Devil's Stone" won the audience vote at the Lift-Off Season Awards, held at Pinewood Studios.
+
+Dean Midas's filmmaking journey exemplifies resilience, creativity, and a long-standing love of genre films. His work stands as a guiding light for aspiring filmmakers navigating the ever-changing landscape of the industry.
+
+## Dean Speaks About the Films That Influenced Him at an Early Age
+
+In the interview, Dean explained how certain filmmakers had a huge influence on him at a formative age. One of these was John Carpenter, who Dean cites as a very big influence on his work. Many of his fans feel he has crafted several iconic films that have left a lasting impact on cinema, including "Halloween", "The Thing", "Escape from New York" and "Big Trouble in Little China". In Dean's words: "if you watch my films closely, you can see there's a lot of the same sort of shots that John uses."
+
+## It Is Possible to Produce Films on a Small Budget
+
+During the interview, we discuss how Dean has been able to create his films with a minimal budget. In fact, one of his recent short films was particularly lauded for being produced with a budget of less than 50 English pounds. "Ninety-nine per cent of my films are filmed on a mobile phone", he says. "We use plug-in microphones on a mobile phone with hand rigs and additional lighting."
+
+Another secret to his success in achieving a lot for a low budget is being able to enlist volunteers to appear in the cast. "We get a lot of people who come to us – maybe up and coming actors that just want to get some experience on their CV, or just people like me who love the horror genre", Dean explains.
+
+## Every Filmmaker's Motivation for Creating Films Is Unique
+
+We also explore what motivates Dean to make films in the first place. For Dean, it's not solely about achieving popularity or commercial success. Dean explains that while he often has very grand ideas for his films, budget constraints sometimes limit what can be realised. However, seeing his vision come to life through collaboration with talented individuals over several months is immensely gratifying.
+
+Personal feedback and interactions from viewers is more rewarding than sheer popularity. Dean finds satisfaction in knowing that his work is being appreciated on a personal level.
+
+## How Dean First Began to Explore the World of Filmmaking
+
+Dean is a part-time head of marketing, and also cares for his two daughters. We discuss how it is not always easy to balance the demands of a creative career with a paid job and a busy family life.
+
+In 2014, his debut film gained traction, winning the Best Horror award at several film festivals. This accolade catapulted him into the spotlight. While this acclaim was gratifying, Dean remained grounded, recognizing the harsh realities of the film industry, particularly for low-budget filmmakers.
+
+The financial aspect posed significant hurdles, forcing Dean to seek alternative avenues for funding, including crowdfunding and personal investments from supportive friends.
+
+## What Was the Inspiration for Dean's First Film in 2014
+
+The initial inspiration was found in an idea, rooted in the legend of the Chained Oak. "I remember the first time I stood in Alton Towers at the Hex Ride," Dean recounts. "I listened to the story and thought to myself, 'what a great idea – this would make a great little film.'"
+
+## Advice for Filmmakers Embarking on Their First Shoot
+
+Dean's advice is to try and enjoy the process and not fixate on the end goal or results. "Enjoy the filmmaking part," says Dean. "Enjoy the experience, and enjoy being a part of all these people that you're working with."
+
+## The Importance of Balancing Filmmaking with Work and Family Life
+
+Reflecting on his recent recognition in the local community, Dean acknowledged the support of his family and friends. He recognized the significance of having a partner with different tastes and interests, believing it enriches their relationship.
+
+## Modern Horror Films That Dean Admires
+
+Dean discussed his cinematic influences, citing directors like Wes Craven and John Carpenter. He expressed admiration for their contributions to the horror genre and highlighted the enduring legacy of iconic characters like Ghostface.
+
+## The Role of Social Media in Marketing Films
+
+Dean credited his background in marketing for aiding in the promotion of his films. He emphasised the importance of embracing social media and finding a niche to stand out in a crowded market.
+
+## Dean's Final Thoughts for Filmmakers
+
+As he looks towards the future, Dean remains optimistic, fueled by the desire to continue telling stories that resonate with audiences. With each film project, he aims to push the boundaries of storytelling while staying true to his vision.
+
+You can find out more about Dean's filmography and his upcoming projects at his website at deanmidasfilms.co.uk.
+    `,
+    category: "Film Maker Interviews",
+    majorCategory: "Filmmaker Interviews",
+    featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/07/release_notes_wide.png",
+    youtubeVideoId: "R2vZX9JqsSI",
+    authorName: "Vincent Weberink",
+    publishedAt: "2024-07-31",
+    readingTime: 10,
+    featured: false,
+  },
 ];
