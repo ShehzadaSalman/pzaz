@@ -72,7 +72,7 @@ const BlogCategory = () => {
         {/* Hero */}
         <section className="pt-32 pb-16 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
-          <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-6xl mx-auto px-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -107,7 +107,7 @@ const BlogCategory = () => {
 
         {/* Filters & Search */}
         <section className="py-16">
-          <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto px-6">
             <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 mb-12">
               <div className="flex flex-wrap gap-2">
                 {relevantSubCategories.map((cat) => (
