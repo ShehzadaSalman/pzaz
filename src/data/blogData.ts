@@ -4334,4 +4334,61 @@ By exploring and implementing a mix of these revenue streams, you can create a r
     readingTime: 25,
     featured: false,
   },
+  {
+    id: "45",
+    slug: "get-a-glimpse-into-the-world-of-independent-filmmaking-with-film-producer-athanasia-bartzoka",
+    title: "Get a Glimpse into the World of Independent Filmmaking with Film Producer Athanasia Bartzoka",
+    excerpt: "An interview with London-based Film Producer Athanasia Bartzoka about her journey from finance to filmmaking, crowdfunding challenges, film festivals, and advice for aspiring filmmakers.",
+    content: `
+In a recent interview with Athanasia Bartzoka, a London-based Film Producer and Production Assistant, we delved into her journey into filmmaking and her insights on the challenges and joys of producing films. Armed with a Master's degree in Filmmaking from Goldsmiths, University of London, Athanasia's passion for storytelling and commitment to her craft shines through as she discusses her current projects, experiences, and the intricacies of film production.
+
+Athanasia is currently immersed in the development stage of several short films, navigating the challenging task of seeking funding to bring these projects to life. Not one to rest on her laurels, she's also in post-production for another short film, gearing up for festival submissions. Simultaneously, she's expanding her network, exploring potential collaborations with clients, and discussing a feature film project with a director.
+
+As she navigates the intricate web of short film development, funding challenges, and festival submissions, Athanasia's passion for storytelling and commitment to diverse perspectives in filmmaking shines through, making her a valuable contributor to the film community.
+
+## Fundraising Challenges
+
+Discussing the challenges of funding independent films, Athanasia opens up about her mixed experiences with crowdfunding. While acknowledging its effectiveness, she highlights the emotional toll of constantly seeking donations. She suggests alternative funding avenues, emphasizing the importance of aligning the story with potential partners, such as charities or organizations. Athanasia believes that a compelling story, one that needs to be told, will find its way to funding, often through a powerful network.
+
+## Favourite Film Festivals
+
+Athanasia recalls her positive experiences at film festivals, with a special mention of the Women X Film Festival, an event she attended recently. She commends its organization and the nurturing atmosphere for female filmmakers. Manchester International Film Festival also left a lasting impression, and she expresses eagerness to submit her latest film, "Back of the Net," to more festivals in the future.
+
+## Getting into Filmmaking
+
+Reflecting on her journey into filmmaking, Athanasia explains her decision to transition from a career in finance to pursuing a Master's degree in filmmaking. She emphasizes the importance of film school for those starting anew, providing a structured learning environment and valuable industry connections. Coming from Greece, she chose London for its English-speaking advantage and status as a global film production hub.
+
+## Athanasia's Advice for Aspiring Filmmakers
+
+Athanasia offers practical advice to film students and aspiring filmmakers, urging them to experiment, make mistakes, and build lasting connections during their time in film school. She emphasizes the importance of these bonds in London's tight-knit film community. Her words resonate with the idea that the filmmaking journey is not just about the destination but more about the experiences gained along the way.
+
+## Looking Ahead
+
+While Athanasia contemplates the possibility of directing in the future, her current focus lies on bringing others' visions to life. Influenced by film directors like Emerald Fennell, she appreciates the unique storytelling perspective of female directors. With her films yet to be publicly available, she eagerly anticipates sharing her work with a wider audience.
+
+In the highly anticipated short film, "Back of the Net," audiences are granted a sneak peek into a riveting story that delves into the world of women's football, both past and present. Directed by Klara Kaliger and written by Ella Dorman-Gajic, this cinematic gem promises an emotional journey, skillfully exploring themes of passion, aspiration, and the evolving landscape of women's football.
+
+"Back of the Net" follows the compelling journey of Maya, a young and passionate footballer portrayed by Ella Dorman-Gajic. Maya's dreams, intricately tied to the inspiration she drew from her grandmother, take center stage. The trailer hints at a heartfelt and human narrative, addressing the challenges faced by women in a male-dominated world while emphasizing the importance of legacy and familial connections.
+
+## Raja's Had Enough
+
+In response to the alarming prominence of femicide in the news during 2021, the team behind "Raja's Had Enough" embarked on a unique venture to address this grave issue with a blend of dark comedy, fantasy, and thriller elements. The film is a thought-provoking exploration of femicide, bringing forth an innovative approach to storytelling.
+
+"Raja's Had Enough" introduces us to Raja, a creature in human form working at The Afterlife Bureau, a realm where souls are processed after death. Assigned to the femicide department, Raja is fatigued and disinterested in her job. A twist occurs when her colleague Jin from the forecasting unit trusts Raja to handle his paperwork, setting the stage for a narrative that explores burnout, responsibility, and the consequences of pushing back against societal norms.
+
+Raja's decision to intervene in the life of a woman named Zoe, a femicide victim, takes the audience on a journey that seamlessly blends fantasy with the gritty reality of London.
+
+With pre-production already underway, the creators sought to raise £7500 to bring their vision to life. On January 1, 2022, Athanasia shared an exciting update announcing that her team had successfully achieved their minimum funding goal. Subsequently, the team started shooting their project.
+
+Athanasia Bartzoka provides a glimpse into the dynamic world of film production. Her journey, from finance to filmmaking, is an inspiring narrative for those venturing into the industry. Her successful Kickstarter campaign proves that having a great story with an important message can help you get the money you need for your independent films. When you're passionate about your project, people are more likely to support it. Every big journey starts with a small step, and your story has the power to inspire and connect with others.
+    `,
+    category: "Film Maker Interviews",
+    majorCategory: "Filmmaker Interviews",
+    featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/03/Pzaz-athanasia.png",
+    youtubeVideoId: "TupW6d4EF6k",
+    authorName: "Larisa Sevcencu",
+    publishedAt: "2024-03-01",
+    readingTime: 8,
+    featured: false,
+  },
 ];
