@@ -16,10 +16,10 @@ interface NavItem {
 }
 
 const defaultNavItems: NavItem[] = [
-  { label: "Features", to: "#features", isHash: true },
-  { label: "Products", to: "#products", isHash: true },
-  { label: "Workflow", to: "#workflow", isHash: true },
-  { label: "Integrations", to: "#integrations", isHash: true },
+  { label: "Blog", to: "/blog" },
+  { label: "Script", to: "/script" },
+  { label: "Pricing", to: "/pricing" },
+  { label: "Products", to: "/#products", isHash: true },
 ];
 
 const blogNavItems: NavItem[] = [
