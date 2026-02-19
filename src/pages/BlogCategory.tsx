@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, Film, Lightbulb, Newspaper, Search } from "lucide-react";
-import BlogHeader from "@/components/blog/BlogHeader";
+import Header from "@/components/Header";
 import BlogCard from "@/components/blog/BlogCard";
 import BlogNewsletter from "@/components/blog/BlogNewsletter";
 import Footer from "@/components/Footer";
@@ -67,7 +67,7 @@ const BlogCategory = () => {
         description={category.description}
         url={`https://pzaz-sparkle-showcase.lovable.app/blog/category/${category.slug}`}
       />
-      <BlogHeader />
+      <Header />
       <main>
         {/* Hero */}
         <section className="pt-32 pb-16 relative overflow-hidden">

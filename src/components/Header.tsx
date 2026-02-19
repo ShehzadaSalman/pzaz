@@ -4,15 +4,38 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import pzazLogo from "@/assets/pzaz-logo.png";
 import iconSurvey from "@/assets/icon-survey.svg";
 import LanguageDropdown from "@/components/LanguageDropdown";
+
+interface NavItem {
+  label: string;
+  to: string;
+  isHash?: boolean;
+}
+
+const defaultNavItems: NavItem[] = [
+  { label: "Features", to: "#features", isHash: true },
+  { label: "Products", to: "#products", isHash: true },
+  { label: "Workflow", to: "#workflow", isHash: true },
+  { label: "Integrations", to: "#integrations", isHash: true },
+];
+
+const blogNavItems: NavItem[] = [
+  { label: "Blog", to: "/blog" },
+  { label: "Script", to: "/script" },
+  { label: "Pricing", to: "/pricing" },
+  { label: "Products", to: "/#products", isHash: true },
+];
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
   const isScriptPage = location.pathname === "/script";
+  const isBlogRelated = location.pathname.startsWith("/blog") || location.pathname.startsWith("/producer-blog");
+
+  const navItems = isBlogRelated ? blogNavItems : defaultNavItems;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass" style={{ borderBottom: '1px solid #D4BAF4' }}>
@@ -33,18 +56,27 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#features" className="transition-colors" style={{ color: "#20124D", fontFamily: "'Lato', sans-serif", fontWeight: 400, fontSize: 14, lineHeight: "24px" }}>
-              Features
-            </a>
-            <a href="#products" className="transition-colors" style={{ color: "#20124D", fontFamily: "'Lato', sans-serif", fontWeight: 400, fontSize: 14, lineHeight: "24px" }}>
-              Products
-            </a>
-            <a href="#workflow" className="transition-colors" style={{ color: "#20124D", fontFamily: "'Lato', sans-serif", fontWeight: 400, fontSize: 14, lineHeight: "24px" }}>
-              Workflow
-            </a>
-            <a href="#integrations" className="transition-colors" style={{ color: "#20124D", fontFamily: "'Lato', sans-serif", fontWeight: 400, fontSize: 14, lineHeight: "24px" }}>
-              Integrations
-            </a>
+            {navItems.map((item) =>
+              item.isHash ? (
+                <a
+                  key={item.label}
+                  href={item.to}
+                  className="transition-colors"
+                  style={{ color: "#20124D", fontFamily: "'Lato', sans-serif", fontWeight: 400, fontSize: 14, lineHeight: "24px" }}
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  key={item.label}
+                  to={item.to}
+                  className="transition-colors"
+                  style={{ color: "#20124D", fontFamily: "'Lato', sans-serif", fontWeight: 400, fontSize: 14, lineHeight: "24px" }}
+                >
+                  {item.label}
+                </Link>
+              )
+            )}
           </div>
 
           {/* CTA Buttons */}
@@ -53,7 +85,6 @@ const Header = () => {
               Log in
             </Button>
             <Button variant="default" size="sm">
-              {/* <img src={iconSurvey} alt="" className="w-4 h-4" /> */}
               Start for Free
             </Button>
           </div>
@@ -62,7 +93,6 @@ const Header = () => {
           <button
             className="md:hidden p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </nav>
@@ -76,12 +106,14 @@ const Header = () => {
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
           className="md:hidden bg-background border-t border-border/50">
-
             <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
-              <a href="#features" className="text-foreground font-medium py-2">Features</a>
-              <a href="#products" className="text-foreground font-medium py-2">Products</a>
-              <a href="#workflow" className="text-foreground font-medium py-2">Workflow</a>
-              <a href="#integrations" className="text-foreground font-medium py-2">Integrations</a>
+              {navItems.map((item) =>
+                item.isHash ? (
+                  <a key={item.label} href={item.to} className="text-foreground font-medium py-2">{item.label}</a>
+                ) : (
+                  <Link key={item.label} to={item.to} className="text-foreground font-medium py-2">{item.label}</Link>
+                )
+              )}
               <hr className="border-border/50" />
               <Button variant="ghost" className="justify-start">Log in</Button>
               <Button variant="default">Start for Free</Button>
@@ -90,7 +122,6 @@ const Header = () => {
         }
       </AnimatePresence>
     </header>);
-
 };
 
 export default Header;
