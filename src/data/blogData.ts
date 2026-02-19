@@ -4627,4 +4627,65 @@ This marks the completion of our detailed guide through the Value Hypothesis and
     readingTime: 20,
     featured: false,
   },
+  {
+    id: "47",
+    slug: "visual-artist-and-screenwriter-ivan-alexiev-dives-into-the-world-of-independent-financing",
+    title: "Visual Artist and Screenwriter Ivan Alexiev Dives into the World of Independent Financing",
+    excerpt: "In this exclusive interview, multifaceted artist Ivan Alexiev shares his creative journey from visual arts to independent filmmaking, self-financing strategies, and advice for aspiring filmmakers.",
+    content: `Ivan Alexiev stands out as a visual artist capable of captivating audiences through diverse channels of artistic expression. Having established himself as a visual artist in Europe, Ivan Alexiev's impact extends to private collections across Switzerland, Sweden, France, Austria, Denmark, and the United Kingdom and the U.S.
+
+Beyond his accomplishments in fine arts, he has also left an indelible mark contributing to various film productions since 2006.
+
+Ivan's versatility shines through in his collaborations across diverse audiovisual mediums, including film, drawing, painting, and creative writing. His multiple talents extend seamlessly to the realms of novels and screenplays, further showcasing the broad scope of his artistic gifts.
+
+In this exclusive interview with Ivan Alexiev, a multifaceted artist entrenched in the film industry, we uncover the intricacies of his creative journey, from his visual arts roots to his foray into independent filmmaking.
+
+## The Dual Nature of Ivan's Work
+
+As a visual artist, Ivan's endeavours are intrinsically connected to his visual creations. Half of his work is devoted to writing, specifically screenwriting, presenting a unique intersection of storytelling and visual representation. His recent author's screenplay, 'Grand Fatherland', submitted to Zoetrope Screenplay Contest, U.S. September 2023, stands as a testament to this creative fusion and vision.
+
+## Challenges and Triumphs in Hollywood
+
+Elaborating on his involvement in Hollywood film productions since 2006, Ivan sheds light on his evolution from working with the independent company Blue Orchid Films (now defunct) to starting up his own Visual Arts Studio, based in Eastern Europe. Overcoming the challenges posed by the region's limited attention from Western studios, Ivan has pivoted towards personal projects, emphasizing his commitment to artistic independence and strong, discerning visionary narratives.
+
+## Creative Methodologies
+
+Ivan's creative process is deeply rooted in his upbringing in a family of artists. He harnesses his inner feelings about art to develop projects that seamlessly transition from ideas to visual representations. His approach mirrors the closeness of visual arts to filmmaking, with drawings and sequences akin to the film medium.
+
+When it comes to collaboration, Ivan remains open and engaged, a philosophy that permeates his art studio's dealings. Working closely with global clients, his projects span visual storytelling and design, emphasizing the interconnectedness of his creative work, marked with a unique style and genuine approach.
+
+## Self-Financing
+
+Ivan Alexiev discloses that his recent projects are entirely self-financed. Through online platforms and the sale of drawings and paintings, he has successfully funded and produced his recent screenplay — a testament to his resourcefulness and commitment to artistic independence.
+
+Addressing the challenges faced by independent filmmakers, particularly in regions with limited exposure or under heavy political influence, Ivan recounts his journey of selling artworks to raise funds. His pragmatic approach and reliance on personal resources underscore the resilience required in such indifferent, non-competitive environments.
+
+## Selling a Screenplay
+
+Delving into the art of selling a screenplay, Ivan stresses the importance of selective client and platform choices. Drawing parallels between professional and personal connections, he emphasizes the need for discernment in navigating the competitive landscape.
+
+Concerns about idea theft in the open digital arena are met with Ivan's strategic approach. Engaging with other authors and writers, he has successfully managed to safeguard his intellectual property in the transparent world of the internet.
+
+## Recent Work
+
+As the interview unfolds, Ivan Alexiev provides a glimpse into his most recent project — an intricate screenplay exploring Bulgaria's ancient and communist/post-communist period history. Tackling the shadows of communism, this distinctive piece reflects Ivan's commitment to unearthing uncommon, and out of the mainstream, personal narratives.
+
+The screenplay is written in a magic realism style, playing with the harsh stagnant reality of the frivolity of oligarchs, seen through the eyes of the main characters, versus the brutal historical realities of the Balkans, throughout the centuries, represented in elaborate flash-backs. Moreover, throughout the history of cinema, this distant region always remained obscure and represented in flat stereotypes rather than by real creative or dramatic approaches.
+
+## Ivan's Advice for Independent Filmmakers
+
+When asked about advice for film students and aspiring filmmakers just starting, Ivan Alexiev offers valuable insights based on his own experiences. He emphasizes the importance of forging one's path and striving for independence in the creative journey.
+
+Ivan shares his example, encouraging content creators to engage in various forms of expression, whether through thinking, drawing, or writing. The core of his advice revolves around cultivating independence, steering clear of external influences, and taking charge of one's artistic destiny. Ivan underscores the significance of self-financing, drawing from his methodology of selling drawings and paintings to fund his recent screenplay.
+
+In navigating the challenging landscape of selling an intellectual product, he suggests leveraging online platforms like Stage32. And referring to screenplay and film business insights, he recommends platforms such as Studio Binder.
+    `,
+    category: "Film Maker Interviews",
+    majorCategory: "Filmmaker Interviews",
+    featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/02/blog-aticle_3-1200x674.png",
+    authorName: "Larisa Sevcencu",
+    publishedAt: "2024-03-01",
+    readingTime: 7,
+    featured: false,
+  },
 ];
