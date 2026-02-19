@@ -1868,4 +1868,232 @@ And as usual, stay tuned for more updates and fixes! The Pzaz team wishes you a 
     readingTime: 3,
     featured: false,
   },
+  {
+    id: "19",
+    slug: "screenwriting-statistics-usa",
+    title: "Screenwriting Statistics USA 2024",
+    excerpt: "AI-driven insights from 21,107 US screenwriters on salaries, inspirations, software preferences, challenges, and demographics shaping the screenwriting industry.",
+    content: `
+Screenwriter, scriptwriter, scribe, or scenarist—whatever name is used, it's a job that many Americans would love to achieve success in, but few truly do.
+
+To find out what the state of screenwriting was, the software that was used by screenwriters, and what their overall demographics were, we leveraged AI-driven audience profiling covering a full year ending 16 December 2024 to synthesize insights from opinions expressed online to a high statistical confidence level. Our audience was made up of 21,107 screenwriters, and this is what the statistics revealed:
+
+## Index
+
+- Between 5 and 20% of screenwriters are successful in the US
+- 52.5% earn under the average $97,670 screenwriter salary
+- Relationships inspire 24.6% of screenwriters
+- 33.8% of screenwriters write TV scripts
+- Plot twists the focus of 60.2% screenwriters writing structures
+- 70.5% use Scrivener for screenwriting
+- Competitions the most popular form of feedback for 71.4% of screenwriters
+- 35.3% screenwriters find dialogue writing the toughest
+- Over 25% of screenwriters want to improve character development
+- Screenwriting books responsible for 25% of screenwriter improvements
+- 33.2% say reading books is their top suggestion for those pursuing screenwriting
+- Credits for screenwriting are only awarded for over 33% of the final script
+- 62.2% of our audience classifies as professional screenwriters
+- Nearly 20% of screenwriters are under 25
+- 6.8% more women than men are screenwriters in the US
+- Pacific US has the most screenwriters at 23.8%
+- About the Data
+
+## What Percentage Of Screenwriters Are Successful In The USA?
+
+Between 5 and 20% of screenwriters are successful in the US
+
+While studies on the subject are not forthcoming, industry insider opinions from Hollywood stalwarts like Corey Mandell are. Based on the opinion of Mandell and other agents and writers, it's estimated that between 5% and 20% make it in the industry long term.
+
+According to the Writers Guild of America, of its nearly 12,000 members, just 4,760 earned money in 2023 writing for TV or feature films. Although this means 39.67% of screenwriters made an income, this is just for a single year and is still woefully low.
+
+## What's The Average Screenwriter's Salary In The USA?
+
+### 52.5% earn under the average $97,670 screenwriter salary
+
+Here's how our audience's earnings stack up against the average screenwriter's salaries in the US:
+
+![Screenwriter salary distribution](https://pzaz.io/producer-blog/wp-content/uploads/2024/12/screenwriting-software-statistics-usa_1.png)
+
+As of December 2024, ZipRecruiter reported that the average hourly wage for a scriptwriter in the United States was $29.51. Meanwhile, Glassdoor estimates put screenwriters' earnings between $98,000 and $183,000 per year, with an average salary of $97,670.
+
+However, the majority of our audience falls below Glassdoor's annual average. 43.7% earn between $40,000 and $80,000 a year, and 8.8% earn even less at under $40,000. Those earning in about the average bracket number 23.4%, while those earning $120,000 to $200,000 make up 19.5%. This is encouraging to see, as is 4.6% who are raking in $200,000 to $500,000, highlighting the fact that there is potential for high-end success in the industry, even if only for a small number of writers.
+
+## What Inspires Your Stories The Most?
+
+### Relationships inspire 24.6% of screenwriters
+
+Using data from our profiled screenwriters, we determined what inspired the most and least stories. Here's what we found:
+
+![Story inspiration sources](https://pzaz.io/producer-blog/wp-content/uploads/2024/12/screenwriting-software-statistics-usa_2.png)
+
+In 2024, the top three most popular movie genres are action, adventure, and comedy, with romantic comedy coming in at number eight. However, for our audience, relationships are the biggest inspiration for their stories, with 24.6% getting their ideas from this source. Other movies came in just behind, at 21.1%, current events at 18.5%, and historical events (12.2%), highlighting how what we see plays a major role in what inspires us.
+
+Other mediums, such as books (11%), music (2.1%), art (0.6%), and nature (0.5%), provided moderate to low inspiration, while personal experience also came in at a rather low 9.5%. This low engagement is interesting when you consider the success of films like Oppenheimer, Maria, and The Firing Squad.
+
+## What Formats Do You Primarily Write In?
+
+### 33.8% of screenwriters write TV scripts
+
+TV scripts top the list, with radio play at the bottom. Here's what our audience is writing for the most to the least:
+
+![Writing format distribution](https://pzaz.io/producer-blog/wp-content/uploads/2024/12/screenwriting-software-statistics-usa_3.png)
+
+With the rise of streaming services like Netflix, Disney+, and Prime Video, it's unsurprising that the highest number of our audience (33.8%) write for this format. Short films, which have also grown in popularity, account for 22% of our audience, while feature films make up 17%.
+
+Animated series prove not to be hugely popular, with only 4.8% focusing primarily on this format, while stage plays are even lower at 3.1%. Documentaries barely register at 0.9%, and radio plays at 0.8%, revealing that these categories are both incredibly niche and not in demand.
+
+## Do You Follow A Specific Structure Or Method When Writing?
+
+### Plot twists the focus of 60.2% screenwriters' writing structures
+
+From plot twists to structured themes, we look at what structures and methods screenwriters in the US use when writing:
+
+![Writing structures used](https://pzaz.io/producer-blog/wp-content/uploads/2024/12/screenwriting-software-statistics-usa_4.png)
+
+2024 was a big year for movies with plot twists, so it's unsurprising that 60.2% of screenwriters focus on this when structuring or planning their stories. In comparison, all other structures registered low engagement levels, with only the hero's journey (12.8%), storyboards (11.5%), and character arcs (9.2%) garnering around 10%.
+
+Despite its 15-beat blueprint, which makes creating stories simpler, the story structure Save the Cat was only used by 1.8% of screenwriters, topped by those who used dialogue techniques at 3.3%.
+
+Three-act structure, non-linear narratives, beat sheets, and structured themes all had virtually no engagement, with levels dropping from 0.7% to 0%, proving that these structures or methodologies were not a common choice.
+
+## What Software Or Tools Do You Use For Screenwriting?
+
+### 70.5% use Scrivener for screenwriting
+
+The use of software for screenwriting is incredibly popular, and our graph below highlights which programs US screenwriters rely on:
+
+![Screenwriting software usage](https://pzaz.io/producer-blog/wp-content/uploads/2024/12/screenwriting-software-statistics-usa_5.png)
+
+With Scrivener coming out on top with an overwhelming majority of 70.5%, it's clearly the favorite of US screenwriters. However, what's really interesting to note is that StudioBinder, the other software on the list that falls into a similar writing and project management category, is not used at all.
+
+Screenwriting software like Final Draft is the second most popular option at 21.7%, but thereafter, WriterDuet Fade In, Highland, Movie Magic Screenwriter and Celtx all rank low, between 3.8% and 0.3%. Despite all being designed for the purpose of streamlining screenwriting, this software seems not to be making much of an impact overall.
+
+## How Do You Usually Seek Feedback On Your Scripts?
+
+### Competitions the most popular form of feedback for 71.4% of screenwriters
+
+Feedback is crucial for screenwriters, and we assessed what format is the most commonly sought-after:
+
+![Feedback methods](https://pzaz.io/producer-blog/wp-content/uploads/2024/12/screenwriting-software-statistics-usa_6.png)
+
+With competition prizes ranging from thousands of dollars to the opportunity to have a script turned into a movie, it seems that US screenwriters favor this avenue not just for the chance to win but also for the opportunity to get valuable feedback on their scripts.
+
+71.4% say competitions are their most common way of seeking script feedback, followed far behind by festivals at 23.2% where they can showcase their work, and consultants at just 5.5%. Consultants coming in last is perhaps largely due to cost, as these professionals can charge thousands of dollars for their assistance.
+
+## What Is Your Biggest Challenge As A Screenwriter?
+
+### 35.3% screenwriters find dialogue writing the toughest
+
+There are numerous facets to screenwriting, and these are what our audience struggles with the most:
+
+![Biggest screenwriting challenges](https://pzaz.io/producer-blog/wp-content/uploads/2024/12/screenwriting-software-statistics-usa_7.png)
+
+Topping the list of the biggest screenwriting challenges at 35.3% is dialogue writing, highlighting just how much of an art form this is. Character development is the second toughest (16.9%) at almost half that number, and finding inspiration follows just 0.4% behind.
+
+Feedback and revisions are tricky, too, with 11% battling with these, while 10.9% are affected by market trends, with the nearly 5-month WGA strike in 2023 being an excellent example of one of these. Plot structure poses a minimal challenge for 5.8%, followed in last place by writer's block, which affects 3.7% of our audience.
+
+## What Areas Of Screenwriting Would You Like To Improve?
+
+### Over 25% of screenwriters want to improve character development
+
+With such fierce competition in the industry, we evaluated what our audience of screenwriters would like to improve upon:
+
+![Areas for improvement](https://pzaz.io/producer-blog/wp-content/uploads/2024/12/screenwriting-software-statistics-usa_8.png)
+
+The results here are incredibly interesting. Despite dialogue being the biggest challenge for the largest number of our audience, it's also the aspect they'd least like to improve upon, with only 0.5% engagement levels. Plot structure, which featured low on the list of challenges, rates highly as an improvement area at 21%, while editing and revising isn't too far apart from feedback and revisions, with 17.3%.
+
+Described as "the new currency," visual storytelling is something 14.4% of screenwriters want to improve upon, and as this is now such a popular skill, doing so could help to improve their chances of success, too. Garnering below 10% engagement were those who wanted to improve pacing (8.1%), use of subtext (5.4%), and word building (5%). In comparison, theme exploration and genre conventions came in with even lower engagement levels of 1.9% and 1.2%, respectively.
+
+## What Resources Have Helped You Improve As A Screenwriter?
+
+### Screenwriting books responsible for 25% of screenwriter improvements
+
+From books to webinars, we unpack what our audience finds most useful in helping them improve their screenwriting skills:
+
+![Resources for improvement](https://pzaz.io/producer-blog/wp-content/uploads/2024/12/screenwriting-software-statistics-usa_9.png)
+
+With exactly a quarter of screenwriters saying they rely on screenwriting books to improve their skills, it is good to see that this "old-fashioned" medium is so popular. Goodreads lists over 70 screenwriting books, so this resource is also abundant. Podcasts come in at 16%, followed by screenwriting software, which, as we saw, has some high adoption rates of specific programs over others.
+
+Face-to-face or interpersonal interactions beat the other online options, with writing groups (12.1%), writing workshops (10.5%), mentorship (6.7%), and film festivals (6.6%) beating online courses, screenplay analysis, and webinars by more than 3%. These low figures are surprising, especially considering the increase in webinars since the 2020s, but they highlight how the personal touch is so important in this art form.
+
+## What Advice Would You Give To An Aspiring Screenwriter?
+
+### 33.2% say reading books is their top suggestion for those pursuing screenwriting
+
+Despite the industry being so competitive, there are still many aspiring screenwriters. This is the advice that our profiled audience would give others entering the field:
+
+![Advice for aspiring screenwriters](https://pzaz.io/producer-blog/wp-content/uploads/2024/12/screenwriting-software-statistics-usa_10.png)
+
+Correlating with the resource that most screenwriters found most helpful, 33.2% of our audience said they'd advise other screenwriters to read books. Revise and edit achieved the second highest rating, at almost half (16.3%), while study screenplays garnered 13.4% engagement rates.
+
+Attending workshops and seeking feedback were almost on par at 11.4% and 11.2%, respectively, while writing daily scored 8.2%. Developing a unique voice didn't seem to be much of a priority (3%), nor did staying persistent (2.4%) and watching films critically, all of which seem integral to refining the art but clearly have not been as integral in the professionals' lives as the other factors that ranked higher on the list.
+
+## How Many Screenwriters Are Properly Credited For Their Work?
+
+### Credits for screenwriting are only awarded for over 33% of the final script
+
+The standard rule for the WGA screenwriting credit system dictates how writers are credited, specifying technicalities like contributions to the original source material, the order of work on drafts, or involvement in writing teams. Since its inception, writers must contribute at least 33% of a final script to earn credit, with a limit on the number of credited writers.
+
+According to the Writers Guild of America West's 2021 Annual Financial Report, 1,994 writers reported screen earnings in 2021, indicating they received proper credit for their work. This number has recently varied, with 2,055 writers reporting screen earnings in 2020 and 2,299 in 2019. More recent figures are not available as yet. Still, these figures also don't indicate how many screenwriters feel they don't get credit where it's due, which may be quite high when you consider the many cases of plagiarism reported over the years.
+
+## How Would You Describe Your Current Level As A Screenwriter?
+
+### 62.2% of our audience classifies as professional screenwriters
+
+While screenwriters making a living off screenwriting may be limited in numbers, our audience largely considers themselves to be professionals:
+
+![Screenwriter experience levels](https://pzaz.io/producer-blog/wp-content/uploads/2024/12/screenwriting-software-statistics-usa_11.png)
+
+Of our screenwriting audience, approximately 13,128 (62.2%) consider themselves to be professional level, while only 2.2% say they are advanced and 0.7% intermediate. Beginners account for 21.9%, while not beginners make up 13%.
+
+## Demographics
+
+To gain deeper insights into our profiled audience, we analyzed their demographics and found the following:
+
+## Age
+
+### Nearly 20% of screenwriters are under 25
+
+From under 25 to over 65, here's how the ages of our audience stack up:
+
+![Screenwriter age distribution](https://pzaz.io/producer-blog/wp-content/uploads/2024/12/screenwriting-software-statistics-usa_12.png)
+
+Our data clearly shows that overall, screenwriters tend to be younger, with those aged under 25 to 54 making up 71.7%. Those over 55 only account for 18%, showing a clear divide. The number of younger screenwriters is interesting as it's so incredibly tough to make a living from it. This is also likely why the numbers of those older wane dramatically.
+
+## Gender
+
+### 6.8% more women than men are screenwriters in the US
+
+Our data reveals the gender split between men and women screenwriters:
+
+![Screenwriter gender distribution](https://pzaz.io/producer-blog/wp-content/uploads/2024/12/screenwriting-software-statistics-usa_13.png)
+
+Of our screenwriting audience, 53.4% were female, and 46.6% were male. This differs from studies by Zippia that show 45.8% of screenwriters are women and 54.2% are men. However, it may reflect online trends, as women tend to spend more time online, and our data was collated from social media channels.
+
+## Region
+
+### Pacific US has the most screenwriters at 23.8%
+
+The graph below reveals where screenwriters across the US reside:
+
+![Screenwriter regional distribution](https://pzaz.io/producer-blog/wp-content/uploads/2024/12/screenwriting-software-statistics-usa_14.png)
+
+Pacific US tops the list with 23.8% of screenwriters. This makes sense as it's the home of Hollywood, which is the entertainment capital not just of the US, but the world. Mid Atlantic follows at 15.6%, and East North Central at 14%, South Atlantic at 12.8%, and New England at 10.3%. Essentially, these regions don't have any filmmaking draw, but they are the ones with the higher engagement rate.
+
+Lower down on the list are West South Central, Mountain, East South Central, and West North Central, all with engagement levels of below 9%. These regions also have no real significance to filmmaking, so the distribution may be due to their lower cost of living compared to coastal states or major urban hubs.
+
+Overall, this data gives an interesting insight into American-based screenwriters, highlighting just how tough the industry is. However, with the growth of Netflix and other streaming platforms like YouTube needing screenwriters, the potential for greater success is certainly on the horizon.
+
+## About The Data
+
+Sourced from an independent sample of 4,125,774 people from X, Quora, Reddit, TikTok, and Threads, our responses are collected within a 75% confidence interval and 5% margin of error. Engagement estimates how many people in the location are participating, and the results are based on what people describe online — questions were not posed to the people in the sample. Demographics are determined using many features, including name, location, and self-disclosed description. Privacy is preserved using k-anonymity and differential privacy.
+    `,
+    category: "Comparisons & Analysis",
+    majorCategory: "Industry Insights",
+    featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/12/Blog-image02.png",
+    authorName: "Vincent Weberink",
+    publishedAt: "2024-12-30",
+    readingTime: 15,
+    featured: false,
+  },
 ];
