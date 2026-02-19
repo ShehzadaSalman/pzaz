@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
-import { Search } from "lucide-react";
+import { Search, Loader2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { blogPosts, categories } from "@/data/blogData";
 import BlogCard from "@/components/blog/BlogCard";
 
+const POSTS_PER_PAGE = 9;
+
 const BlogGrid = () => {
   const [activeCategory, setActiveCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
+  const [visibleCount, setVisibleCount] = useState(POSTS_PER_PAGE);
+  const sentinelRef = useRef<HTMLDivElement>(null);
 
   const filteredPosts = blogPosts.filter((post) => {
     const matchesCategory = activeCategory === "all" || 
@@ -18,6 +22,36 @@ const BlogGrid = () => {
       post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
+
+  // Reset visible count when filters change
+  useEffect(() => {
+    setVisibleCount(POSTS_PER_PAGE);
+  }, [activeCategory, searchQuery]);
+
+  const hasMore = visibleCount < filteredPosts.length;
+  const visiblePosts = filteredPosts.slice(0, visibleCount);
+
+  const loadMore = useCallback(() => {
+    setVisibleCount((prev) => Math.min(prev + POSTS_PER_PAGE, filteredPosts.length));
+  }, [filteredPosts.length]);
+
+  // IntersectionObserver for infinite scroll
+  useEffect(() => {
+    if (!hasMore) return;
+    const el = sentinelRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          loadMore();
+        }
+      },
+      { rootMargin: "200px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [hasMore, loadMore]);
 
   return (
     <section className="py-16">
@@ -51,18 +85,25 @@ const BlogGrid = () => {
 
         {/* Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredPosts.map((post, index) => (
+          {visiblePosts.map((post, index) => (
             <motion.div
-              key={post.id}
+              key={post.id + post.slug}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
+              transition={{ duration: 0.4, delay: (index % POSTS_PER_PAGE) * 0.05 }}
             >
               <BlogCard post={post} />
             </motion.div>
           ))}
         </div>
+
+        {/* Infinite scroll sentinel */}
+        {hasMore && (
+          <div ref={sentinelRef} className="flex justify-center py-10">
+            <Loader2 className="w-6 h-6 animate-spin text-muted-foreground" />
+          </div>
+        )}
 
         {/* Empty State */}
         {filteredPosts.length === 0 && (
@@ -80,7 +121,6 @@ const BlogGrid = () => {
             </Button>
           </div>
         )}
-
       </div>
     </section>
   );
