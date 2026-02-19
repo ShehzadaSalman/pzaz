@@ -3348,4 +3348,122 @@ You can watch many of Henrik's videos, including his shorts, trailers, and break
     readingTime: 10,
     featured: false,
   },
+  {
+    id: "38",
+    slug: "film-industry-statistics",
+    title: "Spotlight: Film Industry Statistics and Trends 2024",
+    excerpt: "A comprehensive look at film industry statistics and trends for 2024, including audience engagement data, box office revenues, independent film performance, and genre breakdowns.",
+    content: `
+The film industry has experienced ups, downs, and disruptions over the last few years. From the after-effects of the pandemic to strikes and the challenges posed by streaming services, the industry landscape is not the same place it was in 2019.
+
+However, the film industry statistics that we've put together show that, despite the upheavals, independent filmmakers, studios, cinema, and TV programs are here to stay.
+
+## What the Public Thinks about the Film Industry
+
+Using data from Polly sourced from an independent sample of 2,950,625 people from Twitter, Reddit and TikTok worldwide from March 2023 to March 2024, we delved deeper into what people really think about the state of the film industry.
+
+### Hollywood Remains a Frontrunner
+
+Hollywood has been the home of movies since the 1920s, and this remains unchanged.
+
+![Film industry trend by country](https://pzaz.io/producer-blog/wp-content/uploads/2024/02/film-industry-trend-300x142.png)
+
+Based on Polly's results, it's easy to see how Hollywood is thriving. From April 2023 to October of the same year, engagement levels far exceeded those of any other country. Bollywood's engagement levels may be far lower than Hollywood's, but the Indian film industry hasn't experienced as much of a decline in 2024. Nollywood (Nigeria) is maintaining the most consistent engagement.
+
+### Bollywood Goes Mainstream
+
+![Film industry lifecycle](https://pzaz.io/producer-blog/wp-content/uploads/2024/02/film-industry-lifecycle-300x157.png)
+
+Conversations about Bollywood, China, and Nollywood's thriving film industries have become mainstream. In contrast, Hollywood, France, Italy, Japan, and South Korea remain dormant, with few new people discussing them online.
+
+### USA Tops Audience Engagement
+
+![Thriving film countries](https://pzaz.io/producer-blog/wp-content/uploads/2024/02/film-industry-thriving-countries-300x186.png)
+
+Hollywood remains on top, but the enormous chasm between those engaging with the US film industry and those engaging with Bollywood highlights just how much of a conversation starter this industry is. Italy has only 1% less engagement than Bollywood.
+
+### North America Loves Talking about Films
+
+![Film industry by region](https://pzaz.io/producer-blog/wp-content/uploads/2024/02/film-industry-region-300x159.png)
+
+North America's actual engagement was nearly double the expected level. In contrast, Europe had a higher expected engagement level but actual engagement was woefully low.
+
+### Over 65s Have the Biggest Interest in the Film Industry
+
+![Film industry by age](https://pzaz.io/producer-blog/wp-content/uploads/2024/02/film-industry-age-300x163.png)
+
+Those over 65 are the most engaged, far exceeding expected engagement levels. Interestingly, the 25-44 age group had much lower actual engagement than expected, despite having the highest number of social media users.
+
+### Women are More Engaged in Film Industry Conversations Online
+
+![Film industry by gender](https://pzaz.io/producer-blog/wp-content/uploads/2024/02/film-industry-gender-300x155.png)
+
+Female engagement just beats male engagement, and it's almost exactly as expected. Interest in the industry is very evenly spread across both genders.
+
+## A Glance at Cinema in 2023
+
+Key statistics from the Indy Film Library:
+
+- The total global box office gross in 2023 was $527,876,195.
+- More than 50 million movie tickets were sold.
+- Independent features accounted for one-fifth of the market.
+- Global box office revenues grew by more than 29% in 2023, up from 21% in 2022.
+
+In 2023, Barbie was the world's highest-grossing movie with $1.4 billion worldwide. The Super Mario Bros. movie came in second at $1.3 billion, followed by Oppenheimer at $952 million.
+
+## Independent Film in the United Kingdom
+
+While 2023 was a good year for cinema in the UK and Ireland overall, independent films did not fare as well as in 2022:
+
+- Total UK-Ireland box office revenue climbed by 4% to £985.8 million in 2023.
+- Revenue for UK-qualifying independent films plunged by 49% in 2023.
+- UK-qualifying independent films' box office market share was 3.8% in 2023, less than 50% of the share in 2022.
+- Taking £5.3 million, The Great Escaper was the UK's highest grossing independent film in 2023.
+
+## Highest Grossing Independent Films to Date
+
+1. Mel Gibson's The Passion of the Christ (2004) grossed $917.94 million worldwide.
+2. The Graduate (1967) grossed $784.36 million worldwide.
+3. The most profitable movie in 2022 was independent horror M3GAN, making almost $80 million total profit.
+
+## Statistics For England, Scotland, Wales, and Northern Ireland
+
+- Total cinema admissions in the UK for 2023 was 123.6 million – a 5.5% increase on 2022 but 30% lower than 2019.
+- The total value of ticket sales was £980 million – 8% higher than 2022 but 22% lower than 2019.
+- The average ticket price of £7.92 was 3% higher than 2022.
+
+## Mainstream Cinema Statistics and Projections
+
+- Worldwide movie ticket sales in 2024 are projected to reach $31.5 billion.
+- 2024's global cinema revenue is predicted to be 25% lower than in 2019.
+- Chinese box office revenues in 2024 are expected to reach $7.9 billion – 5% higher than 2023.
+
+## General Film Industry Statistics For 2024
+
+- At $42.4 billion, the film industry is less valued than the gaming industry ($145.7 billion).
+- The US domestic box office generated $8.91 billion in 2023.
+- The US cinema industry is expected to grow at an 8.3% CAGR by 2027.
+- The global film industry's annual revenue was $77 billion in 2021.
+
+## Film Statistics by Genre
+
+- **Action** (54 movies): $3.98 billion revenue, 53.43% market share
+- **Adventure** (28 movies): $980 million revenue, 13.15% market share
+- **Comedy** (59 movies): $691 million revenue, 9.27% market share
+- **Horror** (37 movies): $634 million revenue, 8.51% market share
+- **Drama** (144 movies): $621 million revenue, 8.33% market share
+- **Thriller/Suspense** (46 movies): $249 million revenue, 3.35% market share
+
+## Onward and Upward For The Film Industry In 2024
+
+There's no denying that the film industry has seen better days, but they have also been worse off than they are in 2023. While 2024 will pose challenges of its own, it's clear that the industry is slowly recovering from severe challenges while adapting to various disruptions.
+    `,
+    category: "Comparisons & Analysis",
+    majorCategory: "Industry Insights",
+    featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/02/Blog-image-1.png",
+    authorName: "Vincent Weberink",
+    publishedAt: "2024-02-17",
+    readingTime: 15,
+    featured: false,
+  },
 ];
