@@ -138,7 +138,7 @@ const BlogCategory = () => {
               {filteredPosts.length} article{filteredPosts.length !== 1 ? "s" : ""}
             </p>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="flex flex-col gap-8">
               {filteredPosts.map((post, index) => (
                 <motion.div
                   key={post.id}
@@ -147,7 +147,7 @@ const BlogCategory = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                 >
-                  <BlogCard post={post} />
+                  <BlogCard post={post} featured />
                 </motion.div>
               ))}
             </div>
