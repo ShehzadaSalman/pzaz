@@ -1548,4 +1548,234 @@ Curious to hear more about Christo's journey and filmmaking insights? Watch the 
     readingTime: 5,
     featured: false,
   },
+  {
+    id: "16",
+    slug: "storyboarding-statistics-usa",
+    title: "Storyboarding Statistics: USA 2025",
+    excerpt: "AI-driven insights from 272,496 filmmakers on storyboarding approaches, software preferences, and industry trends shaping visual storytelling in 2025.",
+    content: `
+Whether you're a scriptwriter, director, cinematographer, or storyboard artist, storyboards play an integral role in filmmaking. While still a complex process, storyboarding software has streamlined it, making it much easier to visualize your film and translate your script into compelling visuals that bring your vision to life one shot at a time.
+
+To find out what industry professionals thought about the current state of storyboarding, their approach, the software features they rate the most important, and a number of other important insights, we leveraged AI-driven audience profiling to synthesize insights from opinions expressed online to a high statistical confidence level. Our data studied 272,496 filmmakers for 12 months ending 15 January 2025, and here's what they said.
+
+## Index
+
+- 42.3% of filmmakers create storyboards for story development
+- Over 30% of filmmakers say clarity is the biggest benefit of storyboarding
+- Storyboard artists contribute the most to the process at over 50%
+- 37.1% of filmmakers collaborate with artists to create storyboards
+- 72.8% of filmmakers have very detailed storyboards
+- Ease of use considered the most important storyboard software feature by 52.4%
+- 50.6% of filmmakers want AI integration in storyboarding software
+- Failing to plan is the biggest storyboarding mistake of 41.8% filmmakers
+- Adoption of digital storyboarding tools on the rise
+- Filmmakers enjoying a greater shift towards remote collaboration
+- An increased emphasis on diverse storytelling is emerging
+- The integration of Virtual Reality (VR), Augmented Reality (AR) and AI continues
+- Over 40% of filmmakers are aged between 35 and 54
+- Just 0.2% more men than women are involved in the film industry
+- At 31.9%, the highest percent of filmmakers earn between $40,000 to $80,000
+- 31.8% of filmmakers live in the Pacific
+- About the data
+
+## What Are Your Main Reasons For Creating Storyboards?
+
+### 42.3% of filmmakers create storyboards for story development
+
+In the graph below, we can see what the main reasons are for creating storyboards and which ones take center stage:
+
+![Main reasons for creating storyboards](https://pzaz.io/producer-blog/wp-content/uploads/2025/01/Screenshot-2025-01-24-at-16.07.48.png)
+
+From James Bond to Hannibal Lecter, Sirius Black to Yoda, the best characters are a film's heartbeat, giving meaning to a story and its narrative. It's understandable, then, that character development tops the list at 42.3% engagement as it plays such an integral role in a film's success. Scene composition comes in second, with 23.3% engagement, which is also somewhat expected, as storyboards are an excellent way to plot this out.
+
+14.3% of our audience cites collaboration as their main reason for using storyboards, which highlights the importance of sharing ideas in a visual medium. This is in accordance with the fact that the human brain processes images 60,000 times faster than text, and 90% of the information transmitted to the brain is visual.
+
+After collaboration, audience engagement drops by almost half to 7.7% for shot selection and 7.5% for audience engagement. Thereafter, visual engagement only gets 1.1%, production efficiency 1% and timing 0.5%, proving that these reasons are far less of a priority for filmmakers during the storyboarding stage.
+
+## What Do You Find Most Beneficial About Your Current Storyboarding Approach?
+
+### Over 30% of filmmakers say clarity is the biggest benefit of storyboarding
+
+Using data from our profiled audience, we learnt what they found to be the most beneficial about their current approach to storyboarding:
+
+![Most beneficial aspects of storyboarding](https://pzaz.io/producer-blog/wp-content/uploads/2025/01/Screenshot-2025-01-24-at-16.11.10.png)
+
+Approaches to storyboarding have changed since its start in cinema in the early 20th century, and they will continue to change as new technologies emerge. For filmmakers in the last year, 31.6% say that currently, they find clarity the most beneficial part of their approach to storyboarding.
+
+Almost 10% behind that (21.7%) are those who agree that collaboration is most beneficial, and 15.5% say it's creativity. Visualization scores just behind creativity, with 14.3% agreeing that this is the biggest benefit, before the engagement levels plummet.
+
+Concept development and feedback tie with 4.8% engagement each, while organization (3.1%), flexibility (2.6%), efficiency (1.2%) and time management (0.3%) take the bottom spots. This distribution highlights the varying priorities among filmmakers, emphasizing that while clarity remains the most valued aspect of storyboarding, other elements like collaboration and creativity still play significant roles.
+
+As technology evolves and offers new tools to enhance the storyboarding process, it will likely reshape these priorities.
+
+## Who Usually Contributes To The Storyboarding Process?
+
+### Storyboard artists contribute the most to the process at over 50%
+
+Storyboard artists have the highest contribution rate and editors the lowest. Here's how contributions stack up:
+
+![Storyboarding process contributions](https://pzaz.io/producer-blog/wp-content/uploads/2025/01/Screenshot-2025-01-24-at-16.21.16.png)
+
+Of our audience, 53.1% said storyboard artists contribute to the storyboarding process. As these artists translate the script and the director's vision into pictures, their having the highest engagement levels aligns with their major role in this process.
+
+Thereafter, those contributing are split into far smaller segments, with art directors making up 13.4% and directors 12%. Production designers, assistant directors and screenwriters rack up between 6.1% engagement and 4.3% before engagement drops to 2.3% for producers, 1.4% for visual effects supervisors, 1.1% for cinematographers, and lastly, just 0.7% for editors. Overall, this paints a clear picture of the hierarchy of storyboard contributions in the filmmaking world.
+
+## How Do You Typically Create Your Storyboards?
+
+### 37.1% of filmmakers collaborate with artists to create storyboards
+
+This graph reveals how storyboards are being created by US filmmakers in 2025:
+
+![How storyboards are created](https://pzaz.io/producer-blog/wp-content/uploads/2025/01/Screenshot-2025-01-24-at-16.29.05.png)
+
+Despite over 50% stating that storyboard artists contributed to the storyboarding process, collaborating with artists gets slightly lower engagement (37.1%) when our audience is asked how they typically create their storyboards. However, considering that some of our audience are likely storyboard artists and likely form part of the 27% who say they are independently effective, this can account for the imbalance.
+
+Sketching and hand-drawn illustrations are moderately popular at 13.1% and 8.3%, respectively, but video reference, using templates, and digital tools don't fare too well at 3.7%, 3.6%, and 3.5%, respectively. Considering how much of an impact technology has had on filmmaking, the low engagement levels for digital tools are somewhat surprising.
+
+Not surprising, however, is that scene breakdowns, color coding, and feedback sessions are not very popular methods of creation as they are all time-consuming and labor-intensive. These methods all garnered minimal engagement of between 2.1% and 0.3%.
+
+**How Detailed Are Your Storyboards Typically?**
+
+### 72.8% of filmmakers have very detailed storyboards
+
+As the graph reveals, having very detailed storyboards is clearly a priority for the majority of our audience:
+
+![Storyboard detail levels](https://pzaz.io/producer-blog/wp-content/uploads/2025/01/Screenshot-2025-01-24-at-16.32.05.png)
+
+The detail in a storyboard is integral to communicating the film's vision, which is why so much of our audience prioritizes it. A whopping 72.8% say their storyboards are very detailed, while 8% say theirs are highly detailed.
+
+In contrast, only 7.1% say theirs are not highly detailed, 6.9% say theirs are quite simple, 2.7% quite minimal, and 2.4% say theirs are minimal and lack details. This equals 19.1% who don't think detail is as much of a priority compared to the majority who do.
+
+## What Is the Most Important Feature Of Storyboarding Software?
+
+### Ease of use considered the most important storyboard software feature by 52.4%
+
+The use of storyboarding software is on the rise, and our audience has ranked the most important features below:
+
+![Most important storyboarding software features](https://pzaz.io/producer-blog/wp-content/uploads/2025/01/Screenshot-2025-01-24-at-16.33.17.png)
+
+Storyboarding software is becoming increasingly popular, and by 2023, it's predicted that the storyboarding software market industry will be worth $5.2 billion. With the use of this type of software on the rise, our audience weighed in on what features they found the most important, with ease of use garnering 52.4% engagement. This was followed by integration at 34.3%, which would also contribute to how easily software can be used in the filmmaking process.
+
+8.6% said that customization was the most important feature, followed by collaboration features at 4.7%. This highlights that although these achieved lower engagement, they are still integral to the process.
+
+## What Improvements Or Innovations Would You Like To See In Storyboarding?
+
+### 50.6% of filmmakers want AI integration in storyboarding software
+
+These are the improvements and innovations our audience wants to see in storyboarding in the future:
+
+![Desired storyboarding improvements](https://pzaz.io/producer-blog/wp-content/uploads/2025/01/Screenshot-2025-01-24-at-16.35.13.png)
+
+With AI making major changes to the filmmaking industry and reducing the time spent from script to screen, it's evident why 50.6% of our audience say that AI integration is an improvement or innovation they want in storyboarding. More cloud storage is second but still far behind at 18%, while interactive storyboards score 12.5%.
+
+Attracting engagement levels below 10% was the demand for more digital tools, collaborative platforms, template libraries and video integration, while real-time feedback, customizable layouts, and mobile accessibility barely registered at between 1.6% and 0.2%. Clearly, AI integration is the most desired of all, for good reason.
+
+## What Common Pitfalls Do You See Filmmakers Make With Storyboarding?
+
+### Failing to plan is the biggest storyboarding mistake of 41.8% filmmakers
+
+From failing to plan to underestimating time, we assessed the biggest storyboarding pitfalls our audience sees with filmmakers:
+
+![Common storyboarding pitfalls](https://pzaz.io/producer-blog/wp-content/uploads/2025/01/Screenshot-2025-01-24-at-16.36.44.png)
+
+Failing to plan is the most common storyboarding issue our audience sees with filmmakers, and at 41.8%, it's obviously a very common one. Inconsistent style scores are high, too, at 33.8%, making these the two biggest mistakes.
+
+In contrast, other pitfalls in storyboarding score minimal engagement, with prioritizing audience engagement (6.9%), neglecting character development (5.9%), overcomplicating scenes and ignoring pacing (both 5%), and underestimating time (1.7%) proving not to be much of an issue at all.
+
+### Top Trends In Storyboarding
+
+These are the top trends we are seeing in 2025:
+
+### Adoption of Digital Storyboarding Tools On The Rise
+
+Technological advancements and the increasing demand for efficient content creation across various industries have spurred the growing adoption of digital storyboarding tools. Due to this increased demand, the global storyboarding software market is expected to exhibit a compound annual growth rate (CAGR) of 12.8% between 2021 and 2029.
+
+In the US, the entertainment industry, particularly film and television production, has been a primary driver of this growth. The film production segment alone was valued at $94 billion in 2023 and is anticipated to expand to $2 billion by 2032, reflecting the essential role that storyboarding plays in visual storytelling.
+
+### Filmmakers Enjoying A Greater Shift Towards Remote Collaboration
+
+The pandemic pushed the world toward remote work, but without digital storyboard tools, remote collaboration in the film industry would have been far more challenging. Digital storyboards have played a pivotal role in this transformation by enabling seamless, real-time collaboration across distributed teams.
+
+These tools allow directors, storyboard artists, and production teams to remotely share, edit, and comment on visuals, ensuring creative alignment without requiring physical presence. Features like cloud integration, version control, and annotation capabilities streamline the pre-production process, reducing time and costs and making digital storyboards essential for maintaining productivity in remote filmmaking.
+
+### An Increased Emphasis on Diverse Storytelling Is Emerging
+
+Digital storyboards go a long way toward creating a culturally diverse and all-inclusive filmmaking industry. These tools are cost-effective (and in some cases, free), and they empower creators to visually experiment with narratives that reflect their diverse cultures, perspectives, and voices.
+
+By offering flexibility in design and real-time collaboration, digital storyboards have made it possible for teams from varied backgrounds to contribute seamlessly, ensuring authenticity and representation in storytelling. Accessibility to these platforms democratizes filmmaking and makes it possible for underrepresented creators to bring their visions to life, creating greater cultural understanding and connection.
+
+### The Integration of Virtual Reality (VR), Augmented Reality (AR) and AI Continues
+
+As we have seen, AI integration is the most in-demand innovation that filmmakers want to see in the future. VR and AR can be used in numerous ways, including immersive pre-visualization, which allows creators to explore scenes and environments in 3D before production begins and directors to step into virtual sets, refine camera angles, and adjust lighting in real time.
+
+AI also streamlines workflows by generating storyboard drafts, suggesting shot compositions, and predicting audience engagement.
+
+Additionally, AI-driven tools like generative design can automate repetitive tasks, freeing up artists to focus on creativity.
+
+Combined, these technologies enhance collaboration, improve efficiency, and unlock innovative possibilities, giving filmmakers more opportunities to push the boundaries of storytelling and cinematic experiences.
+
+## Demographics
+
+To get a clearer picture of our audience of 272,496, we also looked at their age, gender, income, and region, and this is what we learned.
+
+## Age
+
+### Over 40% of filmmakers are aged between 35 and 54
+
+From those under 25 to those over 65, here's how our audience was split:
+
+![Age distribution of filmmakers](https://pzaz.io/producer-blog/wp-content/uploads/2025/01/Screenshot-2025-01-24-at-16.44.21.png)
+
+With 21.2% of filmmakers between 35 and 44 and 21.1% between 45 and 54, our audience largely aligns with Zippia studies that find that the average filmmaker is 40+ years old. However, our audience also had a high number of those under 25 (19.7%), which indicates a new generation of filmmakers is emerging. Those between the ages of 25 and 34 had the lowest overall engagement at 11.2%, followed by 55 to 64 (14.9%), and over 65s at 12.1%.
+
+## Gender
+
+### Just 0.2% more men than women are involved in the film industry
+
+Despite other statistics showing that men have far more of a presence than women in filmmaking, our audience was very even:
+
+![Gender distribution of filmmakers](https://pzaz.io/producer-blog/wp-content/uploads/2025/01/Screenshot-2025-01-24-at-16.50.27.png)
+
+In 2024, women comprised just 23% of directors, writers, producers, executive producers, editors, and cinematographers working on the 250 top films of the year. However, our audience had a much more even split, with just a 0.2% difference between men and women. This is a positive sign for the future, as it shows that there may be a greater number of women involved in bringing movies to life.
+
+## Income
+
+### At 31.9%, the highest percent of filmmakers earn between $40,000 to $80,000
+
+Our data showcases how much filmmakers are earning and at what percentage:
+
+![Filmmaker income distribution](https://pzaz.io/producer-blog/wp-content/uploads/2025/01/Screenshot-2025-01-24-at-16.53.20.png)
+
+With the biggest percentage (31.9%) of our audience earning between $40,000 and $80,000 a year, this perfectly matches the estimated total pay for a filmmaker of $76,601, with an average salary of $69,499 per year.
+
+However, the good news is that those earning higher, at between $80,000 to $500,000, account for a whopping 67%, putting the overall majority above the average. On the other end of the scale, only 1.1% earn under $40,000 a year, which is a positive sign for those considering this as a career.
+
+## Region
+
+### 31.8% of filmmakers live in the Pacific
+
+Of our audience, the largest number live in the Pacific and the least in West North Central US. Here's how the regional distribution is spread out:
+
+![Regional distribution of filmmakers](https://pzaz.io/producer-blog/wp-content/uploads/2025/01/Screenshot-2025-01-24-at-16.55.25.png)
+
+With Hollywood in the Pacific, we can understand why 31.8% of our audience is based there. However, overall, our audience is spread out across the US, with the second largest number in the East North Central states (18.9%), followed by 17.6% in the Mid-Atlantic. Thereafter, engagement levels drop to 12.1% in West South Central and then below 10% for South Atlantic. Even lower are East South Central at 4.2%, followed by Mountain, New England, and West North Central, bottoming out at 2%.
+
+This diverse distribution reflects the growing democratization of filmmaking and storytelling, as creative talent and production resources can now rely on remote collaboration rather than face-to-face.
+
+There's no denying that storyboarding plays an integral role in filmmaking, and our audience insights provide a clever picture of the process. In future, we can expect to see a greater adoption of screenwriting software, further streamlining the process and bringing a greater number of filmmakers' visions to life.
+
+## About the Data
+
+The data used to create the graphs in this article was sourced from an independent sample of 272,496 people from X, Quora, Reddit, TikTok, Bluesky and Threads. All responses are collected within a 75% confidence interval and a 5% margin of error.
+
+Engagement estimates the number of people participating in the location. Demographics are determined using many features, including name, location, and self-disclosed description. Privacy is preserved using k-anonymity and differential privacy. Results are based on what people describe online; the questions were not posed to the people in the sample.
+    `,
+    category: "Comparisons & Analysis",
+    majorCategory: "Industry Insights",
+    featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2025/01/Blog-image-storyboarding.png",
+    authorName: "Ninia Berishvili",
+    publishedAt: "2025-01-24",
+    readingTime: 12,
+    featured: false,
+  },
 ];
