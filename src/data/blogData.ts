@@ -3003,4 +3003,39 @@ Cathy also offers a masterclass, which she describes as a unique coaching experi
     readingTime: 8,
     featured: false,
   },
+  {
+    id: "32",
+    slug: "new-features-shooting-planning-stripboard",
+    title: "New Features: Shooting Planning & Stripboard",
+    excerpt: "Introducing the Shooting Planning Tool – plan shooting days, manage scenes, locations, weather, crew, and track progress with the new Strip Board.",
+    content: `
+## New Functionality – Introducing Shooting Planning Tool
+
+We're thrilled to introduce the **Shooting Planning Tool**, a powerful new feature designed to streamline your film production process. With this tool, you can now plan your shooting days with greater precision and ease. Here's what you can do:
+
+- **Planning**: Organize your shooting days effortlessly by planning scenes, selecting locations, checking weather conditions, assigning crew members, and managing other critical details. You can create shooting days, assign titles, contact details, descriptions, and set specific times for meetings and shooting. Additionally, you can monitor the weather forecast, choose parking locations, assign the team and crew, note emergency services, and schedule scenes and breaks, all in one place.
+- **Strip Board**: Think of it as your dynamic checklist. It allows you to track scenes to be filmed and any other tasks that need to be completed on the day of shooting. You can track the progress of shooting, monitor breaks, and view general information about scenes to shoot, along with a progress tracker for each day and overall.
+- **Integrated Workflow**: The Planning and Strip Board functionalities are seamlessly linked, ensuring that once you've set up your shooting plan, all related tasks and details are automatically synced, eliminating the need to duplicate efforts.
+
+## Bug Fixes
+
+We've been working hard to fix bugs and enhance your experience. Here's what we've resolved in this release:
+
+- **Scene Syncing**: We've fixed two minor bugs related to Scenes, improving syncing so that your scenes now appear in the correct order.
+- **Shot Information**: Corrected an issue where the input for available shots linked to scenes was displaying incorrect information.
+- **Goals and Initiatives**: Addressed a sync issue between Goal and Initiative creation in Workflow, ensuring everything runs smoothly.
+- **Scene Navigation**: Resolved a problem where scenes didn't sync properly when navigating between them.
+- **Pro-Subscription Description**: Updated the Pro-subscription description to display accurate information.
+- **Chat Duplication**: Fixed an issue where messages in the chat were being duplicated.
+
+We hope these new features and fixes enhance your filmmaking process. Stay tuned for more updates, and as always, we appreciate your feedback!
+    `,
+    category: "News & Updates",
+    majorCategory: "Production Tips",
+    featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/07/release_notes_wide.png",
+    authorName: "Vincent Weberink",
+    publishedAt: "2024-08-16",
+    readingTime: 3,
+    featured: false,
+  },
 ];
