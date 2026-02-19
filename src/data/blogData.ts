@@ -2153,4 +2153,51 @@ Emmanuel Martin Hernandez embodies the spirit of independent cinema. From his be
     readingTime: 5,
     featured: false,
   },
+  {
+    id: "21",
+    slug: "pzaz-november-2024-update",
+    title: "Pzaz Release – November 2024 Updates",
+    excerpt: "November 2024 brings PDF script export, Inbox improvements with Kanban view, refreshed settings design, and numerous bug fixes to Pzaz.",
+    content: `
+**PZAZ – NOVEMBER 2024 UPDATE**
+
+We've focused on the general refinement of Pzaz. This release includes numerous improvements, the addition of a PDF export feature, bug fixes, and much more.
+
+### New Features:
+
+- **Script PDF Export**: We're excited to introduce PDF script export! You can now share your scripts with anyone, even outside the app.
+- **Inbox**: We're making significant progress with the Inbox feature, designed to simplify the busy life of filmmakers. Manage your tasks more flexibly, and keep an eye out for further updates to this section and the workflow tools.
+
+### Updates to Existing Features
+
+- **Inbox**: Try the new Kanban/Board view for tasks! Simply click the three-column button on a task or card to switch to board view.
+- **Storyboard**: We've implemented a sleek, updated version of the import screen.
+- **Subscription Trial**: The trial-end counter now appears only for Filmspace owners, so your colleagues won't be interrupted.
+- **Settings Page**: We've refreshed the design of the settings page for Filmspace owners, making it more intuitive and visually appealing.
+- **Subscription**: Features are now clearly separated by subscription level.
+- **Invite Team Member**: When inviting a team member to your Filmspace, a popup will now indicate which user is being invited.
+- **Profile**: The user's profile image in the bottom-left corner is now consistently sized, even when the profile drop-down is open.
+
+### Bug Fixes
+
+- Resolved an issue in the Scriptwriting tool where editing a title caused the background to turn black.
+- Fixed the description of the three-dot button in the Workflow's top-right corner.
+- Corrected buttons on onboarding popups, both general and scriptwriting-specific.
+- Fixed column renaming in Board view and headings in List view.
+- Resolved an issue with incorrect descriptions for attaching documents to cards.
+- Addressed minor visual bugs related to screen resolution and scaling.
+- Fixed checkers functionality on the stripboard.
+- Made the team members list scrollable in Shooting Planning.
+- Improved styles for Workflow filtering options.
+
+As always, thank you for your feedback! With every release, we're making Pzaz better, and your input is invaluable. Stay tuned for more updates and improvements!
+    `,
+    category: "News & Updates",
+    majorCategory: "Production Tips",
+    featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/07/release_notes_wide.png",
+    authorName: "Valentine Rozkolodko",
+    publishedAt: "2024-11-23",
+    readingTime: 3,
+    featured: false,
+  },
 ];
