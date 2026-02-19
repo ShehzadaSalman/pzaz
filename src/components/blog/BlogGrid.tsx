@@ -21,7 +21,7 @@ const BlogGrid = () => {
 
   return (
     <section className="py-16">
-      <div className="container mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6">
         {/* Filters */}
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 mb-12">
           <div className="flex flex-wrap gap-2">
