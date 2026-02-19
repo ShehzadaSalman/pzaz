@@ -2200,4 +2200,42 @@ As always, thank you for your feedback! With every release, we're making Pzaz be
     readingTime: 3,
     featured: false,
   },
+  {
+    id: "22",
+    slug: "pzaz-import-export-update",
+    title: "Pzaz – Import/Export Update",
+    excerpt: "Introducing script import/export in .FDX and .PDF formats, inbox folder management with Kanban view, and numerous UI improvements.",
+    content: `
+**PZAZ – IMPORT/EXPORT UPDATE**
+
+With this update we introduce the **import/export** feature for scripts, various user-interface improvements, updated inbox that now gives you ability to properly sort and manage your own tasks and keep track on everything that going in your workflow.
+
+### New Features:
+
+- **Script import/export:** Import the .FDX scripts and export it into .PDF and .FDX formats. More formats on the way!
+- **Funding – Film database:** Now you can leave notes about films and add them to your library.
+
+### Updates to Existing Features:
+
+- **Inbox:** Now you can create folders for proper management of your tasks, and switch between the list and kanban (board) view for all tasks.
+- **Side menu:** We have slightly changed the order of the side menu so that the tabs are now correctly placed according to functional sections.
+- **Welcome page:** We received your feedback about the welcome page, and now you can access the side menu from this section as well!
+- **Checkout/Subscription:** Improved version of the subscription page, and other useful features for this part of Pzaz on the way.
+- **Media storage:** We have moved the media storage button to the team section. Media storage is still a work in progress, but we aim to get it to you as soon as possible.
+
+### Bug Fixes
+
+- Numerous UI bugs fixed, interface now more stable and flexible than before.
+- We removed invoices for Writer subscription.
+
+And as usual, stay tuned for more updates and fixes! With every new release, we're improving Pzaz and everyone's feedback is important!
+    `,
+    category: "News & Updates",
+    majorCategory: "Production Tips",
+    featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/07/release_notes_wide.png",
+    authorName: "Valentine Rozkolodko",
+    publishedAt: "2024-10-30",
+    readingTime: 2,
+    featured: false,
+  },
 ];
