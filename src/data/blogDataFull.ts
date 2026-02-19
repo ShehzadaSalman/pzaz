@@ -1142,7 +1142,7 @@ Stay tuned for more updates and fixes! With every new release, we are improving 
     featured: false,
   },
   {
-    id: "20",
+    id: "15",
     slug: "from-architecture-to-documentary-film",
     title: "From Architecture to Documentary Film",
     excerpt: "Peruvian filmmaker Lizeth Yarleque took an unconventional path into the world of documentary filmmaking, driven by purpose and passion for storytelling.",
@@ -1205,7 +1205,7 @@ For those interested in exploring her work, Lizeth Yarleque's projects can be fo
     featured: false,
   },
   {
-    id: "21",
+    id: "50",
     slug: "scene-breakdown-statistics-usa-2025",
     title: "Scene Breakdown Statistics: USA 2025",
     excerpt: "A data-driven analysis of scene breakdown practices among 9,406 independent filmmakers in the US, revealing key insights on collaboration, tools, and industry trends.",
@@ -1402,7 +1402,7 @@ Sourced from an independent sample of 9,406 independent filmmakers in the US, op
     featured: false,
   },
   {
-    id: "22",
+    id: "51",
     slug: "february-update",
     title: "February Update",
     excerpt: "User-rights, collaborators, scriptwriting elements management, knowledge base, group chats, active user status, and much more in the February update.",
@@ -1447,7 +1447,7 @@ And as usual, stay tuned for more updates and fixes! With every new release, we'
     featured: false,
   },
   {
-    id: "20",
+    id: "52",
     slug: "from-small-town-greece-to-filmmaking",
     title: "From Kavala to the Silver Screen",
     excerpt: "Angelica's path from small-town Greece to filmmaking is a testament to passion and perseverance, proving that creativity and determination can break any barrier.",
@@ -1496,7 +1496,7 @@ Curious to hear more about Angelica's journey and filmmaking insights? Watch the
     featured: false,
   },
   {
-    id: "21",
+    id: "53",
     slug: "the-journey-of-a-filmmaker-from-childhood-inspiration-to-cinematic-creation-christos-megarchiotis-interview-with-pzaz",
     title: "From Inspiration to Filmmaking",
     excerpt: "A filmmaker's journey from a childhood immersed in sci-fi and horror classics to a full-fledged career in directing, producing, and storytelling.",
@@ -2097,7 +2097,7 @@ Sourced from an independent sample of 4,125,774 people from X, Quora, Reddit, Ti
     featured: false,
   },
   {
-    id: "20",
+    id: "54",
     slug: "emmanuel-martin-hernandez-the-journey-of-an-independent-filmmaker",
     title: "From Cuba to Montreal",
     excerpt: "Emmanuel Martin Hernandez shares his journey from Santiago de Cuba to Montreal, exploring how classic cinema, resilience, and independent filmmaking shaped his career.",
@@ -2154,7 +2154,7 @@ Emmanuel Martin Hernandez embodies the spirit of independent cinema. From his be
     featured: false,
   },
   {
-    id: "21",
+    id: "55",
     slug: "pzaz-november-2024-update",
     title: "Pzaz Release – November 2024 Updates",
     excerpt: "November 2024 brings PDF script export, Inbox improvements with Kanban view, refreshed settings design, and numerous bug fixes to Pzaz.",
@@ -2201,7 +2201,7 @@ As always, thank you for your feedback! With every release, we're making Pzaz be
     featured: false,
   },
   {
-    id: "22",
+    id: "56",
     slug: "pzaz-import-export-update",
     title: "Pzaz – Import/Export Update",
     excerpt: "Introducing script import/export in .FDX and .PDF formats, inbox folder management with Kanban view, and numerous UI improvements.",
