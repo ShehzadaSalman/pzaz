@@ -7,7 +7,7 @@ import { Mail, Sparkles } from "lucide-react";
 const BlogNewsletter = () => {
   return (
     <section className="py-20 border-t border-border/50">
-      <div className="container mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
