@@ -3219,4 +3219,78 @@ We're confident that these updates will significantly enhance your experience wi
     readingTime: 3,
     featured: false,
   },
+  {
+    id: "36",
+    slug: "film-producer-candice-delavante-discusses-the-art-and-challenges-of-documentary-filmmaking-in-an-exclusive-interview-with-pzaz",
+    title: "The Challenges of Documentary Filmmaking",
+    excerpt: "An exclusive interview with film and television producer Candice Delevante about documentary filmmaking, hiring the right team, and the transformative power of documentaries.",
+    content: `
+Recently we caught up with Candice Delevante to hold a wide-ranging interview about filmmaking. Candice is a film and television producer and a documentary filmmaker. She is based in Brooklyn, New York. Until recently, she worked for Paramount Global on the business and legal side of scripted television.
+
+As a Coordinator for the Paramount Network, she worked in the area of Production, Programming and Development. Her work included a slate of shows developed by popular writer and show-runner, Taylor Sheridan (who is now well-known as the creative force behind popular TV show, Yellowstone).
+
+In 2013, Candice founded Metamorphosis Pictures, with the mission to champion unheard voices and unsung heroes in storytelling. So far, short documentaries and screenplays created by Metamorphosis have been showcased and awarded at festivals in the U.S., Canada, Mexico, Europe and Australia.
+
+In our interview, we cover a number of topics including the following:
+
+- What traits Candice looks for when hiring
+- Why it is crucial for team members to be 100% committed
+- The pros and cons of documentary films as a genre
+- The importance of making an impact with one's work
+- The impact that documentaries can have, on both the audience and the filmmaker
+- What advice Candice would give to new filmmakers
+- The role of serendipity in filmmaking
+- How new filmmakers can try to stand out from the crowd
+
+## Exploring Candice's Expertise in Documentary Filmmaking
+
+Candice describes her work as primarily focused on short documentaries, which she has been producing for the past 10 years. Her primary focus has been on directing and editing. In Candice's words, even for short films, "there's still a lot of due diligence that has to be done before going into production, to make a production go smoothly."
+
+## What Traits Candice Looks for When Hiring
+
+In her eyes, confidence is essential, as is experience. Candice stressed the value of learning from her team members to continually improve her craft. "I like to hire people who feel confident and who are experienced in what they're doing. I learn from them as I become better at what I do."
+
+She also emphasises how having a genuine passion for the content is crucial for any team member. A lack of interest or commitment to the subject matter could negatively impact the project's outcome, especially if individuals were solely motivated by financial incentives.
+
+## Candice's Memories of Her Earlier Career at Paramount
+
+Candice expressed appreciation for her time at Paramount, highlighting valuable lessons from the business and legal affairs team. Despite her admiration for the brand and the opportunity to work on renowned shows like those by Taylor Sheridan, Candice felt compelled to pursue new challenges for both personal and professional reasons.
+
+She described her transition as a natural progression from her previous role in production and programming to exploring freelance opportunities and nurturing her own creative endeavours.
+
+## What Principles Does Candice Adhere to in Her Work
+
+Candice expresses the importance of maintaining neutrality in her filmmaking approach. She emphasises the importance of allowing narratives to stand on their own merit without imposing personal opinions.
+
+The rapidly evolving landscape of technology and internet-based technologies has lowered barriers to entry into the filmmaking industry while also intensifying competition for visibility.
+
+## Sometimes Documentaries Can Make You See Things Differently
+
+Part of the enduring appeal of documentaries is the power they hold to change someone's mind. But one fascinating twist is that making a documentary can be the catalyst for a filmmaker changing their own mind about a subject – as they are making the film.
+
+Candice highlights the transformative potential of documentaries to challenge audience perspectives and spark reflection. One of her earliest documentaries, "Go Quietly", emerged from personal experiences with Wells Fargo's foreclosure practices and served as a pivotal moment in her journey into documentary filmmaking.
+
+## Advice for New Filmmakers Starting Out Today
+
+For Candice, one crucial skill is networking and building relationships in the film industry. She emphasised the need to not only receive help but also offer assistance to others within the community.
+
+## The Importance of Proper Permissions
+
+Candice warns about the importance of obtaining proper permissions – not only for film footage, but also for music, names, likenesses, and voices. Being prepared, making diligent notes, and acting preemptively can help prevent potential legal issues.
+
+## Serendipity Can Play an Important Role
+
+In the world of filmmaking, projects can sometimes be sparked by serendipitous events. Candice shares the story behind the genesis of her recent documentary "Nkosi Eclipsed" and how following one's passions and intentions often leads to unexpected opportunities.
+
+You can find more information about Candice and her filmography at metamorphosispictures.com.
+    `,
+    category: "Film Maker Interviews",
+    majorCategory: "Filmmaker Interviews",
+    featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/07/release_notes_wide.png",
+    youtubeVideoId: "y5oQpZNLu2c",
+    authorName: "Vincent Weberink",
+    publishedAt: "2024-07-22",
+    readingTime: 10,
+    featured: false,
+  },
 ];
