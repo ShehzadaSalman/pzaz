@@ -3174,4 +3174,49 @@ You can find out more about Dean's filmography and his upcoming projects at his 
     readingTime: 10,
     featured: false,
   },
+  {
+    id: "35",
+    slug: "new-features-enhancements-and-bug-fixes-in-our-latest-release",
+    title: "New Features And Fixes in Our Latest Release!",
+    excerpt: "Scenes, Shots, Storyboard improvements, navigation updates, and important bug fixes in the latest Pzaz release.",
+    content: `
+We're thrilled to announce the latest release of Pzaz! We've been hard at work to bring you some fantastic updates, including new features, enhanced functionalities, and important bug fixes.
+
+## New Features
+
+- **Scenes:** Plan each scene in your script on a separate page.
+- **Scenes:** Are now compatible and synced with Storyboard.
+- **Shots:** Contains a list of shots with all the information you need to make them work!
+- **Shots and Scenes:** Are linked and synced now – attach Shots to different Scenes.
+- **Cards:** Added Development section to card blocks (Status, Priority, Time Tracking, Roles, Storypoints and many more) – useful for GameDev
+
+## Updated Functionality
+
+- **Navigation:** Improved left side menu for better navigation and smoother animations.
+- **Storyboard:** Now you can import them from Scripts.
+- **Storyboard:** Frame View icons added to the topbar to change how Storyboards displayed on the page.
+- **Onboarding:** Right-hand notifications panel now spans entire height of screen.
+- **OKRs & Goals:** Improved colors of OKR and Goals pages.
+
+## Fixed Bugs
+
+- **Media Storage:** Bug with media storage (display tweaks)
+- **Script:** If script has two identical numbered scenes, storyboard navigation panel breaks
+- **Workflow:** Various workflow list view mode layout issues
+- **Storyboard, Scenes, and Shots:** Adding images is now working properly.
+- **Scenes and Shots:** Removed excessive space on the left and right sides of the screen.
+- **Checkout:** Minor issues with design of checkout flow
+- **Notes:** Missing horizontal scrollbar when many columns of notes are present
+- **Teams:** Fixed bug with invitation to certain workspaces.
+
+We're confident that these updates will significantly enhance your experience with Pzaz. Thank you for your continued support!
+    `,
+    category: "News & Updates",
+    majorCategory: "Production Tips",
+    featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/07/release_notes_wide.png",
+    authorName: "Vincent Weberink",
+    publishedAt: "2024-07-30",
+    readingTime: 3,
+    featured: false,
+  },
 ];
