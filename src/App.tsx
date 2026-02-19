@@ -10,6 +10,7 @@ import Script from "./pages/Script";
 import Pricing from "./pages/Pricing";
 import Blog from "./pages/Blog";
 import BlogArticle from "./pages/BlogArticle";
+import BlogCategory from "./pages/BlogCategory";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/script" element={<Script />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/category/:categorySlug" element={<BlogCategory />} />
           <Route path="/blog/:slug" element={<BlogArticle />} />
           <Route path="/producer-blog" element={<Navigate to="/blog" replace />} />
           <Route path="/producer-blog/:slug" element={<Navigate to="/blog/:slug" replace />} />
