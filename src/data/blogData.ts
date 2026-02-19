@@ -2936,4 +2936,71 @@ Stay tuned for more updates, and as always, your feedback is very important for 
     readingTime: 3,
     featured: false,
   },
+  {
+    id: "31",
+    slug: "film-producer-director-and-screenwriter-cathy-durant-discusses-the-secrets-of-successful-film-production-with-pzaz",
+    title: "Cathy Durant on Successful Film Production",
+    excerpt: "An exclusive interview with experienced American filmmaker, producer, and screenwriter Cathy Durant about her career, the importance of salesmanship, and bringing energy to every project.",
+    content: `
+Earlier this year, we sat down with Cathy Durant, an experienced American filmmaker, producer and screenwriter, to learn more about her career in the world of filmmaking.
+
+In this interview, we cover many topics, including the following:
+
+- We explore Cathy's diverse and varied background, which includes feature films, TV shows, music videos, and more
+- We learn about what Cathy believes are the most important skills for any film producer
+- We examine how a new or aspiring filmmaker can aim to stand out from the pack in a crowded industry
+- We look at which of Cathy's previous projects she is the most proud of, and discuss what it is that makes them special to her
+- We deep dive into some of Cathy's recent film projects, such as *Going Out A Champion* – the Coach Joe Ellis Story
+
+We are sure that you will find our in-depth interview with Cathy Durant entertaining, inspiring and instructive.
+
+## Introduction to Cathy's Background
+
+Cathy Durant's journey in the film and television industry is a testament to the power of versatility and passion. Starting her career in television production, Cathy honed her skills across various roles, including editing, producing, and directing. Her experience in TV news production and live shows eventually led her to embrace the role of a producer—a position that requires a deep understanding of all aspects of production. Cathy's ability to navigate multiple facets of the industry has made her a prominent figure in filmmaking.
+
+## The Importance of Learning to Sell
+
+One of the key takeaways from Cathy's career is the importance of salesmanship in the filmmaking industry. Cathy emphasizes that regardless of one's creative abilities, the ability to pitch and sell projects is crucial. She advises aspiring filmmakers to develop their selling skills early on, whether through direct sales jobs or by perfecting their elevator pitches. This skill is essential, especially for independent producers who need to raise funds and market their projects.
+
+## The Difference Between Being Independent or Work for Hire
+
+Cathy delves into the distinction between working independently and being a work-for-hire. She explains that while working for a studio or television station provides stability, it often means relinquishing ownership of the content created. In contrast, independent filmmakers have the opportunity to own their intellectual property but must also be adept at sales and marketing. Cathy's insights highlight the importance of choosing a path that aligns with one's strengths and career goals.
+
+## The Role of a Producer
+
+The role of a producer is often misunderstood outside the industry. Cathy clarifies that producers are the driving force behind a project, responsible for everything from raising funds to assembling the team and ensuring the project stays on budget and schedule. She describes the producer's role as both challenging and rewarding, requiring a blend of creativity and business acumen.
+
+## How a Filmmaker Can Stand Out
+
+Cathy shares valuable advice on how filmmakers can distinguish themselves in a crowded industry. She emphasizes the importance of passion, as it resonates with investors and audiences alike. Cathy believes that a filmmaker's love for their project can be the deciding factor in whether it gains support and success. Additionally, she underscores the need for filmmakers to be multifaceted and adaptable, as these qualities can open up more opportunities.
+
+## The Importance of Bringing Energy to Projects
+
+Energy is a crucial element that Cathy brings to all her projects. She discusses how bringing enthusiasm and positivity to a project can influence its outcome, from securing funding to maintaining team morale. Cathy's ability to infuse her projects with energy has been a key factor in her success, and she encourages others to adopt a similar approach.
+
+## Cathy's Most Proud Projects, Including "Going Out A Champion"
+
+Throughout her career, Cathy has worked on numerous projects, but some hold a special place in her heart. She speaks fondly of a documentary she did on Usher and her current project, "Going Out A Champion," which tells the story of coach Joe Ellis. Cathy was deeply moved by the story, and her passion for the project is evident in how she brought it from book to screenplay.
+
+## Lessons that Cathy Has Learned
+
+Cathy candidly shares lessons from her career, including the challenges she faced when projects didn't go as planned. She recounts a particular project where she had to step in as producer, director, and writer to salvage the production. Despite the difficulties, the project eventually gained backing, turning a potential failure into a stepping stone for future success.
+
+## Where People Can Learn More About Cathy
+
+For those interested in learning more about Cathy Durant and her work, she recommends visiting her website, CathyDurant.com. She remains accessible to those who reach out and is always eager to engage with others in the industry.
+
+## The Cathy Durant Masterclass
+
+Cathy also offers a masterclass, which she describes as a unique coaching experience rather than traditional teaching. Through this masterclass, Cathy shares her wealth of experience across various aspects of filmmaking, helping others develop the skills they need to succeed.
+    `,
+    category: "Film Maker Interviews",
+    majorCategory: "Filmmaker Interviews",
+    featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/07/release_notes_wide.png",
+    youtubeVideoId: "E4K6qrqBpm4",
+    authorName: "Vincent Weberink",
+    publishedAt: "2024-08-19",
+    readingTime: 8,
+    featured: false,
+  },
 ];
