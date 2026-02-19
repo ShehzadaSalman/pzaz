@@ -81,14 +81,6 @@ const BlogGrid = () => {
           </div>
         )}
 
-        {/* Load More */}
-        {filteredPosts.length > 0 && (
-          <div className="text-center mt-12">
-            <Button variant="outline" size="lg">
-              Load More Articles
-            </Button>
-          </div>
-        )}
       </div>
     </section>
   );
