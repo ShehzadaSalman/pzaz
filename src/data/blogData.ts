@@ -3293,4 +3293,59 @@ You can find more information about Candice and her filmography at metamorphosis
     readingTime: 10,
     featured: false,
   },
+  {
+    id: "37",
+    slug: "film-director-henrik-bjerregaard-clausen",
+    title: "Henrik Bjerregaard Clausen on Filmmaking",
+    excerpt: "An exclusive interview with experienced Danish film director Henrik Bjerregaard Clausen about originality, time management, goal setting, and balancing filmmaking with family life.",
+    content: `
+Earlier this year, we sat down with Henrik Bjerregaard Clausen, an experienced Danish film director, to learn more about his journey in filmmaking.
+
+In our interview, Henrik talked about change in the film industry, the democratisation of filmmaking tools, and the role of generative AI, as well as other topics. We enjoyed that conversation so much that we decided to invite Henrik back and hold a follow-up interview.
+
+Henrik Clausen's journey exemplifies resilience, creativity, and a commitment to excellence in filmmaking. His insights serve as a guiding light for aspiring filmmakers navigating the ever-changing landscape of the industry.
+
+## Creating and Managing One's Goals Within a Film Project
+
+Time is often the enemy of filmmakers during their projects. Henrik explained how his goals have changed dramatically over the course of his career—from wanting to impress his peers as a young visual effects artist, to now managing the commercial goals of a project.
+
+"When I started," Henrik explained, "I didn't have specific or at least not very thought-through commercial goals in terms of 'once this film is completed, then what is it, what's going to happen'?" But he has since learned to define such questions clearly. "Is it going to get you further on in your career as a showpiece or a springboard to do a feature film? Or, is it just a neat little package from which you learn a tonne?"
+
+## The Changing Landscape of the Film Industry
+
+The environment for visual effects artists and filmmakers has changed dramatically over the last few decades. We discuss what effect this has had on Henrik's work and the industry as a whole.
+
+## The Importance of Time Management, Especially When on Set
+
+Whether you're working alone, says Henrik, or as part of a professional team, "it's all about time management." Why? "You have a limited number of days. Every day costs money so you have to maximise the amount that you can get done in the days available. Any little thing where it's taking away from that, is costing money and adds up."
+
+## Henrik's Work with Education Institutions and Coaching Students
+
+We delve into Henrik's work with students and higher education establishments. "It's a really good idea to get at least a minimal knowledge of different departments and what they do because it'll just help smoothen out so much of the work", Henrik explains.
+
+## The Importance of Originality
+
+Henrik was hugely influenced by American science fiction and drama directors like James Cameron, David Fincher, and Ridley Scott. Yet to stand out today, it is more important than ever to be truly original. "When I started filmmaking, the thing that inspired me was my heroes from the nineties—Cameron, Fincher, and Scott," Henrik says. "I also feel like now we have had a tendency to try and copy that." As Henrik explains, you need to take what you love about others' work, and add your own unique sensibility to it.
+
+## Learning Versus Doing
+
+In today's society, there is more information available than ever before. Henrik's advice is to make sure to apply what you've learned to a real-world project. Rather than simply learning from a video and moving on, take the time to apply what you've learned—preferably on a project involving other people.
+
+## Balancing Work with Family Life
+
+Henrik became a father just over two years ago. "It's a lot of work," admits Henrik. "But it does get easier as she grows up a little bit and becomes more capable."
+
+## Where to Find Out More About Henrik
+
+You can watch many of Henrik's videos, including his shorts, trailers, and breakers, at henrikbclausen.com. You can also find out more about Henrik's animated textures and assets tools for video effects artists at figment.dk.
+    `,
+    category: "Film Maker Interviews",
+    majorCategory: "Filmmaker Interviews",
+    featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/07/release_notes_wide.png",
+    youtubeVideoId: "-gHOqUwHoSI",
+    authorName: "Larisa Sevcencu",
+    publishedAt: "2024-04-23",
+    readingTime: 10,
+    featured: false,
+  },
 ];
