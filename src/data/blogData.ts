@@ -1831,4 +1831,41 @@ Curious to hear more about Stephen's journey and filmmaking insights? Watch the 
     readingTime: 5,
     featured: false,
   },
+  {
+    id: "18",
+    slug: "pzaz-release-happy-new-year-update",
+    title: "Pzaz Release – HAPPY NEW YEAR UPDATE",
+    excerpt: "Introducing Proposals, the long-awaited Moodboard, interactive chat support, and numerous bug fixes in the Pzaz Happy New Year update.",
+    content: `
+**PZAZ – HAPPY NEW YEAR UPDATE**
+
+Greetings! Pzaz team here, and in this update, we introduce to you a new feature: Proposals available completely for free in the Business tab! Then we have the long-awaited Moodboard and numerous bug fixes and UI improvements!
+
+### New Features:
+
+- **Proposals:** Let's face it—no one loves writing plans. But in filmmaking, having a clear plan is essential. That's why we created **Proposals**, a new and evolving module inside Pzaz designed to make planning simpler and more enjoyable. This feature is currently in **Beta**, offering only a **one-page business plan module** to help you get started. We're actively seeking your feedback to understand what templates you need most. Tell us your requirements, and we'll prioritize adding them to the module. Looking ahead to the New Year, we're excited to introduce an **export function** for your plans and an **AI-powered feature** that will instantly transform your inputs into a complete written proposal. Stay tuned, and let us know how we can improve this tool to meet your needs!
+- **Moodboard:** The long-awaited Moodboard is here! This tool will help you create the best atmosphere for your art! Upload images, choose the colours you need, and even upload fonts with visualisation available!
+- **Let's Chat:** We have implemented a new feedback/support feature called interactive chat! This is just the first basic version; there is more to come. We invite you to chat with us now.
+
+### Updates to Existing Features:
+
+- **Locations:** Automatically subtract all locations used in the shooting schedule.
+- **Crew&Cast:** There have been many QOL fixes, and you can now type in the country name to search the list more quickly.
+- **Docs:** Improved design of the section.
+- **All tools:** Design improvements, so everything now looks more obvious and accurate to design.
+
+### Bug Fixes
+
+- Numerous UI bugs were fixed, including issues with Hybrid mode, Inbox, and other parts of the tool.
+
+And as usual, stay tuned for more updates and fixes! The Pzaz team wishes you a happy New Year 2025! More important features are on the way!
+    `,
+    category: ["News & Updates", "Production & Producing"],
+    majorCategory: "Production Tips",
+    featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/07/release_notes_wide.png",
+    authorName: "Valentine Rozkolodko",
+    publishedAt: "2024-12-31",
+    readingTime: 3,
+    featured: false,
+  },
 ];
