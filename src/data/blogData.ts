@@ -9,6 +9,14 @@ export type BlogCategoryId =
   | "Art of Film";
 export type BlogFilterCategoryId = "all" | BlogCategoryId;
 
+export type MajorCategoryId = "Industry Insights" | "Production Tips" | "Filmmaker Interviews";
+
+export const majorCategories: { id: MajorCategoryId; slug: string; description: string }[] = [
+  { id: "Industry Insights", slug: "industry-insights", description: "Data-driven analysis, comparisons, and deep dives into the filmmaking industry." },
+  { id: "Production Tips", slug: "production-tips", description: "Practical advice, product updates, and workflow tips for modern filmmakers." },
+  { id: "Filmmaker Interviews", slug: "filmmaker-interviews", description: "Conversations with filmmakers sharing their stories, journeys, and craft." },
+];
+
 export interface BlogPost {
   id: string;
   slug: string;
@@ -16,6 +24,7 @@ export interface BlogPost {
   excerpt: string;
   content: string;
   category: BlogCategoryId | BlogCategoryId[];
+  majorCategory: MajorCategoryId;
   featuredImage: string;
   youtubeVideoId?: string;
   videoBgImage?: string;
@@ -206,6 +215,7 @@ Sourced using Artios from an independent sample of 6,260,767 United States indep
 - 38% earn between $120,000 and $200,000 annually, above the industry average.
     `,
     category: "Comparisons & Analysis",
+    majorCategory: "Industry Insights",
     featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Blog-image-135.png",
     authorName: "Ninia Berishvili",
     publishedAt: "2025-07-28",
@@ -376,6 +386,7 @@ This data is sourced from a sample of 1,063 USA independent filmmakers' opinions
 - 29% are in the South Atlantic US, 25% in the East North Central, and 25% in the Pacific.
     `,
     category: "Comparisons & Analysis",
+    majorCategory: "Industry Insights",
     featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2025/05/New-Blog-image.png",
     authorName: "Ninia Berishvili",
     publishedAt: "2025-05-23",
@@ -548,6 +559,7 @@ Sourced using Artios from an independent sample of 130,979 independent filmmaker
 - The largest share (30%) is located in the South Atlantic US.
     `,
     category: "Comparisons & Analysis",
+    majorCategory: "Industry Insights",
     featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2025/06/Blog-image-July-2025.png",
     authorName: "Ninia Berishvili",
     publishedAt: "2025-07-03",
@@ -611,6 +623,7 @@ If you have any questions about the storyboard feature — or if you'd like to s
 Let the storyboarding begin!
     `,
     category: ["News & Updates", "Production & Producing"],
+    majorCategory: "Production Tips",
     featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/07/release_notes_wide.png",
     authorName: "Vincent Weberink",
     publishedAt: "2024-07-01",
@@ -655,6 +668,7 @@ We've completely revamped the Budget page with your feedback front and center:
 Stay tuned for the next product update in the next few weeks.
     `,
     category: ["News & Updates", "Production & Producing"],
+    majorCategory: "Production Tips",
     featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/07/release_notes_wide.png",
     authorName: "Vincent Weberink",
     publishedAt: "2025-05-01",
@@ -840,6 +854,7 @@ The data was sourced from an independent sample of 16,608 USA independent filmma
 - 47% earn between $120,000 and $200,000 annually.
     `,
     category: "Comparisons & Analysis",
+    majorCategory: "Industry Insights",
     featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2025/04/Blog-image-Film-Scheduling-Statistics-USA-2025.png",
     authorName: "Ninia Berishvili",
     publishedAt: "2025-04-24",
@@ -883,6 +898,7 @@ These product updates are only possible because of the feedback we get from cust
 Stay tuned for the next product update in the next few weeks.
     `,
     category: ["News & Updates", "Production & Producing"],
+    majorCategory: "Production Tips",
     featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/07/release_notes_wide.png",
     authorName: "Tom Emmerson",
     publishedAt: "2025-04-18",
@@ -1055,6 +1071,7 @@ Sourced from 4,436 independent filmmakers in the US via X (formerly Twitter), Re
 - The highest majority (34%) earn between $40,000 and $80,000 annually
     `,
     category: "Comparisons & Analysis",
+    majorCategory: "Industry Insights",
     featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2025/04/Film-Crew-Hiring-Management-Insights-USA-2025.png",
     authorName: "Ninia Berishvili",
     publishedAt: "2025-04-08",
@@ -1078,6 +1095,7 @@ Karampasoglou also champions collaboration. He thrives in environments where act
 
 At a time when much of the industry still leans toward formula and flash, Vagelis Karampasoglou stands for something else entirely: storytelling that breathes, that heals, and that dares to be real.`,
     category: "Film Maker Interviews",
+    majorCategory: "Filmmaker Interviews",
     featuredImage: "https://i.ytimg.com/vi/2-oGv9zDEP8/maxresdefault.jpg",
     youtubeVideoId: "2-oGv9zDEP8",
     videoBgImage: "https://i.ytimg.com/vi/2-oGv9zDEP8/maxresdefault.jpg",
@@ -1116,6 +1134,7 @@ As always, this also includes a number of bug fixes in response to direct feedba
 
 Stay tuned for more updates and fixes! With every new release, we are improving Pzaz, and everyone's feedback is important!`,
     category: ["News & Updates", "Production & Producing"],
+    majorCategory: "Production Tips",
     featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/07/release_notes_wide.png",
     authorName: "Tom Emmerson",
     publishedAt: "2025-03-24",
@@ -1177,6 +1196,7 @@ She also regularly collaborates with foreign crews as a local fixer and research
 For those interested in exploring her work, Lizeth Yarleque's projects can be found on her website, **www.humanafilms.com**, where she showcases stories that reveal the beauty, complexity, and humanity of Peru—stories that too often go untold.
     `,
     category: "Film Maker Interviews",
+    majorCategory: "Filmmaker Interviews",
     featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2025/03/Blog-Thumbnail.png",
     youtubeVideoId: "7krDnm5uo-0",
     authorName: "Ninia",
@@ -1374,6 +1394,7 @@ Based on our overall findings, it's clear that scene breakdowns play a crucial r
 Sourced from an independent sample of 9,406 independent filmmakers in the US, opinions were expressed online across X, Quora, Reddit, TikTok, Bluesky and Threads. Responses are collected within a 95% confidence interval and 4% margin of error.
     `,
     category: "Comparisons & Analysis",
+    majorCategory: "Industry Insights",
     featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2025/02/Blog-image-28-Feb-2025.png",
     authorName: "Ninia",
     publishedAt: "2025-02-27",
@@ -1418,6 +1439,7 @@ In this update we added User-rights, new type of free users – collaborators, m
 And as usual, stay tuned for more updates and fixes! With every new release, we're improving Pzaz, and everyone's feedback is important!
     `,
     category: ["News & Updates", "Production & Producing"],
+    majorCategory: "Production Tips",
     featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/07/release_notes_wide.png",
     authorName: "Valentine Rozkolodko",
     publishedAt: "2025-02-18",
