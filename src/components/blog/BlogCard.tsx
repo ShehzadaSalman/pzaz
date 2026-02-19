@@ -1,105 +1,91 @@
-import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { CornerUpRight, Share2 } from "lucide-react";
+import type { BlogPost } from "@/data/blogData";
+import { Badge } from "@/components/ui/badge";
 
 interface BlogCardProps {
-  title: string;
-  excerpt: string;
-  category: string;
-  date: string;
-  image: string;
-  imageAlt: string;
-  href: string;
-  variant?: "featured" | "grid";
+  post: BlogPost;
+  featured?: boolean;
 }
 
-const BlogCard = ({
-  title,
-  excerpt,
-  category,
-  date,
-  image,
-  imageAlt,
-  href,
-  variant = "featured",
-}: BlogCardProps) => {
-  const isGrid = variant === "grid";
-  const [showShareMenu, setShowShareMenu] = useState(false);
-  const shareMenuRef = useRef<HTMLDivElement>(null);
+const BlogCard = ({ post, featured = false }: BlogCardProps) => {
+  const category = Array.isArray(post.category) ? post.category[0] : post.category;
+  const readTime = `${post.readingTime} min read`;
 
-  const fullUrl = typeof window !== "undefined" ? `${window.location.origin}${href}` : href;
-  const encodedUrl = encodeURIComponent(fullUrl);
-  const encodedText = encodeURIComponent(title);
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (shareMenuRef.current && !shareMenuRef.current.contains(event.target as Node)) {
-        setShowShareMenu(false);
-      }
-    };
-    if (showShareMenu) document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [showShareMenu]);
-
-  return (
-    <article className={isGrid ? "w-full" : "mx-auto w-full max-w-[980px]"}>
+  if (featured) {
+    return (
       <Link
-        to={href}
-        className="group block rounded-[24px] border border-[#D8D9DE] bg-white shadow-[0_18px_50px_rgba(18,18,30,0.08)] h-full"
+        to={`/blog/${post.slug}`}
+        className="group relative block overflow-hidden rounded-2xl shadow-[var(--shadow-featured)] transition-all duration-300 hover:shadow-[var(--shadow-card-hover)]"
       >
-        <div className="relative bg-[#1D0F4F] rounded-t-[24px] overflow-hidden">
-          <img
-            src={image}
-            alt={imageAlt}
-            referrerPolicy="no-referrer"
-            className="aspect-[16/9] w-full object-cover opacity-95 transition-transform duration-500 group-hover:scale-[1.02]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1D0F4F]/20 via-transparent to-transparent" />
-        </div>
-
-        <div className={`bg-white rounded-b-[24px] overflow-hidden ${isGrid ? "px-5 py-5" : "px-6 py-8 md:px-12 md:py-10"}`}>
-          <div className={`${isGrid ? "mb-3" : "mb-6"} flex items-center justify-between gap-4`}>
-            <div className="flex flex-wrap items-center gap-3 md:gap-5">
-              <span className={`rounded-[5px] bg-[#e1e1e1] px-2 py-1 font-medium text-[#4F2BA6] ${isGrid ? "text-xs" : "text-sm"}`}>
-                {category}
-              </span>
-              <span className="text-[#8C8C92] text-[12px]">{new Date(date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}</span>
-            </div>
-            <div className="relative" ref={shareMenuRef}>
-              <button
-                type="button"
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  setShowShareMenu((prev) => !prev);
-                }}
-                className={`text-[#5E2AB5] hover:bg-[#5E2AB5]/10 rounded-full p-1.5 transition-colors ${isGrid ? "" : ""}`}
-                aria-label="Share article"
-              >
-                <CornerUpRight className={`transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 ${isGrid ? "h-5 w-5" : "h-8 w-8"}`} />
-              </button>
-              {showShareMenu && (
-                <div className="absolute right-0 mt-2 w-44 rounded-md border border-border bg-white p-2 shadow-md z-50">
-                  <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="block rounded px-3 py-2 text-sm text-foreground hover:bg-muted">Share on Facebook</a>
-                  <a href={`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedText}`} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="block rounded px-3 py-2 text-sm text-foreground hover:bg-muted">Share on X</a>
-                  <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="block rounded px-3 py-2 text-sm text-foreground hover:bg-muted">Share on LinkedIn</a>
-                  <a href={`https://www.reddit.com/submit?url=${encodedUrl}&title=${encodedText}`} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="block rounded px-3 py-2 text-sm text-foreground hover:bg-muted">Share on Reddit</a>
-                  <a href={`https://wa.me/?text=${encodedText}%20${encodedUrl}`} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="block rounded px-3 py-2 text-sm text-foreground hover:bg-muted">Share on WhatsApp</a>
-                </div>
-              )}
-            </div>
+        <div className="grid md:grid-cols-2">
+          <div className="relative aspect-[16/10] overflow-hidden md:aspect-auto md:min-h-[400px]">
+            <img
+              src={post.featuredImage}
+              alt={post.title}
+              referrerPolicy="no-referrer"
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="eager"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-foreground/20 to-transparent" />
           </div>
 
-          <h2 className={`font-gloock font-semibold leading-[1.05] text-[#4A4A4F] ${isGrid ? "mb-3 text-[24px] md:text-[28px]" : "mb-6 text-[56px] md:text-[68px]"}`}>
-            {title}
-          </h2>
-
-          <p className={`leading-[1.35] text-[#4A4A4F] ${isGrid ? "text-[14px] md:text-[15px] line-clamp-3" : "max-w-[800px] text-[28px] md:text-[44px]"}`}>
-            {excerpt}
-          </p>
+          <div className="flex flex-col justify-center bg-card p-8 md:p-12">
+            <Badge variant="secondary" className="mb-4 w-fit bg-primary/10 text-primary">
+              {category}
+            </Badge>
+            <h2 className="mb-3 font-display text-2xl font-bold leading-tight text-card-foreground md:text-3xl">
+              {post.title}
+            </h2>
+            <p className="mb-6 text-muted-foreground leading-relaxed">{post.excerpt}</p>
+            <div className="flex items-center gap-4 text-sm text-muted-foreground">
+              <span>{post.authorName}</span>
+              <span>·</span>
+              <time dateTime={post.publishedAt}>
+                {new Date(post.publishedAt).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}
+              </time>
+              <span>·</span>
+              <span>{readTime}</span>
+            </div>
+          </div>
         </div>
       </Link>
-    </article>
+    );
+  }
+
+  return (
+    <Link
+      to={`/blog/${post.slug}`}
+      className="group flex flex-col overflow-hidden rounded-xl bg-card shadow-[var(--shadow-card)] transition-all duration-300 hover:shadow-[var(--shadow-card-hover)] hover:-translate-y-1"
+    >
+      <div className="relative aspect-[16/10] overflow-hidden">
+        <img
+          src={post.featuredImage}
+          alt={post.title}
+          referrerPolicy="no-referrer"
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          loading="lazy"
+        />
+      </div>
+
+      <div className="flex flex-1 flex-col p-6">
+        <Badge variant="secondary" className="mb-3 w-fit bg-primary/10 text-primary text-xs">
+          {category}
+        </Badge>
+        <h3 className="mb-2 font-display text-lg font-semibold leading-snug text-card-foreground line-clamp-2">
+          {post.title}
+        </h3>
+        <p className="mb-4 flex-1 text-sm text-muted-foreground leading-relaxed line-clamp-2">
+          {post.excerpt}
+        </p>
+        <div className="flex items-center gap-3 text-xs text-muted-foreground">
+          <time dateTime={post.publishedAt}>
+            {new Date(post.publishedAt).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}
+          </time>
+          <span>·</span>
+          <span>{readTime}</span>
+        </div>
+      </div>
+    </Link>
   );
 };
 
