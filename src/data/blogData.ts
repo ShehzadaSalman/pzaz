@@ -1778,4 +1778,57 @@ Engagement estimates the number of people participating in the location. Demogra
     readingTime: 12,
     featured: false,
   },
+  {
+    id: "17",
+    slug: "stephen-tejas-a-decade-of-filmmaking-mastery-exclusive-filmmaker-interview",
+    title: "A Decade of Filmmaking Passion",
+    excerpt: "Stephen Tejas shares his decade-long filmmaking journey, from childhood inspirations and photography roots to completing an independent horror-comedy feature film.",
+    content: `
+## About Our Guest
+
+Stephen Tejas, an emerging filmmaker, joined Pzaz for an insightful conversation about his journey into filmmaking, his inspirations, challenges, and the decade-long project he's been working on. This interview delves into Stephen's passion for storytelling, the evolution of his craft, and the persistence required to bring creative visions to life.
+
+## Early Inspirations and Passion for Film
+
+Stephen's love for filmmaking stemmed from childhood experiences with his father, bonding over movies and sneaking into multiple screenings. This deep connection with film extended to family discussions around classics like **Star Wars** and **Indiana Jones**. Growing up in California, Stephen was naturally close to the filmmaking scene, further fueling his passion.
+
+## Transition from Photography to Filmmaking
+
+Starting his creative career in photography, Stephen found the transition to cinematography a natural progression. His confidence in visual storytelling led him to co-direct films, taking on multiple roles in production, from writing and directing to cinematography and post-production editing.
+
+## The Ten-Year Journey
+
+Stephen and his co-director Tom embarked on creating their feature film **Dickhead**, a horror-comedy exploring what happens when a Michael Myers-like killer meets an even greater evil. The film cleverly balances slasher elements with humor and self-awareness, utilizing practical resources like makeshift costumes to work within budget constraints.
+
+### Overcoming Challenges
+
+The production faced numerous obstacles, particularly in post-production. Hiring editors led to setbacks, costing years and funds. Eventually, Stephen and Tom took on editing themselves, which taught them valuable lessons in storytelling and scene construction. Their dedication turned the rough footage into a cohesive film.
+
+## Marketing Strategies and Industry Insights
+
+Stephen acknowledged the challenges of marketing independent films, emphasizing the importance of social media and festival circuits. To enhance the film's appeal, they produced an accompanying documentary and started a podcast sharing their filmmaking journey. This multi-faceted approach aims to engage audiences and promote their work more effectively.
+
+## Advice for Aspiring Filmmakers
+
+Stephen stressed the need to discern between good and bad advice, cautioning against relying solely on online resources. He suggested combining practical experience with formal education, such as community college film courses, to build a strong foundation in filmmaking.
+
+## Reflecting on the Journey
+
+Looking back, Stephen recognized the challenges of starting with a feature film but valued the experience gained. He advised new filmmakers to seek mentorship and focus on essential roles like script supervision and data management to streamline production.
+
+## Conclusion
+
+Stephen Tejas's story is one of passion, resilience, and adaptability. His decade-long commitment to **Dickhead** exemplifies the dedication required in independent filmmaking. Through challenges and learning curves, Stephen continues to pursue his storytelling dreams, inspiring aspiring filmmakers to persevere in their creative endeavors.
+
+Curious to hear more about Stephen's journey and filmmaking insights? Watch the full interview on YouTube!
+    `,
+    category: "Film Maker Interviews",
+    majorCategory: "Filmmaker Interviews",
+    featuredImage: "/placeholder.svg",
+    youtubeVideoId: "eyFQfzvTK3g",
+    authorName: "Vincent Weberink",
+    publishedAt: "2025-01-14",
+    readingTime: 5,
+    featured: false,
+  },
 ];
