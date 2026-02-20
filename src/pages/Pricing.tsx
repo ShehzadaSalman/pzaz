@@ -1,5 +1,5 @@
 import React from "react";
-import PricingHeader from "@/components/pricing/PricingHeader";
+import Header from "@/components/Header";
 import PricingHero from "@/components/pricing/PricingHero";
 import PricingStageSelector from "@/components/pricing/PricingStageSelector";
 import PricingBundles from "@/components/pricing/PricingBundles";
@@ -30,7 +30,7 @@ const Pricing = () => {
         ]}
         canonical="https://pzaz.io/pricing"
       />
-      <PricingHeader />
+      <Header />
       <main>
         <PricingHero />
         <PricingStageSelector />
