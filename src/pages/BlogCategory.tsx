@@ -65,7 +65,7 @@ const BlogCategory = () => {
       <SEO
         title={`${category.id} – Pzaz Blog`}
         description={category.description}
-        url={`https://pzaz-sparkle-showcase.lovable.app/producer-blog/category/${category.slug}`}
+        url={`https://pzaz.io/producer-blog/category/${category.slug}`}
       />
       <Header />
       <main>
