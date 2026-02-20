@@ -9,7 +9,7 @@ interface ArticleHeroProps {
 
 const ArticleHero = ({ article }: ArticleHeroProps) => {
   return (
-    <div className="relative h-[40vh] min-h-[300px] w-full overflow-hidden md:h-[50vh] -mt-[68px] pt-[68px]">
+    <div className="relative h-[40vh] min-h-[300px] w-full overflow-hidden md:h-[50vh]">
       <img
         src={article.featuredImage}
         alt={article.title}
