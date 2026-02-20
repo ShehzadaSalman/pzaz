@@ -22,7 +22,7 @@ const ArticleHero = ({ article }: ArticleHeroProps) => {
         <div className="max-w-6xl mx-auto">
           <Link
             to="/producer-blog"
-            className="mb-4 inline-flex items-center gap-1 text-sm text-primary-foreground/80 transition-colors hover:text-primary-foreground"
+            className="mb-4 inline-flex items-center gap-1 text-sm text-primary transition-colors hover:text-primary/80"
           >
             <ArrowLeft className="h-3 w-3" />
             Back to Blog
