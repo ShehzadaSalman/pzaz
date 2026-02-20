@@ -14,6 +14,7 @@ interface Stage {
     price: string;
     tagline: string;
     features: string[];
+    modules: { name: string; price: number }[];
     apps: string[];
     cta: string;
     popular?: boolean;
@@ -32,7 +33,7 @@ const stages: Stage[] = [
     title: "Writing & Developing",
     description: "Scripts, ideas, early visuals",
     recommended: {
-      name: "Project",
+      name: "Writer's Toolkit",
       price: "€49",
       tagline: "The filmmaker's command center for managing all production workflows.",
       features: [
@@ -42,7 +43,12 @@ const stages: Stage[] = [
         "Smart Inbox unifies updates from all tools",
         "Real-time teamwork in 30+ languages"
       ],
-      apps: ["Inbox", "Message", "Address", "Docs", "Drive"],
+      modules: [
+        { name: "Script Editor", price: 19 },
+        { name: "Storyboard", price: 15 },
+        { name: "Project Hub", price: 15 },
+      ],
+      apps: ["Script Editor", "Storyboard", "Project Hub", "Docs"],
       cta: "Start for free"
     },
     alternatives: [
@@ -66,7 +72,13 @@ const stages: Stage[] = [
         "Live updates and real-time sync between departments",
         "Multilingual collaboration with cloud storage"
       ],
-      apps: ["Project", "Budget", "Casting", "Location", "Scheduling", "Storyboard"],
+      modules: [
+        { name: "Budget", price: 49 },
+        { name: "Storyboard", price: 39 },
+        { name: "Scheduling", price: 39 },
+        { name: "Casting", price: 19 },
+      ],
+      apps: ["Budget", "Storyboard", "Scheduling", "Casting", "Location", "Project"],
       cta: "Start planning",
       popular: true
     },
@@ -82,7 +94,7 @@ const stages: Stage[] = [
     title: "Actively Producing",
     description: "Scheduling, call sheets, team coordination",
     recommended: {
-      name: "Pzaz Suite",
+      name: "Production Pro",
       price: "€129",
       tagline: "All-in-one production suite with scheduling and call sheet automation.",
       features: [
@@ -92,7 +104,13 @@ const stages: Stage[] = [
         "Predicts scheduling conflicts automatically",
         "Syncs with Budget, Casting, and Storyboard"
       ],
-      apps: ["Project", "Budget", "Casting", "Location", "Scheduling", "Storyboard"],
+      modules: [
+        { name: "Scheduling", price: 39 },
+        { name: "Budget", price: 49 },
+        { name: "Location", price: 19 },
+        { name: "Casting", price: 19 },
+      ],
+      apps: ["Scheduling", "Budget", "Location", "Casting", "Project"],
       cta: "Start producing",
       popular: true
     },
@@ -117,6 +135,12 @@ const stages: Stage[] = [
         "Designed for teams that need speed, scale, and precision",
         "Dedicated private LLM — data never leaves your ecosystem"
       ],
+      modules: [
+        { name: "All Core Modules", price: 0 },
+        { name: "Private AI", price: 0 },
+        { name: "API Access", price: 0 },
+        { name: "Priority Support", price: 0 },
+      ],
       apps: ["All Modules", "Private AI", "Priority Support", "API Access"],
       cta: "Contact sales"
     },
@@ -130,9 +154,12 @@ const stages: Stage[] = [
 const PricingStageSelector = () => {
   const [selectedStage, setSelectedStage] = useState<string>("planning");
   const [showApps, setShowApps] = useState<boolean>(false);
-  const { addItem, removeItem, hasItem, clearCart } = usePricingCart();
+  const { addPackage, removePackage, hasPackage, addCustomModule, removeCustomModule, hasCustomModule } = usePricingCart();
 
   const currentStage = stages.find(s => s.id === selectedStage) || stages[1];
+
+  const packageId = `stage-${currentStage.id}`;
+  const isPackageInCart = hasPackage(packageId);
 
   return (
     <section id="stages" className="py-20 relative">
@@ -210,7 +237,6 @@ const PricingStageSelector = () => {
 
                 {/* Main Pricing Card */}
                 <div className="relative rounded-3xl border-2 border-primary bg-card p-8 shadow-xl h-full">
-                  {/* Gradient glow */}
                   <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/20 to-accent/20 rounded-3xl blur-xl opacity-50 -z-10" />
 
                   <div className="mb-6">
@@ -220,6 +246,19 @@ const PricingStageSelector = () => {
                       <span className="text-muted-foreground">/ month</span>
                     </div>
                     <p className="text-muted-foreground">{currentStage.recommended.tagline}</p>
+                  </div>
+
+                  {/* Modules included */}
+                  <div className="mb-6 p-4 rounded-xl bg-muted/50 border border-border">
+                    <p className="text-xs font-medium text-muted-foreground mb-3">Modules included:</p>
+                    <div className="flex flex-wrap gap-2">
+                      {currentStage.recommended.modules.map((mod, i) => (
+                        <span key={i} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 text-primary text-sm font-medium">
+                          <Check className="w-3 h-3" />
+                          {mod.name}
+                        </span>
+                      ))}
+                    </div>
                   </div>
 
                   {/* Features */}
@@ -235,13 +274,19 @@ const PricingStageSelector = () => {
                   {/* CTA */}
                   <Button size="lg" className="w-full group" onClick={() => {
                     const price = parseInt(currentStage.recommended.price.replace("€", ""));
-                    if (hasItem(currentStage.recommended.name)) {
-                      removeItem(currentStage.recommended.name);
+                    if (isPackageInCart) {
+                      removePackage(packageId);
                     } else {
-                      addItem({ name: currentStage.recommended.name, price, type: "bundle" });
+                      addPackage({
+                        id: packageId,
+                        name: currentStage.recommended.name,
+                        price,
+                        type: "package",
+                        modules: currentStage.recommended.modules.map(m => ({ name: m.name, price: m.price })),
+                      });
                     }
                   }}>
-                    {hasItem(currentStage.recommended.name) ? "Remove from cart" : currentStage.recommended.cta}
+                    {isPackageInCart ? "Remove from cart" : currentStage.recommended.cta}
                     <motion.span
                       className="ml-2"
                       animate={{ x: [0, 4, 0] }}
@@ -270,10 +315,7 @@ const PricingStageSelector = () => {
                         >
                           <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-border">
                             {currentStage.recommended.apps.map((app, index) => (
-                              <span
-                                key={index}
-                                className="px-3 py-1 rounded-full bg-muted text-muted-foreground text-sm"
-                              >
+                              <span key={index} className="px-3 py-1 rounded-full bg-muted text-muted-foreground text-sm">
                                 {app}
                               </span>
                             ))}
@@ -290,7 +332,7 @@ const PricingStageSelector = () => {
                 <p className="text-sm font-medium text-muted-foreground mb-2">Or pick individual tools:</p>
                 {currentStage.alternatives.map((alt, index) => {
                   const altPrice = parseInt(alt.price.replace(/[^0-9]/g, ""));
-                  const isInCart = hasItem(alt.name);
+                  const isInCart = hasCustomModule(alt.name);
                   return (
                     <motion.div
                       key={alt.name}
@@ -299,9 +341,9 @@ const PricingStageSelector = () => {
                       transition={{ delay: index * 0.1 }}
                       onClick={() => {
                         if (isInCart) {
-                          removeItem(alt.name);
+                          removeCustomModule(alt.name);
                         } else {
-                          addItem({ name: alt.name, price: altPrice, type: "module" });
+                          addCustomModule({ name: alt.name, price: altPrice });
                         }
                       }}
                       className={`p-4 rounded-xl border transition-colors cursor-pointer ${
