@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
-import { Search, Loader2 } from "lucide-react";
+import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { blogPosts, categories } from "@/data/blogData";
@@ -12,7 +12,7 @@ const BlogGrid = () => {
   const [activeCategory, setActiveCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
   const [visibleCount, setVisibleCount] = useState(POSTS_PER_PAGE);
-  const sentinelRef = useRef<HTMLDivElement>(null);
+  
 
   const filteredPosts = blogPosts.filter((post) => {
     const matchesCategory = activeCategory === "all" || 
@@ -35,23 +35,7 @@ const BlogGrid = () => {
     setVisibleCount((prev) => Math.min(prev + POSTS_PER_PAGE, filteredPosts.length));
   }, [filteredPosts.length]);
 
-  // IntersectionObserver for infinite scroll
-  useEffect(() => {
-    if (!hasMore) return;
-    const el = sentinelRef.current;
-    if (!el) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          loadMore();
-        }
-      },
-      { rootMargin: "200px" }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [hasMore, loadMore]);
 
   return (
     <section className="py-16">
@@ -98,10 +82,17 @@ const BlogGrid = () => {
           ))}
         </div>
 
-        {/* Infinite scroll sentinel */}
+        {/* Load More */}
         {hasMore && (
-          <div ref={sentinelRef} className="flex justify-center py-10">
-            <Loader2 className="w-6 h-6 animate-spin text-muted-foreground" />
+          <div className="flex justify-center pt-12">
+            <Button
+              variant="outline"
+              size="lg"
+              onClick={loadMore}
+              className="rounded-full"
+            >
+              Load More Articles
+            </Button>
           </div>
         )}
 
