@@ -81,9 +81,11 @@ const Header = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="ghost" size="sm">
-              Log in
-            </Button>
+            <a href="https://projector.pzaz.io/sign-in">
+              <Button variant="ghost" size="sm">
+                Log in
+              </Button>
+            </a>
             <Button variant="default" size="sm">
               Start for Free
             </Button>
@@ -115,7 +117,7 @@ const Header = () => {
                 )
               )}
               <hr className="border-border/50" />
-              <Button variant="ghost" className="justify-start">Log in</Button>
+              <a href="https://projector.pzaz.io/sign-in"><Button variant="ghost" className="justify-start">Log in</Button></a>
               <Button variant="default">Start for Free</Button>
             </div>
           </motion.div>
