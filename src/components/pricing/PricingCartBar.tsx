@@ -18,7 +18,7 @@ const PricingCartBar = () => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
-          className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-3rem)] max-w-6xl"
+          className="fixed bottom-8 inset-x-4 sm:inset-x-6 lg:inset-x-auto lg:left-1/2 lg:-translate-x-1/2 z-50 lg:w-[calc(100%-4rem)] lg:max-w-5xl"
         >
           <div className="rounded-3xl border border-primary/20 bg-secondary/95 backdrop-blur-xl shadow-2xl overflow-hidden">
             {/* Expanded view - package details */}
