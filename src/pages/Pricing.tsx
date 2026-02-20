@@ -15,9 +15,20 @@ const Pricing = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Pricing – Pzaz"
-        description="Flexible pricing plans for indie filmmakers and production teams. Start free and scale as your productions grow."
-        url="https://pzaz-sparkle-showcase.lovable.app/pricing"
+        title="Pricing – Pzaz Film Production Software"
+        description="Flexible pricing for indie filmmakers and production teams. Individual tools from €19/mo, bundles from €99/mo. Start free and scale as your productions grow."
+        url="https://pzaz.io/pricing-page/"
+        keywords={[
+          "pzaz pricing",
+          "film production software pricing",
+          "indie filmmaker pricing",
+          "production management plans",
+          "screenwriting software cost",
+          "film budgeting software pricing",
+          "StudioBinder alternative pricing",
+          "Celtx alternative pricing",
+        ]}
+        canonical="https://pzaz.io/pricing-page/"
       />
       <PricingHeader />
       <main>
