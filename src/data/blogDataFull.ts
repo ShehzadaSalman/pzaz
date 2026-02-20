@@ -395,7 +395,7 @@ This data is sourced from a sample of 1,063 USA independent filmmakers' opinions
   },
   {
     id: "1",
-    slug: "best-film-production-software-usa-2025",
+    slug: "film-production-software-usa",
     title: "Best Film Production Software: USA 2025",
     excerpt: "A data-backed analysis of what U.S. filmmakers value most in production software, from editing support and collaboration to training and workflow tools.",
     content: `
