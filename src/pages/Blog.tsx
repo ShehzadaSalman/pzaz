@@ -17,7 +17,7 @@ const Blog = () => {
       <SEO
         title="Pzaz Blog – Filmmaker Interviews, Industry Insights & Production Tips"
         description="The Film Maker Entrepreneur blog by Pzaz. Interviews, industry insights, production tips, film business advice and the latest in film production technology."
-        url="https://pzaz-sparkle-showcase.lovable.app/blog"
+        url="https://pzaz-sparkle-showcase.lovable.app/producer-blog"
       />
       <Header />
       <main>

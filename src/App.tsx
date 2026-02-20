@@ -25,11 +25,12 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/script" element={<Script />} />
           <Route path="/pricing" element={<Pricing />} />
-          <Route path="/blog" element={<Blog />} />
+          <Route path="/producer-blog" element={<Blog />} />
+          <Route path="/producer-blog/category/:categorySlug" element={<BlogCategory />} />
+          <Route path="/producer-blog/:slug" element={<BlogArticle />} />
+          <Route path="/blog" element={<Navigate to="/producer-blog" replace />} />
           <Route path="/blog/category/:categorySlug" element={<BlogCategory />} />
           <Route path="/blog/:slug" element={<BlogArticle />} />
-          <Route path="/producer-blog" element={<Navigate to="/blog" replace />} />
-          <Route path="/producer-blog/:slug" element={<Navigate to="/blog/:slug" replace />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

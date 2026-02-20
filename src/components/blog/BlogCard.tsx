@@ -14,7 +14,7 @@ const BlogCard = ({ post, featured = false }: BlogCardProps) => {
   if (featured) {
     return (
       <Link
-        to={`/blog/${post.slug}`}
+        to={`/producer-blog/${post.slug}`}
         className="group relative block overflow-hidden rounded-2xl shadow-[var(--shadow-featured)] transition-all duration-300 hover:shadow-[var(--shadow-card-hover)]"
       >
         <div className="grid md:grid-cols-2">
@@ -54,7 +54,7 @@ const BlogCard = ({ post, featured = false }: BlogCardProps) => {
 
   return (
     <Link
-      to={`/blog/${post.slug}`}
+      to={`/producer-blog/${post.slug}`}
       className="group flex h-full flex-col overflow-hidden rounded-xl bg-card shadow-[var(--shadow-card)] transition-all duration-300 hover:shadow-[var(--shadow-card-hover)] hover:-translate-y-1"
     >
       <div className="relative aspect-[16/10] overflow-hidden">
