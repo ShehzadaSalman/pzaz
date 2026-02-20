@@ -129,7 +129,7 @@ const ArticleContent = ({ article }: ArticleContentProps) => {
               {article.readingTime} min read
             </span>
             <div className="relative ml-auto" ref={shareMenuRef}>
-              <button onClick={handleShare} className="flex items-center gap-1.5 text-primary transition-colors hover:text-primary/80">
+              <button onClick={() => setShowShareMenu((prev) => !prev)} className="flex items-center gap-1.5 text-primary transition-colors hover:text-primary/80">
                 <Share2 className="h-4 w-4" />
                 Share
               </button>
