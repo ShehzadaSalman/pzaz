@@ -13,7 +13,22 @@ import SEO from "@/components/SEO";
 const Index = () => {
   return (
     <PageLayout>
-      <SEO />
+      <SEO
+        title="Pzaz – Film Production Software for Indie Filmmakers"
+        description="Pzaz is the all-in-one film production platform for indie filmmakers. Manage scripts, budgets, schedules, and crew — powered by AI."
+        keywords={[
+          "film production software",
+          "indie filmmaking",
+          "production management",
+          "screenwriting software",
+          "film budgeting",
+          "production scheduling",
+          "crew management",
+          "AI film production",
+          "Pzaz",
+        ]}
+        canonical="https://pzaz.io/"
+      />
       <Hero />
       <ProblemSection />
       <SolutionSection />
