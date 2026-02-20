@@ -79,14 +79,6 @@ const BlogCategory = () => {
               transition={{ duration: 0.6 }}
               className="max-w-4xl mx-auto"
             >
-              <Link
-                to="/producer-blog"
-                className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                Back to all articles
-              </Link>
-
               <div className="text-center">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6 mx-auto">
                   <span className="text-primary">{categoryIcons[category.slug]}</span>
@@ -109,8 +101,16 @@ const BlogCategory = () => {
         <section className="py-16">
           <div className="max-w-6xl mx-auto px-6">
             <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 mb-12">
-              <div className="flex flex-wrap gap-2">
-                {relevantSubCategories.map((cat) => (
+              <div className="flex flex-wrap items-center gap-2">
+                <Link
+                  to="/producer-blog"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-sm font-medium text-primary hover:bg-primary/10 transition-colors"
+                >
+                  <ArrowLeft className="w-3.5 h-3.5" />
+                  All Articles
+                </Link>
+                <div className="w-px h-6 bg-border mx-1 hidden sm:block" />
+                {relevantSubCategories.filter((cat) => cat.id !== "all").map((cat) => (
                   <Button
                     key={cat.id}
                     variant={activeSubCategory === cat.id ? "default" : "outline"}
