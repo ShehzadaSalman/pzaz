@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const SITE_URL = "https://pzaz-sparkle-showcase.lovable.app";
+const SITE_URL = "https://pzaz.io";
 const DEFAULT_TITLE = "Pzaz – Film Production Software";
 const DEFAULT_DESCRIPTION =
   "Pzaz is the all-in-one film production platform for indie filmmakers. Manage scripts, budgets, schedules, and crew — powered by AI.";

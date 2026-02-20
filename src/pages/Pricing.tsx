@@ -17,7 +17,7 @@ const Pricing = () => {
       <SEO
         title="Pricing – Pzaz Film Production Software"
         description="Flexible pricing for indie filmmakers and production teams. Individual tools from €19/mo, bundles from €99/mo. Start free and scale as your productions grow."
-        url="https://pzaz.io/pricing-page/"
+        url="https://pzaz.io/pricing"
         keywords={[
           "pzaz pricing",
           "film production software pricing",
@@ -28,7 +28,7 @@ const Pricing = () => {
           "StudioBinder alternative pricing",
           "Celtx alternative pricing",
         ]}
-        canonical="https://pzaz.io/pricing-page/"
+        canonical="https://pzaz.io/pricing"
       />
       <PricingHeader />
       <main>

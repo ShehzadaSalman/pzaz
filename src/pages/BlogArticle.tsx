@@ -42,7 +42,7 @@ const BlogArticle = () => {
         title={article.seo?.title || `${article.title} | Pzaz`}
         description={article.seo?.description || article.excerpt}
         image={article.seo?.ogImage || article.featuredImage}
-        url={`https://pzaz-sparkle-showcase.lovable.app/producer-blog/${slug}`}
+        url={`https://pzaz.io/producer-blog/${slug}`}
         type="article"
         keywords={article.seo?.keywords}
         canonical={article.seo?.canonical}
