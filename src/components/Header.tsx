@@ -16,14 +16,14 @@ interface NavItem {
 }
 
 const defaultNavItems: NavItem[] = [
-  { label: "Blog", to: "/blog" },
+  { label: "Blog", to: "/producer-blog" },
   { label: "Script", to: "/script" },
   { label: "Pricing", to: "/pricing" },
   { label: "Products", to: "/#products", isHash: true },
 ];
 
 const blogNavItems: NavItem[] = [
-  { label: "Blog", to: "/blog" },
+  { label: "Blog", to: "/producer-blog" },
   { label: "Script", to: "/script" },
   { label: "Pricing", to: "/pricing" },
   { label: "Products", to: "/#products", isHash: true },

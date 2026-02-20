@@ -32,7 +32,7 @@ const BlogCategory = () => {
   const category = majorCategories.find((c) => c.slug === categorySlug);
 
   if (!category) {
-    return <Navigate to="/blog" replace />;
+    return <Navigate to="/producer-blog" replace />;
   }
 
   const majorPosts = blogPosts.filter((p) => p.majorCategory === category.id);
@@ -65,7 +65,7 @@ const BlogCategory = () => {
       <SEO
         title={`${category.id} – Pzaz Blog`}
         description={category.description}
-        url={`https://pzaz-sparkle-showcase.lovable.app/blog/category/${category.slug}`}
+        url={`https://pzaz-sparkle-showcase.lovable.app/producer-blog/category/${category.slug}`}
       />
       <Header />
       <main>
@@ -80,7 +80,7 @@ const BlogCategory = () => {
               className="max-w-4xl mx-auto"
             >
               <Link
-                to="/blog"
+                to="/producer-blog"
                 className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6"
               >
                 <ArrowLeft className="w-4 h-4" />

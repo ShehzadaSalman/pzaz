@@ -34,15 +34,15 @@ const BlogHero = () => {
 
           {/* Topic pills */}
           <div className="flex flex-wrap items-center justify-center gap-3">
-            <Link to="/blog/category/industry-insights" className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border hover:border-primary/40 hover:bg-primary/5 transition-colors">
+            <Link to="/producer-blog/category/industry-insights" className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border hover:border-primary/40 hover:bg-primary/5 transition-colors">
               <Film className="w-4 h-4 text-primary" />
               <span className="text-sm text-foreground">Industry Insights</span>
             </Link>
-            <Link to="/blog/category/production-tips" className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border hover:border-primary/40 hover:bg-primary/5 transition-colors">
+            <Link to="/producer-blog/category/production-tips" className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border hover:border-primary/40 hover:bg-primary/5 transition-colors">
               <Lightbulb className="w-4 h-4 text-primary" />
               <span className="text-sm text-foreground">Production Tips</span>
             </Link>
-            <Link to="/blog/category/filmmaker-interviews" className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border hover:border-primary/40 hover:bg-primary/5 transition-colors">
+            <Link to="/producer-blog/category/filmmaker-interviews" className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border hover:border-primary/40 hover:bg-primary/5 transition-colors">
               <Newspaper className="w-4 h-4 text-primary" />
               <span className="text-sm text-foreground">Filmmaker Interviews</span>
             </Link>
