@@ -224,7 +224,7 @@ Sourced using Artios from an independent sample of 6,260,767 United States indep
   },
   {
     id: "2",
-    slug: "film-task-management-statistics-usa-2025",
+    slug: "film-task-management-statistics-usa",
     title: "Film Task Management Statistics: USA 2025",
     excerpt: "A data-driven look at how 1,063 independent US filmmakers manage tasks, collaborate with teams, and handle task dependencies during production.",
     content: `
