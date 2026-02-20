@@ -27,7 +27,7 @@ const BlogArticle = () => {
 
   if (!article) {
     return (
-      <PageLayout>
+      <PageLayout className="min-h-screen bg-[#faf9fb]">
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-foreground mb-4">Article Not Found</h1>
@@ -47,7 +47,7 @@ const BlogArticle = () => {
   const displayArticle = loadedArticle || article;
 
   return (
-    <PageLayout>
+    <PageLayout className="min-h-screen bg-[#faf9fb]">
       <SEO
         title={article.seo?.title || `${article.title} | Pzaz`}
         description={article.seo?.description || article.excerpt}
