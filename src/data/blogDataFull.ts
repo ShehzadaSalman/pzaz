@@ -1206,7 +1206,7 @@ For those interested in exploring her work, Lizeth Yarleque's projects can be fo
   },
   {
     id: "50",
-    slug: "scene-breakdown-statistics-usa-2025",
+    slug: "scene-breakdown-statistics-for-usa",
     title: "Scene Breakdown Statistics: USA 2025",
     excerpt: "A data-driven analysis of scene breakdown practices among 9,406 independent filmmakers in the US, revealing key insights on collaboration, tools, and industry trends.",
     content: `
