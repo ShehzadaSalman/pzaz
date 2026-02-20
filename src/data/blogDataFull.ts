@@ -677,7 +677,7 @@ Stay tuned for the next product update in the next few weeks.
   },
   {
     id: "10",
-    slug: "film-scheduling-statistics-usa-2025",
+    slug: "film-scheduling-statistics-usa",
     title: "Film Scheduling Statistics: USA 2025",
     excerpt: "How are independent filmmakers handling scheduling in 2025? We surveyed data from 16,608 indie filmmakers to reveal the real story behind scheduling in the independent film industry.",
     content: `Behind every great film is a rock-solid schedule—or at least an attempt at one. For independent filmmakers across the US, planning shoot days, managing crews, and juggling last-minute changes are all part of the production rollercoaster. But how are they handling it in 2025?
