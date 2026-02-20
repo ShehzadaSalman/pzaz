@@ -1,7 +1,6 @@
 import React from "react";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import { BlogPost } from "@/data/blogData";
 
 interface ArticleHeroProps {
@@ -9,34 +8,28 @@ interface ArticleHeroProps {
 }
 
 const ArticleHero = ({ article }: ArticleHeroProps) => {
-  const heroImage = article.featuredImage;
-
   return (
-    <section className="relative h-[60vh] min-h-[400px] max-h-[600px] w-full overflow-hidden">
-      {/* Background image */}
+    <div className="relative h-[40vh] min-h-[300px] w-full overflow-hidden md:h-[50vh]">
       <img
-        src={heroImage}
+        src={article.featuredImage}
         alt={article.title}
         referrerPolicy="no-referrer"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="h-full w-full object-cover"
+        loading="eager"
       />
-
-      {/* Dark overlay gradient */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
-
-      {/* Content overlay */}
-      <div className="absolute inset-0 flex flex-col justify-between">
-        {/* Back button */}
-        <div className="container mx-auto px-6 pt-28">
-          <Link to="/producer-blog">
-            <Button variant="ghost" size="sm" className="gap-2 text-white/90 hover:text-white hover:bg-white/10">
-              <ArrowLeft className="w-4 h-4" />
-              Back to Blog
-            </Button>
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12">
+        <div className="max-w-6xl mx-auto">
+          <Link
+            to="/producer-blog"
+            className="mb-4 inline-flex items-center gap-1 text-sm text-primary-foreground/80 transition-colors hover:text-primary-foreground"
+          >
+            <ArrowLeft className="h-3 w-3" />
+            Back to Blog
           </Link>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
