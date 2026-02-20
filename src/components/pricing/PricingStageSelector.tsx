@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { PenTool, ClipboardList, Clapperboard, Building2, ChevronDown, Check, Star } from "lucide-react";
+import { usePricingCart } from "@/contexts/PricingCartContext";
 
 interface Stage {
   id: string;
@@ -129,6 +130,7 @@ const stages: Stage[] = [
 const PricingStageSelector = () => {
   const [selectedStage, setSelectedStage] = useState<string>("planning");
   const [showApps, setShowApps] = useState<boolean>(false);
+  const { addItem, removeItem, hasItem, clearCart } = usePricingCart();
 
   const currentStage = stages.find(s => s.id === selectedStage) || stages[1];
 
@@ -231,8 +233,15 @@ const PricingStageSelector = () => {
                   </ul>
 
                   {/* CTA */}
-                  <Button size="lg" className="w-full group">
-                    {currentStage.recommended.cta}
+                  <Button size="lg" className="w-full group" onClick={() => {
+                    const price = parseInt(currentStage.recommended.price.replace("€", ""));
+                    if (hasItem(currentStage.recommended.name)) {
+                      removeItem(currentStage.recommended.name);
+                    } else {
+                      addItem({ name: currentStage.recommended.name, price, type: "bundle" });
+                    }
+                  }}>
+                    {hasItem(currentStage.recommended.name) ? "Remove from cart" : currentStage.recommended.cta}
                     <motion.span
                       className="ml-2"
                       animate={{ x: [0, 4, 0] }}
@@ -279,21 +288,39 @@ const PricingStageSelector = () => {
               {/* Alternatives */}
               <div className="space-y-4">
                 <p className="text-sm font-medium text-muted-foreground mb-2">Or pick individual tools:</p>
-                {currentStage.alternatives.map((alt, index) => (
-                  <motion.div
-                    key={alt.name}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="p-4 rounded-xl border border-border bg-card hover:border-primary/50 transition-colors cursor-pointer"
-                  >
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="font-semibold text-foreground">{alt.name}</span>
-                      <span className="text-sm font-medium text-primary">{alt.price}</span>
-                    </div>
-                    <p className="text-sm text-muted-foreground">{alt.description}</p>
-                  </motion.div>
-                ))}
+                {currentStage.alternatives.map((alt, index) => {
+                  const altPrice = parseInt(alt.price.replace(/[^0-9]/g, ""));
+                  const isInCart = hasItem(alt.name);
+                  return (
+                    <motion.div
+                      key={alt.name}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      onClick={() => {
+                        if (isInCart) {
+                          removeItem(alt.name);
+                        } else {
+                          addItem({ name: alt.name, price: altPrice, type: "module" });
+                        }
+                      }}
+                      className={`p-4 rounded-xl border transition-colors cursor-pointer ${
+                        isInCart
+                          ? "border-primary bg-primary/5"
+                          : "border-border bg-card hover:border-primary/50"
+                      }`}
+                    >
+                      <div className="flex items-center justify-between mb-2">
+                        <div className="flex items-center gap-2">
+                          <span className="font-semibold text-foreground">{alt.name}</span>
+                          {isInCart && <Check className="w-4 h-4 text-primary" />}
+                        </div>
+                        <span className="text-sm font-medium text-primary">{alt.price}</span>
+                      </div>
+                      <p className="text-sm text-muted-foreground">{alt.description}</p>
+                    </motion.div>
+                  );
+                })}
               </div>
             </div>
           </motion.div>
