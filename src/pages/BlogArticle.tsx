@@ -39,11 +39,13 @@ const BlogArticle = () => {
   return (
     <PageLayout>
       <SEO
-        title={`${article.title} | Pzaz`}
-        description={article.excerpt}
-        image={article.featuredImage}
+        title={article.seo?.title || `${article.title} | Pzaz`}
+        description={article.seo?.description || article.excerpt}
+        image={article.seo?.ogImage || article.featuredImage}
         url={`https://pzaz-sparkle-showcase.lovable.app/producer-blog/${slug}`}
         type="article"
+        keywords={article.seo?.keywords}
+        canonical={article.seo?.canonical}
       />
       <article>
         <ArticleHero article={displayArticle!} />
