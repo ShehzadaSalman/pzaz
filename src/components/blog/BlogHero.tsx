@@ -19,17 +19,17 @@ const BlogHero = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
             <Newspaper className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">The Pzaz Journal</span>
+            <span className="text-sm font-medium text-primary">The Film Maker Entrepreneur</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-            Insights for Modern
-            <span className="gradient-text"> Filmmakers</span>
+            Interviews, Industry
+            <span className="gradient-text"> &amp; Info</span>
           </h1>
 
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-            Industry analysis, filmmaker interviews, production tips, and the latest 
-            in film technology. Your resource for smarter production.
+            Filmmaker interviews, industry insights, production tips, film business school 
+            and the latest in film production technology. Get Pzazzed!
           </p>
 
           {/* Topic pills */}
