@@ -1106,7 +1106,7 @@ At a time when much of the industry still leans toward formula and flash, Vageli
   },
   {
     id: "14",
-    slug: "product-update-march-2025",
+    slug: "march-product-update",
     title: "Product update – March 2025",
     excerpt: "Get ready for our latest product update! Spring is just around the corner, and we've released a fresh new update to Pzaz with several new features, improvements, and bug fixes.",
     content: `**Get ready for our latest product update**
