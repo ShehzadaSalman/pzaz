@@ -43,9 +43,11 @@ const ScriptHeader = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="ghost" size="sm">
-              Log in
-            </Button>
+            <a href="https://projector.pzaz.io/sign-in">
+              <Button variant="ghost" size="sm">
+                Log in
+              </Button>
+            </a>
             <Button variant="default" size="sm" className="group">
               <img src={iconImportScript} alt="" className="w-4 h-4 mr-1 [filter:brightness(0)_invert(1)]" />
               Import a Script
@@ -77,7 +79,7 @@ const ScriptHeader = () => {
               <a href="#ai" className="text-foreground font-medium py-2">AI Tools</a>
               <a href="#faq" className="text-foreground font-medium py-2">FAQ</a>
               <hr className="border-border/50" />
-              <Button variant="ghost" className="justify-start">Log in</Button>
+              <a href="https://projector.pzaz.io/sign-in"><Button variant="ghost" className="justify-start">Log in</Button></a>
               <Button variant="default">
                 <img src={iconImportScript} alt="" className="w-4 h-4 mr-2 [filter:brightness(0)_invert(1)]" />
                 Import a Script

@@ -38,9 +38,11 @@ const PricingHeader = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="ghost" size="sm">
-              Log in
-            </Button>
+            <a href="https://projector.pzaz.io/sign-in">
+              <Button variant="ghost" size="sm">
+                Log in
+              </Button>
+            </a>
             <Button variant="default" size="sm">
               Start Free
             </Button>
@@ -71,7 +73,7 @@ const PricingHeader = () => {
               <a href="#ai" className="text-foreground font-medium py-2">AI Add-ons</a>
               <Link to="/script" className="text-foreground font-medium py-2">Script</Link>
               <hr className="border-border/50" />
-              <Button variant="ghost" className="justify-start">Log in</Button>
+              <a href="https://projector.pzaz.io/sign-in"><Button variant="ghost" className="justify-start">Log in</Button></a>
               <Button variant="default">Start Free</Button>
             </div>
           </motion.div>
