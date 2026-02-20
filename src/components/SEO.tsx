@@ -13,6 +13,8 @@ interface SEOProps {
   image?: string;
   url?: string;
   type?: string;
+  keywords?: string[];
+  canonical?: string;
 }
 
 const SEO = ({
@@ -21,10 +23,16 @@ const SEO = ({
   image = DEFAULT_IMAGE,
   url = SITE_URL,
   type = "website",
+  keywords,
+  canonical,
 }: SEOProps) => (
   <Helmet>
     <title>{title}</title>
     <meta name="description" content={description} />
+    {keywords && keywords.length > 0 && (
+      <meta name="keywords" content={keywords.join(", ")} />
+    )}
+    {canonical && <link rel="canonical" href={canonical} />}
 
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />

@@ -17,6 +17,16 @@ export const majorCategories: { id: MajorCategoryId; slug: string; description: 
   { id: "Filmmaker Interviews", slug: "filmmaker-interviews", description: "Conversations with filmmakers sharing their stories, journeys, and craft." },
 ];
 
+export interface BlogSEO {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  canonical?: string;
+}
+
 export interface BlogPost {
   id: string;
   slug: string;
@@ -32,6 +42,7 @@ export interface BlogPost {
   publishedAt: string;
   readingTime: number;
   featured?: boolean;
+  seo?: BlogSEO;
 }
 
 export const categories: { id: BlogFilterCategoryId; label: string }[] = [
@@ -48,7 +59,7 @@ export const categories: { id: BlogFilterCategoryId; label: string }[] = [
 
 // Lightweight metadata-only blog posts (content loaded on demand)
 export const blogPosts: BlogPost[] = [
-  { id: "0", slug: "best-film-screenwriting-software-usa", title: "Best Film Screenwriting Software US in 2025", excerpt: "A deep data-led look at what independent U.S. filmmakers value most in screenwriting software, from cost and collaboration to AI and workflow design.", content: "", category: "Comparisons & Analysis", majorCategory: "Industry Insights", featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Blog-image-135.png", authorName: "Ninia Berishvili", publishedAt: "2025-07-28", readingTime: 14, featured: true },
+  { id: "0", slug: "best-film-screenwriting-software-usa", title: "Best Film Screenwriting Software US in 2025", excerpt: "A deep data-led look at what independent U.S. filmmakers value most in screenwriting software, from cost and collaboration to AI and workflow design.", content: "", category: "Comparisons & Analysis", majorCategory: "Industry Insights", featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Blog-image-135.png", authorName: "Ninia Berishvili", publishedAt: "2025-07-28", readingTime: 14, featured: true, seo: { title: "Best Film Screenwriting Software US in 2025 | Pzaz", description: "Compare the best screenwriting software for US filmmakers in 2025. Data-driven analysis of cost, AI features, collaboration tools, and workflow design for indie filmmakers.", keywords: ["best screenwriting software", "film screenwriting software", "screenwriting software 2025", "screenwriting tools USA", "indie filmmaker software", "AI screenwriting", "screenplay writing software", "Final Draft alternative", "Celtx alternative", "screenwriting collaboration"], ogTitle: "Best Film Screenwriting Software US in 2025", ogDescription: "A deep data-led look at what independent U.S. filmmakers value most in screenwriting software, from cost and collaboration to AI and workflow design.", ogImage: "https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Blog-image-135.png", canonical: "https://pzaz.io/producer-blog/best-film-screenwriting-software-usa/" } },
   { id: "2", slug: "film-task-management-statistics-usa-2025", title: "Film Task Management Statistics: USA 2025", excerpt: "A data-driven look at how 1,063 independent US filmmakers manage tasks, collaborate with teams, and handle task dependencies during production.", content: "", category: "Comparisons & Analysis", majorCategory: "Industry Insights", featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2025/05/New-Blog-image.png", authorName: "Ninia Berishvili", publishedAt: "2025-05-23", readingTime: 12, featured: false },
   { id: "1", slug: "best-film-production-software-usa-2025", title: "Best Film Production Software: USA 2025", excerpt: "A data-backed analysis of what U.S. filmmakers value most in production software, from editing support and collaboration to training and workflow tools.", content: "", category: "Comparisons & Analysis", majorCategory: "Industry Insights", featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2025/06/Blog-image-July-2025.png", authorName: "Ninia Berishvili", publishedAt: "2025-07-03", readingTime: 13, featured: false },
   { id: "8", slug: "visualize-your-story-like-a-pro-introducing-pzaz-storyboards", title: "Visualize Your Story Like a Pro: Introducing Pzaz Storyboards", excerpt: "We're excited to announce the launch of a brand-new feature in Pzaz that will revolutionize how you plan and visualize your film projects — say hello to Storyboards!", content: "", category: ["News & Updates", "Production & Producing"], majorCategory: "Production Tips", featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2024/07/release_notes_wide.png", authorName: "Vincent Weberink", publishedAt: "2024-07-01", readingTime: 4, featured: false },
