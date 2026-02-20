@@ -5,7 +5,7 @@ import PricingStageSelector from "@/components/pricing/PricingStageSelector";
 import PricingBundles from "@/components/pricing/PricingBundles";
 import PricingFlow from "@/components/pricing/PricingFlow";
 import PricingBuildYourOwn from "@/components/pricing/PricingBuildYourOwn";
-import PricingAI from "@/components/pricing/PricingAI";
+
 import PricingTrust from "@/components/pricing/PricingTrust";
 import PricingCTA from "@/components/pricing/PricingCTA";
 import Footer from "@/components/Footer";
@@ -37,7 +37,6 @@ const Pricing = () => {
         <PricingBundles />
         <PricingFlow />
         <PricingBuildYourOwn />
-        <PricingAI />
         <PricingTrust />
         <PricingCTA />
       </main>
