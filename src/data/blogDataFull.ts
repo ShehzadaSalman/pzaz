@@ -863,7 +863,7 @@ The data was sourced from an independent sample of 16,608 USA independent filmma
   },
   {
     id: "11",
-    slug: "pzaz-update-april-2025-system-release",
+    slug: "pzaz-update-april-system-release",
     title: "Pzaz Update – April 2025 System Release",
     excerpt: "Let's bring you up to speed on our latest product update, including workflow templates, manage section improvements, and UX overhaul.",
     content: `
