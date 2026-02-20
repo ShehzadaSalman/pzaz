@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ShoppingCart, X, ChevronUp, ChevronDown, Package } from "lucide-react";
+import { ShoppingCart, X, ChevronUp, ChevronDown, Package, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { usePricingCart } from "@/contexts/PricingCartContext";
 
 const PricingCartBar = () => {
-  const { packages, totalPrice, totalModuleCount, removePackage, removeCustomModule } = usePricingCart();
+  const { packages, totalPrice, totalModuleCount, removePackage, removeCustomModule, clearCart } = usePricingCart();
   const [expanded, setExpanded] = useState(false);
 
   const hasItems = packages.length > 0;
@@ -18,9 +18,9 @@ const PricingCartBar = () => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
-          className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-5xl"
+          className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-3rem)] max-w-6xl"
         >
-          <div className="rounded-2xl border border-primary/20 bg-secondary/95 backdrop-blur-xl shadow-2xl overflow-hidden">
+          <div className="rounded-3xl border border-primary/20 bg-secondary/95 backdrop-blur-xl shadow-2xl overflow-hidden">
             {/* Expanded view - package details */}
             <AnimatePresence>
               {expanded && (
@@ -31,33 +31,33 @@ const PricingCartBar = () => {
                   transition={{ duration: 0.2 }}
                   className="overflow-hidden"
                 >
-                  <div className="px-6 pt-4 pb-2 space-y-3 max-h-[300px] overflow-y-auto">
+                  <div className="px-8 pt-6 pb-3 space-y-4 max-h-[350px] overflow-y-auto">
                     {packages.map((pkg) => (
-                      <div key={pkg.id} className="p-3 rounded-xl bg-muted/50 border border-border">
-                        <div className="flex items-center justify-between mb-2">
-                          <div className="flex items-center gap-2">
-                            <Package className="w-4 h-4 text-primary" />
-                            <span className="font-semibold text-foreground text-sm">{pkg.name}</span>
-                            <span className="text-xs text-muted-foreground px-2 py-0.5 rounded-full bg-muted">
+                      <div key={pkg.id} className="p-4 rounded-2xl bg-muted/50 border border-border">
+                        <div className="flex items-center justify-between mb-3">
+                          <div className="flex items-center gap-3">
+                            <Package className="w-5 h-5 text-primary" />
+                            <span className="font-bold text-foreground text-base">{pkg.name}</span>
+                            <span className="text-xs text-muted-foreground px-2.5 py-1 rounded-full bg-muted font-medium">
                               {pkg.type === "custom" ? "Custom" : "Package"}
                             </span>
                           </div>
-                          <div className="flex items-center gap-3">
-                            <span className="font-bold text-primary text-sm">€{pkg.price}/mo</span>
+                          <div className="flex items-center gap-4">
+                            <span className="font-bold text-primary text-base">€{pkg.price}/mo</span>
                             <button
                               onClick={() => removePackage(pkg.id)}
-                              className="w-5 h-5 rounded-full bg-destructive/10 text-destructive flex items-center justify-center hover:bg-destructive/20 transition-colors"
+                              className="w-7 h-7 rounded-full bg-destructive/10 text-destructive flex items-center justify-center hover:bg-destructive/20 transition-colors"
                             >
-                              <X className="w-3 h-3" />
+                              <X className="w-4 h-4" />
                             </button>
                           </div>
                         </div>
                         {/* Module chips */}
-                        <div className="flex flex-wrap gap-1.5">
+                        <div className="flex flex-wrap gap-2">
                           {pkg.modules.map((mod) => (
                             <span
                               key={mod.name}
-                              className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-primary/10 text-primary text-xs font-medium group"
+                              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 text-primary text-sm font-medium group"
                             >
                               {mod.name}
                               {pkg.type === "custom" && (
@@ -68,7 +68,7 @@ const PricingCartBar = () => {
                                   }}
                                   className="ml-0.5 opacity-0 group-hover:opacity-100 transition-opacity"
                                 >
-                                  <X className="w-3 h-3" />
+                                  <X className="w-3.5 h-3.5" />
                                 </button>
                               )}
                             </span>
@@ -82,39 +82,46 @@ const PricingCartBar = () => {
             </AnimatePresence>
 
             {/* Main bar */}
-            <div className="px-6 py-4">
-              <div className="flex items-center justify-between gap-4">
+            <div className="px-8 py-5">
+              <div className="flex items-center justify-between gap-6">
                 {/* Left: icon + summary */}
-                <div className="flex items-center gap-4 min-w-0">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-                    <ShoppingCart className="w-5 h-5 text-primary" />
+                <div className="flex items-center gap-5 min-w-0">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center">
+                    <ShoppingCart className="w-6 h-6 text-primary" />
                   </div>
                   <div className="min-w-0">
-                    <p className="font-semibold text-foreground text-sm">
+                    <p className="font-bold text-foreground text-base">
                       Subscription Total
                     </p>
-                    <p className="text-xs text-muted-foreground">
+                    <p className="text-sm text-muted-foreground">
                       {packages.length} package{packages.length !== 1 ? "s" : ""} · {totalModuleCount} module{totalModuleCount !== 1 ? "s" : ""}
                     </p>
                   </div>
-
-                  {/* Expand/collapse toggle */}
-                  <button
-                    onClick={() => setExpanded(!expanded)}
-                    className="hidden sm:flex items-center gap-1 px-3 py-1.5 rounded-lg bg-muted hover:bg-muted/80 text-muted-foreground text-xs font-medium transition-colors"
-                  >
-                    {expanded ? "Hide" : "View"} details
-                    {expanded ? <ChevronDown className="w-3 h-3" /> : <ChevronUp className="w-3 h-3" />}
-                  </button>
                 </div>
 
-                {/* Right: price + CTA */}
-                <div className="flex items-center gap-4 flex-shrink-0">
+                {/* Center: expand toggle */}
+                <button
+                  onClick={() => setExpanded(!expanded)}
+                  className="hidden sm:flex items-center gap-1.5 px-4 py-2 rounded-xl bg-muted hover:bg-muted/80 text-muted-foreground text-sm font-medium transition-colors"
+                >
+                  {expanded ? "Hide" : "View"} details
+                  {expanded ? <ChevronDown className="w-4 h-4" /> : <ChevronUp className="w-4 h-4" />}
+                </button>
+
+                {/* Right: price + actions */}
+                <div className="flex items-center gap-5 flex-shrink-0">
+                  <button
+                    onClick={clearCart}
+                    className="w-10 h-10 rounded-xl bg-destructive/10 text-destructive flex items-center justify-center hover:bg-destructive/20 transition-colors"
+                    title="Clear all"
+                  >
+                    <Trash2 className="w-5 h-5" />
+                  </button>
                   <div className="text-right">
-                    <p className="text-2xl font-bold text-foreground">€{totalPrice}</p>
-                    <p className="text-xs text-muted-foreground">per month</p>
+                    <p className="text-3xl font-bold text-foreground">€{totalPrice}</p>
+                    <p className="text-sm text-muted-foreground">per month</p>
                   </div>
-                  <Button size="lg" className="whitespace-nowrap">
+                  <Button size="lg" className="whitespace-nowrap text-base px-8 py-6">
                     START FOR FREE
                   </Button>
                 </div>
