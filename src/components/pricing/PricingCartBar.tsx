@@ -122,7 +122,11 @@ const PricingCartBar = () => {
                     <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground">€{totalPrice}</p>
                     <p className="text-xs sm:text-sm text-muted-foreground">per month</p>
                   </div>
-                  <Button size="lg" className="whitespace-nowrap text-sm sm:text-base px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
+                  <Button
+                    size="lg"
+                    className="whitespace-nowrap text-sm sm:text-base px-4 sm:px-6 lg:px-8 py-4 sm:py-6"
+                    onClick={() => window.open("https://projector.pzaz.io/checkout?plan=indie&period=month&bundles=pzaz_studio&currency=USD", "_blank")}
+                  >
                     START FOR FREE
                   </Button>
                 </div>
