@@ -568,7 +568,7 @@ Sourced using Artios from an independent sample of 130,979 independent filmmaker
   },
   {
     id: "8",
-    slug: "visualize-your-story-like-a-pro-introducing-pzaz-storyboards",
+    slug: "pzaz-product-update-storyboards-are-here",
     title: "Visualize Your Story Like a Pro: Introducing Pzaz Storyboards",
     excerpt: "We're excited to announce the launch of a brand-new feature in Pzaz that will revolutionize how you plan and visualize your film projects — say hello to Storyboards!",
     content: `## 🎬 Introducing the New Storyboard Feature on Pzaz
