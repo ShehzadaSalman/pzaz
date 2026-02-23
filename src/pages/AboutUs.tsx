@@ -284,13 +284,6 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Image Carousel Section */}
-      <section className="py-20 md:py-28 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <CarouselShowcase />
-        </div>
-      </section>
-
       {/* Who Can Benefit Section */}
       <section className="py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-6">
@@ -325,6 +318,13 @@ const AboutUs = () => {
               <span className="text-foreground">The Pzaz Manifesto</span>
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Image Carousel Section */}
+      <section className="py-20 md:py-28 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <CarouselShowcase />
         </div>
       </section>
     </PageLayout>
