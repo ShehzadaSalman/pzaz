@@ -100,9 +100,11 @@ const Header = () => {
                 Log in
               </Button>
             </a>
-            <Button variant="default" size="sm">
-              Start for Free
-            </Button>
+            <Link to="/pricing">
+              <Button variant="default" size="sm">
+                Start for Free
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -132,7 +134,7 @@ const Header = () => {
               )}
               <hr className="border-border/50" />
               <a href="https://projector.pzaz.io/sign-in"><Button variant="ghost" className="justify-start">Log in</Button></a>
-              <Button variant="default">Start for Free</Button>
+              <Link to="/pricing"><Button variant="default">Start for Free</Button></Link>
             </div>
           </motion.div>
         }

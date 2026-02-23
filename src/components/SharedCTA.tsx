@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import SectionHeader from "@/components/SectionHeader";
 import iconStar from "@/assets/material-symbols_family-star.svg";
 import languagesImg from "@/assets/languages.png";
@@ -65,15 +66,17 @@ const SharedCTA = ({
               )}
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Button
-                  variant="outline"
-                  size="xl"
-                  className="group bg-white/10 text-white border-white/30 hover:bg-white/20 rounded-[10px]"
-                  prefixIcon={primaryButtonPrefixIcon}
-                  postfixIcon={<ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
-                >
-                  {primaryButtonText}
-                </Button>
+                <Link to="/pricing">
+                  <Button
+                    variant="outline"
+                    size="xl"
+                    className="group bg-white/10 text-white border-white/30 hover:bg-white/20 rounded-[10px]"
+                    prefixIcon={primaryButtonPrefixIcon}
+                    postfixIcon={<ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
+                  >
+                    {primaryButtonText}
+                  </Button>
+                </Link>
                 <Button variant="outline" size="xl" className="text-white border-white/30 hover:bg-white/10 rounded-[10px]">
                   {secondaryButtonText}
                 </Button>

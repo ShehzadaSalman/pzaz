@@ -41,9 +41,11 @@ const BlogHeader = () => {
                 Log in
               </Button>
             </a>
-            <Button variant="default" size="sm">
-              Start for Free
-            </Button>
+            <Link to="/pricing">
+              <Button variant="default" size="sm">
+                Start for Free
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -72,7 +74,7 @@ const BlogHeader = () => {
               <a href="/#products" className="text-foreground font-medium py-2">Products</a>
               <hr className="border-border/50" />
               <a href="https://projector.pzaz.io/sign-in"><Button variant="ghost" className="justify-start">Log in</Button></a>
-              <Button variant="default">Start for Free</Button>
+              <Link to="/pricing"><Button variant="default">Start for Free</Button></Link>
             </div>
           </motion.div>
         )}

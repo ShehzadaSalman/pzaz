@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import ArrowIcon from "@/components/ui/ArrowIcon";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import ctaPlayIcon from "@/assets/cta-play-icon.svg";
 import banner1 from "@/assets/home-banner/banner1.png";
 import banner2 from "@/assets/home-banner/banner2.png";
@@ -118,10 +119,12 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6"
           >
-            <Button size="lg" className="group px-8">
-              Start For Free
-              <ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />
-            </Button>
+            <Link to="/pricing">
+              <Button size="lg" className="group px-8">
+                Start For Free
+                <ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />
+              </Button>
+            </Link>
             <Button
               variant="outline"
               size="lg"
