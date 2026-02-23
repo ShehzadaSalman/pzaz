@@ -14,7 +14,8 @@ function Pill({ icon, text, className, ...props }: PillProps) {
         className
       )}
       style={{
-        height: 26,
+        paddingTop: 2,
+        paddingBottom: 2,
         paddingLeft: 14,
         paddingRight: 14,
         gap: icon ? 5 : 0,
@@ -23,6 +24,7 @@ function Pill({ icon, text, className, ...props }: PillProps) {
         fontSize: 16,
         lineHeight: "23px",
         letterSpacing: "0%",
+        whiteSpace: "nowrap",
       }}
       {...props}
     >
