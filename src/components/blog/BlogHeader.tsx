@@ -20,6 +20,9 @@ const BlogHeader = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
+            <Link to="/about-us" className="text-muted-foreground hover:text-foreground transition-colors font-medium text-sm">
+              About
+            </Link>
             <Link to="/producer-blog" className="text-foreground font-medium text-sm">
               Blog
             </Link>
@@ -68,6 +71,7 @@ const BlogHeader = () => {
             className="md:hidden bg-background border-t border-border/50"
           >
             <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
+              <Link to="/about-us" className="text-foreground font-medium py-2">About</Link>
               <Link to="/producer-blog" className="text-foreground font-medium py-2">Blog</Link>
               <Link to="/script" className="text-foreground font-medium py-2">Script</Link>
               <Link to="/pricing" className="text-foreground font-medium py-2">Pricing</Link>

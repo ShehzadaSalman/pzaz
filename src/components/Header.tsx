@@ -16,6 +16,7 @@ interface NavItem {
 }
 
 const defaultNavItems: NavItem[] = [
+  { label: "About", to: "/about-us" },
   { label: "Blog", to: "/producer-blog" },
   { label: "Script", to: "/script" },
   { label: "Pricing", to: "/pricing" },
@@ -23,6 +24,7 @@ const defaultNavItems: NavItem[] = [
 ];
 
 const blogNavItems: NavItem[] = [
+  { label: "About", to: "/about-us" },
   { label: "Blog", to: "/producer-blog" },
   { label: "Script", to: "/script" },
   { label: "Pricing", to: "/pricing" },
@@ -35,10 +37,12 @@ const Header = () => {
   const isScriptPage = location.pathname === "/script";
   const isBlogRelated = location.pathname.startsWith("/blog") || location.pathname.startsWith("/producer-blog");
   const isPricingPage = location.pathname === "/pricing";
+  const isAboutPage = location.pathname === "/about-us";
 
   const navItems = isBlogRelated ? blogNavItems : defaultNavItems;
 
   const isActive = (item: NavItem) => {
+    if (item.to === "/about-us") return isAboutPage;
     if (item.to === "/producer-blog") return isBlogRelated;
     if (item.to === "/script") return isScriptPage;
     if (item.to === "/pricing") return isPricingPage;
