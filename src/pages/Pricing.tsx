@@ -2,7 +2,7 @@ import React from "react";
 import Header from "@/components/Header";
 import PricingHero from "@/components/pricing/PricingHero";
 import PricingStageSelector from "@/components/pricing/PricingStageSelector";
-import PricingBundles from "@/components/pricing/PricingBundles";
+
 import PricingFlow from "@/components/pricing/PricingFlow";
 import PricingBuildYourOwn from "@/components/pricing/PricingBuildYourOwn";
 import PricingTrust from "@/components/pricing/PricingTrust";
@@ -36,7 +36,6 @@ const Pricing = () => {
         <main>
           <PricingHero />
           <PricingStageSelector />
-          <PricingBundles />
           <PricingFlow />
           <PricingBuildYourOwn />
           <PricingTrust />
