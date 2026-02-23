@@ -353,7 +353,7 @@ const AboutUs = () => {
       </section>
 
       {/* Image Carousel Section */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-10 md:py-28 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <CarouselShowcase />
         </div>
