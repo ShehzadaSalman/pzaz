@@ -110,9 +110,14 @@ export const blogPosts: BlogPost[] = [
   { id: "49", slug: "pzaz-tv-offers-independent-film-productions-a-gateway-to-success", title: "Pzaz TV Offers Independent Film Productions a Gateway to Success", excerpt: "Pzaz TV repositions itself as the matchmaker of European independent feature films, facilitating a new gateway for independent film producers to access global viewers.", content: "", category: "News & Updates", majorCategory: "Production Tips", featuredImage: "https://pzaz.io/producer-blog/wp-content/uploads/2025/01/matchmaker.png", authorName: "Vincent Weberink", publishedAt: "2021-01-01", readingTime: 4, featured: false, seo: { title: "Pzaz TV: A Gateway to Success for Independent Film Productions | Pzaz", description: "Pzaz TV repositions as the matchmaker of European independent feature films, offering indie producers a gateway to global viewers.", keywords: ["Pzaz TV", "independent film distribution", "European indie films", "film production gateway", "indie film producers", "global film audience"], canonical: "https://pzaz.io/producer-blog/pzaz-tv-offers-independent-film-productions-a-gateway-to-success/" } },
 ];
 
-// Lazy content loader — dynamically imports the full data only when an article is viewed
+// Cache the dynamic import so subsequent article loads are instant
+let cachedFullPosts: BlogPost[] | null = null;
+
 export async function loadArticleContent(slug: string): Promise<string> {
-  const { blogPosts: fullPosts } = await import("./blogDataFull");
-  const post = fullPosts.find((p) => p.slug === slug);
+  if (!cachedFullPosts) {
+    const { blogPosts: fullPosts } = await import("./blogDataFull");
+    cachedFullPosts = fullPosts;
+  }
+  const post = cachedFullPosts.find((p) => p.slug === slug);
   return post?.content || "";
 }
