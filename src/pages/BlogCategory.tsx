@@ -66,6 +66,7 @@ const BlogCategory = () => {
         title={`${category.id} – Pzaz Blog`}
         description={category.description}
         url={`https://pzaz.io/producer-blog/category/${category.slug}`}
+        canonical={`https://pzaz.io/producer-blog/category/${category.slug}`}
       />
       <Header />
       <main>

@@ -70,7 +70,23 @@ const ProducerBlog = () => {
       <SEO
         title="Producer Blog – Pzaz"
         description="Interviews, industry insights, and product updates for independent filmmakers and producers."
-        url="https://pzaz-sparkle-showcase.lovable.app/producer-blog"
+        url="https://pzaz.io/producer-blog"
+        canonical="https://pzaz.io/producer-blog"
+      />
+
+      {/* Organization JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Pzaz",
+            url: "https://pzaz.io",
+            logo: "https://pzaz.io/og-image.png",
+            sameAs: [],
+          }),
+        }}
       />
       <ProducerBlogHero activeCategory={activeCategory} onCategoryChange={handleCategoryChange} />
 
