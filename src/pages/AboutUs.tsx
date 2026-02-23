@@ -1,6 +1,8 @@
 import React, { useState, useCallback, useEffect } from "react";
 import PageLayout from "@/components/layout/PageLayout";
 import SEO from "@/components/SEO";
+import SharedCTA from "@/components/SharedCTA";
+import ctaPlayIcon from "@/assets/cta-play-icon.svg";
 import { motion } from "framer-motion";
 import useEmblaCarousel from "embla-carousel-react";
 import aboutHeroBg from "@/assets/about-hero-bg.webp";
@@ -327,6 +329,23 @@ const AboutUs = () => {
           <CarouselShowcase />
         </div>
       </section>
+
+      <SharedCTA
+        pillText="5000+ professionals already joined Pzaz"
+        title={
+          <>
+            Pzaz isn't just another tool—
+            <br />
+            it's your strategic partner.
+          </>
+        }
+        description="We built this platform for filmmakers by people who get it. We help you streamline workflows, enhance collaboration, and keep every crew member aligned so you can focus on what truly matters—creating extraordinary films. Join a boutique filmmaker ecosystem designed for those who demand the best for a price that won't break the bank. Great films deserve great tools, and that's why Pzaz exists—to empower filmmakers with everything they need to turn their vision into reality without compromise."
+        primaryButtonText="Get Started"
+        primaryButtonPrefixIcon={<img src={ctaPlayIcon} alt="" className="w-5 h-5" />}
+        secondaryButtonText="Book a demo"
+        showLanguagesImage={false}
+        backgroundStyle={{ background: "radial-gradient(88.07% 62.52% at 50% 0%, #9D87FF 0%, #5C28A4 95%)" }}
+      />
     </PageLayout>
   );
 };
