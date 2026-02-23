@@ -74,20 +74,22 @@ const ScriptHero = () => {
               Import a Script
               <ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />
             </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="group px-8 font-lato font-black text-xl leading-[25px] text-primary hover:text-primary-foreground"
-              prefixIcon={
-                <img
-                  src={ctaPlayIcon}
-                  alt=""
-                  className="w-5 h-5 transition-all group-hover:[filter:brightness(0)_invert(1)]"
-                />
-              }
-            >
-              Book Studio Demo
-            </Button>
+            <a href="https://calendly.com/filmmaking-app/30min" target="_blank" rel="noopener noreferrer">
+              <Button
+                variant="outline"
+                size="lg"
+                className="group px-8 font-lato font-black text-xl leading-[25px] text-primary hover:text-primary-foreground"
+                prefixIcon={
+                  <img
+                    src={ctaPlayIcon}
+                    alt=""
+                    className="w-5 h-5 transition-all group-hover:[filter:brightness(0)_invert(1)]"
+                  />
+                }
+              >
+                Book Studio Demo
+              </Button>
+            </a>
           </motion.div>
 
           {/* Trust line */}
