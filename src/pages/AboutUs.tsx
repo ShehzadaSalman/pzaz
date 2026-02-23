@@ -17,8 +17,16 @@ import slide7 from "@/assets/about-carousel/slide7.webp";
 import slide8 from "@/assets/about-carousel/slide8.webp";
 import slide9 from "@/assets/about-carousel/slide9.webp";
 import slide10 from "@/assets/about-carousel/slide10.webp";
+import slide11 from "@/assets/about-carousel/slide11.webp";
+import slide12 from "@/assets/about-carousel/slide12.webp";
+import slide13 from "@/assets/about-carousel/slide13.webp";
+import slide14 from "@/assets/about-carousel/slide14.webp";
+import slide15 from "@/assets/about-carousel/slide15.webp";
+import slide16 from "@/assets/about-carousel/slide16.webp";
+import slide17 from "@/assets/about-carousel/slide17.webp";
+import slide18 from "@/assets/about-carousel/slide18.webp";
 
-const carouselSlides = [slide1, slide2, slide3, slide4, slide5, slide6, slide7, slide8, slide9, slide10];
+const carouselSlides = [slide1, slide2, slide3, slide4, slide5, slide6, slide7, slide8, slide9, slide10, slide11, slide12, slide13, slide14, slide15, slide16, slide17, slide18];
 
 const CarouselShowcase = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
