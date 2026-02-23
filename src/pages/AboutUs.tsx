@@ -156,6 +156,43 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
+
+      {/* Who Can Benefit Section */}
+      <section className="py-20 md:py-28">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl mx-auto text-center"
+          >
+            <h2 className="font-lato font-extrabold text-4xl md:text-[48px] leading-tight mb-6">
+              Who can benefit from{" "}
+              <span
+                className="bg-clip-text text-transparent"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(247.38deg, #29FADF -2.17%, #8B1DFF 84.87%)",
+                }}
+              >
+                Pzaz?
+              </span>
+            </h2>
+            <p className="font-lato text-lg md:text-xl leading-relaxed text-muted-foreground mb-10">
+              At Pzaz, we see you. We know the relentless passion, the sleepless
+              nights, the tight budgets, and the last-minute changes that define
+              the filmmaker's journey. Whether you're a seasoned professional, a
+              visionary indie creator, or a producer juggling multiple projects, we
+              understand what it takes to bring stories to life.
+            </p>
+            <p className="font-lato font-bold text-xl text-[#A805FF]">
+              Get Pzazzed! –{" "}
+              <span className="text-foreground">The Pzaz Manifesto</span>
+            </p>
+          </motion.div>
+        </div>
+      </section>
     </PageLayout>
   );
 };
