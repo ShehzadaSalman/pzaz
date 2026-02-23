@@ -7,8 +7,18 @@ import aboutHeroBg from "@/assets/about-hero-bg.webp";
 import aboutLogo from "@/assets/about-logo.webp";
 import aboutCause from "@/assets/about-cause.webp";
 import aboutNorthstar from "@/assets/about-northstar.webp";
+import slide1 from "@/assets/about-carousel/slide1.webp";
+import slide2 from "@/assets/about-carousel/slide2.webp";
+import slide3 from "@/assets/about-carousel/slide3.webp";
+import slide4 from "@/assets/about-carousel/slide4.webp";
+import slide5 from "@/assets/about-carousel/slide5.webp";
+import slide6 from "@/assets/about-carousel/slide6.webp";
+import slide7 from "@/assets/about-carousel/slide7.webp";
+import slide8 from "@/assets/about-carousel/slide8.webp";
+import slide9 from "@/assets/about-carousel/slide9.webp";
+import slide10 from "@/assets/about-carousel/slide10.webp";
 
-const placeholders = Array.from({ length: 5 }, (_, i) => i);
+const carouselSlides = [slide1, slide2, slide3, slide4, slide5, slide6, slide7, slide8, slide9, slide10];
 
 const CarouselShowcase = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
@@ -66,12 +76,10 @@ const CarouselShowcase = () => {
       <div className="relative rounded-[16px] overflow-hidden cursor-pointer" onClick={handleToggle}>
         <div ref={emblaRef} className="overflow-hidden">
           <div className="flex">
-            {placeholders.map((i) => (
+            {carouselSlides.map((src, i) => (
               <div key={i} className="flex-[0_0_100%] min-w-0">
-                <div className="aspect-video bg-[#E8E0F0] flex items-center justify-center rounded-[16px]">
-                  <span className="font-lato text-muted-foreground text-lg">
-                    Slide {i + 1}
-                  </span>
+                <div className="aspect-video bg-[#E8E0F0] flex items-center justify-center rounded-[16px] overflow-hidden">
+                  <img src={src} alt={`Slide ${i + 1}`} className="w-full h-full object-cover" />
                 </div>
               </div>
             ))}
@@ -97,7 +105,7 @@ const CarouselShowcase = () => {
 
       {/* Dot indicators */}
       <div className="flex items-center justify-center gap-2 mt-6">
-        {placeholders.map((i) => (
+        {carouselSlides.map((_, i) => (
           <button
             key={i}
             onClick={() => scrollTo(i)}
