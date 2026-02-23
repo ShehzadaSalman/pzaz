@@ -1,11 +1,92 @@
-import React from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import PageLayout from "@/components/layout/PageLayout";
 import SEO from "@/components/SEO";
 import { motion } from "framer-motion";
+import useEmblaCarousel from "embla-carousel-react";
 import aboutHeroBg from "@/assets/about-hero-bg.webp";
 import aboutLogo from "@/assets/about-logo.webp";
 import aboutCause from "@/assets/about-cause.webp";
 import aboutNorthstar from "@/assets/about-northstar.webp";
+
+const placeholders = Array.from({ length: 5 }, (_, i) => i);
+
+const CarouselShowcase = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on("select", onSelect);
+    return () => { emblaApi.off("select", onSelect); };
+  }, [emblaApi, onSelect]);
+
+  const scrollNext = useCallback(() => {
+    emblaApi?.scrollNext();
+  }, [emblaApi]);
+
+  const scrollTo = useCallback((index: number) => {
+    emblaApi?.scrollTo(index);
+  }, [emblaApi]);
+
+  return (
+    <div className="rounded-[24px] border-2 border-dashed border-[#D4BAF4] bg-white/60 p-6 md:p-10">
+      {/* Carousel viewport */}
+      <div className="relative rounded-[16px] overflow-hidden">
+        <div ref={emblaRef} className="overflow-hidden">
+          <div className="flex">
+            {placeholders.map((i) => (
+              <div key={i} className="flex-[0_0_100%] min-w-0">
+                <div className="aspect-video bg-[#E8E0F0] flex items-center justify-center rounded-[16px]">
+                  <span className="font-lato text-muted-foreground text-lg">
+                    Slide {i + 1}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Play button overlay */}
+        <button
+          onClick={scrollNext}
+          className="absolute inset-0 flex items-center justify-center group cursor-pointer"
+          aria-label="Next slide"
+        >
+          <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center shadow-lg group-hover:bg-white group-hover:scale-110 transition-all duration-300">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="ml-1">
+              <path
+                d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11.04-6.86a1 1 0 0 0 0-1.72L9.5 4.28a1 1 0 0 0-1.5.86Z"
+                fill="#8B1DFF"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
+
+      {/* Dot indicators */}
+      <div className="flex items-center justify-center gap-2 mt-6">
+        {placeholders.map((i) => (
+          <button
+            key={i}
+            onClick={() => scrollTo(i)}
+            aria-label={`Go to slide ${i + 1}`}
+            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+              selectedIndex === i
+                ? "bg-[#8B1DFF] scale-125"
+                : "bg-[#D4BAF4] hover:bg-[#B491E4]"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const AboutUs = () => {
   return (
@@ -154,6 +235,13 @@ const AboutUs = () => {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Image Carousel Section */}
+      <section className="py-20 md:py-28 bg-[#F5F5F5]">
+        <div className="max-w-6xl mx-auto px-6">
+          <CarouselShowcase />
         </div>
       </section>
 
