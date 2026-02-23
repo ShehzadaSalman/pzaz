@@ -83,7 +83,7 @@ const AboutUs = () => {
       </section>
 
       {/* Vision & Mission Section */}
-      <section className="py-20 md:py-28 bg-[#F7F2FD]">
+      <section className="py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-[45px]">
             {/* Vision Card */}
@@ -92,7 +92,7 @@ const AboutUs = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="rounded-[38px] border border-[#D4BAF4] bg-white/30 overflow-hidden"
+              className="rounded-[38px] border border-[#D4BAF4] bg-[#F7F2FD] overflow-hidden"
             >
               <div className="pt-8 px-8 md:px-[60px] pb-[60px]">
                 <p className="font-lato font-bold text-[#A805FF] text-sm uppercase tracking-wider mb-2">
@@ -127,7 +127,7 @@ const AboutUs = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.15 }}
-              className="rounded-[38px] border border-[#D4BAF4] bg-white/30 overflow-hidden"
+              className="rounded-[38px] border border-[#D4BAF4] bg-[#F7F2FD] overflow-hidden"
             >
               <div className="pt-8 px-8 md:px-[60px] pb-[60px]">
                 <p className="font-lato font-bold text-[#A805FF] text-sm uppercase tracking-wider mb-2">
