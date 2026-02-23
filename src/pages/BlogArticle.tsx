@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import ArticleHero from "@/components/blog/ArticleHero";
@@ -7,23 +7,22 @@ import ArticleRelated from "@/components/blog/ArticleRelated";
 import PageLayout from "@/components/layout/PageLayout";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { blogPosts, loadArticleContent } from "@/data/blogData";
+import { blogPosts } from "@/data/blogData";
+import { blogPosts as blogPostsFull } from "@/data/blogDataFull";
 
 const BlogArticle = () => {
   const { slug } = useParams<{ slug: string }>();
   const article = blogPosts.find((post) => post.slug === slug);
-  const [loadedArticle, setLoadedArticle] = useState<typeof article | null>(null);
-  const [loading, setLoading] = useState(true);
+
+  // Look up full content synchronously so it's available on first render (critical for SEO/pre-rendering)
+  const fullArticle = blogPostsFull.find((post) => post.slug === slug);
+  const displayArticle = article
+    ? { ...article, content: fullArticle?.content || article.content }
+    : null;
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "auto" });
-    if (!article) return;
-    setLoading(true);
-    loadArticleContent(article.slug).then((content) => {
-      setLoadedArticle({ ...article, content });
-      setLoading(false);
-    });
-  }, [slug, article]);
+  }, [slug]);
 
   if (!article) {
     return (
@@ -43,8 +42,6 @@ const BlogArticle = () => {
       </PageLayout>
     );
   }
-
-  const displayArticle = loadedArticle || article;
 
   return (
     <PageLayout headerVariant="sticky">
@@ -107,20 +104,7 @@ const BlogArticle = () => {
 
       <article>
         <ArticleHero article={displayArticle!} />
-        {loading ? (
-          <div className="py-16 flex justify-center">
-            <div className="animate-pulse space-y-4 max-w-4xl w-full px-6">
-              <div className="h-4 bg-muted rounded w-3/4" />
-              <div className="h-4 bg-muted rounded w-full" />
-              <div className="h-4 bg-muted rounded w-5/6" />
-              <div className="h-4 bg-muted rounded w-2/3" />
-              <div className="h-4 bg-muted rounded w-full" />
-              <div className="h-4 bg-muted rounded w-4/5" />
-            </div>
-          </div>
-        ) : (
-          <ArticleContent article={displayArticle!} />
-        )}
+        <ArticleContent article={displayArticle!} />
         <ArticleRelated currentSlug={slug || ""} category={Array.isArray(article.category) ? article.category[0] : article.category} />
       </article>
     </PageLayout>
