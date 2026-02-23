@@ -32,7 +32,30 @@ import slide20 from "@/assets/about-carousel/slide20.webp";
 import slide21 from "@/assets/about-carousel/slide21.webp";
 import slide22 from "@/assets/about-carousel/slide22.webp";
 
-const carouselSlides = [slide1, slide2, slide3, slide4, slide5, slide6, slide7, slide8, slide9, slide10, slide11, slide12, slide13, slide14, slide15, slide16, slide17, slide18, slide19, slide20, slide21, slide22];
+const carouselSlides = [
+  { src: slide1, caption: '"Before Pzaz, filmmaking was a maze."' },
+  { src: slide2, caption: '"A thousand apps, endless chaos. Ideas slipped through the cracks, and dreams drowned in logistics."' },
+  { src: slide3, caption: 'Director: "Where\'s the latest script draft?!"' },
+  { src: slide4, caption: 'Producer (panicking): "Budget\'s outdated! And the storyboard\'s... gone?"' },
+  { src: slide5, caption: 'Editor: groans "Scene 4 has no sound again?!"' },
+  { src: slide6, caption: "We're over 20 creators across 20 countries," },
+  { src: slide7, caption: "building the most loved, inclusive, and accessible film platform on the planet." },
+  { src: slide8, caption: 'Narrator (or Hypno): "At Pzaz, film is more than storytelling. It\'s capturing emotion, dreams, and struggle."' },
+  { src: slide9, caption: 'Filmmaker in Morocco: "Finally, a tool that gets me!"' },
+  { src: slide10, caption: 'Indie producer in Brazil: "Now I can manage my entire shoot from one place."' },
+  { src: slide11, caption: '"And then came Pzaz—the all-in-one producer platform made for filmmakers by filmmakers."' },
+  { src: slide12, caption: 'Hypno (mascot): "Let\'s bring Pzaz to this production!"' },
+  { src: slide13, caption: 'System pop-ups: "Script. ✔️ Budget. ✔️ Stripboard. ✔️ Collaboration. ✔️"' },
+  { src: slide14, caption: '"From idea to launch, Pzaz unifies every step. No more switching tools. No more lost files. Just you and your vision—fully aligned."' },
+  { src: slide15, caption: 'Director: "Wait... everything\'s in one place?"' },
+  { src: slide16, caption: 'Cinematographer: "This syncs with the shot list too?"' },
+  { src: slide17, caption: 'Hypno (winks): "Yep. That\'s Pzaz."' },
+  { src: slide18, caption: '"We\'re not a tool. We\'re your creative partner. We\'ve walked in your shoes. We see you. We believe in your story."' },
+  { src: slide19, caption: 'Filmmaker: "I didn\'t just make a film—I made a dream come true."' },
+  { src: slide20, caption: 'Team in chat window: "Wrap party in 10 mins! 🥳 #GetPzazzed!"' },
+  { src: slide21, caption: '"Join the movement. Join the culture. Get Pzazzed."' },
+  { src: slide22, caption: 'Hypno (spinning): "One platform. Every vision. All the Pzaz."' },
+];
 
 const CarouselShowcase = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
@@ -90,10 +113,10 @@ const CarouselShowcase = () => {
       <div className="relative rounded-[16px] overflow-hidden cursor-pointer" onClick={handleToggle}>
         <div ref={emblaRef} className="overflow-hidden">
           <div className="flex">
-            {carouselSlides.map((src, i) => (
+            {carouselSlides.map((slide, i) => (
               <div key={i} className="flex-[0_0_100%] min-w-0">
                 <div className="aspect-video bg-[#E8E0F0] flex items-center justify-center rounded-[16px] overflow-hidden">
-                  <img src={src} alt={`Slide ${i + 1}`} className="w-full h-full object-cover" />
+                  <img src={slide.src} alt={slide.caption} className="w-full h-full object-cover" />
                 </div>
               </div>
             ))}
@@ -117,8 +140,13 @@ const CarouselShowcase = () => {
         </div>
       </div>
 
+      {/* Caption */}
+      <p className="font-lato text-center text-base md:text-lg text-muted-foreground mt-4 min-h-[3rem] px-4">
+        {carouselSlides[selectedIndex]?.caption}
+      </p>
+
       {/* Dot indicators */}
-      <div className="flex items-center justify-center gap-2 mt-6">
+      <div className="flex items-center justify-center gap-2 mt-4">
         {carouselSlides.map((_, i) => (
           <button
             key={i}
