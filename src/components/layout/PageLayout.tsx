@@ -7,17 +7,20 @@ interface PageLayoutProps {
   header?: ReactNode;
   footer?: ReactNode;
   className?: string;
+  headerVariant?: "fixed" | "sticky";
 }
 
 const PageLayout = ({
   children,
-  header = <Header />,
+  header,
   footer = <Footer />,
   className = "min-h-screen bg-background",
+  headerVariant = "fixed",
 }: PageLayoutProps) => {
+  const resolvedHeader = header ?? <Header variant={headerVariant} />;
   return (
     <div className={className}>
-      {header}
+      {resolvedHeader}
       <main>{children}</main>
       {footer}
     </div>

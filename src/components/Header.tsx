@@ -31,7 +31,11 @@ const blogNavItems: NavItem[] = [
   { label: "Products", to: "/#products", isHash: true },
 ];
 
-const Header = () => {
+interface HeaderProps {
+  variant?: "fixed" | "sticky";
+}
+
+const Header = ({ variant = "fixed" }: HeaderProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
   const isScriptPage = location.pathname === "/script";
@@ -50,7 +54,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 glass" style={{ borderBottom: '1px solid #D4BAF4' }}>
+    <header className={`${variant === "fixed" ? "fixed top-0 left-0 right-0" : "sticky top-0"} z-50 glass`} style={{ borderBottom: '1px solid #D4BAF4' }}>
       <div className="max-w-6xl mx-auto px-2  py-4">
         <nav className="flex items-center justify-between">
           {/* Logo + Language */}

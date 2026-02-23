@@ -47,7 +47,7 @@ const BlogArticle = () => {
   const displayArticle = loadedArticle || article;
 
   return (
-    <PageLayout>
+    <PageLayout headerVariant="sticky">
       <SEO
         title={article.seo?.title || `${article.title} | Pzaz`}
         description={article.seo?.description || article.excerpt}
