@@ -28,7 +28,7 @@ const AboutUs = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-transparent" />
         </div>
 
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="max-w-2xl">
             {/* Logo icon */}
             <motion.img
