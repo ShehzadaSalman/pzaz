@@ -83,7 +83,7 @@ const AboutUs = () => {
       </section>
 
       {/* Vision & Mission Section */}
-      <section className="py-20 md:py-28">
+      <section className="py-20 md:py-28 bg-[#F7F2FD]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-[45px]">
             {/* Vision Card */}
