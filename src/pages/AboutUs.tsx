@@ -115,8 +115,14 @@ const CarouselShowcase = () => {
           <div className="flex">
             {carouselSlides.map((slide, i) => (
               <div key={i} className="flex-[0_0_100%] min-w-0">
-                <div className="aspect-video bg-[#E8E0F0] flex items-center justify-center rounded-[16px] overflow-hidden">
+                <div className="relative aspect-video bg-[#E8E0F0] flex items-center justify-center rounded-[16px] overflow-hidden">
                   <img src={slide.src} alt={slide.caption} className="w-full h-full object-cover" />
+                  {/* Caption overlay */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-[#5C28A4]/75 backdrop-blur-sm px-6 py-4 md:px-10 md:py-5">
+                    <p className="font-lato text-white text-base md:text-xl lg:text-2xl font-semibold text-center leading-snug">
+                      {slide.caption}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -139,11 +145,6 @@ const CarouselShowcase = () => {
           </div>
         </div>
       </div>
-
-      {/* Caption */}
-      <p className="font-lato text-center text-base md:text-lg text-muted-foreground mt-4 min-h-[3rem] px-4">
-        {carouselSlides[selectedIndex]?.caption}
-      </p>
 
       {/* Dot indicators */}
       <div className="flex items-center justify-center gap-2 mt-4">
