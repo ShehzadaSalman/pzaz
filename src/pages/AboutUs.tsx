@@ -13,6 +13,8 @@ const placeholders = Array.from({ length: 5 }, (_, i) => i);
 const CarouselShowcase = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const intervalRef = React.useRef<ReturnType<typeof setInterval> | null>(null);
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
@@ -26,18 +28,42 @@ const CarouselShowcase = () => {
     return () => { emblaApi.off("select", onSelect); };
   }, [emblaApi, onSelect]);
 
-  const scrollNext = useCallback(() => {
-    emblaApi?.scrollNext();
+  const startAutoplay = useCallback(() => {
+    if (!emblaApi) return;
+    intervalRef.current = setInterval(() => {
+      emblaApi.scrollNext();
+    }, 2500);
   }, [emblaApi]);
+
+  const stopAutoplay = useCallback(() => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  }, []);
+
+  useEffect(() => {
+    return () => stopAutoplay();
+  }, [stopAutoplay]);
+
+  const handleToggle = useCallback(() => {
+    if (isPlaying) {
+      stopAutoplay();
+      setIsPlaying(false);
+    } else {
+      startAutoplay();
+      setIsPlaying(true);
+    }
+  }, [isPlaying, startAutoplay, stopAutoplay]);
 
   const scrollTo = useCallback((index: number) => {
     emblaApi?.scrollTo(index);
   }, [emblaApi]);
 
   return (
-    <div className="rounded-[24px] border-2 border-dashed border-[#D4BAF4] bg-white/60 p-6 md:p-10">
+    <div className="rounded-[24px] border-2 border-dashed border-[#D4BAF4] bg-[#F3F3F3] p-6 md:p-10">
       {/* Carousel viewport */}
-      <div className="relative rounded-[16px] overflow-hidden">
+      <div className="relative rounded-[16px] overflow-hidden cursor-pointer" onClick={handleToggle}>
         <div ref={emblaRef} className="overflow-hidden">
           <div className="flex">
             {placeholders.map((i) => (
@@ -52,13 +78,13 @@ const CarouselShowcase = () => {
           </div>
         </div>
 
-        {/* Play button overlay */}
-        <button
-          onClick={scrollNext}
-          className="absolute inset-0 flex items-center justify-center group cursor-pointer"
-          aria-label="Next slide"
+        {/* Play/Pause overlay - visible when not playing */}
+        <div
+          className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${
+            isPlaying ? "opacity-0 pointer-events-none" : "opacity-100"
+          }`}
         >
-          <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center shadow-lg group-hover:bg-white group-hover:scale-110 transition-all duration-300">
+          <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center shadow-lg hover:bg-white hover:scale-110 transition-all duration-300">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="ml-1">
               <path
                 d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11.04-6.86a1 1 0 0 0 0-1.72L9.5 4.28a1 1 0 0 0-1.5.86Z"
@@ -66,7 +92,7 @@ const CarouselShowcase = () => {
               />
             </svg>
           </div>
-        </button>
+        </div>
       </div>
 
       {/* Dot indicators */}
@@ -239,7 +265,7 @@ const AboutUs = () => {
       </section>
 
       {/* Image Carousel Section */}
-      <section className="py-20 md:py-28 bg-[#F5F5F5]">
+      <section className="py-20 md:py-28 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <CarouselShowcase />
         </div>
