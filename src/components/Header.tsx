@@ -8,6 +8,7 @@ import { useLocation, Link } from "react-router-dom";
 import pzazLogo from "@/assets/pzaz-logo.png";
 import iconSurvey from "@/assets/icon-survey.svg";
 import LanguageDropdown from "@/components/LanguageDropdown";
+import ContactModal from "@/components/ContactModal";
 
 interface NavItem {
   label: string;
@@ -37,6 +38,7 @@ interface HeaderProps {
 
 const Header = ({ variant = "fixed" }: HeaderProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [contactOpen, setContactOpen] = useState(false);
   const location = useLocation();
   const isScriptPage = location.pathname === "/script";
   const isBlogRelated = location.pathname.startsWith("/blog") || location.pathname.startsWith("/producer-blog");
@@ -54,6 +56,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
   };
 
   return (
+    <>
     <header className={`${variant === "fixed" ? "fixed top-0 left-0 right-0" : "sticky top-0"} z-50 glass`} style={{ borderBottom: '1px solid #D4BAF4' }}>
       <div className="max-w-6xl mx-auto px-2  py-4">
         <nav className="flex items-center justify-between">
@@ -99,6 +102,13 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
                 </Link>
               )
             )}
+            <button
+              onClick={() => setContactOpen(true)}
+              className="transition-colors"
+              style={{ color: "#20124D", fontFamily: "'Lato', sans-serif", fontWeight: 400, fontSize: 14, lineHeight: "24px" }}
+            >
+              Contact
+            </button>
           </div>
 
           {/* CTA Buttons */}
@@ -140,6 +150,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
                   <Link key={item.label} to={item.to} className="text-foreground font-medium py-2">{item.label}</Link>
                 )
               )}
+              <button onClick={() => { setContactOpen(true); setMobileMenuOpen(false); }} className="text-foreground font-medium py-2 text-left">Contact</button>
               <hr className="border-border/50" />
               <a href="https://projector.pzaz.io/sign-in"><Button variant="ghost" className="justify-start">Log in</Button></a>
               <Link to="/pricing"><Button variant="default">Start for Free</Button></Link>
@@ -147,7 +158,9 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
           </motion.div>
         }
       </AnimatePresence>
-    </header>);
+    </header>
+    <ContactModal open={contactOpen} onOpenChange={setContactOpen} />
+    </>);
 };
 
 export default Header;
