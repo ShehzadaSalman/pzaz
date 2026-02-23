@@ -34,8 +34,16 @@ const Header = () => {
   const location = useLocation();
   const isScriptPage = location.pathname === "/script";
   const isBlogRelated = location.pathname.startsWith("/blog") || location.pathname.startsWith("/producer-blog");
+  const isPricingPage = location.pathname === "/pricing";
 
   const navItems = isBlogRelated ? blogNavItems : defaultNavItems;
+
+  const isActive = (item: NavItem) => {
+    if (item.to === "/producer-blog") return isBlogRelated;
+    if (item.to === "/script") return isScriptPage;
+    if (item.to === "/pricing") return isPricingPage;
+    return false;
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass" style={{ borderBottom: '1px solid #D4BAF4' }}>
@@ -71,7 +79,13 @@ const Header = () => {
                   key={item.label}
                   to={item.to}
                   className="transition-colors"
-                  style={{ color: "#20124D", fontFamily: "'Lato', sans-serif", fontWeight: 400, fontSize: 14, lineHeight: "24px" }}
+                  style={{
+                    color: isActive(item) ? "#5C28A4" : "#20124D",
+                    fontFamily: "'Lato', sans-serif",
+                    fontWeight: isActive(item) ? 700 : 400,
+                    fontSize: 14,
+                    lineHeight: "24px",
+                  }}
                 >
                   {item.label}
                 </Link>
