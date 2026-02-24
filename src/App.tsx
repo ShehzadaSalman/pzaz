@@ -13,6 +13,7 @@ import BlogArticle from "./pages/BlogArticle";
 import BlogCategory from "./pages/BlogCategory";
 import NotFound from "./pages/NotFound";
 import AboutUs from "./pages/AboutUs";
+import SalesTeam from "./pages/SalesTeam";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/script" element={<Script />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/sales-team" element={<SalesTeam />} />
           <Route path="/producer-blog" element={<Blog />} />
           <Route path="/producer-blog/category/:categorySlug" element={<BlogCategory />} />
           <Route path="/producer-blog/:slug" element={<BlogArticle />} />
