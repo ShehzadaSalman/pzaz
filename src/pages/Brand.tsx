@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Download, X } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -9,6 +9,17 @@ import SEO from "@/components/SEO";
 import logoIcon from "@/assets/brand/logo-icon.webp";
 // Colours
 import colours from "@/assets/brand/colours.webp";
+// Avoid images
+import avoid1 from "@/assets/brand/avoid-1.webp";
+import avoid2 from "@/assets/brand/avoid-2.webp";
+import avoid3 from "@/assets/brand/avoid-3.webp";
+import avoid4 from "@/assets/brand/avoid-4.webp";
+import avoid5 from "@/assets/brand/avoid-5.webp";
+import avoid6 from "@/assets/brand/avoid-6.webp";
+import avoid7 from "@/assets/brand/avoid-7.webp";
+import avoid8 from "@/assets/brand/avoid-8.webp";
+import avoid9 from "@/assets/brand/avoid-9.webp";
+import avoid10 from "@/assets/brand/avoid-10.webp";
 // Asset previews
 import assetArtwork from "@/assets/brand/asset-artwork.webp";
 import assetArtworkIcon from "@/assets/brand/asset-artwork-icon.webp";
@@ -31,58 +42,30 @@ const fadeUp = {
 };
 
 const thingsToAvoid = [
-  "Don't change the color",
-  "Don't stretch",
-  "Don't add effects",
-  "Don't place over busy backgrounds",
-  "Don't rotate",
-  "Don't make ribbons",
-  "Don't flip",
-  "Don't use an old version",
-  "Don't use pixelated logo",
-  "Don't add outlines",
+  { label: "Don't change the color", image: avoid1 },
+  { label: "Don't stretch", image: avoid2 },
+  { label: "Don't add effects", image: avoid3 },
+  { label: "Don't place over busy backgrounds", image: avoid4 },
+  { label: "Don't rotate", image: avoid5 },
+  { label: "Don't make ribbons", image: avoid6 },
+  { label: "Don't flip", image: avoid7 },
+  { label: "Don't use an old version", image: avoid8 },
+  { label: "Don't use pixelated logo", image: avoid9 },
+  { label: "Don't add outlines", image: avoid10 },
 ];
 
 const assets = [
-  {
-    name: "Artwork",
-    preview: assetArtwork,
-    icon: assetArtworkIcon,
-    url: "https://pzaz.io/wp-content/uploads/2025/10/Pzaz-artwork.zip",
-  },
-  {
-    name: "Stickers",
-    preview: assetStickers,
-    icon: assetStickersIcon,
-    url: "https://pzaz.io/wp-content/uploads/2025/10/Pzaz-stickers.zip",
-  },
-  {
-    name: "Puppet",
-    preview: assetPuppet,
-    icon: assetPuppetIcon,
-    url: "https://pzaz.io/wp-content/uploads/2025/10/Pzaz-puppet.zip",
-  },
-  {
-    name: "Imagery",
-    preview: assetImagery,
-    icon: assetImageryIcon,
-    url: "https://pzaz.io/wp-content/uploads/2025/10/Pzaz-images.zip",
-  },
-  {
-    name: "Screenshots",
-    preview: assetScreenshots,
-    icon: assetScreenshotsIcon,
-    url: "https://pzaz.io/wp-content/uploads/2025/10/Pzaz-screenshots.zip",
-  },
-  {
-    name: "Stories in Motion Book",
-    preview: assetStories,
-    icon: assetStoriesIcon,
-    url: "https://pzaz.io/wp-content/uploads/2025/10/Stories-in-Motion-Print.pdf",
-  },
+  { name: "Artwork", preview: assetArtwork, icon: assetArtworkIcon, url: "https://pzaz.io/wp-content/uploads/2025/10/Pzaz-artwork.zip" },
+  { name: "Stickers", preview: assetStickers, icon: assetStickersIcon, url: "https://pzaz.io/wp-content/uploads/2025/10/Pzaz-stickers.zip" },
+  { name: "Puppet", preview: assetPuppet, icon: assetPuppetIcon, url: "https://pzaz.io/wp-content/uploads/2025/10/Pzaz-puppet.zip" },
+  { name: "Imagery", preview: assetImagery, icon: assetImageryIcon, url: "https://pzaz.io/wp-content/uploads/2025/10/Pzaz-images.zip" },
+  { name: "Screenshots", preview: assetScreenshots, icon: assetScreenshotsIcon, url: "https://pzaz.io/wp-content/uploads/2025/10/Pzaz-screenshots.zip" },
+  { name: "Stories in Motion Book", preview: assetStories, icon: assetStoriesIcon, url: "https://pzaz.io/wp-content/uploads/2025/10/Stories-in-Motion-Print.pdf" },
 ];
 
 const Brand = () => {
+  const [showAvoid, setShowAvoid] = useState(false);
+
   return (
     <>
       <SEO
@@ -125,14 +108,22 @@ const Brand = () => {
                 We are very proud of our logo. Follow these guidelines to
                 ensure it always looks its best.
               </p>
-              <a
-                href="https://pzaz.io/wp-content/uploads/2025/10/Pzaz-logo-Icon.zip"
-                download
-                className="inline-flex items-center gap-2 px-8 py-3 rounded-full border-2 border-[#5C28A4] text-[#5C28A4] font-semibold hover:bg-[#5C28A4] hover:text-white transition-colors"
-              >
-                <Download className="w-5 h-5" />
-                DOWNLOAD
-              </a>
+              <div className="flex flex-col items-start gap-4">
+                <a
+                  href="https://pzaz.io/wp-content/uploads/2025/10/Pzaz-logo-Icon.zip"
+                  download
+                  className="inline-flex items-center gap-2 px-8 py-3 rounded-full border-2 border-[#5C28A4] text-[#5C28A4] font-semibold hover:bg-[#5C28A4] hover:text-white transition-colors"
+                >
+                  <Download className="w-5 h-5" />
+                  DOWNLOAD
+                </a>
+                <button
+                  onClick={() => setShowAvoid(!showAvoid)}
+                  className="text-[#5C28A4] hover:text-[#E84FAD] font-medium underline underline-offset-4 transition-colors cursor-pointer text-sm"
+                >
+                  Examples of how not to use the Pzaz logo?
+                </button>
+              </div>
             </motion.div>
             <motion.div {...fadeUp} transition={{ duration: 0.5, delay: 0.1 }}>
               <img src={logoIcon} alt="Pzaz logo and icon variants" className="w-full max-w-md mx-auto" />
@@ -140,36 +131,63 @@ const Brand = () => {
           </div>
         </section>
 
-        {/* Things to Avoid */}
-        <section className="py-16 px-6 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <motion.div {...fadeUp} className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold font-['Lato'] bg-gradient-to-r from-[#5C28A4] to-[#E84FAD] bg-clip-text text-transparent mb-4">
-                Things To Avoid.
-              </h2>
-              <p className="text-[#4E2273]/80 max-w-2xl mx-auto">
-                Using our logos consistently ensures brand recognition and allows for creativity elsewhere. Avoid these usages.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-              {thingsToAvoid.map((item, i) => (
-                <motion.div
-                  key={i}
-                  {...fadeUp}
-                  transition={{ duration: 0.4, delay: i * 0.05 }}
-                  className="rounded-2xl bg-[#F7F2FD] border border-[#E8DFF5] p-6 flex flex-col items-center text-center gap-3"
-                >
-                  <div className="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center">
-                    <X className="w-5 h-5 text-red-500" />
+        {/* Things to Avoid (collapsible) */}
+        <AnimatePresence>
+          {showAvoid && (
+            <motion.section
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.4 }}
+              className="overflow-hidden bg-white"
+            >
+              <div className="py-16 px-6">
+                <div className="max-w-6xl mx-auto">
+                  <div className="flex items-center justify-between mb-12">
+                    <div className="text-center flex-1">
+                      <h2 className="text-3xl md:text-4xl font-bold font-['Lato'] bg-gradient-to-r from-[#5C28A4] to-[#E84FAD] bg-clip-text text-transparent mb-4">
+                        Things To Avoid.
+                      </h2>
+                      <p className="text-[#4E2273]/80 max-w-2xl mx-auto">
+                        Using our logos consistently ensures brand recognition and allows for creativity elsewhere. Avoid these usages.
+                      </p>
+                    </div>
+                    <button
+                      onClick={() => setShowAvoid(false)}
+                      className="ml-4 w-10 h-10 rounded-full bg-[#F7F2FD] flex items-center justify-center hover:bg-[#E8DFF5] transition-colors shrink-0"
+                    >
+                      <X className="w-5 h-5 text-[#5C28A4]" />
+                    </button>
                   </div>
-                  <span className="text-xs font-bold text-red-500 uppercase">No</span>
-                  <p className="text-sm text-[#20124D] font-medium">{item}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+
+                  <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+                    {thingsToAvoid.map((item, i) => (
+                      <motion.div
+                        key={i}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.4, delay: i * 0.05 }}
+                        className="rounded-2xl bg-[#F7F2FD] border border-[#E8DFF5] overflow-hidden flex flex-col"
+                      >
+                        <div className="aspect-[408/213] overflow-hidden">
+                          <img
+                            src={item.image}
+                            alt={item.label}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div className="p-4 flex flex-col items-center text-center gap-2">
+                          <span className="text-xs font-bold text-red-500 uppercase">No</span>
+                          <p className="text-sm text-[#20124D] font-medium">{item.label}</p>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </motion.section>
+          )}
+        </AnimatePresence>
 
         {/* Colours */}
         <section className="py-16 px-6">
