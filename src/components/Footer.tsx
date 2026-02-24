@@ -1,8 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import pzazLogo from "@/assets/pzaz-logo.png";
+
+const linkRoutes: Record<string, string> = {
+  "Producer Blog": "/producer-blog",
+  "About": "/about-us",
+  "Pricing": "/pricing",
+};
 
 const footerLinks = {
   Product: ["Studio", "Budget", "Storyboard", "Pricing"],
+  Blog: ["Producer Blog"],
   Resources: ["Documentation", "Guides", "Community", "Support"],
   Company: ["About", "Careers", "Press", "Contact"],
   Legal: ["Privacy", "Terms", "Security"],
@@ -29,13 +37,22 @@ const Footer = () => {
             <div key={category}>
               <h4 className="font-bold text-[14px] text-[#20124D] mb-4 align-middle">{category}</h4>
               <ul className="space-y-3">
-                {links.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="text-[14px] font-normal text-[#20124D] hover:text-foreground transition-colors align-middle">
-                      {link}
-                    </a>
-                  </li>
-                ))}
+                {links.map((link) => {
+                  const route = linkRoutes[link];
+                  return (
+                    <li key={link}>
+                      {route ? (
+                        <Link to={route} className="text-[14px] font-normal text-[#20124D] hover:text-foreground transition-colors align-middle">
+                          {link}
+                        </Link>
+                      ) : (
+                        <a href="#" className="text-[14px] font-normal text-[#20124D] hover:text-foreground transition-colors align-middle">
+                          {link}
+                        </a>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}
