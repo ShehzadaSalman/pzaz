@@ -1,62 +1,32 @@
 
 
-## Fix Blog Detail SEO for Google Crawling
+## Integrate Microsoft Clarity
 
-### The Problem
+Microsoft Clarity is a free user behavior analytics tool that provides heatmaps, session recordings, and insights. Integration is straightforward -- it requires adding a small tracking script to your site.
 
-This is a client-side rendered React SPA. When Googlebot visits a blog article URL, it receives an empty HTML shell. All meta tags, structured data, and article content are injected only after JavaScript runs. Google can execute JS, but it queues pages for rendering, which delays indexing and can miss dynamic content entirely.
+### What I need from you
 
-### Solution: Pre-render all blog pages at build time
+1. **Your Clarity Project ID** -- Sign up or log in at [clarity.microsoft.com](https://clarity.microsoft.com), create a new project for your website, and copy the **Project ID** (a short alphanumeric string like `abc123xyz`). You'll find it in the Clarity setup/installation instructions.
 
-We will use `vite-plugin-prerender` to generate static HTML files for every blog route during the build step. This means Googlebot (and social media bots) will receive fully-formed HTML with all meta tags, JSON-LD, and article content baked in -- no JavaScript execution needed.
+### What I'll do
 
----
+1. **Add the Clarity tracking script** to `index.html` in the `<head>` section. This is a lightweight, non-blocking script that loads asynchronously and won't impact page performance.
 
-### Step 1: Install `vite-plugin-prerender`
+2. **No dependencies needed** -- Clarity is loaded via a standard inline script tag, no npm packages required.
 
-Add the package which uses Puppeteer at build time to visit each route and save the rendered HTML.
+### Technical details
 
-### Step 2: Inline article content for pre-rendering
+The script will look like this (with your actual project ID):
 
-The pre-renderer needs the article content available synchronously (or at least during the initial render). We will:
-- In `BlogArticle.tsx`, import `blogDataFull` content directly (not lazily) when building for production, so the pre-renderer captures the full article text
-- Keep the lazy-loading behavior for client-side navigation in development/runtime for performance
+```html
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window,document,"clarity","script","YOUR_PROJECT_ID");
+</script>
+```
 
-Approach: Import `blogDataFull` statically and look up the content at render time. The full data file will be code-split by Vite for the client, but the pre-renderer will capture the fully rendered HTML regardless.
-
-### Step 3: Configure `vite-plugin-prerender` in `vite.config.ts`
-
-- Add the plugin for production builds only
-- Use the existing `allRoutes` array (which already collects all blog slugs) as the list of routes to pre-render
-- Configure it to wait for the page to be fully rendered before snapshotting
-
-### Step 4: Fix sitemap URL
-
-Change `SITE_URL` in `vite.config.ts` from `https://pzaz-sparkle-showcase.lovable.app` to `https://pzaz.io` so the sitemap references the correct canonical domain.
-
-### Step 5: Add `<noscript>` fallback in `index.html`
-
-Add a basic `<noscript>` message so crawlers that don't execute JS see something meaningful.
-
----
-
-### Files modified
-
-| File | Change |
-|---|---|
-| `package.json` | Add `vite-plugin-prerender` |
-| `vite.config.ts` | Add pre-render plugin config for production; fix `SITE_URL` to `https://pzaz.io` |
-| `src/pages/BlogArticle.tsx` | Import full blog content statically so pre-renderer captures article text |
-| `src/data/blogData.ts` | Export a synchronous content lookup alongside the async one |
-| `index.html` | Add `<noscript>` tag |
-
-### Result
-
-After build, the `dist/` folder will contain a static HTML file for every blog article (e.g., `dist/producer-blog/best-film-screenwriting-software-usa/index.html`) with:
-- Correct `<title>`, `<meta>` OG/Twitter tags in the HTML
-- JSON-LD structured data in the HTML
-- Full article content in the HTML
-- Proper canonical URLs
-
-Google will index these pages immediately without needing to execute JavaScript.
+Once you share the Project ID, I'll add it right away.
 
