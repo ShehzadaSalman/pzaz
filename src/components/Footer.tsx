@@ -4,6 +4,7 @@ import pzazLogo from "@/assets/pzaz-logo.png";
 
 const linkRoutes: Record<string, string> = {
   "Producer Blog": "/producer-blog",
+  "Blog": "/producer-blog",
   "About": "/about-us",
   "Pricing": "/pricing",
   "Sales Team": "/sales-team",
@@ -11,8 +12,7 @@ const linkRoutes: Record<string, string> = {
 
 const footerLinks = {
   Product: ["Studio", "Budget", "Storyboard", "Pricing"],
-  Blog: ["Producer Blog"],
-  Resources: ["Documentation", "Guides", "Community", "Support"],
+  Resources: ["Blog", "Documentation", "Guides", "Community", "Support"],
   Company: ["About", "Sales Team", "Careers", "Press", "Contact"],
   Legal: ["Privacy", "Terms", "Security"],
   Social: ["YouTube", "Instagram", "Facebook", "LinkedIn"],
