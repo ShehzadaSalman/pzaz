@@ -2,21 +2,11 @@
 
 ## Integrate Microsoft Clarity
 
-Microsoft Clarity is a free user behavior analytics tool that provides heatmaps, session recordings, and insights. Integration is straightforward -- it requires adding a small tracking script to your site.
+Adding the Microsoft Clarity tracking script to your website using the Project ID `jxj1f4ixqk`.
 
-### What I need from you
+### What will change
 
-1. **Your Clarity Project ID** -- Sign up or log in at [clarity.microsoft.com](https://clarity.microsoft.com), create a new project for your website, and copy the **Project ID** (a short alphanumeric string like `abc123xyz`). You'll find it in the Clarity setup/installation instructions.
-
-### What I'll do
-
-1. **Add the Clarity tracking script** to `index.html` in the `<head>` section. This is a lightweight, non-blocking script that loads asynchronously and won't impact page performance.
-
-2. **No dependencies needed** -- Clarity is loaded via a standard inline script tag, no npm packages required.
-
-### Technical details
-
-The script will look like this (with your actual project ID):
+**File: `index.html`** -- Add the Clarity tracking script inside the `<head>` section, right before the closing `</head>` tag. The script is lightweight, loads asynchronously, and won't affect page performance.
 
 ```html
 <script type="text/javascript">
@@ -24,9 +14,14 @@ The script will look like this (with your actual project ID):
     c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
     t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
     y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-  })(window,document,"clarity","script","YOUR_PROJECT_ID");
+  })(window,document,"clarity","script","jxj1f4ixqk");
 </script>
 ```
 
-Once you share the Project ID, I'll add it right away.
+### Summary
+
+- Single file change (`index.html`)
+- No new dependencies
+- No impact on page load speed (async loading)
+- Clarity will automatically start capturing heatmaps, session recordings, and user insights across all pages
 
