@@ -15,6 +15,7 @@ import NotFound from "./pages/NotFound";
 import AboutUs from "./pages/AboutUs";
 import SalesTeam from "./pages/SalesTeam";
 import Breakdown from "./pages/Breakdown";
+import Brand from "./pages/Brand";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/sales-team" element={<SalesTeam />} />
           <Route path="/breakdown" element={<Breakdown />} />
+          <Route path="/brand" element={<Brand />} />
           <Route path="/producer-blog" element={<Blog />} />
           <Route path="/producer-blog/category/:categorySlug" element={<BlogCategory />} />
           <Route path="/producer-blog/:slug" element={<BlogArticle />} />
