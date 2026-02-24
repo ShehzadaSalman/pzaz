@@ -32,7 +32,7 @@ const SEO = ({
     {keywords && keywords.length > 0 && (
       <meta name="keywords" content={keywords.join(", ")} />
     )}
-    {canonical && <link rel="canonical" href={canonical} />}
+    <link rel="canonical" href={canonical || url} />
 
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
