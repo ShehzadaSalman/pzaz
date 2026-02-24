@@ -118,7 +118,7 @@ let cachedFullPosts: BlogPost[] | null = null;
 export async function loadArticleContent(slug: string): Promise<string> {
   if (!cachedFullPosts) {
     const mod = await import("./blogDataFull");
-    cachedFullPosts = mod.blogPostsFull;
+    cachedFullPosts = mod.blogPosts;
   }
   const match = cachedFullPosts!.find((p) => p.slug === slug);
   return match?.content ?? "";
