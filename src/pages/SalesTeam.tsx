@@ -2,8 +2,7 @@ import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import { Mail, Phone, Download } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Mail, Phone } from "lucide-react";
 import teamTom from "@/assets/team-tom.webp";
 import teamVince from "@/assets/team-vince.webp";
 
@@ -60,43 +59,41 @@ const SalesTeam = () => {
           {teamMembers.map((member) => (
             <div
               key={member.name}
-              className="bg-white rounded-2xl shadow-sm border border-[#E8DFF5] p-8 flex flex-col items-center text-center"
+              className="rounded-[24px] p-8 flex flex-col items-center text-center bg-gradient-to-br from-[#F7F2FD] to-[#E8DFF5] border border-[#D4BAF4]"
             >
-              <img
-                src={member.image}
-                alt={member.name}
-                className="w-32 h-32 rounded-full object-contain mb-6 border-4 border-[#F7F2FD] bg-[#F7F2FD]"
-              />
-              <h2
-                className="text-xl font-bold mb-1"
-                style={{ color: "#20124D", fontFamily: "'Lato', sans-serif" }}
-              >
+              {/* Photo */}
+              <div className="w-full aspect-[4/3] rounded-[16px] overflow-hidden mb-6 border-2 border-[#D4BAF4] bg-gradient-to-br from-[#8B1DFF]/20 to-[#5C28A4]/30]">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Name */}
+              <h2 className="text-xl font-bold mb-2 text-[#20124D] font-['Lato']">
                 {member.name}
               </h2>
-              <p
-                className="text-sm mb-5"
-                style={{ color: "#5C28A4", fontFamily: "'Lato', sans-serif", fontWeight: 500 }}
-              >
-                {member.role}
-              </p>
 
-              <div className="flex flex-col gap-3 w-full">
+              {/* Role pill */}
+              <span className="inline-block text-xs font-semibold px-4 py-1.5 rounded-full bg-[#5C28A4] text-white mb-5 font-['Lato']">
+                {member.role}
+              </span>
+
+              {/* Contact links */}
+              <div className="flex flex-col gap-2 w-full items-center">
                 <a
                   href={`mailto:${member.email}`}
-                  className="flex items-center justify-center gap-2 text-sm py-2.5 px-4 rounded-lg hover:bg-[#F7F2FD] transition-colors"
-                  style={{ color: "#20124D", fontFamily: "'Lato', sans-serif" }}
+                  className="text-sm text-[#20124D] hover:text-[#5C28A4] transition-colors font-['Lato']"
                 >
-                  <Mail className="w-4 h-4 text-[#5C28A4]" />
                   {member.email}
                 </a>
 
                 {member.phone && (
                   <a
                     href={`tel:${member.phone}`}
-                    className="flex items-center justify-center gap-2 text-sm py-2.5 px-4 rounded-lg hover:bg-[#F7F2FD] transition-colors"
-                    style={{ color: "#20124D", fontFamily: "'Lato', sans-serif" }}
+                    className="text-sm text-[#20124D] hover:text-[#5C28A4] transition-colors font-['Lato']"
                   >
-                    <Phone className="w-4 h-4 text-[#5C28A4]" />
                     {member.phone}
                   </a>
                 )}
@@ -105,14 +102,9 @@ const SalesTeam = () => {
                   href={member.vcard}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="text-sm font-medium text-[#20124D] underline underline-offset-2 hover:text-[#5C28A4] transition-colors mt-1 font-['Lato']"
                 >
-                  <Button
-                    variant="outline"
-                    className="w-full border-[#D4BAF4] text-[#5C28A4] hover:bg-[#5C28A4] hover:text-white hover:border-[#5C28A4]"
-                  >
-                    <Download className="w-4 h-4 mr-2" />
-                    Download VCard
-                  </Button>
+                  Download VCard
                 </a>
               </div>
             </div>
