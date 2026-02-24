@@ -1,4 +1,4 @@
-import blogScreenwritingImg from "@/assets/blog-screenwriting-software.jpg";
+const blogScreenwritingImg = "https://zrlonqczjzkgzmxiwdcl.supabase.co/storage/v1/object/public/blog-images/blog-screenwriting-software.jpg";
 
 export type BlogCategoryId =
   | "Comparisons & Analysis"
