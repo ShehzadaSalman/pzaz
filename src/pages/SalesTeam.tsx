@@ -65,7 +65,7 @@ const SalesTeam = () => {
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-32 h-32 rounded-full object-cover mb-6 border-4 border-[#F7F2FD]"
+                className="w-32 h-32 rounded-full object-contain mb-6 border-4 border-[#F7F2FD] bg-[#F7F2FD]"
               />
               <h2
                 className="text-xl font-bold mb-1"
@@ -108,7 +108,7 @@ const SalesTeam = () => {
                 >
                   <Button
                     variant="outline"
-                    className="w-full border-[#D4BAF4] text-[#5C28A4] hover:bg-[#F7F2FD]"
+                    className="w-full border-[#D4BAF4] text-[#5C28A4] hover:bg-[#5C28A4] hover:text-white hover:border-[#5C28A4]"
                   >
                     <Download className="w-4 h-4 mr-2" />
                     Download VCard
