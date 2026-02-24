@@ -9,12 +9,13 @@ const linkRoutes: Record<string, string> = {
   "Pricing": "/pricing",
   "Sales Team": "/sales-team",
   "Breakdown": "/breakdown",
+  "Brand": "/brand",
 };
 
 const footerLinks = {
   Product: ["Studio", "Breakdown", "Budget", "Storyboard", "Pricing"],
   Resources: ["Blog", "Documentation", "Guides", "Community", "Support"],
-  Company: ["About", "Sales Team", "Careers", "Press", "Contact"],
+  Company: ["About", "Sales Team", "Brand", "Careers", "Press", "Contact"],
   Legal: ["Privacy", "Terms", "Security"],
   Social: ["YouTube", "Instagram", "Facebook", "LinkedIn"],
 };
