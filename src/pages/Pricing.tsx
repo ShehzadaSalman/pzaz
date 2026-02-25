@@ -39,7 +39,7 @@ const Pricing = () => {
           <PricingCTA />
         </main>
         <Footer />
-        <PricingCartBar />
+        {/* <PricingCartBar /> */}
       </div>
     </PricingCartProvider>
   );
