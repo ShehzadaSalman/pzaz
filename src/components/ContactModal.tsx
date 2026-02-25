@@ -26,20 +26,34 @@ const ContactModal = ({ open, onOpenChange }: ContactModalProps) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.fullName.trim() || !form.email.trim() || !form.message.trim()) {
       toast({ title: "Please fill in all required fields.", variant: "destructive" });
       return;
     }
     setSubmitting(true);
-    // Simulate submission
-    setTimeout(() => {
+    try {
+      const res = await fetch("https://projector.pzaz.io/api/send_contact_us/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          full_name: form.fullName,
+          email: form.email,
+          company_name: form.companyName,
+          phone: form.phone,
+          message: form.message,
+        }),
+      });
+      if (!res.ok) throw new Error("Failed to send message");
       toast({ title: "Message sent!", description: "We'll get back to you soon." });
       setForm({ fullName: "", companyName: "", email: "", phone: "", message: "" });
-      setSubmitting(false);
       onOpenChange(false);
-    }, 800);
+    } catch {
+      toast({ title: "Something went wrong. Please try again.", variant: "destructive" });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
