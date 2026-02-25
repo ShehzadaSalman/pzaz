@@ -1,6 +1,5 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 const PricingHero = () => {
@@ -44,11 +43,14 @@ const PricingHero = () => {
             transition={{ duration: 0.6, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6"
           >
-            <Button size="lg" className="group text-base px-8">
-              Start Free
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button variant="outline" size="lg" className="text-base px-8">
+            <Button
+              variant="outline"
+              size="lg"
+              className="text-base px-8"
+              onClick={() => {
+                document.getElementById("plans")?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
               See plans for your stage
             </Button>
           </motion.div>

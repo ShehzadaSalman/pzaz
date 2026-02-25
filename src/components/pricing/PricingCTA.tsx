@@ -1,6 +1,4 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 
 const PricingCTA = () => {
@@ -26,28 +24,14 @@ const PricingCTA = () => {
             <div className="absolute -top-1/2 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-white/20 rounded-full blur-3xl pointer-events-none" />
 
             <div className="relative p-12 sm:p-16 text-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm mb-8">
-                <Sparkles className="w-4 h-4 text-primary-foreground" />
-                <span className="text-sm font-medium text-primary-foreground">Start free today</span>
-              </div>
-
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-primary-foreground mb-6">
                 Start your film.
                 <br />Not another tool stack.
               </h2>
 
-              <p className="text-xl text-primary-foreground/80 max-w-xl mx-auto mb-10">
+              <p className="text-xl text-primary-foreground/80 max-w-xl mx-auto">
                 Your work stays connected forever. No rebuilding, no re-entry, no broken handovers.
               </p>
-
-              <Button
-                variant="outline"
-                size="xl"
-                className="group bg-white/10 text-white border-white/30 hover:bg-white/20"
-                postfixIcon={<ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
-              >
-                Start free
-              </Button>
             </div>
           </motion.div>
         </div>
