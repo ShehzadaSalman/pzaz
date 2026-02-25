@@ -26,7 +26,8 @@ const BlogNewsletter = () => {
 
     setStatus("loading");
     try {
-      const res = await fetch("https://projector.pzaz.io/api/newsletter/", {
+      const projectId = import.meta.env.VITE_SUPABASE_PROJECT_ID;
+      const res = await fetch(`https://${projectId}.supabase.co/functions/v1/newsletter-subscribe`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: result.data.email }),
