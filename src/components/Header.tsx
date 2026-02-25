@@ -137,7 +137,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
                               key={child.label}
                               href={child.to}
                               onClick={() => setProductsOpen(false)}
-                              className="block px-4 py-2 text-sm hover:bg-[#5C28A4] hover:text-white transition-colors"
+                              className="block px-4 py-2 text-sm transition-colors"
                             >
                               {child.label}
                             </a>
@@ -146,7 +146,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
                               key={child.label}
                               to={child.to}
                               onClick={() => setProductsOpen(false)}
-                              className="block px-4 py-2 text-sm hover:bg-[#5C28A4] hover:text-white transition-colors"
+                              className="block px-4 py-2 text-sm transition-colors"
                               style={{
                                 color: isActive(child) ? "#5C28A4" : "#20124D",
                                 fontFamily: "'Lato', sans-serif",
