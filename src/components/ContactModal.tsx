@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 interface ContactModalProps {
   open: boolean;
@@ -34,18 +35,16 @@ const ContactModal = ({ open, onOpenChange }: ContactModalProps) => {
     }
     setSubmitting(true);
     try {
-      const res = await fetch("https://projector.pzaz.io/api/send_contact_us/", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
+      const { data, error } = await supabase.functions.invoke("send-contact", {
+        body: {
           full_name: form.fullName,
           email: form.email,
           company_name: form.companyName,
           phone: form.phone,
           message: form.message,
-        }),
+        },
       });
-      if (!res.ok) throw new Error("Failed to send message");
+      if (error) throw error;
       toast({ title: "Message sent!", description: "We'll get back to you soon." });
       setForm({ fullName: "", companyName: "", email: "", phone: "", message: "" });
       onOpenChange(false);
