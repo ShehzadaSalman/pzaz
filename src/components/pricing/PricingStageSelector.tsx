@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Check, ArrowRight, Users, Lock, Calculator, Palette, Plus } from "lucide-react";
+import { Check, ArrowRight, Users, Lock, Calculator, Palette, Plus, ShoppingCart, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { usePricingCart } from "@/contexts/PricingCartContext";
 
 interface Tier {
   id: string;
@@ -143,6 +144,33 @@ const addons: Extra[] = [
 
 const PricingStageSelector = () => {
   const [expandedExtra, setExpandedExtra] = useState<string | null>(null);
+  const { addPackage, removePackage, hasPackage, addCustomModule, removeCustomModule, hasCustomModule } = usePricingCart();
+
+  const handleTierClick = (tier: Tier) => {
+    if (tier.price === "Free") return; // Indie is free, just redirect
+    const pkgId = tier.id;
+    if (hasPackage(pkgId)) {
+      removePackage(pkgId);
+    } else {
+      addPackage({
+        id: pkgId,
+        name: tier.name,
+        price: parseInt(tier.price.replace("€", "")),
+        type: "package",
+        modules: tier.features.map(f => ({ name: f, price: 0 })),
+      });
+    }
+  };
+
+  const handleExtraClick = (item: Extra, e: React.MouseEvent) => {
+    e.stopPropagation();
+    const priceNum = parseInt(item.price.replace("€", ""));
+    if (hasCustomModule(item.name)) {
+      removeCustomModule(item.name);
+    } else {
+      addCustomModule({ name: item.name, price: priceNum });
+    }
+  };
 
   return (
     <section id="plans" className="py-20 relative">
@@ -165,56 +193,78 @@ const PricingStageSelector = () => {
 
         {/* Tier Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-20">
-          {tiers.map((tier, index) => (
-            <motion.div
-              key={tier.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className={`relative rounded-3xl border-2 p-8 flex flex-col ${
-                tier.highlighted
-                  ? "border-primary bg-card shadow-xl"
-                  : "border-border bg-card"
-              }`}
-            >
-              {tier.highlighted && (
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/20 to-accent/20 rounded-3xl blur-xl opacity-50 -z-10" />
-              )}
-              {tier.badge && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-primary text-primary-foreground text-xs font-bold">
-                  {tier.badge}
-                </span>
-              )}
-
-              <h3 className="text-xl font-bold text-foreground mb-2">{tier.name}</h3>
-              <div className="flex items-baseline gap-1 mb-3">
-                <span className="text-4xl font-bold gradient-text">{tier.price}</span>
-                {tier.priceSuffix && (
-                  <span className="text-muted-foreground text-sm">{tier.priceSuffix}</span>
-                )}
-              </div>
-              <p className="text-sm text-muted-foreground mb-6">{tier.tagline}</p>
-
-              <ul className="space-y-3 mb-8 flex-1">
-                {tier.features.map((f, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-foreground">{f}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <Button
-                size="lg"
-                variant={tier.highlighted ? "default" : "outline"}
-                className="w-full group"
+          {tiers.map((tier, index) => {
+            const inCart = tier.price !== "Free" && hasPackage(tier.id);
+            return (
+              <motion.div
+                key={tier.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className={`relative rounded-3xl border-2 p-8 flex flex-col transition-colors ${
+                  inCart
+                    ? "border-primary bg-primary/5 shadow-xl"
+                    : tier.highlighted
+                    ? "border-primary bg-card shadow-xl"
+                    : "border-border bg-card"
+                }`}
               >
-                {tier.cta}
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </motion.div>
-          ))}
+                {tier.highlighted && !inCart && (
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/20 to-accent/20 rounded-3xl blur-xl opacity-50 -z-10" />
+                )}
+                {tier.badge && (
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-primary text-primary-foreground text-xs font-bold">
+                    {tier.badge}
+                  </span>
+                )}
+
+                <h3 className="text-xl font-bold text-foreground mb-2">{tier.name}</h3>
+                <div className="flex items-baseline gap-1 mb-3">
+                  <span className="text-4xl font-bold gradient-text">{tier.price}</span>
+                  {tier.priceSuffix && (
+                    <span className="text-muted-foreground text-sm">{tier.priceSuffix}</span>
+                  )}
+                </div>
+                <p className="text-sm text-muted-foreground mb-6">{tier.tagline}</p>
+
+                <ul className="space-y-3 mb-8 flex-1">
+                  {tier.features.map((f, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-foreground">{f}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {tier.price === "Free" ? (
+                  <Button size="lg" variant="outline" className="w-full group">
+                    {tier.cta}
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                ) : (
+                  <Button
+                    size="lg"
+                    variant={inCart ? "default" : tier.highlighted ? "default" : "outline"}
+                    className="w-full group"
+                    onClick={() => handleTierClick(tier)}
+                  >
+                    {inCart ? (
+                      <>
+                        <Check className="w-4 h-4 mr-2" />
+                        Added to Cart
+                      </>
+                    ) : (
+                      <>
+                        {tier.cta}
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      </>
+                    )}
+                  </Button>
+                )}
+              </motion.div>
+            );
+          })}
         </div>
 
         {/* Standalone Products & Add-ons */}
@@ -234,6 +284,7 @@ const PricingStageSelector = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[...standaloneProducts, ...addons].map((item, index) => {
               const isExpanded = expandedExtra === item.id;
+              const inCart = hasCustomModule(item.name);
               return (
                 <motion.div
                   key={item.id}
@@ -241,12 +292,16 @@ const PricingStageSelector = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.08 }}
-                  className="rounded-2xl border border-border bg-card p-6 cursor-pointer hover:border-primary/50 transition-colors"
-                  onClick={() => setExpandedExtra(isExpanded ? null : item.id)}
+                  className={`rounded-2xl border bg-card p-6 transition-colors ${
+                    inCart ? "border-primary bg-primary/5" : "border-border hover:border-primary/50"
+                  }`}
                 >
                   <div className="flex items-start justify-between mb-3">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center text-muted-foreground">
+                    <div
+                      className="flex items-center gap-3 cursor-pointer flex-1"
+                      onClick={() => setExpandedExtra(isExpanded ? null : item.id)}
+                    >
+                      <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${inCart ? "bg-primary/10 text-primary" : "bg-muted text-muted-foreground"}`}>
                         {item.icon}
                       </div>
                       <div>
@@ -258,39 +313,57 @@ const PricingStageSelector = () => {
                         )}
                       </div>
                     </div>
-                    <div className="text-right">
-                      <span className="text-lg font-bold text-primary">{item.price}</span>
-                      {item.priceSuffix && (
-                        <span className="block text-xs text-muted-foreground">{item.priceSuffix}</span>
-                      )}
+                    <div className="flex items-center gap-3">
+                      <div className="text-right cursor-pointer" onClick={() => setExpandedExtra(isExpanded ? null : item.id)}>
+                        <span className="text-lg font-bold text-primary">{item.price}</span>
+                        {item.priceSuffix && (
+                          <span className="block text-xs text-muted-foreground">{item.priceSuffix}</span>
+                        )}
+                      </div>
+                      <button
+                        onClick={(e) => handleExtraClick(item, e)}
+                        className={`w-9 h-9 rounded-full flex items-center justify-center transition-colors flex-shrink-0 ${
+                          inCart
+                            ? "bg-primary text-primary-foreground hover:bg-primary/80"
+                            : "bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary"
+                        }`}
+                        title={inCart ? "Remove from cart" : "Add to cart"}
+                      >
+                        {inCart ? <X className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                      </button>
                     </div>
                   </div>
 
-                  <p className="text-sm text-muted-foreground mb-2">{item.tagline}</p>
+                  <div
+                    className="cursor-pointer"
+                    onClick={() => setExpandedExtra(isExpanded ? null : item.id)}
+                  >
+                    <p className="text-sm text-muted-foreground mb-2">{item.tagline}</p>
 
-                  <AnimatePresence>
-                    {isExpanded && item.features.length > 0 && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="overflow-hidden"
-                      >
-                        <ul className="pt-3 border-t border-border space-y-2 mt-2">
-                          {item.features.map((f, i) => (
-                            <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                              <Check className="w-3 h-3 text-primary mt-0.5 flex-shrink-0" />
-                              {f}
-                            </li>
-                          ))}
-                        </ul>
-                      </motion.div>
+                    <AnimatePresence>
+                      {isExpanded && item.features.length > 0 && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: "auto" }}
+                          exit={{ opacity: 0, height: 0 }}
+                          className="overflow-hidden"
+                        >
+                          <ul className="pt-3 border-t border-border space-y-2 mt-2">
+                            {item.features.map((f, i) => (
+                              <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                                <Check className="w-3 h-3 text-primary mt-0.5 flex-shrink-0" />
+                                {f}
+                              </li>
+                            ))}
+                          </ul>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+
+                    {item.note && (
+                      <p className="text-xs text-muted-foreground mt-3 italic">{item.note}</p>
                     )}
-                  </AnimatePresence>
-
-                  {item.note && (
-                    <p className="text-xs text-muted-foreground mt-3 italic">{item.note}</p>
-                  )}
+                  </div>
                 </motion.div>
               );
             })}
