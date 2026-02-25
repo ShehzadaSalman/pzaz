@@ -19,6 +19,7 @@ import Brand from "./pages/Brand";
 import Culture from "./pages/Culture";
 import Imagine from "./pages/Imagine";
 import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -41,6 +42,7 @@ const App = () => (
           <Route path="/culture" element={<Culture />} />
           <Route path="/imagine" element={<Imagine />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
           <Route path="/producer-blog" element={<Blog />} />
           <Route path="/producer-blog/category/:categorySlug" element={<BlogCategory />} />
           <Route path="/producer-blog/:slug" element={<BlogArticle />} />

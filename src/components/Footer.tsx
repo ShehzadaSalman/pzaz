@@ -7,6 +7,7 @@ const linkRoutes: Record<string, string> = {
   "Blog": "/producer-blog",
   "About": "/about-us",
   "Privacy": "/privacy",
+  "Terms": "/terms",
   "Imagine": "/imagine",
   "Sales Team": "/sales-team",
   "Breakdown": "/breakdown",
