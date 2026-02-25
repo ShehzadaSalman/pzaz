@@ -3,8 +3,6 @@ import Header from "@/components/Header";
 import PricingHero from "@/components/pricing/PricingHero";
 import PricingStageSelector from "@/components/pricing/PricingStageSelector";
 
-import PricingFlow from "@/components/pricing/PricingFlow";
-import PricingBuildYourOwn from "@/components/pricing/PricingBuildYourOwn";
 import PricingTrust from "@/components/pricing/PricingTrust";
 import PricingCTA from "@/components/pricing/PricingCTA";
 import PricingCartBar from "@/components/pricing/PricingCartBar";
@@ -36,8 +34,7 @@ const Pricing = () => {
         <main>
           <PricingHero />
           <PricingStageSelector />
-          <PricingFlow />
-          <PricingBuildYourOwn />
+          {/* PricingFlow and PricingBuildYourOwn hidden per new tier structure */}
           <PricingTrust />
           <PricingCTA />
         </main>
