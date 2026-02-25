@@ -18,6 +18,7 @@ import Breakdown from "./pages/Breakdown";
 import Brand from "./pages/Brand";
 import Culture from "./pages/Culture";
 import Imagine from "./pages/Imagine";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/script" element={<Script />} />
