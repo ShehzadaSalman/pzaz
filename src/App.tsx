@@ -17,6 +17,7 @@ import SalesTeam from "./pages/SalesTeam";
 import Breakdown from "./pages/Breakdown";
 import Brand from "./pages/Brand";
 import Culture from "./pages/Culture";
+import Imagine from "./pages/Imagine";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/breakdown" element={<Breakdown />} />
           <Route path="/brand" element={<Brand />} />
           <Route path="/culture" element={<Culture />} />
+          <Route path="/imagine" element={<Imagine />} />
           <Route path="/producer-blog" element={<Blog />} />
           <Route path="/producer-blog/category/:categorySlug" element={<BlogCategory />} />
           <Route path="/producer-blog/:slug" element={<BlogArticle />} />
