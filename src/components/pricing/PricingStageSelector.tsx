@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Check, ArrowRight, Users, Lock, Calculator, Palette, Plus, ShoppingCart, X } from "lucide-react";
+import { Check, ArrowRight, Users, Lock, Calculator, Palette, Plus, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { usePricingCart } from "@/contexts/PricingCartContext";
 
@@ -70,11 +70,13 @@ interface Extra {
   icon: React.ReactNode;
   name: string;
   price: string;
+  priceNum: number;
   priceSuffix?: string;
   tagline: string;
   features: string[];
   tag?: string;
   note?: string;
+  studioPro0nly?: boolean;
 }
 
 const standaloneProducts: Extra[] = [
@@ -83,6 +85,7 @@ const standaloneProducts: Extra[] = [
     icon: <Calculator className="w-5 h-5" />,
     name: "Budget",
     price: "€49",
+    priceNum: 49,
     priceSuffix: "/ month",
     tagline: "Professional film budgeting system fully integrated into your workflow.",
     features: [
@@ -99,6 +102,7 @@ const standaloneProducts: Extra[] = [
     icon: <Palette className="w-5 h-5" />,
     name: "Storyboard",
     price: "€49",
+    priceNum: 49,
     priceSuffix: "/ month",
     tagline: "Visual planning tool for building structured storyboards inside Pzaz.",
     features: [
@@ -118,17 +122,20 @@ const addons: Extra[] = [
     icon: <Users className="w-5 h-5" />,
     name: "Extra Users",
     price: "€49",
+    priceNum: 49,
     priceSuffix: "/ user / month",
     tagline: "Add additional team members to your Studio Pro environment.",
     features: [],
     tag: "Add-on",
     note: "For teams larger than 10 additional users, contact us for custom enterprise pricing.",
+    studioPro0nly: true,
   },
   {
     id: "private-llm",
     icon: <Lock className="w-5 h-5" />,
     name: "Private LLM",
     price: "€249",
+    priceNum: 249,
     priceSuffix: "/ month",
     tagline: "Secure private AI environment tailored to your production workflow.",
     features: [
@@ -142,35 +149,77 @@ const addons: Extra[] = [
   },
 ];
 
+// IDs that are base plans (only one selectable at a time)
+const BASE_PLAN_IDS = ["indie", "planning-pro", "studio-pro", ...standaloneProducts.map(s => s.id)];
+const ADDON_IDS = addons.map(a => a.id);
+
 const PricingStageSelector = () => {
   const [expandedExtra, setExpandedExtra] = useState<string | null>(null);
-  const { addPackage, removePackage, hasPackage, addCustomModule, removeCustomModule, hasCustomModule } = usePricingCart();
+  const { packages, addPackage, removePackage, hasPackage } = usePricingCart();
+
+  // Derive selected base plan id (if any)
+  const selectedBasePlanId = packages.find(p => BASE_PLAN_IDS.includes(p.id))?.id ?? null;
+  const isStudioProSelected = selectedBasePlanId === "studio-pro";
 
   const handleTierClick = (tier: Tier) => {
-    if (tier.price === "Free") return; // Indie is free, just redirect
     const pkgId = tier.id;
     if (hasPackage(pkgId)) {
       removePackage(pkgId);
     } else {
+      // Remove any existing base plan first
+      if (selectedBasePlanId) removePackage(selectedBasePlanId);
+      if (tier.price === "Free") {
+        addPackage({
+          id: pkgId,
+          name: tier.name,
+          price: 0,
+          type: "package",
+          modules: tier.features.map(f => ({ name: f, price: 0 })),
+        });
+      } else {
+        addPackage({
+          id: pkgId,
+          name: tier.name,
+          price: parseInt(tier.price.replace("€", "")),
+          type: "package",
+          modules: tier.features.map(f => ({ name: f, price: 0 })),
+        });
+      }
+    }
+  };
+
+  const handleStandaloneClick = (item: Extra) => {
+    if (hasPackage(item.id)) {
+      removePackage(item.id);
+    } else {
+      // Remove any existing base plan first
+      if (selectedBasePlanId) removePackage(selectedBasePlanId);
       addPackage({
-        id: pkgId,
-        name: tier.name,
-        price: parseInt(tier.price.replace("€", "")),
+        id: item.id,
+        name: item.name,
+        price: item.priceNum,
         type: "package",
-        modules: tier.features.map(f => ({ name: f, price: 0 })),
+        modules: item.features.map(f => ({ name: f, price: 0 })),
       });
     }
   };
 
-  const handleExtraClick = (item: Extra, e: React.MouseEvent) => {
+  const handleAddonClick = (item: Extra, e: React.MouseEvent) => {
     e.stopPropagation();
-    const priceNum = parseInt(item.price.replace("€", ""));
-    if (hasCustomModule(item.name)) {
-      removeCustomModule(item.name);
+    if (hasPackage(item.id)) {
+      removePackage(item.id);
     } else {
-      addCustomModule({ name: item.name, price: priceNum });
+      addPackage({
+        id: item.id,
+        name: item.name,
+        price: item.priceNum,
+        type: "package",
+        modules: [{ name: item.name, price: item.priceNum }],
+      });
     }
   };
+
+  const hasAnyBasePlan = selectedBasePlanId !== null;
 
   return (
     <section id="plans" className="py-20 relative">
@@ -194,7 +243,8 @@ const PricingStageSelector = () => {
         {/* Tier Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-20">
           {tiers.map((tier, index) => {
-            const inCart = tier.price !== "Free" && hasPackage(tier.id);
+            const inCart = hasPackage(tier.id);
+            const isDisabled = !inCart && hasAnyBasePlan;
             return (
               <motion.div
                 key={tier.id}
@@ -208,7 +258,7 @@ const PricingStageSelector = () => {
                     : tier.highlighted
                     ? "border-primary bg-card shadow-xl"
                     : "border-border bg-card"
-                }`}
+                } ${isDisabled ? "opacity-50" : ""}`}
               >
                 {tier.highlighted && !inCart && (
                   <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/20 to-accent/20 rounded-3xl blur-xl opacity-50 -z-10" />
@@ -237,31 +287,24 @@ const PricingStageSelector = () => {
                   ))}
                 </ul>
 
-                {tier.price === "Free" ? (
-                  <Button size="lg" variant="outline" className="w-full group">
-                    {tier.cta}
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                ) : (
-                  <Button
-                    size="lg"
-                    variant={inCart ? "default" : tier.highlighted ? "default" : "outline"}
-                    className="w-full group"
-                    onClick={() => handleTierClick(tier)}
-                  >
-                    {inCart ? (
-                      <>
-                        <Check className="w-4 h-4 mr-2" />
-                        Added to Cart
-                      </>
-                    ) : (
-                      <>
-                        {tier.cta}
-                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                      </>
-                    )}
-                  </Button>
-                )}
+                <Button
+                  size="lg"
+                  variant={inCart ? "default" : tier.highlighted ? "default" : "outline"}
+                  className="w-full group"
+                  onClick={() => handleTierClick(tier)}
+                >
+                  {inCart ? (
+                    <>
+                      <Check className="w-4 h-4 mr-2" />
+                      Added to Cart
+                    </>
+                  ) : (
+                    <>
+                      {tier.cta}
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </>
+                  )}
+                </Button>
               </motion.div>
             );
           })}
@@ -281,10 +324,12 @@ const PricingStageSelector = () => {
             Extend your setup with dedicated tools and advanced capabilities.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {[...standaloneProducts, ...addons].map((item, index) => {
+          {/* Standalone Products */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+            {standaloneProducts.map((item, index) => {
               const isExpanded = expandedExtra === item.id;
-              const inCart = hasCustomModule(item.name);
+              const inCart = hasPackage(item.id);
+              const isDisabled = !inCart && hasAnyBasePlan;
               return (
                 <motion.div
                   key={item.id}
@@ -294,7 +339,7 @@ const PricingStageSelector = () => {
                   transition={{ delay: index * 0.08 }}
                   className={`rounded-2xl border bg-card p-6 transition-colors ${
                     inCart ? "border-primary bg-primary/5" : "border-border hover:border-primary/50"
-                  }`}
+                  } ${isDisabled ? "opacity-50" : ""}`}
                 >
                   <div className="flex items-start justify-between mb-3">
                     <div
@@ -321,12 +366,13 @@ const PricingStageSelector = () => {
                         )}
                       </div>
                       <button
-                        onClick={(e) => handleExtraClick(item, e)}
+                        onClick={() => handleStandaloneClick(item)}
+                        disabled={isDisabled}
                         className={`w-9 h-9 rounded-full flex items-center justify-center transition-colors flex-shrink-0 ${
                           inCart
                             ? "bg-primary text-primary-foreground hover:bg-primary/80"
                             : "bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary"
-                        }`}
+                        } disabled:cursor-not-allowed`}
                         title={inCart ? "Remove from cart" : "Add to cart"}
                       >
                         {inCart ? <X className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
@@ -339,7 +385,6 @@ const PricingStageSelector = () => {
                     onClick={() => setExpandedExtra(isExpanded ? null : item.id)}
                   >
                     <p className="text-sm text-muted-foreground mb-2">{item.tagline}</p>
-
                     <AnimatePresence>
                       {isExpanded && item.features.length > 0 && (
                         <motion.div
@@ -359,7 +404,102 @@ const PricingStageSelector = () => {
                         </motion.div>
                       )}
                     </AnimatePresence>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
 
+          {/* Add-ons */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {addons.map((item, index) => {
+              const isExpanded = expandedExtra === item.id;
+              const inCart = hasPackage(item.id);
+              // Extra Users: only available when Studio Pro is selected
+              const isLocked = item.studioPro0nly && !isStudioProSelected;
+              // Private LLM: available only when any base plan is selected
+              const isUnavailable = !item.studioPro0nly && !hasAnyBasePlan;
+              const isDisabled = isLocked || isUnavailable;
+
+              return (
+                <motion.div
+                  key={item.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.08 }}
+                  className={`rounded-2xl border bg-card p-6 transition-colors ${
+                    inCart ? "border-primary bg-primary/5" : "border-border hover:border-primary/50"
+                  } ${isDisabled ? "opacity-50" : ""}`}
+                >
+                  <div className="flex items-start justify-between mb-3">
+                    <div
+                      className="flex items-center gap-3 cursor-pointer flex-1"
+                      onClick={() => setExpandedExtra(isExpanded ? null : item.id)}
+                    >
+                      <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${inCart ? "bg-primary/10 text-primary" : "bg-muted text-muted-foreground"}`}>
+                        {item.icon}
+                      </div>
+                      <div>
+                        <span className="font-semibold text-foreground">{item.name}</span>
+                        {item.tag && (
+                          <span className="ml-2 px-2 py-0.5 rounded text-xs font-medium bg-muted text-muted-foreground">
+                            {item.tag}
+                          </span>
+                        )}
+                        {isLocked && (
+                          <span className="ml-2 px-2 py-0.5 rounded text-xs font-medium bg-muted text-muted-foreground">
+                            Studio Pro only
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="text-right cursor-pointer" onClick={() => setExpandedExtra(isExpanded ? null : item.id)}>
+                        <span className="text-lg font-bold text-primary">{item.price}</span>
+                        {item.priceSuffix && (
+                          <span className="block text-xs text-muted-foreground">{item.priceSuffix}</span>
+                        )}
+                      </div>
+                      <button
+                        onClick={(e) => !isDisabled && handleAddonClick(item, e)}
+                        disabled={isDisabled}
+                        className={`w-9 h-9 rounded-full flex items-center justify-center transition-colors flex-shrink-0 ${
+                          inCart
+                            ? "bg-primary text-primary-foreground hover:bg-primary/80"
+                            : "bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary"
+                        } disabled:cursor-not-allowed`}
+                        title={isLocked ? "Requires Studio Pro" : inCart ? "Remove from cart" : "Add to cart"}
+                      >
+                        {inCart ? <X className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                      </button>
+                    </div>
+                  </div>
+
+                  <div
+                    className="cursor-pointer"
+                    onClick={() => setExpandedExtra(isExpanded ? null : item.id)}
+                  >
+                    <p className="text-sm text-muted-foreground mb-2">{item.tagline}</p>
+                    <AnimatePresence>
+                      {isExpanded && item.features.length > 0 && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: "auto" }}
+                          exit={{ opacity: 0, height: 0 }}
+                          className="overflow-hidden"
+                        >
+                          <ul className="pt-3 border-t border-border space-y-2 mt-2">
+                            {item.features.map((f, i) => (
+                              <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                                <Check className="w-3 h-3 text-primary mt-0.5 flex-shrink-0" />
+                                {f}
+                              </li>
+                            ))}
+                          </ul>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                     {item.note && (
                       <p className="text-xs text-muted-foreground mt-3 italic">{item.note}</p>
                     )}
