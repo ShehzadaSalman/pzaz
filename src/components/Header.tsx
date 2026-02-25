@@ -19,7 +19,6 @@ interface NavItem {
 }
 
 const defaultNavItems: NavItem[] = [
-  { label: "About", to: "/about-us" },
   { label: "Blog", to: "/producer-blog" },
   {
     label: "Products",
@@ -34,7 +33,6 @@ const defaultNavItems: NavItem[] = [
 ];
 
 const blogNavItems: NavItem[] = [
-  { label: "About", to: "/about-us" },
   { label: "Blog", to: "/producer-blog" },
   {
     label: "Products",
