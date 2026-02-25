@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Check, ArrowRight, Users, Lock, Calculator, Palette, Plus, X } from "lucide-react";
+import { motion } from "framer-motion";
+import { Check, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { usePricingCart } from "@/contexts/PricingCartContext";
 
@@ -16,7 +15,8 @@ interface Tier {
   badge?: string;
 }
 
-const tiers: Tier[] = [
+// Section 1: Indie + Standalone Products
+const section1Tiers: Tier[] = [
   {
     id: "indie",
     name: "Indie",
@@ -31,6 +31,40 @@ const tiers: Tier[] = [
     ],
     cta: "Start Free",
   },
+  {
+    id: "budget",
+    name: "Budget",
+    price: "€49",
+    priceSuffix: "/ month",
+    tagline: "Professional film budgeting system fully integrated into your workflow.",
+    features: [
+      "Dedicated budgeting environment",
+      "Built specifically for film and video production",
+      "Linked to production elements and resources",
+      "Clear cost breakdown and financial overview",
+      "Works seamlessly alongside Planning and Production Suites",
+    ],
+    cta: "Get Budget",
+  },
+  {
+    id: "storyboard",
+    name: "Storyboard",
+    price: "€49",
+    priceSuffix: "/ month",
+    tagline: "Visual planning tool for building structured storyboards inside Pzaz.",
+    features: [
+      "Native storyboard builder",
+      "Integrated with script and planning tools",
+      "Visual shot and sequence development",
+      "Drag-and-drop visual workflow",
+      "Eliminates need for external storyboard software",
+    ],
+    cta: "Get Storyboard",
+  },
+];
+
+// Section 2: Professional Suite
+const section2Tiers: Tier[] = [
   {
     id: "planning-pro",
     name: "Planning Pro",
@@ -65,101 +99,14 @@ const tiers: Tier[] = [
   },
 ];
 
-interface Extra {
-  id: string;
-  icon: React.ReactNode;
-  name: string;
-  price: string;
-  priceNum: number;
-  priceSuffix?: string;
-  tagline: string;
-  features: string[];
-  tag?: string;
-  note?: string;
-  studioPro0nly?: boolean;
-}
-
-const standaloneProducts: Extra[] = [
-  {
-    id: "budget",
-    icon: <Calculator className="w-5 h-5" />,
-    name: "Budget",
-    price: "€49",
-    priceNum: 49,
-    priceSuffix: "/ month",
-    tagline: "Professional film budgeting system fully integrated into your workflow.",
-    features: [
-      "Dedicated budgeting environment",
-      "Built specifically for film and video production",
-      "Linked to production elements and resources",
-      "Clear cost breakdown and financial overview",
-      "Works seamlessly alongside Planning and Production Suites",
-    ],
-    tag: "Standalone Product",
-  },
-  {
-    id: "storyboard",
-    icon: <Palette className="w-5 h-5" />,
-    name: "Storyboard",
-    price: "€49",
-    priceNum: 49,
-    priceSuffix: "/ month",
-    tagline: "Visual planning tool for building structured storyboards inside Pzaz.",
-    features: [
-      "Native storyboard builder",
-      "Integrated with script and planning tools",
-      "Visual shot and sequence development",
-      "Drag-and-drop visual workflow",
-      "Eliminates need for external storyboard software",
-    ],
-    tag: "Standalone Product",
-  },
-];
-
-const addons: Extra[] = [
-  {
-    id: "extra-users",
-    icon: <Users className="w-5 h-5" />,
-    name: "Extra Users",
-    price: "€49",
-    priceNum: 49,
-    priceSuffix: "/ user / month",
-    tagline: "Add additional team members to your Studio Pro environment.",
-    features: [],
-    tag: "Add-on",
-    note: "For teams larger than 10 additional users, contact us for custom enterprise pricing.",
-    studioPro0nly: true,
-  },
-  {
-    id: "private-llm",
-    icon: <Lock className="w-5 h-5" />,
-    name: "Private LLM",
-    price: "€249",
-    priceNum: 249,
-    priceSuffix: "/ month",
-    tagline: "Secure private AI environment tailored to your production workflow.",
-    features: [
-      "Dedicated AI infrastructure reserved only for your organisation",
-      "Completely isolated from public or shared AI environments",
-      "No external model training on your scripts or production data",
-      "Tailored to your internal terminology and workflow",
-      "Enterprise-grade stability and control for high-value productions",
-    ],
-    tag: "Add-on for all plans",
-  },
-];
-
 // IDs that are base plans (only one selectable at a time)
-const BASE_PLAN_IDS = ["indie", "planning-pro", "studio-pro", ...standaloneProducts.map(s => s.id)];
-const ADDON_IDS = addons.map(a => a.id);
+const BASE_PLAN_IDS = ["indie", "planning-pro", "studio-pro", "budget", "storyboard"];
 
 const PricingStageSelector = () => {
-  const [expandedExtra, setExpandedExtra] = useState<string | null>(null);
   const { packages, addPackage, removePackage, hasPackage } = usePricingCart();
 
   // Derive selected base plan id (if any)
   const selectedBasePlanId = packages.find(p => BASE_PLAN_IDS.includes(p.id))?.id ?? null;
-  const isStudioProSelected = selectedBasePlanId === "studio-pro";
 
   const handleTierClick = (tier: Tier) => {
     const pkgId = tier.id;
@@ -188,43 +135,77 @@ const PricingStageSelector = () => {
     }
   };
 
-  const handleStandaloneClick = (item: Extra) => {
-    if (hasPackage(item.id)) {
-      removePackage(item.id);
-    } else {
-      // Remove any existing base plan first
-      if (selectedBasePlanId) removePackage(selectedBasePlanId);
-      addPackage({
-        id: item.id,
-        name: item.name,
-        price: item.priceNum,
-        type: "package",
-        modules: item.features.map(f => ({ name: f, price: 0 })),
-      });
-    }
-  };
-
-  const handleAddonClick = (item: Extra, e: React.MouseEvent) => {
-    e.stopPropagation();
-    if (hasPackage(item.id)) {
-      removePackage(item.id);
-    } else {
-      addPackage({
-        id: item.id,
-        name: item.name,
-        price: item.priceNum,
-        type: "package",
-        modules: [{ name: item.name, price: item.priceNum }],
-      });
-    }
-  };
 
   const hasAnyBasePlan = selectedBasePlanId !== null;
+
+  const renderTierCard = (tier: Tier, index: number) => {
+    const inCart = hasPackage(tier.id);
+    const isDisabled = !inCart && hasAnyBasePlan;
+    return (
+      <motion.div
+        key={tier.id}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: index * 0.1 }}
+        className={`relative rounded-3xl border-2 p-8 flex flex-col transition-colors ${
+          inCart
+            ? "border-primary bg-primary/5 shadow-xl"
+            : tier.highlighted
+            ? "border-primary bg-card shadow-xl"
+            : "border-border bg-card"
+        } ${isDisabled ? "opacity-50" : ""}`}
+      >
+        {tier.highlighted && !inCart && (
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/20 to-accent/20 rounded-3xl blur-xl opacity-50 -z-10" />
+        )}
+        {tier.badge && (
+          <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-primary text-primary-foreground text-xs font-bold">
+            {tier.badge}
+          </span>
+        )}
+        <h3 className="text-xl font-bold text-foreground mb-2">{tier.name}</h3>
+        <div className="flex items-baseline gap-1 mb-3">
+          <span className="text-4xl font-bold gradient-text">{tier.price}</span>
+          {tier.priceSuffix && (
+            <span className="text-muted-foreground text-sm">{tier.priceSuffix}</span>
+          )}
+        </div>
+        <p className="text-sm text-muted-foreground mb-6">{tier.tagline}</p>
+        <ul className="space-y-3 mb-8 flex-1">
+          {tier.features.map((f, i) => (
+            <li key={i} className="flex items-start gap-3">
+              <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+              <span className="text-sm text-foreground">{f}</span>
+            </li>
+          ))}
+        </ul>
+        <Button
+          size="lg"
+          variant={inCart ? "default" : tier.highlighted ? "default" : "outline"}
+          className="w-full group"
+          onClick={() => handleTierClick(tier)}
+        >
+          {inCart ? (
+            <>
+              <Check className="w-4 h-4 mr-2" />
+              Added to Cart
+            </>
+          ) : (
+            <>
+              {tier.cta}
+              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+            </>
+          )}
+        </Button>
+      </motion.div>
+    );
+  };
 
   return (
     <section id="plans" className="py-20 relative">
       <div className="container mx-auto px-6">
-        {/* Section Title */}
+        {/* Section 1 Title */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -240,275 +221,30 @@ const PricingStageSelector = () => {
           </p>
         </motion.div>
 
-        {/* Tier Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-20">
-          {tiers.map((tier, index) => {
-            const inCart = hasPackage(tier.id);
-            const isDisabled = !inCart && hasAnyBasePlan;
-            return (
-              <motion.div
-                key={tier.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className={`relative rounded-3xl border-2 p-8 flex flex-col transition-colors ${
-                  inCart
-                    ? "border-primary bg-primary/5 shadow-xl"
-                    : tier.highlighted
-                    ? "border-primary bg-card shadow-xl"
-                    : "border-border bg-card"
-                } ${isDisabled ? "opacity-50" : ""}`}
-              >
-                {tier.highlighted && !inCart && (
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/20 to-accent/20 rounded-3xl blur-xl opacity-50 -z-10" />
-                )}
-                {tier.badge && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-primary text-primary-foreground text-xs font-bold">
-                    {tier.badge}
-                  </span>
-                )}
-
-                <h3 className="text-xl font-bold text-foreground mb-2">{tier.name}</h3>
-                <div className="flex items-baseline gap-1 mb-3">
-                  <span className="text-4xl font-bold gradient-text">{tier.price}</span>
-                  {tier.priceSuffix && (
-                    <span className="text-muted-foreground text-sm">{tier.priceSuffix}</span>
-                  )}
-                </div>
-                <p className="text-sm text-muted-foreground mb-6">{tier.tagline}</p>
-
-                <ul className="space-y-3 mb-8 flex-1">
-                  {tier.features.map((f, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-foreground">{f}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <Button
-                  size="lg"
-                  variant={inCart ? "default" : tier.highlighted ? "default" : "outline"}
-                  className="w-full group"
-                  onClick={() => handleTierClick(tier)}
-                >
-                  {inCart ? (
-                    <>
-                      <Check className="w-4 h-4 mr-2" />
-                      Added to Cart
-                    </>
-                  ) : (
-                    <>
-                      {tier.cta}
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </>
-                  )}
-                </Button>
-              </motion.div>
-            );
-          })}
+        {/* Section 1: Indie, Budget, Storyboard */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-24">
+          {section1Tiers.map((tier, index) => renderTierCard(tier, index))}
         </div>
 
-        {/* Standalone Products & Add-ons */}
+        {/* Section 2: Professional Suite */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-5xl mx-auto"
+          className="text-center mb-14"
         >
-          <h3 className="text-2xl font-bold text-foreground mb-2 text-center">
-            Standalone Products & Add-ons
-          </h3>
-          <p className="text-muted-foreground text-center mb-10 max-w-lg mx-auto">
-            Extend your setup with dedicated tools and advanced capabilities.
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+            <span className="gradient-text">Professional Suite</span>
+          </h2>
+          <p className="text-muted-foreground max-w-xl mx-auto">
+            Advanced tools for serious productions and growing teams.
           </p>
-
-          {/* Standalone Products */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
-            {standaloneProducts.map((item, index) => {
-              const isExpanded = expandedExtra === item.id;
-              const inCart = hasPackage(item.id);
-              const isDisabled = !inCart && hasAnyBasePlan;
-              return (
-                <motion.div
-                  key={item.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.08 }}
-                  className={`rounded-2xl border bg-card p-6 transition-colors ${
-                    inCart ? "border-primary bg-primary/5" : "border-border hover:border-primary/50"
-                  } ${isDisabled ? "opacity-50" : ""}`}
-                >
-                  <div className="flex items-start justify-between mb-3">
-                    <div
-                      className="flex items-center gap-3 cursor-pointer flex-1"
-                      onClick={() => setExpandedExtra(isExpanded ? null : item.id)}
-                    >
-                      <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${inCart ? "bg-primary/10 text-primary" : "bg-muted text-muted-foreground"}`}>
-                        {item.icon}
-                      </div>
-                      <div>
-                        <span className="font-semibold text-foreground">{item.name}</span>
-                        {item.tag && (
-                          <span className="ml-2 px-2 py-0.5 rounded text-xs font-medium bg-muted text-muted-foreground">
-                            {item.tag}
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="text-right cursor-pointer" onClick={() => setExpandedExtra(isExpanded ? null : item.id)}>
-                        <span className="text-lg font-bold text-primary">{item.price}</span>
-                        {item.priceSuffix && (
-                          <span className="block text-xs text-muted-foreground">{item.priceSuffix}</span>
-                        )}
-                      </div>
-                      <button
-                        onClick={() => handleStandaloneClick(item)}
-                        disabled={isDisabled}
-                        className={`w-9 h-9 rounded-full flex items-center justify-center transition-colors flex-shrink-0 ${
-                          inCart
-                            ? "bg-primary text-primary-foreground hover:bg-primary/80"
-                            : "bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary"
-                        } disabled:cursor-not-allowed`}
-                        title={inCart ? "Remove from cart" : "Add to cart"}
-                      >
-                        {inCart ? <X className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
-                      </button>
-                    </div>
-                  </div>
-
-                  <div
-                    className="cursor-pointer"
-                    onClick={() => setExpandedExtra(isExpanded ? null : item.id)}
-                  >
-                    <p className="text-sm text-muted-foreground mb-2">{item.tagline}</p>
-                    <AnimatePresence>
-                      {isExpanded && item.features.length > 0 && (
-                        <motion.div
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: "auto" }}
-                          exit={{ opacity: 0, height: 0 }}
-                          className="overflow-hidden"
-                        >
-                          <ul className="pt-3 border-t border-border space-y-2 mt-2">
-                            {item.features.map((f, i) => (
-                              <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                                <Check className="w-3 h-3 text-primary mt-0.5 flex-shrink-0" />
-                                {f}
-                              </li>
-                            ))}
-                          </ul>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-
-          {/* Add-ons */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {addons.map((item, index) => {
-              const isExpanded = expandedExtra === item.id;
-              const inCart = hasPackage(item.id);
-              // Extra Users: only available when Studio Pro is selected
-              const isLocked = item.studioPro0nly && !isStudioProSelected;
-              // Private LLM: available only when any base plan is selected
-              const isUnavailable = !item.studioPro0nly && !hasAnyBasePlan;
-              const isDisabled = isLocked || isUnavailable;
-
-              return (
-                <motion.div
-                  key={item.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.08 }}
-                  className={`rounded-2xl border bg-card p-6 transition-colors ${
-                    inCart ? "border-primary bg-primary/5" : "border-border hover:border-primary/50"
-                  } ${isDisabled ? "opacity-50" : ""}`}
-                >
-                  <div className="flex items-start justify-between mb-3">
-                    <div
-                      className="flex items-center gap-3 cursor-pointer flex-1"
-                      onClick={() => setExpandedExtra(isExpanded ? null : item.id)}
-                    >
-                      <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${inCart ? "bg-primary/10 text-primary" : "bg-muted text-muted-foreground"}`}>
-                        {item.icon}
-                      </div>
-                      <div>
-                        <span className="font-semibold text-foreground">{item.name}</span>
-                        {item.tag && (
-                          <span className="ml-2 px-2 py-0.5 rounded text-xs font-medium bg-muted text-muted-foreground">
-                            {item.tag}
-                          </span>
-                        )}
-                        {isLocked && (
-                          <span className="ml-2 px-2 py-0.5 rounded text-xs font-medium bg-muted text-muted-foreground">
-                            Studio Pro only
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="text-right cursor-pointer" onClick={() => setExpandedExtra(isExpanded ? null : item.id)}>
-                        <span className="text-lg font-bold text-primary">{item.price}</span>
-                        {item.priceSuffix && (
-                          <span className="block text-xs text-muted-foreground">{item.priceSuffix}</span>
-                        )}
-                      </div>
-                      <button
-                        onClick={(e) => !isDisabled && handleAddonClick(item, e)}
-                        disabled={isDisabled}
-                        className={`w-9 h-9 rounded-full flex items-center justify-center transition-colors flex-shrink-0 ${
-                          inCart
-                            ? "bg-primary text-primary-foreground hover:bg-primary/80"
-                            : "bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary"
-                        } disabled:cursor-not-allowed`}
-                        title={isLocked ? "Requires Studio Pro" : inCart ? "Remove from cart" : "Add to cart"}
-                      >
-                        {inCart ? <X className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
-                      </button>
-                    </div>
-                  </div>
-
-                  <div
-                    className="cursor-pointer"
-                    onClick={() => setExpandedExtra(isExpanded ? null : item.id)}
-                  >
-                    <p className="text-sm text-muted-foreground mb-2">{item.tagline}</p>
-                    <AnimatePresence>
-                      {isExpanded && item.features.length > 0 && (
-                        <motion.div
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: "auto" }}
-                          exit={{ opacity: 0, height: 0 }}
-                          className="overflow-hidden"
-                        >
-                          <ul className="pt-3 border-t border-border space-y-2 mt-2">
-                            {item.features.map((f, i) => (
-                              <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                                <Check className="w-3 h-3 text-primary mt-0.5 flex-shrink-0" />
-                                {f}
-                              </li>
-                            ))}
-                          </ul>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                    {item.note && (
-                      <p className="text-xs text-muted-foreground mt-3 italic">{item.note}</p>
-                    )}
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
         </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-20">
+          {section2Tiers.map((tier, index) => renderTierCard(tier, index))}
+        </div>
+
       </div>
     </section>
   );
