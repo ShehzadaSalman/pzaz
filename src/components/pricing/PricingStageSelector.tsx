@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
-import { Check, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { usePricingCart } from "@/contexts/PricingCartContext";
 
 interface Tier {
   id: string;
@@ -11,9 +10,12 @@ interface Tier {
   tagline: string;
   features: string[];
   cta: string;
+  checkoutUrl: string;
   highlighted?: boolean;
   badge?: string;
 }
+
+const BASE_CHECKOUT = "https://projector.pzaz.io/checkout";
 
 // Section 1: Indie + Standalone Products
 const section1Tiers: Tier[] = [
@@ -30,6 +32,7 @@ const section1Tiers: Tier[] = [
       "Access to Inbox, Ideation, and core system tools",
     ],
     cta: "Start Free",
+    checkoutUrl: `${BASE_CHECKOUT}?plan=indie&period=month&currency=EUR`,
   },
   {
     id: "budget",
@@ -45,6 +48,7 @@ const section1Tiers: Tier[] = [
       "Works seamlessly alongside Planning and Production Suites",
     ],
     cta: "Get Budget",
+    checkoutUrl: `${BASE_CHECKOUT}?plan=indie&period=month&bundles=pzaz_budget&currency=EUR`,
   },
   {
     id: "storyboard",
@@ -60,6 +64,7 @@ const section1Tiers: Tier[] = [
       "Eliminates need for external storyboard software",
     ],
     cta: "Get Storyboard",
+    checkoutUrl: `${BASE_CHECKOUT}?plan=indie&period=month&bundles=pzaz_storyboard&currency=EUR`,
   },
 ];
 
@@ -78,7 +83,8 @@ const section2Tiers: Tier[] = [
       "Integrated collaboration with producers and team",
       "Professional-grade planning tools in one suite",
     ],
-    cta: "Start Planning",
+    cta: "Get Planning Pro",
+    checkoutUrl: `${BASE_CHECKOUT}?plan=indie&period=month&bundles=pzaz_planning&currency=EUR`,
     highlighted: true,
     badge: "Most Popular",
   },
@@ -96,51 +102,16 @@ const section2Tiers: Tier[] = [
       "Reporting layer for financial summaries and delivery timelines",
     ],
     cta: "Get Studio Pro",
+    checkoutUrl: `${BASE_CHECKOUT}?plan=indie&period=month&bundles=pzaz_studio&currency=EUR`,
   },
 ];
 
-// IDs that are base plans (only one selectable at a time)
-const BASE_PLAN_IDS = ["indie", "planning-pro", "studio-pro", "budget", "storyboard"];
+import { Check } from "lucide-react";
 
+// IDs kept for reference only
 const PricingStageSelector = () => {
-  const { packages, addPackage, removePackage, hasPackage } = usePricingCart();
-
-  // Derive selected base plan id (if any)
-  const selectedBasePlanId = packages.find(p => BASE_PLAN_IDS.includes(p.id))?.id ?? null;
-
-  const handleTierClick = (tier: Tier) => {
-    const pkgId = tier.id;
-    if (hasPackage(pkgId)) {
-      removePackage(pkgId);
-    } else {
-      // Remove any existing base plan first
-      if (selectedBasePlanId) removePackage(selectedBasePlanId);
-      if (tier.price === "Free") {
-        addPackage({
-          id: pkgId,
-          name: tier.name,
-          price: 0,
-          type: "package",
-          modules: tier.features.map(f => ({ name: f, price: 0 })),
-        });
-      } else {
-        addPackage({
-          id: pkgId,
-          name: tier.name,
-          price: parseInt(tier.price.replace("€", "")),
-          type: "package",
-          modules: tier.features.map(f => ({ name: f, price: 0 })),
-        });
-      }
-    }
-  };
-
-
-  const hasAnyBasePlan = selectedBasePlanId !== null;
 
   const renderTierCard = (tier: Tier, index: number) => {
-    const inCart = hasPackage(tier.id);
-    const isDisabled = !inCart && hasAnyBasePlan;
     return (
       <motion.div
         key={tier.id}
@@ -149,14 +120,12 @@ const PricingStageSelector = () => {
         viewport={{ once: true }}
         transition={{ delay: index * 0.1 }}
         className={`relative rounded-3xl border-2 p-8 flex flex-col transition-colors ${
-          inCart
-            ? "border-primary bg-primary/5 shadow-xl"
-            : tier.highlighted
+          tier.highlighted
             ? "border-primary bg-card shadow-xl"
             : "border-border bg-card"
-        } ${isDisabled ? "opacity-50" : ""}`}
+        }`}
       >
-        {tier.highlighted && !inCart && (
+        {tier.highlighted && (
           <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/20 to-accent/20 rounded-3xl blur-xl opacity-50 -z-10" />
         )}
         {tier.badge && (
@@ -182,21 +151,12 @@ const PricingStageSelector = () => {
         </ul>
         <Button
           size="lg"
-          variant={inCart ? "default" : tier.highlighted ? "default" : "outline"}
+          variant={tier.highlighted ? "default" : "outline"}
           className="w-full group"
-          onClick={() => handleTierClick(tier)}
+          onClick={() => window.open(tier.checkoutUrl, "_blank")}
         >
-          {inCart ? (
-            <>
-              <Check className="w-4 h-4 mr-2" />
-              Added to Cart
-            </>
-          ) : (
-            <>
-              {tier.cta}
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </>
-          )}
+          {tier.cta}
+          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
         </Button>
       </motion.div>
     );
