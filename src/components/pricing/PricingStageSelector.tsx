@@ -1,11 +1,13 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Check, Users, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ContactModal from "@/components/ContactModal";
 
 interface Tier {
   id: string;
   name: string;
-  price: string;
+  basePrice: number | null; // null = Free
   priceSuffix?: string;
   tagline: string;
   features: string[];
@@ -13,16 +15,18 @@ interface Tier {
   checkoutUrl: string;
   highlighted?: boolean;
   badge?: string;
+  hasUserSelector?: boolean;
 }
 
 const BASE_CHECKOUT = "https://projector.pzaz.io/checkout";
+const EXTRA_USER_PRICE = 10;
 
 // Section 1: Indie + Standalone Products
 const section1Tiers: Tier[] = [
   {
     id: "indie",
     name: "Indie",
-    price: "Free",
+    basePrice: null,
     tagline: "Professional workspace for solo filmmakers starting a project.",
     features: [
       "Full access to core workflow foundation",
@@ -37,7 +41,7 @@ const section1Tiers: Tier[] = [
   {
     id: "budget",
     name: "Budget",
-    price: "€49",
+    basePrice: 49,
     priceSuffix: "/ month",
     tagline: "Professional film budgeting system fully integrated into your workflow.",
     features: [
@@ -53,7 +57,7 @@ const section1Tiers: Tier[] = [
   {
     id: "storyboard",
     name: "Storyboard",
-    price: "€49",
+    basePrice: 49,
     priceSuffix: "/ month",
     tagline: "Visual planning tool for building structured storyboards inside Pzaz.",
     features: [
@@ -73,7 +77,7 @@ const section2Tiers: Tier[] = [
   {
     id: "planning-pro",
     name: "Planning Pro",
-    price: "€129",
+    basePrice: 129,
     priceSuffix: "/ month",
     tagline: "Advanced planning suite for writers, directors, and creative leads.",
     features: [
@@ -87,11 +91,12 @@ const section2Tiers: Tier[] = [
     checkoutUrl: `${BASE_CHECKOUT}?plan=indie&period=month&bundles=pzaz_planning&currency=EUR`,
     highlighted: true,
     badge: "Most Popular",
+    hasUserSelector: true,
   },
   {
     id: "studio-pro",
     name: "Studio Pro",
-    price: "€199",
+    basePrice: 199,
     priceSuffix: "/ month",
     tagline: "Multi-project operations suite for production houses and creative agencies managing a slate.",
     features: [
@@ -103,13 +108,89 @@ const section2Tiers: Tier[] = [
     ],
     cta: "Get Studio Pro",
     checkoutUrl: `${BASE_CHECKOUT}?plan=indie&period=month&bundles=pzaz_studio&currency=EUR`,
+    hasUserSelector: true,
   },
 ];
 
-import { Check } from "lucide-react";
+const UserSelector = ({
+  users,
+  onChange,
+  onContactClick,
+}: {
+  users: number;
+  onChange: (n: number) => void;
+  onContactClick: () => void;
+}) => {
+  const [open, setOpen] = useState(false);
 
-// IDs kept for reference only
+  return (
+    <div className="mb-6">
+      <div className="flex items-center gap-2 mb-2">
+        <Users className="w-4 h-4 text-primary flex-shrink-0" />
+        <span className="text-sm font-medium text-foreground">Number of users</span>
+      </div>
+
+      {/* Dropdown */}
+      <div className="relative">
+        <button
+          type="button"
+          onClick={() => setOpen((v) => !v)}
+          className="w-full flex items-center justify-between px-4 py-2.5 rounded-xl border border-border bg-background text-foreground text-sm font-medium hover:border-primary/50 transition-colors"
+        >
+          <span>{users} {users === 1 ? "user" : "users"}</span>
+          <ChevronDown className={`w-4 h-4 text-muted-foreground transition-transform ${open ? "rotate-180" : ""}`} />
+        </button>
+
+        {open && (
+          <div className="absolute top-full left-0 right-0 mt-1 rounded-xl border border-border bg-card shadow-lg z-50 overflow-hidden">
+            {Array.from({ length: 10 }, (_, i) => i + 1).map((n) => (
+              <button
+                key={n}
+                type="button"
+                onClick={() => { onChange(n); setOpen(false); }}
+                className={`w-full text-left px-4 py-2 text-sm transition-colors hover:bg-muted ${
+                  users === n ? "bg-primary/10 text-primary font-semibold" : "text-foreground"
+                }`}
+              >
+                {n} {n === 1 ? "user" : "users"}
+                {n > 1 && (
+                  <span className="ml-2 text-xs text-muted-foreground">
+                    +€{(n - 1) * EXTRA_USER_PRICE}/mo
+                  </span>
+                )}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+
+      <p className="text-xs text-muted-foreground mt-2">
+        Need more than 10 users?{" "}
+        <button
+          type="button"
+          onClick={onContactClick}
+          className="underline text-primary hover:text-primary/80 transition-colors"
+        >
+          Contact us
+        </button>
+      </p>
+    </div>
+  );
+};
+
 const PricingStageSelector = () => {
+  const [userCounts, setUserCounts] = useState<Record<string, number>>({
+    "planning-pro": 1,
+    "studio-pro": 1,
+  });
+  const [contactOpen, setContactOpen] = useState(false);
+
+  const getDisplayPrice = (tier: Tier) => {
+    if (tier.basePrice === null) return "Free";
+    const extraUsers = (userCounts[tier.id] ?? 1) - 1;
+    const total = tier.basePrice + extraUsers * EXTRA_USER_PRICE;
+    return `€${total}`;
+  };
 
   const renderTierCard = (tier: Tier, index: number) => {
     return (
@@ -133,15 +214,17 @@ const PricingStageSelector = () => {
             {tier.badge}
           </span>
         )}
+
         <h3 className="text-xl font-bold text-foreground mb-2">{tier.name}</h3>
         <div className="flex items-baseline gap-1 mb-3">
-          <span className="text-4xl font-bold gradient-text">{tier.price}</span>
-          {tier.priceSuffix && (
+          <span className="text-4xl font-bold gradient-text">{getDisplayPrice(tier)}</span>
+          {tier.priceSuffix && tier.basePrice !== null && (
             <span className="text-muted-foreground text-sm">{tier.priceSuffix}</span>
           )}
         </div>
         <p className="text-sm text-muted-foreground mb-6">{tier.tagline}</p>
-        <ul className="space-y-3 mb-8 flex-1">
+
+        <ul className="space-y-3 mb-6 flex-1">
           {tier.features.map((f, i) => (
             <li key={i} className="flex items-start gap-3">
               <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
@@ -149,6 +232,15 @@ const PricingStageSelector = () => {
             </li>
           ))}
         </ul>
+
+        {tier.hasUserSelector && (
+          <UserSelector
+            users={userCounts[tier.id] ?? 1}
+            onChange={(n) => setUserCounts((prev) => ({ ...prev, [tier.id]: n }))}
+            onContactClick={() => setContactOpen(true)}
+          />
+        )}
+
         <Button
           size="lg"
           variant={tier.highlighted ? "default" : "outline"}
@@ -163,50 +255,53 @@ const PricingStageSelector = () => {
   };
 
   return (
-    <section id="plans" className="py-20 relative">
-      <div className="container mx-auto px-6">
-        {/* Section 1 Title */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-14"
-        >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Choose the plan that fits{" "}
-            <span className="gradient-text">your production.</span>
-          </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
-            Start free and scale as your productions grow.
-          </p>
-        </motion.div>
+    <>
+      <section id="plans" className="py-20 relative">
+        <div className="container mx-auto px-6">
+          {/* Section 1 Title */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-14"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              Choose the plan that fits{" "}
+              <span className="gradient-text">your production.</span>
+            </h2>
+            <p className="text-muted-foreground max-w-xl mx-auto">
+              Start free and scale as your productions grow.
+            </p>
+          </motion.div>
 
-        {/* Section 1: Indie, Budget, Storyboard */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-24">
-          {section1Tiers.map((tier, index) => renderTierCard(tier, index))}
+          {/* Section 1: Indie, Budget, Storyboard */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-24">
+            {section1Tiers.map((tier, index) => renderTierCard(tier, index))}
+          </div>
+
+          {/* Section 2: Professional Suite */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-14"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              <span className="gradient-text">Professional Suite</span>
+            </h2>
+            <p className="text-muted-foreground max-w-xl mx-auto">
+              Advanced tools for serious productions and growing teams.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-20">
+            {section2Tiers.map((tier, index) => renderTierCard(tier, index))}
+          </div>
         </div>
+      </section>
 
-        {/* Section 2: Professional Suite */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-14"
-        >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            <span className="gradient-text">Professional Suite</span>
-          </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
-            Advanced tools for serious productions and growing teams.
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-20">
-          {section2Tiers.map((tier, index) => renderTierCard(tier, index))}
-        </div>
-
-      </div>
-    </section>
+      <ContactModal open={contactOpen} onOpenChange={setContactOpen} />
+    </>
   );
 };
 
