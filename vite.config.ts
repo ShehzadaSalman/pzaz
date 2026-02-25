@@ -88,7 +88,7 @@ function prerenderMetaPlugin(routes: RouteSEO[]): Plugin {
 }
 
 // Static route list
-const staticRoutes = ["/", "/script", "/pricing", "/producer-blog"];
+const staticRoutes = ["/", "/script", "/pricing", "/producer-blog", "/imagine"];
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
