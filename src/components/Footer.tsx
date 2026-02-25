@@ -8,6 +8,7 @@ const linkRoutes: Record<string, string> = {
   "About": "/about-us",
   "Privacy": "/privacy",
   "Terms": "/terms",
+  "Terms of Use": "/terms",
   "Imagine": "/imagine",
   "Sales Team": "/sales-team",
   "Breakdown": "/breakdown",
@@ -19,7 +20,7 @@ const footerLinks = {
   Product: ["Studio", "Breakdown", "Budget", "Storyboard", "Pricing", "Imagine"],
   Resources: ["Blog", "Documentation", "Guides", "Community", "Support"],
   Company: ["About", "Sales Team", "Brand", "Culture", "Careers", "Press", "Contact"],
-  Legal: ["Privacy", "Terms", "Security"],
+  Legal: ["Privacy", "Terms", "Terms of Use", "Security"],
   Social: ["YouTube", "Instagram", "Facebook", "LinkedIn"],
 };
 
