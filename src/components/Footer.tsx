@@ -17,11 +17,12 @@ const linkRoutes: Record<string, string> = {
   "Pricing": "/pricing",
   "Script": "/script",
   "Collaborate": "/collaborate",
+  "Pzaz vs Final Draft": "/pzaz-vs-final-draft",
 };
 
 const footerLinks = {
   Product: ["Breakdown", "Pricing", "Imagine", "Script", "Collaborate"],
-  Resources: ["Blog"],
+  Resources: ["Blog", "Pzaz vs Final Draft"],
   Company: ["Sales Team", "Brand", "Culture"],
   Legal: ["Privacy", "Terms"],
   Social: ["YouTube", "Instagram", "Facebook", "LinkedIn"],

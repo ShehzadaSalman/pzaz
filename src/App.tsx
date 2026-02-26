@@ -21,6 +21,7 @@ import Imagine from "./pages/Imagine";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Collaborate from "./pages/Collaborate";
+import PzazVsFinalDraft from "./pages/PzazVsFinalDraft";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -43,6 +44,7 @@ const App = () => (
           <Route path="/culture" element={<Culture />} />
           <Route path="/imagine" element={<Imagine />} />
           <Route path="/collaborate" element={<Collaborate />} />
+          <Route path="/pzaz-vs-final-draft" element={<PzazVsFinalDraft />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/terms-of-use" element={<Navigate to="/terms" replace />} />
