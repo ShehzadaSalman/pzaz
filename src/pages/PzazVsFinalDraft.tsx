@@ -103,9 +103,9 @@ const PzazVsFinalDraft = () => {
               <strong>Looking for a scriptwriting tool that goes beyond the basics?</strong> While Final Draft has long been an industry standard for writing scripts, Pzaz offers much more. Pzaz doesn't stop at writing—it's an all-in-one platform that integrates the entire production process. Here's how we stand apart from Final Draft.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="https://projector.pzaz.io/checkout?plan=indie&period=month">
+              <Link to="/pricing">
                 <Button variant="default" size="lg">Start for Free</Button>
-              </a>
+              </Link>
               <a href="https://calendly.com/pzaz-tv/30min" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="lg">Book a Demo</Button>
               </a>
@@ -282,9 +282,9 @@ const PzazVsFinalDraft = () => {
                 Whether you're an independent filmmaker or part of a large production team, Pzaz grows with your needs. The platform is designed to be flexible, scalable, and cost-effective, so you don't have to pay for extra tools or features. Everything you need for your project is already integrated into Pzaz.
               </p>
               <div className="flex flex-wrap gap-4">
-                <a href="https://projector.pzaz.io/checkout?plan=indie&period=month">
+                <Link to="/pricing">
                   <Button variant="default" size="lg">Start for Free</Button>
-                </a>
+                </Link>
                 <a href="https://calendly.com/pzaz-tv/30min" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" size="lg">Book a Demo</Button>
                 </a>
@@ -308,9 +308,9 @@ const PzazVsFinalDraft = () => {
                 Final Draft might be an excellent tool for writing, but Pzaz is a complete production hub. When it comes to writing, organising, and managing your film's production, Pzaz does it—without the need for extra software or fees. Start creating, collaborating, and producing more efficiently today.
               </p>
               <div className="flex flex-wrap gap-4">
-                <a href="https://projector.pzaz.io/checkout?plan=indie&period=month">
+                <Link to="/pricing">
                   <Button variant="default" size="lg" className="bg-white text-[#20124D] hover:bg-white/90">Start for Free</Button>
-                </a>
+                </Link>
                 <a href="https://calendly.com/pzaz-tv/30min" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10">Book a Demo</Button>
                 </a>
