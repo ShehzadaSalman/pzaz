@@ -26,6 +26,7 @@ const footerLinks = {
 
 const socialLinks: Record<string, string> = {
   "YouTube": "https://www.youtube.com/@pzazfilmmaking",
+  "Facebook": "https://web.facebook.com/pzaz.io/",
 };
 
 const Footer = () => {
