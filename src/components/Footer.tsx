@@ -28,6 +28,7 @@ const socialLinks: Record<string, string> = {
   "YouTube": "https://www.youtube.com/@pzazfilmmaking",
   "Facebook": "https://web.facebook.com/pzaz.io/",
   "Instagram": "https://www.instagram.com/pzaz.io/",
+  "LinkedIn": "https://uk.linkedin.com/company/pzazio",
 };
 
 const Footer = () => {
