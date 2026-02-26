@@ -20,6 +20,7 @@ import Culture from "./pages/Culture";
 import Imagine from "./pages/Imagine";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
+import Collaborate from "./pages/Collaborate";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -41,6 +42,7 @@ const App = () => (
           <Route path="/brand" element={<Brand />} />
           <Route path="/culture" element={<Culture />} />
           <Route path="/imagine" element={<Imagine />} />
+          <Route path="/collaborate" element={<Collaborate />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/terms-of-use" element={<Navigate to="/terms" replace />} />
