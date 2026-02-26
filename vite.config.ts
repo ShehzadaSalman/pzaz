@@ -88,7 +88,96 @@ function prerenderMetaPlugin(routes: RouteSEO[]): Plugin {
 }
 
 // Static route list
-const staticRoutes = ["/", "/script", "/pricing", "/producer-blog", "/imagine"];
+const staticRoutes = [
+  "/",
+  "/script",
+  "/pricing",
+  "/producer-blog",
+  "/imagine",
+  "/collaborate",
+  "/breakdown",
+  "/about-us",
+  "/pzaz-vs-final-draft",
+  "/sales-team",
+  "/brand",
+  "/culture",
+  "/privacy",
+  "/terms",
+];
+
+// Static pages with SEO metadata for pre-rendering
+const staticSEORoutes: RouteSEO[] = [
+  {
+    path: "/",
+    title: "Pzaz – Film Production Software",
+    description: "Pzaz is the all-in-one film production platform for indie filmmakers. Manage scripts, budgets, schedules, and crew — powered by AI.",
+  },
+  {
+    path: "/script",
+    title: "Script – AI-Powered Screenwriting | Pzaz",
+    description: "Write, format, and collaborate on scripts with Pzaz's AI-powered screenwriting tool. Industry-standard formatting, real-time collaboration, and more.",
+  },
+  {
+    path: "/pricing",
+    title: "Pricing – Plans for Every Filmmaker | Pzaz",
+    description: "Flexible pricing plans for indie filmmakers and production teams. Start for free — no credit card required.",
+  },
+  {
+    path: "/producer-blog",
+    title: "Producer Blog – Filmmaking Insights | Pzaz",
+    description: "Tips, guides, and insights for indie filmmakers and producers. Explore the Pzaz Producer Blog.",
+  },
+  {
+    path: "/imagine",
+    title: "Imagine – Moodboarding & Visual Planning | Pzaz",
+    description: "Build stunning moodboards and visual references for your film. Pzaz's Imagine tool brings your creative vision to life.",
+  },
+  {
+    path: "/collaborate",
+    title: "Collaborate – Real-Time Film Production Teamwork | Pzaz",
+    description: "Work with your entire production team in real time. Pzaz's collaboration tools keep scripts, schedules, and shot lists in sync.",
+  },
+  {
+    path: "/breakdown",
+    title: "Breakdown – Scene & Production Breakdown | Pzaz",
+    description: "Break down your script into production-ready scene lists, shot lists, and schedules — all inside Pzaz.",
+  },
+  {
+    path: "/about-us",
+    title: "About Us – The Story Behind Pzaz",
+    description: "Learn about the team and mission behind Pzaz — the all-in-one film production platform built for indie filmmakers.",
+  },
+  {
+    path: "/pzaz-vs-final-draft",
+    title: "Pzaz vs. Final Draft – The Complete Film Production Hub",
+    description: "See how Pzaz outperforms Final Draft with end-to-end production tools: storyboarding, scheduling, real-time collaboration, AI writing, and more.",
+  },
+  {
+    path: "/sales-team",
+    title: "Sales Team – Work With Pzaz | Pzaz",
+    description: "Connect with the Pzaz sales team to find the right plan for your production company or film school.",
+  },
+  {
+    path: "/brand",
+    title: "Brand Assets – Pzaz Media Kit",
+    description: "Download official Pzaz logos, brand colours, and media assets for press and partner use.",
+  },
+  {
+    path: "/culture",
+    title: "Culture – Life at Pzaz",
+    description: "Discover the values, principles, and culture that drive the team at Pzaz.",
+  },
+  {
+    path: "/privacy",
+    title: "Privacy Policy | Pzaz",
+    description: "Read the Pzaz privacy policy to understand how we collect, use, and protect your data.",
+  },
+  {
+    path: "/terms",
+    title: "Terms of Use | Pzaz",
+    description: "Review the Pzaz terms of use governing your access to and use of the platform.",
+  },
+];
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -132,6 +221,7 @@ export default defineConfig(({ mode }) => {
   }
 
   const allRoutes = [...staticRoutes, ...blogRoutes];
+  const allSEORoutes = [...staticSEORoutes, ...blogSEORoutes];
 
   return {
     server: {
@@ -145,7 +235,7 @@ export default defineConfig(({ mode }) => {
       react(),
       mode === "development" && componentTagger(),
       mode === "production" && sitemapPlugin(allRoutes),
-      mode === "production" && blogSEORoutes.length > 0 && prerenderMetaPlugin(blogSEORoutes),
+      mode === "production" && prerenderMetaPlugin(allSEORoutes),
     ].filter(Boolean),
     resolve: {
       alias: {
