@@ -24,6 +24,10 @@ const footerLinks = {
   Social: ["YouTube", "Instagram", "Facebook", "LinkedIn"],
 };
 
+const socialLinks: Record<string, string> = {
+  "YouTube": "https://www.youtube.com/@pzazfilmmaking",
+};
+
 const Footer = () => {
   return (
     <footer className="pt-16 pb-8 border-t border-[#e0e0e0] bg-[#F8F8FC]">
@@ -52,6 +56,10 @@ const Footer = () => {
                         <Link to={route} className="text-[14px] font-normal text-[#20124D] hover:text-foreground transition-colors align-middle">
                           {link}
                         </Link>
+                      ) : socialLinks[link] ? (
+                        <a href={socialLinks[link]} target="_blank" rel="noopener noreferrer" className="text-[14px] font-normal text-[#20124D] hover:text-foreground transition-colors align-middle">
+                          {link}
+                        </a>
                       ) : (
                         <a href="#" className="text-[14px] font-normal text-[#20124D] hover:text-foreground transition-colors align-middle">
                           {link}
