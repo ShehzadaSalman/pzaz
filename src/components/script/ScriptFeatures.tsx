@@ -1,18 +1,25 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
-import cardIconBudget from "@/assets/card-icon-budget.svg";
 import solutionCardPreview from "@/assets/solution-card-preview.png";
+import iconCloud from "@/assets/script/icon-cloud.svg";
+import iconLock from "@/assets/script/icon-lock.svg";
+import iconDownload from "@/assets/script/icon-download.svg";
+import iconRefresh from "@/assets/script/icon-refresh.svg";
+import iconThList from "@/assets/script/icon-th-list.svg";
+import iconFullscreen from "@/assets/script/icon-fullscreen.svg";
+import iconListCheck from "@/assets/script/icon-list-check.svg";
+import iconDrag from "@/assets/script/icon-drag.svg";
 
 const features = [
-  { title: "Autosave & cloud storage", image: solutionCardPreview },
-  { title: "Secure script storage", image: solutionCardPreview },
-  { title: "Flexible import & export", image: solutionCardPreview },
-  { title: "Scene undo & renumbering", image: solutionCardPreview },
-  { title: "Script indexing for fast navigation", image: solutionCardPreview },
-  { title: "Full-screen, distraction-free writing", image: solutionCardPreview },
-  { title: "Free updates & upgrades — always", image: solutionCardPreview },
-  { title: "Drag & drop scene structure", image: solutionCardPreview },
+  { title: "Autosave & cloud storage", image: solutionCardPreview, icon: iconCloud },
+  { title: "Secure script storage", image: solutionCardPreview, icon: iconLock },
+  { title: "Flexible import & export", image: solutionCardPreview, icon: iconDownload },
+  { title: "Scene undo & renumbering", image: solutionCardPreview, icon: iconRefresh },
+  { title: "Script indexing for fast navigation", image: solutionCardPreview, icon: iconThList },
+  { title: "Full-screen, distraction-free writing", image: solutionCardPreview, icon: iconFullscreen },
+  { title: "Free updates & upgrades — always", image: solutionCardPreview, icon: iconListCheck },
+  { title: "Drag & drop scene structure", image: solutionCardPreview, icon: iconDrag },
 ];
 
 const ScriptFeatures = () => {
@@ -48,7 +55,9 @@ const ScriptFeatures = () => {
               >
                 {/* Title row */}
                 <div className="flex items-center gap-3 px-[19px] pt-[19px] pb-1">
-                  <img src={cardIconBudget} alt="" className="w-[36px] h-[36px] flex-shrink-0" />
+                  <div className="w-[36px] h-[36px] rounded-full bg-[#A805FF] flex items-center justify-center flex-shrink-0">
+                    <img src={feature.icon} alt="" className="w-4 h-4" />
+                  </div>
                   <div>
                     <span className="font-lato font-bold text-[16px] leading-[23px] text-[#e3a4d]">
                       {feature.title}
