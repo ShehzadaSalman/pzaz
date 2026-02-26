@@ -11,6 +11,8 @@ import iconUserGroup from "@/assets/script/icon-user-group.svg";
 import iconTesting from "@/assets/script/icon-testing.svg";
 import iconFlow from "@/assets/script/icon-flow.svg";
 import iconVideo from "@/assets/script/icon-video.svg";
+import iconShapeLine from "@/assets/script/icon-shape-line.svg";
+import iconEngine from "@/assets/script/icon-engine.svg";
 
 const usps = [
   {
@@ -88,12 +90,14 @@ const usps = [
     tagline: "Live Scripts Replace Static Files",
     description: "No outdated PDFs floating around. No confusion over approvals. No lost revision history.",
     highlight: "Always know what was approved, when, and by whom. Cleaner legal and audit trails.",
+    icon: iconShapeLine,
   },
   {
     title: "Built for Production Reality",
     tagline: "Not Writing Comfort",
     description: "Pzaz treats the script as a production engine, not a word processor.",
     highlight: "Writing tools end at FADE OUT. Pzaz starts there.",
+    icon: iconEngine,
   },
 ];
 
