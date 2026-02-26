@@ -3,11 +3,14 @@ import { motion } from "framer-motion";
 import { Clapperboard, DollarSign, MapPin, CheckCircle } from "lucide-react";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
 import flowchartIcon from "@/assets/icon-flowchart.svg";
-import cardIconBudget from "@/assets/card-icon-budget.svg";
 import solutionCardPreview from "@/assets/solution-card-preview.png";
 import solutionCardSchedule from "@/assets/solution-card-schedule.png";
 import solutionCardBudget from "@/assets/solution-card-budget.png";
 import solutionCardTeam from "@/assets/solution-card-team.png";
+import iconSafetyCert from "@/assets/script/icon-safety-cert.svg";
+import iconShapes2 from "@/assets/script/icon-shapes-2.svg";
+import iconBell from "@/assets/script/icon-bell.svg";
+import iconMoneyBag from "@/assets/script/icon-money-bag.svg";
 import ScriptPromise from "@/components/script/ScriptPromise";
 
 const benefits = [
@@ -18,10 +21,10 @@ const benefits = [
 ];
 
 const scriptCards = [
-  { icon: cardIconBudget, title: "Drive breakdowns", image: solutionCardPreview },
-  { icon: cardIconBudget, title: "Inform budgets and schedules", image: solutionCardSchedule },
-  { icon: cardIconBudget, title: "Reveal scope and risk early", image: solutionCardBudget },
-  { icon: cardIconBudget, title: "Remain authoritative from development through delivery", image: solutionCardTeam },
+  { icon: iconSafetyCert, title: "Drive breakdowns", image: solutionCardPreview },
+  { icon: iconShapes2, title: "Inform budgets and schedules", image: solutionCardSchedule },
+  { icon: iconBell, title: "Reveal scope and risk early", image: solutionCardBudget },
+  { icon: iconMoneyBag, title: "Remain authoritative from development through delivery", image: solutionCardTeam },
 ];
 
 const ScriptShift = () => {
@@ -74,7 +77,9 @@ const ScriptShift = () => {
                 >
                   {/* Title row */}
                   <div className="flex items-center gap-3 px-[34px] pt-[34px] pb-4">
-                    <img src={card.icon} alt="" className="w-[45px] h-[45px] flex-shrink-0" />
+                    <div className="w-[41px] h-[41px] rounded-full bg-[#A805FF] flex items-center justify-center flex-shrink-0">
+                      <img src={card.icon} alt="" className="w-4 h-4" />
+                    </div>
                     <span className="font-lato font-bold text-[20px] leading-[23px] text-foreground text-left">
                       {card.title}
                     </span>
