@@ -14,13 +14,15 @@ const linkRoutes: Record<string, string> = {
   "Breakdown": "/breakdown",
   "Brand": "/brand",
   "Culture": "/culture",
+  "Pricing": "/pricing",
+  "Script": "/script",
 };
 
 const footerLinks = {
-  Product: ["Studio", "Breakdown", "Budget", "Storyboard", "Pricing", "Imagine"],
-  Resources: ["Blog", "Documentation", "Guides", "Community", "Support"],
-  Company: ["About", "Sales Team", "Brand", "Culture", "Careers", "Press", "Contact"],
-  Legal: ["Privacy", "Terms", "Terms of Use", "Security"],
+  Product: ["Breakdown", "Pricing", "Imagine", "Script"],
+  Resources: ["Blog"],
+  Company: ["Sales Team", "Brand", "Culture"],
+  Legal: ["Privacy", "Terms"],
   Social: ["YouTube", "Instagram", "Facebook", "LinkedIn"],
 };
 
