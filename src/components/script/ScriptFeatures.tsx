@@ -1,7 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
-import solutionCardPreview from "@/assets/solution-card-preview.png";
+import featureCard1 from "@/assets/breakdown/feature-card-1.png";
+import featureCard2 from "@/assets/breakdown/feature-card-2.png";
+import featureCard3 from "@/assets/breakdown/feature-card-3.png";
+import featureCard4 from "@/assets/breakdown/feature-card-4.png";
+import featureCard5 from "@/assets/breakdown/feature-card-5.png";
+import featureCard6 from "@/assets/breakdown/feature-card-6.png";
+import featureCard7 from "@/assets/breakdown/feature-card-7.png";
+import featureCard8 from "@/assets/breakdown/feature-card-8.png";
 import iconCloud from "@/assets/script/icon-cloud.svg";
 import iconLock from "@/assets/script/icon-lock.svg";
 import iconDownload from "@/assets/script/icon-download.svg";
@@ -12,14 +19,14 @@ import iconListCheck from "@/assets/script/icon-list-check.svg";
 import iconDrag from "@/assets/script/icon-drag.svg";
 
 const features = [
-  { title: "Autosave & cloud storage", image: solutionCardPreview, icon: iconCloud },
-  { title: "Secure script storage", image: solutionCardPreview, icon: iconLock },
-  { title: "Flexible import & export", image: solutionCardPreview, icon: iconDownload },
-  { title: "Scene undo & renumbering", image: solutionCardPreview, icon: iconRefresh },
-  { title: "Script indexing for fast navigation", image: solutionCardPreview, icon: iconThList },
-  { title: "Full-screen, distraction-free writing", image: solutionCardPreview, icon: iconFullscreen },
-  { title: "Free updates & upgrades — always", image: solutionCardPreview, icon: iconListCheck },
-  { title: "Drag & drop scene structure", image: solutionCardPreview, icon: iconDrag },
+  { title: "Autosave & cloud storage", image: featureCard1, icon: iconCloud },
+  { title: "Secure script storage", image: featureCard2, icon: iconLock },
+  { title: "Flexible import & export", image: featureCard3, icon: iconDownload },
+  { title: "Scene undo & renumbering", image: featureCard4, icon: iconRefresh },
+  { title: "Script indexing for fast navigation", image: featureCard5, icon: iconThList },
+  { title: "Full-screen, distraction-free writing", image: featureCard6, icon: iconFullscreen },
+  { title: "Free updates & upgrades — always", image: featureCard7, icon: iconListCheck },
+  { title: "Drag & drop scene structure", image: featureCard8, icon: iconDrag },
 ];
 
 const ScriptFeatures = () => {
