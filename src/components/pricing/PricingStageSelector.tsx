@@ -36,6 +36,8 @@ const section1Tiers: Tier[] = [
       "Access to Inbox, Ideation, and core system tools",
     ],
     cta: "Start Free",
+    highlighted: true,
+    badge: "Most Popular",
     checkoutUrl: `${BASE_CHECKOUT}?plan=indie&period=month&currency=EUR`,
   },
   {

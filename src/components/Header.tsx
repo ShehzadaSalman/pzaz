@@ -97,7 +97,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
                 </span>
               )}
             </a>
-            <LanguageDropdown />
+              {/*}    <LanguageDropdown /> */}
           </div>
 
           {/* Desktop Navigation */}
