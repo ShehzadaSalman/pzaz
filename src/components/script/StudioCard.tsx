@@ -7,10 +7,12 @@ interface StudioCardProps {
   tagline: string;
   description: string;
   highlight: string;
+  icon?: string;
   index?: number;
 }
 
-const StudioCard = ({ title, tagline, description, highlight, index = 0 }: StudioCardProps) => {
+const StudioCard = ({ title, tagline, description, highlight, icon, index = 0 }: StudioCardProps) => {
+  const iconSrc = icon ?? studioCardIcon;
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -20,8 +22,8 @@ const StudioCard = ({ title, tagline, description, highlight, index = 0 }: Studi
       className="group relative rounded-[38px] p-8 border-2 border-[#D4BAF4] bg-white transition-all duration-300 hover:shadow-xl flex flex-col"
     >
       {/* Icon */}
-      <div className="mb-5">
-        <img src={studioCardIcon} alt="" className="w-[41px] h-[41px]" />
+      <div className="mb-5 w-[41px] h-[41px] rounded-full bg-[#A805FF] flex items-center justify-center">
+        <img src={iconSrc} alt="" className="w-4 h-4" />
       </div>
 
       {/* Tagline */}
