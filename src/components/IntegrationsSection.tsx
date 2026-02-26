@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import SectionHeader from "@/components/SectionHeader";
 import integrationsHub from "@/assets/integrations-hub.png";
+import ContactModal from "@/components/ContactModal";
 
 const IntegrationsSection = () => {
+  const [contactOpen, setContactOpen] = useState(false);
+
   return (
     <section id="integrations" className="section-padding bg-white">
       <div className="container mx-auto px-6">
@@ -39,12 +42,15 @@ const IntegrationsSection = () => {
           <Button
             variant="outline"
             size="lg"
+            onClick={() => setContactOpen(true)}
             className=" px-8 mt-12 font-lato font-black text-xl leading-[25px] text-primary hover:text-primary-foreground"
           >
             Contact Us
           </Button>
         </motion.div>
       </div>
+
+      <ContactModal open={contactOpen} onOpenChange={setContactOpen} />
     </section>
   );
 };
