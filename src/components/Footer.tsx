@@ -16,10 +16,11 @@ const linkRoutes: Record<string, string> = {
   "Culture": "/culture",
   "Pricing": "/pricing",
   "Script": "/script",
+  "Collaborate": "/collaborate",
 };
 
 const footerLinks = {
-  Product: ["Breakdown", "Pricing", "Imagine", "Script"],
+  Product: ["Breakdown", "Pricing", "Imagine", "Script", "Collaborate"],
   Resources: ["Blog"],
   Company: ["Sales Team", "Brand", "Culture"],
   Legal: ["Privacy", "Terms"],
