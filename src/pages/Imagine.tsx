@@ -4,6 +4,7 @@ import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Layers, Users, Upload, Sparkles, RefreshCw } from "lucide-react";
+import ProductsSection from "@/components/ProductsSection";
 
 import heroMoodboard from "@/assets/imagine/hero-moodboard.png";
 import problemTools from "@/assets/imagine/problem-tools.png";
@@ -251,76 +252,7 @@ const Imagine = () => {
         </div>
       </section>
 
-      {/* Products Section */}
-      <section className="py-20 px-6 bg-[#F8F2FF]">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-sm font-semibold uppercase tracking-widest text-[#5C28A3] mb-3 text-center">Products</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#20124D] mb-4 text-center">
-            Built for filmmakers who actually finish films.
-          </h2>
-          <p className="text-center text-[#4E2273] mb-12 max-w-2xl mx-auto">
-            Pzaz is made for filmmaker entrepreneurs, directors, producers, and teams who understand that making a film isn't just about creativity; it's about execution.{" "}
-            <strong>Start with everything —</strong> <em>or just what you need.</em>
-          </p>
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Budget */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-[#e0e0e0] flex flex-col">
-              <div className="mb-4">
-                <span className="text-xs font-semibold uppercase tracking-widest text-[#5C28A3]">From</span>
-                <div className="text-3xl font-bold text-[#20124D] mt-1">£49<span className="text-base font-normal text-[#4E2273]">/mo</span></div>
-              </div>
-              <h3 className="text-xl font-bold text-[#20124D] mb-2">Pzaz Budget</h3>
-              <p className="text-sm font-semibold text-[#5C28A3] mb-3">Professional budgeting & cost control</p>
-              <p className="text-sm text-[#4E2273] leading-relaxed mb-6 flex-1">
-                For producers and line producers who need clarity and confidence. Turn your script into a structured production budget that stays in sync as plans change.
-              </p>
-              <Link to="/pricing">
-                <Button variant="default" className="w-full gap-2">
-                  Explore Budget <ArrowRight className="w-4 h-4" />
-                </Button>
-              </Link>
-              <p className="text-xs text-[#4E2273]/60 mt-3 text-center">Upgrade anytime. Your project stays intact.</p>
-            </div>
-            {/* Storyboard */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-[#e0e0e0] flex flex-col">
-              <div className="mb-4">
-                <span className="text-xs font-semibold uppercase tracking-widest text-[#5C28A3]">From</span>
-                <div className="text-3xl font-bold text-[#20124D] mt-1">£39<span className="text-base font-normal text-[#4E2273]">/mo</span></div>
-              </div>
-              <h3 className="text-xl font-bold text-[#20124D] mb-2">Pzaz Storyboard</h3>
-              <p className="text-sm font-semibold text-[#5C28A3] mb-3">Visualise the film before you shoot</p>
-              <p className="text-sm text-[#4E2273] leading-relaxed mb-6 flex-1">
-                For directors and visual storytellers. Turn scenes into storyboards in seconds and refine shots collaboratively before production starts.
-              </p>
-              <Link to="/pricing">
-                <Button variant="default" className="w-full gap-2">
-                  Explore Storyboard <ArrowRight className="w-4 h-4" />
-                </Button>
-              </Link>
-              <p className="text-xs text-[#4E2273]/60 mt-3 text-center">Upgrade anytime. Your project stays intact.</p>
-            </div>
-            {/* Studio */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-[#5C28A3] flex flex-col relative overflow-hidden">
-              <div className="absolute top-4 right-4 bg-[#5C28A3] text-white text-xs font-bold px-3 py-1 rounded-full">Most Popular</div>
-              <div className="mb-4">
-                <span className="text-xs font-semibold uppercase tracking-widest text-[#5C28A3]">From</span>
-                <div className="text-3xl font-bold text-[#20124D] mt-1">£129<span className="text-base font-normal text-[#4E2273]">/mo</span></div>
-              </div>
-              <h3 className="text-xl font-bold text-[#20124D] mb-2">Pzaz Studio</h3>
-              <p className="text-sm font-semibold text-[#5C28A3] mb-3">All-in-one production system</p>
-              <p className="text-sm text-[#4E2273] leading-relaxed mb-6 flex-1">
-                For full productions and teams that need everything connected in real time. Script, schedule, budget, storyboard, and collaboration in one live workspace.
-              </p>
-              <Link to="/pricing">
-                <Button variant="default" className="w-full gap-2">
-                  Explore Studio <ArrowRight className="w-4 h-4" />
-                </Button>
-              </Link>
-              <p className="text-xs text-[#4E2273]/60 mt-3 text-center">Upgrade anytime. Your project stays intact.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ProductsSection />
 
       {/* CTA */}
       <section className="py-20 px-6 bg-white text-center">
