@@ -30,7 +30,6 @@ const defaultNavItems: NavItem[] = [
     ],
   },
   { label: "Pricing", to: "/pricing" },
-  { label: "Knowledge Base", to: "/knowledge-base" },
 ];
 
 const blogNavItems: NavItem[] = [
@@ -45,7 +44,6 @@ const blogNavItems: NavItem[] = [
     ],
   },
   { label: "Pricing", to: "/pricing" },
-  { label: "Knowledge Base", to: "/knowledge-base" },
 ];
 
 interface HeaderProps {
