@@ -30,6 +30,7 @@ const defaultNavItems: NavItem[] = [
     ],
   },
   { label: "Pricing", to: "/pricing" },
+  { label: "Knowledge Base", to: "/knowledge-base" },
 ];
 
 const blogNavItems: NavItem[] = [
@@ -44,6 +45,7 @@ const blogNavItems: NavItem[] = [
     ],
   },
   { label: "Pricing", to: "/pricing" },
+  { label: "Knowledge Base", to: "/knowledge-base" },
 ];
 
 interface HeaderProps {
@@ -73,11 +75,14 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const isKnowledgeBase = location.pathname.startsWith("/knowledge-base");
+
   const isActive = (item: NavItem) => {
     if (item.to === "/about-us") return isAboutPage;
     if (item.to === "/producer-blog") return isBlogRelated;
     if (item.to === "/script") return isScriptPage;
     if (item.to === "/pricing") return isPricingPage;
+    if (item.to === "/knowledge-base") return isKnowledgeBase;
     if (item.isDropdown) return isScriptPage;
     return false;
   };
