@@ -158,143 +158,225 @@ Click your avatar in the top right to access your profile, subscription details,
   // Functions
   {
     id: "fn-1",
-    slug: "ai-script-formatting",
-    title: "AI Script Formatting",
+    slug: "pzaz-security-features",
+    title: "Our Security Features: Keeping Your Data Safe",
     category: "functions",
-    content: `## AI Script Formatting
+    content: `## Our Security Features: Keeping Your Data Safe
 
-Pzaz's AI formatting engine ensures your screenplay always meets industry standards — automatically.
+We understand that security is a top priority for our users. Whether collaborating on a script, sharing production plans, or storing sensitive project details, your data deserves the highest level of protection. That's why we've implemented robust security measures to ensure your creative process remains private and secure.
 
-## What It Does
+## Encryption: Protecting Your Data Everywhere
 
-As you type, Pzaz identifies whether you're writing a scene heading, action line, character name, or dialogue and formats it accordingly. No more manually switching between formatting styles.
+We ensure that every time you upload or access a file in the app, it's protected through encryption. While your files are transferred between your device and our servers, they are safeguarded with Transport Layer Security (TLS), a protocol designed to provide secure communication. Once stored on our servers, your data is protected with AES-256 encryption, a highly trusted industry standard. This dual layer of encryption ensures your files remain secure in transit and at rest.
 
-## Supported Elements
+## Access Controls: Managed Simplicity
 
-- **Scene Headings** (INT./EXT.) — Auto-capitalized and formatted
-- **Action Lines** — Clean, present-tense formatting
-- **Character Names** — Auto-centered and capitalized
-- **Dialogue** — Properly indented
-- **Parentheticals** — Inline with dialogue
-- **Transitions** — Right-aligned (CUT TO:, FADE OUT., etc.)
+Currently, we enable administrators to grant or restrict access to storage, ensuring that only authorised users can utilise this feature. While we don't yet offer file-level access controls, this foundational layer of security ensures your team's data is accessible only to the right people. As we evolve, we focus on providing even more granular control to meet your needs.
 
-## Smart Suggestions
+## Looking Ahead: Future Security Enhancements
 
-When you start a scene heading, Pzaz suggests previously used locations so you stay consistent across your script. The same applies to character names.
+While our current security measures are robust, we're actively working on new features to make your experience even more secure. These include:
 
-## Manual Override
+- **Two-factor authentication (2FA)** — to add an extra layer of login protection
+- **Enhanced access controls** — for file-level permissions
+- **Advanced link-sharing options** — such as password protection and expiration settings
 
-You can override AI formatting at any time by right-clicking any element and selecting **Format As...** to manually assign the element type.
+These upcoming updates reflect our commitment to safeguarding your creative workflow at every stage.
 
-## Export
-
-When you export your script, formatting is preserved exactly as displayed — whether you export to PDF, Final Draft (.fdx), or plain text.`,
-    relatedSlugs: ["importing-a-script", "scene-syncing", "ai-research-tool"],
+We are more than just a tool for filmmakers; we are a trusted partner in your creative journey. With strong encryption, secure access controls, and a roadmap for continuous improvement, we're here to ensure your ideas remain yours and yours alone.`,
+    relatedSlugs: ["card-anatomy", "delete-your-account", "get-support"],
   },
   {
     id: "fn-2",
-    slug: "importing-a-script",
-    title: "Importing a Script",
+    slug: "card-anatomy",
+    title: "Card Anatomy",
     category: "functions",
-    content: `## Importing a Script
+    content: `## Card Anatomy
 
-Already have a script? Bring it into Pzaz in seconds.
+### What are cards made up of?
 
-## Supported Formats
+With cards in the tool, you can create workflows that meet the unique demands of filmmaking, ensuring every detail is managed effectively and creatively. Cards are the foundation of this platform. They capture ideas, document tasks, and execute initiatives as essential building blocks throughout production.
 
-- **Final Draft (.fdx)** — Full formatting preserved
-- **PDF** — Pzaz's OCR engine extracts and re-formats the content
-- **Fountain (.fountain)** — Plain text screenplay format
-- **Word (.docx)** — Basic import with formatting detection
+## Managing Cards
 
-## How to Import
+The Card Container displays high-level information, including the card title, due date, assigned team members, workflow status, task size, and attachments like documents or links. Clicking on a card opens its details, allowing for deeper interaction and editing.
 
-1. Open your project and navigate to the **Script** module
-2. Click **Import Script** in the top toolbar
-3. Select your file from your computer
-4. Pzaz will process the file and display a preview
-5. Confirm the import to load the script into your editor
+You can manage multiple cards by placing checkmarks on them, but dragging is currently not supported for selected groups of cards. Holding down the **CTRL** key and clicking on a card activates the checkbox for that card, making it easy to select multiple cards quickly. Once selected, you can filter, move, decline, or delete them via the Board Toolbar, streamlining multi-card actions.
 
-## After Importing
+## #GoodToKnow
 
-Once imported, your script is fully editable. You can:
-- Use AI formatting to clean up any inconsistencies
-- Run a **Breakdown** to extract scenes, characters, and locations
-- Share it with your team immediately
-
-## Troubleshooting
-
-**PDF import looks wrong?** PDFs vary significantly in structure. If the result is messy, try exporting from your source software as .fdx or .fountain instead.
-
-**Characters not detected?** Run **Re-analyse Script** from the Script menu to force a fresh character detection pass.`,
-    relatedSlugs: ["ai-script-formatting", "scene-syncing", "creating-your-first-project"],
+Card Blocks offer flexibility by allowing you to customise cards for specific needs. Blocks like attachments or descriptions enable detailed information storage, while others can be added manually for tailored functionality. Some blocks load by default, and certain ones, like the description block, cannot be removed.`,
+    relatedSlugs: ["add-or-remove-blocks", "pzaz-security-features", "your-pzaz-profile"],
   },
   {
     id: "fn-3",
-    slug: "scene-syncing",
-    title: "Scene Syncing",
+    slug: "delete-your-account",
+    title: "Delete Your Account",
     category: "functions",
-    content: `## Scene Syncing
+    content: `## Delete Your Account
 
-Scene syncing keeps your script and breakdown in perfect alignment — automatically.
+To permanently delete your account, please contact our team through the **Live Chat** page in the app, located under the **Get Help** section. Our team will process your request and securely delete your account from our database.
 
-## How It Works
+Please note that we are legally required to retain financial information for compliance purposes, but all other data will be permanently erased — this action cannot be undone.
 
-Every time you edit a scene in your script, Pzaz's sync engine detects the change and updates the corresponding breakdown entry in real time. Add a new character to a scene? They appear in the breakdown instantly.
+Before proceeding with account deletion, we encourage you to share any concerns or feedback. We're here to help ensure your experience meets your expectations.
 
-## What Gets Synced
-
-- **Scene numbers** — Automatically renumbered when scenes are added or removed
-- **Characters** — Any new character introduced is added to the cast list
-- **Locations** — New INT./EXT. headings create location entries automatically
-- **Props & Set Dressing** — Detected via AI from action lines
-
-## Manual Sync
-
-If you prefer to control when syncing happens, you can disable auto-sync in **Project Settings > Sync** and trigger it manually with the **Sync Now** button.
-
-## Conflict Resolution
-
-If a team member edits the script and another edits the breakdown simultaneously, Pzaz flags the conflict and lets you choose which version to keep — or merge both.
-
-> Tip: Enable auto-sync for the smoothest workflow, especially during pre-production when scripts change frequently.`,
-    relatedSlugs: ["ai-script-formatting", "importing-a-script", "breakdown-overview"],
+> **Warning:** Account deletion is permanent and cannot be reversed. All your projects and data will be erased.`,
+    relatedSlugs: ["cancelling-or-closing-your-account", "get-support", "leave-feedback"],
   },
   {
     id: "fn-4",
-    slug: "ai-research-tool",
-    title: "AI Research Tool",
+    slug: "cancelling-or-closing-your-account",
+    title: "Cancelling or Closing Your Account",
     category: "functions",
-    content: `## AI Research Tool
+    content: `## Cancelling or Closing Your Account
 
-Pzaz's AI Research tool helps you gather creative references, facts, and production insights without leaving the platform.
+If you'd like to close your account, please reach out to our team through the **Live Chat** page in the app, located under the **Get Help** section. We'll assist you with the process and make sure your account is securely closed.
 
-## What It Can Do
+## Before You Go
 
-- Summarise real locations and suggest alternatives
-- Pull historical context for period pieces
-- Generate character backstory prompts
-- Research costume and prop references
-- Suggest music and sound design directions
+We'd love to understand your experience and how we can improve. If there's something that isn't working for you, our support team is ready to help — please don't hesitate to reach out before making this decision.
 
-## How to Use It
+> **Note:** If you only need to cancel a subscription rather than delete your account entirely, our team can assist you with that through the same Live Chat channel.`,
+    relatedSlugs: ["delete-your-account", "get-support", "leave-feedback"],
+  },
+  {
+    id: "fn-5",
+    slug: "your-pzaz-profile",
+    title: "Your Pzaz Profile",
+    category: "functions",
+    content: `## Your Pzaz Profile
 
-In any module, click the **AI Research** button in the toolbar (the magnifying glass icon). Type your query in plain language — for example:
+Your profile is your identity, so take a moment to make it uniquely yours. Updating your details or adding a creative avatar ensures your account reflects your style and needs.
 
-> *"What would a 1940s New York detective's office look like?"*
+## Editing Your Profile
 
-The AI returns a concise summary with image references and suggested search terms for deeper research.
+To edit your profile, click the menu icon in the lower-left corner. From there you can make updates such as:
 
-## Research in Script Mode
+- **Changing your username** — Update how your name appears to collaborators
+- **Updating your email address** — Keep your contact details current
+- **Resetting your password** — Maintain account security
+- **Uploading a new profile photo** — Add an avatar that represents you
 
-Highlight any word or phrase in your script and right-click to select **Research This**. Pzaz will automatically context-search the selected term.
+These changes help you personalise your experience and ensure your team recognises you across projects.`,
+    relatedSlugs: ["card-anatomy", "pzaz-security-features", "cancelling-or-closing-your-account"],
+  },
+  {
+    id: "fn-6",
+    slug: "add-or-remove-blocks",
+    title: "Add or Remove Blocks",
+    category: "functions",
+    content: `## Add or Remove Blocks
 
-## Saving Research
+**Customise Cards for Maximum Flexibility**
 
-All research results can be saved to a **Research Board** within your project, pinned to specific scenes or characters for quick reference during production.
+You can customise cards to fit and enhance your production workflow by adding or removing functionality tailored to your filmmaking process.
 
-> Note: AI Research requires an active Pzaz subscription.`,
-    relatedSlugs: ["ai-script-formatting", "scene-syncing", "moodboard-creation"],
+## How It Works
+
+Not all blocks are compatible with every card type. Some blocks load by default, while others need to be added manually. The title and description are not a block and, therefore, cannot be removed.
+
+Click the **'Blocks' icon** in the card header to add or remove a block.
+
+## Key Points
+
+- **Default blocks** load automatically when a card is created
+- **Optional blocks** can be added manually to extend functionality
+- **The title and description** are permanent and cannot be removed
+- Block availability varies depending on the card type`,
+    relatedSlugs: ["card-anatomy", "your-pzaz-profile", "pzaz-security-features"],
+  },
+  {
+    id: "fn-7",
+    slug: "leave-feedback",
+    title: "Leave Feedback",
+    category: "functions",
+    content: `## Leave Feedback
+
+**Help Shape the Future**
+
+We'd love to hear from you! Share your thoughts — what you love, what could be improved, and what new features you'd like to see.
+
+## How to Provide Feedback
+
+Your insights play a crucial role in helping us prioritise features and refine the platform to better serve the filmmaking and creative community. Your feedback drives our mission to create the ultimate platform for filmmakers and creatives.
+
+Share your thoughts through the **Live Chat** page in the app, located under the **Get Help** section.
+
+Thank you for helping us grow!`,
+    relatedSlugs: ["get-support", "reporting-a-bug", "cancelling-or-closing-your-account"],
+  },
+  {
+    id: "fn-8",
+    slug: "helpful-tools-for-capturing-screenshots-and-videos",
+    title: "Helpful Tools for Capturing Screenshots and Videos",
+    category: "functions",
+    content: `## Helpful Tools for Capturing Screenshots and Videos
+
+If you're using Google Chrome, we recommend the **Nimbus Screen Shot and Video Recorder** extension. This tool allows you to:
+
+- Capture full or partial screenshots
+- Record your screen to showcase the issue
+- Edit, annotate, and save your captures or recordings
+
+You can attach these files to your support message for more precise communication and faster resolution.
+
+## Why This Helps
+
+Providing visual context — screenshots or screen recordings — dramatically speeds up our ability to diagnose and resolve issues. Rather than trying to describe a problem in words, a short recording shows our team exactly what you're experiencing.
+
+Our team is committed to providing you with the best experience possible, so please don't hesitate to contact us whenever you need help.`,
+    relatedSlugs: ["reporting-a-bug", "get-support", "leave-feedback"],
+  },
+  {
+    id: "fn-9",
+    slug: "reporting-a-bug",
+    title: "Reporting a Bug",
+    category: "functions",
+    content: `## Reporting a Bug
+
+If you encounter a bug, please provide as much detail as possible to help us diagnose and resolve the issue effectively. Including the following information will ensure a quicker resolution or temporary workaround:
+
+## What to Include
+
+- **A detailed description** of the bug
+- **Expected vs. actual behaviour** — what you expected to happen versus what occurred
+- **Steps to reproduce** — the specific steps you took that triggered the bug
+- **Your environment** — the device, operating system, and browser you're using
+- **Screenshots or videos** — any relevant captures that showcase the issue
+
+## How to Report
+
+Contact our team through the **Live Chat** page in the app, located under the **Get Help** section. Attach any screenshots or recordings to help our team diagnose the issue as quickly as possible.
+
+> Tip: Use the Nimbus Screen Shot & Video Recorder Chrome extension to easily capture and annotate screenshots or record your screen.`,
+    relatedSlugs: ["helpful-tools-for-capturing-screenshots-and-videos", "get-support", "leave-feedback"],
+  },
+  {
+    id: "fn-10",
+    slug: "get-support",
+    title: "Get Support",
+    category: "functions",
+    content: `## Get Support
+
+### We're Here to Help!
+
+Encountered an issue or need guidance? Our team is ready to assist you.
+
+## How to Reach Us
+
+Please reach out to our team for assistance through the **Live Chat** page in the app, located under the **Get Help** section. A team member will respond promptly to help resolve your query.
+
+Alternatively, if you have any questions about a specific feature, feel free to reach out to an advisor directly in the app using the Live Chat page. You can find it in the **GET HELP** section.
+
+## What We Can Help With
+
+- Technical issues and bugs
+- Account and billing queries
+- Feature guidance and how-to questions
+- Feedback and feature requests
+- General product questions`,
+    relatedSlugs: ["reporting-a-bug", "leave-feedback", "helpful-tools-for-capturing-screenshots-and-videos"],
   },
 
   // Tools & Features
