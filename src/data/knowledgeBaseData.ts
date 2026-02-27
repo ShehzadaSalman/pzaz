@@ -396,148 +396,517 @@ Alternatively, if you have any questions about a specific feature, feel free to 
   // Tools & Features
   {
     id: "tf-1",
-    slug: "breakdown-overview",
-    title: "Breakdown Overview",
+    slug: "script-breakdown",
+    title: "Script Breakdown",
     category: "tools-and-features",
-    content: `## Breakdown Overview
+    content: `## Script Breakdown
 
-The Breakdown module transforms your script into a production-ready breakdown in minutes.
+## Introduction
 
-## What Is a Breakdown?
+We're excited to introduce the **Script Breakdown** feature — a powerful tool designed to help you prepare and plan your film or TV production in more detail than ever before.
 
-A script breakdown is the process of identifying every element in your screenplay that needs to be sourced, scheduled, or budgeted — cast, locations, props, costumes, special effects, and more.
+This feature allows you to use your script as a foundation for organising everything you'll need for production, from props and costumes to locations and cast.
 
-## Auto-Breakdown with AI
+## Getting Started
 
-Click **Run AI Breakdown** and Pzaz analyses every scene, extracting:
+To get started with script breakdown, you'll first need to create or upload your script. Once uploaded, your script will be treated as the **master script** — this is the version the app uses as the basis for your breakdown. You can add additional scripts, but only the master script will be analysed for breakdown purposes.
 
-- **Cast** — Named characters and extras
-- **Locations** — Interior and exterior settings
-- **Props** — Physical items mentioned in action lines
-- **Costumes** — Clothing references
-- **Vehicles** — Cars, trucks, and other transport
-- **Special Effects** — Stunts, pyrotechnics, VFX notes
-- **Animals** — Any animal appearances
+Once your master script is added, the app will automatically generate a list of all scenes. You can view these by selecting **Breakdown** from the left-hand navigation menu.
 
-## Breakdown Strips
+## Features of the Script Breakdown Tool
 
-Each scene becomes a colour-coded strip. Click any strip to view and edit its full breakdown. You can manually add or remove elements from each scene.
+You can think of this feature as your production team's pre-production dashboard. Here's what you can do:
 
-## Export
+- **Automatically generate a scene list** based on your master script
+- **View scene metadata**, such as character presence and script coverage
+- **Tag essential elements** directly from your script — including cast, props, vehicles, costumes, stunts, special effects, and more
+- **Organise your breakdown** using a category panel and in-line colour-coded highlights
+- **Search and filter tagged items** to quickly find what you need
+- **Create or delete custom categories** for full control over your breakdown structure
 
-Export your complete breakdown as a PDF report or CSV for use in scheduling and budgeting software.
+## Tagging Items in Your Script
 
-> Tip: Run the breakdown early in pre-production, even from a draft script. It gives you a realistic picture of your production scale before the budget is locked.`,
-    relatedSlugs: ["scene-syncing", "budget-tracking", "schedule-builder"],
+To tag an item from your script:
+
+1. Navigate to the **Breakdown** section and select the scene you'd like to work on.
+2. In the focused scene view, highlight the word or phrase you want to tag.
+3. A popup will appear — choose the section (e.g. Elements), the category (e.g. Props, Makeup, Vehicles), and whether to tag a single instance or all occurrences.
+4. Click **Tag** — the item will now appear highlighted in the scene with a colour code for its category.
+5. The item is also added to the panel on the right, where you can view, expand, and manage all tagged items.
+
+## What Happens Next
+
+Once you've tagged your script, all relevant items will automatically appear in their respective sections of the app. This means you can start planning earlier and ensure you're fully prepared when it's time to shoot.`,
+    relatedSlugs: ["scenes", "storyboard", "stripboard"],
   },
   {
     id: "tf-2",
-    slug: "moodboard-creation",
-    title: "Moodboard Creation",
+    slug: "documents-section",
+    title: "Documents Section",
     category: "tools-and-features",
-    content: `## Moodboard Creation
+    content: `## Documents Section
 
-The Imagine module lets you build rich, visual moodboards for your film without leaving Pzaz.
+### Introduction
 
-## Creating a Moodboard
+We have reintroduced the Documents section in response to feedback from customers telling us they missed it!
 
-Navigate to the **Imagine** module in your project and click **New Board**. Give it a name (e.g., "Opening Sequence" or "Character — Sarah") and start adding content.
+## Getting Started
 
-## Adding Content
+The Documents section lets you create an unlimited number of books, and an unlimited number of pages. Each page must be contained within a book. To create these, simply click into the text field at the top of the screen, enter a title, and then press enter.
 
-You can add content to your board in several ways:
+## Features of the Documents Section
 
-- **Upload images** from your computer
-- **Paste a URL** to pull in any public image from the web
-- **Use AI Search** to find reference images by description
-- **Drag from the Reference Library** — images you've saved from Research
+You can think of this feature as your team's personal production wiki. You can:
 
-## Organising Your Board
+- Create unlimited pages across unlimited books
+- Format with headers (H1–H6), bullet points, numbered lists, and hyperlinks
+- Organise all your project documentation in one central place
+- Create any type of document — from treatments to on-set procedures — it can all live here
 
-Drag items freely on the canvas. Resize, rotate, and group elements. Add text labels and colour swatches to annotate your references.
-
-## Sharing
-
-Share your moodboard with your team or external stakeholders via a read-only link — no account required to view.
-
-## Export
-
-Export your moodboard as a high-resolution PDF or PNG for presentations and production packages.`,
-    relatedSlugs: ["ai-research-tool", "breakdown-overview", "navigating-the-dashboard"],
+We hope you find the Documents section as useful as we do! If you encounter an issue or need guidance, reach out to the support team via the Live Chat feature within the app.`,
+    relatedSlugs: ["your-filmspace", "manage-section", "card-blocks"],
   },
   {
     id: "tf-3",
-    slug: "budget-tracking",
-    title: "Budget Tracking",
+    slug: "manage-section",
+    title: "Manage Section",
     category: "tools-and-features",
-    content: `## Budget Tracking
+    content: `## Manage Section
 
-Keep your production's finances under control with Pzaz's built-in budget tracker.
+### Your Personal Board
 
-## Setting Up a Budget
+The personal board is your personal space for seeing work and tasks that apply only to you. You'll see two types of items in this board:
 
-Navigate to the **Budget** module and click **Create Budget**. You can start from:
+1. **Todos** — tasks that will only ever be visible to you, no one else.
+2. **Workflow cards** — if you are either the owner of, or have been added to, any workflow cards, then these will be shown here too.
 
-- A blank template
-- A pre-built indie film budget template
-- An imported CSV from another tool
+The board is split into two sections — the inbox (a list on the left-hand side) and board columns (on the right-hand side). You can move any of the todos or cards from the list into the columns by dragging and dropping them with the cursor.
 
-## Budget Categories
+You can add as many extra columns as you want to show what stage each item is up to. To add an extra column, click the **"+"** icon at the top of any column.
 
-Pzaz organises your budget into industry-standard categories:
+## Workflow Board
 
-- Above the Line (story, producer, director, cast)
-- Below the Line (crew, equipment, locations, post-production)
-- Other (insurance, contingency, marketing)
+The Filmspace owner can create as many new workflow boards as they wish by clicking the **"+ New Workflow"** button in the left-hand frame.
 
-## Linking to Breakdown
+Once created, each workflow board can be viewed by anyone who has access to it. Like your personal board, each workflow board is split into two sections — a list, and a column-based board.
 
-Items in your breakdown can be linked directly to budget line items. When you update a scene's cast or location in the breakdown, the associated costs update automatically.
-
-## Tracking Actual vs. Estimated
-
-For each line item, enter both an estimated and actual amount. Pzaz highlights overspend in red and shows your running total at all times.
-
-## Export
-
-Export your budget as a formatted PDF or Excel-compatible CSV.`,
-    relatedSlugs: ["breakdown-overview", "schedule-builder", "inviting-your-team"],
+Only cards will be visible on a workflow board, not personal todos. You can add new workflow cards to either the list section, or to any of the columns, by clicking the **"+"** icon above that part of the view.`,
+    relatedSlugs: ["board-views", "personal-to-dos", "getting-started-with-workflows"],
   },
   {
     id: "tf-4",
-    slug: "schedule-builder",
-    title: "Schedule Builder",
+    slug: "shots",
+    title: "Shots",
     category: "tools-and-features",
-    content: `## Schedule Builder
+    content: `## Shots
 
-Plan your shooting days with Pzaz's drag-and-drop schedule builder.
+### Plan and track all the individual shots for your film.
 
-## Creating a Schedule
+The Shots feature allows you to break down each scene into specific camera shots and organise them according to your shooting schedule.
 
-Open the **Schedule** module and click **New Schedule**. Enter your planned shoot dates and Pzaz will create a day-by-day grid for you.
+## How Can the Shots Feature Work for Me?
 
-## Adding Scenes to Days
+As a producer, director, or other person involved in a production, you can be confident that the Shots feature lets you record all the relevant information for planning your shoot. Whether it's camera angles, required movements, specific lenses, or anything else, we've got you covered.
 
-Drag scenes from the left panel onto shooting days. Pzaz automatically calculates:
+Not only that, but the tool contains an integrated **AI assistant** that can automatically generate preview images for each of your shots, based on prompts you provide.
 
-- **Page count** per day
-- **Estimated shoot time** based on scene complexity
-- **Cast call times** based on scenes scheduled that day
+You can submit both 'positive' and 'negative' prompts to make sure your previews are as accurate as possible. Furthermore, the AI can generate your preview images in a range of styles — including photographic, futuristic, anime — really entirely anything you want to add!
 
-## One-Liner
+For further assistance with the Shots feature, feel free to use the Live Chat feature within the app to talk to us.`,
+    relatedSlugs: ["scenes", "storyboard", "script-breakdown"],
+  },
+  {
+    id: "tf-5",
+    slug: "scenes",
+    title: "Scenes",
+    category: "tools-and-features",
+    content: `## Scenes
 
-Pzaz generates a professional **one-liner** (a single-page schedule overview) from your schedule that you can share with cast and crew.
+### Organise and manage the narrative structure of your film; break down your script into scenes and track their progress during production.
 
-## Conflict Detection
+The Scenes feature in the app allows you to divide your script into manageable units and keep track of each scene's status throughout the production process. You can assign scenes to specific shooting days, allocate resources, and monitor the overall progress of your film.
 
-If a cast member is scheduled in two places at once, or a location isn't available on a chosen date, Pzaz flags the conflict in red.
+## How Does It Work?
 
-## Exporting
+- When you enter the Scenes section for the first time, you will need to select one of the scripts already saved within your Filmspace from the left-hand side menu.
+- Once you select a script, each scene mentioned in that script will generate a panel in the view on the right-hand side.
+- Our tool then gives you the ability to use our **AI Assistant** to generate a preview image for each scene.
+- You have a huge amount of flexibility — you can generate images in a huge range of styles, and provide extremely varied prompts to make your images even more unique. You can also upload your own images if you have some prepared!
 
-Export your schedule as a PDF call sheet, a CSV for import into other tools, or share it directly with your team via a link.
+For further assistance with the Scenes feature, feel free to speak to us using the Live Chat feature within the GET HELP section.`,
+    relatedSlugs: ["shots", "storyboard", "script-breakdown"],
+  },
+  {
+    id: "tf-6",
+    slug: "storyboard",
+    title: "Storyboard",
+    category: "tools-and-features",
+    content: `## Storyboard
 
-> Tip: Build your schedule from the breakdown — Pzaz can auto-suggest a shooting order that minimises location and cast moves.`,
-    relatedSlugs: ["budget-tracking", "breakdown-overview", "inviting-your-team"],
+### Organise and visualize your film's key moments and shots with our Storyboard feature
+
+The Storyboard feature in the app helps you visually plan and organise your film's key scenes. It enables you to break down each scene into individual shots, and represent them with images, drawings, or notes to create a clear visual reference for your production.
+
+## Where to Find It
+
+You'll find the **Storyboard** feature in the **"Pre-production" section** in the left-hand navigation menu — your one-stop hub for visual planning and shot organisation before the cameras start rolling.
+
+## Two Ways to Create Your Storyboard
+
+### 1. Auto-Generate from Your Master Script
+
+Upload your script, and the app will automatically extract your scenes. Each scene becomes its own storyboard — ready for you to start adding individual shots, camera angles, and scene details. Perfect if you're working from a fully written script.
+
+### 2. Build It from Scratch
+
+Create a custom storyboard and manually add scenes. Ideal for experimental projects, documentaries, or multiple films within the same space.
+
+## Add Detailed Shots to Each Scene
+
+Once your scenes are set, add as many shots as you need to each scene, and record key production information such as:
+
+- Scene location and time of day
+- Character dialogue
+- Shot details (angle, movement, shot size)
+- Camera info
+- Timing
+- Comments and notes
+
+Each shot can be expanded and enriched with all the information you need. Everything is saved and structured, so you can scroll through your storyboard chronologically.`,
+    relatedSlugs: ["scenes", "shots", "stripboard"],
+  },
+  {
+    id: "tf-7",
+    slug: "stripboard",
+    title: "Stripboard",
+    category: "tools-and-features",
+    content: `## Stripboard
+
+### Organise and streamline your production schedule with our Stripboard
+
+The Stripboard feature is designed to help you manage your shooting schedule. It allows you to break down your script into scenes and organise them visually to plan each day of your shoot.
+
+## How Can I Use the Stripboard Most Effectively?
+
+To take full advantage of the Stripboard, you will first need to create a script that can be used as a foundation.
+
+Once you open the Stripboard section, select an existing script from the left-hand menu. The Stripboard view will then open and give you a clear and concise breakdown of each scene in your script. You can then begin to allocate specific shooting days and assign resources.
+
+You can:
+
+- Move scenes around when there are changes in your production schedule
+- Monitor the availability of your team and locations
+- Track which scenes are ready, in progress, or completed
+- Visualise the entire production flow from start to finish
+
+For further assistance, feel free to reach out to an advisor via the Live Chat page in the GET HELP section.`,
+    relatedSlugs: ["call-sheets", "scenes", "storyboard"],
+  },
+  {
+    id: "tf-8",
+    slug: "call-sheets",
+    title: "Call Sheets",
+    category: "tools-and-features",
+    content: `## Call Sheets
+
+### Coordinate and communicate your shoot's logistics with Call Sheets
+
+The Call Sheets feature allows you to organise and distribute daily schedules to your crew, ensuring everyone knows where to be and when. You can create detailed, customised call sheets that list all relevant information for each shoot day, including call times, locations, and any special instructions.
+
+## How Can I Use Call Sheets?
+
+To begin, select the shooting days you need to plan and enter relevant details such as:
+
+- Call time for each crew member
+- Location information
+- Special requirements for the day
+
+You can distribute call sheets to your team via email directly through the platform.
+
+The app allows you to keep track of crew availability and manage potential changes in schedules or locations. Call Sheets also integrate with your production and shooting schedules, ensuring everything is aligned. You can make real-time updates and notify your team of any changes instantly.
+
+For further assistance, reach out to an advisor via the Live Chat page in the GET HELP section.`,
+    relatedSlugs: ["stripboard", "department", "roles-permissions-in-pzaz"],
+  },
+  {
+    id: "tf-9",
+    slug: "department",
+    title: "Production Section",
+    category: "tools-and-features",
+    content: `## Production Section
+
+### Manage all aspects of your production process in one central hub.
+
+The Production section in the app provides tools for keeping track of everything you need to make your production run smoothly, ensuring a seamless and efficient workflow.
+
+## What Does This Section Contain?
+
+The Production section is broken up into several separate features including **Casting, Crew, Locations, Elements, and Equipment**.
+
+## How Can the Production Section Work for Me?
+
+From coordinating tasks across teams to tracking the status of various elements in production, the Production feature provides all the tools needed to keep everything in sync. You can itemise crew and cast, production elements, locations, and equipment, and organise them to suit your workflow needs.
+
+You can add all relevant information to your production items, including:
+
+- Financial details
+- Company or agency details
+- Pick-up details and addresses
+- Unlimited comments to make sure no-one on the team misses crucial production information
+
+For further assistance, reach out to an advisor via the Live Chat page in the GET HELP section.`,
+    relatedSlugs: ["call-sheets", "script-breakdown", "roles-permissions-in-pzaz"],
+  },
+  {
+    id: "tf-10",
+    slug: "moodboard",
+    title: "Moodboard",
+    category: "tools-and-features",
+    content: `## Moodboard
+
+### Record your ideas for the tone and style of your project
+
+The **Moodboard** feature in the app enables filmmakers to visually conceptualise and communicate the aesthetic and tone of their projects. It serves as a creative tool to compile images, colour schemes, and design elements that reflect the project's vision.
+
+## What Can You Do Within the Moodboard Section?
+
+- **Visual Compilation** — Gather and arrange assets to create a cohesive visual representation of the project
+- **Use Different Asset Types** — Add images, specific colours (using the standardised RGBA format), and particular fonts that align with the project's theme. Fonts are supported in the popular TTF font format.
+- **Collaborative Editing** — Share moodboards with team members for input and adjustments, ensuring a unified visual direction
+
+For further assistance with the Moodboard feature, reach out to an advisor via the Live Chat page in the GET HELP section.`,
+    relatedSlugs: ["scenes", "storyboard", "documents-section"],
+  },
+  {
+    id: "tf-11",
+    slug: "team-chats",
+    title: "Team Chats",
+    category: "tools-and-features",
+    content: `## Team Chats
+
+### Upgrade your project communication, with Team Chats
+
+Effective communication is vital in film and video production. The app's Messages feature offers real-time messaging capabilities, enabling seamless collaboration among team members. This integrated tool ensures that everyone stays informed and connected throughout the production process.
+
+## What Does the Team Chat Feature Offer?
+
+- **Real-Time Messaging** — Engage in instant conversations with team members to address issues promptly and keep the production moving smoothly
+- **Versatility** — Communicate in the way that suits you best — the tool offers voice messaging, supports emojis, and lets you send file attachments
+- **Group Chats** — Facilitate discussions among multiple team members, departments, or project-specific groups
+- **Integration with Other Tools** — The Chat feature complements task management and scheduling, providing a centralised communication hub
+
+For further assistance with the Chat feature, reach out to an advisor via the Live Chat page in the GET HELP section.`,
+    relatedSlugs: ["file-sharing-media-storage", "add-and-remove-team-members-filmspace", "your-filmspace"],
+  },
+  {
+    id: "tf-12",
+    slug: "file-sharing-media-storage",
+    title: "File Sharing & Media Storage",
+    category: "tools-and-features",
+    content: `## File Sharing & Media Storage
+
+### Streamline managing and sharing your files and media
+
+Managing and sharing files is streamlined with our **Drive** feature, providing a centralised repository for all production-related documents and media. This ensures that team members have easy access to the latest versions of files, enhancing collaboration and efficiency.
+
+## Detailed Functionality
+
+- **Centralised Storage** — Store scripts, storyboards, schedules, and other essential documents in one secure location
+- **Seamless Integrations** — The app integrates with popular tools like Google Drive, Slack, and Adobe Suite, keeping workflows connected and efficient
+- **Version Control** — Track changes and maintain version history to ensure the team is working with the most up-to-date files
+
+For further assistance with the Drive feature, reach out to an advisor via the Live Chat page in the GET HELP section.`,
+    relatedSlugs: ["team-chats", "documents-section", "your-filmspace"],
+  },
+  {
+    id: "tf-13",
+    slug: "budgeting",
+    title: "Budgeting",
+    category: "tools-and-features",
+    content: `## Budgeting
+
+**How Does Budgeting Work in the App?**
+
+Our app offers an automated budgeting tool designed to streamline the financial planning process for film and video productions. By integrating budgeting directly with other production elements — such as scriptwriting, scene breakdowns, and scheduling — the app enables users to efficiently allocate resources and estimate costs.
+
+## What Does 'Above' and 'Below' the Line Mean?
+
+- **Above the Line Costs (ATL)** — Fixed, upfront costs associated with creative and key decision-making roles (writers, directors, producers). Usually negotiated before production begins.
+- **Below the Line Costs (BTL)** — Variable, production-related expenses involved in the physical creation of the film (crew wages, equipment rental, location fees).
+
+Our app allows you to view ATL or BTL costs separately, or combined, giving you a complete financial overview.
+
+## Key Features of the Budget Tool
+
+- **Left-Hand Menu** — Categories to classify items: Above the Line, Below the Line, and Combined Budget view
+- **Right-Hand Panel** — All budget items, with flexible currency selection (Euros, Pounds, or Dollars)
+- **Total fiscal amount** displayed in the top right-hand corner for quick reference
+
+## Adding and Managing Budget Items
+
+To add new items, click the purple button, select the item type, enter the name, and press Enter. Each item will be added to the **Unassigned** category until categorised.
+
+## Exporting Your Budget
+
+Export your completed budget as a **PDF** or **Excel (.xls)** file. Customise your export by selecting project name, budget categories, and optional credits (Producer, Director, Writer).`,
+    relatedSlugs: ["department", "script-breakdown", "your-filmspace"],
+  },
+  {
+    id: "tf-14",
+    slug: "board-views",
+    title: "Board Views",
+    category: "tools-and-features",
+    content: `## Board Views
+
+### What are Boards?
+
+Workflow boards offer a hybrid view — containing a list of items on the left-hand side, and a column-based view on the right-hand side. You can easily move Todos and Cards between these two sections, enabling you to choose the best approach for your production process.
+
+## Flexible Workflow Management
+
+The column-based view arranges itself into vertical columns representing workflow steps. Cards can be moved between columns as they progress through a work process. You can easily add, remove, and rename these columns to match the steps in your process.
+
+For example, you might give columns names like "Pre-Production" or "Review" — or simply label them "Todo", "Doing", and "Done".`,
+    relatedSlugs: ["manage-section", "personal-to-dos", "getting-started-with-workflows"],
+  },
+  {
+    id: "tf-15",
+    slug: "add-and-remove-team-members-filmspace",
+    title: "Add and Remove Team Members – Filmspace",
+    category: "tools-and-features",
+    content: `## Add and Remove Team Members – Filmspace
+
+Invite people to join your team or add collaborators to your Filmspace. Then, they can seamlessly collaborate on your creative projects.
+
+## Adding Team Members
+
+Navigate to **Profile and Settings** in the menu and click **Invite Members**. Enter the individual's name and email address, optionally adding a personal note for context, and click **Send Invite**. Once accepted, the individual will gain access to your Filmspace for collaboration.
+
+## Removing Team Members
+
+Open **Settings**. Click the **More Options icon (three dots)** next to the member you wish to remove and confirm the action. The team member will be removed and lose access to the Filmspace.
+
+## #GoodToKnow
+
+Only **Filmspace Owners** can add or remove team members, ensuring control over your collaborative environment.`,
+    relatedSlugs: ["roles-permissions-in-pzaz", "your-filmspace", "team-chats"],
+  },
+  {
+    id: "tf-16",
+    slug: "roles-permissions-in-pzaz",
+    title: "Roles & Permissions in Pzaz",
+    category: "tools-and-features",
+    content: `## Roles & Permissions in Pzaz
+
+### Updated Roles & Permissions
+
+Every Filmspace member has a role, and each role comes with specific permissions tailored to their responsibilities in the filmmaking process. There are five leading roles:
+
+1. **Filmspace Owner** — Full control over the Filmspace, billing, and all settings
+2. **Filmspace Administrator** — Can share administrative duties for streamlined management
+3. **Creative Lead** — Focused on creative direction and editorial decisions
+4. **Team Member** — Full working access to the Filmspace; can create their own Filmspace
+5. **Collaborator** — Minimal, task-specific access without a paid seat
+
+## Customising Roles
+
+You can customise the permissions for all roles except the Filmspace Owner. When a role is customised, the UI displays an icon to indicate the adjustments.
+
+Collaborators are unique in that their permissions are always minimal and specific to their assigned tasks. You can define which functions a Collaborator can access on a case-by-case basis.
+
+## Seats and Access
+
+The first four roles are considered **main members** and have paid seats. Collaborators do not occupy paid seats — they are intended for short-term or task-specific contributions.
+
+## #GoodToKnow
+
+Roles and permissions are designed to foster collaboration while maintaining clear boundaries. A Filmspace Owner can participate as a Team Member in another Filmspace, but roles cannot overlap within the same Filmspace.`,
+    relatedSlugs: ["add-and-remove-team-members-filmspace", "your-filmspace", "team-chats"],
+  },
+  {
+    id: "tf-17",
+    slug: "personal-to-dos",
+    title: "Personal To-dos",
+    category: "tools-and-features",
+    content: `## Personal To-dos
+
+### What's the Difference Between a Card and a Todo?
+
+A **todo** is only visible to the user who created it. By contrast, a **card** is visible to anyone who is a member of the board where the card belongs, or to anyone who has been added to it.
+
+## What Are Personal To-dos?
+
+Stay on top of your priorities and manage your time effectively with Personal To-dos. Unlike tasks assigned to specific projects or workflows, Personal To-dos are private items visible only to you. These are accessible via the Inbox, helping you stay organised without cluttering shared production spaces.
+
+## The Inbox — Your Power Tool
+
+No matter how many film projects you are managing or at what stage — whether it's just an idea for a script, acquiring funding, or a production in full swing — everything is consolidated in your Inbox.
+
+Your inbox shows a hybrid view, with a list of items on the left, and as many columns as you wish to add on the right. You can also select cards and tasks for group actions such as deleting or archiving. Archived items are stored in a dedicated Archive section where they can be restored if needed.
+
+## How to Manage Personal To-dos
+
+Adding and managing Personal To-dos is simple and intuitive:
+
+- Add notes, due dates, or attachments to each task
+- Prioritise items by flagging them or moving them through stages
+- Convert To-dos into shared cards or include them in meetings
+
+## #GoodToKnow
+
+With our platform, your To-dos are more than reminders — they're part of a streamlined toolkit to support your creative process.`,
+    relatedSlugs: ["manage-section", "board-views", "card-blocks"],
+  },
+  {
+    id: "tf-18",
+    slug: "card-blocks",
+    title: "Card Blocks",
+    category: "tools-and-features",
+    content: `## Card Blocks
+
+### What Are Blocks?
+
+Blocks are modular components you can add or remove from cards to tailor them to your needs. Each block provides a unique functionality, making cards adaptable for various tasks and workflows.
+
+For example, the description block allows you to add detailed information, while other blocks like checklists or due dates enable task tracking and deadline management. Some blocks, such as the description block, are preloaded by default, while others can be added manually.
+
+## Why Blocks Matter
+
+Blocks help customise cards to fit your project requirements. They:
+
+- Support flexibility by allowing you to adapt cards for different stages of filmmaking
+- Enhance collaboration by enabling features like comments and attachments
+- Keep relevant tools and information easily accessible
+
+Adding or removing blocks is simple through the **'Add/Remove Blocks'** panel in the card header, so you can adjust cards as your workflow evolves.
+
+## #GoodToKnow
+
+Some blocks load by default, while others are optional. Except for the **Description block**, all blocks can be removed. This allows cards to be fully customised to your workflow.`,
+    relatedSlugs: ["card-anatomy", "add-or-remove-blocks", "personal-to-dos"],
+  },
+  {
+    id: "tf-19",
+    slug: "your-filmspace",
+    title: "Your Filmspace",
+    category: "tools-and-features",
+    content: `## Your Filmspace
+
+### What Is a Filmspace?
+
+Filmspace is your all-in-one workspace, explicitly designed for filmmakers, video creators, and production teams. It's where you can develop and refine ideas, prioritise projects, plan and execute production workflows, and foster seamless collaboration across your team.
+
+## Your Creative Hub
+
+Unlike standard project management tools, a Filmspace is built specifically for the film and video industry. It combines powerful workflow tools to streamline every step of the production process.
+
+- **One Filmspace** is ideal for small to medium projects
+- **Multiple Filmspaces** suit larger teams managing various projects, clients, or creative visions
+
+## #GoodToKnow
+
+You're not just tracking tasks — you're managing the entire creative journey, from pre-production to final delivery.`,
+    relatedSlugs: ["add-and-remove-team-members-filmspace", "roles-permissions-in-pzaz", "manage-section"],
   },
 ];
 
