@@ -20,11 +20,12 @@ const linkRoutes: Record<string, string> = {
   "Pzaz vs Final Draft": "/pzaz-vs-final-draft",
   "Pzaz Project": "/pzaz-project",
   "Sell": "/sell",
+  "Shoot": "/shoot",
   "Knowledge Base": "/knowledge-base",
 };
 
 const footerLinks = {
-  Product: ["Breakdown", "Pricing", "Imagine", "Script", "Collaborate", "Pzaz Project", "Sell"],
+  Product: ["Breakdown", "Pricing", "Imagine", "Script", "Collaborate", "Pzaz Project", "Sell", "Shoot"],
   Resources: ["Blog", "Pzaz vs Final Draft", "Knowledge Base"],
   Company: ["Sales Team", "Brand", "Culture"],
   Legal: ["Privacy", "Terms"],

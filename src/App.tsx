@@ -26,6 +26,7 @@ import KnowledgeBase from "./pages/KnowledgeBase";
 import KnowledgeBaseArticle from "./pages/KnowledgeBaseArticle";
 import PzazProject from "./pages/PzazProject";
 import Sell from "./pages/Sell";
+import Shoot from "./pages/Shoot";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -53,6 +54,7 @@ const App = () => (
           <Route path="/knowledge-base/:slug" element={<KnowledgeBaseArticle />} />
           <Route path="/pzaz-project" element={<PzazProject />} />
           <Route path="/sell" element={<Sell />} />
+          <Route path="/shoot" element={<Shoot />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/terms-of-use" element={<Navigate to="/terms" replace />} />
