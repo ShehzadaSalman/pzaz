@@ -27,6 +27,8 @@ import KnowledgeBaseArticle from "./pages/KnowledgeBaseArticle";
 import PzazProject from "./pages/PzazProject";
 import Sell from "./pages/Sell";
 import Shoot from "./pages/Shoot";
+import Visualise from "./pages/Visualise";
+import Write from "./pages/Write";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -55,6 +57,8 @@ const App = () => (
           <Route path="/pzaz-project" element={<PzazProject />} />
           <Route path="/sell" element={<Sell />} />
           <Route path="/shoot" element={<Shoot />} />
+          <Route path="/visualise" element={<Visualise />} />
+          <Route path="/write" element={<Write />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/terms-of-use" element={<Navigate to="/terms" replace />} />
