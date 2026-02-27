@@ -27,7 +27,7 @@ const linkRoutes: Record<string, string> = {
 };
 
 const footerLinks = {
-  Product: ["Breakdown", "Pricing", "Imagine", "Script", "Collaborate", "Pzaz Project", "Sell", "Shoot", "Visualise", "Write"],
+  Product: ["Breakdown", "Imagine", "Script", "Collaborate", "Pzaz Project", "Sell", "Shoot", "Visualise", "Write"],
   Resources: ["Blog", "Pzaz vs Final Draft", "Knowledge Base"],
   Company: ["Sales Team", "Brand", "Culture"],
   Legal: ["Privacy", "Terms"],
