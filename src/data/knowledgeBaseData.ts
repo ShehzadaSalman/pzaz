@@ -11,148 +11,162 @@ export const kbArticles: KBArticle[] = [
   // Getting Started
   {
     id: "gs-1",
-    slug: "what-is-pzaz",
-    title: "What is Pzaz?",
+    slug: "book-a-personalised-product-demonstration",
+    title: "Book a Personalised Product Demonstration",
     category: "getting-started",
-    content: `## What is Pzaz?
+    content: `## Book a Personalised Product Demonstration
 
-Pzaz is an all-in-one film production platform built for indie filmmakers and production teams. It combines every tool you need to manage your project — from script to screen — in a single, collaborative workspace.
+### We are here to Help You Get the Most out of our tool.
 
-## Core Pillars
+We are a team of film-lovers and filmmaking and creative professionals. If there's one thing we love more than films, it's helping other filmmakers to succeed and fulfil their creative ambitions!
 
-**Script** — Write and format professional screenplays with AI-assisted tools, scene suggestions, and real-time collaboration.
+That's why we are here every day to speak to via a video call if you want to tell us about your needs, or learn more about what the app has to offer.
 
-**Imagine** — Build moodboards and visual references to bring your creative vision to life before a single frame is shot.
+## Get in Touch Today!
 
-**Breakdown** — Break down your script into scenes, cast, locations, and props automatically with AI.
-
-**Collaborate** — Share your project with your team, assign roles, and track progress across every department.
-
-## Why Pzaz?
-
-Traditional film production relies on a patchwork of disconnected tools — Final Draft for scripts, Google Sheets for budgets, email chains for approvals. Pzaz replaces all of that with a single platform that keeps every stakeholder aligned from day one.
-
-> Pzaz is designed for producers, directors, and coordinators who want to spend less time on admin and more time making great films.
-
-## Who is it for?
-
-- Independent filmmakers
-- Short and feature film producers
-- Commercial and branded content teams
-- Film school students and educators`,
-    relatedSlugs: ["creating-your-first-project", "inviting-your-team", "navigating-the-dashboard"],
+To arrange a personalised, in-depth product demonstration with us, simply click the following Calendly link and follow the instructions: [BOOK A CALL](https://calendly.com/filmmaking-app/30min)`,
+    relatedSlugs: ["writing-your-script-with-pzaz", "getting-started-with-workflows", "pzaz-101"],
   },
   {
     id: "gs-2",
-    slug: "creating-your-first-project",
-    title: "Creating Your First Project",
+    slug: "writing-your-script-with-pzaz",
+    title: "Writing Your Script with Pzaz",
     category: "getting-started",
-    content: `## Creating Your First Project
+    content: `## Writing Your Script with Pzaz
 
-Getting your first project set up in Pzaz takes less than two minutes. Here's how to do it.
+### Introduction
 
-## Step 1: Sign Up or Log In
+With the scriptwriting tool, you can turn your ideas into a fully structured script — whether you're starting from scratch or importing an existing project. The tool streamlines every step, allowing you to customise your title page, add acts, scenes, characters, dialogue, and transitions, and build a seamless narrative flow.
 
-Head to [pzaz.io](https://pzaz.io) and create a free account. You can sign up with your email address.
+## Getting Started
 
-## Step 2: Create a New Project
+Start your script by importing it, or by creating a new one from scratch. The first script you create will be marked as the **"Main script"** — this means that only this script can be used for script breakdown, storyboarding, call sheet arranging and for automatically creating elements, equipment, crew & cast and location objects in the Production section of the main menu. All other scripts that are imported, created or duplicated from the main script will be counted as drafts and text from them will need to be manually moved to the main script.
 
-Once you're logged in, click the **+ New Project** button on your dashboard. You'll be prompted to:
+At the moment, if you have multiple scripts in your project, then the first one in the list will be marked as the "Main Script" by default.
 
-- Give your project a title
-- Select a project type (Feature Film, Short Film, Commercial, etc.)
-- Set an expected start date (optional)
+## Script Import/Export
 
-## Step 3: Import or Write Your Script
+When you press the **"New Script"** button, you will be given 2 options — "Start new script" or "Import existing". The app supports .PDF import and Final Draft script file (.FDX) import.
 
-You can either:
+To export your script, click on the 3-dot menu at the top right of the script writing tool and press on the **"Export Script"** option. Here you can enter the name of the script file, select the exportable file format — .FDX or .PDF — and include or exclude the title page in the exported file. You can print the file by selecting the "Print" button.
 
-- **Import an existing script** — Upload a Final Draft (.fdx) or PDF file
-- **Start from scratch** — Use the built-in script editor
+> Please note that if the file is large, you may have to wait a few seconds until the document is ready for printing.
 
-## Step 4: Invite Your Team
+## Navigation
 
-Add collaborators by email. You can assign roles like Producer, Director, or Line Producer, each with their own permission level.
+Navigation is effortless with the intuitive sidebar, letting you quickly rearrange scenes, edit dialogue, or jump to specific sections using the search function. Every update happens in real time, ensuring a smooth writing experience.
 
-## Step 5: Explore the Workspace
+## The AI Assistant
 
-Once your project is created, you'll land on the project dashboard where you can navigate between Script, Imagine, Breakdown, and Collaborate modules.
-
-> Tip: Start with the Breakdown module to automatically extract cast, locations, and props from your script.`,
-    relatedSlugs: ["what-is-pzaz", "inviting-your-team", "importing-a-script"],
+Need creative support? The built-in AI assistant provides smart suggestions and insights to refine your script, making the writing process faster and more intuitive. With our app, screenwriting becomes more efficient, organised, and collaborative — so you can focus on bringing your story to life.`,
+    relatedSlugs: ["book-a-personalised-product-demonstration", "ai-security-and-privacy-at-pzaz", "getting-started-with-workflows"],
   },
   {
     id: "gs-3",
-    slug: "inviting-your-team",
-    title: "Inviting Your Team",
+    slug: "ai-security-and-privacy-at-pzaz",
+    title: "AI, Security, and Privacy",
     category: "getting-started",
-    content: `## Inviting Your Team
+    content: `## AI, Security, and Privacy
 
-Pzaz is built for collaboration. Here's how to get your crew on board.
+We take security and privacy seriously, ensuring your creative work remains protected.
 
-## Sending Invitations
+**We never use your scripts, notes, or data for AI training. Your work is private and accessible only to you and the collaborators you choose.**
 
-Navigate to your project settings and click **Team Members**. Enter the email addresses of the people you want to invite and assign them a role.
+## Data Security
 
-## Available Roles
+To keep your data secure, the app uses end-to-end encryption with **TLS** for data in transit and **AES-256** encryption for stored files. Our infrastructure follows industry-leading security standards, with regular updates to safeguard against potential threats.
 
-**Owner** — Full access to all modules, settings, and billing.
+## Access Controls
 
-**Producer** — Can edit all modules, invite team members, and manage budgets.
+We provide strict access controls so you can manage who sees and edits your content. Your projects remain in a private workspace, and no files are publicly available unless you explicitly share them.
 
-**Director** — Can edit scripts, moodboards, and view breakdowns.
+## Looking Ahead
 
-**Coordinator** — Read and write access to breakdowns and schedules.
+We are expanding our security measures with:
 
-**Viewer** — Read-only access to all shared modules.
+- **Two-Factor Authentication (2FA)** — an extra layer of login protection
+- **Advanced file permissions** — more granular control over who can access what
+- **Secure link sharing** — enhanced control over shared content
 
-## Accepting an Invitation
-
-Invitees will receive an email with a secure link. They can click it to create an account (or log in) and join the project automatically.
-
-## Managing Permissions
-
-You can change a team member's role or remove them at any time from the **Team Members** panel. Changes take effect immediately.
-
-> Tip: You can also share a read-only link to your project without requiring team members to create an account.`,
-    relatedSlugs: ["creating-your-first-project", "what-is-pzaz", "navigating-the-dashboard"],
+With our app, you can focus on your creative work without security concerns. Have questions? Feel free to reach out to an advisor right here in the app, using the Live Chat page. This can be found in the **GET HELP** section.`,
+    relatedSlugs: ["book-a-personalised-product-demonstration", "writing-your-script-with-pzaz", "pzaz-101"],
   },
   {
     id: "gs-4",
-    slug: "navigating-the-dashboard",
-    title: "Navigating the Dashboard",
+    slug: "getting-started-with-workflows",
+    title: "Getting Started with Workflows",
     category: "getting-started",
-    content: `## Navigating the Dashboard
+    content: `## Getting Started with Workflows
 
-The Pzaz dashboard is your central hub for all projects and activity.
+### What are Workflows?
 
-## Projects View
+Workflows represent internal processes — a series of repeatable steps required to deliver an intended outcome. A workflow can be as simple as "To do > Doing > Done" or more complex, such as the steps in a sales cycle.
 
-When you first log in, you'll see all your active projects displayed as cards. Each card shows the project title, last edited date, and active collaborators.
+Workflows are visualised on boards. You can create as many boards as needed, each representing a different process (e.g., Development, Marketing, Hiring). You make a workflow by adding columns to a board, each representing a step in the process. Cards are dragged from column to column as they advance through the steps in your workflow. This format is often referred to as a **Kanban board**.
 
-## Project Workspace
+## Creating Your First Workflow
 
-Clicking into a project opens the workspace with the following modules in the left sidebar:
+When starting a workflow, a Kanban board will load with a single column, which represents the start of your workflow and cannot be deleted or renamed. To add columns, click the vertical ellipsis (three dots) on the current single column and select **Add Heading**, repeating this step for every stage in your workflow.
 
-- **Script** — Your screenplay editor
-- **Imagine** — Moodboard and visual references
-- **Breakdown** — Scene-by-scene production breakdown
-- **Collaborate** — Team tasks and approvals
-- **Budget** — Cost tracking and estimates
-- **Schedule** — Shooting day planner
+For example, a content marketing workflow might include: Unassigned, Prioritized, Drafting, Editing, and Published. You can rearrange the columns by dragging and dropping them to suit your needs.
 
-## Search and Filters
+## Adding an Extra Workflow
 
-Use the search bar at the top of the dashboard to quickly find projects by name or collaborator. You can also filter by project type or status.
+Please note that only the filmspace owner can add a new workspace. To do so, select the **'Manage'** section in the side menu, then in the left hand menu, select **'+ New Workflow'**.
 
-## Notifications
+## Adding Work Items
 
-The bell icon in the top right shows activity across your projects — comments, approvals, and team updates.
+To create cards — the units of work — click the vertical ellipsis on any column and select **Add Card**. Each card should have a clear, descriptive title. You can document cards by adding details like:
 
-## Account Settings
+- Descriptions
+- Due dates
+- Attachments (e.g., documents or links)
+- Tasks and subtasks
+- Team member assignments`,
+    relatedSlugs: ["pzaz-101", "writing-your-script-with-pzaz", "book-a-personalised-product-demonstration"],
+  },
+  {
+    id: "gs-5",
+    slug: "pzaz-101",
+    title: "The Principle",
+    category: "getting-started",
+    content: `## The Principle
 
-Click your avatar in the top right to access your profile, subscription details, and notification preferences.`,
-    relatedSlugs: ["what-is-pzaz", "creating-your-first-project", "inviting-your-team"],
+## Introduction to "The Principle"
+
+Welcome to our platform, where simplicity meets power. We believe that tools should adapt to you — not vice versa. That's why we built our platform on the **Principle**, a user experience (UX) philosophy designed to make it effortless for anyone to get started, grow their capabilities, collaborate, and unlock powerful features at their own pace in real-time.
+
+### What Is the Principle?
+
+The Principle is rooted in three core ideas:
+
+1. **The Platform grows with you:** It is like an empty canvas, ready to take on any task or project, big or small. The basics come naturally, and as you play, mastering the rest feels seamless and intuitive.
+2. **Lego-Like Flexibility:** Every feature in the tool is built using simple, modular blocks. Like Lego bricks, these blocks are easy to recognise, fit together seamlessly, and allow you to build anything — from straightforward tasks to intricate workflows.
+3. **Support Where It Matters Most:** In a world overflowing with AI tools, the platform focuses on the essentials — helping filmmakers and creatives prepare, produce, and deliver their best work. AI is used not to replace your creativity but to inspire, spark, and support it.
+
+## Your Canvas: Objects and Cards
+
+Start with a blank canvas where you can create **objects** to track tasks, projects, scripts, files, budgets, and more.
+
+Each object shows key details (like deadlines and priorities). Open it to access a **card** — a customisable space for managing all the finer details.
+
+## Blocks: Building Your Workflow
+
+Cards consist of blocks, which represent logical segments of information or features. For instance, a card may include blocks for comments, attachments, team tasks, financial information, and various custom properties.
+
+This modular approach allows you to tailor each card to your workflow. Plus, we can design custom blocks to match your unique needs, giving you ultimate control without the complexity.
+
+## Organising Your Work
+
+In the platform, every object is grouped into a **category**, starting with the default **Outbox**. You can create as many categories as you need to stay organised.
+
+Manage your work using:
+
+- **List View** — Ideal for sorting by topics like fundraising or hiring.
+- **Board View** — Track progress through stages like To Do, Doing, and Done.
+
+This workspace stands out with its hybrid view, combining both layouts. This makes it easy to organise tasks while tracking progress, whether you're planning your day, managing a team, or leading a production.`,
+    relatedSlugs: ["getting-started-with-workflows", "writing-your-script-with-pzaz", "ai-security-and-privacy-at-pzaz"],
   },
 
   // Functions
