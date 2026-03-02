@@ -36,34 +36,6 @@ const PricingHero = () => {
             Pzaz connects writing, planning, budgeting, scheduling, and visuals into one live production system. Start where you are. Scale when you're ready.
           </motion.p>
 
-          {/* CTAs */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6"
-          >
-            <Button
-              variant="outline"
-              size="lg"
-              className="text-base px-8"
-              onClick={() => {
-                document.getElementById("plans")?.scrollIntoView({ behavior: "smooth" });
-              }}
-            >
-              See plans for your stage
-            </Button>
-          </motion.div>
-
-          {/* Trust line */}
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-sm text-muted-foreground"
-          >
-            No credit card · Cancel anytime · Your work stays connected forever
-          </motion.p>
         </div>
       </div>
     </section>
