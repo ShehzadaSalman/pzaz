@@ -305,6 +305,33 @@ const PricingStageSelector = () => {
             </p>
           </motion.div>
 
+          {/* Indie narrative intro */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto mb-16 space-y-4 text-sm text-muted-foreground leading-relaxed"
+          >
+            <p>
+              Independence often comes with hidden friction. Too many tools. Too many versions. Too many places to check. You compensate with effort. More messages. More searching. More re-explaining. Fragmentation becomes normal.
+            </p>
+            <p>
+              Indie removes that structural disadvantage. One shared production environment. One evolving context. One place where your project lives. No subscriptions. No artificial limits. No forced upgrades.
+            </p>
+            <p>
+              You don't adopt "professional software." You simply stop stitching tools together.
+            </p>
+            <p className="text-xs uppercase tracking-wider font-semibold text-foreground">
+              Behavioural shift: From scattered independence → to aligned independence.
+            </p>
+            <p>
+              This is not a stripped-down tier. It is the default coordination layer for independent screen production. AI, when used, operates inside your production context — assisting your workflow without disrupting your autonomy.
+            </p>
+            <p>
+              You stay independent. But your production becomes structurally aligned.
+            </p>
+          </motion.div>
+
           {/* Section 1: Indie, Planning Pro, Studio Pro */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-24">
             {section1Tiers.map((tier, index) => renderTierCard(tier, index))}
