@@ -22,8 +22,8 @@ const PricingHero = () => {
             transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 text-balance"
           >
-            One platform.{" "}
-            <span className="gradient-text">One filmmaking flow.</span>
+            Start free.{" "}
+            <span className="gradient-text">Scale when you're ready.</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -33,7 +33,7 @@ const PricingHero = () => {
             transition={{ duration: 0.6, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
             className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            Pzaz connects writing, planning, budgeting, scheduling, and visuals into one live production system. Start where you are. Scale when you're ready.
+            Clear pricing for serious screen production, from independent creators to growing studios.
           </motion.p>
 
         </div>
