@@ -272,7 +272,7 @@ const PricingStageSelector = () => {
               <span className="gradient-text">your production.</span>
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Start free and scale as your productions grow.
+              No credit card · Cancel anytime · Your work stays connected forever
             </p>
           </motion.div>
 
@@ -296,7 +296,7 @@ const PricingStageSelector = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {section2Tiers.map((tier, index) => renderTierCard(tier, index))}
           </div>
         </div>
