@@ -20,14 +20,13 @@ const POSTS_PER_PAGE = 6;
 const ProducerBlog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [activeCategory, setActiveCategory] = useState("all");
-  const filteredPosts =
-    activeCategory === "all"
-      ? blogPosts
-      : blogPosts.filter((post) =>
-          Array.isArray(post.category)
-            ? post.category.includes(activeCategory as any)
-            : post.category === activeCategory
-        );
+  const filteredPosts = blogPosts.filter((post) => {
+    if (post.featured) return false;
+    if (activeCategory === "all") return true;
+    return Array.isArray(post.category)
+      ? post.category.includes(activeCategory as any)
+      : post.category === activeCategory;
+  });
   const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
 
   const requestedPage = Number(searchParams.get("page") ?? "1");

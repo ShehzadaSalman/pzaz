@@ -15,6 +15,7 @@ const BlogGrid = () => {
   
 
   const filteredPosts = blogPosts.filter((post) => {
+    if (post.featured) return false;
     const matchesCategory = activeCategory === "all" || 
       (Array.isArray(post.category) ? post.category.includes(activeCategory as any) : post.category === activeCategory);
     const matchesSearch = 
