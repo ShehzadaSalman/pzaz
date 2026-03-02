@@ -65,17 +65,17 @@ const section1Tiers: Tier[] = [
   {
     id: "studio-pro",
     name: "Studio Pro",
-    basePrice: 199,
+    basePrice: 129,
     priceSuffix: "/ month",
-    tagline: "Multi-project operations suite for production houses and creative agencies managing a slate.",
+    tagline: "Slate-level coordination for growing production companies. Built for teams managing multiple projects, departments, and delivery timelines.",
     features: [
-      "Slate overview with pipeline and greenlight tracking",
-      "Standardised templates and workflows across teams",
-      "Cross-project resource planning (crew, equipment, budgets)",
-      "Executive monitoring of burn rate, schedule risk, and bottlenecks",
-      "Reporting layer for financial summaries and delivery timelines",
+      "Multi-project oversight",
+      "Executive-level visibility",
+      "Standardised workflows across teams",
+      "Cross-project alignment",
+      "Scalable studio coordination infrastructure",
     ],
-    cta: "Get Studio Pro",
+    cta: "Get Started",
     checkoutUrl: `${BASE_CHECKOUT}?plan=indie&period=month&bundles=pzaz_studio&currency=EUR`,
     hasUserSelector: true,
   },
@@ -239,6 +239,9 @@ const PricingStageSelector = () => {
         {tier.id === "planning-pro" && (
           <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">Includes everything in Indie, plus:</p>
         )}
+        {tier.id === "studio-pro" && (
+          <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">Includes everything in Planning Pro, plus:</p>
+        )}
 
         <ul className="space-y-3 mb-6 flex-1">
           {tier.features.map((f, i) => (
@@ -275,6 +278,19 @@ const PricingStageSelector = () => {
           </div>
         )}
 
+        {/* Plan Details for Studio Pro */}
+        {tier.id === "studio-pro" && (
+          <div className="border-t border-border pt-5 mb-6">
+            <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">Plan Details</p>
+            <ul className="space-y-2 text-sm text-foreground">
+              <li>5 users included</li>
+              <li>Unlimited external collaborators</li>
+              <li>Unlimited projects</li>
+              <li>1,000 AI credits per month</li>
+            </ul>
+          </div>
+        )}
+
         {tier.hasUserSelector && (
           <UserSelector
             users={userCounts[tier.id] ?? 1}
@@ -299,6 +315,11 @@ const PricingStageSelector = () => {
         )}
         {tier.id === "planning-pro" && (
           <p className="text-xs text-muted-foreground text-center mt-4">Up and running in 15 minutes.</p>
+        )}
+        {tier.id === "studio-pro" && (
+          <p className="text-xs text-muted-foreground text-center mt-4">More than 10 additional users?{" "}
+            <button type="button" onClick={() => setContactOpen(true)} className="underline text-primary hover:text-primary/80 transition-colors">Contact us</button>
+          </p>
         )}
       </motion.div>
     );
