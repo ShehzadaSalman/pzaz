@@ -98,6 +98,16 @@ const Hero = () => {
             <span className="text-foreground">Screen productions break down when teams lose alignment. </span><span className="bg-clip-text text-transparent" style={{backgroundImage: "linear-gradient(247.38deg, rgb(41, 250, 223) -2.17%, rgb(139, 29, 255) 84.87%)"}}>Screen productions don't break creatively. They fail operationally.</span>
           </motion.h1>
 
+          {/* Subheading */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.15, ease: [0.4, 0, 0.2, 1] }}
+            className="font-lato text-lg md:text-xl leading-relaxed text-muted-foreground text-center max-w-3xl mx-auto mb-10"
+          >
+            Pzaz is the real-time collaboration system for film, TV, animation and video, where your story, plan, costs, timeline, and crew stay in sync from first draft to final delivery.
+          </motion.p>
+
           {/* CTAs */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
