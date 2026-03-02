@@ -95,9 +95,9 @@ const Hero = () => {
             transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
             className="font-lato font-extrabold text-5xl leading-[50px] md:text-[64px]  md:leading-[70px] md:tracking-normal text-center mb-6 text-balance md:pt-[60px]"
           >
-            One intelligent workflow{" "}
+            Screen productions break down when{" "}
             <span className="bg-clip-text text-transparent" style={{ backgroundImage: "linear-gradient(247.38deg, #29FADF -2.17%, #8B1DFF 84.87%)" }}>
-              from script to shoot.
+              teams lose alignment.
             </span>
           </motion.h1>
 
@@ -108,8 +108,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
             className="font-lato font-normal text-[20px] leading-[30px] tracking-normal text-center max-w-3xl mx-auto mb-10 text-muted-foreground"
           >
-            Pzaz helps you write smarter, plan faster, and avoid costly mistakes.
-            AI works with you, not instead of you, turning your script into a full production plan.
+            Screen productions don't break creatively. They fail operationally.
           </motion.p>
 
           {/* CTAs */}
