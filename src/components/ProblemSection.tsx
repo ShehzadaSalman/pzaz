@@ -28,8 +28,31 @@ const ProblemSection = () => {
                 </>
               }
               titleClassName=""
-              description="Film productions don't slow down because of creativity. They slow down because every change triggers manual rework."
-              descriptionClassName="text-lg text-[#878787] max-w-2xl mx-auto leading-relaxed"
+              description={
+                <div className="text-left max-w-2xl mx-auto space-y-6">
+                  <p className="text-lg text-[#878787] leading-relaxed">
+                    Film productions don't slow down because of creativity. They are chaotic because every time your team switches tools they lose part of the context.
+                  </p>
+                  <p className="text-lg text-[#878787] leading-relaxed">
+                    That loss becomes mistakes, rework, and budget pressure. Fragmentation isn't just a nuisance. It triggers manual rework, delays, and budget pressure. It's expensive.
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+                    <div className="bg-white border border-[#D4BAF4] rounded-2xl p-5">
+                      <p className="font-lato font-bold text-[#A805FF] text-base mb-1">Context Loss</p>
+                      <p className="text-sm text-[#878787] leading-snug">Switching between disconnected apps can erase up to 60% of your working context.</p>
+                    </div>
+                    <div className="bg-white border border-[#D4BAF4] rounded-2xl p-5">
+                      <p className="font-lato font-bold text-[#A805FF] text-base mb-1">Digital Fatigue</p>
+                      <p className="text-sm text-[#878787] leading-snug">Constant switching drains focus and performance drops by up to 30%.</p>
+                    </div>
+                    <div className="bg-white border border-[#D4BAF4] rounded-2xl p-5">
+                      <p className="font-lato font-bold text-[#A805FF] text-base mb-1">Fragmented Data</p>
+                      <p className="text-sm text-[#878787] leading-snug">When information isn't connected, mistakes multiply.</p>
+                    </div>
+                  </div>
+                </div>
+              }
+              descriptionClassName=""
             />
           </motion.div>
 
