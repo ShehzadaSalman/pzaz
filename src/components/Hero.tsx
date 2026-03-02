@@ -93,9 +93,9 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-            className="font-lato font-extrabold text-5xl leading-[50px] md:text-[64px] md:leading-[70px] md:tracking-normal text-center mb-10 text-balance md:pt-[60px] gradient-text"
+            className="font-lato font-extrabold text-5xl leading-[50px] md:text-[64px] md:leading-[70px] md:tracking-normal text-center mb-10 text-balance md:pt-[60px]"
           >
-            Screen productions break down when teams lose alignment. Screen productions don't break creatively. They fail operationally.
+            <span className="text-foreground">Screen productions break down when teams lose alignment. </span><span className="gradient-text">Screen productions don't break creatively. They fail operationally.</span>
           </motion.h1>
 
           {/* CTAs */}
