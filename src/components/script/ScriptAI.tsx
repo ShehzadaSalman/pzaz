@@ -9,23 +9,23 @@ import iconScriptAnalysis from "@/assets/script/icon-script-analysis.svg";
 
 const aiCards = [
   {
-    title: "Smart Character Tracking",
-    description: "AI keeps track of character arcs, dialogue patterns, and continuity across your entire script.",
-    icon: iconCharacterTracking,
-  },
-  {
-    title: "Instant Script Analysis",
-    description: "Receive real-time feedback on pacing, structure, and readability to sharpen every draft.",
-    icon: iconScriptAnalysis,
-  },
-  {
     title: "AI-Powered Formatting",
     description: "Automatically formats your script to industry standards as you write, so you never break creative flow.",
-    icon: iconAiFormatting,
+    icon: iconCharacterTracking,
   },
   {
     title: "Intelligent Scene Suggestions",
     description: "Get contextual scene and dialogue recommendations based on your story's tone, genre, and structure.",
+    icon: iconScriptAnalysis,
+  },
+  {
+    title: "Smart Character Tracking",
+    description: "AI keeps track of character arcs, dialogue patterns, and continuity across your entire script.",
+    icon: iconAiFormatting,
+  },
+  {
+    title: "Instant Script Analysis",
+    description: "Receive real-time feedback on pacing, structure, and readability to sharpen every draft.",
     icon: iconSceneSuggestions,
   },
 ];
