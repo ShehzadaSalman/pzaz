@@ -19,7 +19,7 @@ interface Tier {
 }
 
 const BASE_CHECKOUT = "https://projector.pzaz.io/checkout";
-const EXTRA_USER_PRICE = 10;
+const EXTRA_USER_PRICE = 49;
 
 // Section 1: Indie + Standalone Products
 // Section 1: Indie + Pro Plans
