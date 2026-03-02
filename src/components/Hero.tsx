@@ -108,7 +108,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
             className="font-lato font-normal text-[20px] leading-[30px] tracking-normal text-center max-w-3xl mx-auto mb-10 text-muted-foreground"
           >
-            Screen productions don't break creatively. They fail operationally.
+            Pzaz is the real-time collaboration system for film, TV, animation and video, where your story, plan, costs, timeline, and crew stay in sync from first draft to final delivery.
           </motion.p>
 
           {/* CTAs */}
@@ -120,7 +120,7 @@ const Hero = () => {
           >
             <Link to="/pricing">
               <Button size="lg" className="group px-8">
-                Start For Free
+                Start Free
                 <ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />
               </Button>
             </Link>
@@ -137,7 +137,7 @@ const Hero = () => {
                   />
                 }
               >
-                Book Studio Demo
+                Book a Demo
               </Button>
             </a>
           </motion.div>
