@@ -28,13 +28,17 @@ const section1Tiers: Tier[] = [
     id: "indie",
     name: "Indie",
     basePrice: null,
-    tagline: "Professional workspace for solo filmmakers starting a project.",
+    tagline: "Everything you need to start and coordinate your screen project. No cost or lock-in.",
     features: [
-      "Full access to core workflow foundation",
-      "1 user workspace",
-      "Up to 3 collaborators",
-      "Centralized project dashboard",
-      "Access to Inbox, Ideation, and core system tools",
+      "Shared production workspace",
+      "Inbox & team chat",
+      "Calendar & scheduling",
+      "File management & document hub",
+      "Script development & narrative tools",
+      "Ideation & moodboards",
+      "Breakdown & stripboard planning",
+      "Task coordination with notes & attachments",
+      "Call sheets & production essentials",
     ],
     cta: "Start Free",
     highlighted: true,
@@ -217,13 +221,21 @@ const PricingStageSelector = () => {
         )}
 
         <h3 className="text-xl font-bold text-foreground mb-2">{tier.name}</h3>
-        <div className="flex items-baseline gap-1 mb-3">
+        <div className="flex items-baseline gap-1 mb-1">
           <span className="text-4xl font-bold gradient-text">{getDisplayPrice(tier)}</span>
+          {tier.basePrice === null && (
+            <span className="text-sm text-muted-foreground ml-1">Always.</span>
+          )}
           {tier.priceSuffix && tier.basePrice !== null && (
             <span className="text-muted-foreground text-sm">{tier.priceSuffix}</span>
           )}
         </div>
         <p className="text-sm text-muted-foreground mb-6">{tier.tagline}</p>
+
+        {/* Includes header for Indie */}
+        {tier.id === "indie" && (
+          <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">Includes</p>
+        )}
 
         <ul className="space-y-3 mb-6 flex-1">
           {tier.features.map((f, i) => (
@@ -233,6 +245,19 @@ const PricingStageSelector = () => {
             </li>
           ))}
         </ul>
+
+        {/* Plan Details for Indie */}
+        {tier.id === "indie" && (
+          <div className="border-t border-border pt-5 mb-6">
+            <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">Plan Details</p>
+            <ul className="space-y-2 text-sm text-foreground">
+              <li>1 core user included</li>
+              <li>3 external collaborators included</li>
+              <li>1 active project</li>
+              <li>100 AI credits per month</li>
+            </ul>
+          </div>
+        )}
 
         {tier.hasUserSelector && (
           <UserSelector
@@ -251,6 +276,11 @@ const PricingStageSelector = () => {
           {tier.cta}
           <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
         </Button>
+
+        {/* Footer text for Indie */}
+        {tier.id === "indie" && (
+          <p className="text-xs text-muted-foreground text-center mt-4">No lock-in. No pressure. Ever.</p>
+        )}
       </motion.div>
     );
   };
