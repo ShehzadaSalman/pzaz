@@ -22,6 +22,7 @@ const BASE_CHECKOUT = "https://projector.pzaz.io/checkout";
 const EXTRA_USER_PRICE = 10;
 
 // Section 1: Indie + Standalone Products
+// Section 1: Indie + Pro Plans
 const section1Tiers: Tier[] = [
   {
     id: "indie",
@@ -40,6 +41,44 @@ const section1Tiers: Tier[] = [
     badge: "Most Popular",
     checkoutUrl: `${BASE_CHECKOUT}?plan=indie&period=month&currency=EUR`,
   },
+  {
+    id: "planning-pro",
+    name: "Planning Pro",
+    basePrice: 129,
+    priceSuffix: "/ month",
+    tagline: "Advanced planning suite for writers, directors, and creative leads.",
+    features: [
+      "Designed for writer-directors and creative owners",
+      "Full script development and versioning workflow",
+      "Scene-to-shot structured planning",
+      "Integrated collaboration with producers and team",
+      "Professional-grade planning tools in one suite",
+    ],
+    cta: "Get Planning Pro",
+    checkoutUrl: `${BASE_CHECKOUT}?plan=indie&period=month&bundles=pzaz_planning&currency=EUR`,
+    hasUserSelector: true,
+  },
+  {
+    id: "studio-pro",
+    name: "Studio Pro",
+    basePrice: 199,
+    priceSuffix: "/ month",
+    tagline: "Multi-project operations suite for production houses and creative agencies managing a slate.",
+    features: [
+      "Slate overview with pipeline and greenlight tracking",
+      "Standardised templates and workflows across teams",
+      "Cross-project resource planning (crew, equipment, budgets)",
+      "Executive monitoring of burn rate, schedule risk, and bottlenecks",
+      "Reporting layer for financial summaries and delivery timelines",
+    ],
+    cta: "Get Studio Pro",
+    checkoutUrl: `${BASE_CHECKOUT}?plan=indie&period=month&bundles=pzaz_studio&currency=EUR`,
+    hasUserSelector: true,
+  },
+];
+
+// Section 2: Standalone Products
+const section2Tiers: Tier[] = [
   {
     id: "budget",
     name: "Budget",
@@ -71,46 +110,6 @@ const section1Tiers: Tier[] = [
     ],
     cta: "Get Storyboard",
     checkoutUrl: `${BASE_CHECKOUT}?plan=indie&period=month&bundles=pzaz_storyboard&currency=EUR`,
-  },
-];
-
-// Section 2: Professional Suite
-const section2Tiers: Tier[] = [
-  {
-    id: "planning-pro",
-    name: "Planning Pro",
-    basePrice: 129,
-    priceSuffix: "/ month",
-    tagline: "Advanced planning suite for writers, directors, and creative leads.",
-    features: [
-      "Designed for writer-directors and creative owners",
-      "Full script development and versioning workflow",
-      "Scene-to-shot structured planning",
-      "Integrated collaboration with producers and team",
-      "Professional-grade planning tools in one suite",
-    ],
-    cta: "Get Planning Pro",
-    checkoutUrl: `${BASE_CHECKOUT}?plan=indie&period=month&bundles=pzaz_planning&currency=EUR`,
-    highlighted: true,
-    badge: "Most Popular",
-    hasUserSelector: true,
-  },
-  {
-    id: "studio-pro",
-    name: "Studio Pro",
-    basePrice: 199,
-    priceSuffix: "/ month",
-    tagline: "Multi-project operations suite for production houses and creative agencies managing a slate.",
-    features: [
-      "Slate overview with pipeline and greenlight tracking",
-      "Standardised templates and workflows across teams",
-      "Cross-project resource planning (crew, equipment, budgets)",
-      "Executive monitoring of burn rate, schedule risk, and bottlenecks",
-      "Reporting layer for financial summaries and delivery timelines",
-    ],
-    cta: "Get Studio Pro",
-    checkoutUrl: `${BASE_CHECKOUT}?plan=indie&period=month&bundles=pzaz_studio&currency=EUR`,
-    hasUserSelector: true,
   },
 ];
 
@@ -276,12 +275,12 @@ const PricingStageSelector = () => {
             </p>
           </motion.div>
 
-          {/* Section 1: Indie, Budget, Storyboard */}
+          {/* Section 1: Indie, Planning Pro, Studio Pro */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-24">
             {section1Tiers.map((tier, index) => renderTierCard(tier, index))}
           </div>
 
-          {/* Section 2: Professional Suite */}
+          {/* Section 2: Standalone Products */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -289,10 +288,10 @@ const PricingStageSelector = () => {
             className="text-center mb-14"
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              <span className="gradient-text">Professional Suite</span>
+              <span className="gradient-text">Standalone Products</span>
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Advanced tools for serious productions and growing teams.
+              Add specific tools to power up your existing workflow.
             </p>
           </motion.div>
 
