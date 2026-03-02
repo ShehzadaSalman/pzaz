@@ -21,10 +21,10 @@ const benefits = [
 ];
 
 const scriptCards = [
-  { icon: iconSafetyCert, title: "Drive breakdowns", image: solutionCardPreview },
-  { icon: iconShapes2, title: "Inform budgets and schedules", image: solutionCardSchedule },
+  { icon: iconShapes2, title: "Drive breakdowns", image: solutionCardPreview },
+  { icon: iconMoneyBag, title: "Inform budgets and schedules", image: solutionCardSchedule },
   { icon: iconBell, title: "Reveal scope and risk early", image: solutionCardBudget },
-  { icon: iconMoneyBag, title: "Remain authoritative from development through delivery", image: solutionCardTeam },
+  { icon: iconSafetyCert, title: "Remain authoritative from development through delivery", image: solutionCardTeam },
 ];
 
 const ScriptShift = () => {
