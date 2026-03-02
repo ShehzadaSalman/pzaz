@@ -88,32 +88,33 @@ const section2Tiers: Tier[] = [
     name: "Budget",
     basePrice: 49,
     priceSuffix: "/ month",
-    tagline: "Professional film budgeting system fully integrated into your workflow.",
+    tagline: "Integrated financial alignment inside your production environment.",
     features: [
-      "Dedicated budgeting environment",
-      "Built specifically for film and video production",
-      "Linked to production elements and resources",
-      "Clear cost breakdown and financial overview",
-      "Works seamlessly alongside Planning and Production Suites",
+      "Production-aware budgeting structure",
+      "Real-time cost visibility connected to planning",
+      "Department-level budget tracking",
+      "Scenario planning & financial adjustments",
+      "Context-linked financial oversight",
+      "Shares project AI credit allocation",
     ],
-    cta: "Get Budget",
+    cta: "Get Started",
     checkoutUrl: `${BASE_CHECKOUT}?plan=indie&period=month&bundles=pzaz_budget&currency=EUR`,
   },
   {
-    id: "storyboard",
-    name: "Storyboard",
-    basePrice: 49,
+    id: "private-llm",
+    name: "Private LLM Add-On",
+    basePrice: 249,
     priceSuffix: "/ month",
-    tagline: "Visual planning tool for building structured storyboards inside Pzaz.",
+    tagline: "",
     features: [
-      "Native storyboard builder",
-      "Integrated with script and planning tools",
-      "Visual shot and sequence development",
-      "Drag-and-drop visual workflow",
-      "Eliminates need for external storyboard software",
+      "Dedicated private AI instance",
+      "Isolated model environment",
+      "Custom internal knowledge layer",
+      "Governed AI access controls",
+      "Separate credit allocation",
     ],
-    cta: "Get Storyboard",
-    checkoutUrl: `${BASE_CHECKOUT}?plan=indie&period=month&bundles=pzaz_storyboard&currency=EUR`,
+    cta: "Add Private LLM",
+    checkoutUrl: `${BASE_CHECKOUT}?plan=indie&period=month&bundles=pzaz_private_llm&currency=EUR`,
   },
 ];
 
@@ -320,6 +321,12 @@ const PricingStageSelector = () => {
           <p className="text-xs text-muted-foreground text-center mt-4">More than 10 additional users?{" "}
             <button type="button" onClick={() => setContactOpen(true)} className="underline text-primary hover:text-primary/80 transition-colors">Contact us</button>
           </p>
+        )}
+        {tier.id === "budget" && (
+          <p className="text-xs text-muted-foreground text-center mt-4">Financial clarity without fragmentation.</p>
+        )}
+        {tier.id === "private-llm" && (
+          <p className="text-xs text-muted-foreground text-center mt-4">Protected and isolated. Under your control.</p>
         )}
       </motion.div>
     );
