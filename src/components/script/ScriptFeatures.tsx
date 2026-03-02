@@ -22,10 +22,10 @@ const features = [
   { title: "Autosave & cloud storage", image: featureCard1, icon: iconCloud },
   { title: "Secure script storage", image: featureCard2, icon: iconLock },
   { title: "Flexible import & export", image: featureCard3, icon: iconDownload },
-  { title: "Scene undo & renumbering", image: featureCard4, icon: iconRefresh },
-  { title: "Script indexing for fast navigation", image: featureCard5, icon: iconThList },
+  { title: "Script indexing for fast navigation", image: featureCard4, icon: iconThList },
+  { title: "Free updates & upgrades — always", image: featureCard5, icon: iconListCheck },
   { title: "Full-screen, distraction-free writing", image: featureCard6, icon: iconFullscreen },
-  { title: "Free updates & upgrades — always", image: featureCard7, icon: iconListCheck },
+  { title: "Scene undo & renumbering", image: featureCard7, icon: iconRefresh },
   { title: "Drag & drop scene structure", image: featureCard8, icon: iconDrag },
 ];
 
