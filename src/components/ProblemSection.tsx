@@ -67,7 +67,7 @@ const ProblemSection = () => {
             {/* Fragmented tools */}
             <div className="bg-white/30 py-8 px-8 md:px-[60px] md:pb-[50px] border border-[#D4BAF4] rounded-[38px] relative z-10">
               <h3 className="font-lato font-bold text-2xl pt-4 pb-8 tracking-normal text-foreground">
-                This is no longer a tooling problem.
+                This is no longer a tooling problem. It's a connected data and collaboration problem.
               </h3>
               <div className="space-y-4">
                  <div className="flex items-center gap-4 h-[70px] p-6 bg-[#FDF2F5] rounded-lg border border-[#EF6F9B]">
