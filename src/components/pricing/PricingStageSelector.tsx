@@ -50,15 +50,15 @@ const section1Tiers: Tier[] = [
     name: "Planning Pro",
     basePrice: 129,
     priceSuffix: "/ month",
-    tagline: "Advanced planning suite for writers, directors, and creative leads.",
+    tagline: "Structured development aligned with production reality. For writer-directors and creative leads who need coordination, not chaos.",
     features: [
-      "Designed for writer-directors and creative owners",
-      "Full script development and versioning workflow",
-      "Scene-to-shot structured planning",
-      "Integrated collaboration with producers and team",
-      "Professional-grade planning tools in one suite",
+      "Advanced script & rewrite control",
+      "Structured development workflows",
+      "Production-ready planning framework",
+      "Deeper collaboration visibility",
+      "Expanded coordination capacity",
     ],
-    cta: "Get Planning Pro",
+    cta: "Get Started",
     checkoutUrl: `${BASE_CHECKOUT}?plan=indie&period=month&bundles=pzaz_planning&currency=EUR`,
     hasUserSelector: true,
   },
@@ -232,9 +232,12 @@ const PricingStageSelector = () => {
         </div>
         <p className="text-sm text-muted-foreground mb-6">{tier.tagline}</p>
 
-        {/* Includes header for Indie */}
+        {/* Includes header */}
         {tier.id === "indie" && (
           <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">Includes</p>
+        )}
+        {tier.id === "planning-pro" && (
+          <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">Includes everything in Indie, plus:</p>
         )}
 
         <ul className="space-y-3 mb-6 flex-1">
@@ -259,6 +262,19 @@ const PricingStageSelector = () => {
           </div>
         )}
 
+        {/* Plan Details for Planning Pro */}
+        {tier.id === "planning-pro" && (
+          <div className="border-t border-border pt-5 mb-6">
+            <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">Plan Details</p>
+            <ul className="space-y-2 text-sm text-foreground">
+              <li>3 users included</li>
+              <li>10 external collaborators included</li>
+              <li>Unlimited projects</li>
+              <li>500 AI credits per month</li>
+            </ul>
+          </div>
+        )}
+
         {tier.hasUserSelector && (
           <UserSelector
             users={userCounts[tier.id] ?? 1}
@@ -277,9 +293,12 @@ const PricingStageSelector = () => {
           <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
         </Button>
 
-        {/* Footer text for Indie */}
+        {/* Footer text */}
         {tier.id === "indie" && (
           <p className="text-xs text-muted-foreground text-center mt-4">No lock-in. No pressure. Ever.</p>
+        )}
+        {tier.id === "planning-pro" && (
+          <p className="text-xs text-muted-foreground text-center mt-4">Up and running in 15 minutes.</p>
         )}
       </motion.div>
     );
