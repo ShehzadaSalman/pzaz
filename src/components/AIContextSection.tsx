@@ -23,7 +23,7 @@ const AIContextSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid md:grid-cols-2 gap-40 max-w-5xl mx-auto mb-12"
+          className="grid md:grid-cols-2 gap-52 max-w-5xl mx-auto relative z-10 mb-[-80px]"
         >
           <p className="font-lato font-normal text-[20px] leading-[30px] text-[#878787]">
             AI can generate impressive answers in seconds. But impressive answers don't run productions. Without full production context, outputs don't connect, decisions don't propagate, and teams fall out of alignment.
@@ -35,13 +35,13 @@ const AIContextSection = () => {
           </p>
         </motion.div>
 
-        {/* Illustration */}
+        {/* Illustration — slides up behind the text */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex justify-center"
+          className="flex justify-center relative z-0"
         >
           <img src={aiContextIllustration} alt="AI context illustration" className="w-full max-w-3xl h-auto" />
         </motion.div>
