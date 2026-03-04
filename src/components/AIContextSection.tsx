@@ -4,25 +4,14 @@ import aiContextIllustration from "@/assets/ai-context-illustration.svg";
 
 const AIContextSection = () => {
   return (
-    <section className="section-padding relative overflow-hidden" style={{ backgroundColor: "#ffeffe" }}>
+    <section className="section-padding relative overflow-hidden" style={{ backgroundColor: "#FBFBFB" }}>
       <div className="container mx-auto px-6 relative z-10">
-        {/* Illustration */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="flex justify-center mb-12"
-        >
-          <img src={aiContextIllustration} alt="AI context illustration" className="w-full max-w-3xl h-auto" />
-        </motion.div>
-
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          transition={{ duration: 0.6 }}
           className="font-lato font-extrabold text-[48px] leading-[56px] text-foreground text-center mb-12"
         >
           AI without context is guesswork.
@@ -33,8 +22,8 @@ const AIContextSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto"
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto mb-12"
         >
           <p className="font-lato font-normal text-[20px] leading-[30px] text-[#878787]">
             AI can generate impressive answers in seconds. But impressive answers don't run productions. Without full production context, outputs don't connect, decisions don't propagate, and teams fall out of alignment.
@@ -44,6 +33,17 @@ const AIContextSection = () => {
             <br /><br />
             Pzaz connects your full production context so your tools, AI agents and your teams work together in harmony.
           </p>
+        </motion.div>
+
+        {/* Illustration */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex justify-center"
+        >
+          <img src={aiContextIllustration} alt="AI context illustration" className="w-full max-w-3xl h-auto" />
         </motion.div>
       </div>
     </section>
