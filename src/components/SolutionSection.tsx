@@ -101,7 +101,7 @@ const SolutionSection = () => {
           className="text-center"
         >
           <p className="text-xl text-muted-foreground italic">
-            You stay in control. <span className="text-foreground font-semibold not-italic"> The system handles the coordination.</span>
+            Run productions that feel calm, controlled and predictable.
           </p>
         </motion.div>
       </div>
