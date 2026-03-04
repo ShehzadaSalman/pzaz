@@ -101,7 +101,7 @@ const SolutionSection = () => {
           className="text-center"
         >
           <p className="text-xl text-muted-foreground italic">
-            Run productions that feel calm, controlled and predictable.
+            Run productions that feel calm, <span className="font-bold">controlled and predictable.</span>
           </p>
         </motion.div>
       </div>
