@@ -30,16 +30,7 @@ const ProblemSection = () => {
                 </>
               }
               titleClassName=""
-              description={
-                <div className="text-left max-w-2xl mx-auto space-y-6">
-                  <p className="text-lg text-[#878787] leading-relaxed">
-                    Film productions don't slow down because of creativity. They are chaotic because every time your team switches tools they lose part of the context.
-                  </p>
-                  <p className="text-lg text-[#878787] leading-relaxed">
-                    That loss becomes mistakes, rework, and budget pressure. Fragmentation isn't just a nuisance. It triggers manual rework, delays, and budget pressure. It's expensive.
-                  </p>
-                </div>
-              }
+              description="Every time your team switches tools, context disappears. That turns into rework, delays and budget pressure. Production loses alignment."
               descriptionClassName=""
             />
           </motion.div>
