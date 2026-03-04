@@ -48,7 +48,7 @@ const SolutionSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="grid md:grid-cols-2 gap-[45px] max-w-6xl mx-auto mb-16 md:mb-[112px]"
         >
-          {/* Row 1: Card 1 + Card 2 */}
+          {/* Row 1: Card 1 + nested 2 cards */}
           <SolutionCard
             icon={cardIconClarity}
             trigger={"Work with clarity,\nnot chaos."}
@@ -56,13 +56,22 @@ const SolutionSection = () => {
             index={0}
             hideArrow={true}
           />
-          <SolutionCard
-            icon={cardIconFast}
-            trigger={"Move fast without\nlosing control."}
-            image={solutionCardFast}
-            index={1}
-            hideArrow={true}
-          />
+          <div className="flex flex-row gap-[22px] h-full">
+            <SolutionCard
+              icon={cardIconFast}
+              trigger={"Move fast without\nlosing control."}
+              image={solutionCardFast}
+              index={1}
+              hideArrow={true}
+            />
+            <SolutionCard
+              icon={cardIconFast}
+              trigger={"Move fast without\nlosing control."}
+              image={solutionCardFast}
+              index={1}
+              hideArrow={true}
+            />
+          </div>
 
           {/* Row 2: Card 3 + Card 4 */}
           <SolutionCard
