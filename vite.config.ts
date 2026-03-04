@@ -49,6 +49,8 @@ function markdownToHtml(content: string): string {
       htmlLines.push(`<h3 style="font-size:1.2rem;font-weight:600;margin:2rem 0 0.75rem">${t.slice(4)}</h3>`);
     } else if (t.startsWith("## ")) {
       htmlLines.push(`<h2 style="font-size:1.5rem;font-weight:700;margin:2.5rem 0 1rem">${t.slice(3)}</h2>`);
+    } else if (t.startsWith("# ")) {
+      htmlLines.push(`<h1 style="font-size:2rem;font-weight:700;margin:0 0 1.5rem">${t.slice(2)}</h1>`);
     } else if (t.startsWith("> ")) {
       htmlLines.push(`<blockquote style="border-left:4px solid #5C28A4;padding:0.5rem 1rem;margin:1.5rem 0;font-style:italic;color:#666">${t.slice(2)}</blockquote>`);
     } else if (t.startsWith("- ") || /^\d+\.\s/.test(t)) {
@@ -71,33 +73,193 @@ function inlineFormat(text: string): string {
 }
 
 /**
- * Reads knowledgeBaseData.ts and extracts a map of slug → { title, content }
- * using regex so we don't need to transpile TS at build time.
+ * Wraps extracted content in a crawlable static shell.
+ */
+function staticShell(breadcrumb: string, h1: string, bodyHtml: string): string {
+  return `<div id="root" data-ssr="true">
+  <main style="max-width:960px;margin:0 auto;padding:2rem 1.5rem 4rem;font-family:Lato,sans-serif;color:#1a1a2e">
+    <nav style="font-size:0.875rem;color:#888;margin-bottom:2rem">${breadcrumb}</nav>
+    <h1 style="font-size:2rem;font-weight:700;margin-bottom:1.5rem;line-height:1.3">${h1}</h1>
+    ${bodyHtml}
+  </main>
+</div>`;
+}
+
+/**
+ * Reads knowledgeBaseData.ts and extracts a map of slug → { title, content }.
  */
 function extractKBArticles(dataFilePath: string): Map<string, { title: string; content: string }> {
   const map = new Map<string, { title: string; content: string }>();
   try {
     const src = fs.readFileSync(dataFilePath, "utf-8");
-    // Match each article block between { id: and the next top-level }, or end
     const articleBlocks = src.matchAll(/\{\s*id:\s*"[^"]+",\s*slug:\s*"([^"]+)",\s*title:\s*"([^"]+)"[\s\S]*?(?=,\s*\{?\s*(?:\/\/|id:)|]\s*;)/g);
     for (const match of articleBlocks) {
       const slug = match[1];
       const title = match[2];
-      // Extract template literal content between backticks
       const contentMatch = match[0].match(/content:\s*`([\s\S]*?)`\s*,?\s*(?:relatedSlugs|}\s*,?\s*(?:\/\/|\{|$))/);
       if (contentMatch) {
         map.set(slug, { title, content: contentMatch[1] });
       }
     }
-  } catch {
-    // silently fail — no KB injection
-  }
+  } catch { /* silently fail */ }
   return map;
 }
 
 /**
- * Generates a static index.html per route with correct meta tags AND,
- * for KB article routes, injects the full article HTML into <div id="root">
+ * Reads blogDataFull.ts and extracts a map of slug → { title, excerpt, content }.
+ */
+function extractBlogArticles(dataFilePath: string): Map<string, { title: string; excerpt: string; content: string }> {
+  const map = new Map<string, { title: string; excerpt: string; content: string }>();
+  try {
+    const src = fs.readFileSync(dataFilePath, "utf-8");
+    // Split on top-level article objects
+    const slugMatches = [...src.matchAll(/slug:\s*"([^"]+)"/g)];
+    for (const sm of slugMatches) {
+      const slug = sm[1];
+      const offset = sm.index ?? 0;
+      const chunk = src.slice(offset, offset + 50000); // max 50k chars per article
+      const titleMatch = chunk.match(/title:\s*"([^"]+)"/);
+      const excerptMatch = chunk.match(/excerpt:\s*"([^"]+)"/);
+      const contentMatch = chunk.match(/content:\s*`([\s\S]*?)`\s*,?\s*(?:category:|majorCategory:|featuredImage:)/);
+      if (titleMatch && contentMatch) {
+        map.set(slug, {
+          title: titleMatch[1],
+          excerpt: excerptMatch?.[1] || "",
+          content: contentMatch[1],
+        });
+      }
+    }
+  } catch { /* silently fail */ }
+  return map;
+}
+
+/** Static content blocks for marketing/product pages */
+const marketingPageContent: Record<string, { h1: string; body: string }> = {
+  "/": {
+    h1: "Pzaz – Film Production Software for Indie Filmmakers",
+    body: `<p style="margin-bottom:1rem;line-height:1.7;color:#555">Pzaz is the all-in-one film production platform connecting your scripts, schedules, budgets, storyboards, and team inside one living production system — powered by AI.</p>
+<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem">One Ecosystem. Total Alignment.</h2>
+<p style="margin-bottom:1rem;line-height:1.7;color:#555">Pzaz keeps creative, operational and financial reality connected inside one living production system. Work with clarity, not chaos. Move fast without losing control. Stay aligned, even when plans change. Protect your margins with fewer surprises.</p>
+<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem">Products</h2>
+<ul style="margin-left:1.5rem;margin-bottom:1rem">
+  <li style="margin-bottom:0.5rem;list-style-type:disc">Pzaz Write – Screenwriting connected to your entire production</li>
+  <li style="margin-bottom:0.5rem;list-style-type:disc">Pzaz Visualise – Storyboarding inside your production platform</li>
+  <li style="margin-bottom:0.5rem;list-style-type:disc">Pzaz Breakdown – Scene & production breakdown</li>
+  <li style="margin-bottom:0.5rem;list-style-type:disc">Pzaz Shoot – Real-time on-set production command center</li>
+  <li style="margin-bottom:0.5rem;list-style-type:disc">Pzaz Sell – Film sales, distribution & marketing workspace</li>
+</ul>`,
+  },
+  "/script": {
+    h1: "Pzaz Script – AI-Powered Screenwriting",
+    body: `<p style="margin-bottom:1rem;line-height:1.7;color:#555">Write, format, and collaborate on scripts with Pzaz's AI-powered screenwriting tool. Industry-standard formatting, real-time collaboration, AI research, scene suggestions, and character tracking — all in one place.</p>
+<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem">Key Features</h2>
+<ul style="margin-left:1.5rem;margin-bottom:1rem">
+  <li style="margin-bottom:0.5rem;list-style-type:disc">Industry-standard script formatting with auto-completion</li>
+  <li style="margin-bottom:0.5rem;list-style-type:disc">Real-time collaboration with your writing team</li>
+  <li style="margin-bottom:0.5rem;list-style-type:disc">AI research assistant for instant script insights</li>
+  <li style="margin-bottom:0.5rem;list-style-type:disc">Import from Final Draft (.FDX) and export to PDF or FDX</li>
+  <li style="margin-bottom:0.5rem;list-style-type:disc">Scene syncing across breakdown, storyboard, and schedule</li>
+  <li style="margin-bottom:0.5rem;list-style-type:disc">Character tracking and scene suggestions powered by AI</li>
+</ul>`,
+  },
+  "/imagine": {
+    h1: "Pzaz Imagine – Moodboarding & Visual Planning",
+    body: `<p style="margin-bottom:1rem;line-height:1.7;color:#555">Build stunning moodboards and visual references for your film. Pzaz Imagine lets you collect images, create visual briefs, and align your entire team on the look and feel of your production before a single frame is shot.</p>
+<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem">Key Features</h2>
+<ul style="margin-left:1.5rem;margin-bottom:1rem">
+  <li style="margin-bottom:0.5rem;list-style-type:disc">Drag-and-drop visual moodboard builder</li>
+  <li style="margin-bottom:0.5rem;list-style-type:disc">Collect reference images from any source</li>
+  <li style="margin-bottom:0.5rem;list-style-type:disc">Share visual briefs with your director, DP, and production designer</li>
+  <li style="margin-bottom:0.5rem;list-style-type:disc">Organise by department, scene, or visual theme</li>
+</ul>`,
+  },
+  "/collaborate": {
+    h1: "Pzaz Collaborate – Real-Time Film Production Teamwork",
+    body: `<p style="margin-bottom:1rem;line-height:1.7;color:#555">Work with your entire production team in real time. Pzaz's collaboration tools keep scripts, schedules, shot lists, and budgets in sync so your team is always aligned — from pre-production to wrap.</p>
+<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem">Key Features</h2>
+<ul style="margin-left:1.5rem;margin-bottom:1rem">
+  <li style="margin-bottom:0.5rem;list-style-type:disc">Real-time multi-user editing across all production documents</li>
+  <li style="margin-bottom:0.5rem;list-style-type:disc">Threaded comments and @mentions on scripts and schedules</li>
+  <li style="margin-bottom:0.5rem;list-style-type:disc">Role-based permissions for crew and department heads</li>
+  <li style="margin-bottom:0.5rem;list-style-type:disc">Team chat and messaging inside your production workspace</li>
+</ul>`,
+  },
+  "/breakdown": {
+    h1: "Pzaz Breakdown – Scene & Production Breakdown",
+    body: `<p style="margin-bottom:1rem;line-height:1.7;color:#555">Break down your script into production-ready scene lists, shot lists, and schedules — all inside Pzaz. Automatically tag cast, locations, props, and equipment directly from your script.</p>
+<h2 style="font-size:1.5rem;font-weight:700;margin:2rem 0 1rem">Key Features</h2>
+<ul style="margin-left:1.5rem;margin-bottom:1rem">
+  <li style="margin-bottom:0.5rem;list-style-type:disc">Automated script breakdown with AI element tagging</li>
+  <li style="margin-bottom:0.5rem;list-style-type:disc">Scene-by-scene production schedule builder</li>
+  <li style="margin-bottom:0.5rem;list-style-type:disc">Stripboard for drag-and-drop shooting day planning</li>
+  <li style="margin-bottom:0.5rem;list-style-type:disc">Linked to budgets, call sheets, and storyboards</li>
+</ul>`,
+  },
+  "/write": {
+    h1: "Pzaz Write – Screenwriting Connected to Your Entire Film Production",
+    body: `<p style="margin-bottom:1rem;line-height:1.7;color:#555">Pzaz Write is the screenwriting tool built into your film production workflow. Industry-standard formatting, real-time collaboration, AI assistance, and scene-by-scene syncing across every part of your production.</p>`,
+  },
+  "/visualise": {
+    h1: "Pzaz Visualise – Storyboarding Inside Your Production Platform",
+    body: `<p style="margin-bottom:1rem;line-height:1.7;color:#555">Turn scripts into visual storyboards frame-by-frame with AI, real-time collaboration, and scene syncing. Pzaz Visualise brings storyboarding into your production workflow — not as a separate tool, but as a connected part of your living production system.</p>`,
+  },
+  "/shoot": {
+    h1: "Pzaz Shoot – Real-Time On-Set Production Command Center",
+    body: `<p style="margin-bottom:1rem;line-height:1.7;color:#555">Pzaz Shoot is your real-time command center for shoot days. Instant call sheet updates, live team alignment, script changes, and on-set collaboration — all in one place. Keep your crew informed, your schedule tight, and your production on track.</p>`,
+  },
+  "/sell": {
+    h1: "Pzaz Sell – Film Sales, Distribution & Marketing Workspace",
+    body: `<p style="margin-bottom:1rem;line-height:1.7;color:#555">Pzaz Sell is your mission control for film marketing, outreach, and distribution. Pitch your script, plan festivals, manage licensing, and deliver assets — all in one place.</p>`,
+  },
+  "/pzaz-project": {
+    h1: "Pzaz Project – Your Film Production Command Center",
+    body: `<p style="margin-bottom:1rem;line-height:1.7;color:#555">Pzaz Project unifies your entire film production into one connected workspace. Boards, Docs, Messaging, Drive, and Smart Inbox — all in one place. Free to start.</p>`,
+  },
+  "/pricing": {
+    h1: "Pricing – Plans for Every Filmmaker",
+    body: `<p style="margin-bottom:1rem;line-height:1.7;color:#555">Flexible pricing plans for indie filmmakers and production teams. Choose the tools you need — Script, Imagine, Collaborate, Breakdown, and more. Start for free — no credit card required.</p>`,
+  },
+  "/producer-blog": {
+    h1: "The Producer Blog – Filmmaking Insights, Interviews & Industry",
+    body: `<p style="margin-bottom:1rem;line-height:1.7;color:#555">Tips, guides, interviews, and insights for indie filmmakers and producers. Explore the Pzaz Producer Blog for film business school content, filmmaker interviews, how-tos, and production insights.</p>`,
+  },
+  "/knowledge-base": {
+    h1: "Knowledge Base – Help & Guides",
+    body: `<p style="margin-bottom:1rem;line-height:1.7;color:#555">Browse Pzaz's knowledge base for guides on getting started, tools & features, security, and account management. Find answers to your questions about using the Pzaz film production platform.</p>`,
+  },
+  "/about-us": {
+    h1: "About Us – The Story Behind Pzaz",
+    body: `<p style="margin-bottom:1rem;line-height:1.7;color:#555">Pzaz was built by a team of film lovers and creative professionals who experienced firsthand the fragmentation and chaos of modern film production. Our mission: give every filmmaker one connected platform that keeps creative vision, operational reality, and financial control in harmony.</p>`,
+  },
+  "/pzaz-vs-final-draft": {
+    h1: "Pzaz vs. Final Draft – The Complete Film Production Hub",
+    body: `<p style="margin-bottom:1rem;line-height:1.7;color:#555">Final Draft is a great screenwriting tool — but it stops at the script. Pzaz goes further with end-to-end production tools including storyboarding, scheduling, budgeting, real-time collaboration, AI writing assistance, and more. See how Pzaz outperforms Final Draft for modern production teams.</p>`,
+  },
+  "/culture": {
+    h1: "Culture – Life at Pzaz",
+    body: `<p style="margin-bottom:1rem;line-height:1.7;color:#555">Discover the values, principles, and culture that drive the team at Pzaz. We believe great film production software starts with a great team — one that's passionate about filmmaking, committed to craft, and relentless about making filmmakers' lives easier.</p>`,
+  },
+  "/sales-team": {
+    h1: "Work With Pzaz – Talk to Our Sales Team",
+    body: `<p style="margin-bottom:1rem;line-height:1.7;color:#555">Connect with the Pzaz sales team to find the right plan for your production company or film school. We offer tailored solutions for teams of all sizes — from indie filmmakers to large production houses.</p>`,
+  },
+  "/privacy": {
+    h1: "Privacy Policy",
+    body: `<p style="margin-bottom:1rem;line-height:1.7;color:#555">Read the Pzaz privacy policy to understand how we collect, use, and protect your personal data. Pzaz is committed to data security and user privacy across all of its film production tools and services.</p>`,
+  },
+  "/terms": {
+    h1: "Terms of Use",
+    body: `<p style="margin-bottom:1rem;line-height:1.7;color:#555">Review the Pzaz terms of use governing your access to and use of the Pzaz film production platform and all associated services.</p>`,
+  },
+  "/brand": {
+    h1: "Brand Assets – Pzaz Media Kit",
+    body: `<p style="margin-bottom:1rem;line-height:1.7;color:#555">Download official Pzaz logos, brand colours, typography guidelines, and media assets for press and partner use. Our brand kit ensures consistent representation of the Pzaz identity across all channels.</p>`,
+  },
+};
+
+/**
+ * Generates a static index.html per route with correct meta tags AND
+ * injects full article/page HTML into <div id="root"> for all content pages
  * so crawlers can read content without executing JS.
  */
 function prerenderMetaPlugin(routes: RouteSEO[]): Plugin {
@@ -110,9 +272,11 @@ function prerenderMetaPlugin(routes: RouteSEO[]): Plugin {
 
       const template = fs.readFileSync(templatePath, "utf-8");
 
-      // Load KB article data for content injection
+      // Load article data for content injection
       const kbDataPath = path.resolve(__dirname, "src/data/knowledgeBaseData.ts");
+      const blogDataPath = path.resolve(__dirname, "src/data/blogDataFull.ts");
       const kbArticles = extractKBArticles(kbDataPath);
+      const blogArticles = extractBlogArticles(blogDataPath);
 
       for (const route of routes) {
         let html = template
@@ -124,28 +288,48 @@ function prerenderMetaPlugin(routes: RouteSEO[]): Plugin {
           .replace(/<meta property="og:image" content="[^"]*" \/>/, `<meta property="og:image" content="${route.image || `${SITE_URL}/og-image.png`}" />`)
           .replace(/<meta name="twitter:image" content="[^"]*" \/>/, `<meta name="twitter:image" content="${route.image || `${SITE_URL}/og-image.png`}" />`);
 
-        // For KB article routes, inject static HTML content into <div id="root">
+        let injectedContent: string | null = null;
+
+        // KB article routes
         const kbSlugMatch = route.path.match(/^\/knowledge-base\/(.+)$/);
         if (kbSlugMatch) {
           const slug = kbSlugMatch[1];
           const article = kbArticles.get(slug);
           if (article) {
-            const articleHtml = `
-<div id="root" data-ssr="true">
-  <main style="max-width:900px;margin:0 auto;padding:2rem 1.5rem 4rem;font-family:Lato,sans-serif">
-    <nav style="font-size:0.875rem;color:#888;margin-bottom:2rem">
-      <a href="/" style="color:#888">Home</a> &rsaquo;
-      <a href="/knowledge-base" style="color:#888">Knowledge Base</a> &rsaquo;
-      <span style="color:#222">${article.title}</span>
-    </nav>
-    <article>
-      <h1 style="font-size:2rem;font-weight:700;margin-bottom:2rem;line-height:1.3;color:#1a1a2e">${article.title}</h1>
-      <div>${markdownToHtml(article.content)}</div>
-    </article>
-  </main>
-</div>`;
-            html = html.replace('<div id="root"></div>', articleHtml);
+            injectedContent = staticShell(
+              `<a href="/" style="color:#888">Home</a> &rsaquo; <a href="/knowledge-base" style="color:#888">Knowledge Base</a> &rsaquo; <span style="color:#222">${article.title}</span>`,
+              article.title,
+              `<div>${markdownToHtml(article.content)}</div>`
+            );
           }
+        }
+
+        // Blog article routes
+        const blogSlugMatch = route.path.match(/^\/producer-blog\/(.+)$/);
+        if (blogSlugMatch) {
+          const slug = blogSlugMatch[1];
+          const article = blogArticles.get(slug);
+          if (article) {
+            injectedContent = staticShell(
+              `<a href="/" style="color:#888">Home</a> &rsaquo; <a href="/producer-blog" style="color:#888">Producer Blog</a> &rsaquo; <span style="color:#222">${article.title}</span>`,
+              article.title,
+              `${article.excerpt ? `<p style="font-size:1.1rem;color:#666;margin-bottom:1.5rem;font-style:italic">${article.excerpt}</p>` : ""}<div>${markdownToHtml(article.content)}</div>`
+            );
+          }
+        }
+
+        // Marketing / product / home pages
+        if (!injectedContent && marketingPageContent[route.path]) {
+          const page = marketingPageContent[route.path];
+          injectedContent = staticShell(
+            `<a href="/" style="color:#888">Home</a>${route.path !== "/" ? ` &rsaquo; <span style="color:#222">${page.h1}</span>` : ""}`,
+            page.h1,
+            page.body
+          );
+        }
+
+        if (injectedContent) {
+          html = html.replace('<div id="root"></div>', injectedContent);
         }
 
         // Write to dist/<route>/index.html
