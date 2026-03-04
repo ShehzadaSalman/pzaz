@@ -70,7 +70,7 @@ const SolutionSection = () => {
               </>
             }
             titleClassName="mb-0 text-balance"
-            description="Pzaz keeps your film together. Not three apps. Not ten tools. One live environment where script, schedule, budget, storyboard, and team stay in sync."
+            description="Pzaz keeps creative, operational and financial reality connected inside one living production system."
             descriptionClassName="text-center"
           />
         </motion.div>
