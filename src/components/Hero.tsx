@@ -105,7 +105,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.15, ease: [0.4, 0, 0.2, 1] }}
             className="font-lato text-lg md:text-xl leading-relaxed text-muted-foreground text-center max-w-3xl mx-auto mb-10"
           >
-            Pzaz is the real-time collaboration system for film, TV, animation and video, where your story, plan, costs, timeline, and crew stay in sync from first draft to final delivery.
+            Pzaz keeps your story, plan, budget, timeline and team in sync from first draft to final delivery. When one detail changes, everything updates.
           </motion.p>
 
           {/* CTAs */}
