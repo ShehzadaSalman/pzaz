@@ -99,6 +99,18 @@ const ProductsSection = () => {
           ))}
         </div>
 
+        {/* Feature cards description */}
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="font-lato font-normal text-[20px] text-[#878787] text-center max-w-3xl mx-auto mt-8 mb-[60px] leading-relaxed"
+        >
+          Whether you're running a feature film or managing multiple client productions, alignment is not optional.{" "}
+          Pzaz is built for teams who need coordination at production scale.
+        </motion.p>
+
         {/* Subtitle */}
         <motion.p
           initial={{ opacity: 0, y: 10 }}
