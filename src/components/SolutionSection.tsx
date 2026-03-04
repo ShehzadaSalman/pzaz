@@ -10,6 +10,8 @@ import cardIconTeam from "@/assets/card-icon-team.svg";
 import solutionCardTeam from "@/assets/solution-card-team.png";
 import cardIconFast from "@/assets/card-icon-fast.svg";
 import solutionCardFast from "@/assets/solution-card-fast.png";
+import cardIconAligned from "@/assets/card-icon-aligned.svg";
+import solutionCardAligned from "@/assets/solution-card-aligned.png";
 
 const SolutionSection = () => {
   return (
@@ -65,9 +67,9 @@ const SolutionSection = () => {
               hideArrow={true}
             />
             <SolutionCard
-              icon={cardIconFast}
-              trigger={"Move fast without\nlosing control."}
-              image={solutionCardFast}
+              icon={cardIconAligned}
+              trigger={"Stay aligned, even when\nplans change."}
+              image={solutionCardAligned}
               index={1}
               hideArrow={true}
             />
