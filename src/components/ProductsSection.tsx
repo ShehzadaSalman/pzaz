@@ -120,8 +120,18 @@ const ProductsSection = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="flex justify-center mb-[60px]"
         >
-          <Button variant="outline" className="font-lato font-black text-[20px] border-2 border-primary text-primary rounded-full px-8 py-6 hover:bg-primary hover:text-white transition-all duration-300 flex items-center gap-3 group">
-            <img src={ctaPlayIcon} alt="Play" className="w-5 h-5 group-hover:[filter:brightness(0)_invert(1)]" />
+          <Button
+            variant="outline"
+            size="lg"
+            className="group px-8 font-lato font-black text-xl leading-[25px] text-primary hover:text-primary-foreground"
+            prefixIcon={
+              <img
+                src={ctaPlayIcon}
+                alt=""
+                className="w-5 h-5 transition-all group-hover:[filter:brightness(0)_invert(1)]"
+              />
+            }
+          >
             Watch Video
           </Button>
         </motion.div>
