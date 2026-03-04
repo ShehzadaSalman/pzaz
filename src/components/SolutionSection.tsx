@@ -63,9 +63,9 @@ const SolutionSection = () => {
             pillClassName="bg-primary/10 text-primary mb-0"
             title={
               <>
-                One connected{" "}
+                One Ecosystem.{" "}
                 <span className="font-lato font-extrabold md:text-[48px] tracking-normal text-transparent bg-clip-text bg-gradient-to-l from-[#409DFF] to-[#3207BC]">
-                  production system.
+                  Total Alignment.
                 </span>
               </>
             }
