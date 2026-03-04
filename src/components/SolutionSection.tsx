@@ -33,10 +33,11 @@ const benefits = [
     hideArrow: true,
   },
   {
-    trigger: "Share with your team",
-    result: "everyone works from the same version, live.",
+    trigger: "Protect your margins\nwith fewer surprises.",
+    result: "",
     icon: cardIconTeam,
     image: solutionCardTeam,
+    hideArrow: true,
   },
 ];
 
