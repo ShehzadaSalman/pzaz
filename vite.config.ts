@@ -34,8 +34,71 @@ interface RouteSEO {
 }
 
 /**
- * Generates a static index.html per route with correct <title>, OG, and Twitter meta tags
- * so that crawlers and social-sharing bots receive proper metadata without executing JS.
+ * Converts KB markdown content to plain HTML for static injection.
+ * Handles ##, ###, >, -, **bold**, *italic*, [link](url)
+ */
+function markdownToHtml(content: string): string {
+  const lines = content.trim().split("\n");
+  const htmlLines: string[] = [];
+
+  for (const line of lines) {
+    const t = line.trim();
+    if (!t) continue;
+
+    if (t.startsWith("### ")) {
+      htmlLines.push(`<h3 style="font-size:1.2rem;font-weight:600;margin:2rem 0 0.75rem">${t.slice(4)}</h3>`);
+    } else if (t.startsWith("## ")) {
+      htmlLines.push(`<h2 style="font-size:1.5rem;font-weight:700;margin:2.5rem 0 1rem">${t.slice(3)}</h2>`);
+    } else if (t.startsWith("> ")) {
+      htmlLines.push(`<blockquote style="border-left:4px solid #5C28A4;padding:0.5rem 1rem;margin:1.5rem 0;font-style:italic;color:#666">${t.slice(2)}</blockquote>`);
+    } else if (t.startsWith("- ") || /^\d+\.\s/.test(t)) {
+      const text = t.replace(/^-\s/, "").replace(/^\d+\.\s/, "");
+      const formatted = inlineFormat(text);
+      htmlLines.push(`<li style="margin-left:1.5rem;margin-bottom:0.375rem;list-style-type:disc">${formatted}</li>`);
+    } else {
+      htmlLines.push(`<p style="margin-bottom:1rem;line-height:1.7;color:#555">${inlineFormat(t)}</p>`);
+    }
+  }
+
+  return htmlLines.join("\n");
+}
+
+function inlineFormat(text: string): string {
+  return text
+    .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+    .replace(/\*(.*?)\*/g, "<em>$1</em>")
+    .replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g, '<a href="$2" style="color:#5C28A4;text-decoration:underline">$1</a>');
+}
+
+/**
+ * Reads knowledgeBaseData.ts and extracts a map of slug → { title, content }
+ * using regex so we don't need to transpile TS at build time.
+ */
+function extractKBArticles(dataFilePath: string): Map<string, { title: string; content: string }> {
+  const map = new Map<string, { title: string; content: string }>();
+  try {
+    const src = fs.readFileSync(dataFilePath, "utf-8");
+    // Match each article block between { id: and the next top-level }, or end
+    const articleBlocks = src.matchAll(/\{\s*id:\s*"[^"]+",\s*slug:\s*"([^"]+)",\s*title:\s*"([^"]+)"[\s\S]*?(?=,\s*\{?\s*(?:\/\/|id:)|]\s*;)/g);
+    for (const match of articleBlocks) {
+      const slug = match[1];
+      const title = match[2];
+      // Extract template literal content between backticks
+      const contentMatch = match[0].match(/content:\s*`([\s\S]*?)`\s*,?\s*(?:relatedSlugs|}\s*,?\s*(?:\/\/|\{|$))/);
+      if (contentMatch) {
+        map.set(slug, { title, content: contentMatch[1] });
+      }
+    }
+  } catch {
+    // silently fail — no KB injection
+  }
+  return map;
+}
+
+/**
+ * Generates a static index.html per route with correct meta tags AND,
+ * for KB article routes, injects the full article HTML into <div id="root">
+ * so crawlers can read content without executing JS.
  */
 function prerenderMetaPlugin(routes: RouteSEO[]): Plugin {
   return {
@@ -47,36 +110,43 @@ function prerenderMetaPlugin(routes: RouteSEO[]): Plugin {
 
       const template = fs.readFileSync(templatePath, "utf-8");
 
+      // Load KB article data for content injection
+      const kbDataPath = path.resolve(__dirname, "src/data/knowledgeBaseData.ts");
+      const kbArticles = extractKBArticles(kbDataPath);
+
       for (const route of routes) {
-        const html = template
-          .replace(
-            /<title>[^<]*<\/title>/,
-            `<title>${route.title}</title>`
-          )
-          .replace(
-            /<meta name="description" content="[^"]*" \/>/,
-            `<meta name="description" content="${route.description}" />`
-          )
-          .replace(
-            /<link rel="canonical" href="[^"]*" \/>/,
-            `<link rel="canonical" href="${route.canonical || `${SITE_URL}${route.path}/`}" />`
-          )
-          .replace(
-            /<meta property="og:title" content="[^"]*" \/>/,
-            `<meta property="og:title" content="${route.title}" />`
-          )
-          .replace(
-            /<meta property="og:description" content="[^"]*" \/>/,
-            `<meta property="og:description" content="${route.description}" />`
-          )
-          .replace(
-            /<meta property="og:image" content="[^"]*" \/>/,
-            `<meta property="og:image" content="${route.image || `${SITE_URL}/og-image.png`}" />`
-          )
-          .replace(
-            /<meta name="twitter:image" content="[^"]*" \/>/,
-            `<meta name="twitter:image" content="${route.image || `${SITE_URL}/og-image.png`}" />`
-          );
+        let html = template
+          .replace(/<title>[^<]*<\/title>/, `<title>${route.title}</title>`)
+          .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${route.description}" />`)
+          .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${route.canonical || `${SITE_URL}${route.path}/`}" />`)
+          .replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${route.title}" />`)
+          .replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${route.description}" />`)
+          .replace(/<meta property="og:image" content="[^"]*" \/>/, `<meta property="og:image" content="${route.image || `${SITE_URL}/og-image.png`}" />`)
+          .replace(/<meta name="twitter:image" content="[^"]*" \/>/, `<meta name="twitter:image" content="${route.image || `${SITE_URL}/og-image.png`}" />`);
+
+        // For KB article routes, inject static HTML content into <div id="root">
+        const kbSlugMatch = route.path.match(/^\/knowledge-base\/(.+)$/);
+        if (kbSlugMatch) {
+          const slug = kbSlugMatch[1];
+          const article = kbArticles.get(slug);
+          if (article) {
+            const articleHtml = `
+<div id="root" data-ssr="true">
+  <main style="max-width:900px;margin:0 auto;padding:2rem 1.5rem 4rem;font-family:Lato,sans-serif">
+    <nav style="font-size:0.875rem;color:#888;margin-bottom:2rem">
+      <a href="/" style="color:#888">Home</a> &rsaquo;
+      <a href="/knowledge-base" style="color:#888">Knowledge Base</a> &rsaquo;
+      <span style="color:#222">${article.title}</span>
+    </nav>
+    <article>
+      <h1 style="font-size:2rem;font-weight:700;margin-bottom:2rem;line-height:1.3;color:#1a1a2e">${article.title}</h1>
+      <div>${markdownToHtml(article.content)}</div>
+    </article>
+  </main>
+</div>`;
+            html = html.replace('<div id="root"></div>', articleHtml);
+          }
+        }
 
         // Write to dist/<route>/index.html
         const routeDir = path.join(distDir, route.path);
