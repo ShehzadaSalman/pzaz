@@ -134,6 +134,9 @@ const ProductsSection = () => {
           >
             Watch Video
           </Button>
+          <p className="font-lato font-normal text-[16px] leading-[30px] text-center text-[#878787] mt-2">
+            No credit card. Up and running in 15 minutes.
+          </p>
         </motion.div>
 
         {/* Subtitle */}
