@@ -87,18 +87,6 @@ const ProblemSection = () => {
 
           </motion.div>
 
-          {/* Key insight */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-center"
-          >
-            <p className="text-xl text-muted-foreground italic">
-              Changes break productions. <span className="text-foreground font-semibold not-italic"> Pzaz keeps it together.</span>
-            </p>
-          </motion.div>
         </div>
       </div>
     </section>
