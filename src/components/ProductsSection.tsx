@@ -53,14 +53,14 @@ const ProductsSection = () => {
             pillClassName="bg-white text-primary mb-0"
             title={
               <>
-                Built for filmmakers who{" "}
-                <span className="font-lato font-extrabold md:text-[48px] tracking-normal gradient-text">
-                  actually finish films.
+                Built for teams who{" "}
+                <span className="font-lato font-extrabold md:text-[48px] tracking-normal bg-clip-text text-transparent bg-gradient-to-r from-[#409DFF] to-[#3207BC]">
+                  deliver under pressure.
                 </span>
               </>
             }
             titleClassName="text-balance"
-            description="Pzaz is made for filmmaker entrepreneurs, directors, producers, and teams who understand that making a film isn't just about creativity — it's about execution."
+            description="Pzaz is built for production teams who know that great ideas are not enough."
             descriptionClassName="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed"
           />
         </motion.div>
