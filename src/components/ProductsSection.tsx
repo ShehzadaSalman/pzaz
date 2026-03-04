@@ -14,12 +14,12 @@ import featureIcon5 from "@/assets/feature-icon-5.svg";
 import featureIcon6 from "@/assets/feature-icon-6.svg";
 
 const featureCards = [
-  { icon: featureIcon1, label: "Script Writing" },
-  { icon: featureIcon2, label: "Production Scheduling" },
-  { icon: featureIcon3, label: "Team Collaboration" },
-  { icon: featureIcon4, label: "Creative Clarity" },
-  { icon: featureIcon5, label: "Fast Turnarounds" },
-  { icon: featureIcon6, label: "Stay Aligned" },
+  { icon: featureIcon3, label: "Feature films" },
+  { icon: featureIcon2, label: "Episodic television" },
+  { icon: featureIcon4, label: "Animation and VFX productions" },
+  { icon: featureIcon3, label: "Commercial and branded campaigns" },
+  { icon: featureIcon5, label: "Digital-first and vertical series" },
+  { icon: featureIcon1, label: "And more..." },
 ];
 
 const products = [
