@@ -118,12 +118,12 @@ const ProductsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="flex justify-center mb-[60px]"
+          className="flex flex-col items-center gap-1 mb-[60px]"
         >
           <Button
             variant="outline"
             size="lg"
-            className="group px-8 font-lato font-black text-xl leading-[25px] text-primary hover:text-primary-foreground rounded-none"
+            className="group px-8 font-lato font-black text-xl leading-[25px] text-primary hover:text-primary-foreground rounded-[10px]"
             prefixIcon={
               <img
                 src={ctaPlayIcon}
@@ -134,7 +134,7 @@ const ProductsSection = () => {
           >
             Watch Video
           </Button>
-          <p className="font-lato font-normal text-[16px] leading-[30px] text-center text-[#878787] mt-2">
+          <p className="font-lato font-normal text-[16px] leading-[30px] text-center text-[#878787]">
             No credit card. Up and running in 15 minutes.
           </p>
         </motion.div>
