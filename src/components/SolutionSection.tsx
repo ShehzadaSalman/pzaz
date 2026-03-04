@@ -2,8 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import SolutionCard from "@/components/SolutionCard";
 import SectionHeader from "@/components/SectionHeader";
-import cardIconScript from "@/assets/card-icon-script.svg";
-import solutionCardPreview from "@/assets/solution-card-preview.png";
+import cardIconClarity from "@/assets/card-icon-clarity.svg";
+import solutionCardClarity from "@/assets/solution-card-clarity.png";
 import cardIconSchedule from "@/assets/card-icon-schedule.svg";
 import solutionCardSchedule from "@/assets/solution-card-schedule.png";
 import cardIconBudget from "@/assets/card-icon-budget.svg";
@@ -13,10 +13,11 @@ import solutionCardTeam from "@/assets/solution-card-team.png";
 
 const benefits = [
   {
-    trigger: "Write a scene",
-    result: "the breakdown updates.",
-    icon: cardIconScript,
-    image: solutionCardPreview,
+    trigger: "Work with clarity, not chaos.",
+    result: "",
+    icon: cardIconClarity,
+    image: solutionCardClarity,
+    hideArrow: true,
   },
   {
     trigger: "Adjust a scene",
@@ -91,6 +92,7 @@ const SolutionSection = () => {
               result={benefit.result}
               image={benefit.image}
               index={index}
+              hideArrow={'hideArrow' in benefit ? benefit.hideArrow : false}
             />
           ))}
         </motion.div>

@@ -5,12 +5,13 @@ import { ArrowRight } from "lucide-react";
 interface SolutionCardProps {
   icon: string;
   trigger: string;
-  result: string;
+  result?: string;
   image: string;
   index?: number;
+  hideArrow?: boolean;
 }
 
-const SolutionCard: React.FC<SolutionCardProps> = ({ icon, trigger, result, image, index = 0 }) => {
+const SolutionCard: React.FC<SolutionCardProps> = ({ icon, trigger, result, image, index = 0, hideArrow = false }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -25,10 +26,12 @@ const SolutionCard: React.FC<SolutionCardProps> = ({ icon, trigger, result, imag
         <span className="font-lato font-bold text-[20px] leading-[23px] text-foreground flex-shrink-0">
           {trigger}
         </span>
-        <ArrowRight className="w-5 h-5 hidden md:block text-[#5C28A3] flex-shrink-0" />
-        <span className="font-lato pl-12 md:pl-0  font-normal text-[20px] leading-[23px] text-[#878787]">
-          {result}
-        </span>
+        {!hideArrow && <ArrowRight className="w-5 h-5 hidden md:block text-[#5C28A3] flex-shrink-0" />}
+        {!hideArrow && result && (
+          <span className="font-lato pl-12 md:pl-0 font-normal text-[20px] leading-[23px] text-[#878787]">
+            {result}
+          </span>
+        )}
       </div>
 
       {/* Preview image - bottom aligned */}
