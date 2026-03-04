@@ -31,11 +31,67 @@ interface RouteSEO {
   description: string;
   image?: string;
   canonical?: string;
+  bodyContent?: string;
 }
 
 /**
- * Generates a static index.html per route with correct <title>, OG, and Twitter meta tags
- * so that crawlers and social-sharing bots receive proper metadata without executing JS.
+ * Converts a markdown string to safe HTML for SSG injection.
+ * Handles headings, paragraphs, lists, bold, italic, links, blockquotes.
+ */
+function markdownToHtml(md: string): string {
+  const escape = (s: string) =>
+    s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
+  const inlineFormat = (s: string) =>
+    s
+      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, text, href) => `<a href="${escape(href)}">${escape(text)}</a>`)
+      .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+      .replace(/\*(.+?)\*/g, "<em>$1</em>")
+      .replace(/__(.+?)__/g, "<strong>$1</strong>")
+      .replace(/_(.+?)_/g, "<em>$1</em>");
+
+  const lines = md.split("\n");
+  const html: string[] = [];
+  let inList = false;
+  let inBlockquote = false;
+
+  const closeList = () => { if (inList) { html.push("</ul>"); inList = false; } };
+  const closeBlockquote = () => { if (inBlockquote) { html.push("</blockquote>"); inBlockquote = false; } };
+
+  for (const raw of lines) {
+    const line = raw.trimEnd();
+
+    if (line.startsWith("### ")) {
+      closeList(); closeBlockquote();
+      html.push(`<h3>${inlineFormat(escape(line.slice(4)))}</h3>`);
+    } else if (line.startsWith("## ")) {
+      closeList(); closeBlockquote();
+      html.push(`<h2>${inlineFormat(escape(line.slice(3)))}</h2>`);
+    } else if (line.startsWith("# ")) {
+      closeList(); closeBlockquote();
+      html.push(`<h1>${inlineFormat(escape(line.slice(2)))}</h1>`);
+    } else if (line.startsWith("> ")) {
+      closeList();
+      if (!inBlockquote) { html.push("<blockquote>"); inBlockquote = true; }
+      html.push(`<p>${inlineFormat(escape(line.slice(2)))}</p>`);
+    } else if (/^[-*] /.test(line)) {
+      closeBlockquote();
+      if (!inList) { html.push("<ul>"); inList = true; }
+      html.push(`<li>${inlineFormat(escape(line.slice(2)))}</li>`);
+    } else if (line.trim() === "") {
+      closeList(); closeBlockquote();
+    } else {
+      closeList(); closeBlockquote();
+      html.push(`<p>${inlineFormat(escape(line))}</p>`);
+    }
+  }
+  closeList(); closeBlockquote();
+  return html.join("\n");
+}
+
+/**
+ * Generates a static index.html per route with correct <title>, OG, Twitter meta tags,
+ * and pre-rendered body content for crawlers.
  */
 function prerenderMetaPlugin(routes: RouteSEO[]): Plugin {
   return {
@@ -48,7 +104,7 @@ function prerenderMetaPlugin(routes: RouteSEO[]): Plugin {
       const template = fs.readFileSync(templatePath, "utf-8");
 
       for (const route of routes) {
-        const html = template
+        let html = template
           .replace(
             /<title>[^<]*<\/title>/,
             `<title>${route.title}</title>`
@@ -77,6 +133,14 @@ function prerenderMetaPlugin(routes: RouteSEO[]): Plugin {
             /<meta name="twitter:image" content="[^"]*" \/>/,
             `<meta name="twitter:image" content="${route.image || `${SITE_URL}/og-image.png`}" />`
           );
+
+        // Inject pre-rendered body content for article pages
+        if (route.bodyContent) {
+          html = html.replace(
+            /<div id="root"><\/div>/,
+            `<div id="root" data-ssr="true"><article class="ssr-content">${route.bodyContent}</article></div>`
+          );
+        }
 
         // Write to dist/<route>/index.html
         const routeDir = path.join(distDir, route.path);
@@ -428,23 +492,68 @@ const staticSEORoutes: RouteSEO[] = [
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  // Dynamically collect blog slugs and SEO data
+  // ── Knowledge Base articles: parse content at build time ──────────────────
+  let kbSEORoutes: RouteSEO[] = [];
+  try {
+    const kbFile = fs.readFileSync(
+      path.resolve(__dirname, "src/data/knowledgeBaseData.ts"),
+      "utf-8"
+    );
+    // Extract each article block between { id: "..." ... } entries
+    const articleBlocks = kbFile.matchAll(/\{\s*id:\s*"[^"]+",\s*slug:\s*"([^"]+)"([\s\S]*?)(?=,\s*\{?\s*\/\/|,?\s*\];|,\s*\{\s*id:)/g);
+    for (const match of articleBlocks) {
+      const slug = match[1];
+      const block = match[0];
+      // Extract title
+      const title = block.match(/title:\s*"([^"]+)"/)?.[1] || slug;
+      // Extract content between backticks
+      const contentMatch = block.match(/content:\s*`([\s\S]*?)`/);
+      const rawContent = contentMatch?.[1] || "";
+      const bodyContent = rawContent.trim()
+        ? `<h1>${title}</h1>\n${markdownToHtml(rawContent)}`
+        : "";
+
+      // Find matching SEO route to merge
+      const existingIdx = staticSEORoutes.findIndex(r => r.path === `/knowledge-base/${slug}`);
+      if (existingIdx >= 0) {
+        kbSEORoutes.push({ ...staticSEORoutes[existingIdx], bodyContent: bodyContent || undefined });
+      }
+    }
+  } catch {
+    // fallback: no KB body content
+  }
+
+  // Merge KB body content into staticSEORoutes
+  const mergedStaticSEORoutes = staticSEORoutes.map(route => {
+    const withContent = kbSEORoutes.find(r => r.path === route.path);
+    return withContent || route;
+  });
+
+  // ── Blog articles: parse content + SEO at build time ──────────────────────
   let blogRoutes: string[] = [];
   let blogSEORoutes: RouteSEO[] = [];
   try {
+    // Use blogData.ts for slug list + SEO metadata
     const dataFileContent = fs.readFileSync(
       path.resolve(__dirname, "src/data/blogData.ts"),
       "utf-8"
     );
+    // Use blogDataFull.ts for article body content
+    const fullDataContent = fs.readFileSync(
+      path.resolve(__dirname, "src/data/blogDataFull.ts"),
+      "utf-8"
+    );
+
     const slugMatches = dataFileContent.matchAll(/slug:\s*"([^"]+)"/g);
     for (const m of slugMatches) {
       const slug = m[1];
       const routePath = `/producer-blog/${slug}`;
       blogRoutes.push(routePath);
 
-      // Extract SEO fields via regex from the data file
+      // Extract SEO fields from blogData.ts
+      const escapedSlug = slug.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
       const postBlock = dataFileContent.match(
-        new RegExp(`slug:\\s*"${slug.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}"[\\s\\S]*?(?=\\{\\s*id:|$)`)
+        new RegExp(`slug:\\s*"${escapedSlug}"[\\s\\S]*?(?=\\{\\s*id:|$)`)
       )?.[0] || "";
 
       const seoTitle = postBlock.match(/seo:\s*\{[^}]*?title:\s*"([^"]+)"/)?.[1];
@@ -455,12 +564,24 @@ export default defineConfig(({ mode }) => {
       const excerpt = postBlock.match(/excerpt:\s*"([^"]+)"/)?.[1];
       const canonical = postBlock.match(/canonical:\s*"([^"]+)"/)?.[1];
 
+      // Extract full article content from blogDataFull.ts
+      const fullPostBlock = fullDataContent.match(
+        new RegExp(`slug:\\s*"${escapedSlug}"[\\s\\S]*?(?=,\\s*\\{\\s*id:|\\s*\\];)`)
+      )?.[0] || "";
+      const contentMatch = fullPostBlock.match(/content:\s*`([\s\S]*?)`/);
+      const rawContent = contentMatch?.[1]?.trim() || "";
+      const articleTitle = seoTitle?.replace(/ \| Pzaz$/, "") || title || slug;
+      const bodyContent = rawContent
+        ? `<h1>${articleTitle}</h1>\n${markdownToHtml(rawContent)}`
+        : undefined;
+
       blogSEORoutes.push({
         path: routePath,
         title: seoTitle || (title ? `${title} | Pzaz` : "Pzaz – Film Production Software"),
         description: seoDesc || excerpt || "Pzaz is the all-in-one film production platform for indie filmmakers.",
         image: seoOgImage || (featuredImage !== "/placeholder.svg" ? featuredImage : undefined),
         canonical,
+        bodyContent,
       });
     }
   } catch {
@@ -468,7 +589,7 @@ export default defineConfig(({ mode }) => {
   }
 
   const allRoutes = [...staticRoutes, ...blogRoutes];
-  const allSEORoutes = [...staticSEORoutes, ...blogSEORoutes];
+  const allSEORoutes = [...mergedStaticSEORoutes, ...blogSEORoutes];
 
   return {
     server: {
