@@ -61,14 +61,14 @@ const SolutionSection = () => {
           <div className="flex flex-row gap-[22px] h-full">
             <SolutionCard
               icon={cardIconFast}
-              trigger={"Move fast without\nlosing control."}
+              trigger={"Move fast\nwithout\nlosing control."}
               image={solutionCardFast}
               index={1}
               hideArrow={true}
             />
             <SolutionCard
               icon={cardIconAligned}
-              trigger={"Stay aligned, even when\nplans change."}
+              trigger={"Stay aligned,\neven when\nplans change."}
               image={solutionCardAligned}
               index={1}
               hideArrow={true}
