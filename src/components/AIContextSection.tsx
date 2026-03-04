@@ -45,6 +45,17 @@ const AIContextSection = () => {
         >
           <img src={aiContextIllustration} alt="AI context illustration" className="w-full max-w-3xl h-auto" />
         </motion.div>
+
+        {/* Caption below illustration */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="font-lato font-normal text-[20px] leading-[30px] text-[#878787] text-center mt-8"
+        >
+          You're in control while AI assist. The production stays aligned.
+        </motion.p>
       </div>
     </section>
   );
