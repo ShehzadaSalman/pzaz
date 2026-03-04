@@ -14,6 +14,7 @@ import featureIcon5 from "@/assets/feature-icon-5.svg";
 import featureIcon6 from "@/assets/feature-icon-6.svg";
 import featureIcon7 from "@/assets/feature-icon-7.svg";
 import featureIcon8 from "@/assets/feature-icon-8.svg";
+import ctaPlayIcon from "@/assets/cta-play-icon.svg";
 
 const featureCards = [
   { icon: featureIcon7, label: "Feature films" },
@@ -105,11 +106,25 @@ const ProductsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="font-lato font-normal text-[20px] text-[#878787] text-center max-w-3xl mx-auto mt-8 mb-[60px] leading-relaxed"
+          className="font-lato font-normal text-[20px] text-[#878787] text-center max-w-3xl mx-auto mt-8 mb-8 leading-relaxed"
         >
           Whether you're running a feature film or managing multiple client productions, alignment is not optional.{" "}
           Pzaz is built for teams who need coordination at production scale.
         </motion.p>
+
+        {/* Watch Video button */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="flex justify-center mb-[60px]"
+        >
+          <Button variant="outline" className="font-lato font-black text-[20px] border-2 border-primary text-primary rounded-full px-8 py-6 hover:bg-primary hover:text-white transition-all duration-300 flex items-center gap-3 group">
+            <img src={ctaPlayIcon} alt="Play" className="w-5 h-5 group-hover:[filter:brightness(0)_invert(1)]" />
+            Watch Video
+          </Button>
+        </motion.div>
 
         {/* Subtitle */}
         <motion.p
