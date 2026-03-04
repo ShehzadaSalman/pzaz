@@ -7,6 +7,15 @@ import aiWorkflowPuzzle from "@/assets/ai-workflow-puzzle.png";
 import SectionHeader from "@/components/SectionHeader";
 
 const ProblemSection = () => {
+  const [isDesktop, setIsDesktop] = React.useState(false);
+  React.useEffect(() => {
+    const check = () => setIsDesktop(window.innerWidth >= 1024);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+  const overlayTranslate = isDesktop ? "translate(80px, 80px)" : "translate(50px, 50px)";
+
   return (
     <section className="section-padding bg-[#FBFBFB] relative overflow-hidden"> 
       <div className="container mx-auto px-6 relative z-10">
@@ -74,7 +83,7 @@ const ProblemSection = () => {
             {/* Fragmented tools illustration */}
             <div className="flex items-center justify-center -ml-[80px] relative">
               <img src={fragmentedTools} alt="Fragmented tools illustration" className="max-w-full h-auto" />
-              <img src={fragmentedToolsOverlay} alt="" className="absolute inset-0 w-full h-full object-contain pointer-events-none" style={{ transform: 'translate(100px, 100px)' }} />
+              <img src={fragmentedToolsOverlay} alt="" className="absolute inset-0 w-full h-full object-contain pointer-events-none" style={{ transform: overlayTranslate }} />
             </div>
 
           </motion.div>
