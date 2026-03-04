@@ -44,7 +44,7 @@ const SolutionSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid md:grid-cols-2 gap-[45px] max-w-6xl mx-auto mb-16 md:mb-[112px]"
+          className="grid md:grid-cols-2 gap-[45px] max-w-6xl mx-auto mb-16 md:mb-[112px] items-stretch"
         >
           {/* Card 1 */}
           <SolutionCard
@@ -56,9 +56,9 @@ const SolutionSection = () => {
           />
 
           {/* Slot 2: two smaller stacked cards */}
-          <div className="flex flex-col gap-[45px]">
-            <div className="rounded-2xl bg-[#F6FCFC] border border-[#E6D7F7] flex-1 min-h-[120px]" />
-            <div className="rounded-2xl bg-[#F6FCFC] border border-[#E6D7F7] flex-1 min-h-[120px]" />
+          <div className="flex flex-col gap-[45px] h-full">
+            <div className="rounded-2xl bg-[#F6FCFC] border border-[#E6D7F7] flex-1" />
+            <div className="rounded-2xl bg-[#F6FCFC] border border-[#E6D7F7] flex-1" />
           </div>
 
           {/* Card 3 */}
