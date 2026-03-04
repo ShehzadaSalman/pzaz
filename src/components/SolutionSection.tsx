@@ -8,6 +8,8 @@ import cardIconBudget from "@/assets/card-icon-budget.svg";
 import solutionCardBudget from "@/assets/solution-card-budget.png";
 import cardIconTeam from "@/assets/card-icon-team.svg";
 import solutionCardTeam from "@/assets/solution-card-team.png";
+import cardIconFast from "@/assets/card-icon-fast.svg";
+import solutionCardFast from "@/assets/solution-card-fast.png";
 
 const SolutionSection = () => {
   return (
@@ -44,9 +46,9 @@ const SolutionSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid md:grid-cols-2 gap-[45px] max-w-6xl mx-auto mb-16 md:mb-[112px] items-stretch"
+          className="grid md:grid-cols-2 gap-[45px] max-w-6xl mx-auto mb-16 md:mb-[112px]"
         >
-          {/* Card 1 */}
+          {/* Row 1: Card 1 + Card 2 */}
           <SolutionCard
             icon={cardIconClarity}
             trigger={"Work with clarity,\nnot chaos."}
@@ -54,14 +56,15 @@ const SolutionSection = () => {
             index={0}
             hideArrow={true}
           />
+          <SolutionCard
+            icon={cardIconFast}
+            trigger={"Move fast without\nlosing control."}
+            image={solutionCardFast}
+            index={1}
+            hideArrow={true}
+          />
 
-          {/* Slot 2: two smaller stacked cards */}
-          <div className="flex flex-col gap-[45px] h-full">
-            <div className="rounded-2xl bg-[#F6FCFC] border border-[#E6D7F7] flex-1" />
-            <div className="rounded-2xl bg-[#F6FCFC] border border-[#E6D7F7] flex-1" />
-          </div>
-
-          {/* Card 3 */}
+          {/* Row 2: Card 3 + Card 4 */}
           <SolutionCard
             icon={cardIconBudget}
             trigger={"Deliver without\nlast-minute panic."}
@@ -69,8 +72,6 @@ const SolutionSection = () => {
             index={2}
             hideArrow={true}
           />
-
-          {/* Card 4 */}
           <SolutionCard
             icon={cardIconTeam}
             trigger={"Protect your margins\nwith fewer surprises."}
