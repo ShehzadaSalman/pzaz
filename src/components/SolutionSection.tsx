@@ -4,54 +4,14 @@ import SolutionCard from "@/components/SolutionCard";
 import SectionHeader from "@/components/SectionHeader";
 import cardIconClarity from "@/assets/card-icon-clarity.svg";
 import solutionCardClarity from "@/assets/solution-card-clarity.png";
-import cardIconSchedule from "@/assets/card-icon-schedule.svg";
-import solutionCardSchedule from "@/assets/solution-card-schedule.png";
 import cardIconBudget from "@/assets/card-icon-budget.svg";
 import solutionCardBudget from "@/assets/solution-card-budget.png";
 import cardIconTeam from "@/assets/card-icon-team.svg";
 import solutionCardTeam from "@/assets/solution-card-team.png";
 
-const benefits = [
-  {
-    trigger: "Work with clarity,\nnot chaos.",
-    result: "",
-    icon: cardIconClarity,
-    image: solutionCardClarity,
-    hideArrow: true,
-  },
-  {
-    trigger: "Adjust a scene",
-    result: "schedules and budgets stay aligned.",
-    icon: cardIconSchedule,
-    image: solutionCardSchedule,
-  },
-  {
-    trigger: "Deliver without\nlast-minute panic.",
-    result: "",
-    icon: cardIconBudget,
-    image: solutionCardBudget,
-    hideArrow: true,
-  },
-  {
-    trigger: "Protect your margins\nwith fewer surprises.",
-    result: "",
-    icon: cardIconTeam,
-    image: solutionCardTeam,
-    hideArrow: true,
-  },
-];
-
-// const outcomes = [
-//   "Reduce mistakes before they happen.",
-//   "Cut handoffs between departments.",
-//   "Save time on every change.",
-//   "Avoid unnecessary costs.",
-// ];
-
 const SolutionSection = () => {
   return (
     <section id="features" className="section-padding relative overflow-hidden">
-      
       <div className="container mx-auto px-6 relative z-10">
         {/* Section header */}
         <motion.div
@@ -86,17 +46,38 @@ const SolutionSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="grid md:grid-cols-2 gap-[45px] max-w-6xl mx-auto mb-16 md:mb-[112px]"
         >
-          {benefits.map((benefit, index) => (
-            <SolutionCard
-              key={benefit.trigger}
-              icon={benefit.icon}
-              trigger={benefit.trigger}
-              result={benefit.result}
-              image={benefit.image}
-              index={index}
-              hideArrow={'hideArrow' in benefit ? benefit.hideArrow : false}
-            />
-          ))}
+          {/* Card 1 */}
+          <SolutionCard
+            icon={cardIconClarity}
+            trigger={"Work with clarity,\nnot chaos."}
+            image={solutionCardClarity}
+            index={0}
+            hideArrow={true}
+          />
+
+          {/* Slot 2: two smaller stacked cards */}
+          <div className="flex flex-col gap-[45px]">
+            <div className="rounded-2xl bg-[#F6FCFC] border border-[#E6D7F7] flex-1 min-h-[120px]" />
+            <div className="rounded-2xl bg-[#F6FCFC] border border-[#E6D7F7] flex-1 min-h-[120px]" />
+          </div>
+
+          {/* Card 3 */}
+          <SolutionCard
+            icon={cardIconBudget}
+            trigger={"Deliver without\nlast-minute panic."}
+            image={solutionCardBudget}
+            index={2}
+            hideArrow={true}
+          />
+
+          {/* Card 4 */}
+          <SolutionCard
+            icon={cardIconTeam}
+            trigger={"Protect your margins\nwith fewer surprises."}
+            image={solutionCardTeam}
+            index={3}
+            hideArrow={true}
+          />
         </motion.div>
 
         {/* Key insight */}
