@@ -6,6 +6,21 @@ import SectionHeader from "@/components/SectionHeader";
 import cardIconBudget from "@/assets/card-icon-budget-product.svg";
 import cardIconStoryboard from "@/assets/card-icon-storyboard.svg";
 import cardIconStudio from "@/assets/card-icon-studio.svg";
+import iconScript from "@/assets/script/icon-document.svg";
+import iconSchedule from "@/assets/card-icon-schedule.svg";
+import iconTeam from "@/assets/card-icon-team.svg";
+import iconClarity from "@/assets/card-icon-clarity.svg";
+import iconFast from "@/assets/card-icon-fast.svg";
+import iconAligned from "@/assets/card-icon-aligned.svg";
+
+const featureCards = [
+  { icon: iconScript, label: "Script Writing" },
+  { icon: iconSchedule, label: "Production Scheduling" },
+  { icon: iconTeam, label: "Team Collaboration" },
+  { icon: iconClarity, label: "Creative Clarity" },
+  { icon: iconFast, label: "Fast Turnarounds" },
+  { icon: iconAligned, label: "Stay Aligned" },
+];
 
 const products = [
   {
@@ -65,13 +80,30 @@ const ProductsSection = () => {
           />
         </motion.div>
 
+        {/* Feature cards grid */}
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-[37px] max-w-6xl mx-auto mb-[60px]">
+          {featureCards.map((card, index) => (
+            <motion.div
+              key={card.label}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.05 * index }}
+              className="flex items-center gap-[23px] bg-white border border-[#D4BAF4] rounded-[30px] px-[31px] py-[28px]"
+            >
+              <img src={card.icon} alt={card.label} className="w-[40px] h-[40px] shrink-0" />
+              <span className="font-lato font-bold text-[20px] leading-tight">{card.label}</span>
+            </motion.div>
+          ))}
+        </div>
+
         {/* Subtitle */}
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="font-lato font-bold mb-12  text-[24px] tracking-normal text-center md:mb-[74px]"
+          className="font-lato font-bold mb-12 text-[24px] tracking-normal text-center md:mb-[74px]"
         >
           Start with everything —{" "}
           <span className="font-lato font-normal italic text-[24px] tracking-normal text-[#878787]">
