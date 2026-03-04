@@ -93,9 +93,9 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-            className="font-lato font-extrabold text-4xl leading-[44px] md:text-[48px] md:leading-[56px] md:tracking-normal text-center mb-10 text-balance md:pt-[60px]"
+            className="font-lato font-extrabold text-center mb-10 text-balance md:pt-[60px]"
           >
-            <span className="text-foreground">Screen productions break down when teams lose alignment. </span><span className="bg-clip-text text-transparent" style={{backgroundImage: "linear-gradient(247.38deg, rgb(41, 250, 223) -2.17%, rgb(139, 29, 255) 84.87%)"}}>Screen productions don't break creatively. They fail operationally.</span>
+            <span className="text-foreground block text-[36px] leading-[44px] md:text-[48px] md:leading-[58px]">Great productions don't fail creatively. </span><span className="bg-clip-text text-transparent block text-[48px] leading-[56px] md:text-[64px] md:leading-[74px]" style={{backgroundImage: "linear-gradient(247.38deg, rgb(41, 250, 223) -2.17%, rgb(139, 29, 255) 84.87%)"}}>They fail when information goes missing.</span>
           </motion.h1>
 
           {/* Subheading */}
