@@ -115,39 +115,35 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6"
           >
-            <Link to="/pricing">
-              <Button size="lg" className="group px-8">
-                Start Free
-                <ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />
-              </Button>
-            </Link>
-            <a href="https://calendly.com/pzaz-tv/30min" target="_blank" rel="noopener noreferrer">
-              <Button
-                variant="outline"
-                size="lg"
-                className="group px-8 font-lato font-black text-xl leading-[25px] text-primary hover:text-primary-foreground"
-                prefixIcon={
-                  <img
-                    src={ctaPlayIcon}
-                    alt=""
-                    className="w-5 h-5 transition-all group-hover:[filter:brightness(0)_invert(1)]"
-                  />
-                }
-              >
-                Book a Demo
-              </Button>
-            </a>
+            <div className="flex flex-col items-center gap-1">
+              <Link to="/pricing">
+                <Button size="lg" className="group px-8">
+                  Start for Free
+                  <ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />
+                </Button>
+              </Link>
+              <p className="font-lato font-normal text-[16px] leading-[30px] tracking-normal text-center text-[#878787]">No credit card.</p>
+            </div>
+            <div className="flex flex-col items-center gap-1">
+              <a href="https://calendly.com/pzaz-tv/30min" target="_blank" rel="noopener noreferrer">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="group px-8 font-lato font-black text-xl leading-[25px] text-primary hover:text-primary-foreground"
+                  prefixIcon={
+                    <img
+                      src={ctaPlayIcon}
+                      alt=""
+                      className="w-5 h-5 transition-all group-hover:[filter:brightness(0)_invert(1)]"
+                    />
+                  }
+                >
+                  Book a Demo
+                </Button>
+              </a>
+              <p className="font-lato font-normal text-[16px] leading-[30px] tracking-normal text-center text-[#878787]">Up and running in 15 minutes.</p>
+            </div>
           </motion.div>
-
-          {/* Trust line */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="font-lato font-normal text-[16px] leading-[30px] tracking-normal text-center text-[#878787]"
-          >
-            No credit card. Up and running in 15 minutes.
-          </motion.p>
         </div>
 
         {/* Hero Visual Carousel */}
