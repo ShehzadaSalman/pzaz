@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import iconWarning from "@/assets/icon-warning.svg";
 import fragmentedTools from "@/assets/fragmented-tools.png";
+import fragmentedToolsOverlay from "@/assets/fragmented-tools-overlay.svg";
 import aiWorkflowPuzzle from "@/assets/ai-workflow-puzzle.png";
 import SectionHeader from "@/components/SectionHeader";
 
@@ -71,8 +72,9 @@ const ProblemSection = () => {
             </div>
 
             {/* Fragmented tools illustration */}
-            <div className="flex items-center justify-center -ml-[80px]">
+            <div className="flex items-center justify-center -ml-[80px] relative">
               <img src={fragmentedTools} alt="Fragmented tools illustration" className="max-w-full h-auto" />
+              <img src={fragmentedToolsOverlay} alt="" className="absolute inset-0 w-full h-full object-contain pointer-events-none" />
             </div>
 
           </motion.div>
