@@ -123,7 +123,7 @@ const ProductsSection = () => {
           <Button
             variant="outline"
             size="lg"
-            className="group px-8 font-lato font-black text-xl leading-[25px] text-primary hover:text-primary-foreground"
+            className="group px-8 font-lato font-black text-xl leading-[25px] text-primary hover:text-primary-foreground rounded-none"
             prefixIcon={
               <img
                 src={ctaPlayIcon}
