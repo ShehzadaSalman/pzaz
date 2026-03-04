@@ -13,7 +13,7 @@ import solutionCardTeam from "@/assets/solution-card-team.png";
 
 const benefits = [
   {
-    trigger: "Work with clarity, not chaos.",
+    trigger: "Work with clarity,\nnot chaos.",
     result: "",
     icon: cardIconClarity,
     image: solutionCardClarity,
