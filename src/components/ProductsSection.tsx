@@ -12,9 +12,10 @@ import featureIcon3 from "@/assets/feature-icon-3.svg";
 import featureIcon4 from "@/assets/feature-icon-4.svg";
 import featureIcon5 from "@/assets/feature-icon-5.svg";
 import featureIcon6 from "@/assets/feature-icon-6.svg";
+import featureIcon7 from "@/assets/feature-icon-7.svg";
 
 const featureCards = [
-  { icon: featureIcon3, label: "Feature films" },
+  { icon: featureIcon7, label: "Feature films" },
   { icon: featureIcon2, label: "Episodic television" },
   { icon: featureIcon4, label: "Animation and VFX productions" },
   { icon: featureIcon3, label: "Commercial and branded campaigns" },
