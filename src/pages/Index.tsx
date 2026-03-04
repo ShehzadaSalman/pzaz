@@ -7,7 +7,7 @@ import ProductsSection from "@/components/ProductsSection";
 import IntegrationsSection from "@/components/IntegrationsSection";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
-import WorkSmarterSection from "@/components/ui/WorkSmarterSection";
+
 import PageLayout from "@/components/layout/PageLayout";
 import SEO from "@/components/SEO";
 
@@ -34,7 +34,7 @@ const Index = () => {
       <ProblemSection />
       <SolutionSection />
       <AIContextSection />
-      <WorkSmarterSection />
+      
       <ProductsSection />
       <IntegrationsSection />
       <FAQ />
