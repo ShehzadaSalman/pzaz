@@ -26,10 +26,11 @@ const benefits = [
     image: solutionCardSchedule,
   },
   {
-    trigger: "Build your budget",
-    result: "AI pre-fills the structure.",
+    trigger: "Deliver without\nlast-minute panic.",
+    result: "",
     icon: cardIconBudget,
     image: solutionCardBudget,
+    hideArrow: true,
   },
   {
     trigger: "Share with your team",
