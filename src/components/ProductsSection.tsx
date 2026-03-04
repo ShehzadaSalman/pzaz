@@ -139,7 +139,8 @@ const ProductsSection = () => {
           </p>
         </motion.div>
 
-        {/* Subtitle */}
+        <div className="mb-[87px]" />
+        <hr className="border-0 border-t border-[#E3D6F5] max-w-6xl mx-auto" />
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
