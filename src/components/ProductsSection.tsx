@@ -16,7 +16,7 @@ import featureIcon7 from "@/assets/feature-icon-7.svg";
 
 const featureCards = [
   { icon: featureIcon7, label: "Feature films" },
-  { icon: featureIcon2, label: "Episodic television" },
+  { icon: featureIcon5, label: "Episodic television" },
   { icon: featureIcon4, label: "Animation and VFX productions" },
   { icon: featureIcon3, label: "Commercial and branded campaigns" },
   { icon: featureIcon5, label: "Digital-first and vertical series" },
