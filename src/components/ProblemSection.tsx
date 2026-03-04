@@ -74,7 +74,7 @@ const ProblemSection = () => {
             {/* Fragmented tools illustration */}
             <div className="flex items-center justify-center -ml-[80px] relative">
               <img src={fragmentedTools} alt="Fragmented tools illustration" className="max-w-full h-auto" />
-              <img src={fragmentedToolsOverlay} alt="" className="absolute inset-0 w-full h-full object-contain pointer-events-none" style={{ transform: 'translate(50px, 50px)' }} />
+              <img src={fragmentedToolsOverlay} alt="" className="absolute inset-0 w-full h-full object-contain pointer-events-none" style={{ transform: 'translate(100px, 100px)' }} />
             </div>
 
           </motion.div>
