@@ -54,7 +54,7 @@ const AIContextSection = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="font-lato font-normal text-[20px] leading-[30px] text-[#878787] text-center mt-8"
         >
-          You're in control while AI assist. The production stays aligned.
+          You're in control while AI assist. <span className="font-bold">The production stays aligned.</span>
         </motion.p>
       </div>
     </section>
