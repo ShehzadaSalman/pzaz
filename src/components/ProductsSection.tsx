@@ -6,20 +6,20 @@ import SectionHeader from "@/components/SectionHeader";
 import cardIconBudget from "@/assets/card-icon-budget-product.svg";
 import cardIconStoryboard from "@/assets/card-icon-storyboard.svg";
 import cardIconStudio from "@/assets/card-icon-studio.svg";
-import iconScript from "@/assets/script/icon-document.svg";
-import iconSchedule from "@/assets/card-icon-schedule.svg";
-import iconTeam from "@/assets/card-icon-team.svg";
-import iconClarity from "@/assets/card-icon-clarity.svg";
-import iconFast from "@/assets/card-icon-fast.svg";
-import iconAligned from "@/assets/card-icon-aligned.svg";
+import featureIcon1 from "@/assets/feature-icon-1.svg";
+import featureIcon2 from "@/assets/feature-icon-2.png";
+import featureIcon3 from "@/assets/feature-icon-3.svg";
+import featureIcon4 from "@/assets/feature-icon-4.svg";
+import featureIcon5 from "@/assets/feature-icon-5.svg";
+import featureIcon6 from "@/assets/feature-icon-6.svg";
 
 const featureCards = [
-  { icon: iconScript, label: "Script Writing" },
-  { icon: iconSchedule, label: "Production Scheduling" },
-  { icon: iconTeam, label: "Team Collaboration" },
-  { icon: iconClarity, label: "Creative Clarity" },
-  { icon: iconFast, label: "Fast Turnarounds" },
-  { icon: iconAligned, label: "Stay Aligned" },
+  { icon: featureIcon1, label: "Script Writing" },
+  { icon: featureIcon2, label: "Production Scheduling" },
+  { icon: featureIcon3, label: "Team Collaboration" },
+  { icon: featureIcon4, label: "Creative Clarity" },
+  { icon: featureIcon5, label: "Fast Turnarounds" },
+  { icon: featureIcon6, label: "Stay Aligned" },
 ];
 
 const products = [
