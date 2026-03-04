@@ -19,6 +19,8 @@ const ProblemSection = () => {
             className="text-center mb-16"
           >
             <SectionHeader
+              pillText="The Problem"
+              pillClassName="bg-[#F7F2FD] text-[#5C28A4] border border-[#D4BAF4] mb-4"
               title={
                 <>
                   Plans change.{" "}
@@ -36,20 +38,6 @@ const ProblemSection = () => {
                   <p className="text-lg text-[#878787] leading-relaxed">
                     That loss becomes mistakes, rework, and budget pressure. Fragmentation isn't just a nuisance. It triggers manual rework, delays, and budget pressure. It's expensive.
                   </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-                    <div className="bg-white border border-[#D4BAF4] rounded-2xl p-5">
-                      <p className="font-lato font-bold text-[#A805FF] text-base mb-1">Context Loss</p>
-                      <p className="text-sm text-[#878787] leading-snug">Switching between disconnected apps can erase up to 60% of your working context.</p>
-                    </div>
-                    <div className="bg-white border border-[#D4BAF4] rounded-2xl p-5">
-                      <p className="font-lato font-bold text-[#A805FF] text-base mb-1">Digital Fatigue</p>
-                      <p className="text-sm text-[#878787] leading-snug">Constant switching drains focus and performance drops by up to 30%.</p>
-                    </div>
-                    <div className="bg-white border border-[#D4BAF4] rounded-2xl p-5">
-                      <p className="font-lato font-bold text-[#A805FF] text-base mb-1">Fragmented Data</p>
-                      <p className="text-sm text-[#878787] leading-snug">When information isn't connected, mistakes multiply.</p>
-                    </div>
-                  </div>
                 </div>
               }
               descriptionClassName=""
@@ -66,25 +54,27 @@ const ProblemSection = () => {
           >
             {/* Fragmented tools */}
             <div className="bg-white/30 py-8 px-8 md:px-[60px] md:pb-[50px] border border-[#D4BAF4] rounded-[38px] relative z-10">
-              <h3 className="font-lato font-bold text-2xl pt-4 pb-8 tracking-normal text-foreground">
-                This is no longer a tooling problem. It's a connected data and collaboration problem.
-              </h3>
-              <div className="space-y-4">
-                 <div className="flex items-center gap-4 h-[70px] p-6 bg-[#FDF2F5] rounded-lg border border-[#EF6F9B]">
-                   <img src={iconWarning} alt="" className="w-6 h-6" />
-                   <span className="text-[20px] font-lato">Scripts live in one tool.</span>
-                 </div>
-                 <div className="flex items-center gap-4 h-[70px] p-6 bg-[#FDF2F5] rounded-lg border border-[#EF6F9B]">
-                   <img src={iconWarning} alt="" className="w-6 h-6" />
-                   <span className="text-[20px] font-lato">Budgets in another.</span>
-                 </div>
-                 <div className="flex items-center gap-4 h-[70px] p-6 bg-[#FDF2F5] rounded-lg border border-[#EF6F9B]">
-                   <img src={iconWarning} alt="" className="w-6 h-6" />
-                   <span className="text-[20px] font-lato">Schedules somewhere else.</span>
-                 </div>
-                 <div className="flex items-center gap-4 h-[70px] p-6 bg-[#FDF2F5] rounded-lg border border-[#EF6F9B]">
-                  <img src={iconWarning} alt="" className="w-6 h-6" />
-                  <span className="text-[20px] font-lato">Files and feedback everywhere.</span>
+              <div className="space-y-4 pt-4">
+                <div className="flex items-start gap-4 p-6 bg-[#FDF2F5] rounded-lg border border-[#EF6F9B]">
+                  <img src={iconWarning} alt="" className="w-6 h-6 mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="text-[20px] font-lato font-bold leading-snug">Context Loss</p>
+                    <p className="text-[20px] font-lato text-[#878787] leading-snug">Switching between disconnected apps can erase up to 60% of working context.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4 p-6 bg-[#FDF2F5] rounded-lg border border-[#EF6F9B]">
+                  <img src={iconWarning} alt="" className="w-6 h-6 mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="text-[20px] font-lato font-bold leading-snug">Digital Fatigue</p>
+                    <p className="text-[20px] font-lato text-[#878787] leading-snug">Constant tool switching drains focus and performance drops by up to 30%.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4 p-6 bg-[#FDF2F5] rounded-lg border border-[#EF6F9B]">
+                  <img src={iconWarning} alt="" className="w-6 h-6 mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="text-[20px] font-lato font-bold leading-snug">Fragmented Data</p>
+                    <p className="text-[20px] font-lato text-[#878787] leading-snug">When information isn't connected, mistakes multiply.</p>
+                  </div>
                 </div>
               </div>
             </div>
