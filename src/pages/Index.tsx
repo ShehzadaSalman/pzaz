@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "@/components/Hero";
 import ProblemSection from "@/components/ProblemSection";
 import SolutionSection from "@/components/SolutionSection";
+import AIContextSection from "@/components/AIContextSection";
 import ProductsSection from "@/components/ProductsSection";
 import IntegrationsSection from "@/components/IntegrationsSection";
 import FAQ from "@/components/FAQ";
@@ -32,6 +33,7 @@ const Index = () => {
       <Hero />
       <ProblemSection />
       <SolutionSection />
+      <AIContextSection />
       <WorkSmarterSection />
       <ProductsSection />
       <IntegrationsSection />
