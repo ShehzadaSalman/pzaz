@@ -73,15 +73,17 @@ function inlineFormat(text: string): string {
 }
 
 /**
- * Wraps extracted content in a crawlable static shell.
+ * Wraps extracted content in a hidden, crawlable static shell.
+ * The #root div stays empty so React mounts cleanly with no flash.
+ * The SEO content lives in a sibling div that is hidden from users
+ * but fully readable by search engine crawlers.
  */
 function staticShell(breadcrumb: string, h1: string, bodyHtml: string): string {
-  return `<div id="root" data-ssr="true">
-  <main style="max-width:960px;margin:0 auto;padding:2rem 1.5rem 4rem;font-family:Lato,sans-serif;color:#1a1a2e">
-    <nav style="font-size:0.875rem;color:#888;margin-bottom:2rem">${breadcrumb}</nav>
-    <h1 style="font-size:2rem;font-weight:700;margin-bottom:1.5rem;line-height:1.3">${h1}</h1>
-    ${bodyHtml}
-  </main>
+  return `<div id="root"></div>
+<div id="seo-content" aria-hidden="true" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">
+  <nav>${breadcrumb}</nav>
+  <h1>${h1}</h1>
+  ${bodyHtml}
 </div>`;
 }
 
@@ -329,6 +331,7 @@ function prerenderMetaPlugin(routes: RouteSEO[]): Plugin {
         }
 
         if (injectedContent) {
+          // injectedContent already contains <div id="root"></div> plus a hidden SEO sibling
           html = html.replace('<div id="root"></div>', injectedContent);
         }
 
