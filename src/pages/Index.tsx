@@ -5,7 +5,7 @@ import SolutionSection from "@/components/SolutionSection";
 import AIContextSection from "@/components/AIContextSection";
 import ProductsSection from "@/components/ProductsSection";
 import IntegrationsSection from "@/components/IntegrationsSection";
-import FAQ from "@/components/FAQ";
+
 import CTA from "@/components/CTA";
 
 import PageLayout from "@/components/layout/PageLayout";
@@ -37,7 +37,7 @@ const Index = () => {
       
       <ProductsSection />
       <IntegrationsSection />
-      <FAQ />
+      
       <CTA />
     </PageLayout>
   );
