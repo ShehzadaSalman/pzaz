@@ -19,7 +19,7 @@ interface SharedCTAProps {
 }
 
 const SharedCTA = ({
-  pillText = "Free 14-day trial",
+  pillText = "Free 7-day trial",
   title = <>Ready to add some pizzazz?</>,
   description = "Join 10,000+ creators who've already transformed their digital presence. Start free, no credit card required.",
   primaryButtonText = "Get started free",
