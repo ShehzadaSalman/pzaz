@@ -38,6 +38,7 @@ const defaultNavItems: NavItem[] = [
     children: [
       { label: "Scriptwriting", to: "/script" },
       { label: "Scene Breakdown", to: "/scene-breakdown" },
+      { label: "Collaboration Tools", to: "/collaboration-tools" },
     ],
   },
   { label: "Pricing", to: "/pricing" },
@@ -64,6 +65,7 @@ const blogNavItems: NavItem[] = [
     children: [
       { label: "Scriptwriting", to: "/script" },
       { label: "Scene Breakdown", to: "/scene-breakdown" },
+      { label: "Collaboration Tools", to: "/collaboration-tools" },
     ],
   },
   { label: "Pricing", to: "/pricing" },
@@ -104,7 +106,8 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
 
   const isSolutionsActive = isIndiePage || isPlanningPage || isStudioProPage || isStoryboardPage || location.pathname === "/budget";
   const isSceneBreakdownPage = location.pathname === "/scene-breakdown";
-  const isFeaturesActive = isScriptPage || isSceneBreakdownPage;
+  const isCollaborationToolsPage = location.pathname === "/collaboration-tools";
+  const isFeaturesActive = isScriptPage || isSceneBreakdownPage || isCollaborationToolsPage;
 
   const isActive = (item: NavItem) => {
     if (item.to === "/about-us") return isAboutPage;
