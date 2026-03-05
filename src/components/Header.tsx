@@ -6,7 +6,6 @@ import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation, Link } from "react-router-dom";
 import pzazLogo from "@/assets/pzaz-logo.png";
-import iconSurvey from "@/assets/icon-survey.svg";
 import LanguageDropdown from "@/components/LanguageDropdown";
 import ContactModal from "@/components/ContactModal";
 
@@ -27,6 +26,7 @@ const defaultNavItems: NavItem[] = [
     isDropdown: true,
     children: [
       { label: "Script", to: "/script" },
+      { label: "Planning Pro", to: "/planning" },
       { label: "Indie", to: "/indie" },
       { label: "Budget", to: "/budget" },
     ],
@@ -43,6 +43,7 @@ const blogNavItems: NavItem[] = [
     isDropdown: true,
     children: [
       { label: "Script", to: "/script" },
+      { label: "Planning Pro", to: "/planning" },
       { label: "Indie", to: "/indie" },
       { label: "Budget", to: "/budget" },
     ],
@@ -62,6 +63,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
   const location = useLocation();
   const isScriptPage = location.pathname === "/script";
   const isIndiePage = location.pathname === "/indie";
+  const isPlanningPage = location.pathname === "/planning";
   const isBlogRelated = location.pathname.startsWith("/blog") || location.pathname.startsWith("/producer-blog");
   const isPricingPage = location.pathname === "/pricing";
   const isAboutPage = location.pathname === "/about-us";
@@ -86,7 +88,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
     if (item.to === "/script") return isScriptPage;
     if (item.to === "/pricing") return isPricingPage;
     if (item.to === "/knowledge-base") return isKnowledgeBase;
-    if (item.isDropdown) return isScriptPage || isIndiePage || location.pathname === "/budget";
+    if (item.isDropdown) return isScriptPage || isIndiePage || isPlanningPage || location.pathname === "/budget";
     return false;
   };
 
@@ -107,6 +109,16 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
               {isIndiePage && (
                 <span className="text-xs font-medium px-2 py-0.5 rounded-full" style={{ color: "#5C28A3", backgroundColor: "#F7F2FD" }}>
                   Indie
+                </span>
+              )}
+              {isPlanningPage && (
+                <span className="text-xs font-medium px-2 py-0.5 rounded-full" style={{ color: "#5C28A3", backgroundColor: "#F7F2FD" }}>
+                  Planning Pro
+                </span>
+              )}
+              {location.pathname === "/budget" && (
+                <span className="text-xs font-medium px-2 py-0.5 rounded-full" style={{ color: "#5C28A3", backgroundColor: "#F7F2FD" }}>
+                  Budget
                 </span>
               )}
             </a>
