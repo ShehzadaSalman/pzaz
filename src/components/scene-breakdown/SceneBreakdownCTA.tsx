@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import ArrowIcon from "@/components/ui/ArrowIcon";
 import SectionHeader from "@/components/SectionHeader";
+import iconStar from "@/assets/material-symbols_family-star.svg";
 
 const SceneBreakdownCTA = () => {
   return (
@@ -17,13 +18,17 @@ const SceneBreakdownCTA = () => {
             transition={{ duration: 0.6 }}
             className="relative rounded-[38px] overflow-hidden"
           >
-            <div className="absolute inset-0" style={{ background: "radial-gradient(88.07% 62.52% at 50% 0%, #9D87FF 0%, #5C28A4 95%)" }} />
+            <div
+              className="absolute inset-0"
+              style={{ background: "radial-gradient(88.07% 62.52% at 50% 0%, #9D87FF 0%, #5C28A4 95%)" }}
+            />
             <div className="absolute -top-1/2 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-white/20 rounded-full blur-3xl pointer-events-none" />
 
             <div className="relative p-8 md:p-16 md:py-24 pb-12 text-center">
               <SectionHeader
                 pillText="Scene Breakdown"
                 pillClassName="bg-white text-primary mb-0"
+                pillIcon={<img src={iconStar} alt="" className="w-4 h-4" />}
                 title={
                   <>
                     Start Breaking Down
@@ -63,7 +68,7 @@ const SceneBreakdownCTA = () => {
               </div>
 
               <p className="mt-6 text-sm text-primary-foreground/60">
-                Plan your scenes with clarity. Prepare your production with confidence.
+                Edit the film before you shoot it.
               </p>
             </div>
           </motion.div>
