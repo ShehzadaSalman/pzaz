@@ -41,6 +41,7 @@ const defaultNavItems: NavItem[] = [
       { label: "Collaboration Tools", to: "/collaboration-tools" },
       { label: "Task Management", to: "/task-management" },
       { label: "File Sharing & Storage", to: "/file-sharing" },
+      { label: "Project Management", to: "/project-management" },
     ],
   },
   { label: "Pricing", to: "/pricing" },
@@ -70,6 +71,7 @@ const blogNavItems: NavItem[] = [
       { label: "Collaboration Tools", to: "/collaboration-tools" },
       { label: "Task Management", to: "/task-management" },
       { label: "File Sharing & Storage", to: "/file-sharing" },
+      { label: "Project Management", to: "/project-management" },
     ],
   },
   { label: "Pricing", to: "/pricing" },
@@ -113,7 +115,8 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
   const isCollaborationToolsPage = location.pathname === "/collaboration-tools";
   const isTaskManagementPage = location.pathname === "/task-management";
   const isFileSharingPage = location.pathname === "/file-sharing";
-  const isFeaturesActive = isScriptPage || isSceneBreakdownPage || isCollaborationToolsPage || isTaskManagementPage || isFileSharingPage;
+  const isProjectManagementPage = location.pathname === "/project-management";
+  const isFeaturesActive = isScriptPage || isSceneBreakdownPage || isCollaborationToolsPage || isTaskManagementPage || isFileSharingPage || isProjectManagementPage;
 
   const isActive = (item: NavItem) => {
     if (item.to === "/about-us") return isAboutPage;
