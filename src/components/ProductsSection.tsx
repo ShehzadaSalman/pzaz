@@ -146,7 +146,7 @@ const ProductsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="font-lato font-bold mb-12 text-[24px] tracking-normal text-center md:mb-[74px]"
+          className="font-lato font-bold mt-[55px] mb-12 text-[24px] tracking-normal text-center md:mb-[74px]"
         >
           Start with everything —{" "}
           <span className="font-lato font-normal italic text-[24px] tracking-normal text-[#878787]">
