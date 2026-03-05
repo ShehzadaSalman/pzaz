@@ -36,6 +36,7 @@ import StudioPro from "./pages/StudioPro";
 import Storyboard from "./pages/Storyboard";
 import SceneBreakdown from "./pages/SceneBreakdown";
 import CollaborationTools from "./pages/CollaborationTools";
+import TaskManagement from "./pages/TaskManagement";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -73,6 +74,7 @@ const App = () => (
           <Route path="/storyboard" element={<Storyboard />} />
           <Route path="/scene-breakdown" element={<SceneBreakdown />} />
           <Route path="/collaboration-tools" element={<CollaborationTools />} />
+          <Route path="/task-management" element={<TaskManagement />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/terms-of-use" element={<Navigate to="/terms" replace />} />
