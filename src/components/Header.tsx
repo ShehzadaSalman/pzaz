@@ -38,6 +38,7 @@ const defaultNavItems: NavItem[] = [
     isDropdown: true,
     children: [
       { label: "Scriptwriting", to: "/script" },
+      { label: "Scene Breakdown", to: "/scene-breakdown" },
     ],
   },
   { label: "Pricing", to: "/pricing" },
@@ -64,6 +65,7 @@ const blogNavItems: NavItem[] = [
     isDropdown: true,
     children: [
       { label: "Scriptwriting", to: "/script" },
+      { label: "Scene Breakdown", to: "/scene-breakdown" },
     ],
   },
   { label: "Pricing", to: "/pricing" },
@@ -103,7 +105,8 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
   const isKnowledgeBase = location.pathname.startsWith("/knowledge-base");
 
   const isSolutionsActive = isIndiePage || isPlanningPage || isStudioProPage || isStoryboardPage || location.pathname === "/budget";
-  const isFeaturesActive = isScriptPage;
+  const isSceneBreakdownPage = location.pathname === "/scene-breakdown";
+  const isFeaturesActive = isScriptPage || isSceneBreakdownPage;
 
   const isActive = (item: NavItem) => {
     if (item.to === "/about-us") return isAboutPage;
