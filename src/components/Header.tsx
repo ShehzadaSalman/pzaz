@@ -28,6 +28,7 @@ const defaultNavItems: NavItem[] = [
     children: [
       { label: "Script", to: "/script" },
       { label: "Indie", to: "/indie" },
+      { label: "Budget", to: "/budget" },
     ],
   },
   { label: "Pricing", to: "/pricing" },
@@ -43,6 +44,7 @@ const blogNavItems: NavItem[] = [
     children: [
       { label: "Script", to: "/script" },
       { label: "Indie", to: "/indie" },
+      { label: "Budget", to: "/budget" },
     ],
   },
   { label: "Pricing", to: "/pricing" },
@@ -84,7 +86,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
     if (item.to === "/script") return isScriptPage;
     if (item.to === "/pricing") return isPricingPage;
     if (item.to === "/knowledge-base") return isKnowledgeBase;
-    if (item.isDropdown) return isScriptPage || isIndiePage;
+    if (item.isDropdown) return isScriptPage || isIndiePage || location.pathname === "/budget";
     return false;
   };
 
