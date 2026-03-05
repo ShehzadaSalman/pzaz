@@ -27,6 +27,7 @@ const defaultNavItems: NavItem[] = [
     isDropdown: true,
     children: [
       { label: "Script", to: "/script" },
+      { label: "Indie", to: "/indie" },
     ],
   },
   { label: "Pricing", to: "/pricing" },
@@ -41,6 +42,7 @@ const blogNavItems: NavItem[] = [
     isDropdown: true,
     children: [
       { label: "Script", to: "/script" },
+      { label: "Indie", to: "/indie" },
     ],
   },
   { label: "Pricing", to: "/pricing" },
@@ -57,6 +59,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
   const isScriptPage = location.pathname === "/script";
+  const isIndiePage = location.pathname === "/indie";
   const isBlogRelated = location.pathname.startsWith("/blog") || location.pathname.startsWith("/producer-blog");
   const isPricingPage = location.pathname === "/pricing";
   const isAboutPage = location.pathname === "/about-us";
@@ -81,7 +84,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
     if (item.to === "/script") return isScriptPage;
     if (item.to === "/pricing") return isPricingPage;
     if (item.to === "/knowledge-base") return isKnowledgeBase;
-    if (item.isDropdown) return isScriptPage;
+    if (item.isDropdown) return isScriptPage || isIndiePage;
     return false;
   };
 
@@ -97,6 +100,11 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
               {isScriptPage && (
                 <span className="text-xs font-medium px-2 py-0.5 rounded-full" style={{ color: "#5C28A3", backgroundColor: "#F7F2FD" }}>
                   Script
+                </span>
+              )}
+              {isIndiePage && (
+                <span className="text-xs font-medium px-2 py-0.5 rounded-full" style={{ color: "#5C28A3", backgroundColor: "#F7F2FD" }}>
+                  Indie
                 </span>
               )}
             </a>
