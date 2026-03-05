@@ -4,11 +4,8 @@ import SEO from "@/components/SEO";
 import TaskManagementHero from "@/components/task-management/TaskManagementHero";
 import TaskManagementProblem from "@/components/task-management/TaskManagementProblem";
 import TaskManagementContext from "@/components/task-management/TaskManagementContext";
-import TaskManagementShift from "@/components/task-management/TaskManagementShift";
-import TaskManagementAI from "@/components/task-management/TaskManagementAI";
-import TaskManagementFeatures from "@/components/task-management/TaskManagementFeatures";
-import TaskManagementCraft from "@/components/task-management/TaskManagementCraft";
-import TaskManagementModern from "@/components/task-management/TaskManagementModern";
+import TaskManagementCoreFeatures from "@/components/task-management/TaskManagementCoreFeatures";
+import TaskManagementUSPs from "@/components/task-management/TaskManagementUSPs";
 import TaskManagementCTA from "@/components/task-management/TaskManagementCTA";
 
 const TaskManagement = () => {
@@ -24,11 +21,8 @@ const TaskManagement = () => {
       <TaskManagementHero />
       <TaskManagementProblem />
       <TaskManagementContext />
-      <TaskManagementShift />
-      <TaskManagementAI />
-      <TaskManagementFeatures />
-      <TaskManagementCraft />
-      <TaskManagementModern />
+      <TaskManagementCoreFeatures />
+      <TaskManagementUSPs />
       <TaskManagementCTA />
     </PageLayout>
   );
