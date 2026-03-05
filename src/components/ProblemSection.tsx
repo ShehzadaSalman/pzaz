@@ -58,22 +58,22 @@ const ProblemSection = () => {
                 <div className="flex items-start gap-4 p-6 bg-[#FDF2F5] rounded-lg border border-[#EF6F9B]">
                   <img src={iconWarning} alt="" className="w-6 h-6 mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-[20px] font-lato font-bold leading-snug text-[#3e3a4d]">Context Loss</p>
-                    <p className="text-[20px] font-lato text-[#3e3a4d] leading-snug">Switching between disconnected apps can erase up to 60% of working context.</p>
+                    <p className="text-[16px] font-lato font-bold leading-snug text-[#3e3a4d]">Context Loss</p>
+                    <p className="text-[16px] font-lato text-[#3e3a4d] leading-snug">Switching between disconnected apps can erase up to 60% of working context.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4 p-6 bg-[#FDF2F5] rounded-lg border border-[#EF6F9B]">
                   <img src={iconWarning} alt="" className="w-6 h-6 mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-[20px] font-lato font-bold leading-snug text-[#3e3a4d]">Digital Fatigue</p>
-                    <p className="text-[20px] font-lato text-[#3e3a4d] leading-snug">Constant tool switching drains focus and performance drops by up to 30%.</p>
+                    <p className="text-[16px] font-lato font-bold leading-snug text-[#3e3a4d]">Digital Fatigue</p>
+                    <p className="text-[16px] font-lato text-[#3e3a4d] leading-snug">Constant tool switching drains focus and performance drops by up to 30%.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4 p-6 bg-[#FDF2F5] rounded-lg border border-[#EF6F9B]">
                   <img src={iconWarning} alt="" className="w-6 h-6 mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-[20px] font-lato font-bold leading-snug text-[#3e3a4d]">Fragmented Data</p>
-                    <p className="text-[20px] font-lato text-[#3e3a4d] leading-snug">When information isn't connected, mistakes multiply.</p>
+                    <p className="text-[16px] font-lato font-bold leading-snug text-[#3e3a4d]">Fragmented Data</p>
+                    <p className="text-[16px] font-lato text-[#3e3a4d] leading-snug">When information isn't connected, mistakes multiply.</p>
                   </div>
                 </div>
               </div>

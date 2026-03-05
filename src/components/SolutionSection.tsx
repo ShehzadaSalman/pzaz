@@ -58,7 +58,7 @@ const SolutionSection = () => {
             index={0}
             hideArrow={true}
           />
-          <div className="flex flex-row gap-[22px] h-full">
+          <div className="flex flex-col md:flex-row gap-[22px] h-full">
             <SolutionCard
               icon={cardIconFast}
               trigger={"Move fast\nwithout\nlosing control."}
