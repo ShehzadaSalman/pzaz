@@ -33,6 +33,7 @@ import Indie from "./pages/Indie";
 import Budget from "./pages/Budget";
 import Planning from "./pages/Planning";
 import StudioPro from "./pages/StudioPro";
+import Storyboard from "./pages/Storyboard";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -67,6 +68,7 @@ const App = () => (
           <Route path="/budget" element={<Budget />} />
           <Route path="/planning" element={<Planning />} />
           <Route path="/studio-pro" element={<StudioPro />} />
+          <Route path="/storyboard" element={<Storyboard />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/terms-of-use" element={<Navigate to="/terms" replace />} />
