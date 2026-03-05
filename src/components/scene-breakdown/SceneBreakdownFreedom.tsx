@@ -1,43 +1,52 @@
 import React from "react";
 import { motion } from "framer-motion";
-import SectionHeader from "@/components/SectionHeader";
+import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
 
 const SceneBreakdownFreedom = () => {
   return (
-    <section className="py-24 bg-muted/30">
-      <div className="container mx-auto px-6">
-        <div className="max-w-3xl mx-auto text-center">
+    <section className="section-padding bg-[#fbfbfb] relative overflow-hidden">
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
+        <div className="grid md:grid-cols-2 gap-16 items-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <SectionHeader
+            <AnimatedSectionHeader
+              wrapperClassName=""
               pillText="Creative Freedom"
-              title="Creative Exploration Without Administrative Weight."
+              pillClassName="bg-primary/10 text-primary"
+              title={
+                <>
+                  Creative Exploration{" "}
+                  <span className="font-lato font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
+                    Without Administrative Weight.
+                  </span>
+                </>
+              }
               description="Pzaz keeps scene planning structured but flexible inside a modern, cloud-based environment where directors, producers and departments can work naturally together."
+              align="left"
+              className="mb-8"
             />
-            <div className="mt-10 grid sm:grid-cols-3 gap-6">
-              {[
-                { label: "Shots evolve", desc: "Ideas develop fluidly without starting over." },
-                { label: "Scenes grow", desc: "Layer detail progressively as production develops." },
-                { label: "Structure holds", desc: "The system organises so you can stay creative." },
-              ].map((item, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: i * 0.1 }}
-                  className="p-6 rounded-2xl border bg-background text-left"
-                  style={{ borderColor: "hsl(var(--primary)/0.15)" }}
-                >
-                  <p className="font-semibold text-foreground mb-2">{item.label}</p>
-                  <p className="text-sm text-muted-foreground">{item.desc}</p>
-                </motion.div>
-              ))}
-            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="space-y-5"
+          >
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Shots can evolve. Scenes can grow. Production details can develop alongside the creative process.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              The system holds the structure and you keep the freedom.
+            </p>
+            <p className="text-xl font-bold text-[#4D029B] italic">
+              Plan your scenes with clarity. Prepare your production with confidence.
+            </p>
           </motion.div>
         </div>
       </div>

@@ -1,25 +1,46 @@
 import React from "react";
 import { motion } from "framer-motion";
-import SectionHeader from "@/components/SectionHeader";
+import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
 
 const SceneBreakdownBuilt = () => {
   return (
-    <section className="py-24 bg-muted/30">
-      <div className="container mx-auto px-6">
-        <div className="max-w-3xl mx-auto text-center">
+    <section className="section-padding bg-[#fbfbfb] relative overflow-hidden">
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
+        <div className="grid md:grid-cols-2 gap-16 items-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <SectionHeader
-              pillText="Designed for Filmmakers"
-              title="Designed for Filmmakers, Built with Creators"
-              description="Pzaz was shaped alongside directors, producers and coordinators who deal with the practical reality of turning scripts into shootable scenes."
-              descriptionClassName="text-lg text-muted-foreground max-w-2xl mx-auto"
+            <AnimatedSectionHeader
+              wrapperClassName=""
+              pillText="For Filmmakers"
+              pillClassName="bg-primary/10 text-primary"
+              title={
+                <>
+                  Designed for Filmmakers,{" "}
+                  <span className="font-lato font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
+                    Built with Creators
+                  </span>
+                </>
+              }
+              align="left"
+              className="mb-8"
             />
-            <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="space-y-5"
+          >
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Pzaz was shaped alongside directors, producers and coordinators who deal with the practical reality of turning scripts into shootable scenes.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
               Whether you are preparing a short film or a larger production, it helps you see and organise each scene in a way that keeps creative intent aligned with what production actually requires.
             </p>
           </motion.div>
