@@ -41,7 +41,7 @@ const AIContextSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex justify-center relative z-0 mt-8 md:mt-0"
+          className="flex justify-center relative z-0 mt-16 md:mt-0"
         >
           <img src={aiContextIllustration} alt="AI context illustration" className="w-full max-w-3xl h-auto" />
         </motion.div>
