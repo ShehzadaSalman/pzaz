@@ -20,17 +20,24 @@ interface NavItem {
 const defaultNavItems: NavItem[] = [
   { label: "Blog", to: "/producer-blog" },
   {
-    label: "Products",
+    label: "Solutions",
     to: "/#products",
     isHash: true,
     isDropdown: true,
     children: [
-      { label: "Script", to: "/script" },
-      { label: "Planning Pro", to: "/planning" },
-      { label: "Studio Pro", to: "/studio-pro" },
-      { label: "Indie", to: "/indie" },
-      { label: "Budget", to: "/budget" },
-      { label: "Storyboard", to: "/storyboard" },
+      { label: "Pzaz Indie", to: "/indie" },
+      { label: "Pzaz Planning Pro", to: "/planning" },
+      { label: "Pzaz Studio Pro", to: "/studio-pro" },
+      { label: "Pzaz Budget", to: "/budget" },
+      { label: "Pzaz Storyboard", to: "/storyboard" },
+    ],
+  },
+  {
+    label: "Features",
+    to: "/script",
+    isDropdown: true,
+    children: [
+      { label: "Scriptwriting", to: "/script" },
     ],
   },
   { label: "Pricing", to: "/pricing" },
@@ -39,17 +46,24 @@ const defaultNavItems: NavItem[] = [
 const blogNavItems: NavItem[] = [
   { label: "Blog", to: "/producer-blog" },
   {
-    label: "Products",
+    label: "Solutions",
     to: "/#products",
     isHash: true,
     isDropdown: true,
     children: [
-      { label: "Script", to: "/script" },
-      { label: "Planning Pro", to: "/planning" },
-      { label: "Studio Pro", to: "/studio-pro" },
-      { label: "Indie", to: "/indie" },
-      { label: "Budget", to: "/budget" },
-      { label: "Storyboard", to: "/storyboard" },
+      { label: "Pzaz Indie", to: "/indie" },
+      { label: "Pzaz Planning Pro", to: "/planning" },
+      { label: "Pzaz Studio Pro", to: "/studio-pro" },
+      { label: "Pzaz Budget", to: "/budget" },
+      { label: "Pzaz Storyboard", to: "/storyboard" },
+    ],
+  },
+  {
+    label: "Features",
+    to: "/script",
+    isDropdown: true,
+    children: [
+      { label: "Scriptwriting", to: "/script" },
     ],
   },
   { label: "Pricing", to: "/pricing" },
@@ -62,8 +76,8 @@ interface HeaderProps {
 const Header = ({ variant = "fixed" }: HeaderProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
-  const [productsOpen, setProductsOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const navRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
   const isScriptPage = location.pathname === "/script";
   const isIndiePage = location.pathname === "/indie";
@@ -78,8 +92,8 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
-        setProductsOpen(false);
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        setOpenDropdown(null);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -88,14 +102,22 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
 
   const isKnowledgeBase = location.pathname.startsWith("/knowledge-base");
 
+  const isSolutionsActive = isIndiePage || isPlanningPage || isStudioProPage || isStoryboardPage || location.pathname === "/budget";
+  const isFeaturesActive = isScriptPage;
+
   const isActive = (item: NavItem) => {
     if (item.to === "/about-us") return isAboutPage;
     if (item.to === "/producer-blog") return isBlogRelated;
     if (item.to === "/script") return isScriptPage;
     if (item.to === "/pricing") return isPricingPage;
     if (item.to === "/knowledge-base") return isKnowledgeBase;
-    if (item.isDropdown) return isScriptPage || isIndiePage || isPlanningPage || isStudioProPage || isStoryboardPage || location.pathname === "/budget";
+    if (item.label === "Solutions") return isSolutionsActive;
+    if (item.label === "Features") return isFeaturesActive;
     return false;
+  };
+
+  const toggleDropdown = (label: string) => {
+    setOpenDropdown(openDropdown === label ? null : label);
   };
 
   return (
@@ -138,16 +160,15 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
                 </span>
               )}
             </a>
-              {/*}    <LanguageDropdown /> */}
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8" ref={navRef}>
             {navItems.map((item) =>
               item.isDropdown ? (
-                <div key={item.label} className="relative" ref={dropdownRef}>
+                <div key={item.label} className="relative">
                   <button
-                    onClick={() => setProductsOpen(!productsOpen)}
+                    onClick={() => toggleDropdown(item.label)}
                     className="flex items-center gap-1 transition-colors"
                     style={{
                       color: isActive(item) ? "#5C28A4" : "#20124D",
@@ -158,16 +179,16 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
                     }}
                   >
                     {item.label}
-                    <ChevronDown className={`w-3.5 h-3.5 transition-transform ${productsOpen ? "rotate-180" : ""}`} />
+                    <ChevronDown className={`w-3.5 h-3.5 transition-transform ${openDropdown === item.label ? "rotate-180" : ""}`} />
                   </button>
                   <AnimatePresence>
-                    {productsOpen && (
+                    {openDropdown === item.label && (
                       <motion.div
                         initial={{ opacity: 0, y: 4 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 4 }}
                         transition={{ duration: 0.15 }}
-                        className="absolute top-full left-0 mt-2 py-2 min-w-[160px] rounded-lg border bg-background shadow-lg"
+                        className="absolute top-full left-0 mt-2 py-2 min-w-[180px] rounded-lg border bg-background shadow-lg"
                         style={{ borderColor: "#D4BAF4" }}
                       >
                         {item.children?.map((child) =>
@@ -175,7 +196,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
                             <a
                               key={child.label}
                               href={child.to}
-                              onClick={() => setProductsOpen(false)}
+                              onClick={() => setOpenDropdown(null)}
                               className="block px-4 py-2 text-sm transition-colors"
                             >
                               {child.label}
@@ -184,7 +205,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
                             <Link
                               key={child.label}
                               to={child.to}
-                              onClick={() => setProductsOpen(false)}
+                              onClick={() => setOpenDropdown(null)}
                               className="block px-4 py-2 text-sm transition-colors"
                               style={{
                                 color: isActive(child) ? "#5C28A4" : "#20124D",
