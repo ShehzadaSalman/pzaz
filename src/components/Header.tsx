@@ -30,6 +30,7 @@ const defaultNavItems: NavItem[] = [
       { label: "Studio Pro", to: "/studio-pro" },
       { label: "Indie", to: "/indie" },
       { label: "Budget", to: "/budget" },
+      { label: "Storyboard", to: "/storyboard" },
     ],
   },
   { label: "Pricing", to: "/pricing" },
@@ -48,6 +49,7 @@ const blogNavItems: NavItem[] = [
       { label: "Studio Pro", to: "/studio-pro" },
       { label: "Indie", to: "/indie" },
       { label: "Budget", to: "/budget" },
+      { label: "Storyboard", to: "/storyboard" },
     ],
   },
   { label: "Pricing", to: "/pricing" },
@@ -67,6 +69,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
   const isIndiePage = location.pathname === "/indie";
   const isPlanningPage = location.pathname === "/planning";
   const isStudioProPage = location.pathname === "/studio-pro";
+  const isStoryboardPage = location.pathname === "/storyboard";
   const isBlogRelated = location.pathname.startsWith("/blog") || location.pathname.startsWith("/producer-blog");
   const isPricingPage = location.pathname === "/pricing";
   const isAboutPage = location.pathname === "/about-us";
@@ -91,7 +94,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
     if (item.to === "/script") return isScriptPage;
     if (item.to === "/pricing") return isPricingPage;
     if (item.to === "/knowledge-base") return isKnowledgeBase;
-    if (item.isDropdown) return isScriptPage || isIndiePage || isPlanningPage || isStudioProPage || location.pathname === "/budget";
+    if (item.isDropdown) return isScriptPage || isIndiePage || isPlanningPage || isStudioProPage || isStoryboardPage || location.pathname === "/budget";
     return false;
   };
 
@@ -127,6 +130,11 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
               {location.pathname === "/budget" && (
                 <span className="text-xs font-medium px-2 py-0.5 rounded-full" style={{ color: "#5C28A3", backgroundColor: "#F7F2FD" }}>
                   Budget
+                </span>
+              )}
+              {isStoryboardPage && (
+                <span className="text-xs font-medium px-2 py-0.5 rounded-full" style={{ color: "#5C28A3", backgroundColor: "#F7F2FD" }}>
+                  Storyboard
                 </span>
               )}
             </a>
