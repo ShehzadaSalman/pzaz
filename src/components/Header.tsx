@@ -18,7 +18,6 @@ interface NavItem {
 }
 
 const defaultNavItems: NavItem[] = [
-  { label: "Blog", to: "/producer-blog" },
   {
     label: "Solutions",
     to: "/#products",
@@ -45,7 +44,6 @@ const defaultNavItems: NavItem[] = [
 ];
 
 const blogNavItems: NavItem[] = [
-  { label: "Blog", to: "/producer-blog" },
   {
     label: "Solutions",
     to: "/#products",
