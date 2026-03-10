@@ -249,7 +249,9 @@ const staticSEORoutes: RouteSEO[] = [
 <li>Pzaz Collaboration Tools – Real-time team coordination</li>
 <li>Pzaz File Sharing – Centralised production asset storage</li>
 <li>Pzaz Project Management – The work OS for filmmakers</li>
-</ul>`,
+</ul>
+<h2>Works with your existing tools</h2>
+<p>No lock-in. No barriers. Just filmmaking. Pzaz integrates with Final Draft, Google Maps, PDF, CSV, and more — so you can keep using the tools you already love.</p>`,
   },
   {
     path: "/script",
