@@ -27,7 +27,7 @@ export async function prerender(data: { url: string }) {
     </QueryClientProvider>
   );
 
-  const { helmet } = helmetContext as HelmetContextFilled;
+  const { helmet } = helmetContext as unknown as HelmetContextFilled;
 
   const headElements = new Set<{ type: string; props: Record<string, string> }>();
 
