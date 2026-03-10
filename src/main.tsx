@@ -30,13 +30,15 @@ export async function prerender(data: { url: string }) {
   const { HelmetProvider: HP } = await import("react-helmet-async");
   const { QueryClient, QueryClientProvider } = await import("@tanstack/react-query");
 
+  const url = data.url ?? "/";
+
   const helmetContext: Record<string, unknown> = {};
   const queryClient = new QueryClient();
 
   const html = renderToString(
     <QueryClientProvider client={queryClient}>
       <HP context={helmetContext}>
-        <StaticRouter location={data.url}>
+        <StaticRouter location={url}>
           <AppRoutes />
         </StaticRouter>
       </HP>
