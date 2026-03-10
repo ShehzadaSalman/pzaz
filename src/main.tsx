@@ -3,6 +3,8 @@ import { createRoot } from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
 import "./index.css";
 import App, { AppRoutes } from "./App";
+import { staticRoutes } from "./routes";
+import { blogData } from "./data/blogData";
 
 // Client-side hydration — guarded so it does not run during SSR prerendering
 if (typeof window !== "undefined") {
@@ -23,6 +25,10 @@ interface HelmetContextFilled {
     link: { toString(): string };
   };
 }
+
+// All routes to prerender (static + blog articles)
+const blogRoutes = blogData.map((post) => `/producer-blog/${post.slug}`);
+const allRoutes = new Set([...staticRoutes, ...blogRoutes]);
 
 export async function prerender(data: { url: string }) {
   const { renderToString } = await import("react-dom/server");
@@ -107,6 +113,10 @@ export async function prerender(data: { url: string }) {
 
   return {
     html,
+    // Return all routes as links so the plugin queues a separate prerender(data)
+    // call for each one with the correct data.url — this is more reliable than
+    // additionalPrerenderRoutes which can sometimes reuse the same HTML output.
+    links: allRoutes,
     head: {
       title,
       elements: headElements,
