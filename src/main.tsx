@@ -2,17 +2,15 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
 import "./index.css";
-import { AppRoutes } from "./App";
+import App, { AppRoutes } from "./App";
 
 // Client-side hydration — guarded so it does not run during SSR prerendering
 if (typeof window !== "undefined") {
-  import("./App").then(({ default: App }) => {
-    createRoot(document.getElementById("root")!).render(
-      <HelmetProvider>
-        <App />
-      </HelmetProvider>
-    );
-  });
+  createRoot(document.getElementById("root")!).render(
+    <HelmetProvider>
+      <App />
+    </HelmetProvider>
+  );
 }
 
 // ─── SSR Prerender export ────────────────────────────────────────────────────
