@@ -90,8 +90,9 @@ function markdownToHtml(md: string): string {
 }
 
 /**
- * Generates a static index.html per route with correct <title>, OG, Twitter meta tags,
- * and pre-rendered body content for crawlers.
+ * Generates a static index.html per route with correct <title>, OG, Twitter meta tags.
+ * Body content is handled by scripts/prerender.mjs which does true React SSR rendering.
+ * For routes without a matching SEO entry, the template is copied as-is.
  */
 function prerenderMetaPlugin(routes: RouteSEO[]): Plugin {
   return {
@@ -104,7 +105,7 @@ function prerenderMetaPlugin(routes: RouteSEO[]): Plugin {
       const template = fs.readFileSync(templatePath, "utf-8");
 
       for (const route of routes) {
-        let html = template
+        const html = template
           .replace(
             /<title>[^<]*<\/title>/,
             `<title>${route.title}</title>`
@@ -134,15 +135,8 @@ function prerenderMetaPlugin(routes: RouteSEO[]): Plugin {
             `<meta name="twitter:image" content="${route.image || `${SITE_URL}/og-image.png`}" />`
           );
 
-        // Inject pre-rendered body content for article pages
-        if (route.bodyContent) {
-          html = html.replace(
-            /<div id="root"><\/div>/,
-            `<div id="root" data-ssr="true"><article class="ssr-content">${route.bodyContent}</article></div>`
-          );
-        }
-
         // Write to dist/<route>/index.html
+        // Note: body content is injected by scripts/prerender.mjs (true React SSR)
         const routeDir = path.join(distDir, route.path);
         fs.mkdirSync(routeDir, { recursive: true });
         fs.writeFileSync(path.join(routeDir, "index.html"), html);
@@ -689,7 +683,7 @@ const staticSEORoutes: RouteSEO[] = [
 ];
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => {
+export default defineConfig(({ mode, isSsrBuild }) => {
   // ── Knowledge Base articles: parse content at build time ──────────────────
   let kbSEORoutes: RouteSEO[] = [];
   try {
@@ -789,6 +783,8 @@ export default defineConfig(({ mode }) => {
   const allRoutes = [...staticRoutes, ...blogRoutes];
   const allSEORoutes = [...mergedStaticSEORoutes, ...blogSEORoutes];
 
+  const isSSR = isSsrBuild === true;
+
   return {
     server: {
       host: "::",
@@ -799,14 +795,23 @@ export default defineConfig(({ mode }) => {
     },
     plugins: [
       react(),
-      mode === "development" && componentTagger(),
-      mode === "production" && sitemapPlugin(allRoutes),
-      mode === "production" && prerenderMetaPlugin(allSEORoutes),
+      !isSSR && mode === "development" && componentTagger(),
+      !isSSR && mode === "production" && sitemapPlugin(allRoutes),
+      !isSSR && mode === "production" && prerenderMetaPlugin(allSEORoutes),
     ].filter(Boolean),
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "./src"),
       },
     },
+    ...(isSSR && {
+      build: {
+        ssr: true,
+        rollupOptions: {
+          input: "src/entry-server.tsx",
+        },
+        outDir: "dist-ssr",
+      },
+    }),
   };
 });
