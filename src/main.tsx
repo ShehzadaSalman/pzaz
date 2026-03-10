@@ -3,6 +3,8 @@ import { createRoot } from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
 import "./index.css";
 import App, { AppRoutes } from "./App";
+import { staticRoutes } from "./routes";
+import { blogPosts } from "./data/blogData";
 
 // Client-side hydration — guarded so it does not run during SSR prerendering
 if (typeof window !== "undefined") {
@@ -24,11 +26,17 @@ interface HelmetContextFilled {
   };
 }
 
+// All routes to prerender (static + blog articles)
+const blogRoutes = blogPosts.map((post) => `/producer-blog/${post.slug}`);
+const allRoutes = new Set([...staticRoutes, ...blogRoutes]);
+
 export async function prerender(data: { url: string }) {
   const { renderToString } = await import("react-dom/server");
   const { StaticRouter } = await import("react-router-dom/server");
   const { HelmetProvider: HP } = await import("react-helmet-async");
   const { QueryClient, QueryClientProvider } = await import("@tanstack/react-query");
+
+  const url = data.url ?? "/";
 
   const helmetContext: Record<string, unknown> = {};
   const queryClient = new QueryClient();
@@ -36,7 +44,7 @@ export async function prerender(data: { url: string }) {
   const html = renderToString(
     <QueryClientProvider client={queryClient}>
       <HP context={helmetContext}>
-        <StaticRouter location={data.url}>
+        <StaticRouter location={url}>
           <AppRoutes />
         </StaticRouter>
       </HP>
@@ -105,6 +113,10 @@ export async function prerender(data: { url: string }) {
 
   return {
     html,
+    // Return all routes as links so the plugin queues a separate prerender(data)
+    // call for each one with the correct data.url — this is more reliable than
+    // additionalPrerenderRoutes which can sometimes reuse the same HTML output.
+    links: allRoutes,
     head: {
       title,
       elements: headElements,
