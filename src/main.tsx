@@ -2,6 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
 import "./index.css";
+import { AppRoutes } from "./App";
 
 // Client-side hydration — guarded so it does not run during SSR prerendering
 if (typeof window !== "undefined") {

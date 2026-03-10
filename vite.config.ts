@@ -128,7 +128,7 @@ export default defineConfig(({ mode }) => {
       mode === "production" &&
         vitePrerenderPlugin({
           renderTarget: "#root",
-          additionalPrerenderRoutes: staticRoutes,
+          additionalPrerenderRoutes: allRoutes,
         }),
       mode === "production" && sitemapPlugin(allRoutes),
     ].filter(Boolean),
