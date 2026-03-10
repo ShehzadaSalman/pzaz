@@ -26,79 +26,21 @@ function sitemapPlugin(routes: string[]) {
   };
 }
 
-// Static route list
-const staticRoutes = [
-  "/",
-  "/script",
-  "/pricing",
-  "/producer-blog",
-  "/imagine",
-  "/collaborate",
-  "/breakdown",
-  "/about-us",
-  "/pzaz-vs-final-draft",
-  "/sales-team",
-  "/brand",
-  "/culture",
-  "/privacy",
-  "/terms",
-  "/knowledge-base",
-  "/pzaz-project",
-  "/sell",
-  "/shoot",
-  "/visualise",
-  "/write",
-  "/indie",
-  "/budget",
-  "/planning",
-  "/studio-pro",
-  "/storyboard",
-  "/scene-breakdown",
-  "/collaboration-tools",
-  "/task-management",
-  "/file-sharing",
-  "/project-management",
-  // Knowledge Base – Getting Started
-  "/knowledge-base/book-a-personalised-product-demonstration",
-  "/knowledge-base/writing-your-script-with-pzaz",
-  "/knowledge-base/ai-security-and-privacy-at-pzaz",
-  "/knowledge-base/getting-started-with-workflows",
-  "/knowledge-base/pzaz-101",
-  // Knowledge Base – Functions
-  "/knowledge-base/pzaz-security-features",
-  "/knowledge-base/card-anatomy",
-  "/knowledge-base/delete-your-account",
-  "/knowledge-base/cancelling-or-closing-your-account",
-  "/knowledge-base/your-pzaz-profile",
-  "/knowledge-base/add-or-remove-blocks",
-  "/knowledge-base/leave-feedback",
-  "/knowledge-base/helpful-tools-for-capturing-screenshots-and-videos",
-  "/knowledge-base/reporting-a-bug",
-  "/knowledge-base/get-support",
-  // Knowledge Base – Tools & Features
-  "/knowledge-base/script-breakdown",
-  "/knowledge-base/documents-section",
-  "/knowledge-base/manage-section",
-  "/knowledge-base/shots",
-  "/knowledge-base/scenes",
-  "/knowledge-base/storyboard",
-  "/knowledge-base/stripboard",
-  "/knowledge-base/call-sheets",
-  "/knowledge-base/department",
-  "/knowledge-base/moodboard",
-  "/knowledge-base/team-chats",
-  "/knowledge-base/file-sharing-media-storage",
-  "/knowledge-base/budgeting",
-  "/knowledge-base/board-views",
-  "/knowledge-base/add-and-remove-team-members-filmspace",
-  "/knowledge-base/roles-permissions-in-pzaz",
-  "/knowledge-base/personal-to-dos",
-  "/knowledge-base/card-blocks",
-  "/knowledge-base/your-filmspace",
-];
-
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
+  // Read static routes from shared routes file
+  let staticRoutes: string[] = [];
+  try {
+    const routesFile = fs.readFileSync(
+      path.resolve(__dirname, "src/routes.ts"),
+      "utf-8"
+    );
+    const routeMatches = [...routesFile.matchAll(/"(\/[^""]*)"/g)];
+    staticRoutes = routeMatches.map((m) => m[1]);
+  } catch {
+    staticRoutes = ["/"];
+  }
+
   // Blog routes for sitemap
   let blogRoutes: string[] = [];
   try {
@@ -128,7 +70,10 @@ export default defineConfig(({ mode }) => {
       mode === "production" &&
         vitePrerenderPlugin({
           renderTarget: "#root",
-          additionalPrerenderRoutes: allRoutes,
+          // Routes are returned as `links` from prerender() in main.tsx,
+          // which ensures each route gets its own prerender(data) call with
+          // the correct data.url. additionalPrerenderRoutes is intentionally
+          // not used here as it can cause the same HTML to be reused.
         }),
       mode === "production" && sitemapPlugin(allRoutes),
     ].filter(Boolean),
