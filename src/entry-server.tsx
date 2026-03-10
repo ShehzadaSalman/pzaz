@@ -1,22 +1,26 @@
 import React from "react";
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom/server";
-import { HelmetProvider, type FilledContext } from "react-helmet-async";
-import App from "./App";
+import { HelmetProvider } from "react-helmet-async";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { AppRoutes } from "./App";
 
-export function render(url: string): { html: string; helmet: FilledContext["helmet"] } {
-  const helmetContext: Partial<FilledContext> = {};
+export function render(url: string): string {
+  const queryClient = new QueryClient();
+  const helmetContext: Record<string, unknown> = {};
 
   const html = renderToString(
     <HelmetProvider context={helmetContext}>
-      <StaticRouter location={url}>
-        <App bare />
-      </StaticRouter>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <StaticRouter location={url}>
+            <AppRoutes />
+          </StaticRouter>
+        </TooltipProvider>
+      </QueryClientProvider>
     </HelmetProvider>
   );
 
-  return {
-    html,
-    helmet: (helmetContext as FilledContext).helmet,
-  };
+  return html;
 }
