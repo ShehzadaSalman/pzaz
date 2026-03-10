@@ -226,7 +226,7 @@ const staticRoutes = [
 const staticSEORoutes: RouteSEO[] = [
   {
     path: "/",
-    title: "Pzaz – Film Production Software",
+    title: "Pzaz – Film Production Software for Indie Filmmakers",
     description: "Pzaz is the all-in-one film production platform for indie filmmakers. Manage scripts, budgets, schedules, and crew — powered by AI.",
     bodyContent: `<h1>Pzaz – Film Production Software for Indie Filmmakers</h1>
 <p>Pzaz is the all-in-one film production platform built for indie filmmakers. Manage your scripts, budgets, schedules, storyboards, and crew — all in one place, powered by AI.</p>
