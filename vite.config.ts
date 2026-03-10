@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
+import { vitePrerenderPlugin } from "vite-prerender-plugin";
 import fs from "fs";
 
 const SITE_URL = "https://pzaz.io";
@@ -124,6 +125,12 @@ export default defineConfig(({ mode }) => {
     plugins: [
       react(),
       mode === "development" && componentTagger(),
+      mode === "production" &&
+        vitePrerenderPlugin({
+          renderTarget: "#root",
+          prerenderScript: path.resolve(__dirname, "src/prerender.tsx"),
+          additionalPrerenderRoutes: staticRoutes,
+        }),
       mode === "production" && sitemapPlugin(allRoutes),
     ].filter(Boolean),
     resolve: {
