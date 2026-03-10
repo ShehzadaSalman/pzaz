@@ -4,7 +4,7 @@ import { HelmetProvider } from "react-helmet-async";
 import "./index.css";
 import App, { AppRoutes } from "./App";
 import { staticRoutes } from "./routes";
-import { blogData } from "./data/blogData";
+import { blogPosts } from "./data/blogData";
 
 // Client-side hydration — guarded so it does not run during SSR prerendering
 if (typeof window !== "undefined") {
