@@ -27,7 +27,7 @@ interface HelmetContextFilled {
 }
 
 // All routes to prerender (static + blog articles)
-const blogRoutes = blogData.map((post) => `/producer-blog/${post.slug}`);
+const blogRoutes = blogPosts.map((post) => `/producer-blog/${post.slug}`);
 const allRoutes = new Set([...staticRoutes, ...blogRoutes]);
 
 export async function prerender(data: { url: string }) {
