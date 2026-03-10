@@ -683,7 +683,7 @@ const staticSEORoutes: RouteSEO[] = [
 ];
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => {
+export default defineConfig(({ mode, isSsrBuild }) => {
   // ── Knowledge Base articles: parse content at build time ──────────────────
   let kbSEORoutes: RouteSEO[] = [];
   try {
