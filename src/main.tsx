@@ -2,6 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
 import "./index.css";
+import { AppRoutes } from "./App";
 
 // Client-side hydration — guarded so it does not run during SSR prerendering
 if (typeof window !== "undefined") {
@@ -30,7 +31,6 @@ export async function prerender(data: { url: string }) {
   const { StaticRouter } = await import("react-router-dom/server");
   const { HelmetProvider: HP } = await import("react-helmet-async");
   const { QueryClient, QueryClientProvider } = await import("@tanstack/react-query");
-  const { AppRoutes } = await import("./App");
 
   const helmetContext: Record<string, unknown> = {};
   const queryClient = new QueryClient();
