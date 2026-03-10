@@ -1,7 +1,8 @@
 import React from "react";
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom/server";
-import { HelmetProvider } from "react-helmet-async";
+import helmetPkg from "react-helmet-async";
+const { HelmetProvider } = helmetPkg;
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AppRoutes } from "./App";
