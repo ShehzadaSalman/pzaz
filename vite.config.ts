@@ -125,6 +125,12 @@ export default defineConfig(({ mode }) => {
     plugins: [
       react(),
       mode === "development" && componentTagger(),
+      mode === "production" &&
+        vitePrerenderPlugin({
+          renderTarget: "#root",
+          prerenderScript: path.resolve(__dirname, "src/prerender.tsx"),
+          additionalPrerenderRoutes: staticRoutes,
+        }),
       mode === "production" && sitemapPlugin(allRoutes),
     ].filter(Boolean),
     resolve: {
