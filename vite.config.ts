@@ -783,6 +783,8 @@ export default defineConfig(({ mode, isSsrBuild }) => {
   const allRoutes = [...staticRoutes, ...blogRoutes];
   const allSEORoutes = [...mergedStaticSEORoutes, ...blogSEORoutes];
 
+  const isSSR = isSsrBuild === true;
+
   return {
     server: {
       host: "::",
@@ -793,14 +795,23 @@ export default defineConfig(({ mode, isSsrBuild }) => {
     },
     plugins: [
       react(),
-      mode === "development" && componentTagger(),
-      mode === "production" && sitemapPlugin(allRoutes),
-      mode === "production" && prerenderMetaPlugin(allSEORoutes),
+      !isSSR && mode === "development" && componentTagger(),
+      !isSSR && mode === "production" && sitemapPlugin(allRoutes),
+      !isSSR && mode === "production" && prerenderMetaPlugin(allSEORoutes),
     ].filter(Boolean),
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "./src"),
       },
     },
+    ...(isSSR && {
+      build: {
+        ssr: true,
+        rollupOptions: {
+          input: "src/entry-server.tsx",
+        },
+        outDir: "dist-ssr",
+      },
+    }),
   };
 });
