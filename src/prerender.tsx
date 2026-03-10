@@ -1,12 +1,20 @@
 import React from "react";
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom/server";
-import { HelmetProvider, FilledContext } from "react-helmet-async";
+import { HelmetProvider } from "react-helmet-async";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { AppRoutes } from "./App";
 
+interface HelmetContextFilled {
+  helmet: {
+    title: { toString(): string };
+    meta: { toString(): string };
+    link: { toString(): string };
+  };
+}
+
 export async function prerender(data: { url: string }) {
-  const helmetContext: FilledContext | Record<string, never> = {};
+  const helmetContext: Record<string, unknown> = {};
   const queryClient = new QueryClient();
 
   const html = renderToString(
