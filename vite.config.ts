@@ -128,7 +128,6 @@ export default defineConfig(({ mode }) => {
       mode === "production" &&
         vitePrerenderPlugin({
           renderTarget: "#root",
-          prerenderScript: path.resolve(__dirname, "src/prerender.tsx"),
           additionalPrerenderRoutes: staticRoutes,
         }),
       mode === "production" && sitemapPlugin(allRoutes),
