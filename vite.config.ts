@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
+import { vitePrerenderPlugin } from "vite-prerender-plugin";
 import fs from "fs";
 
 const SITE_URL = "https://pzaz.io";
