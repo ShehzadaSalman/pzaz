@@ -173,6 +173,16 @@ const staticRoutes = [
   "/shoot",
   "/visualise",
   "/write",
+  "/indie",
+  "/budget",
+  "/planning",
+  "/studio-pro",
+  "/storyboard",
+  "/scene-breakdown",
+  "/collaboration-tools",
+  "/task-management",
+  "/file-sharing",
+  "/project-management",
   // Knowledge Base – Getting Started
   "/knowledge-base/book-a-personalised-product-demonstration",
   "/knowledge-base/writing-your-script-with-pzaz",
@@ -218,46 +228,108 @@ const staticSEORoutes: RouteSEO[] = [
     path: "/",
     title: "Pzaz – Film Production Software",
     description: "Pzaz is the all-in-one film production platform for indie filmmakers. Manage scripts, budgets, schedules, and crew — powered by AI.",
+    bodyContent: `<h1>Pzaz – Film Production Software for Indie Filmmakers</h1>
+<p>Pzaz is the all-in-one film production platform built for indie filmmakers. Manage your scripts, budgets, schedules, storyboards, and crew — all in one place, powered by AI.</p>
+<h2>The Problem With Fragmented Film Production</h2>
+<p>Indie filmmakers juggle scripts in one app, budgets in another, and schedules in spreadsheets. Pzaz replaces the fragmented stack with a single connected production environment.</p>
+<h2>One Platform. Every Stage of Production.</h2>
+<p>From your first screenplay draft to distribution, Pzaz connects every phase of filmmaking — writing, planning, shooting, and selling — in a unified workspace.</p>
+<h2>AI-Powered Production Intelligence</h2>
+<p>Pzaz's AI engine automatically extracts characters, locations, props, and production requirements directly from your script — turning pages into production-ready breakdowns in seconds.</p>
+<h2>Products</h2>
+<ul>
+<li>Pzaz Script – AI-powered screenwriting and script breakdown</li>
+<li>Pzaz Storyboard – Visual development and animatics</li>
+<li>Pzaz Budget – Film budgeting connected to your script</li>
+<li>Pzaz Planning Pro – Preproduction inside production context</li>
+<li>Pzaz Studio Pro – Slate management for production companies</li>
+<li>Pzaz Shoot – Real-time on-set command center</li>
+<li>Pzaz Scene Breakdown – Tag, organise, and prepare scenes</li>
+<li>Pzaz Task Management – Clear ownership for film productions</li>
+<li>Pzaz Collaboration Tools – Real-time team coordination</li>
+<li>Pzaz File Sharing – Centralised production asset storage</li>
+<li>Pzaz Project Management – The work OS for filmmakers</li>
+</ul>`,
   },
   {
     path: "/script",
     title: "Script – AI-Powered Screenwriting | Pzaz",
     description: "Write, format, and collaborate on scripts with Pzaz's AI-powered screenwriting tool. Industry-standard formatting, real-time collaboration, and more.",
+    bodyContent: `<h1>Pzaz Script – AI-Powered Script Breakdown &amp; Production Intelligence</h1>
+<p>Import any screenplay and instantly extract characters, locations, props, and production data. Pzaz Script turns scripts into production-ready breakdowns powered by AI.</p>
+<h2>Why Screenwriters and Producers Choose Pzaz Script</h2>
+<p>Traditional script software stops at formatting. Pzaz Script is the only screenwriting tool that connects directly to your entire production — breakdowns, schedules, budgets, and team collaboration all flow from the script.</p>
+<h2>Key Features</h2>
+<ul>
+<li>Industry-standard screenplay formatting</li>
+<li>AI-powered script breakdown — extract characters, locations, props automatically</li>
+<li>Real-time collaboration with your writing team</li>
+<li>Import and export Final Draft, PDF, and fountain formats</li>
+<li>Scene-by-scene syncing with production schedules and storyboards</li>
+<li>AI writing assistant for drafting, rewriting, and scene suggestions</li>
+</ul>`,
   },
   {
     path: "/pricing",
     title: "Pricing – Plans for Every Filmmaker | Pzaz",
     description: "Flexible pricing plans for indie filmmakers and production teams. Start for free — no credit card required.",
+    bodyContent: `<h1>Pzaz Pricing – Flexible Plans for Every Filmmaker</h1>
+<p>Start free and scale as your productions grow. Pzaz offers individual tools from €19/month and full production bundles from €99/month. No credit card required to get started.</p>
+<h2>Plans</h2>
+<ul>
+<li>Indie – For solo filmmakers starting out</li>
+<li>Production Bundle – Full suite for active productions</li>
+<li>Studio Pro – Multi-project slate management for production companies</li>
+</ul>`,
   },
   {
     path: "/producer-blog",
     title: "Producer Blog – Filmmaking Insights | Pzaz",
     description: "Tips, guides, and insights for indie filmmakers and producers. Explore the Pzaz Producer Blog.",
+    bodyContent: `<h1>The Pzaz Producer Blog – Filmmaker Insights &amp; Industry Tips</h1>
+<p>Interviews, production tips, film business advice, and the latest in film production technology — curated for indie filmmakers and producers.</p>`,
   },
   {
     path: "/imagine",
     title: "Imagine – Moodboarding & Visual Planning | Pzaz",
     description: "Build stunning moodboards and visual references for your film. Pzaz's Imagine tool brings your creative vision to life.",
+    bodyContent: `<h1>Pzaz Imagine – Moodboarding &amp; Visual Development for Filmmakers</h1>
+<p>Build visual moodboards, collect reference images, and align your team on the look and feel of your film — all inside your production environment.</p>`,
   },
   {
     path: "/collaborate",
     title: "Collaborate – Real-Time Film Production Teamwork | Pzaz",
     description: "Work with your entire production team in real time. Pzaz's collaboration tools keep scripts, schedules, and shot lists in sync.",
+    bodyContent: `<h1>Pzaz Collaborate – Real-Time Teamwork for Film Productions</h1>
+<p>Keep your entire cast and crew aligned. Pzaz's collaboration tools connect scripts, schedules, shot lists, and communication in one real-time workspace.</p>`,
   },
   {
     path: "/breakdown",
     title: "Breakdown – Scene & Production Breakdown | Pzaz",
     description: "Break down your script into production-ready scene lists, shot lists, and schedules — all inside Pzaz.",
+    bodyContent: `<h1>Pzaz Breakdown – Scene &amp; Production Breakdown Tool</h1>
+<p>Break down your script into production-ready scene lists, shot lists, and schedules. Pzaz automates the breakdown process so you can focus on making the film.</p>`,
   },
   {
     path: "/about-us",
     title: "About Us – The Story Behind Pzaz",
     description: "Learn about the team and mission behind Pzaz — the all-in-one film production platform built for indie filmmakers.",
+    bodyContent: `<h1>About Pzaz – Built for Indie Filmmakers</h1>
+<p>Pzaz was built by filmmakers who experienced the chaos of managing productions across scattered tools. Our mission is to give indie filmmakers one connected platform that handles every stage of production.</p>`,
   },
   {
     path: "/pzaz-vs-final-draft",
     title: "Pzaz vs. Final Draft – The Complete Film Production Hub",
     description: "See how Pzaz outperforms Final Draft with end-to-end production tools: storyboarding, scheduling, real-time collaboration, AI writing, and more.",
+    bodyContent: `<h1>Pzaz vs. Final Draft – Why Filmmakers Are Making the Switch</h1>
+<p>Final Draft is a great screenwriting tool — but it stops at the script. Pzaz connects your screenplay to every stage of production: breakdown, scheduling, storyboarding, budgeting, and real-time collaboration.</p>
+<h2>Key Differences</h2>
+<ul>
+<li>Pzaz includes AI-powered script breakdown — Final Draft does not</li>
+<li>Pzaz connects script to schedule, budget, and storyboard automatically</li>
+<li>Pzaz includes real-time collaboration for the entire production team</li>
+<li>Pzaz is a complete production platform — not just a writing tool</li>
+</ul>`,
   },
   {
     path: "/sales-team",
@@ -294,26 +366,150 @@ const staticSEORoutes: RouteSEO[] = [
     path: "/pzaz-project",
     title: "Pzaz Project – Your Film Production Command Center",
     description: "Pzaz Project unifies your entire film production into one connected workspace. Boards, Docs, Messaging, Drive, and Smart Inbox — all in one place. Free to start.",
+    bodyContent: `<h1>Pzaz Project – Your Film Production Command Center</h1>
+<p>Pzaz Project unifies your entire film production into one connected workspace. Boards, Docs, Messaging, Drive, and Smart Inbox — all in one place. Free to start.</p>`,
   },
   {
     path: "/sell",
     title: "Pzaz Sell – Film Sales, Distribution & Marketing Workspace",
     description: "Pzaz Sell is your mission control for film marketing, outreach, and distribution. Pitch your script, plan festivals, manage licensing, and deliver assets — all in one place.",
+    bodyContent: `<h1>Pzaz Sell – Film Sales, Distribution &amp; Marketing Workspace</h1>
+<p>Your mission control for film marketing, outreach, and distribution. Pitch your script, plan your festival strategy, manage licensing deals, and deliver assets — all in one place.</p>`,
   },
   {
     path: "/shoot",
     title: "Pzaz Shoot – Real-Time On-Set Production Command Center",
     description: "Pzaz Shoot is your real-time command center for shoot days. Instant call sheet updates, live team alignment, script changes, and on-set collaboration — all in one place.",
+    bodyContent: `<h1>Pzaz Shoot – Real-Time On-Set Production Command Center</h1>
+<p>Instant call sheet updates, live team alignment, script changes, and on-set collaboration — all in one place. Keep your shoot day running smoothly with Pzaz Shoot.</p>`,
   },
   {
     path: "/visualise",
     title: "Pzaz Visualise – Storyboarding Inside Your Production Platform",
     description: "Pzaz Visualise brings storyboarding into your production workflow. Turn scripts into visual storyboards frame-by-frame with AI, real-time collaboration, and scene syncing.",
+    bodyContent: `<h1>Pzaz Visualise – Storyboarding Inside Your Production Platform</h1>
+<p>Turn scripts into visual storyboards frame-by-frame with AI assistance, real-time collaboration, and direct scene syncing. Pzaz Visualise brings your creative vision to life before you shoot a single frame.</p>`,
   },
   {
     path: "/write",
     title: "Pzaz Write – Screenwriting Connected to Your Entire Film Production",
     description: "Pzaz Write is the screenwriting tool built into your film production workflow. Industry-standard formatting, real-time collaboration, AI assistance, and scene-by-scene syncing.",
+    bodyContent: `<h1>Pzaz Write – Screenwriting Connected to Your Entire Film Production</h1>
+<p>Industry-standard screenplay formatting, real-time collaboration, AI writing assistance, and scene-by-scene syncing with your production schedule — all in one place.</p>`,
+  },
+  // New product pages
+  {
+    path: "/indie",
+    title: "Pzaz Indie – Film Production Software for Independent Filmmakers",
+    description: "Everything an indie filmmaker needs to take a project from script to screen. Free to start, no credit card required.",
+    bodyContent: `<h1>Pzaz Indie – Film Production Software for Independent Filmmakers</h1>
+<p>Everything an indie filmmaker needs to take a project from script to screen. Write your screenplay, break it down, plan your shoot, manage your budget, and collaborate with your team — all in Pzaz. Free to start.</p>
+<h2>Built for Indie Filmmakers</h2>
+<p>Pzaz Indie gives solo filmmakers and small crews access to professional production tools without the enterprise price tag. Start for free and scale as your production grows.</p>`,
+  },
+  {
+    path: "/budget",
+    title: "Pzaz Budget – Film Budgeting Software Connected to Your Production",
+    description: "Create accurate film budgets connected directly to your script, schedule, and crew. Pzaz Budget gives indie filmmakers real-time financial control over every production.",
+    bodyContent: `<h1>Pzaz Budget – Film Budgeting Connected to Your Production</h1>
+<p>Create accurate film budgets connected directly to your script, schedule, and crew. Pzaz Budget gives indie filmmakers real-time financial visibility and control over every production.</p>
+<h2>Why Film Budgeting Is Broken</h2>
+<p>Most filmmakers build budgets in spreadsheets disconnected from the rest of production. When the script changes, the budget doesn't update. When the schedule shifts, the numbers are wrong. Pzaz Budget solves this by connecting your budget to your entire production environment.</p>
+<h2>Key Features</h2>
+<ul>
+<li>Script-connected budgeting — budget updates when your script changes</li>
+<li>Department-by-department cost tracking</li>
+<li>Real-time spend vs. budget comparisons</li>
+<li>Export to standard industry formats</li>
+</ul>`,
+  },
+  {
+    path: "/planning",
+    title: "Pzaz Planning Pro – Preproduction Inside Production Context",
+    description: "Build your film before you shoot it. Planning Pro keeps creative development inside the same environment that will execute the film — script, breakdown, schedule, and feedback in one place.",
+    bodyContent: `<h1>Pzaz Planning Pro – Preproduction Inside Production Context</h1>
+<p>Build your film before you shoot it. Planning Pro keeps creative development inside the same environment that will execute the film — script, breakdown, schedule, and feedback all in one place.</p>
+<h2>Preproduction Without the Chaos</h2>
+<p>Most preproduction happens across scattered tools — scripts in Final Draft, breakdowns in spreadsheets, schedules in StudioBinder, feedback in email. Pzaz Planning Pro unifies the entire preproduction phase in one connected environment.</p>`,
+  },
+  {
+    path: "/studio-pro",
+    title: "Pzaz Studio Pro – Production Infrastructure for Slate Management",
+    description: "Turn fragmented expansion into structured maturity. Studio Pro establishes shared coordination logic across every production you run — giving executives real visibility across the entire slate.",
+    bodyContent: `<h1>Pzaz Studio Pro – Production Infrastructure for Slate Management</h1>
+<p>Turn fragmented expansion into structured maturity. Studio Pro establishes shared coordination logic across every production you run — giving executives and producers real visibility across the entire slate.</p>
+<h2>Built for Production Companies</h2>
+<p>Managing multiple productions simultaneously requires infrastructure, not just tools. Pzaz Studio Pro gives production companies the oversight, standardisation, and cross-project visibility they need to scale.</p>`,
+  },
+  {
+    path: "/storyboard",
+    title: "Pzaz Storyboard – Edit the Film Before You Make It",
+    description: "Rapid visual development inside a structured production environment. Generate, iterate and align storyboard shots with AI-assisted tools, animatics, and real-time collaboration.",
+    bodyContent: `<h1>Pzaz Storyboard – Edit the Film Before You Make It</h1>
+<p>Rapid visual development inside a structured production environment. Generate, iterate, and align storyboard shots with AI-assisted tools, animatics, and real-time collaboration.</p>
+<h2>Why Storyboarding Matters</h2>
+<p>The best films are edited in preproduction. Pzaz Storyboard gives directors and DPs the tools to visualise every shot before setting foot on set — reducing on-set decision fatigue and keeping the creative vision intact.</p>
+<h2>Key Features</h2>
+<ul>
+<li>AI-generated storyboard panels from scene descriptions</li>
+<li>Animatic creation directly from storyboard panels</li>
+<li>Real-time collaboration with directors, DPs, and producers</li>
+<li>Scene-synced panels linked to your script and schedule</li>
+<li>Shot composition tools with camera angle and movement controls</li>
+</ul>`,
+  },
+  {
+    path: "/scene-breakdown",
+    title: "Pzaz Scene Breakdown – Tag, Organise, Prepare",
+    description: "Break down scenes, add shots, assign teams, and track progress. Pzaz Scene Breakdown keeps creative intent aligned with what production actually requires.",
+    bodyContent: `<h1>Pzaz Scene Breakdown – Tag, Organise, Prepare</h1>
+<p>Break down scenes, add shots, assign teams, and track progress. Pzaz Scene Breakdown keeps creative intent aligned with what production actually requires.</p>
+<h2>From Script to Set in One Flow</h2>
+<p>Scene Breakdown connects your script directly to your production schedule. Tag every element — cast, locations, props, wardrobe, vehicles — and watch your breakdown automatically inform your call sheets and budget.</p>`,
+  },
+  {
+    path: "/collaboration-tools",
+    title: "Collaboration Tools – Real-Time Production Teamwork | Pzaz",
+    description: "Keep your entire production team aligned with Pzaz's built-in collaboration tools. Real-time editing, comments, task assignment, and team communication — all connected to your production.",
+    bodyContent: `<h1>Pzaz Collaboration Tools – Real-Time Production Teamwork</h1>
+<p>Keep your entire production team aligned. Pzaz's built-in collaboration tools connect real-time editing, comments, task assignment, and team communication directly to your production environment.</p>
+<h2>Why Production Collaboration Is Broken</h2>
+<p>Most production teams communicate across Slack, email, WhatsApp, and Google Docs — none of which are connected to the actual production. Pzaz brings all collaboration inside the production context where it belongs.</p>`,
+  },
+  {
+    path: "/task-management",
+    title: "Task Management – Clear Ownership for Film Productions | Pzaz",
+    description: "Keep every department aligned with task management built into the production environment. Assign work, track deadlines, and keep production momentum going with Pzaz.",
+    bodyContent: `<h1>Pzaz Task Management – Clear Ownership for Film Productions</h1>
+<p>Keep every department aligned with task management built directly into the production environment. Assign work, track deadlines, and keep production momentum going from preproduction through post.</p>
+<h2>Production Tasks That Actually Connect to Production</h2>
+<p>Unlike generic task management tools, Pzaz tasks are connected to your script, schedule, and production data — so context is never lost and nothing falls through the cracks.</p>`,
+  },
+  {
+    path: "/file-sharing",
+    title: "File Sharing & Media Storage – Centralise Your Production Assets | Pzaz",
+    description: "Centralise, share, and protect your film production assets inside Pzaz. Keep scripts, storyboards, footage, and references connected to the production — not scattered across drives.",
+    bodyContent: `<h1>Pzaz File Sharing &amp; Media Storage – Centralise Your Production Assets</h1>
+<p>Centralise, share, and protect your film production assets inside Pzaz. Keep scripts, storyboards, footage, and references connected to the production — not scattered across Google Drive, Dropbox, and WeTransfer.</p>
+<h2>One Drive. Fully Connected to Production.</h2>
+<p>Every file in Pzaz is connected to its production context. A storyboard panel links to the scene it visualises. A location photo connects to the scenes shot there. Assets are never orphaned from the production they belong to.</p>`,
+  },
+  {
+    path: "/project-management",
+    title: "Project Management – The Work OS for Filmmakers | Pzaz",
+    description: "Stop coordinating a film across scattered tools. Pzaz gives filmmakers one unified environment where scripts, schedules, budgets, tasks, and communication all live together.",
+    bodyContent: `<h1>Pzaz Project Management – The Work OS for Filmmakers</h1>
+<p>Stop coordinating a film across scattered tools. Pzaz gives filmmakers one unified environment where scripts, schedules, budgets, tasks, and communication all live together.</p>
+<h2>Why Generic Project Management Tools Fail Filmmakers</h2>
+<p>Asana, Monday, and Notion were built for software teams and marketing agencies — not film productions. They don't understand scenes, departments, call sheets, or script breakdowns. Pzaz does.</p>
+<h2>Key Capabilities</h2>
+<ul>
+<li>Script-connected task and schedule management</li>
+<li>Department boards with role-based permissions</li>
+<li>Production-wide progress tracking</li>
+<li>Integrated communication and file sharing</li>
+<li>AI-powered production intelligence and automation</li>
+</ul>`,
   },
   // Knowledge Base – Getting Started
   {
