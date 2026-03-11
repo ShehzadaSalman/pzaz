@@ -19,6 +19,7 @@ export default {
         bebas: ['Bebas Neue', 'sans-serif'],
         gloock: ['Gloock', 'serif'],
         lato: ['Lato', 'sans-serif'],
+        poppins: ['Poppins', 'system-ui', 'sans-serif'],
       },
       colors: {
         brand: {
