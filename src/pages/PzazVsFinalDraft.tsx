@@ -106,7 +106,7 @@ const PzazVsFinalDraft = () => {
               <Link to="/pricing">
                 <Button variant="default" size="lg">Start for Free</Button>
               </Link>
-              <a href="https://calendly.com/pzaz-tv/30min" target="_blank" rel="noopener noreferrer">
+              <a href="https://calendly.com/filmmaking-app/30min" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="lg">Book a Demo</Button>
               </a>
             </div>
