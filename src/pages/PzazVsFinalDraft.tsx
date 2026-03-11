@@ -311,7 +311,7 @@ const PzazVsFinalDraft = () => {
                 <Link to="/pricing">
                   <Button variant="default" size="lg" className="bg-white text-[#20124D] hover:bg-white/90">Start for Free</Button>
                 </Link>
-                <a href="https://calendly.com/pzaz-tv/30min" target="_blank" rel="noopener noreferrer">
+                <a href="https://calendly.com/filmmaking-app/30min" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10">Book a Demo</Button>
                 </a>
               </div>
