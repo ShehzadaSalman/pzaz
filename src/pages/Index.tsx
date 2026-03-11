@@ -13,7 +13,7 @@ import SEO from "@/components/SEO";
 
 const Index = () => {
   return (
-    <PageLayout className="font-poppins">
+    <PageLayout className="min-h-screen bg-background font-poppins">
       <SEO
         title="Pzaz – Film Production Software for Indie Filmmakers"
         description="Pzaz is the all-in-one film production platform for indie filmmakers. Manage scripts, budgets, schedules, and crew — powered by AI."
