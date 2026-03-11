@@ -4,4 +4,4 @@ COPY package.json package-lock.json ./
 RUN npm ci
 COPY . .
 RUN npm run build
-CMD ["npx", "serve", "-s", "dist", "-l", "8080"]
+CMD ["npx", "serve", "dist", "-l", "8080"]
