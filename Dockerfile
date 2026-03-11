@@ -1,7 +1,7 @@
-FROM node:18.15.0-alpine
+FROM node:18-slim
 WORKDIR /app
-COPY package.json package-lock.json ./
-RUN npm ci
+COPY package.json ./
+RUN npm install
 COPY . .
 RUN npm run build
 CMD ["npx", "serve", "dist", "-l", "8080"]
