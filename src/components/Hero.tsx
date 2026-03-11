@@ -141,7 +141,7 @@ const Hero = () => {
                   Book a Demo
                 </Button>
               </a>
-              <p className="font-lato font-normal text-[16px] leading-[30px] tracking-normal text-center text-[#878787]">Up and running in 15 minutes.</p>
+              <p className="font-lato font-normal text-[16px] leading-[30px] tracking-normal text-center text-[#878787]">Be up and running in 15 minutes.</p>
             </div>
           </motion.div>
         </div>
