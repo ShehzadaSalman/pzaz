@@ -50,7 +50,7 @@ const TaskManagementCTA = () => {
                     Start Managing Tasks
                   </Button>
                 </Link>
-                <a href="https://calendly.com/pzaz-tv/30min" target="_blank" rel="noopener noreferrer">
+                <a href="https://calendly.com/filmmaking-app/30min" target="_blank" rel="noopener noreferrer">
                   <Button
                     size="xl"
                     variant="outline"

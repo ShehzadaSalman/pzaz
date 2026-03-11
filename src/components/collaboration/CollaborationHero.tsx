@@ -74,7 +74,7 @@ const CollaborationHero = () => {
                 <ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />
               </Button>
             </Link>
-            <a href="https://calendly.com/pzaz-tv/30min" target="_blank" rel="noopener noreferrer">
+            <a href="https://calendly.com/filmmaking-app/30min" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="outline"
                 size="lg"
