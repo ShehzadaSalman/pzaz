@@ -7,6 +7,12 @@ const DEFAULT_DESCRIPTION =
   "Pzaz is the all-in-one film production platform for indie filmmakers. Manage scripts, budgets, schedules, and crew — powered by AI.";
 const DEFAULT_IMAGE = `${SITE_URL}/og-image.png`;
 
+const isNonProductionDomain = (): boolean => {
+  if (typeof window === "undefined") return false;
+  const hostname = window.location.hostname;
+  return hostname.includes("lovable.app") || hostname === "localhost" || hostname === "127.0.0.1";
+};
+
 interface SEOProps {
   title?: string;
   description?: string;
@@ -28,6 +34,9 @@ const SEO = ({
 }: SEOProps) => (
   <Helmet>
     <title>{title}</title>
+    {isNonProductionDomain() && (
+      <meta name="robots" content="noindex, nofollow" />
+    )}
     <meta name="description" content={description} />
     {keywords && keywords.length > 0 && (
       <meta name="keywords" content={keywords.join(", ")} />
