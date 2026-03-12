@@ -1,78 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Button } from "@/components/ui/button";
 import ArrowIcon from "@/components/ui/ArrowIcon";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import ctaPlayIcon from "@/assets/cta-play-icon.svg";
-import banner1 from "@/assets/home-banner/banner1.png";
-import banner2 from "@/assets/home-banner/banner2.png";
-import banner3 from "@/assets/home-banner/banner3.png";
-import banner4 from "@/assets/home-banner/banner4.png";
-import banner5 from "@/assets/home-banner/banner5.png";
-import banner6 from "@/assets/home-banner/banner6.png";
-
-const heroSlides = [
-  {
-    image: banner1,
-    imageAlt: "AI generator view",
-  },
-  {
-    image: banner2,
-    imageAlt: "Characters view",
-  },
-  {
-    image: banner3,
-    imageAlt: "Ideation board view",
-  },
-  {
-    image: banner4,
-    imageAlt: "Scene properties view",
-  },
-  {
-    image: banner5,
-    imageAlt: "Script editor view",
-  },
-  {
-    image: banner6,
-    imageAlt: "Updated budget view",
-  },
-];
 
 const Hero = () => {
-  const [targetSlide, setTargetSlide] = useState(0);
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [loadedSlides, setLoadedSlides] = useState<boolean[]>(
-    heroSlides.map((_, index) => index === 0)
-  );
-
-  useEffect(() => {
-    const slideInterval = setInterval(() => {
-      setTargetSlide((previousSlide) => (previousSlide + 1) % heroSlides.length);
-    }, 3500);
-
-    return () => clearInterval(slideInterval);
-  }, []);
-
-  useEffect(() => {
-    heroSlides.forEach((slide, index) => {
-      if (index === 0) return;
-      const image = new Image();
-      image.src = slide.image;
-      image.onload = () => {
-        setLoadedSlides((previousLoaded) => {
-          if (previousLoaded[index]) return previousLoaded;
-          const nextLoaded = [...previousLoaded];
-          nextLoaded[index] = true;
-          return nextLoaded;
-        });
-      };
-    });
-  }, []);
-
-  useEffect(() => {
-    if (!loadedSlides[targetSlide]) return;
-    setCurrentSlide(targetSlide);
-  }, [loadedSlides, targetSlide]);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-[60px]">
