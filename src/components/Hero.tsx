@@ -79,7 +79,7 @@ const Hero = () => {
           </motion.div>
         </div>
 
-        {/* Hero Visual Carousel */}
+        {/* Hero Video */}
         <motion.div
           initial={{ opacity: 0, y: 50, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -87,38 +87,14 @@ const Hero = () => {
           className="mt-16 lg:mt-24 max-w-6xl mx-auto"
         >
           <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border/50">
-            <img
-              src={heroSlides[0].image}
-              alt=""
-              aria-hidden="true"
-              loading="eager"
-              decoding="async"
-              className="w-full h-auto opacity-0 pointer-events-none select-none"
+            <video
+              src="/videos/hero-banner.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-auto block"
             />
-            {heroSlides.map((slide, index) => (
-              <motion.img
-                key={slide.image}
-                src={slide.image}
-                alt={slide.imageAlt}
-                loading={index === 0 ? "eager" : "lazy"}
-                decoding="async"
-                onLoad={() => {
-                  setLoadedSlides((previousLoaded) => {
-                    if (previousLoaded[index]) return previousLoaded;
-                    const nextLoaded = [...previousLoaded];
-                    nextLoaded[index] = true;
-                    return nextLoaded;
-                  });
-                }}
-                className="absolute inset-0 w-full h-full object-cover"
-                initial={false}
-                animate={{
-                  opacity: currentSlide === index ? 1 : 0,
-                  scale: currentSlide === index ? 1 : 1.015,
-                }}
-                transition={{ duration: 0.95, ease: [0.22, 1, 0.36, 1] }}
-              />
-            ))}
           </div>
         </motion.div>
       </div>
