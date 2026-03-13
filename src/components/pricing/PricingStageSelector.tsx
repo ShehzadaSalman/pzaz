@@ -16,6 +16,7 @@ interface Tier {
   highlighted?: boolean;
   badge?: string;
   hasUserSelector?: boolean;
+  disabled?: boolean;
 }
 
 const BASE_CHECKOUT = "https://projector.pzaz.io/checkout";
@@ -113,8 +114,9 @@ const section2Tiers: Tier[] = [
       "Governed AI access controls",
       "Separate credit allocation",
     ],
-    cta: "Add Private LLM",
+    cta: "Coming Soon",
     checkoutUrl: `${BASE_CHECKOUT}?plan=indie&period=month&bundles=pzaz_private_llm&currency=EUR`,
+    disabled: true,
   },
 ];
 
@@ -304,10 +306,11 @@ const PricingStageSelector = () => {
           size="lg"
           variant={tier.highlighted ? "default" : "outline"}
           className="w-full group"
-          onClick={() => window.open(tier.checkoutUrl, "_blank")}
+          onClick={() => !tier.disabled && window.open(tier.checkoutUrl, "_blank")}
+          disabled={tier.disabled}
         >
           {tier.cta}
-          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+          {!tier.disabled && <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />}
         </Button>
 
         {/* Footer text */}
