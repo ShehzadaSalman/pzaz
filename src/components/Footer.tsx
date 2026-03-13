@@ -31,15 +31,16 @@ const footerLinks = {
   Resources: ["Blog", "Pzaz vs Final Draft", "Knowledge Base"],
   Company: ["Sales Team", "Brand", "Culture"],
   Legal: ["Privacy", "Terms"],
-  Social: ["YouTube", "Instagram", "Facebook", "LinkedIn", "TikTok"],
+  Social: ["YouTube", "Instagram", "Facebook", "LinkedIn", "TikTok", "X"],
 };
 
 const socialLinks: Record<string, string> = {
-  "YouTube": "https://www.youtube.com/@pzazfilmmaking",
-  "Facebook": "https://web.facebook.com/pzaz.io/",
-  "Instagram": "https://www.instagram.com/pzaz.io/",
-  "LinkedIn": "https://uk.linkedin.com/company/pzazio",
-  "TikTok": "https://www.tiktok.com/@pzaz.io",
+  "YouTube": "https://www.youtube.com/@pzazofficial",
+  "Facebook": "https://www.facebook.com/pzazofficial",
+  "Instagram": "https://www.instagram.com/pzazofficial",
+  "LinkedIn": "https://www.linkedin.com/company/pzazofficial/",
+  "TikTok": "https://www.tiktok.com/@pzazio",
+  "X": "https://x.com/pzaz_io",
 };
 
 const Footer = () => {
