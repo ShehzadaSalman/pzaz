@@ -16,6 +16,7 @@ interface Tier {
   highlighted?: boolean;
   badge?: string;
   hasUserSelector?: boolean;
+  disabled?: boolean;
 }
 
 const BASE_CHECKOUT = "https://projector.pzaz.io/checkout";
