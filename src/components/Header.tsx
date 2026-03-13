@@ -409,17 +409,42 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
                 >
                   Contact
                 </button>
-                <div className="flex flex-col gap-3 pt-4">
-                  <a href="https://projector.pzaz.io/sign-in">
-                    <Button variant="ghost" className="w-full justify-center">Log in</Button>
+                <div className="flex flex-col gap-3 pt-4 pb-2">
+                  <a href="https://projector.pzaz.io/sign-in" className="w-full">
+                    <button
+                      className="w-full py-3 rounded-[10px] font-black text-sm border-2 transition-colors"
+                      style={{
+                        fontFamily: "'Lato', sans-serif",
+                        fontWeight: 900,
+                        color: "#5C28A3",
+                        borderColor: "#5C28A3",
+                        background: "transparent",
+                      }}
+                    >
+                      Log in
+                    </button>
                   </a>
-                  <Link to="/pricing" onClick={() => setMobileMenuOpen(false)}>
+                  <Link to="/pricing" onClick={() => setMobileMenuOpen(false)} className="w-full">
                     <Button variant="default" className="w-full">Start for Free</Button>
                   </Link>
                 </div>
               </div>
             </div>
           </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Dark backdrop overlay */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="md:hidden fixed inset-0 bg-black/50 z-[-1]"
+            onClick={() => setMobileMenuOpen(false)}
+          />
         )}
       </AnimatePresence>
     </header>
