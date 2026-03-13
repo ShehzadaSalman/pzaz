@@ -58,7 +58,7 @@ const Hero = () => {
               <p className="font-lato font-normal text-[16px] leading-[30px] tracking-normal text-center text-[#878787]">No credit card.</p>
             </div>
             <div className="flex flex-col items-center gap-1">
-              <a href="https://calendly.com/pzaz-tv/30min" target="_blank" rel="noopener noreferrer">
+              <a href="https://calendly.com/filmmaking-app/30min" target="_blank" rel="noopener noreferrer">
                 <Button
                   variant="outline"
                   size="lg"
