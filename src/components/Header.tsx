@@ -1,13 +1,79 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Pill } from "@/components/ui/pill";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation, Link } from "react-router-dom";
 import pzazLogo from "@/assets/pzaz-logo.png";
 import LanguageDropdown from "@/components/LanguageDropdown";
 import ContactModal from "@/components/ContactModal";
+
+interface MobileAccordionProps {
+  item: NavItem;
+  isActive: boolean;
+  onLinkClick: () => void;
+}
+
+const MobileAccordion = ({ item, isActive, onLinkClick }: MobileAccordionProps) => {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="border-b border-border/30">
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex items-center justify-between py-3 text-left"
+        style={{ fontFamily: "'Lato', sans-serif" }}
+      >
+        <span
+          className="font-medium"
+          style={{ color: isActive || open ? "#5C28A4" : "#20124D" }}
+        >
+          {item.label}
+        </span>
+        <ChevronDown
+          className="w-4 h-4 transition-transform duration-200"
+          style={{ color: "#5C28A4", transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
+        />
+      </button>
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="overflow-hidden"
+          >
+            <div className="pb-2 flex flex-col gap-0.5">
+              {item.children?.map((child) =>
+                child.isHash ? (
+                  <a
+                    key={child.label}
+                    href={child.to}
+                    onClick={onLinkClick}
+                    className="pl-4 py-2.5 text-sm rounded-lg transition-colors"
+                    style={{ color: "#20124D", fontFamily: "'Lato', sans-serif" }}
+                  >
+                    {child.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={child.label}
+                    to={child.to}
+                    onClick={onLinkClick}
+                    className="pl-4 py-2.5 text-sm rounded-lg transition-colors hover:bg-[#F7F2FD]"
+                    style={{ color: "#20124D", fontFamily: "'Lato', sans-serif" }}
+                  >
+                    {child.label}
+                  </Link>
+                )
+              )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
 
 interface NavItem {
   label: string;
@@ -294,38 +360,67 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
 
       {/* Mobile Menu */}
       <AnimatePresence>
-        {mobileMenuOpen &&
-        <motion.div
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: "auto" }}
-          exit={{ opacity: 0, height: 0 }}
-          className="md:hidden bg-background border-t border-border/50">
-            <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
-              {navItems.map((item) =>
-                item.isDropdown ? (
-                  <div key={item.label} className="flex flex-col gap-1">
-                    <span className="text-foreground font-medium py-2">{item.label}</span>
-                    {item.children?.map((child) =>
-                      child.isHash ? (
-                        <a key={child.label} href={child.to} className="text-foreground/70 font-medium py-1.5 pl-4">{child.label}</a>
-                      ) : (
-                        <Link key={child.label} to={child.to} className="text-foreground/70 font-medium py-1.5 pl-4">{child.label}</Link>
-                      )
-                    )}
-                  </div>
-                ) : item.isHash ? (
-                  <a key={item.label} href={item.to} className="text-foreground font-medium py-2">{item.label}</a>
-                ) : (
-                  <Link key={item.label} to={item.to} className="text-foreground font-medium py-2">{item.label}</Link>
-                )
-              )}
-              <button onClick={() => { setContactOpen(true); setMobileMenuOpen(false); }} className="text-foreground font-medium py-2 text-left">Contact</button>
-              <hr className="border-border/50" />
-              <a href="https://projector.pzaz.io/sign-in"><Button variant="ghost" className="justify-start">Log in</Button></a>
-              <Link to="/pricing"><Button variant="default">Start for Free</Button></Link>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-background border-t border-border/50 overflow-hidden"
+          >
+            <div
+              className="overflow-y-auto"
+              style={{ maxHeight: "calc(100dvh - 72px)" }}
+            >
+              <div className="container mx-auto px-6 py-6 flex flex-col gap-1">
+                {navItems.map((item) =>
+                  item.isDropdown ? (
+                    <MobileAccordion
+                      key={item.label}
+                      item={item}
+                      isActive={isActive(item)}
+                      onLinkClick={() => setMobileMenuOpen(false)}
+                    />
+                  ) : item.isHash ? (
+                    <a
+                      key={item.label}
+                      href={item.to}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="text-foreground font-medium py-3 border-b border-border/30"
+                      style={{ fontFamily: "'Lato', sans-serif" }}
+                    >
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link
+                      key={item.label}
+                      to={item.to}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="text-foreground font-medium py-3 border-b border-border/30"
+                      style={{ fontFamily: "'Lato', sans-serif" }}
+                    >
+                      {item.label}
+                    </Link>
+                  )
+                )}
+                <button
+                  onClick={() => { setContactOpen(true); setMobileMenuOpen(false); }}
+                  className="text-foreground font-medium py-3 text-left border-b border-border/30"
+                  style={{ fontFamily: "'Lato', sans-serif" }}
+                >
+                  Contact
+                </button>
+                <div className="flex flex-col gap-3 pt-4">
+                  <a href="https://projector.pzaz.io/sign-in">
+                    <Button variant="ghost" className="w-full justify-center">Log in</Button>
+                  </a>
+                  <Link to="/pricing" onClick={() => setMobileMenuOpen(false)}>
+                    <Button variant="default" className="w-full">Start for Free</Button>
+                  </Link>
+                </div>
+              </div>
             </div>
           </motion.div>
-        }
+        )}
       </AnimatePresence>
     </header>
     <ContactModal open={contactOpen} onOpenChange={setContactOpen} />
