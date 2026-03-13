@@ -306,10 +306,11 @@ const PricingStageSelector = () => {
           size="lg"
           variant={tier.highlighted ? "default" : "outline"}
           className="w-full group"
-          onClick={() => window.open(tier.checkoutUrl, "_blank")}
+          onClick={() => !tier.disabled && window.open(tier.checkoutUrl, "_blank")}
+          disabled={tier.disabled}
         >
           {tier.cta}
-          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+          {!tier.disabled && <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />}
         </Button>
 
         {/* Footer text */}
