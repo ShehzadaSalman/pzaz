@@ -152,6 +152,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
   const [contactOpen, setContactOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const navRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLElement>(null);
   const location = useLocation();
   const isScriptPage = location.pathname === "/script";
   const isIndiePage = location.pathname === "/indie";
@@ -168,6 +169,9 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
     const handleClickOutside = (e: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(e.target as Node)) {
         setOpenDropdown(null);
+      }
+      if (headerRef.current && !headerRef.current.contains(e.target as Node)) {
+        setMobileMenuOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
