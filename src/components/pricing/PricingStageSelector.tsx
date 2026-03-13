@@ -98,7 +98,7 @@ const section2Tiers: Tier[] = [
       "Shares project AI credit allocation",
     ],
     cta: "Get Started",
-    checkoutUrl: `${BASE_CHECKOUT}?plan=indie&period=month&bundles=pzaz_budget&currency=EUR`,
+    checkoutUrl: `https://projector.pzaz.io/checkout?plan=indie&period=month&addons=pzaz_budget&currency=EUR`,
   },
   {
     id: "private-llm",
