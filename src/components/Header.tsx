@@ -1,13 +1,79 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Pill } from "@/components/ui/pill";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation, Link } from "react-router-dom";
 import pzazLogo from "@/assets/pzaz-logo.png";
 import LanguageDropdown from "@/components/LanguageDropdown";
 import ContactModal from "@/components/ContactModal";
+
+interface MobileAccordionProps {
+  item: NavItem;
+  isActive: boolean;
+  onLinkClick: () => void;
+}
+
+const MobileAccordion = ({ item, isActive, onLinkClick }: MobileAccordionProps) => {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="border-b border-border/30">
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex items-center justify-between py-3 text-left"
+        style={{ fontFamily: "'Lato', sans-serif" }}
+      >
+        <span
+          className="font-medium"
+          style={{ color: isActive || open ? "#5C28A4" : "#20124D" }}
+        >
+          {item.label}
+        </span>
+        <ChevronDown
+          className="w-4 h-4 transition-transform duration-200"
+          style={{ color: "#5C28A4", transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
+        />
+      </button>
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="overflow-hidden"
+          >
+            <div className="pb-2 flex flex-col gap-0.5">
+              {item.children?.map((child) =>
+                child.isHash ? (
+                  <a
+                    key={child.label}
+                    href={child.to}
+                    onClick={onLinkClick}
+                    className="pl-4 py-2.5 text-sm rounded-lg transition-colors"
+                    style={{ color: "#20124D", fontFamily: "'Lato', sans-serif" }}
+                  >
+                    {child.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={child.label}
+                    to={child.to}
+                    onClick={onLinkClick}
+                    className="pl-4 py-2.5 text-sm rounded-lg transition-colors hover:bg-[#F7F2FD]"
+                    style={{ color: "#20124D", fontFamily: "'Lato', sans-serif" }}
+                  >
+                    {child.label}
+                  </Link>
+                )
+              )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
 
 interface NavItem {
   label: string;
