@@ -43,7 +43,7 @@ const IndieCTA = () => {
               />
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link to="/pricing">
+                <a href="https://projector.pzaz.io/checkout?plan=indie&period=month&addons=indie_free&currency=EUR" target="_blank" rel="noopener noreferrer">
                   <Button
                     size="xl"
                     variant="outline"
@@ -52,7 +52,7 @@ const IndieCTA = () => {
                   >
                     Start Indie — Free Forever
                   </Button>
-                </Link>
+                </a>
               </div>
 
               <p className="mt-6 text-sm text-primary-foreground/60">

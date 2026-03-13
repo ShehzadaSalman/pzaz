@@ -43,7 +43,7 @@ const section1Tiers: Tier[] = [
     cta: "Start Free",
     highlighted: true,
     badge: "Most Popular",
-    checkoutUrl: `${BASE_CHECKOUT}?plan=indie&period=month&currency=EUR`,
+    checkoutUrl: `https://projector.pzaz.io/checkout?plan=indie&period=month&addons=indie_free&currency=EUR`,
   },
   {
     id: "planning-pro",
