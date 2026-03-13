@@ -76,7 +76,7 @@ const section1Tiers: Tier[] = [
       "Scalable studio coordination infrastructure",
     ],
     cta: "Get Started",
-    checkoutUrl: `${BASE_CHECKOUT}?plan=indie&period=month&bundles=pzaz_studio&currency=EUR`,
+    checkoutUrl: `https://projector.pzaz.io/checkout?plan=indie&period=month&bundles=private_ai_cloud&currency=EUR`,
     hasUserSelector: true,
   },
 ];
