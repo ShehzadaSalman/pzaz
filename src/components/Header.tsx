@@ -152,6 +152,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
   const [contactOpen, setContactOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const navRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLElement>(null);
   const location = useLocation();
   const isScriptPage = location.pathname === "/script";
   const isIndiePage = location.pathname === "/indie";
@@ -168,6 +169,9 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
     const handleClickOutside = (e: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(e.target as Node)) {
         setOpenDropdown(null);
+      }
+      if (headerRef.current && !headerRef.current.contains(e.target as Node)) {
+        setMobileMenuOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -201,7 +205,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
 
   return (
     <>
-    <header className={`${variant === "fixed" ? "fixed top-0 left-0 right-0" : "sticky top-0"} z-50 glass`} style={{ borderBottom: '1px solid #D4BAF4' }}>
+    <header ref={headerRef} className={`${variant === "fixed" ? "fixed top-0 left-0 right-0" : "sticky top-0"} z-50 glass`} style={{ borderBottom: '1px solid #D4BAF4' }}>
       <div className="max-w-6xl mx-auto px-2  py-4">
         <nav className="flex items-center justify-between">
           {/* Logo + Language */}
@@ -434,19 +438,6 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
         )}
       </AnimatePresence>
 
-      {/* Dark backdrop overlay */}
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="md:hidden fixed inset-0 bg-black/50 z-[-1]"
-            onClick={() => setMobileMenuOpen(false)}
-          />
-        )}
-      </AnimatePresence>
     </header>
     <ContactModal open={contactOpen} onOpenChange={setContactOpen} />
     </>);
