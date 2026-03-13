@@ -46,7 +46,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6"
+            className="flex flex-row flex-wrap items-start justify-center gap-4 mb-6"
           >
             <div className="flex flex-col items-center gap-1">
               <Link to="/pricing">
