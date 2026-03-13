@@ -59,7 +59,7 @@ const section1Tiers: Tier[] = [
       "Expanded coordination capacity",
     ],
     cta: "Get Started",
-    checkoutUrl: `${BASE_CHECKOUT}?plan=indie&period=month&bundles=pzaz_planning&currency=EUR`,
+    checkoutUrl: `https://projector.pzaz.io/checkout?plan=indie&period=month&bundles=pzaz_studio&currency=EUR`,
     hasUserSelector: true,
   },
   {
