@@ -205,7 +205,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
 
   return (
     <>
-    <header className={`${variant === "fixed" ? "fixed top-0 left-0 right-0" : "sticky top-0"} z-50 glass`} style={{ borderBottom: '1px solid #D4BAF4' }}>
+    <header ref={headerRef} className={`${variant === "fixed" ? "fixed top-0 left-0 right-0" : "sticky top-0"} z-50 glass`} style={{ borderBottom: '1px solid #D4BAF4' }}>
       <div className="max-w-6xl mx-auto px-2  py-4">
         <nav className="flex items-center justify-between">
           {/* Logo + Language */}
