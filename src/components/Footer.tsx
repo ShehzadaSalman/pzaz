@@ -31,7 +31,7 @@ const footerLinks = {
   Resources: ["Blog", "Pzaz vs Final Draft", "Knowledge Base"],
   Company: ["Sales Team", "Brand", "Culture"],
   Legal: ["Privacy", "Terms"],
-  Social: ["YouTube", "Instagram", "Facebook", "LinkedIn", "TikTok"],
+  Social: ["YouTube", "Instagram", "Facebook", "LinkedIn", "TikTok", "X"],
 };
 
 const socialLinks: Record<string, string> = {
