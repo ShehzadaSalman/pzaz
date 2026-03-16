@@ -219,13 +219,31 @@ const Schools = () => {
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {["Google Docs", "Trello", "Google Drive", "Slack"].map((tool, i) => (
-              <motion.div key={tool} {...fadeUp(i * 0.08)}>
-                <div className="relative rounded-xl border border-border bg-background p-5 text-center">
+            {[
+              {
+                name: "Google Docs",
+                icon: "https://upload.wikimedia.org/wikipedia/commons/0/01/Google_Docs_logo_%282014-2020%29.svg",
+              },
+              {
+                name: "Trello",
+                icon: "https://cdn.worldvectorlogo.com/logos/trello.svg",
+              },
+              {
+                name: "Google Drive",
+                icon: "https://upload.wikimedia.org/wikipedia/commons/1/12/Google_Drive_icon_%282020%29.svg",
+              },
+              {
+                name: "Slack",
+                icon: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Slack_icon_2019.svg",
+              },
+            ].map((tool, i) => (
+              <motion.div key={tool.name} {...fadeUp(i * 0.08)}>
+                <div className="relative rounded-xl border border-border bg-background p-5 flex flex-col items-center gap-3 text-center">
                   <div className="absolute top-2 right-2 w-5 h-5 rounded-full bg-destructive/10 flex items-center justify-center">
                     <span className="text-destructive text-xs font-bold">✕</span>
                   </div>
-                  <p className="text-sm font-medium text-muted-foreground">{tool}</p>
+                  <img src={tool.icon} alt={tool.name} className="w-10 h-10 object-contain" />
+                  <p className="text-sm font-medium text-muted-foreground">{tool.name}</p>
                 </div>
               </motion.div>
             ))}
