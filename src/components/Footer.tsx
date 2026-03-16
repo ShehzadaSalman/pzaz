@@ -29,7 +29,7 @@ const linkRoutes: Record<string, string> = {
 const footerLinks = {
   Product: ["Breakdown", "Imagine", "Collaborate", "Pzaz Project", "Sell", "Shoot", "Visualise", "Write"],
   Resources: ["Blog", "Pzaz vs Final Draft", "Knowledge Base"],
-  Company: ["Sales Team", "Brand", "Culture"],
+  Company: ["Sales Team", "Brand", "Culture", "Schools"],
   Legal: ["Privacy", "Terms"],
   Social: ["YouTube", "Instagram", "Facebook", "LinkedIn", "TikTok", "X"],
 };
