@@ -125,10 +125,14 @@ const UserSelector = ({
   users,
   onChange,
   onContactClick,
+  symbol,
+  extraUserDisplayPrice,
 }: {
   users: number;
   onChange: (n: number) => void;
   onContactClick: () => void;
+  symbol: string;
+  extraUserDisplayPrice: number;
 }) => {
   const [open, setOpen] = useState(false);
 
@@ -164,7 +168,7 @@ const UserSelector = ({
                 {n} {n === 1 ? "user" : "users"}
                 {n > 1 && (
                   <span className="ml-2 text-xs text-muted-foreground">
-                    +€{(n - 1) * EXTRA_USER_PRICE}/mo
+                    +{symbol}{(n - 1) * extraUserDisplayPrice}/mo
                   </span>
                 )}
               </button>
