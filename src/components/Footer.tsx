@@ -41,7 +41,7 @@ const socialLinks: Record<string, string> = {
   "Instagram": "https://www.instagram.com/pzazofficial",
   "LinkedIn": "https://www.linkedin.com/company/pzazofficial/",
   "TikTok": "https://www.tiktok.com/@pzazio",
-  "X": "https://x.com/pzaz_io",
+  "X": "https://x.com/pzazofficial",
 };
 
 const Footer = () => {
