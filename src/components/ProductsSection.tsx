@@ -193,10 +193,12 @@ const ProductsSection = () => {
               <p className="font-lato font-bold text-[16px] text-[#A805FF] mb-4">{product.tagline}</p>
               <p className="font-lato font-normal text-[16px] text-[#878787] leading-relaxed mb-6 flex-grow">{product.description}</p>
               
-              <Button variant={product.highlight ? "product-card-gradient" : "product-card"} size="product-card" className="group/btn mt-auto">
-                Explore {product.name.split(" ")[1]}
-                <ArrowIcon className={`ml-2 group-hover/btn:translate-x-1 ${product.highlight ? "text-white" : "text-[#4827AF] group-hover/btn:text-white"}`} />
-              </Button>
+              <Link to={product.href}>
+                <Button variant={product.highlight ? "product-card-gradient" : "product-card"} size="product-card" className="group/btn mt-auto w-full">
+                  Explore {product.name.split(" ")[1]}
+                  <ArrowIcon className={`ml-2 group-hover/btn:translate-x-1 ${product.highlight ? "text-white" : "text-[#4827AF] group-hover/btn:text-white"}`} />
+                </Button>
+              </Link>
               {(index === 0 || index === 1) && (
                 <p className="font-lato font-normal text-[14px] text-[#878787] text-center mt-3">
                   Upgrade anytime. Your project stays intact.
@@ -214,10 +216,12 @@ const ProductsSection = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="flex justify-center mt-[60px]"
         >
-          <Button variant="thin-cta" size="thin-cta" className="group/btn">
-            Explore All Products
-            <ArrowIcon className="ml-2 text-white group-hover/btn:translate-x-1" />
-          </Button>
+          <Link to="/pricing">
+            <Button variant="thin-cta" size="thin-cta" className="group/btn">
+              Explore All Products
+              <ArrowIcon className="ml-2 text-white group-hover/btn:translate-x-1" />
+            </Button>
+          </Link>
         </motion.div>
       </div>
     </section>
