@@ -145,7 +145,14 @@
   }
 
   .gradient-cta-bg {
-    background: linear-gradient(247.38deg, #29FADF -2.17%, #8B1DFF 84.87%);
+    background: linear-gradient(to right, #29FADF 0%, #8B1DFF 51%, #29FADF 100%);
+    background-size: 200% auto;
+    background-position: left center;
+    transition: background-position 0.5s ease;
+  }
+
+  .gradient-cta-bg:hover {
+    background-position: right center;
   }
 
   .glass {
