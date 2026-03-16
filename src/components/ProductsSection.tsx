@@ -35,6 +35,7 @@ const products = [
     tagline: "Professional budgeting & cost control",
     description: "For producers and line producers who need clarity and confidence. Turn your script into a structured production budget that stays in sync as plans change.",
     highlight: false,
+    href: "/budget",
   },
   {
     customIcon: cardIconStoryboard,
@@ -43,6 +44,7 @@ const products = [
     tagline: "Visualize the film before you shoot",
     description: "For directors and visual storytellers. Turn scenes into storyboards in seconds and refine shots collaboratively before production starts.",
     highlight: false,
+    href: "/storyboard",
   },
   {
     customIcon: cardIconStudio,
@@ -51,6 +53,7 @@ const products = [
     tagline: "All-in-one production system",
     description: "For full productions and teams that need everything connected in real time. Script, schedule, budget, storyboard, and collaboration in one live workspace.",
     highlight: true,
+    href: "/studio-pro",
   },
 ];
 
