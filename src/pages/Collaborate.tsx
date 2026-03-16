@@ -264,11 +264,11 @@ const Collaborate = () => {
           <p className="text-[#4E2273] mb-8">
             Join 5,000+ filmmakers who collaborate seamlessly with Pzaz.
           </p>
-          <Link to="/pricing">
+          <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
             <Button variant="default" size="lg" className="gap-2">
               Get Started for Free <ArrowRight className="w-4 h-4" />
             </Button>
-          </Link>
+          </a>
         </div>
       </section>
     </PageLayout>

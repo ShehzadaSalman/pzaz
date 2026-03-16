@@ -350,12 +350,12 @@ const Breakdown = () => {
               <h3 className="text-xl font-bold mb-1 text-foreground">{product.name}</h3>
               <p className="text-sm font-medium text-primary mb-3">{product.tagline}</p>
               <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-1">{product.description}</p>
-              <Link to="/pricing">
+              <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
                 <Button variant={product.featured ? "default" : "outline"} className="w-full group">
                   Explore {product.name.replace("Pzaz ", "")}
                   <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </Button>
-              </Link>
+              </a>
               <p className="text-xs text-muted-foreground mt-3 text-center">Upgrade anytime. Your project stays intact.</p>
             </motion.div>
           ))}
