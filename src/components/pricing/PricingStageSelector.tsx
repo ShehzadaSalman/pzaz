@@ -313,7 +313,7 @@ const PricingStageSelector = () => {
             onChange={(n) => setUserCounts((prev) => ({ ...prev, [tier.id]: n }))}
             onContactClick={() => setContactOpen(true)}
             symbol={symbol}
-            extraUserDisplayPrice={convertPrice(EXTRA_USER_PRICE)}
+            extraUserDisplayPrice={getPrice(EXTRA_USER_PRICE, "extra-user")}
           />
         )}
 
