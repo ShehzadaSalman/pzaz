@@ -96,8 +96,8 @@ const products = [
     tagline: "All-in-one production system",
     description:
       "For full productions and teams that need everything connected in real time. Script, schedule, budget, storyboard, and collaboration in one live workspace.",
-    priceMonthly: 129,
-    priceAnnual: 139,
+    priceMonthly: 199,
+    priceAnnual: 199,
     featured: true,
   },
 ];

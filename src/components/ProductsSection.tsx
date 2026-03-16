@@ -45,7 +45,7 @@ const products = [
   {
     customIcon: cardIconStudio,
     name: "Pzaz Studio",
-    price: "€129/mo",
+    price: "€199/mo",
     tagline: "All-in-one production system",
     description: "For full productions and teams that need everything connected in real time. Script, schedule, budget, storyboard, and collaboration in one live workspace.",
     highlight: true,
