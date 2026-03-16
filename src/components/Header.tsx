@@ -86,7 +86,7 @@ interface NavItem {
 
 const defaultNavItems: NavItem[] = [
   {
-    label: "Solutions",
+    label: "Products",
     to: "/#products",
     isHash: true,
     isDropdown: true,
@@ -96,6 +96,7 @@ const defaultNavItems: NavItem[] = [
       { label: "Pzaz Studio Pro", to: "/studio-pro" },
       { label: "Pzaz Budget", to: "/budget" },
       { label: "Pzaz Storyboard", to: "/storyboard" },
+      { label: "For Film Schools and Students", to: "/schools" },
     ],
   },
   {
