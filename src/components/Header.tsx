@@ -206,8 +206,8 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
   return (
     <>
     <header ref={headerRef} className={`${variant === "fixed" ? "fixed top-0 left-0 right-0" : "sticky top-0"} z-50 glass`} style={{ borderBottom: '1px solid #D4BAF4' }}>
-      <div className="max-w-6xl mx-auto px-2  py-4">
-        <nav className="flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-2 py-4">
+        <nav className="flex items-center justify-between relative">
           {/* Logo + Language */}
           <div className="flex items-center gap-4">
             <a href="/" className="flex items-center group" style={{ gap: 16 }}>
@@ -246,7 +246,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8" ref={navRef}>
+          <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2" ref={navRef}>
             {navItems.map((item) =>
               item.isDropdown ? (
                 <div key={item.label} className="relative">
