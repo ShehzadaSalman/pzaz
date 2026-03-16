@@ -306,7 +306,13 @@ const PricingStageSelector = () => {
           size="lg"
           variant={tier.highlighted ? "default" : "outline"}
           className="w-full group"
-          onClick={() => !tier.disabled && window.open(tier.checkoutUrl, "_blank")}
+          onClick={() => {
+            if (tier.id === "private-llm") {
+              setContactOpen(true);
+            } else if (!tier.disabled && tier.checkoutUrl) {
+              window.open(tier.checkoutUrl, "_blank");
+            }
+          }}
           disabled={tier.disabled}
         >
           {tier.cta}
