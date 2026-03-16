@@ -1,9 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import ArrowIcon from "@/components/ui/ArrowIcon";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import ctaPlayIcon from "@/assets/cta-play-icon.svg";
+
+const HeroDescription = () => {
+  const [expanded, setExpanded] = useState(false);
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.15, ease: [0.4, 0, 0.2, 1] }}
+      className="font-lato text-lg md:text-xl leading-relaxed text-muted-foreground text-center max-w-3xl mx-auto mb-10"
+    >
+      {/* Mobile: truncated to 2 lines */}
+      <span className={`md:hidden block`}>
+        <span className={expanded ? "" : "line-clamp-2"}>
+          Scripts change. Schedules shift. Budgets move. Teams miss updates. Pzaz keeps your script, plan, budget, timeline, and team perfectly in sync from the first draft to final delivery. Things change and everything updates automatically.{" "}
+          Stay focused on the story while Pzaz keeps the production aligned.
+        </span>
+        {!expanded && (
+          <button
+            onClick={() => setExpanded(true)}
+            className="text-primary font-semibold mt-1 inline-block"
+          >
+            Read More
+          </button>
+        )}
+      </span>
+      {/* Desktop: full text */}
+      <span className="hidden md:block">
+        Scripts change. Schedules shift. Budgets move. Teams miss updates. Pzaz keeps your script, plan, budget, timeline, and team perfectly in sync from the first draft to final delivery. Things change and everything updates automatically.<br /><br />Stay focused on the story while Pzaz keeps the production aligned.
+      </span>
+    </motion.div>
+  );
+};
 
 const Hero = () => {
 
@@ -32,14 +64,7 @@ const Hero = () => {
           </motion.h1>
 
           {/* Subheading */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.15, ease: [0.4, 0, 0.2, 1] }}
-            className="font-lato text-lg md:text-xl leading-relaxed text-muted-foreground text-center max-w-3xl mx-auto mb-10"
-          >
-            Scripts change. Schedules shift. Budgets move. Teams miss updates. Pzaz keeps your script, plan, budget, timeline, and team perfectly in sync from the first draft to final delivery. Things change and everything updates automatically.<br /><br />Stay focused on the story while Pzaz keeps the production aligned.
-          </motion.p>
+          <HeroDescription />
 
           {/* CTAs */}
           <motion.div
