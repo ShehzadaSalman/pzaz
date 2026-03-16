@@ -310,9 +310,9 @@ const PzazVsFinalDraft = () => {
                 Final Draft might be an excellent tool for writing, but Pzaz is a complete production hub. When it comes to writing, organising, and managing your film's production, Pzaz does it—without the need for extra software or fees. Start creating, collaborating, and producing more efficiently today.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link to="/pricing">
+                <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
                   <Button variant="default" size="lg" className="bg-white text-[#20124D] hover:bg-white/90">Start for Free</Button>
-                </Link>
+                </a>
                 <a href="https://calendly.com/filmmaking-app/30min" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10">Book a Demo</Button>
                 </a>

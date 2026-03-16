@@ -430,9 +430,9 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
                       Log in
                     </button>
                   </a>
-                  <Link to="/pricing" onClick={() => setMobileMenuOpen(false)} className="w-full">
+                  <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="w-full">
                     <Button variant="default" className="w-full">Start for Free</Button>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
