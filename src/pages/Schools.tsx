@@ -400,12 +400,27 @@ const Schools = () => {
 
           <motion.div {...fadeUp(0.1)}>
             <div className="flex flex-wrap justify-center gap-3">
-              {["English", "Spanish", "French", "German", "Italian", "Portuguese", "Japanese", "Korean", "Chinese", "Arabic", "Dutch", "Russian", "+ 20 more"].map((lang, i) => (
+              {[
+                { label: "English",    flag: "🇬🇧" },
+                { label: "Spanish",    flag: "🇪🇸" },
+                { label: "French",     flag: "🇫🇷" },
+                { label: "German",     flag: "🇩🇪" },
+                { label: "Italian",    flag: "🇮🇹" },
+                { label: "Portuguese", flag: "🇵🇹" },
+                { label: "Japanese",   flag: "🇯🇵" },
+                { label: "Korean",     flag: "🇰🇷" },
+                { label: "Chinese",    flag: "🇨🇳" },
+                { label: "Arabic",     flag: "🇸🇦" },
+                { label: "Dutch",      flag: "🇳🇱" },
+                { label: "Russian",    flag: "🇷🇺" },
+                { label: "+ 20 more",  flag: "🌍" },
+              ].map(({ label, flag }, i) => (
                 <span
                   key={i}
-                  className="px-4 py-2 rounded-full text-sm font-medium border border-primary/20 bg-primary/5 text-primary"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-primary/20 bg-primary/5 text-primary"
                 >
-                  {lang}
+                  <span>{flag}</span>
+                  {label}
                 </span>
               ))}
             </div>
