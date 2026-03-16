@@ -114,9 +114,9 @@ const section2Tiers: Tier[] = [
       "Governed AI access controls",
       "Separate credit allocation",
     ],
-    cta: "Coming Soon",
-    checkoutUrl: `${BASE_CHECKOUT}?plan=indie&period=month&bundles=pzaz_private_llm&currency=EUR`,
-    disabled: true,
+    cta: "Contact Us",
+    checkoutUrl: "",
+    disabled: false,
   },
 ];
 
