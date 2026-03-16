@@ -197,7 +197,7 @@ const Schools = () => {
             className="mt-16 lg:mt-24 max-w-5xl mx-auto"
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border/50">
-              <img src={heroMoodboard} alt="Pzaz film school workspace" className="w-full h-auto block" />
+              <img src={heroDashboard} alt="Pzaz film school workspace" className="w-full h-auto block" />
             </div>
           </motion.div>
         </div>
