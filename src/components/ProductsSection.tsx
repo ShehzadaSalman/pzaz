@@ -30,7 +30,7 @@ const products = [
   {
     customIcon: cardIconBudget,
     name: "Pzaz Budget",
-    price: "€49/mo",
+    eurPrice: 49,
     tagline: "Professional budgeting & cost control",
     description: "For producers and line producers who need clarity and confidence. Turn your script into a structured production budget that stays in sync as plans change.",
     highlight: false,
@@ -38,7 +38,7 @@ const products = [
   {
     customIcon: cardIconStoryboard,
     name: "Pzaz Storyboard",
-    price: "€39/mo",
+    eurPrice: 39,
     tagline: "Visualize the film before you shoot",
     description: "For directors and visual storytellers. Turn scenes into storyboards in seconds and refine shots collaboratively before production starts.",
     highlight: false,
@@ -46,7 +46,7 @@ const products = [
   {
     customIcon: cardIconStudio,
     name: "Pzaz Studio",
-    price: "€199/mo",
+    eurPrice: 199,
     tagline: "All-in-one production system",
     description: "For full productions and teams that need everything connected in real time. Script, schedule, budget, storyboard, and collaboration in one live workspace.",
     highlight: true,
