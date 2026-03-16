@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Check, Users, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ContactModal from "@/components/ContactModal";
+import { useCurrency } from "@/hooks/use-currency";
 
 interface Tier {
   id: string;
