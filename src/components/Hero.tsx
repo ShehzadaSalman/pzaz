@@ -23,7 +23,7 @@ const HeroDescription = () => {
         {!expanded && (
           <button
             onClick={() => setExpanded(true)}
-            className="text-primary font-semibold mt-1 inline-block"
+            className="text-foreground underline underline-offset-2 mt-1 inline-block"
           >
             Read More
           </button>
@@ -58,7 +58,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-            className="font-lato font-bold text-center mb-10 text-balance pt-[40px] md:pt-[60px] text-[48px] sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1]"
+            className="font-lato font-bold text-center mb-10 text-balance pt-[40px] md:pt-[60px] text-[32px] sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1]"
           >
             <span className="text-foreground block">Screen productions rarely fail because of creativity. </span><span className="bg-clip-text text-transparent block" style={{backgroundImage: "linear-gradient(247.38deg, rgb(41, 250, 223) -2.17%, rgb(139, 29, 255) 84.87%)"}}>They fail because information falls apart.</span>
           </motion.h1>
