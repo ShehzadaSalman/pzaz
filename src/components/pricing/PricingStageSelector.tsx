@@ -103,6 +103,25 @@ const section2Tiers: Tier[] = [
     checkoutUrl: `https://projector.pzaz.io/checkout?plan=indie&period=month&addons=pzaz_budget&currency=EUR`,
   },
   {
+    id: "storyboard",
+    name: "Pzaz Storyboard",
+    basePrice: 49,
+    priceSuffix: "/ month",
+    tagline: "Visual planning tool for building structured storyboards directly inside Pzaz.",
+    features: [
+      "Native storyboard builder",
+      "Visual shot and sequence development",
+      "Drag-and-drop storyboard workflow",
+      "Integrated with script and planning tools",
+      "Connected to schedule and budget",
+      "Production-integrated storyboarding",
+      "Context-aware visual planning",
+      "Eliminates need for external storyboard software",
+    ],
+    cta: "Get Started",
+    checkoutUrl: `https://projector.pzaz.io/checkout?plan=indie&period=month&addons=pzaz_storyboard&currency=EUR`,
+  },
+  {
     id: "private-llm",
     name: "Private LLM Add-On",
     basePrice: 249,
@@ -349,6 +368,9 @@ const PricingStageSelector = () => {
         {tier.id === "budget" && (
           <p className="text-xs text-muted-foreground text-center mt-4">Financial clarity without fragmentation.</p>
         )}
+        {tier.id === "storyboard" && (
+          <p className="text-xs text-muted-foreground text-center mt-4">Visual storytelling, built into your workflow.</p>
+        )}
         {tier.id === "private-llm" && (
           <p className="text-xs text-muted-foreground text-center mt-4">Protected and isolated. Under your control.</p>
         )}
@@ -396,7 +418,7 @@ const PricingStageSelector = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {section2Tiers.map((tier, index) => renderTierCard(tier, index))}
           </div>
         </div>
