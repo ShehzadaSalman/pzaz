@@ -38,6 +38,7 @@ import CollaborationTools from "./pages/CollaborationTools";
 import TaskManagement from "./pages/TaskManagement";
 import FileSharing from "./pages/FileSharing";
 import ProjectManagement from "./pages/ProjectManagement";
+import Schools from "./pages/Schools";
 import ScrollToTop from "./components/ScrollToTop";
 
 /**

@@ -14,6 +14,7 @@ const linkRoutes: Record<string, string> = {
   "Breakdown": "/breakdown",
   "Brand": "/brand",
   "Culture": "/culture",
+  "Schools": "/schools",
   "Pricing": "/pricing",
   "Script": "/script",
   "Collaborate": "/collaborate",
