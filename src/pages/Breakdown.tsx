@@ -442,6 +442,7 @@ const Breakdown = () => {
       }}
     />
   </PageLayout>
-);
+  );
+};
 
 export default Breakdown;
