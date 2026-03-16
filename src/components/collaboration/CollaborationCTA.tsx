@@ -48,7 +48,7 @@ const CollaborationCTA = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link to="/pricing">
+                <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
                   <Button
                     size="xl"
                     variant="outline"
@@ -57,7 +57,7 @@ const CollaborationCTA = () => {
                   >
                     Start Collaborating
                   </Button>
-                </Link>
+                </a>
                 <a href="https://calendly.com/filmmaking-app/30min" target="_blank" rel="noopener noreferrer">
                   <Button
                     size="xl"
