@@ -23,7 +23,7 @@ const HeroDescription = () => {
         {!expanded && (
           <button
             onClick={() => setExpanded(true)}
-            className="text-primary font-semibold mt-1 inline-block"
+            className="text-foreground underline underline-offset-2 mt-1 inline-block"
           >
             Read More
           </button>
