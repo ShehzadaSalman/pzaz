@@ -246,7 +246,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8" ref={navRef}>
+          <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2" ref={navRef}>
             {navItems.map((item) =>
               item.isDropdown ? (
                 <div key={item.label} className="relative">
