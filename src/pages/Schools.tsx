@@ -189,17 +189,6 @@ const Schools = () => {
             </motion.p>
           </div>
 
-          {/* Hero visual */}
-          <motion.div
-            initial={{ opacity: 0, y: 50, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.4, ease: [0.4, 0, 0.2, 1] }}
-            className="mt-16 lg:mt-24 max-w-5xl mx-auto"
-          >
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border/50">
-              <img src={heroDashboard} alt="Pzaz film school workspace" className="w-full h-auto block" />
-            </div>
-          </motion.div>
         </div>
       </section>
 
