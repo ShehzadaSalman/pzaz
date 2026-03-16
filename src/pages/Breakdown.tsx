@@ -175,12 +175,12 @@ const Breakdown = () => {
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-4">
-              <Link to="/pricing">
+              <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="group px-8">
                   Try Pzaz Scriptwriting
                   <ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />
                 </Button>
-              </Link>
+              </a>
               <span className="text-sm text-muted-foreground leading-tight">
                 TRY FOR FREE.<br />NO CREDIT CARD.
               </span>
