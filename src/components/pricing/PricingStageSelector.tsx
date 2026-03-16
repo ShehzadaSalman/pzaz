@@ -368,6 +368,9 @@ const PricingStageSelector = () => {
         {tier.id === "budget" && (
           <p className="text-xs text-muted-foreground text-center mt-4">Financial clarity without fragmentation.</p>
         )}
+        {tier.id === "storyboard" && (
+          <p className="text-xs text-muted-foreground text-center mt-4">Visual storytelling, built into your workflow.</p>
+        )}
         {tier.id === "private-llm" && (
           <p className="text-xs text-muted-foreground text-center mt-4">Protected and isolated. Under your control.</p>
         )}
