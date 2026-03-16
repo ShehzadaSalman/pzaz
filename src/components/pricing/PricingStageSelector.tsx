@@ -197,13 +197,15 @@ const PricingStageSelector = () => {
     "studio-pro": 1,
   });
   const [contactOpen, setContactOpen] = useState(false);
-  const { symbol, convertPrice, currency } = useCurrency();
+  const { symbol, getPrice, currency } = useCurrency();
 
   const getDisplayPrice = (tier: Tier) => {
     if (tier.basePrice === null) return "Free";
     const extraUsers = (userCounts[tier.id] ?? 1) - 1;
-    const total = tier.basePrice + extraUsers * EXTRA_USER_PRICE;
-    return `${symbol}${convertPrice(total)}`;
+    const baseDisplay = getPrice(tier.basePrice, tier.id);
+    const extraUserDisplay = getPrice(EXTRA_USER_PRICE, "extra-user");
+    const total = baseDisplay + extraUsers * extraUserDisplay;
+    return `${symbol}${total}`;
   };
 
   const getCheckoutUrl = (tier: Tier) => {
@@ -311,7 +313,7 @@ const PricingStageSelector = () => {
             onChange={(n) => setUserCounts((prev) => ({ ...prev, [tier.id]: n }))}
             onContactClick={() => setContactOpen(true)}
             symbol={symbol}
-            extraUserDisplayPrice={convertPrice(EXTRA_USER_PRICE)}
+            extraUserDisplayPrice={getPrice(EXTRA_USER_PRICE, "extra-user")}
           />
         )}
 

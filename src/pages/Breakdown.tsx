@@ -127,7 +127,7 @@ const testimonials = [
 /* ───────── page ───────── */
 
 const Breakdown = () => {
-  const { symbol, convertPrice } = useCurrency();
+  const { symbol, getPrice } = useCurrency();
   return (
   <PageLayout>
     <SEO
@@ -342,10 +342,10 @@ const Breakdown = () => {
             >
               <img src={product.icon} alt="" className="w-10 h-10 mb-4" />
               <div className="flex items-baseline gap-2 mb-1">
-                <span className="text-2xl font-bold text-foreground">{symbol}{convertPrice(product.priceMonthly)}</span>
+                <span className="text-2xl font-bold text-foreground">{symbol}{getPrice(product.priceMonthly, `product-${product.priceMonthly}`)}</span>
                 <span className="text-sm text-muted-foreground">/mo</span>
               </div>
-              <p className="text-xs text-muted-foreground line-through mb-4">{symbol}{convertPrice(product.priceAnnual)}/mo</p>
+              <p className="text-xs text-muted-foreground line-through mb-4">{symbol}{getPrice(product.priceAnnual, `product-${product.priceAnnual}`)}/mo</p>
               <h3 className="text-xl font-bold mb-1 text-foreground">{product.name}</h3>
               <p className="text-sm font-medium text-primary mb-3">{product.tagline}</p>
               <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-1">{product.description}</p>

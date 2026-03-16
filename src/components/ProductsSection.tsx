@@ -54,7 +54,7 @@ const products = [
 ];
 
 const ProductsSection = () => {
-  const { symbol, convertPrice } = useCurrency();
+  const { symbol, getPrice } = useCurrency();
   return (
     <section id="products" className="section-padding bg-[#F9F4FF] relative overflow-hidden">
       <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl pointer-events-none -translate-y-1/2" />
@@ -177,7 +177,7 @@ const ProductsSection = () => {
               
               <div className="flex items-center justify-between mb-6">
                 <img src={product.customIcon} alt={product.name} className="w-[60px] h-[60px]" />
-                <span className="font-lato font-normal text-[24px] text-[#4D029B]">{symbol}{convertPrice(product.eurPrice)}/mo</span>
+                <span className="font-lato font-normal text-[24px] text-[#4D029B]">{symbol}{getPrice(product.eurPrice, `product-${product.eurPrice}`)}/mo</span>
               </div>
               
               <h3 className="font-lato font-bold text-[32px] text-[#4D029B] mb-2">{product.name}</h3>
