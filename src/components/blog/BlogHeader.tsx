@@ -5,9 +5,11 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import pzazLogo from "@/assets/pzaz-logo.png";
+import { useIndieCheckoutUrl } from "@/lib/checkout";
 
 const BlogHeader = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const indieCheckoutUrl = useIndieCheckoutUrl();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/50">
@@ -44,11 +46,11 @@ const BlogHeader = () => {
                 Log in
               </Button>
             </a>
-            <Link to="/pricing">
+            <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
               <Button variant="default" size="sm">
                 Start for Free
               </Button>
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -78,7 +80,7 @@ const BlogHeader = () => {
               <a href="/#products" className="text-foreground font-medium py-2">Products</a>
               <hr className="border-border/50" />
               <a href="https://projector.pzaz.io/sign-in"><Button variant="ghost" className="justify-start">Log in</Button></a>
-              <Link to="/pricing"><Button variant="default">Start for Free</Button></Link>
+              <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer"><Button variant="default">Start for Free</Button></a>
             </div>
           </motion.div>
         )}

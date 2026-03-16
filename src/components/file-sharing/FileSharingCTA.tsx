@@ -1,12 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import ArrowIcon from "@/components/ui/ArrowIcon";
 import SectionHeader from "@/components/SectionHeader";
 import iconStar from "@/assets/material-symbols_family-star.svg";
+import { useIndieCheckoutUrl } from "@/lib/checkout";
 
 const FileSharingCTA = () => {
+  const indieCheckoutUrl = useIndieCheckoutUrl();
   return (
     <section className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
@@ -40,7 +41,7 @@ const FileSharingCTA = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link to="/pricing">
+                <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
                   <Button
                     size="xl"
                     variant="outline"
@@ -49,7 +50,7 @@ const FileSharingCTA = () => {
                   >
                     Start Free
                   </Button>
-                </Link>
+                </a>
                 <a href="https://calendly.com/filmmaking-app/30min" target="_blank" rel="noopener noreferrer">
                   <Button
                     size="xl"

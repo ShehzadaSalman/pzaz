@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useIndieCheckoutUrl } from "@/lib/checkout";
 
 import heroImg from "@/assets/vs-final-draft/hero.webp";
 import problemImg from "@/assets/vs-final-draft/problem.webp";
@@ -77,6 +78,7 @@ const CellValue = ({ value }: { value: boolean | string }) => {
 
 const PzazVsFinalDraft = () => {
   const [activeSlide, setActiveSlide] = useState(0);
+  const indieCheckoutUrl = useIndieCheckoutUrl();
 
   return (
     <>
@@ -103,9 +105,9 @@ const PzazVsFinalDraft = () => {
               <strong>Looking for a scriptwriting tool that goes beyond the basics?</strong> While Final Draft has long been an industry standard for writing scripts, Pzaz offers much more. Pzaz doesn't stop at writing—it's an all-in-one platform that integrates the entire production process. Here's how we stand apart from Final Draft.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link to="/pricing">
+              <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
                 <Button variant="default" size="lg">Start for Free</Button>
-              </Link>
+              </a>
               <a href="https://calendly.com/filmmaking-app/30min" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="lg">Book a Demo</Button>
               </a>

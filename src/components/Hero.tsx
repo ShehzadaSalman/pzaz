@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import ArrowIcon from "@/components/ui/ArrowIcon";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import ctaPlayIcon from "@/assets/cta-play-icon.svg";
+import { useIndieCheckoutUrl } from "@/lib/checkout";
 
 const HeroDescription = () => {
   const [expanded, setExpanded] = useState(false);
@@ -38,7 +38,7 @@ const HeroDescription = () => {
 };
 
 const Hero = () => {
-
+  const indieCheckoutUrl = useIndieCheckoutUrl();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-[60px]">
       {/* Gradient background */}
@@ -74,12 +74,12 @@ const Hero = () => {
             className="flex flex-row flex-wrap items-start justify-center gap-4 mb-6"
           >
             <div className="flex flex-col items-center gap-1">
-              <Link to="/pricing">
+              <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="group px-8">
                   Start for Free
                   <ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />
                 </Button>
-              </Link>
+              </a>
               <p className="font-lato font-normal text-[16px] leading-[30px] tracking-normal text-center text-[#878787]">No credit card.</p>
             </div>
             <div className="flex flex-col items-center gap-1">

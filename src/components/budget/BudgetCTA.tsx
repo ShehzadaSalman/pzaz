@@ -1,12 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import ArrowIcon from "@/components/ui/ArrowIcon";
 import SectionHeader from "@/components/SectionHeader";
 import iconStar from "@/assets/material-symbols_family-star.svg";
+import { useIndieCheckoutUrl } from "@/lib/checkout";
 
 const BudgetCTA = () => {
+  const indieCheckoutUrl = useIndieCheckoutUrl();
   return (
     <section className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
@@ -42,7 +43,7 @@ const BudgetCTA = () => {
               />
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link to="/pricing">
+                <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
                   <Button
                     size="xl"
                     variant="outline"
@@ -51,7 +52,7 @@ const BudgetCTA = () => {
                   >
                     Start Building your Budget
                   </Button>
-                </Link>
+                </a>
                 <a href="https://calendly.com/filmmaking-app/30min" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" size="xl" className="text-white border-white/30 hover:bg-white/10 rounded-[10px]">
                     Book a Demo

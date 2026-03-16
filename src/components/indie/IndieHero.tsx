@@ -5,9 +5,10 @@ import { motion } from "framer-motion";
 import ArrowIcon from "@/components/ui/ArrowIcon";
 import ctaPlayIcon from "@/assets/cta-play-icon.svg";
 import aiResearchIcon from "@/assets/ai-research-icon.svg";
-import { Link } from "react-router-dom";
+import { useIndieCheckoutUrl } from "@/lib/checkout";
 
 const IndieHero = () => {
+  const indieCheckoutUrl = useIndieCheckoutUrl();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Gradient background */}
@@ -75,12 +76,12 @@ const IndieHero = () => {
             transition={{ duration: 0.6, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4"
           >
-            <Link to="/pricing">
+            <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="group px-8">
                 Start Free
                 <ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />
               </Button>
-            </Link>
+            </a>
             <a href="https://www.youtube.com/watch?v=9szESOfyK_8" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="outline"
