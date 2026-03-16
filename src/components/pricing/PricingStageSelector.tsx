@@ -66,7 +66,7 @@ const section1Tiers: Tier[] = [
   {
     id: "studio-pro",
     name: "Studio Pro",
-    basePrice: 129,
+    basePrice: 199,
     priceSuffix: "/ month",
     tagline: "Slate-level coordination for growing production companies. Built for teams managing multiple projects, departments, and delivery timelines.",
     features: [
