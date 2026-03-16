@@ -116,32 +116,41 @@ const ProductsSection = () => {
           Pzaz is built for teams who need coordination at production scale.
         </motion.p>
 
-        {/* Watch Video button */}
+        {/* CTAs: Start for Free + Watch Video */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="flex flex-col items-center gap-1 mb-[60px]"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-[60px]"
         >
-          <Button
-            variant="outline"
-            size="lg"
-            className="group px-8 font-lato font-black text-xl leading-[25px] text-primary hover:text-primary-foreground rounded-[10px]"
-            prefixIcon={
-              <img
-                src={ctaPlayIcon}
-                alt=""
-                className="w-5 h-5 transition-all group-hover:[filter:brightness(0)_invert(1)]"
-              />
-            }
-            onClick={() => window.open("https://www.youtube.com/watch?v=9szESOfyK_8", "_blank", "noopener,noreferrer")}
-          >
-            Watch Video
-          </Button>
-          <p className="font-lato font-normal text-[16px] leading-[30px] text-center text-[#878787]">
-            No credit card. Up and running in 15 minutes.
-          </p>
+          <div className="flex flex-col items-center gap-1">
+            <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="group px-8">
+                Start for Free
+                <ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />
+              </Button>
+            </a>
+            <p className="font-lato font-normal text-[16px] leading-[30px] text-center text-[#878787]">No credit card.</p>
+          </div>
+          <div className="flex flex-col items-center gap-1">
+            <Button
+              variant="outline"
+              size="lg"
+              className="group px-8 font-lato font-black text-xl leading-[25px] text-primary hover:text-primary-foreground rounded-[10px]"
+              prefixIcon={
+                <img
+                  src={ctaPlayIcon}
+                  alt=""
+                  className="w-5 h-5 transition-all group-hover:[filter:brightness(0)_invert(1)]"
+                />
+              }
+              onClick={() => window.open("https://www.youtube.com/watch?v=9szESOfyK_8", "_blank", "noopener,noreferrer")}
+            >
+              Watch Video
+            </Button>
+            <p className="font-lato font-normal text-[16px] leading-[30px] text-center text-[#878787]">No credit card. Up and running in 15 minutes.</p>
+          </div>
         </motion.div>
 
         <div className="mb-[87px]" />
