@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Check, Users, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ContactModal from "@/components/ContactModal";
+import { useCurrency } from "@/hooks/use-currency";
 
 interface Tier {
   id: string;
@@ -124,10 +125,14 @@ const UserSelector = ({
   users,
   onChange,
   onContactClick,
+  symbol,
+  extraUserDisplayPrice,
 }: {
   users: number;
   onChange: (n: number) => void;
   onContactClick: () => void;
+  symbol: string;
+  extraUserDisplayPrice: number;
 }) => {
   const [open, setOpen] = useState(false);
 
@@ -163,7 +168,7 @@ const UserSelector = ({
                 {n} {n === 1 ? "user" : "users"}
                 {n > 1 && (
                   <span className="ml-2 text-xs text-muted-foreground">
-                    +€{(n - 1) * EXTRA_USER_PRICE}/mo
+                    +{symbol}{(n - 1) * extraUserDisplayPrice}/mo
                   </span>
                 )}
               </button>
@@ -192,12 +197,18 @@ const PricingStageSelector = () => {
     "studio-pro": 1,
   });
   const [contactOpen, setContactOpen] = useState(false);
+  const { symbol, convertPrice, currency } = useCurrency();
 
   const getDisplayPrice = (tier: Tier) => {
     if (tier.basePrice === null) return "Free";
     const extraUsers = (userCounts[tier.id] ?? 1) - 1;
     const total = tier.basePrice + extraUsers * EXTRA_USER_PRICE;
-    return `€${total}`;
+    return `${symbol}${convertPrice(total)}`;
+  };
+
+  const getCheckoutUrl = (tier: Tier) => {
+    if (!tier.checkoutUrl) return "";
+    return tier.checkoutUrl.replace("currency=EUR", `currency=${currency}`);
   };
 
   const renderTierCard = (tier: Tier, index: number) => {
@@ -299,6 +310,8 @@ const PricingStageSelector = () => {
             users={userCounts[tier.id] ?? 1}
             onChange={(n) => setUserCounts((prev) => ({ ...prev, [tier.id]: n }))}
             onContactClick={() => setContactOpen(true)}
+            symbol={symbol}
+            extraUserDisplayPrice={convertPrice(EXTRA_USER_PRICE)}
           />
         )}
 
@@ -310,7 +323,7 @@ const PricingStageSelector = () => {
             if (tier.id === "private-llm") {
               setContactOpen(true);
             } else if (!tier.disabled && tier.checkoutUrl) {
-              window.open(tier.checkoutUrl, "_blank");
+              window.open(getCheckoutUrl(tier), "_blank");
             }
           }}
           disabled={tier.disabled}

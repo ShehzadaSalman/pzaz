@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useCurrency } from "@/hooks/use-currency";
 import { Button } from "@/components/ui/button";
 import { Pill } from "@/components/ui/pill";
 import { Quote, Star, ArrowRight } from "lucide-react";
@@ -125,7 +126,9 @@ const testimonials = [
 
 /* ───────── page ───────── */
 
-const Breakdown = () => (
+const Breakdown = () => {
+  const { symbol, convertPrice } = useCurrency();
+  return (
   <PageLayout>
     <SEO
       title="Pzaz Breakdown – AI Script Breakdown for Film Production"
@@ -339,10 +342,10 @@ const Breakdown = () => (
             >
               <img src={product.icon} alt="" className="w-10 h-10 mb-4" />
               <div className="flex items-baseline gap-2 mb-1">
-                <span className="text-2xl font-bold text-foreground">${product.priceMonthly}</span>
+                <span className="text-2xl font-bold text-foreground">{symbol}{convertPrice(product.priceMonthly)}</span>
                 <span className="text-sm text-muted-foreground">/mo</span>
               </div>
-              <p className="text-xs text-muted-foreground line-through mb-4">${product.priceAnnual}/mo</p>
+              <p className="text-xs text-muted-foreground line-through mb-4">{symbol}{convertPrice(product.priceAnnual)}/mo</p>
               <h3 className="text-xl font-bold mb-1 text-foreground">{product.name}</h3>
               <p className="text-sm font-medium text-primary mb-3">{product.tagline}</p>
               <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-1">{product.description}</p>
@@ -439,6 +442,7 @@ const Breakdown = () => (
       }}
     />
   </PageLayout>
-);
+  );
+};
 
 export default Breakdown;
