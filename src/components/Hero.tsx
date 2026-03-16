@@ -32,14 +32,7 @@ const Hero = () => {
           </motion.h1>
 
           {/* Subheading */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.15, ease: [0.4, 0, 0.2, 1] }}
-            className="font-lato text-lg md:text-xl leading-relaxed text-muted-foreground text-center max-w-3xl mx-auto mb-10"
-          >
-            Scripts change. Schedules shift. Budgets move. Teams miss updates. Pzaz keeps your script, plan, budget, timeline, and team perfectly in sync from the first draft to final delivery. Things change and everything updates automatically.<br /><br />Stay focused on the story while Pzaz keeps the production aligned.
-          </motion.p>
+          <HeroDescription />
 
           {/* CTAs */}
           <motion.div
