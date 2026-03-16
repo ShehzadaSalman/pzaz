@@ -177,7 +177,7 @@ const ProductsSection = () => {
               
               <div className="flex items-center justify-between mb-6">
                 <img src={product.customIcon} alt={product.name} className="w-[60px] h-[60px]" />
-                <span className="font-lato font-normal text-[24px] text-[#4D029B]">{symbol}{convertPrice(product.eurPrice)}/mo</span>
+                <span className="font-lato font-normal text-[24px] text-[#4D029B]">{symbol}{getPrice(product.eurPrice, `product-${product.eurPrice}`)}/mo</span>
               </div>
               
               <h3 className="font-lato font-bold text-[32px] text-[#4D029B] mb-2">{product.name}</h3>
