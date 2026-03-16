@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { useCurrency } from "@/hooks/use-currency";
 import { useIndieCheckoutUrl } from "@/lib/checkout";
 import ArrowIcon from "@/components/ui/ArrowIcon";
