@@ -284,9 +284,9 @@ const PzazVsFinalDraft = () => {
                 Whether you're an independent filmmaker or part of a large production team, Pzaz grows with your needs. The platform is designed to be flexible, scalable, and cost-effective, so you don't have to pay for extra tools or features. Everything you need for your project is already integrated into Pzaz.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link to="/pricing">
+                <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
                   <Button variant="default" size="lg">Start for Free</Button>
-                </Link>
+                </a>
                 <a href="https://calendly.com/filmmaking-app/30min" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" size="lg">Book a Demo</Button>
                 </a>
