@@ -198,7 +198,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
     if (item.to === "/script") return isScriptPage;
     if (item.to === "/pricing") return isPricingPage;
     if (item.to === "/knowledge-base") return isKnowledgeBase;
-    if (item.label === "Solutions") return isSolutionsActive;
+    if (item.label === "Products") return isSolutionsActive;
     if (item.label === "Features") return isFeaturesActive;
     return false;
   };
