@@ -310,6 +310,8 @@ const PricingStageSelector = () => {
             users={userCounts[tier.id] ?? 1}
             onChange={(n) => setUserCounts((prev) => ({ ...prev, [tier.id]: n }))}
             onContactClick={() => setContactOpen(true)}
+            symbol={symbol}
+            extraUserDisplayPrice={convertPrice(EXTRA_USER_PRICE)}
           />
         )}
 
@@ -321,7 +323,7 @@ const PricingStageSelector = () => {
             if (tier.id === "private-llm") {
               setContactOpen(true);
             } else if (!tier.disabled && tier.checkoutUrl) {
-              window.open(tier.checkoutUrl, "_blank");
+              window.open(getCheckoutUrl(tier), "_blank");
             }
           }}
           disabled={tier.disabled}
