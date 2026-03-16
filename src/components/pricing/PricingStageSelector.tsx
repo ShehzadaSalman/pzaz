@@ -197,12 +197,18 @@ const PricingStageSelector = () => {
     "studio-pro": 1,
   });
   const [contactOpen, setContactOpen] = useState(false);
+  const { symbol, convertPrice, currency } = useCurrency();
 
   const getDisplayPrice = (tier: Tier) => {
     if (tier.basePrice === null) return "Free";
     const extraUsers = (userCounts[tier.id] ?? 1) - 1;
     const total = tier.basePrice + extraUsers * EXTRA_USER_PRICE;
-    return `€${total}`;
+    return `${symbol}${convertPrice(total)}`;
+  };
+
+  const getCheckoutUrl = (tier: Tier) => {
+    if (!tier.checkoutUrl) return "";
+    return tier.checkoutUrl.replace("currency=EUR", `currency=${currency}`);
   };
 
   const renderTierCard = (tier: Tier, index: number) => {
