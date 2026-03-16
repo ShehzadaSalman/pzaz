@@ -7,6 +7,7 @@ import { useLocation, Link } from "react-router-dom";
 import pzazLogo from "@/assets/pzaz-logo.png";
 import LanguageDropdown from "@/components/LanguageDropdown";
 import ContactModal from "@/components/ContactModal";
+import { useIndieCheckoutUrl } from "@/lib/checkout";
 
 interface MobileAccordionProps {
   item: NavItem;
@@ -151,6 +152,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const indieCheckoutUrl = useIndieCheckoutUrl();
   const navRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLElement>(null);
   const location = useLocation();
@@ -346,11 +348,11 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
                 Log in
               </Button>
             </a>
-            <Link to="/pricing">
+            <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
               <Button variant="default" size="sm">
                 Start for Free
               </Button>
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -428,9 +430,9 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
                       Log in
                     </button>
                   </a>
-                  <Link to="/pricing" onClick={() => setMobileMenuOpen(false)} className="w-full">
+                  <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="w-full">
                     <Button variant="default" className="w-full">Start for Free</Button>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>

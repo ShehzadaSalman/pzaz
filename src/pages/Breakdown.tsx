@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { useCurrency } from "@/hooks/use-currency";
 import { Button } from "@/components/ui/button";
+import { useIndieCheckoutUrl } from "@/lib/checkout";
 import { Pill } from "@/components/ui/pill";
 import { Quote, Star, ArrowRight } from "lucide-react";
 import PageLayout from "@/components/layout/PageLayout";
@@ -128,6 +128,7 @@ const testimonials = [
 
 const Breakdown = () => {
   const { symbol, getPrice } = useCurrency();
+  const indieCheckoutUrl = useIndieCheckoutUrl();
   return (
   <PageLayout>
     <SEO
@@ -174,12 +175,12 @@ const Breakdown = () => {
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-4">
-              <Link to="/pricing">
+              <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="group px-8">
                   Try Pzaz Scriptwriting
                   <ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />
                 </Button>
-              </Link>
+              </a>
               <span className="text-sm text-muted-foreground leading-tight">
                 TRY FOR FREE.<br />NO CREDIT CARD.
               </span>
@@ -349,12 +350,12 @@ const Breakdown = () => {
               <h3 className="text-xl font-bold mb-1 text-foreground">{product.name}</h3>
               <p className="text-sm font-medium text-primary mb-3">{product.tagline}</p>
               <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-1">{product.description}</p>
-              <Link to="/pricing">
+              <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
                 <Button variant={product.featured ? "default" : "outline"} className="w-full group">
                   Explore {product.name.replace("Pzaz ", "")}
                   <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </Button>
-              </Link>
+              </a>
               <p className="text-xs text-muted-foreground mt-3 text-center">Upgrade anytime. Your project stays intact.</p>
             </motion.div>
           ))}

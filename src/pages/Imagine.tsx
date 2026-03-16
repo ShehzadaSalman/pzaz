@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import PageLayout from "@/components/layout/PageLayout";
 import SEO from "@/components/SEO";
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { useIndieCheckoutUrl } from "@/lib/checkout";
 import { ArrowRight, Layers, Users, Upload, Sparkles, RefreshCw } from "lucide-react";
 import ProductsSection from "@/components/ProductsSection";
 
@@ -84,6 +84,7 @@ const testimonials = [
 
 const Imagine = () => {
   const [activeFeature, setActiveFeature] = useState(0);
+  const indieCheckoutUrl = useIndieCheckoutUrl();
 
   return (
     <PageLayout>
@@ -115,11 +116,11 @@ const Imagine = () => {
               That's why Step 1 in the Pzaz Filmmaking Flow is <strong>Imagine</strong> — a dedicated space to explore ideas before they become scripts, schedules, or budgets.
             </p>
             <div className="flex items-center gap-4 flex-wrap">
-              <Link to="/pricing">
+              <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
                 <Button variant="default" size="lg" className="gap-2">
                   TRY PZAZ SCRIPTWRITING <ArrowRight className="w-4 h-4" />
                 </Button>
-              </Link>
+              </a>
               <div className="text-sm text-[#4E2273]">
                 <div className="font-semibold">TRY FOR FREE.</div>
                 <div>NO CREDIT CARD.</div>
@@ -263,11 +264,11 @@ const Imagine = () => {
           <p className="text-[#4E2273] mb-8">
             Join 5,000+ filmmakers who build their creative vision with Pzaz Imagine.
           </p>
-          <Link to="/pricing">
+          <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
             <Button variant="default" size="lg" className="gap-2">
               Get Started for Free <ArrowRight className="w-4 h-4" />
             </Button>
-          </Link>
+          </a>
         </div>
       </section>
     </PageLayout>
