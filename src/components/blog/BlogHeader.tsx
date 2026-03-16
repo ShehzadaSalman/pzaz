@@ -5,9 +5,11 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import pzazLogo from "@/assets/pzaz-logo.png";
+import { useIndieCheckoutUrl } from "@/lib/checkout";
 
 const BlogHeader = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const indieCheckoutUrl = useIndieCheckoutUrl();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/50">

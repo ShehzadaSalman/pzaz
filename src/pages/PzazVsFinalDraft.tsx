@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useIndieCheckoutUrl } from "@/lib/checkout";
 
 import heroImg from "@/assets/vs-final-draft/hero.webp";
 import problemImg from "@/assets/vs-final-draft/problem.webp";
