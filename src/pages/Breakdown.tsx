@@ -128,6 +128,7 @@ const testimonials = [
 
 const Breakdown = () => {
   const { symbol, getPrice } = useCurrency();
+  const indieCheckoutUrl = useIndieCheckoutUrl();
   return (
   <PageLayout>
     <SEO

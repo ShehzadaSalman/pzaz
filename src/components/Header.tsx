@@ -152,6 +152,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const indieCheckoutUrl = useIndieCheckoutUrl();
   const navRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLElement>(null);
   const location = useLocation();

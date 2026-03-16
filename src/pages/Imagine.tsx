@@ -84,6 +84,7 @@ const testimonials = [
 
 const Imagine = () => {
   const [activeFeature, setActiveFeature] = useState(0);
+  const indieCheckoutUrl = useIndieCheckoutUrl();
 
   return (
     <PageLayout>
