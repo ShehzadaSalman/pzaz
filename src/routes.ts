@@ -37,6 +37,7 @@ export const staticRoutes: string[] = [
   "/task-management",
   "/file-sharing",
   "/project-management",
+  "/schools",
   // Knowledge Base – Getting Started
   "/knowledge-base/book-a-personalised-product-demonstration",
   "/knowledge-base/writing-your-script-with-pzaz",

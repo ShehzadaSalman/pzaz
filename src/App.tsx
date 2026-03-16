@@ -77,6 +77,7 @@ export const AppRoutes = () => (
       <Route path="/task-management" element={<TaskManagement />} />
       <Route path="/file-sharing" element={<FileSharing />} />
       <Route path="/project-management" element={<ProjectManagement />} />
+      <Route path="/schools" element={<Schools />} />
       <Route path="/privacy" element={<Privacy />} />
       <Route path="/terms" element={<Terms />} />
       <Route path="/terms-of-use" element={<Navigate to="/terms" replace />} />
