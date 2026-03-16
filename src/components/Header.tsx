@@ -7,6 +7,7 @@ import { useLocation, Link } from "react-router-dom";
 import pzazLogo from "@/assets/pzaz-logo.png";
 import LanguageDropdown from "@/components/LanguageDropdown";
 import ContactModal from "@/components/ContactModal";
+import { useIndieCheckoutUrl } from "@/lib/checkout";
 
 interface MobileAccordionProps {
   item: NavItem;

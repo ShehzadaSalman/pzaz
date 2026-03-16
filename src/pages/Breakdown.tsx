@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { useCurrency } from "@/hooks/use-currency";
 import { Button } from "@/components/ui/button";
+import { useIndieCheckoutUrl } from "@/lib/checkout";
 import { Pill } from "@/components/ui/pill";
 import { Quote, Star, ArrowRight } from "lucide-react";
 import PageLayout from "@/components/layout/PageLayout";

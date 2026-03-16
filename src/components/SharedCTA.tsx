@@ -2,10 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
 import SectionHeader from "@/components/SectionHeader";
 import iconStar from "@/assets/material-symbols_family-star.svg";
 import languagesImg from "@/assets/languages.png";
+import { useIndieCheckoutUrl } from "@/lib/checkout";
 
 interface SharedCTAProps {
   pillText?: string;

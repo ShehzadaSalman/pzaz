@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import PageLayout from "@/components/layout/PageLayout";
 import SEO from "@/components/SEO";
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { useIndieCheckoutUrl } from "@/lib/checkout";
 import { ArrowRight, Layers, Users, Upload, Sparkles, RefreshCw } from "lucide-react";
 import ProductsSection from "@/components/ProductsSection";
 
