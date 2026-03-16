@@ -13,7 +13,7 @@ import aiResearchIcon from "@/assets/ai-research-icon.svg";
 import iconGlobe from "@/assets/icon-globe.svg";
 import iconFlowchart from "@/assets/icon-flowchart.svg";
 import iconSurvey from "@/assets/icon-survey.svg";
-import heroMoodboard from "@/assets/imagine/hero-moodboard.png";
+import heroDashboard from "@/assets/breakdown/hero-dashboard.webp";
 
 // ── fade-up helper ──────────────────────────────────────────────
 const fadeUp = (delay = 0) => ({
