@@ -114,9 +114,9 @@ const section2Tiers: Tier[] = [
       "Governed AI access controls",
       "Separate credit allocation",
     ],
-    cta: "Coming Soon",
-    checkoutUrl: `${BASE_CHECKOUT}?plan=indie&period=month&bundles=pzaz_private_llm&currency=EUR`,
-    disabled: true,
+    cta: "Contact Us",
+    checkoutUrl: "",
+    disabled: false,
   },
 ];
 
@@ -306,7 +306,13 @@ const PricingStageSelector = () => {
           size="lg"
           variant={tier.highlighted ? "default" : "outline"}
           className="w-full group"
-          onClick={() => !tier.disabled && window.open(tier.checkoutUrl, "_blank")}
+          onClick={() => {
+            if (tier.id === "private-llm") {
+              setContactOpen(true);
+            } else if (!tier.disabled && tier.checkoutUrl) {
+              window.open(tier.checkoutUrl, "_blank");
+            }
+          }}
           disabled={tier.disabled}
         >
           {tier.cta}
