@@ -116,11 +116,11 @@ const Collaborate = () => {
               With our built-in collaboration pillar, you get one place for everyone to work, together, in real time, with purpose.
             </p>
             <div className="flex items-center gap-4 flex-wrap">
-              <Link to="/pricing">
+              <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
                 <Button variant="default" size="lg" className="gap-2">
                   TRY PZAZ SCRIPTWRITING <ArrowRight className="w-4 h-4" />
                 </Button>
-              </Link>
+              </a>
               <div className="text-sm text-[#4E2273]">
                 <div className="font-semibold">TRY FOR FREE.</div>
                 <div>NO CREDIT CARD.</div>
