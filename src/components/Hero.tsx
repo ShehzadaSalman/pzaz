@@ -74,12 +74,12 @@ const Hero = () => {
             className="flex flex-row flex-wrap items-start justify-center gap-4 mb-6"
           >
             <div className="flex flex-col items-center gap-1">
-              <Link to="/pricing">
+              <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="group px-8">
                   Start for Free
                   <ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />
                 </Button>
-              </Link>
+              </a>
               <p className="font-lato font-normal text-[16px] leading-[30px] tracking-normal text-center text-[#878787]">No credit card.</p>
             </div>
             <div className="flex flex-col items-center gap-1">
