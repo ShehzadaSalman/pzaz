@@ -80,7 +80,7 @@ const BlogHeader = () => {
               <a href="/#products" className="text-foreground font-medium py-2">Products</a>
               <hr className="border-border/50" />
               <a href="https://projector.pzaz.io/sign-in"><Button variant="ghost" className="justify-start">Log in</Button></a>
-              <Link to="/pricing"><Button variant="default">Start for Free</Button></Link>
+              <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer"><Button variant="default">Start for Free</Button></a>
             </div>
           </motion.div>
         )}

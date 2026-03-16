@@ -78,6 +78,7 @@ const CellValue = ({ value }: { value: boolean | string }) => {
 
 const PzazVsFinalDraft = () => {
   const [activeSlide, setActiveSlide] = useState(0);
+  const indieCheckoutUrl = useIndieCheckoutUrl();
 
   return (
     <>
