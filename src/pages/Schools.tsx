@@ -239,9 +239,6 @@ const Schools = () => {
             ].map((tool, i) => (
               <motion.div key={tool.name} {...fadeUp(i * 0.08)}>
                 <div className="relative rounded-xl border border-border bg-background p-5 flex flex-col items-center gap-3 text-center">
-                  <div className="absolute top-2 right-2 w-5 h-5 rounded-full bg-destructive/10 flex items-center justify-center">
-                    <span className="text-destructive text-xs font-bold">✕</span>
-                  </div>
                   <img src={tool.icon} alt={tool.name} className="w-10 h-10 object-contain" />
                   <p className="text-sm font-medium text-muted-foreground">{tool.name}</p>
                 </div>
