@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import ArrowIcon from "@/components/ui/ArrowIcon";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import ctaPlayIcon from "@/assets/cta-play-icon.svg";
+import { useIndieCheckoutUrl } from "@/lib/checkout";
 
 const HeroDescription = () => {
   const [expanded, setExpanded] = useState(false);

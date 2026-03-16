@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useCurrency } from "@/hooks/use-currency";
+import { useIndieCheckoutUrl } from "@/lib/checkout";
 import ArrowIcon from "@/components/ui/ArrowIcon";
 import { Button } from "@/components/ui/button";
 import SectionHeader from "@/components/SectionHeader";

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import ArrowIcon from "@/components/ui/ArrowIcon";
 import ctaPlayIcon from "@/assets/cta-play-icon.svg";
 import aiResearchIcon from "@/assets/ai-research-icon.svg";
-import { Link } from "react-router-dom";
+import { useIndieCheckoutUrl } from "@/lib/checkout";
 
 const SceneBreakdownHero = () => {
   return (
