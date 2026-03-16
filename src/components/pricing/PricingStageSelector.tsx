@@ -197,7 +197,7 @@ const PricingStageSelector = () => {
     "studio-pro": 1,
   });
   const [contactOpen, setContactOpen] = useState(false);
-  const { symbol, convertPrice, currency } = useCurrency();
+  const { symbol, getPrice, currency } = useCurrency();
 
   const getDisplayPrice = (tier: Tier) => {
     if (tier.basePrice === null) return "Free";

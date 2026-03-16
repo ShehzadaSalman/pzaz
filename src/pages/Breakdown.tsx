@@ -127,7 +127,7 @@ const testimonials = [
 /* ───────── page ───────── */
 
 const Breakdown = () => {
-  const { symbol, convertPrice } = useCurrency();
+  const { symbol, getPrice } = useCurrency();
   return (
   <PageLayout>
     <SEO
