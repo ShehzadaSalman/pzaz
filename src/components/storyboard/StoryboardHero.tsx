@@ -8,6 +8,7 @@ import aiResearchIcon from "@/assets/ai-research-icon.svg";
 import { useIndieCheckoutUrl } from "@/lib/checkout";
 
 const StoryboardHero = () => {
+  const indieCheckoutUrl = useIndieCheckoutUrl();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       <div
