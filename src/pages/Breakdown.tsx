@@ -126,7 +126,9 @@ const testimonials = [
 
 /* ───────── page ───────── */
 
-const Breakdown = () => (
+const Breakdown = () => {
+  const { symbol, convertPrice } = useCurrency();
+  return (
   <PageLayout>
     <SEO
       title="Pzaz Breakdown – AI Script Breakdown for Film Production"
