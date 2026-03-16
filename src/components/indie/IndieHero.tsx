@@ -76,12 +76,12 @@ const IndieHero = () => {
             transition={{ duration: 0.6, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4"
           >
-            <Link to="/pricing">
+            <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="group px-8">
                 Start Free
                 <ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />
               </Button>
-            </Link>
+            </a>
             <a href="https://www.youtube.com/watch?v=9szESOfyK_8" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="outline"

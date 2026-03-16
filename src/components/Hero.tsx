@@ -38,7 +38,7 @@ const HeroDescription = () => {
 };
 
 const Hero = () => {
-
+  const indieCheckoutUrl = useIndieCheckoutUrl();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-[60px]">
       {/* Gradient background */}
