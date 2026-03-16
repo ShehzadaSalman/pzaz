@@ -348,11 +348,11 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
                 Log in
               </Button>
             </a>
-            <Link to="/pricing">
+            <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
               <Button variant="default" size="sm">
                 Start for Free
               </Button>
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
