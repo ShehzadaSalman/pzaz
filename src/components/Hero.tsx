@@ -15,18 +15,19 @@ const HeroDescription = () => {
       className="font-lato text-lg md:text-xl leading-relaxed text-muted-foreground text-center max-w-3xl mx-auto mb-10"
     >
       {/* Mobile: truncated to 2 lines */}
-      <span className={`md:hidden block`}>
-        <span className={expanded ? "" : "line-clamp-2"}>
-          Scripts change. Schedules shift. Budgets move. Teams miss updates. Pzaz keeps your script, plan, budget, timeline, and team perfectly in sync from the first draft to final delivery. Things change and everything updates automatically.{" "}
-          Stay focused on the story while Pzaz keeps the production aligned.
-        </span>
-        {!expanded && (
-          <button
-            onClick={() => setExpanded(true)}
-            className="text-foreground underline underline-offset-2 mt-1 inline-block"
-          >
-            Read More
-          </button>
+      <span className="md:hidden block">
+        {expanded ? (
+          <>Scripts change. Schedules shift. Budgets move. Teams miss updates. Pzaz keeps your script, plan, budget, timeline, and team perfectly in sync from the first draft to final delivery. Things change and everything updates automatically. Stay focused on the story while Pzaz keeps the production aligned.</>
+        ) : (
+          <>
+            <span className="line-clamp-2">Scripts change. Schedules shift. Budgets move. Teams miss updates. Pzaz keeps your script, plan, budget, timeline, and team perfectly in sync from the first draft to final delivery. Things change and everything updates automatically. Stay focused on the story while Pzaz keeps the production aligned.</span>
+            <button
+              onClick={() => setExpanded(true)}
+              className="text-muted-foreground/60 text-sm underline underline-offset-2 inline-block mt-0.5"
+            >
+              read more
+            </button>
+          </>
         )}
       </span>
       {/* Desktop: full text */}
