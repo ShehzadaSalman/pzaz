@@ -16,7 +16,7 @@ const EUROZONE = new Set([
 
 function detectCurrency(countryCode: string, continentCode: string): CurrencyCode {
   if (countryCode === "GB") return "GBP";
-  if (continentCode === "EU" || EUROZONE.has(countryCode)) return "EUR";
+  if (continentCode === "EU" || continentCode === "Europe" || EUROZONE.has(countryCode)) return "EUR";
   return "USD";
 }
 
@@ -32,9 +32,23 @@ export const GBP_PRICES: Record<string, number> = {
   "extra-user": 39,
   // ProductsSection / Breakdown products (keyed by EUR price)
   "product-49": 39,   // Budget €49 → £39
-  "product-39": 29,   // Storyboard €39 → £29 (user said storyboard £39 in PricingStageSelector context, using £29 for product card)
+  "product-39": 29,   // Storyboard €39 → £29
   "product-199": 169, // Studio €199 → £169
 };
+
+// Attempt to fetch from a geo API; returns { countryCode, continentCode } or null on failure
+async function tryFetch(url: string, mapFn: (d: unknown) => { countryCode: string; continentCode: string }): Promise<{ countryCode: string; continentCode: string } | null> {
+  try {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 4000);
+    const r = await fetch(url, { signal: controller.signal });
+    clearTimeout(timeout);
+    const data = await r.json();
+    return mapFn(data);
+  } catch {
+    return null;
+  }
+}
 
 interface UseCurrencyResult {
   currency: CurrencyCode;
@@ -52,32 +66,36 @@ export function useCurrency(): UseCurrencyResult {
 
   useEffect(() => {
     let cancelled = false;
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 4000);
 
-    fetch("https://ipapi.co/json/", { signal: controller.signal })
-      .then((r) => r.json())
-      .then((data) => {
-        clearTimeout(timeout);
-        if (!cancelled) {
-          const detected = detectCurrency(
-            data.country_code ?? "",
-            data.continent_code ?? ""
-          );
-          setCurrency(detected);
+    (async () => {
+      // Try multiple geo services in order until one succeeds
+      const result =
+        // 1. freeipapi.com — returns countryCode / continentCode
+        await tryFetch("https://freeipapi.com/api/json", (d: unknown) => {
+          const data = d as Record<string, string>;
+          return { countryCode: data.countryCode ?? "", continentCode: data.continentCode ?? "" };
+        }) ||
+        // 2. ipwho.is — returns country_code / continent_code
+        await tryFetch("https://ipwho.is/", (d: unknown) => {
+          const data = d as Record<string, string>;
+          return { countryCode: data.country_code ?? "", continentCode: data.continent_code ?? "" };
+        }) ||
+        // 3. ipapi.co — original service
+        await tryFetch("https://ipapi.co/json/", (d: unknown) => {
+          const data = d as Record<string, string>;
+          return { countryCode: data.country_code ?? "", continentCode: data.continent_code ?? "" };
+        });
+
+      if (!cancelled) {
+        if (result) {
+          setCurrency(detectCurrency(result.countryCode, result.continentCode));
         }
-      })
-      .catch(() => {
-        // fallback: keep EUR
-      })
-      .finally(() => {
-        if (!cancelled) setIsLoading(false);
-      });
+        // else: all failed, keep default EUR
+        setIsLoading(false);
+      }
+    })();
 
-    return () => {
-      cancelled = true;
-      clearTimeout(timeout);
-    };
+    return () => { cancelled = true; };
   }, []);
 
   const getPrice = (eurPrice: number, priceKey?: string): number => {
