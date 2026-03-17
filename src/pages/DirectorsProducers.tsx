@@ -252,32 +252,34 @@ const DirectorsProducers = () => {
                 </div>
               </div>
 
-              <div className="hidden md:flex items-center justify-center -ml-[80px]">
-                <div className="w-full max-w-md rounded-2xl border border-border bg-card p-6 space-y-4 shadow-xl">
-                  <div className="text-sm font-semibold text-foreground mb-4">Production Status</div>
+              <div className="hidden md:flex items-center justify-center pl-8">
+                <div className="w-full rounded-2xl border border-border bg-card p-6 shadow-xl space-y-3">
+                  <div className="text-sm font-semibold text-foreground pb-2 border-b border-border">Production Status</div>
                   {[
-                    { label: "Script Breakdown", pct: 92 },
-                    { label: "Scheduling", pct: 76 },
-                    { label: "Team Alignment", pct: 88 },
-                    { label: "Budget Tracking", pct: 65 },
+                    { label: "Script Breakdown", pct: 92, color: "#8B1DFF" },
+                    { label: "Scheduling", pct: 76, color: "#7051F7" },
+                    { label: "Team Alignment", pct: 88, color: "#01A7CC" },
+                    { label: "Budget Tracking", pct: 65, color: "#29FADF" },
                   ].map((item, i) => (
-                    <div key={item.label} className="flex items-center gap-3">
-                      <div className="w-32 text-xs font-medium text-muted-foreground shrink-0">{item.label}</div>
-                      <div className="flex-1 bg-border rounded-full h-2">
+                    <div key={item.label} className="space-y-1.5">
+                      <div className="flex justify-between items-center">
+                        <span className="text-xs font-medium text-foreground">{item.label}</span>
+                        <span className="text-xs font-semibold text-muted-foreground">{item.pct}%</span>
+                      </div>
+                      <div className="w-full bg-muted rounded-full h-2 overflow-hidden">
                         <motion.div
                           className="h-2 rounded-full"
-                          style={{ background: "linear-gradient(to right, #29FADF, #8B1DFF)" }}
+                          style={{ background: `linear-gradient(to right, ${item.color}99, ${item.color})` }}
                           initial={{ width: 0 }}
                           whileInView={{ width: `${item.pct}%` }}
                           viewport={{ once: true }}
-                          transition={{ duration: 0.8, delay: i * 0.12 }}
+                          transition={{ duration: 0.9, delay: i * 0.15, ease: "easeOut" }}
                         />
                       </div>
-                      <span className="text-xs text-muted-foreground w-8 text-right">{item.pct}%</span>
                     </div>
                   ))}
-                  <div className="mt-4 pt-4 border-t border-border flex items-center gap-2">
-                    <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                  <div className="pt-3 border-t border-border flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse shrink-0" />
                     <span className="text-xs text-muted-foreground">All departments connected</span>
                   </div>
                 </div>
