@@ -168,12 +168,10 @@ const blogNavItems: NavItem[] = [
   { label: "Pricing", to: "/pricing" },
 ];
 
-  variant?: "fixed" | "sticky";
-}
-
 interface HeaderProps {
   variant?: "fixed" | "sticky";
 }
+
 
 const Header = ({ variant = "fixed" }: HeaderProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
