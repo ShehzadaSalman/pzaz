@@ -48,6 +48,7 @@ import InvestorsFunding from "./pages/InvestorsFunding";
 import Screenwriters from "./pages/Screenwriters";
 import TVSeriesCreators from "./pages/TVSeriesCreators";
 import ScrollToTop from "./components/ScrollToTop";
+import ProductionManagers from "./pages/ProductionManagers";
 
 /**
  * AppRoutes contains all route definitions. It must be wrapped in a router
