@@ -17,6 +17,7 @@ const linkRoutes: Record<string, string> = {
   "Schools": "/film-schools-software",
   "Screenwriters": "/screenwriting-software",
   "TV & Series Creators": "/tv-series-production-software",
+  "Investors & Funding Partners": "/film-investment-software",
   "Pricing": "/pricing",
   "Script": "/script",
   "Collaborate": "/collaborate",
@@ -32,7 +33,7 @@ const linkRoutes: Record<string, string> = {
 const footerLinks = {
   Product: ["Breakdown", "Imagine", "Collaborate", "Pzaz Project", "Sell", "Shoot", "Visualise", "Write"],
   Resources: ["Blog", "Pzaz vs Final Draft", "Knowledge Base"],
-  Company: ["Sales Team", "Brand", "Culture", "Schools", "Screenwriters", "TV & Series Creators"],
+  Company: ["Sales Team", "Brand", "Culture", "Schools", "Screenwriters", "TV & Series Creators", "Investors & Funding Partners"],
   Legal: ["Privacy", "Terms"],
   Social: ["YouTube", "Instagram", "Facebook", "LinkedIn", "TikTok", "X"],
 };
