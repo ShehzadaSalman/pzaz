@@ -145,7 +145,7 @@ const ProductsSection = () => {
                 className="w-5 h-5 transition-all group-hover:[filter:brightness(0)_invert(1)]"
               />
             }
-            onClick={() => window.open("https://www.youtube.com/watch?v=9szESOfyK_8", "_blank", "noopener,noreferrer")}
+            onClick={() => window.open("https://www.youtube.com/watch?v=1AoykWK6yRI", "_blank", "noopener,noreferrer")}
           >
             Watch Video
           </Button>
