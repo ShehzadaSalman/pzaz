@@ -39,6 +39,7 @@ import TaskManagement from "./pages/TaskManagement";
 import FileSharing from "./pages/FileSharing";
 import ProjectManagement from "./pages/ProjectManagement";
 import Schools from "./pages/Schools";
+import DirectorsProducers from "./pages/DirectorsProducers";
 import ScrollToTop from "./components/ScrollToTop";
 
 /**
@@ -78,6 +79,7 @@ export const AppRoutes = () => (
       <Route path="/file-sharing" element={<FileSharing />} />
       <Route path="/project-management" element={<ProjectManagement />} />
       <Route path="/schools" element={<Schools />} />
+      <Route path="/directors-producers" element={<DirectorsProducers />} />
       <Route path="/privacy" element={<Privacy />} />
       <Route path="/terms" element={<Terms />} />
       <Route path="/terms-of-use" element={<Navigate to="/terms" replace />} />
