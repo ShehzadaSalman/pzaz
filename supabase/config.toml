@@ -1,1 +1,4 @@
 project_id = "zrlonqczjzkgzmxiwdcl"
+
+[functions.geo-detect]
+verify_jwt = false
