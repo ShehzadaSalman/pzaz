@@ -118,6 +118,7 @@ const defaultNavItems: NavItem[] = [
     children: [
       { label: "For Film Schools and Students", to: "/schools" },
       { label: "For Directors and Producers", to: "/directors-producers" },
+      { label: "For Documentary Filmmakers", to: "/documentary-filmmakers" },
     ],
   },
   { label: "Pricing", to: "/pricing" },
@@ -157,6 +158,7 @@ const blogNavItems: NavItem[] = [
     children: [
       { label: "For Film Schools and Students", to: "/schools" },
       { label: "For Directors and Producers", to: "/directors-producers" },
+      { label: "For Documentary Filmmakers", to: "/documentary-filmmakers" },
     ],
   },
   { label: "Pricing", to: "/pricing" },

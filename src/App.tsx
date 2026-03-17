@@ -81,6 +81,7 @@ export const AppRoutes = () => (
       <Route path="/project-management" element={<ProjectManagement />} />
       <Route path="/schools" element={<Schools />} />
       <Route path="/directors-producers" element={<DirectorsProducers />} />
+      <Route path="/documentary-filmmakers" element={<DocumentaryFilmmakers />} />
       <Route path="/privacy" element={<Privacy />} />
       <Route path="/terms" element={<Terms />} />
       <Route path="/terms-of-use" element={<Navigate to="/terms" replace />} />
