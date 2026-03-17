@@ -117,6 +117,7 @@ const defaultNavItems: NavItem[] = [
     isDropdown: true,
     children: [
       { label: "For Film Schools and Students", to: "/schools" },
+      { label: "For Directors and Producers", to: "/directors-producers" },
     ],
   },
   { label: "Pricing", to: "/pricing" },
@@ -155,6 +156,7 @@ const blogNavItems: NavItem[] = [
     isDropdown: true,
     children: [
       { label: "For Film Schools and Students", to: "/schools" },
+      { label: "For Directors and Producers", to: "/directors-producers" },
     ],
   },
   { label: "Pricing", to: "/pricing" },
