@@ -171,6 +171,10 @@ const blogNavItems: NavItem[] = [
   variant?: "fixed" | "sticky";
 }
 
+interface HeaderProps {
+  variant?: "fixed" | "sticky";
+}
+
 const Header = ({ variant = "fixed" }: HeaderProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
