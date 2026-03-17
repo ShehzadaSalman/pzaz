@@ -42,6 +42,7 @@ import Schools from "./pages/Schools";
 import DirectorsProducers from "./pages/DirectorsProducers";
 import DocumentaryFilmmakers from "./pages/DocumentaryFilmmakers";
 import Cinematographers from "./pages/Cinematographers";
+import CreativeAgencies from "./pages/CreativeAgencies";
 import ScrollToTop from "./components/ScrollToTop";
 
 /**
