@@ -45,6 +45,7 @@ import Cinematographers from "./pages/Cinematographers";
 import CreativeAgencies from "./pages/CreativeAgencies";
 import ProductionTeams from "./pages/ProductionTeams";
 import Screenwriters from "./pages/Screenwriters";
+import TVSeriesCreators from "./pages/TVSeriesCreators";
 import ScrollToTop from "./components/ScrollToTop";
 
 /**
@@ -109,6 +110,7 @@ export const AppRoutes = () => (
       <Route path="/film-production-team-software" element={<ProductionTeams />} />
       <Route path="/production-teams" element={<Navigate to="/film-production-team-software" replace />} />
       <Route path="/screenwriting-software" element={<Screenwriters />} />
+      <Route path="/tv-series-production-software" element={<TVSeriesCreators />} />
       <Route path="/privacy" element={<Privacy />} />
       <Route path="/terms" element={<Terms />} />
       <Route path="/terms-of-use" element={<Navigate to="/terms" replace />} />
