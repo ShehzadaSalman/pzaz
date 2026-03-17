@@ -96,7 +96,6 @@ const defaultNavItems: NavItem[] = [
       { label: "Pzaz Studio Pro", to: "/studio-pro" },
       { label: "Pzaz Budget", to: "/budget" },
       { label: "Pzaz Storyboard", to: "/storyboard" },
-      { label: "For Film Schools and Students", to: "/schools" },
     ],
   },
   {
@@ -110,6 +109,14 @@ const defaultNavItems: NavItem[] = [
       { label: "Task Management", to: "/task-management" },
       { label: "File Sharing & Storage", to: "/file-sharing" },
       { label: "Project Management", to: "/project-management" },
+    ],
+  },
+  {
+    label: "Solutions",
+    to: "/schools",
+    isDropdown: true,
+    children: [
+      { label: "For Film Schools and Students", to: "/schools" },
     ],
   },
   { label: "Pricing", to: "/pricing" },
@@ -127,7 +134,6 @@ const blogNavItems: NavItem[] = [
       { label: "Pzaz Studio Pro", to: "/studio-pro" },
       { label: "Pzaz Budget", to: "/budget" },
       { label: "Pzaz Storyboard", to: "/storyboard" },
-      { label: "For Film Schools and Students", to: "/schools" },
     ],
   },
   {
@@ -141,6 +147,14 @@ const blogNavItems: NavItem[] = [
       { label: "Task Management", to: "/task-management" },
       { label: "File Sharing & Storage", to: "/file-sharing" },
       { label: "Project Management", to: "/project-management" },
+    ],
+  },
+  {
+    label: "Solutions",
+    to: "/schools",
+    isDropdown: true,
+    children: [
+      { label: "For Film Schools and Students", to: "/schools" },
     ],
   },
   { label: "Pricing", to: "/pricing" },
