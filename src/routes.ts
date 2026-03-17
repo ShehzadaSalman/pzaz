@@ -38,6 +38,7 @@ export const staticRoutes: string[] = [
   "/file-sharing",
   "/project-management",
   "/schools",
+  "/documentary-filmmakers",
   // Knowledge Base – Getting Started
   "/knowledge-base/book-a-personalised-product-demonstration",
   "/knowledge-base/writing-your-script-with-pzaz",

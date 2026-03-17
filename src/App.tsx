@@ -40,6 +40,7 @@ import FileSharing from "./pages/FileSharing";
 import ProjectManagement from "./pages/ProjectManagement";
 import Schools from "./pages/Schools";
 import DirectorsProducers from "./pages/DirectorsProducers";
+import DocumentaryFilmmakers from "./pages/DocumentaryFilmmakers";
 import ScrollToTop from "./components/ScrollToTop";
 
 /**
@@ -80,6 +81,7 @@ export const AppRoutes = () => (
       <Route path="/project-management" element={<ProjectManagement />} />
       <Route path="/schools" element={<Schools />} />
       <Route path="/directors-producers" element={<DirectorsProducers />} />
+      <Route path="/documentary-filmmakers" element={<DocumentaryFilmmakers />} />
       <Route path="/privacy" element={<Privacy />} />
       <Route path="/terms" element={<Terms />} />
       <Route path="/terms-of-use" element={<Navigate to="/terms" replace />} />
