@@ -43,6 +43,7 @@ export const staticRoutes: string[] = [
   "/software-for-cinematographers",
   "/creative-agency-production-software",
   "/film-production-team-software",
+  "/screenwriting-software",
   // Knowledge Base – Getting Started
   "/knowledge-base/book-a-personalised-product-demonstration",
   "/knowledge-base/writing-your-script-with-pzaz",
