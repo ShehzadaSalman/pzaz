@@ -407,6 +407,7 @@ const Cinematographers = () => {
                   title={tool.title}
                   description={tool.description}
                   tagline={tool.tagline}
+                  highlight={tool.highlight}
                 />
               </motion.div>
             ))}
