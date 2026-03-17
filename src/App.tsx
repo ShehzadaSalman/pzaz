@@ -48,6 +48,7 @@ import InvestorsFunding from "./pages/InvestorsFunding";
 import Screenwriters from "./pages/Screenwriters";
 import TVSeriesCreators from "./pages/TVSeriesCreators";
 import ScrollToTop from "./components/ScrollToTop";
+import ProductionManagers from "./pages/ProductionManagers";
 
 /**
  * AppRoutes contains all route definitions. It must be wrapped in a router
@@ -113,6 +114,7 @@ export const AppRoutes = () => (
       <Route path="/screenwriting-software" element={<Screenwriters />} />
       <Route path="/tv-series-production-software" element={<TVSeriesCreators />} />
       <Route path="/film-investment-software" element={<InvestorsFunding />} />
+      <Route path="/software-for-production-managers" element={<ProductionManagers />} />
       <Route path="/privacy" element={<Privacy />} />
       <Route path="/terms" element={<Terms />} />
       <Route path="/terms-of-use" element={<Navigate to="/terms" replace />} />
