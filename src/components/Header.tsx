@@ -125,6 +125,7 @@ const defaultNavItems: NavItem[] = [
       { label: "For Screenwriters", to: "/screenwriting-software" },
       { label: "For TV & Series Creators", to: "/tv-series-production-software" },
       { label: "For Investors & Funding Partners", to: "/film-investment-software" },
+      { label: "For Production Managers", to: "/software-for-production-managers" },
     ],
   },
   { label: "Pricing", to: "/pricing" },
