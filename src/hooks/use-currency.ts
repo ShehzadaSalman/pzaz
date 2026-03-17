@@ -60,6 +60,8 @@ interface UseCurrencyResult {
   isLoading: boolean;
 }
 
+const GEO_DETECT_URL = "https://zrlonqczjzkgzmxiwdcl.supabase.co/functions/v1/geo-detect";
+
 export function useCurrency(): UseCurrencyResult {
   const [currency, setCurrency] = useState<CurrencyCode>("EUR");
   const [isLoading, setIsLoading] = useState(true);
@@ -68,16 +70,16 @@ export function useCurrency(): UseCurrencyResult {
     let cancelled = false;
 
     (async () => {
-      const result = await tryFetch("https://ipapi.co/json/", (d: unknown) => {
-          const data = d as Record<string, string>;
-          return { countryCode: data.country_code ?? "", continentCode: data.continent_code ?? "" };
-        });
+      const result = await tryFetch(GEO_DETECT_URL, (d: unknown) => {
+        const data = d as Record<string, string>;
+        return { countryCode: data.country_code ?? "", continentCode: data.continent_code ?? "" };
+      });
 
       if (!cancelled) {
         if (result) {
           setCurrency(detectCurrency(result.countryCode, result.continentCode));
         }
-        // else: all failed, keep default EUR
+        // else: edge function failed, keep default EUR
         setIsLoading(false);
       }
     })();
