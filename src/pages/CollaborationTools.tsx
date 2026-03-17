@@ -17,8 +17,8 @@ const CollaborationTools = () => {
       <SEO
         title="Collaboration Tools – Pzaz | Film Team Communication"
         description="Keep your entire film production team aligned. Pzaz keeps communication, decisions, files, and planning connected inside the production environment."
-        url="https://pzaz.io/collaboration-tools"
-        canonical="https://pzaz.io/collaboration-tools"
+        url="https://pzaz.io/film-collaboration-software"
+        canonical="https://pzaz.io/film-collaboration-software"
         keywords={["film collaboration", "production team tools", "film communication", "pzaz", "production management"]}
       />
       <CollaborationHero />

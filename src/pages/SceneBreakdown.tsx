@@ -15,8 +15,8 @@ const SceneBreakdown = () => {
       <SEO
         title="Scene Breakdown – Pzaz | Tag, Organise, Prepare"
         description="Break down scenes, add shots, assign teams, and track progress. Pzaz Scene Breakdown keeps creative intent aligned with what production actually requires."
-        url="https://pzaz.io/scene-breakdown"
-        canonical="https://pzaz.io/scene-breakdown"
+        url="https://pzaz.io/scene-breakdown-software"
+        canonical="https://pzaz.io/scene-breakdown-software"
         keywords={["scene breakdown", "film production", "shot list", "stripboard", "storyboard", "pzaz"]}
       />
       <SceneBreakdownHero />

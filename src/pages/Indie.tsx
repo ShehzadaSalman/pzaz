@@ -17,7 +17,7 @@ const Indie = () => {
       <SEO
         title="Pzaz Indie – Free Film Production Platform for Independent Filmmakers"
         description="Make your independent film look ready. Indie gives you a free, permanent production workspace where your script, ideas, planning and collaborators come together."
-        url="https://pzaz.io/indie"
+        url="https://pzaz.io/indie-filmmaking-software"
         keywords={[
           "indie film production",
           "independent filmmaker tools",
@@ -27,7 +27,7 @@ const Indie = () => {
           "Pzaz Indie",
           "production workspace",
         ]}
-        canonical="https://pzaz.io/indie"
+        canonical="https://pzaz.io/indie-filmmaking-software"
       />
       <IndieHero />
       <IndieConfidence />

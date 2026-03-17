@@ -17,8 +17,8 @@ const FileSharing = () => {
       <SEO
         title="File Sharing & Media Storage – Pzaz | Centralise Your Production Assets"
         description="Centralise, share, and protect your film production assets inside Pzaz. Keep scripts, storyboards, footage, and references connected to the production — not scattered across drives."
-        url="https://pzaz.io/file-sharing"
-        canonical="https://pzaz.io/file-sharing"
+        url="https://pzaz.io/film-file-sharing-storage"
+        canonical="https://pzaz.io/film-file-sharing-storage"
         keywords={["file sharing", "media storage", "film production", "asset management", "production files", "pzaz"]}
       />
       <FileSharingHero />
