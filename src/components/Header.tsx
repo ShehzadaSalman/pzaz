@@ -168,6 +168,7 @@ const blogNavItems: NavItem[] = [
       { label: "For Creative Agencies", to: "/creative-agency-production-software" },
       { label: "For Production Teams", to: "/film-production-team-software" },
       { label: "For Screenwriters", to: "/screenwriting-software" },
+      { label: "For TV & Series Creators", to: "/tv-series-production-software" },
     ],
   },
   { label: "Pricing", to: "/pricing" },
