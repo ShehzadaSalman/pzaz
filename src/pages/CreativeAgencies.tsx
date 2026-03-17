@@ -304,7 +304,7 @@ const CreativeAgencies = () => {
               </div>
             </div>
 
-            <div className="hidden md:flex items-center justify-center -ml-[80px]">
+            <div className="hidden md:flex items-center justify-center pl-8">
               <div className="w-full max-w-md rounded-2xl border border-border bg-card p-6 space-y-4 shadow-xl">
                 <div className="text-sm font-semibold text-foreground mb-4">Agency Pipeline Status</div>
                 {[
