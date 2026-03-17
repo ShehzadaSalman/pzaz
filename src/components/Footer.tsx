@@ -17,6 +17,7 @@ const linkRoutes: Record<string, string> = {
   "Schools": "/film-schools-software",
   "Screenwriters": "/screenwriting-software",
   "TV & Series Creators": "/tv-series-production-software",
+  "Investors & Funding Partners": "/film-investment-software",
   "Pricing": "/pricing",
   "Script": "/script",
   "Collaborate": "/collaborate",
