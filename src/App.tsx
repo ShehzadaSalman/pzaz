@@ -43,6 +43,7 @@ import DirectorsProducers from "./pages/DirectorsProducers";
 import DocumentaryFilmmakers from "./pages/DocumentaryFilmmakers";
 import Cinematographers from "./pages/Cinematographers";
 import CreativeAgencies from "./pages/CreativeAgencies";
+import ProductionTeams from "./pages/ProductionTeams";
 import ScrollToTop from "./components/ScrollToTop";
 
 /**
@@ -86,6 +87,7 @@ export const AppRoutes = () => (
       <Route path="/documentary-filmmakers" element={<DocumentaryFilmmakers />} />
       <Route path="/cinematographers" element={<Cinematographers />} />
       <Route path="/creative-agencies" element={<CreativeAgencies />} />
+      <Route path="/production-teams" element={<ProductionTeams />} />
       <Route path="/privacy" element={<Privacy />} />
       <Route path="/terms" element={<Terms />} />
       <Route path="/terms-of-use" element={<Navigate to="/terms" replace />} />
