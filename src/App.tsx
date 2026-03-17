@@ -43,6 +43,7 @@ import DirectorsProducers from "./pages/DirectorsProducers";
 import DocumentaryFilmmakers from "./pages/DocumentaryFilmmakers";
 import Cinematographers from "./pages/Cinematographers";
 import CreativeAgencies from "./pages/CreativeAgencies";
+import ProductionTeams from "./pages/ProductionTeams";
 import ScrollToTop from "./components/ScrollToTop";
 
 /**
