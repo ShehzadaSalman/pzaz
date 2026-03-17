@@ -41,6 +41,7 @@ export const staticRoutes: string[] = [
   "/documentary-filmmakers",
   "/cinematographers",
   "/creative-agencies",
+  "/production-teams",
   // Knowledge Base – Getting Started
   "/knowledge-base/book-a-personalised-product-demonstration",
   "/knowledge-base/writing-your-script-with-pzaz",
