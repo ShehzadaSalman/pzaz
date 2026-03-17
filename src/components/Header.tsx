@@ -184,10 +184,10 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
   const headerRef = useRef<HTMLElement>(null);
   const location = useLocation();
   const isScriptPage = location.pathname === "/script";
-  const isIndiePage = location.pathname === "/indie";
-  const isPlanningPage = location.pathname === "/planning";
-  const isStudioProPage = location.pathname === "/studio-pro";
-  const isStoryboardPage = location.pathname === "/storyboard";
+  const isIndiePage = location.pathname === "/indie-filmmaking-software";
+  const isPlanningPage = location.pathname === "/film-preproduction-planning";
+  const isStudioProPage = location.pathname === "/studio-pro-software";
+  const isStoryboardPage = location.pathname === "/storyboard-software";
   const isBlogRelated = location.pathname.startsWith("/blog") || location.pathname.startsWith("/producer-blog");
   const isPricingPage = location.pathname === "/pricing";
   const isAboutPage = location.pathname === "/about-us";
@@ -209,12 +209,12 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
 
   const isKnowledgeBase = location.pathname.startsWith("/knowledge-base");
 
-  const isSolutionsActive = isIndiePage || isPlanningPage || isStudioProPage || isStoryboardPage || location.pathname === "/budget";
-  const isSceneBreakdownPage = location.pathname === "/scene-breakdown";
-  const isCollaborationToolsPage = location.pathname === "/collaboration-tools";
-  const isTaskManagementPage = location.pathname === "/task-management";
-  const isFileSharingPage = location.pathname === "/file-sharing";
-  const isProjectManagementPage = location.pathname === "/project-management";
+  const isSolutionsActive = isIndiePage || isPlanningPage || isStudioProPage || isStoryboardPage || location.pathname === "/film-budgeting-software";
+  const isSceneBreakdownPage = location.pathname === "/scene-breakdown-software";
+  const isCollaborationToolsPage = location.pathname === "/film-collaboration-software";
+  const isTaskManagementPage = location.pathname === "/production-task-management";
+  const isFileSharingPage = location.pathname === "/film-file-sharing-storage";
+  const isProjectManagementPage = location.pathname === "/film-project-management";
   const isFeaturesActive = isScriptPage || isSceneBreakdownPage || isCollaborationToolsPage || isTaskManagementPage || isFileSharingPage || isProjectManagementPage;
 
   const isActive = (item: NavItem) => {
