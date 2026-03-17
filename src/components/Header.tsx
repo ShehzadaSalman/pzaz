@@ -164,6 +164,7 @@ const blogNavItems: NavItem[] = [
       { label: "For Documentary Filmmakers", to: "/documentary-filmmakers" },
       { label: "For Cinematographers & Storyboard Artists", to: "/cinematographers" },
       { label: "For Creative Agencies", to: "/creative-agencies" },
+      { label: "For Production Teams", to: "/production-teams" },
     ],
   },
   { label: "Pricing", to: "/pricing" },
