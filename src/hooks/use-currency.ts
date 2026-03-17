@@ -68,20 +68,7 @@ export function useCurrency(): UseCurrencyResult {
     let cancelled = false;
 
     (async () => {
-      // Try multiple geo services in order until one succeeds
-      const result =
-        // 1. freeipapi.com — returns countryCode / continentCode
-        await tryFetch("https://freeipapi.com/api/json", (d: unknown) => {
-          const data = d as Record<string, string>;
-          return { countryCode: data.countryCode ?? "", continentCode: data.continentCode ?? "" };
-        }) ||
-        // 2. ipwho.is — returns country_code / continent_code
-        await tryFetch("https://ipwho.is/", (d: unknown) => {
-          const data = d as Record<string, string>;
-          return { countryCode: data.country_code ?? "", continentCode: data.continent_code ?? "" };
-        }) ||
-        // 3. ipapi.co — original service
-        await tryFetch("https://ipapi.co/json/", (d: unknown) => {
+      const result = await tryFetch("https://ipapi.co/json/", (d: unknown) => {
           const data = d as Record<string, string>;
           return { countryCode: data.country_code ?? "", continentCode: data.continent_code ?? "" };
         });
