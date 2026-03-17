@@ -120,6 +120,7 @@ const defaultNavItems: NavItem[] = [
       { label: "For Directors and Producers", to: "/directors-producers" },
       { label: "For Documentary Filmmakers", to: "/documentary-filmmakers" },
       { label: "For Cinematographers & Storyboard Artists", to: "/cinematographers" },
+      { label: "For Creative Agencies", to: "/creative-agencies" },
     ],
   },
   { label: "Pricing", to: "/pricing" },
