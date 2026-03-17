@@ -99,7 +99,7 @@ const DirectorsProducers = () => {
       <SEO
         title="Pzaz for Directors & Producers – Creative Vision Meets Production Reality"
         description="Keep creative vision and production reality aligned. Pzaz provides a shared production environment where planning, communication and execution remain connected."
-        url="https://pzaz.io/directors-producers"
+        url="https://pzaz.io/software-for-directors-producers"
         keywords={[
           "filmmaking platform for directors",
           "production management for producers",
@@ -107,7 +107,7 @@ const DirectorsProducers = () => {
           "director producer collaboration",
           "production planning software",
         ]}
-        canonical="https://pzaz.io/directors-producers"
+        canonical="https://pzaz.io/software-for-directors-producers"
       />
 
       {/* ── HERO ─────────────────────────────────────────────── */}

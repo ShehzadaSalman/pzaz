@@ -103,7 +103,7 @@ const ProductionTeams = () => {
       <SEO
         title="Pzaz for Film Production Teams – Keep Departments Aligned from Prep to Wrap"
         description="The platform built for film production teams. Bring scheduling, tasks, communication and files into one shared workspace so your crew stays organised without added complexity."
-        url="https://pzaz.io/production-teams"
+        url="https://pzaz.io/film-production-team-software"
         keywords={[
           "film production team software",
           "production crew management",
@@ -112,7 +112,7 @@ const ProductionTeams = () => {
           "crew communication app",
           "film project management",
         ]}
-        canonical="https://pzaz.io/production-teams"
+        canonical="https://pzaz.io/film-production-team-software"
       />
 
       {/* ── HERO ─────────────────────────────────────────────── */}

@@ -152,7 +152,7 @@ const CreativeAgencies = () => {
       <SEO
         title="Pzaz for Creative Agencies – From Brief to Launch in One Connected Flow"
         description="The creative platform built for agencies. Bring ideation, planning, proposals, collaboration, budgeting and delivery into one intelligent environment."
-        url="https://pzaz.io/creative-agencies"
+        url="https://pzaz.io/creative-agency-production-software"
         keywords={[
           "creative agency platform",
           "agency workflow software",
@@ -161,7 +161,7 @@ const CreativeAgencies = () => {
           "proposal and delivery software",
           "agency collaboration tools",
         ]}
-        canonical="https://pzaz.io/creative-agencies"
+        canonical="https://pzaz.io/creative-agency-production-software"
       />
 
       {/* ── HERO ─────────────────────────────────────────────── */}

@@ -15,8 +15,8 @@ const ProjectManagement = () => {
       <SEO
         title="Project Management – Pzaz | The Work OS for Filmmakers"
         description="Stop coordinating a film across scattered tools. Pzaz gives filmmakers one unified environment where scripts, schedules, budgets, tasks, and communication all live together."
-        url="https://pzaz.io/project-management"
-        canonical="https://pzaz.io/project-management"
+        url="https://pzaz.io/film-project-management"
+        canonical="https://pzaz.io/film-project-management"
         keywords={[
           "project management",
           "film production",

@@ -105,7 +105,7 @@ const DocumentaryFilmmakers = () => {
       <SEO
         title="Pzaz for Documentary Filmmakers – Plan, Adapt, Organize Evolving Stories"
         description="The all-in-one platform built for documentary filmmakers. Bring planning, narrative development, collaboration, and logistics into one connected workspace."
-        url="https://pzaz.io/documentary-filmmakers"
+        url="https://pzaz.io/documentary-filmmaking-software"
         keywords={[
           "documentary filmmaking platform",
           "documentary production software",
@@ -114,7 +114,7 @@ const DocumentaryFilmmakers = () => {
           "non-linear storytelling tools",
           "documentary collaboration software",
         ]}
-        canonical="https://pzaz.io/documentary-filmmakers"
+        canonical="https://pzaz.io/documentary-filmmaking-software"
       />
 
       {/* ── HERO ─────────────────────────────────────────────── */}

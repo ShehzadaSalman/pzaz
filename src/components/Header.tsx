@@ -91,11 +91,11 @@ const defaultNavItems: NavItem[] = [
     isHash: true,
     isDropdown: true,
     children: [
-      { label: "Pzaz Indie", to: "/indie" },
-      { label: "Pzaz Planning Pro", to: "/planning" },
-      { label: "Pzaz Studio Pro", to: "/studio-pro" },
-      { label: "Pzaz Budget", to: "/budget" },
-      { label: "Pzaz Storyboard", to: "/storyboard" },
+      { label: "Pzaz Indie", to: "/indie-filmmaking-software" },
+      { label: "Pzaz Planning Pro", to: "/film-preproduction-planning" },
+      { label: "Pzaz Studio Pro", to: "/studio-pro-software" },
+      { label: "Pzaz Budget", to: "/film-budgeting-software" },
+      { label: "Pzaz Storyboard", to: "/storyboard-software" },
     ],
   },
   {
@@ -104,24 +104,24 @@ const defaultNavItems: NavItem[] = [
     isDropdown: true,
     children: [
       { label: "Scriptwriting", to: "/script" },
-      { label: "Scene Breakdown", to: "/scene-breakdown" },
-      { label: "Collaboration Tools", to: "/collaboration-tools" },
-      { label: "Task Management", to: "/task-management" },
-      { label: "File Sharing & Storage", to: "/file-sharing" },
-      { label: "Project Management", to: "/project-management" },
+      { label: "Scene Breakdown", to: "/scene-breakdown-software" },
+      { label: "Collaboration Tools", to: "/film-collaboration-software" },
+      { label: "Task Management", to: "/production-task-management" },
+      { label: "File Sharing & Storage", to: "/film-file-sharing-storage" },
+      { label: "Project Management", to: "/film-project-management" },
     ],
   },
   {
     label: "Solutions",
-    to: "/schools",
+    to: "/film-schools-software",
     isDropdown: true,
     children: [
-      { label: "For Film Schools and Students", to: "/schools" },
-      { label: "For Directors and Producers", to: "/directors-producers" },
-      { label: "For Documentary Filmmakers", to: "/documentary-filmmakers" },
-      { label: "For Cinematographers & Storyboard Artists", to: "/cinematographers" },
-      { label: "For Creative Agencies", to: "/creative-agencies" },
-      { label: "For Production Teams", to: "/production-teams" },
+      { label: "For Film Schools and Students", to: "/film-schools-software" },
+      { label: "For Directors and Producers", to: "/software-for-directors-producers" },
+      { label: "For Documentary Filmmakers", to: "/documentary-filmmaking-software" },
+      { label: "For Cinematographers & Storyboard Artists", to: "/software-for-cinematographers" },
+      { label: "For Creative Agencies", to: "/creative-agency-production-software" },
+      { label: "For Production Teams", to: "/film-production-team-software" },
     ],
   },
   { label: "Pricing", to: "/pricing" },
@@ -134,11 +134,11 @@ const blogNavItems: NavItem[] = [
     isHash: true,
     isDropdown: true,
     children: [
-      { label: "Pzaz Indie", to: "/indie" },
-      { label: "Pzaz Planning Pro", to: "/planning" },
-      { label: "Pzaz Studio Pro", to: "/studio-pro" },
-      { label: "Pzaz Budget", to: "/budget" },
-      { label: "Pzaz Storyboard", to: "/storyboard" },
+      { label: "Pzaz Indie", to: "/indie-filmmaking-software" },
+      { label: "Pzaz Planning Pro", to: "/film-preproduction-planning" },
+      { label: "Pzaz Studio Pro", to: "/studio-pro-software" },
+      { label: "Pzaz Budget", to: "/film-budgeting-software" },
+      { label: "Pzaz Storyboard", to: "/storyboard-software" },
     ],
   },
   {
@@ -147,24 +147,24 @@ const blogNavItems: NavItem[] = [
     isDropdown: true,
     children: [
       { label: "Scriptwriting", to: "/script" },
-      { label: "Scene Breakdown", to: "/scene-breakdown" },
-      { label: "Collaboration Tools", to: "/collaboration-tools" },
-      { label: "Task Management", to: "/task-management" },
-      { label: "File Sharing & Storage", to: "/file-sharing" },
-      { label: "Project Management", to: "/project-management" },
+      { label: "Scene Breakdown", to: "/scene-breakdown-software" },
+      { label: "Collaboration Tools", to: "/film-collaboration-software" },
+      { label: "Task Management", to: "/production-task-management" },
+      { label: "File Sharing & Storage", to: "/film-file-sharing-storage" },
+      { label: "Project Management", to: "/film-project-management" },
     ],
   },
   {
     label: "Solutions",
-    to: "/schools",
+    to: "/film-schools-software",
     isDropdown: true,
     children: [
-      { label: "For Film Schools and Students", to: "/schools" },
-      { label: "For Directors and Producers", to: "/directors-producers" },
-      { label: "For Documentary Filmmakers", to: "/documentary-filmmakers" },
-      { label: "For Cinematographers & Storyboard Artists", to: "/cinematographers" },
-      { label: "For Creative Agencies", to: "/creative-agencies" },
-      { label: "For Production Teams", to: "/production-teams" },
+      { label: "For Film Schools and Students", to: "/film-schools-software" },
+      { label: "For Directors and Producers", to: "/software-for-directors-producers" },
+      { label: "For Documentary Filmmakers", to: "/documentary-filmmaking-software" },
+      { label: "For Cinematographers & Storyboard Artists", to: "/software-for-cinematographers" },
+      { label: "For Creative Agencies", to: "/creative-agency-production-software" },
+      { label: "For Production Teams", to: "/film-production-team-software" },
     ],
   },
   { label: "Pricing", to: "/pricing" },
@@ -184,10 +184,10 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
   const headerRef = useRef<HTMLElement>(null);
   const location = useLocation();
   const isScriptPage = location.pathname === "/script";
-  const isIndiePage = location.pathname === "/indie";
-  const isPlanningPage = location.pathname === "/planning";
-  const isStudioProPage = location.pathname === "/studio-pro";
-  const isStoryboardPage = location.pathname === "/storyboard";
+  const isIndiePage = location.pathname === "/indie-filmmaking-software";
+  const isPlanningPage = location.pathname === "/film-preproduction-planning";
+  const isStudioProPage = location.pathname === "/studio-pro-software";
+  const isStoryboardPage = location.pathname === "/storyboard-software";
   const isBlogRelated = location.pathname.startsWith("/blog") || location.pathname.startsWith("/producer-blog");
   const isPricingPage = location.pathname === "/pricing";
   const isAboutPage = location.pathname === "/about-us";
@@ -209,12 +209,12 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
 
   const isKnowledgeBase = location.pathname.startsWith("/knowledge-base");
 
-  const isSolutionsActive = isIndiePage || isPlanningPage || isStudioProPage || isStoryboardPage || location.pathname === "/budget";
-  const isSceneBreakdownPage = location.pathname === "/scene-breakdown";
-  const isCollaborationToolsPage = location.pathname === "/collaboration-tools";
-  const isTaskManagementPage = location.pathname === "/task-management";
-  const isFileSharingPage = location.pathname === "/file-sharing";
-  const isProjectManagementPage = location.pathname === "/project-management";
+  const isSolutionsActive = isIndiePage || isPlanningPage || isStudioProPage || isStoryboardPage || location.pathname === "/film-budgeting-software";
+  const isSceneBreakdownPage = location.pathname === "/scene-breakdown-software";
+  const isCollaborationToolsPage = location.pathname === "/film-collaboration-software";
+  const isTaskManagementPage = location.pathname === "/production-task-management";
+  const isFileSharingPage = location.pathname === "/film-file-sharing-storage";
+  const isProjectManagementPage = location.pathname === "/film-project-management";
   const isFeaturesActive = isScriptPage || isSceneBreakdownPage || isCollaborationToolsPage || isTaskManagementPage || isFileSharingPage || isProjectManagementPage;
 
   const isActive = (item: NavItem) => {
@@ -261,7 +261,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
                   Studio Pro
                 </span>
               )}
-              {location.pathname === "/budget" && (
+              {location.pathname === "/film-budgeting-software" && (
                 <span className="text-xs font-medium px-2 py-0.5 rounded-full" style={{ color: "#5C28A3", backgroundColor: "#F7F2FD" }}>
                   Budget
                 </span>

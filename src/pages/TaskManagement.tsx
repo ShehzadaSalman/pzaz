@@ -14,8 +14,8 @@ const TaskManagement = () => {
       <SEO
         title="Task Management – Pzaz | Clear Ownership for Film Productions"
         description="Keep every department aligned with task management built into the production environment. Assign work, track deadlines, and keep production momentum going with Pzaz."
-        url="https://pzaz.io/task-management"
-        canonical="https://pzaz.io/task-management"
+        url="https://pzaz.io/production-task-management"
+        canonical="https://pzaz.io/production-task-management"
         keywords={["task management", "film production", "production planning", "team coordination", "pzaz"]}
       />
       <TaskManagementHero />

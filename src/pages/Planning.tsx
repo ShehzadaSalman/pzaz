@@ -15,7 +15,7 @@ const Planning = () => {
       <SEO
         title="Pzaz Planning Pro – Preproduction Inside Production Context"
         description="Build your film before you shoot it. Planning Pro keeps creative development inside the same environment that will execute the film — script, breakdown, schedule, and feedback in one place."
-        url="https://pzaz.io/planning"
+        url="https://pzaz.io/film-preproduction-planning"
         keywords={[
           "film preproduction software",
           "screenplay development tool",
@@ -25,7 +25,7 @@ const Planning = () => {
           "script breakdown software",
           "film development workflow",
         ]}
-        canonical="https://pzaz.io/planning"
+        canonical="https://pzaz.io/film-preproduction-planning"
       />
       <PlanningHero />
       <PlanningProblem />
