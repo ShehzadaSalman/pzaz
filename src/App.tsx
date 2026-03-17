@@ -44,6 +44,7 @@ import DocumentaryFilmmakers from "./pages/DocumentaryFilmmakers";
 import Cinematographers from "./pages/Cinematographers";
 import CreativeAgencies from "./pages/CreativeAgencies";
 import ProductionTeams from "./pages/ProductionTeams";
+import InvestorsFunding from "./pages/InvestorsFunding";
 import Screenwriters from "./pages/Screenwriters";
 import TVSeriesCreators from "./pages/TVSeriesCreators";
 import ScrollToTop from "./components/ScrollToTop";
