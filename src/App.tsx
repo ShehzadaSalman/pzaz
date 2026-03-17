@@ -108,6 +108,7 @@ export const AppRoutes = () => (
       <Route path="/creative-agencies" element={<Navigate to="/creative-agency-production-software" replace />} />
       <Route path="/film-production-team-software" element={<ProductionTeams />} />
       <Route path="/production-teams" element={<Navigate to="/film-production-team-software" replace />} />
+      <Route path="/screenwriting-software" element={<Screenwriters />} />
       <Route path="/privacy" element={<Privacy />} />
       <Route path="/terms" element={<Terms />} />
       <Route path="/terms-of-use" element={<Navigate to="/terms" replace />} />
