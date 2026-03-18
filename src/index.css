@@ -201,8 +201,7 @@
   }
 
   .animate-gradient {
-    animation: gradient-shift 8s ease infinite;
-    background-size: 200% 200%;
+    animation: gradient-fade 4s ease-in-out infinite;
   }
 
   .animate-slide-up {
