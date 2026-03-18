@@ -4,10 +4,12 @@ import { Button } from "@/components/ui/button";
 import ArrowIcon from "@/components/ui/ArrowIcon";
 import SectionHeader from "@/components/SectionHeader";
 import iconStar from "@/assets/material-symbols_family-star.svg";
-import { useIndieCheckoutUrl } from "@/lib/checkout";
+import { useCurrency } from "@/hooks/use-currency";
+import { STUDIO_PRO_CHECKOUT_BASE } from "@/lib/checkout";
 
 const StudioProCTA = () => {
-  const indieCheckoutUrl = useIndieCheckoutUrl();
+  const { currency } = useCurrency();
+  const indieCheckoutUrl = `${STUDIO_PRO_CHECKOUT_BASE}&currency=${currency}`;
   return (
     <section className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
