@@ -62,6 +62,20 @@ interface UseCurrencyResult {
 
 const GEO_DETECT_URL = "https://zrlonqczjzkgzmxiwdcl.supabase.co/functions/v1/geo-detect";
 
+// Module-level singleton: ensures geo-detect fires exactly once per page load
+// regardless of how many components call useCurrency().
+let geoPromise: Promise<{ countryCode: string; continentCode: string } | null> | null = null;
+
+function getGeoPromise() {
+  if (!geoPromise) {
+    geoPromise = tryFetch(GEO_DETECT_URL, (d: unknown) => {
+      const data = d as Record<string, string>;
+      return { countryCode: data.country_code ?? "", continentCode: data.continent_code ?? "" };
+    });
+  }
+  return geoPromise;
+}
+
 export function useCurrency(): UseCurrencyResult {
   const [currency, setCurrency] = useState<CurrencyCode>("EUR");
   const [isLoading, setIsLoading] = useState(true);
@@ -70,10 +84,7 @@ export function useCurrency(): UseCurrencyResult {
     let cancelled = false;
 
     (async () => {
-      const result = await tryFetch(GEO_DETECT_URL, (d: unknown) => {
-        const data = d as Record<string, string>;
-        return { countryCode: data.country_code ?? "", continentCode: data.continent_code ?? "" };
-      });
+      const result = await getGeoPromise();
 
       if (!cancelled) {
         if (result) {

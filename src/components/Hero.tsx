@@ -119,6 +119,7 @@ const Hero = () => {
               muted
               loop
               playsInline
+              preload="none"
               className="w-full h-auto block"
             />
           </div>

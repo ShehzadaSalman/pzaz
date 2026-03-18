@@ -146,13 +146,11 @@
 
   .gradient-cta-bg {
     background: linear-gradient(to right, #29FADF 0%, #8B1DFF 51%, #29FADF 100%);
-    background-size: 200% auto;
-    background-position: left center;
-    transition: background-position 0.5s ease;
+    transition: opacity 0.3s ease;
   }
 
   .gradient-cta-bg:hover {
-    background-position: right center;
+    opacity: 0.92;
   }
 
   .glass {
@@ -203,8 +201,7 @@
   }
 
   .animate-gradient {
-    animation: gradient-shift 8s ease infinite;
-    background-size: 200% 200%;
+    animation: gradient-fade 4s ease-in-out infinite;
   }
 
   .animate-slide-up {
@@ -230,10 +227,9 @@
     50% { opacity: 0.6; }
   }
 
-  @keyframes gradient-shift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+  @keyframes gradient-fade {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.85; }
   }
 
   @keyframes slide-up {

@@ -4,4 +4,5 @@ COPY package.json ./
 RUN npm install
 COPY . .
 RUN npm run build
-CMD ["npx", "serve", "dist", "-l", "8080"]
+COPY serve.json ./dist/serve.json
+CMD ["npx", "serve", "dist", "-l", "8080", "-c", "serve.json"]
