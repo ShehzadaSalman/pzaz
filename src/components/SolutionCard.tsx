@@ -41,6 +41,8 @@ const SolutionCard: React.FC<SolutionCardProps> = ({ icon, trigger, result, imag
             src={image}
             alt={`${trigger} preview`}
             className="w-full h-auto object-cover"
+            width="968"
+            height="448"
           />
         </div>
       </div>
