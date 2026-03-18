@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button";
 import ArrowIcon from "@/components/ui/ArrowIcon";
 import SectionHeader from "@/components/SectionHeader";
 import iconStar from "@/assets/material-symbols_family-star.svg";
-import { usePlanningProCheckoutUrl } from "@/lib/checkout";
+import { useIndieCheckoutUrl } from "@/lib/checkout";
 
 const PlanningCTA = () => {
-  const indieCheckoutUrl = usePlanningProCheckoutUrl();
+  const indieCheckoutUrl = useIndieCheckoutUrl();
   return (
     <section className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
