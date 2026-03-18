@@ -13,3 +13,8 @@ export function usePlanningProCheckoutUrl(): string {
   const { currency } = useCurrency();
   return `${PLANNING_PRO_CHECKOUT_BASE}&currency=${currency}`;
 }
+
+export function useStudioProCheckoutUrl(): string {
+  const { currency } = useCurrency();
+  return `${STUDIO_PRO_CHECKOUT_BASE}&currency=${currency}`;
+}

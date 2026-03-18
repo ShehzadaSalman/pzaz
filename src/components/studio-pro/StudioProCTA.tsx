@@ -9,7 +9,7 @@ import { STUDIO_PRO_CHECKOUT_BASE } from "@/lib/checkout";
 
 const StudioProCTA = () => {
   const { currency } = useCurrency();
-  const indieCheckoutUrl = `${STUDIO_PRO_CHECKOUT_BASE}&currency=${currency}`;
+  const studioProCheckoutUrl = `${STUDIO_PRO_CHECKOUT_BASE}&currency=${currency}`;
   return (
     <section className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
