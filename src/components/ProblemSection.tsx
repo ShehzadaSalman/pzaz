@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import iconWarning from "@/assets/icon-warning.svg";
-import fragmentedTools from "@/assets/fragmented-tools.png";
+import fragmentedTools from "@/assets/fragmented-tools-new.png";
 import fragmentedToolsOverlay from "@/assets/fragmented-tools-overlay.svg";
 import SectionHeader from "@/components/SectionHeader";
 
