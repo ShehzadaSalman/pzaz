@@ -20,7 +20,7 @@ export const staticRoutes: string[] = [
   "/brand",
   "/culture",
   "/privacy",
-  "/terms",
+  "/terms-of-use",
   "/knowledge-base",
   "/pzaz-project",
   "/sell",

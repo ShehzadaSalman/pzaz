@@ -116,8 +116,8 @@ export const AppRoutes = () => (
       <Route path="/film-investment-software" element={<InvestorsFunding />} />
       <Route path="/software-for-production-managers" element={<ProductionManagers />} />
       <Route path="/privacy" element={<Privacy />} />
-      <Route path="/terms" element={<Terms />} />
-      <Route path="/terms-of-use" element={<Navigate to="/terms" replace />} />
+      <Route path="/terms-of-use" element={<Terms />} />
+      <Route path="/terms" element={<Navigate to="/terms-of-use" replace />} />
       <Route path="/producer-blog" element={<Blog />} />
       <Route path="/producer-blog/category/:categorySlug" element={<BlogCategory />} />
       <Route path="/producer-blog/:slug" element={<BlogArticle />} />
