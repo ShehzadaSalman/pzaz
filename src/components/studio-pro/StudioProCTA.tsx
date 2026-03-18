@@ -46,7 +46,7 @@ const StudioProCTA = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
+                <a href={studioProCheckoutUrl} target="_blank" rel="noopener noreferrer">
                   <Button
                     size="xl"
                     variant="outline"
