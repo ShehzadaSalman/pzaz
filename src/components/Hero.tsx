@@ -14,16 +14,17 @@ const HeroDescription = () => {
       transition={{ duration: 0.6, delay: 0.15, ease: [0.4, 0, 0.2, 1] }}
       className="font-lato text-lg md:text-xl leading-relaxed text-muted-foreground text-center max-w-3xl mx-auto mb-10"
     >
-      {/* Mobile: truncated to 2 lines */}
+      {/* Mobile: show up to "delivery", rest in read more */}
       <span className="md:hidden block">
+        Scripts change. Schedules shift. Budgets move. Teams miss updates. Pzaz keeps your script, plan, budget, timeline, and team perfectly in sync from the first draft to final delivery.
         {expanded ? (
-          <>Scripts change. Schedules shift. Budgets move. Teams miss updates. Pzaz keeps your script, plan, budget, timeline, and team perfectly in sync from the first draft to final delivery. Things change and everything updates automatically. Stay focused on the story while Pzaz keeps the production aligned.</>
+          <> Things change and everything updates automatically. Stay focused on the story while Pzaz keeps the production aligned.</>
         ) : (
           <>
-            <span className="line-clamp-2">Scripts change. Schedules shift. Budgets move. Teams miss updates. Pzaz keeps your script, plan, budget, timeline, and team perfectly in sync from the first draft to final delivery. Things change and everything updates automatically. Stay focused on the story while Pzaz keeps the production aligned.</span>
+            {" "}
             <button
               onClick={() => setExpanded(true)}
-              className="text-muted-foreground/60 text-sm underline underline-offset-2 inline-block mt-0.5"
+              className="text-muted-foreground/60 text-sm underline underline-offset-2 inline-block"
             >
               read more
             </button>
