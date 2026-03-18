@@ -51,18 +51,20 @@
     </script>
     <!-- End Google Analytics -->
 
-    <!-- Brevo Conversations -->
+    <!-- Brevo Conversations — deferred until after page load to avoid render blocking -->
     <script>
-      (function(d, w, c) {
-        w.BrevoConversationsID = '656712fac1ff896715537efc';
-        w[c] = w[c] || function() {
-          (w[c].q = w[c].q || []).push(arguments);
-        };
-        var s = d.createElement('script');
-        s.async = true;
-        s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
-        if (d.head) d.head.appendChild(s);
-      })(document, window, 'BrevoConversations');
+      window.addEventListener('load', function() {
+        (function(d, w, c) {
+          w.BrevoConversationsID = '656712fac1ff896715537efc';
+          w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+          };
+          var s = d.createElement('script');
+          s.async = true;
+          s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+          if (d.head) d.head.appendChild(s);
+        })(document, window, 'BrevoConversations');
+      });
     </script>
     <!-- /Brevo Conversations -->
 
