@@ -43,7 +43,7 @@ const AIContextSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="flex justify-center relative z-0 mt-16 md:mt-0"
         >
-          <img src={aiContextIllustration} alt="AI context illustration" className="w-full max-w-3xl h-auto" />
+          <img src={aiContextIllustration} alt="AI context illustration" className="w-full max-w-3xl h-auto" width="768" height="516" loading="lazy" />
         </motion.div>
 
         {/* Caption below illustration */}

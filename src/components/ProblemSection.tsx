@@ -81,7 +81,7 @@ const ProblemSection = () => {
 
             {/* Fragmented tools illustration */}
             <div className="flex items-center justify-center -ml-[80px] relative">
-              <img src={fragmentedTools} alt="Fragmented tools illustration" className="max-w-full h-auto" />
+              <img src={fragmentedTools} alt="Fragmented tools illustration" className="max-w-full h-auto" width="1874" height="1426" loading="lazy" />
               <img src={fragmentedToolsOverlay} alt="" className="absolute inset-0 w-full h-full object-contain pointer-events-none" style={{ transform: overlayTranslate }} />
             </div>
 

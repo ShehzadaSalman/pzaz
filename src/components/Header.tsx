@@ -248,7 +248,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
           {/* Logo + Language */}
           <div className="flex items-center gap-4">
             <a href="/" className="flex items-center group" style={{ gap: 16 }}>
-              <img src={pzazLogo} alt="Pzaz" className="h-8" />
+              <img src={pzazLogo} alt="Pzaz" className="h-8" width="109" height="32" fetchPriority="high" />
               {isScriptPage && (
                 <span className="text-xs font-medium px-2 py-0.5 rounded-full" style={{ color: "#5C28A3", backgroundColor: "#F7F2FD" }}>
                   Script
