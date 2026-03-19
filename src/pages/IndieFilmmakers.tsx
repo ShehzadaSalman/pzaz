@@ -302,35 +302,18 @@ const IndieFilmmakers = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {additionalFeatures.map((feat, i) => {
-              const Icon = feat.icon;
-              return (
-                <motion.div
-                  key={feat.title}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.08 * i }}
-                  className="rounded-2xl border border-[#E6D7F7] bg-white p-7 flex flex-col gap-4 hover:border-primary/40 hover:shadow-md transition-all duration-300"
-                >
-                  <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-lato font-black text-xs uppercase tracking-widest text-primary mb-1">
-                      {feat.title}
-                    </p>
-                    <h3 className="font-lato font-extrabold text-lg leading-snug text-foreground mb-2">
-                      {feat.subtitle}
-                    </h3>
-                    <p className="font-lato text-[14px] leading-relaxed text-[#878787]">
-                      {feat.description}
-                    </p>
-                  </div>
-                </motion.div>
-              );
-            })}
+          <div className="grid md:grid-cols-3 gap-[46px] max-w-5xl mx-auto">
+            {additionalFeatures.map((feat, i) => (
+              <StudioCard
+                key={feat.title}
+                icon={feat.icon}
+                tagline={feat.tagline}
+                title={feat.title}
+                description={feat.description}
+                highlight={feat.highlight}
+                index={i}
+              />
+            ))}
           </div>
         </div>
       </section>
