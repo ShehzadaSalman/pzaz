@@ -116,6 +116,7 @@ const defaultNavItems: NavItem[] = [
     to: "/film-schools-software",
     isDropdown: true,
     children: [
+      { label: "Empowering Every Aspect of Filmmaking", to: "/empowering-filmmaking" },
       { label: "For Film Schools and Students", to: "/film-schools-software" },
       { label: "For Directors and Producers", to: "/software-for-directors-producers" },
       { label: "For Documentary Filmmakers", to: "/documentary-filmmaking-software" },
@@ -163,6 +164,7 @@ const blogNavItems: NavItem[] = [
     to: "/film-schools-software",
     isDropdown: true,
     children: [
+      { label: "Empowering Every Aspect of Filmmaking", to: "/empowering-filmmaking" },
       { label: "For Film Schools and Students", to: "/film-schools-software" },
       { label: "For Directors and Producers", to: "/software-for-directors-producers" },
       { label: "For Documentary Filmmakers", to: "/documentary-filmmaking-software" },
