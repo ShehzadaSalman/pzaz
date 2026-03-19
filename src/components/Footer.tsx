@@ -55,7 +55,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <a href="/" className="flex items-center gap-2 mb-4">
-              <img src={pzazLogo} alt="Pzaz" className="h-8" />
+              <img src={pzazLogo} alt="Pzaz" className="h-8" width="109" height="32" loading="lazy" />
             </a>
           </div>
 

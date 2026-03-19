@@ -38,6 +38,9 @@ const IntegrationsSection = () => {
             src={integrationsHub}
             alt="Integrations hub showing Final Draft, Google Maps, PDF, and CSV connections"
             className="max-w-2xl w-full h-auto mt-[70px]"
+            width="672"
+            height="341"
+            loading="lazy"
           />
           <Button
             variant="outline"
