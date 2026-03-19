@@ -186,7 +186,7 @@ const IndieFilmmakers = () => {
                 Independent creators are not limited by imagination. They are limited by fragmentation.
               </p>
               <div className="flex flex-col gap-3 mb-6">
-                {problems.map(({ icon: Icon, text }) => (
+                {problems.map(({ text }) => (
                   <div key={text} className="flex items-center gap-3 p-4 rounded-xl border border-red-100 bg-red-50/50">
                     <AlertTriangle className="w-5 h-5 text-red-400 flex-shrink-0" />
                     <span className="font-lato text-[15px] text-foreground">{text}</span>
