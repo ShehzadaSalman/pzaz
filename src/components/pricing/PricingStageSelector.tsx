@@ -305,7 +305,9 @@ const PricingStageSelector = () => {
           <div className="border-t border-border pt-5 mb-6">
             <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">Plan Details</p>
             <ul className="space-y-2 text-sm text-foreground">
+              <li>1 core user included</li>
               <li>10 external collaborators included</li>
+              <li>3 projects</li>
               <li>500 AI credits per month</li>
             </ul>
           </div>
