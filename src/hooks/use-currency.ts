@@ -65,12 +65,22 @@ const GEO_DETECT_URL = "https://zrlonqczjzkgzmxiwdcl.supabase.co/functions/v1/ge
 // Module-level singleton: ensures geo-detect fires exactly once per page load
 // regardless of how many components call useCurrency().
 let geoPromise: Promise<{ countryCode: string; continentCode: string } | null> | null = null;
+// Resolved value cached synchronously once the promise settles
+let geoResult: { countryCode: string; continentCode: string } | null | undefined = undefined;
+
+/** Call as early as possible (e.g. top of main.tsx) to pre-warm the geo fetch. */
+export function warmGeoDetect() {
+  getGeoPromise();
+}
 
 function getGeoPromise() {
   if (!geoPromise) {
     geoPromise = tryFetch(GEO_DETECT_URL, (d: unknown) => {
       const data = d as Record<string, string>;
       return { countryCode: data.country_code ?? "", continentCode: data.continent_code ?? "" };
+    }).then((r) => {
+      geoResult = r; // cache synchronously for subsequent hook calls
+      return r;
     });
   }
   return geoPromise;

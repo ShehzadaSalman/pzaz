@@ -6,6 +6,14 @@ import App, { AppRoutes } from "./App";
 import { staticRoutes } from "./routes";
 import { blogPosts } from "./data/blogData";
 
+// ─── Warm geo-detect as early as possible ────────────────────────────────────
+// Kick this off before React mounts so the promise is already resolving by the
+// time the Hero / useCurrency hook runs. This prevents a 14s+ element-render
+// delay on the LCP element caused by the hook re-rendering after geo resolves.
+if (typeof window !== "undefined") {
+  import("@/hooks/use-currency").then(({ warmGeoDetect }) => warmGeoDetect());
+}
+
 // Client-side hydration — guarded so it does not run during SSR prerendering
 if (typeof window !== "undefined") {
   createRoot(document.getElementById("root")!).render(
