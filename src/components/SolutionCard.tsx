@@ -43,6 +43,8 @@ const SolutionCard: React.FC<SolutionCardProps> = ({ icon, trigger, result, imag
             className="w-full h-auto object-cover"
             width="968"
             height="448"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </div>
