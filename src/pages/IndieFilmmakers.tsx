@@ -3,79 +3,84 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import PageLayout from "@/components/layout/PageLayout";
 import SEO from "@/components/SEO";
+import StudioCard from "@/components/script/StudioCard";
 import { Button } from "@/components/ui/button";
 import { useIndieCheckoutUrl } from "@/lib/checkout";
-import {
-  AlertTriangle,
-  DollarSign,
-  Layers,
-  Zap,
-  Users,
-  PenLine,
-  Clapperboard,
-  Sparkles,
-  Brain,
-  CheckCircle2,
-} from "lucide-react";
+import { AlertTriangle, Sparkles, CheckCircle2 } from "lucide-react";
+
+import iconMoneyBag from "@/assets/script/icon-money-bag.svg";
+import iconSafetyCert from "@/assets/script/icon-safety-cert.svg";
+import iconEngine from "@/assets/script/icon-engine.svg";
+import iconUserGroup from "@/assets/script/icon-user-group.svg";
+import iconDocument from "@/assets/script/icon-document.svg";
+import iconFlow from "@/assets/script/icon-flow.svg";
+import iconAiResearch from "@/assets/script/icon-ai-research.svg";
 
 const problems = [
-  { icon: DollarSign, text: "Budgets are constrained." },
-  { icon: Layers, text: "Workflows are improvised." },
-  { icon: Zap, text: "Critical information lives in disconnected tools." },
+  { text: "Budgets are constrained." },
+  { text: "Workflows are improvised." },
+  { text: "Critical information lives in disconnected tools." },
 ];
 
 const coreBenefits = [
   {
-    icon: DollarSign,
-    title: "Cost Effective Solution",
-    subtitle: "Maximise Creative Output Without Financial Pressure",
+    icon: iconMoneyBag,
+    tagline: "Cost Effective Solution",
+    title: "Maximise Creative Output Without Financial Pressure",
     description:
       "Independent productions operate within clear financial limits. Managing multiple subscriptions, tools and workflows introduces hidden costs that compound over time. Pzaz replaces fragmented software stacks with a single platform designed to deliver more capability per budget allocated.",
+    highlight: "More capability per budget — without the fragmentation tax.",
   },
   {
-    icon: CheckCircle2,
-    title: "Full Creative Control",
-    subtitle: "Your Vision Maintains Integrity from Concept to Screen",
+    icon: iconSafetyCert,
+    tagline: "Full Creative Control",
+    title: "Your Vision Maintains Integrity from Concept to Screen",
     description:
       "Creative independence is meaningful only when supported by practical execution. Pzaz allows filmmakers to oversee every phase of production while maintaining authorship over artistic decisions.",
+    highlight: "Artistic decisions stay yours. Pzaz provides the structure to execute them.",
   },
   {
-    icon: Layers,
-    title: "Streamlined Workflow",
-    subtitle: "One Platform Supporting the Entire Production Process",
+    icon: iconEngine,
+    tagline: "Streamlined Workflow",
+    title: "One Platform Supporting the Entire Production Process",
     description:
-      "When creative work is distributed across disconnected tools, efficiency becomes difficult to sustain. Pzaz integrates writing, visual planning and production preparation into a single structured environment. The result is less administrative overhead and more sustained creative momentum.",
+      "When creative work is distributed across disconnected tools, efficiency becomes difficult to sustain. Pzaz integrates writing, visual planning and production preparation into a single structured environment.",
+    highlight: "Less administrative overhead. More sustained creative momentum.",
   },
   {
-    icon: Users,
-    title: "Effortless Collaboration",
-    subtitle: "Keep Your Team Aligned Regardless of Location",
+    icon: iconUserGroup,
+    tagline: "Effortless Collaboration",
+    title: "Keep Your Team Aligned Regardless of Location",
     description:
       "Independent filmmaking often involves distributed teams working under time constraints. Pzaz enables real time collaboration so contributors remain synchronised and accountable throughout the project lifecycle.",
+    highlight: "Your team stays in sync — no matter where they are.",
   },
 ];
 
 const additionalFeatures = [
   {
-    icon: PenLine,
+    icon: iconDocument,
+    tagline: "Script to Screen",
     title: "Seamless Scriptwriting and Storyboarding",
-    subtitle: "Move from Written Concept to Visual Structure",
     description:
       "Draft, refine and visualise scripts within a single environment. Integrated storyboarding tools ensure the transition from written narrative to visual planning remains fluid and efficient.",
+    highlight: "From written concept to visual structure — without switching tools.",
   },
   {
-    icon: Clapperboard,
+    icon: iconFlow,
+    tagline: "Production Clarity",
     title: "Effortless Production Planning and Collaboration",
-    subtitle: "Maintain Clarity Across Teams and Timelines",
     description:
       "Production planning requires structured coordination. Pzaz supports scheduling, budgeting and workflow alignment with real time visibility for all contributors.",
+    highlight: "Clarity across teams and timelines, from day one to wrap.",
   },
   {
-    icon: Brain,
+    icon: iconAiResearch,
+    tagline: "AI Powered",
     title: "AI Powered Enhancements for Indie Filmmakers",
-    subtitle: "Intelligent Assistance That Supports Creative Judgment",
     description:
       "Artificial intelligence within Pzaz is designed to enhance rather than replace creative decision making. Filmmakers receive analytical insights that improve narrative clarity and production feasibility.",
+    highlight: "Intelligent assistance that supports creative judgment — not replaces it.",
   },
 ];
 
@@ -181,7 +186,7 @@ const IndieFilmmakers = () => {
                 Independent creators are not limited by imagination. They are limited by fragmentation.
               </p>
               <div className="flex flex-col gap-3 mb-6">
-                {problems.map(({ icon: Icon, text }) => (
+                {problems.map(({ text }) => (
                   <div key={text} className="flex items-center gap-3 p-4 rounded-xl border border-red-100 bg-red-50/50">
                     <AlertTriangle className="w-5 h-5 text-red-400 flex-shrink-0" />
                     <span className="font-lato text-[15px] text-foreground">{text}</span>
@@ -256,35 +261,18 @@ const IndieFilmmakers = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {coreBenefits.map((benefit, i) => {
-              const Icon = benefit.icon;
-              return (
-                <motion.div
-                  key={benefit.title}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.05 * i }}
-                  className="rounded-2xl border border-[#E6D7F7] bg-[#F6FCFC] p-8 flex flex-col gap-4 hover:border-primary/40 hover:shadow-md transition-all duration-300"
-                >
-                  <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-lato font-black text-xs uppercase tracking-widest text-primary mb-1">
-                      {benefit.title}
-                    </p>
-                    <h3 className="font-lato font-extrabold text-xl leading-snug text-foreground mb-2">
-                      {benefit.subtitle}
-                    </h3>
-                    <p className="font-lato text-[15px] leading-relaxed text-[#878787]">
-                      {benefit.description}
-                    </p>
-                  </div>
-                </motion.div>
-              );
-            })}
+          <div className="grid md:grid-cols-2 gap-[46px] max-w-5xl mx-auto">
+            {coreBenefits.map((benefit, i) => (
+              <StudioCard
+                key={benefit.title}
+                icon={benefit.icon}
+                tagline={benefit.tagline}
+                title={benefit.title}
+                description={benefit.description}
+                highlight={benefit.highlight}
+                index={i}
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -314,35 +302,18 @@ const IndieFilmmakers = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {additionalFeatures.map((feat, i) => {
-              const Icon = feat.icon;
-              return (
-                <motion.div
-                  key={feat.title}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.08 * i }}
-                  className="rounded-2xl border border-[#E6D7F7] bg-white p-7 flex flex-col gap-4 hover:border-primary/40 hover:shadow-md transition-all duration-300"
-                >
-                  <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-lato font-black text-xs uppercase tracking-widest text-primary mb-1">
-                      {feat.title}
-                    </p>
-                    <h3 className="font-lato font-extrabold text-lg leading-snug text-foreground mb-2">
-                      {feat.subtitle}
-                    </h3>
-                    <p className="font-lato text-[14px] leading-relaxed text-[#878787]">
-                      {feat.description}
-                    </p>
-                  </div>
-                </motion.div>
-              );
-            })}
+          <div className="grid md:grid-cols-3 gap-[46px] max-w-5xl mx-auto">
+            {additionalFeatures.map((feat, i) => (
+              <StudioCard
+                key={feat.title}
+                icon={feat.icon}
+                tagline={feat.tagline}
+                title={feat.title}
+                description={feat.description}
+                highlight={feat.highlight}
+                index={i}
+              />
+            ))}
           </div>
         </div>
       </section>
