@@ -87,10 +87,23 @@ function getGeoPromise() {
 }
 
 export function useCurrency(): UseCurrencyResult {
-  const [currency, setCurrency] = useState<CurrencyCode>("EUR");
-  const [isLoading, setIsLoading] = useState(true);
+  // If geo-detect already resolved (pre-warmed before mount), use it synchronously
+  // so the component renders with the correct currency on the very first paint —
+  // avoiding the 14s+ LCP element-render delay caused by a post-mount re-render.
+  const initialCurrency: CurrencyCode =
+    geoResult !== undefined
+      ? geoResult
+        ? detectCurrency(geoResult.countryCode, geoResult.continentCode)
+        : "EUR"
+      : "EUR";
+
+  const [currency, setCurrency] = useState<CurrencyCode>(initialCurrency);
+  const [isLoading, setIsLoading] = useState(geoResult === undefined);
 
   useEffect(() => {
+    // Already resolved synchronously — nothing to do
+    if (geoResult !== undefined) return;
+
     let cancelled = false;
 
     (async () => {
@@ -100,7 +113,6 @@ export function useCurrency(): UseCurrencyResult {
         if (result) {
           setCurrency(detectCurrency(result.countryCode, result.continentCode));
         }
-        // else: edge function failed, keep default EUR
         setIsLoading(false);
       }
     })();
