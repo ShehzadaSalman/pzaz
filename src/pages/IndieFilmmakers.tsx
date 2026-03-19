@@ -3,79 +3,84 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import PageLayout from "@/components/layout/PageLayout";
 import SEO from "@/components/SEO";
+import StudioCard from "@/components/script/StudioCard";
 import { Button } from "@/components/ui/button";
 import { useIndieCheckoutUrl } from "@/lib/checkout";
-import {
-  AlertTriangle,
-  DollarSign,
-  Layers,
-  Zap,
-  Users,
-  PenLine,
-  Clapperboard,
-  Sparkles,
-  Brain,
-  CheckCircle2,
-} from "lucide-react";
+import { AlertTriangle, Sparkles, CheckCircle2 } from "lucide-react";
+
+import iconMoneyBag from "@/assets/script/icon-money-bag.svg";
+import iconSafetyCert from "@/assets/script/icon-safety-cert.svg";
+import iconEngine from "@/assets/script/icon-engine.svg";
+import iconUserGroup from "@/assets/script/icon-user-group.svg";
+import iconDocument from "@/assets/script/icon-document.svg";
+import iconFlow from "@/assets/script/icon-flow.svg";
+import iconAiResearch from "@/assets/script/icon-ai-research.svg";
 
 const problems = [
-  { icon: DollarSign, text: "Budgets are constrained." },
-  { icon: Layers, text: "Workflows are improvised." },
-  { icon: Zap, text: "Critical information lives in disconnected tools." },
+  { text: "Budgets are constrained." },
+  { text: "Workflows are improvised." },
+  { text: "Critical information lives in disconnected tools." },
 ];
 
 const coreBenefits = [
   {
-    icon: DollarSign,
-    title: "Cost Effective Solution",
-    subtitle: "Maximise Creative Output Without Financial Pressure",
+    icon: iconMoneyBag,
+    tagline: "Cost Effective Solution",
+    title: "Maximise Creative Output Without Financial Pressure",
     description:
       "Independent productions operate within clear financial limits. Managing multiple subscriptions, tools and workflows introduces hidden costs that compound over time. Pzaz replaces fragmented software stacks with a single platform designed to deliver more capability per budget allocated.",
+    highlight: "More capability per budget — without the fragmentation tax.",
   },
   {
-    icon: CheckCircle2,
-    title: "Full Creative Control",
-    subtitle: "Your Vision Maintains Integrity from Concept to Screen",
+    icon: iconSafetyCert,
+    tagline: "Full Creative Control",
+    title: "Your Vision Maintains Integrity from Concept to Screen",
     description:
       "Creative independence is meaningful only when supported by practical execution. Pzaz allows filmmakers to oversee every phase of production while maintaining authorship over artistic decisions.",
+    highlight: "Artistic decisions stay yours. Pzaz provides the structure to execute them.",
   },
   {
-    icon: Layers,
-    title: "Streamlined Workflow",
-    subtitle: "One Platform Supporting the Entire Production Process",
+    icon: iconEngine,
+    tagline: "Streamlined Workflow",
+    title: "One Platform Supporting the Entire Production Process",
     description:
-      "When creative work is distributed across disconnected tools, efficiency becomes difficult to sustain. Pzaz integrates writing, visual planning and production preparation into a single structured environment. The result is less administrative overhead and more sustained creative momentum.",
+      "When creative work is distributed across disconnected tools, efficiency becomes difficult to sustain. Pzaz integrates writing, visual planning and production preparation into a single structured environment.",
+    highlight: "Less administrative overhead. More sustained creative momentum.",
   },
   {
-    icon: Users,
-    title: "Effortless Collaboration",
-    subtitle: "Keep Your Team Aligned Regardless of Location",
+    icon: iconUserGroup,
+    tagline: "Effortless Collaboration",
+    title: "Keep Your Team Aligned Regardless of Location",
     description:
       "Independent filmmaking often involves distributed teams working under time constraints. Pzaz enables real time collaboration so contributors remain synchronised and accountable throughout the project lifecycle.",
+    highlight: "Your team stays in sync — no matter where they are.",
   },
 ];
 
 const additionalFeatures = [
   {
-    icon: PenLine,
+    icon: iconDocument,
+    tagline: "Script to Screen",
     title: "Seamless Scriptwriting and Storyboarding",
-    subtitle: "Move from Written Concept to Visual Structure",
     description:
       "Draft, refine and visualise scripts within a single environment. Integrated storyboarding tools ensure the transition from written narrative to visual planning remains fluid and efficient.",
+    highlight: "From written concept to visual structure — without switching tools.",
   },
   {
-    icon: Clapperboard,
+    icon: iconFlow,
+    tagline: "Production Clarity",
     title: "Effortless Production Planning and Collaboration",
-    subtitle: "Maintain Clarity Across Teams and Timelines",
     description:
       "Production planning requires structured coordination. Pzaz supports scheduling, budgeting and workflow alignment with real time visibility for all contributors.",
+    highlight: "Clarity across teams and timelines, from day one to wrap.",
   },
   {
-    icon: Brain,
+    icon: iconAiResearch,
+    tagline: "AI Powered",
     title: "AI Powered Enhancements for Indie Filmmakers",
-    subtitle: "Intelligent Assistance That Supports Creative Judgment",
     description:
       "Artificial intelligence within Pzaz is designed to enhance rather than replace creative decision making. Filmmakers receive analytical insights that improve narrative clarity and production feasibility.",
+    highlight: "Intelligent assistance that supports creative judgment — not replaces it.",
   },
 ];
 
