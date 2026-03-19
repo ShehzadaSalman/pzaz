@@ -261,35 +261,18 @@ const IndieFilmmakers = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {coreBenefits.map((benefit, i) => {
-              const Icon = benefit.icon;
-              return (
-                <motion.div
-                  key={benefit.title}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.05 * i }}
-                  className="rounded-2xl border border-[#E6D7F7] bg-[#F6FCFC] p-8 flex flex-col gap-4 hover:border-primary/40 hover:shadow-md transition-all duration-300"
-                >
-                  <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-lato font-black text-xs uppercase tracking-widest text-primary mb-1">
-                      {benefit.title}
-                    </p>
-                    <h3 className="font-lato font-extrabold text-xl leading-snug text-foreground mb-2">
-                      {benefit.subtitle}
-                    </h3>
-                    <p className="font-lato text-[15px] leading-relaxed text-[#878787]">
-                      {benefit.description}
-                    </p>
-                  </div>
-                </motion.div>
-              );
-            })}
+          <div className="grid md:grid-cols-2 gap-[46px] max-w-5xl mx-auto">
+            {coreBenefits.map((benefit, i) => (
+              <StudioCard
+                key={benefit.title}
+                icon={benefit.icon}
+                tagline={benefit.tagline}
+                title={benefit.title}
+                description={benefit.description}
+                highlight={benefit.highlight}
+                index={i}
+              />
+            ))}
           </div>
         </div>
       </section>
