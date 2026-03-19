@@ -65,22 +65,45 @@ const GEO_DETECT_URL = "https://zrlonqczjzkgzmxiwdcl.supabase.co/functions/v1/ge
 // Module-level singleton: ensures geo-detect fires exactly once per page load
 // regardless of how many components call useCurrency().
 let geoPromise: Promise<{ countryCode: string; continentCode: string } | null> | null = null;
+// Resolved value cached synchronously once the promise settles
+let geoResult: { countryCode: string; continentCode: string } | null | undefined = undefined;
+
+/** Call as early as possible (e.g. top of main.tsx) to pre-warm the geo fetch. */
+export function warmGeoDetect() {
+  getGeoPromise();
+}
 
 function getGeoPromise() {
   if (!geoPromise) {
     geoPromise = tryFetch(GEO_DETECT_URL, (d: unknown) => {
       const data = d as Record<string, string>;
       return { countryCode: data.country_code ?? "", continentCode: data.continent_code ?? "" };
+    }).then((r) => {
+      geoResult = r; // cache synchronously for subsequent hook calls
+      return r;
     });
   }
   return geoPromise;
 }
 
 export function useCurrency(): UseCurrencyResult {
-  const [currency, setCurrency] = useState<CurrencyCode>("EUR");
-  const [isLoading, setIsLoading] = useState(true);
+  // If geo-detect already resolved (pre-warmed before mount), use it synchronously
+  // so the component renders with the correct currency on the very first paint —
+  // avoiding the 14s+ LCP element-render delay caused by a post-mount re-render.
+  const initialCurrency: CurrencyCode =
+    geoResult !== undefined
+      ? geoResult
+        ? detectCurrency(geoResult.countryCode, geoResult.continentCode)
+        : "EUR"
+      : "EUR";
+
+  const [currency, setCurrency] = useState<CurrencyCode>(initialCurrency);
+  const [isLoading, setIsLoading] = useState(geoResult === undefined);
 
   useEffect(() => {
+    // Already resolved synchronously — nothing to do
+    if (geoResult !== undefined) return;
+
     let cancelled = false;
 
     (async () => {
@@ -90,7 +113,6 @@ export function useCurrency(): UseCurrencyResult {
         if (result) {
           setCurrency(detectCurrency(result.countryCode, result.continentCode));
         }
-        // else: edge function failed, keep default EUR
         setIsLoading(false);
       }
     })();
