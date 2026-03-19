@@ -52,6 +52,7 @@ const InvestorsFunding = lazy(() => import("./pages/InvestorsFunding"));
 const Screenwriters = lazy(() => import("./pages/Screenwriters"));
 const TVSeriesCreators = lazy(() => import("./pages/TVSeriesCreators"));
 const ProductionManagers = lazy(() => import("./pages/ProductionManagers"));
+const EmpoweringFilmmaking = lazy(() => import("./pages/EmpoweringFilmmaking"));
 
 
 /**
