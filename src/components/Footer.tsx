@@ -28,6 +28,7 @@ const linkRoutes: Record<string, string> = {
   "Visualise": "/visualise",
   "Write": "/write",
   "Knowledge Base": "/knowledge-base",
+  "Demo Video": "/demo-video",
 };
 
 const footerLinks = {
