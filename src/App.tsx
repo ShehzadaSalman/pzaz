@@ -54,6 +54,7 @@ const TVSeriesCreators = lazy(() => import("./pages/TVSeriesCreators"));
 const ProductionManagers = lazy(() => import("./pages/ProductionManagers"));
 const EmpoweringFilmmaking = lazy(() => import("./pages/EmpoweringFilmmaking"));
 const IndieFilmmakers = lazy(() => import("./pages/IndieFilmmakers"));
+const VideoPlayer = lazy(() => import("./pages/VideoPlayer"));
 
 
 /**
@@ -124,6 +125,7 @@ export const AppRoutes = () => (
         <Route path="/software-for-production-managers" element={<ProductionManagers />} />
         <Route path="/empowering-filmmaking" element={<EmpoweringFilmmaking />} />
         <Route path="/indie-filmmakers" element={<IndieFilmmakers />} />
+        <Route path="/demo-video" element={<VideoPlayer />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms-of-use" element={<Terms />} />
         <Route path="/terms" element={<Navigate to="/terms-of-use" replace />} />

@@ -49,6 +49,7 @@ export const staticRoutes: string[] = [
   "/software-for-production-managers",
   "/empowering-filmmaking",
   "/indie-filmmakers",
+  "/demo-video",
   // Knowledge Base – Getting Started
   "/knowledge-base/book-a-personalised-product-demonstration",
   "/knowledge-base/writing-your-script-with-pzaz",
