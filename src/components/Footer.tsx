@@ -28,11 +28,12 @@ const linkRoutes: Record<string, string> = {
   "Visualise": "/visualise",
   "Write": "/write",
   "Knowledge Base": "/knowledge-base",
+  "Demo Video": "/demo-video",
 };
 
 const footerLinks = {
   Product: ["Breakdown", "Imagine", "Collaborate", "Pzaz Project", "Sell", "Shoot", "Visualise", "Write"],
-  Resources: ["Blog", "Pzaz vs Final Draft", "Knowledge Base"],
+  Resources: ["Blog", "Pzaz vs Final Draft", "Knowledge Base", "Demo Video"],
   Company: ["Sales Team", "Brand", "Culture", "Schools", "Screenwriters", "TV & Series Creators", "Investors & Funding Partners"],
   Legal: ["Privacy", "Terms"],
   Social: ["YouTube", "Instagram", "Facebook", "LinkedIn", "TikTok", "X"],
