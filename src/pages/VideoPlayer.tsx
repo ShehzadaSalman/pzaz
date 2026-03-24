@@ -1,9 +1,32 @@
+import { useState } from "react";
 import PageLayout from "@/components/layout/PageLayout";
 import { Button } from "@/components/ui/button";
 
 const VIDEO_URL = "https://storage.googleapis.com/wowzers-261318.appspot.com/website/videos/Pzaz%20Demo-Final%20cut.mp4";
 
 const VideoPlayer = () => {
+  const [downloading, setDownloading] = useState(false);
+
+  const handleDownload = async () => {
+    setDownloading(true);
+    try {
+      const response = await fetch(VIDEO_URL);
+      const blob = await response.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "pzaz-demo.mp4";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      console.error("Download failed", err);
+    } finally {
+      setDownloading(false);
+    }
+  };
+
   return (
     <PageLayout>
       <section className="min-h-screen bg-background flex flex-col items-center justify-center px-4 py-24">
@@ -32,10 +55,8 @@ const VideoPlayer = () => {
           </div>
 
           <div className="flex justify-center">
-            <Button asChild size="xl">
-              <a href={VIDEO_URL} download="pzaz-demo.mp4">
-                ↓ Download Video
-              </a>
+            <Button size="xl" onClick={handleDownload} disabled={downloading}>
+              {downloading ? "Downloading…" : "↓ Download Video"}
             </Button>
           </div>
         </div>
@@ -45,3 +66,4 @@ const VideoPlayer = () => {
 };
 
 export default VideoPlayer;
+
