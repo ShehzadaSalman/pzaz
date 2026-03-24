@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import MetaPixelTracker from "./components/MetaPixelTracker";
 
 // ─── Lazy-loaded pages ────────────────────────────────────────────────────────
 // Each page is split into its own chunk, loaded only when navigated to.
@@ -64,6 +65,7 @@ const VideoPlayer = lazy(() => import("./pages/VideoPlayer"));
 export const AppRoutes = () => (
   <>
     <ScrollToTop />
+    <MetaPixelTracker />
     <Suspense fallback={null}>
       <Routes>
         <Route path="/" element={<Index />} />
