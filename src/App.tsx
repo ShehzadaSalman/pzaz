@@ -65,6 +65,7 @@ const VideoPlayer = lazy(() => import("./pages/VideoPlayer"));
 export const AppRoutes = () => (
   <>
     <ScrollToTop />
+    <MetaPixelTracker />
     <Suspense fallback={null}>
       <Routes>
         <Route path="/" element={<Index />} />
