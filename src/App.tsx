@@ -54,6 +54,7 @@ const TVSeriesCreators = lazy(() => import("./pages/TVSeriesCreators"));
 const ProductionManagers = lazy(() => import("./pages/ProductionManagers"));
 const EmpoweringFilmmaking = lazy(() => import("./pages/EmpoweringFilmmaking"));
 const IndieFilmmakers = lazy(() => import("./pages/IndieFilmmakers"));
+const VideoPlayer = lazy(() => import("./pages/VideoPlayer"));
 
 
 /**
