@@ -1,7 +1,7 @@
 import PageLayout from "@/components/layout/PageLayout";
 import { Button } from "@/components/ui/button";
 
-const VIDEO_URL = "https://pzaz.tv/videos/hero-banner.mp4";
+const VIDEO_URL = "https://storage.googleapis.com/wowzers-261318.appspot.com/website/videos/Pzaz%20Demo-Final%20cut.mp4";
 
 const VideoPlayer = () => {
   return (
