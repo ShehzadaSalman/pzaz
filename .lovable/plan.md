@@ -1,38 +1,16 @@
 
-## Plan: Video Player Page
+## Add Meta Pixel to index.html
 
-**Goal:** Create a new page at `/demo-video` with a full-width video player using `https://pzaz.tv/videos/hero-banner.mp4` and a prominent download button.
+**Single file change** — `index.html`
 
-### Files to create/modify
+**What:** Insert the Meta Pixel script (Pixel ID: `923288560584876`) into `index.html`.
 
-**1. Create `src/pages/VideoPlayer.tsx`**
-- Clean, minimal branded page using `PageLayout`
-- Full-width `<video>` element with `controls`, `autoPlay`, `muted`, `loop`, `playsInline`
-- Source: `https://pzaz.tv/videos/hero-banner.mp4`
-- Prominent "Download Video" button below the player using an `<a>` tag with `href` pointing to the video URL and `download` attribute — this triggers a native browser download
+**Where:**
+- Add a `preconnect` + `dns-prefetch` hint for `https://connect.facebook.net` in the `<head>` (alongside the other preconnects at lines 12–23)
+- Add the Meta Pixel `<script>` block just before the closing `</head>` tag (after Microsoft Clarity, line 83)
+- Add the `<noscript>` pixel fallback `<img>` tag inside `<body>`, right after the existing GTM noscript block (line 90)
 
-**2. Add route in `src/App.tsx`**
-- Add `const VideoPlayer = lazy(() => import("./pages/VideoPlayer"));`
-- Add `<Route path="/demo-video" element={<VideoPlayer />} />`
-
-**3. Add to `src/routes.ts`**
-- Append `"/demo-video"` to `staticRoutes`
-
-### Page layout
-
-```text
-┌─────────────────────────────┐
-│         Header              │
-├─────────────────────────────┤
-│   Pzaz – Demo Video         │ ← heading
-│   subtitle text             │
-│  ┌───────────────────────┐  │
-│  │   <video> player      │  │ ← full controls
-│  └───────────────────────┘  │
-│  [ ↓ Download Video ]       │ ← prominent CTA button
-├─────────────────────────────┤
-│         Footer              │
-└─────────────────────────────┘
-```
-
-No nav link added — page is accessible via direct URL only, kept unlisted.
+**Technical notes:**
+- The pixel script is already `async` by nature (uses dynamic script injection), so no additional deferral is needed
+- The `<noscript>` fallback goes in `<body>` per Meta's specification
+- Pixel ID used exactly as provided: `923288560584876`
