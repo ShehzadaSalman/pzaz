@@ -1,18 +1,38 @@
 
-## Plan: Add mt-[55px] to "Start with everything" heading
+## Plan: Video Player Page
 
-**File**: `src/components/ProductsSection.tsx`, line 149
+**Goal:** Create a new page at `/demo-video` with a full-width video player using `https://pzaz.tv/videos/hero-banner.mp4` and a prominent download button.
 
-**Change**: Add `mt-[55px]` to the existing className of the `<motion.p>` element at line 149.
+### Files to create/modify
 
-Current:
+**1. Create `src/pages/VideoPlayer.tsx`**
+- Clean, minimal branded page using `PageLayout`
+- Full-width `<video>` element with `controls`, `autoPlay`, `muted`, `loop`, `playsInline`
+- Source: `https://pzaz.tv/videos/hero-banner.mp4`
+- Prominent "Download Video" button below the player using an `<a>` tag with `href` pointing to the video URL and `download` attribute — this triggers a native browser download
+
+**2. Add route in `src/App.tsx`**
+- Add `const VideoPlayer = lazy(() => import("./pages/VideoPlayer"));`
+- Add `<Route path="/demo-video" element={<VideoPlayer />} />`
+
+**3. Add to `src/routes.ts`**
+- Append `"/demo-video"` to `staticRoutes`
+
+### Page layout
+
+```text
+┌─────────────────────────────┐
+│         Header              │
+├─────────────────────────────┤
+│   Pzaz – Demo Video         │ ← heading
+│   subtitle text             │
+│  ┌───────────────────────┐  │
+│  │   <video> player      │  │ ← full controls
+│  └───────────────────────┘  │
+│  [ ↓ Download Video ]       │ ← prominent CTA button
+├─────────────────────────────┤
+│         Footer              │
+└─────────────────────────────┘
 ```
-className="font-lato font-bold mb-12 text-[24px] tracking-normal text-center md:mb-[74px]"
-```
 
-Updated:
-```
-className="font-lato font-bold mt-[55px] mb-12 text-[24px] tracking-normal text-center md:mb-[74px]"
-```
-
-This is a single-line className update with no side effects.
+No nav link added — page is accessible via direct URL only, kept unlisted.
