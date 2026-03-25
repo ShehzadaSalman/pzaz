@@ -250,7 +250,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
       <div className="max-w-6xl mx-auto px-2 py-4">
         <nav className="flex items-center justify-between relative">
           {/* Logo + Language */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <a href="/" className="flex items-center group" style={{ gap: 16 }}>
               <img src={pzazLogo} alt="Pzaz" className="h-8" width="109" height="32" fetchPriority="high" />
               {isScriptPage && (
