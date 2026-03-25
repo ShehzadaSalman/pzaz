@@ -4,8 +4,10 @@ import iconWarning from "@/assets/icon-warning.svg";
 import fragmentedTools from "@/assets/fragmented-tools-new.png";
 import fragmentedToolsOverlay from "@/assets/fragmented-tools-overlay.svg";
 import SectionHeader from "@/components/SectionHeader";
+import { useTranslation } from "react-i18next";
 
 const ProblemSection = () => {
+  const { t } = useTranslation();
   const [isDesktop, setIsDesktop] = React.useState(false);
   React.useEffect(() => {
     const check = () => setIsDesktop(window.innerWidth >= 1024);
@@ -28,18 +30,18 @@ const ProblemSection = () => {
             className="text-center mb-16"
           >
             <SectionHeader
-              pillText="The Problem"
+              pillText={t("problem.pill")}
               pillClassName="bg-[#F7F2FD] text-[#5C28A4] border border-[#D4BAF4] mb-4"
               title={
                 <>
-                  Plans change.{" "}
-                  <span className="font-lato font-extrabold  md:text-[48px] tracking-normal text-transparent bg-clip-text bg-gradient-to-r to-[#409DFF] from-[#3207BC]">
-                    Productions break.
+                  {t("problem.title1")}{" "}
+                  <span className="font-lato font-extrabold md:text-[48px] tracking-normal text-transparent bg-clip-text bg-gradient-to-r to-[#409DFF] from-[#3207BC]">
+                    {t("problem.title2")}
                   </span>
                 </>
               }
               titleClassName=""
-              description="Every time your team switches tools, context disappears. That turns into rework, delays and budget pressure. Production loses alignment."
+              description={t("problem.description")}
               descriptionClassName=""
             />
           </motion.div>
@@ -58,22 +60,22 @@ const ProblemSection = () => {
                 <div className="flex items-start gap-4 p-6 bg-[#FDF2F5] rounded-lg border border-[#EF6F9B]">
                   <img src={iconWarning} alt="" className="w-6 h-6 mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-[16px] font-lato font-bold leading-snug text-[#3e3a4d]">Context Loss</p>
-                    <p className="text-[16px] font-lato text-[#3e3a4d] leading-snug">Switching between disconnected apps can erase up to 60% of working context.</p>
+                    <p className="text-[16px] font-lato font-bold leading-snug text-[#3e3a4d]">{t("problem.card1_title")}</p>
+                    <p className="text-[16px] font-lato text-[#3e3a4d] leading-snug">{t("problem.card1_desc")}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4 p-6 bg-[#FDF2F5] rounded-lg border border-[#EF6F9B]">
                   <img src={iconWarning} alt="" className="w-6 h-6 mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-[16px] font-lato font-bold leading-snug text-[#3e3a4d]">Digital Fatigue</p>
-                    <p className="text-[16px] font-lato text-[#3e3a4d] leading-snug">Constant tool switching drains focus and performance drops by up to 30%.</p>
+                    <p className="text-[16px] font-lato font-bold leading-snug text-[#3e3a4d]">{t("problem.card2_title")}</p>
+                    <p className="text-[16px] font-lato text-[#3e3a4d] leading-snug">{t("problem.card2_desc")}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4 p-6 bg-[#FDF2F5] rounded-lg border border-[#EF6F9B]">
                   <img src={iconWarning} alt="" className="w-6 h-6 mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-[16px] font-lato font-bold leading-snug text-[#3e3a4d]">Fragmented Data</p>
-                    <p className="text-[16px] font-lato text-[#3e3a4d] leading-snug">When information isn't connected, mistakes multiply.</p>
+                    <p className="text-[16px] font-lato font-bold leading-snug text-[#3e3a4d]">{t("problem.card3_title")}</p>
+                    <p className="text-[16px] font-lato text-[#3e3a4d] leading-snug">{t("problem.card3_desc")}</p>
                   </div>
                 </div>
               </div>

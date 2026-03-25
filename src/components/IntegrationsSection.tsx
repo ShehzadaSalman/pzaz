@@ -4,8 +4,10 @@ import { Button } from "@/components/ui/button";
 import SectionHeader from "@/components/SectionHeader";
 import integrationsHub from "@/assets/integrations-hub.png";
 import ContactModal from "@/components/ContactModal";
+import { useTranslation } from "react-i18next";
 
 const IntegrationsSection = () => {
+  const { t } = useTranslation();
   const [contactOpen, setContactOpen] = useState(false);
 
   return (
@@ -19,10 +21,10 @@ const IntegrationsSection = () => {
           className="text-center mb-12"
         >
           <SectionHeader
-            pillText="Integrations"
+            pillText={t("integrations.pill")}
             pillClassName="bg-primary/10 text-primary mb-0"
-            title="Works with your existing tools"
-            description="No lock-in. No barriers. Just filmmaking."
+            title={t("integrations.title")}
+            description={t("integrations.description")}
             descriptionClassName="text-lg text-muted-foreground"
           />
         </motion.div>
@@ -48,7 +50,7 @@ const IntegrationsSection = () => {
             onClick={() => setContactOpen(true)}
             className=" px-8 mt-12 font-lato font-black text-xl leading-[25px] text-primary hover:text-primary-foreground"
           >
-            Contact Us
+            {t("integrations.cta")}
           </Button>
         </motion.div>
       </div>
