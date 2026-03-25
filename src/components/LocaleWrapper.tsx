@@ -16,8 +16,13 @@ const LocaleWrapper = () => {
     : "en";
 
   useEffect(() => {
-    if (i18n.language !== resolvedLocale) {
-      i18n.changeLanguage(resolvedLocale);
+    // Only force a language change when there is an explicit locale in the URL.
+    // Without this guard, the default (English) LocaleWrapper would override
+    // the language that i18n.ts correctly initialised from the URL on refresh.
+    if (locale) {
+      if (i18n.language !== resolvedLocale) {
+        i18n.changeLanguage(resolvedLocale);
+      }
     }
     if (typeof document !== "undefined") {
       document.documentElement.setAttribute(
@@ -29,7 +34,7 @@ const LocaleWrapper = () => {
     if (typeof window !== "undefined") {
       localStorage.setItem("lang", resolvedLocale);
     }
-  }, [resolvedLocale, i18n]);
+  }, [resolvedLocale, i18n, locale]);
 
   return <Outlet />;
 };
