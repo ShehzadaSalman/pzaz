@@ -7,15 +7,17 @@ export type SupportedLocale = (typeof SUPPORTED_LOCALES)[number];
 const RTL_LOCALES: SupportedLocale[] = ["ur"];
 
 export function useLocale() {
-  const { locale } = useParams<{ locale?: string }>();
+  const { locale: paramLocale } = useParams<{ locale?: string }>();
   const navigate = useNavigate();
   const location = useLocation();
   const { i18n } = useTranslation();
 
-  // Derive the current locale from URL param; default to "en"
+  // Derive the current locale from URL param OR pathname prefix; default to "en"
+  const pathSegment = location.pathname.split("/")[1];
+  const detectedLocale = paramLocale ?? (SUPPORTED_LOCALES.includes(pathSegment as SupportedLocale) ? pathSegment as SupportedLocale : undefined);
   const currentLocale: SupportedLocale =
-    SUPPORTED_LOCALES.includes(locale as SupportedLocale)
-      ? (locale as SupportedLocale)
+    SUPPORTED_LOCALES.includes(detectedLocale as SupportedLocale)
+      ? (detectedLocale as SupportedLocale)
       : "en";
 
   function navigateToLocale(targetLocale: SupportedLocale) {
