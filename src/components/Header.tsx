@@ -284,6 +284,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
                 </span>
               )}
             </a>
+            <LanguageDropdown />
           </div>
 
           {/* Desktop Navigation */}
@@ -382,7 +383,6 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <LanguageDropdown />
             <a href="https://projector.pzaz.io/sign-in">
               <Button variant="ghost" size="sm">
                 Log in
