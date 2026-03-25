@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Synchronously apply lang/dir before any CSS so :lang(ur) rules fire on first paint -->
+    <script>
+      (function() {
+        var seg = window.location.pathname.split('/')[1];
+        var lang = seg === 'ur' ? 'ur' : (localStorage.getItem('lang') || 'en');
+        document.documentElement.setAttribute('lang', lang);
+        document.documentElement.setAttribute('dir', lang === 'ur' ? 'rtl' : 'ltr');
+      })();
+    </script>
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
