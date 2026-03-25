@@ -382,6 +382,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
+            <LanguageDropdown />
             <a href="https://projector.pzaz.io/sign-in">
               <Button variant="ghost" size="sm">
                 Log in
@@ -455,6 +456,9 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
                   Contact
                 </button>
                 <div className="flex flex-col gap-3 pt-4 pb-2">
+                  <div className="pb-1">
+                    <LanguageDropdown />
+                  </div>
                   <a href="https://projector.pzaz.io/sign-in" className="w-full">
                     <button
                       className="w-full py-3 rounded-[10px] font-black text-sm border-2 transition-colors"
