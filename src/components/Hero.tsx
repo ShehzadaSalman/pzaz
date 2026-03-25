@@ -4,8 +4,10 @@ import ArrowIcon from "@/components/ui/ArrowIcon";
 import { motion } from "framer-motion";
 import ctaPlayIcon from "@/assets/cta-play-icon.svg";
 import { useIndieCheckoutUrl } from "@/lib/checkout";
+import { useTranslation } from "react-i18next";
 
 const HeroDescription = () => {
+  const { t } = useTranslation();
   const [expanded, setExpanded] = useState(false);
   return (
     <motion.div
@@ -16,9 +18,9 @@ const HeroDescription = () => {
     >
       {/* Mobile: show up to "delivery", rest in read more */}
       <span className="md:hidden block">
-        Scripts change. Schedules shift. Budgets move. Teams miss updates. Pzaz keeps your script, plan, budget, timeline, and team perfectly in sync from the first draft to final delivery.
+        {t("hero.description_short")}
         {expanded ? (
-          <> Things change and everything updates automatically. Stay focused on the story while Pzaz keeps the production aligned.</>
+          <> {t("hero.description_short_more")}</>
         ) : (
           <>
             {" "}
@@ -26,20 +28,21 @@ const HeroDescription = () => {
               onClick={() => setExpanded(true)}
               className="text-muted-foreground/60 text-sm underline underline-offset-2 inline-block"
             >
-              read more
+              {t("hero.read_more")}
             </button>
           </>
         )}
       </span>
       {/* Desktop: full text */}
       <span className="hidden md:block">
-        Scripts change. Schedules shift. Budgets move. Teams miss updates. Pzaz keeps your script, plan, budget, timeline, and team perfectly in sync from the first draft to final delivery. Things change and everything updates automatically.<br /><br />Stay focused on the story while Pzaz keeps the production aligned.
+        {t("hero.description_full")}<br /><br />{t("hero.description_full2")}
       </span>
     </motion.div>
   );
 };
 
 const Hero = () => {
+  const { t } = useTranslation();
   const indieCheckoutUrl = useIndieCheckoutUrl();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-[60px]">
@@ -62,7 +65,10 @@ const Hero = () => {
             transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
             className="font-lato font-bold text-center mb-10 text-balance pt-[40px] md:pt-[60px] text-[32px] sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1]"
           >
-            <span className="text-foreground block">Screen productions rarely fail because of creativity. </span><span className="bg-clip-text text-transparent block" style={{backgroundImage: "linear-gradient(247.38deg, rgb(41, 250, 223) -2.17%, rgb(139, 29, 255) 84.87%)"}}>They fail because information falls apart.</span>
+            <span className="text-foreground block">{t("hero.headline1")} </span>
+            <span className="bg-clip-text text-transparent block" style={{backgroundImage: "linear-gradient(247.38deg, rgb(41, 250, 223) -2.17%, rgb(139, 29, 255) 84.87%)"}}>
+              {t("hero.headline2")}
+            </span>
           </motion.h1>
 
           {/* Subheading */}
@@ -78,11 +84,13 @@ const Hero = () => {
             <div className="flex flex-col items-center gap-1">
               <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="group px-8">
-                  Start for Free
+                  {t("hero.cta_primary")}
                   <ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />
                 </Button>
               </a>
-              <p className="font-lato font-normal text-[16px] leading-[30px] tracking-normal text-center text-[#878787]">No credit card.</p>
+              <p className="font-lato font-normal text-[16px] leading-[30px] tracking-normal text-center text-[#878787]">
+                {t("hero.cta_primary_sub")}
+              </p>
             </div>
             <div className="flex flex-col items-center gap-1">
               <a href="https://calendly.com/filmmaking-app/30min" target="_blank" rel="noopener noreferrer">
@@ -98,10 +106,12 @@ const Hero = () => {
                     />
                   }
                 >
-                  Book a Demo
+                  {t("hero.cta_secondary")}
                 </Button>
               </a>
-              <p className="font-lato font-normal text-[16px] leading-[30px] tracking-normal text-center text-[#878787]">Be up and running in 15 minutes.</p>
+              <p className="font-lato font-normal text-[16px] leading-[30px] tracking-normal text-center text-[#878787]">
+                {t("hero.cta_secondary_sub")}
+              </p>
             </div>
           </motion.div>
         </div>
@@ -126,8 +136,8 @@ const Hero = () => {
           </div>
         </motion.div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
 
 export default Hero;

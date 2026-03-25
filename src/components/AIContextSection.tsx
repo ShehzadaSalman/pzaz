@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import aiContextIllustration from "@/assets/ai-context-illustration.svg";
+import { useTranslation } from "react-i18next";
 
 const AIContextSection = () => {
+  const { t } = useTranslation();
   return (
     <section className="section-padding relative overflow-hidden" style={{ backgroundColor: "#FBFBFB" }}>
       <div className="container mx-auto px-6 relative z-10">
@@ -14,7 +16,7 @@ const AIContextSection = () => {
           transition={{ duration: 0.6 }}
           className="font-lato font-extrabold text-[48px] leading-[56px] text-foreground text-center mb-12"
         >
-          AI without context is guesswork.
+          {t("ai_context.heading")}
         </motion.h2>
 
         {/* Two-column description */}
@@ -26,12 +28,12 @@ const AIContextSection = () => {
           className="grid md:grid-cols-2 gap-8 md:gap-52 max-w-5xl mx-auto relative z-10 mb-[-80px]"
         >
           <p className="font-lato font-normal text-[20px] leading-[30px] text-[#878787]">
-            AI can generate impressive answers in seconds. But impressive answers don't run productions. Without full production context, outputs don't connect, decisions don't propagate, and teams fall out of alignment.
+            {t("ai_context.para1")}
           </p>
           <p className="font-lato font-normal text-[20px] leading-[30px] text-[#878787]">
-            That's why AI-first tools look powerful, yet still leave productions fragmented. It's also why 95% of companies fail to unlock real AI value.
+            {t("ai_context.para2")}
             <br /><br />
-            Pzaz connects your full production context so your tools, AI agents and your teams work together in harmony.
+            {t("ai_context.para3")}
           </p>
         </motion.div>
 
@@ -53,9 +55,8 @@ const AIContextSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="font-lato font-normal text-[20px] leading-[30px] text-[#878787] text-center mt-8"
-        >
-          You're in control while AI assist. <span className="font-bold">The production stays aligned.</span>
-        </motion.p>
+          dangerouslySetInnerHTML={{ __html: t("ai_context.caption") }}
+        />
       </div>
     </section>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
 import "./index.css";
+import "./i18n";
 import App, { AppRoutes } from "./App";
 import { staticRoutes } from "./routes";
 import { blogPosts } from "./data/blogData";

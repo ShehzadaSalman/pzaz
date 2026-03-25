@@ -87,4 +87,6 @@ export const staticRoutes: string[] = [
   "/knowledge-base/personal-to-dos",
   "/knowledge-base/card-blocks",
   "/knowledge-base/your-filmspace",
+  // ─── Urdu locale routes ──────────────────────────────────────────────────────
+  "/ur",
 ];

@@ -6,6 +6,7 @@ import SectionHeader from "@/components/SectionHeader";
 import iconStar from "@/assets/material-symbols_family-star.svg";
 import languagesImg from "@/assets/languages.png";
 import { useIndieCheckoutUrl } from "@/lib/checkout";
+import { useTranslation } from "react-i18next";
 
 interface SharedCTAProps {
   pillText?: string;
@@ -19,16 +20,24 @@ interface SharedCTAProps {
 }
 
 const SharedCTA = ({
-  pillText = "Free 7-day trial",
-  title = <>Run Your Next Production in Sync.</>,
-  description = "Stop managing fragmentation. Start operating with full alignment.",
-  primaryButtonText = "Get started free",
+  pillText,
+  title,
+  description,
+  primaryButtonText,
   primaryButtonPrefixIcon,
-  secondaryButtonText = "Schedule a demo",
+  secondaryButtonText,
   showLanguagesImage = true,
   backgroundStyle,
 }: SharedCTAProps) => {
+  const { t } = useTranslation();
   const indieCheckoutUrl = useIndieCheckoutUrl();
+
+  const resolvedPill = pillText ?? t("cta.pill");
+  const resolvedTitle = title ?? <>{t("cta.title")}</>;
+  const resolvedDescription = description ?? t("cta.description");
+  const resolvedPrimary = primaryButtonText ?? t("cta.primary");
+  const resolvedSecondary = secondaryButtonText ?? t("cta.secondary");
+
   return (
     <section className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
@@ -45,18 +54,17 @@ const SharedCTA = ({
               {!backgroundStyle && <div className="absolute inset-0 gradient-hero-bg animate-gradient" />}
             </div>
 
-
             {/* Glow effect */}
             <div className="absolute -top-1/2 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-white/20 rounded-full blur-3xl pointer-events-none" />
 
             <div className="relative p-8 md:p-16 md:py-24 pb-12 text-center">
               <SectionHeader
-                pillText={pillText}
+                pillText={resolvedPill}
                 pillClassName="bg-white text-primary mb-0"
                 pillIcon={<img src={iconStar} alt="" className="w-4 h-4" />}
-                title={title}
+                title={resolvedTitle}
                 titleClassName="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-primary-foreground"
-                description={description}
+                description={resolvedDescription}
                 descriptionClassName="text-xl text-primary-foreground/80 max-w-xl mx-auto mb-10"
               />
 
@@ -75,12 +83,12 @@ const SharedCTA = ({
                     prefixIcon={primaryButtonPrefixIcon}
                     postfixIcon={<ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
                   >
-                    {primaryButtonText}
+                    {resolvedPrimary}
                   </Button>
                 </a>
                 <a href="https://calendly.com/filmmaking-app/30min" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" size="xl" className="text-white border-white/30 hover:bg-white/10 rounded-[10px]">
-                    {secondaryButtonText}
+                    {resolvedSecondary}
                   </Button>
                 </a>
               </div>

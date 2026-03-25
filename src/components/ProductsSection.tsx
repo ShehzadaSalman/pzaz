@@ -18,49 +18,55 @@ import featureIcon6 from "@/assets/feature-icon-6.svg";
 import featureIcon7 from "@/assets/feature-icon-7.svg";
 import featureIcon8 from "@/assets/feature-icon-8.svg";
 import ctaPlayIcon from "@/assets/cta-play-icon.svg";
-
-const featureCards = [
-  { icon: featureIcon7, label: "Feature films" },
-  { icon: featureIcon5, label: "Episodic television" },
-  { icon: featureIcon4, label: "Animation and VFX productions" },
-  { icon: featureIcon3, label: "Commercial and branded campaigns" },
-  { icon: featureIcon8, label: "Digital-first and vertical series" },
-  { icon: featureIcon1, label: "And more..." },
-];
-
-const products = [
-  {
-    customIcon: cardIconBudget,
-    name: "Pzaz Budget",
-    eurPrice: 49,
-    tagline: "Professional budgeting & cost control",
-    description: "For producers and line producers who need clarity and confidence. Turn your script into a structured production budget that stays in sync as plans change.",
-    highlight: false,
-    href: "/budget",
-  },
-  {
-    customIcon: cardIconStoryboard,
-    name: "Pzaz Storyboard",
-    eurPrice: 39,
-    tagline: "Visualize the film before you shoot",
-    description: "For directors and visual storytellers. Turn scenes into storyboards in seconds and refine shots collaboratively before production starts.",
-    highlight: false,
-    href: "/storyboard",
-  },
-  {
-    customIcon: cardIconStudio,
-    name: "Pzaz Studio",
-    eurPrice: 199,
-    tagline: "All-in-one production system",
-    description: "For full productions and teams that need everything connected in real time. Script, schedule, budget, storyboard, and collaboration in one live workspace.",
-    highlight: true,
-    href: "/studio-pro",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const ProductsSection = () => {
+  const { t } = useTranslation();
   const { symbol, getPrice } = useCurrency();
   const indieCheckoutUrl = useIndieCheckoutUrl();
+
+  const featureCards = [
+    { icon: featureIcon7, label: t("products.feature1") },
+    { icon: featureIcon5, label: t("products.feature2") },
+    { icon: featureIcon4, label: t("products.feature3") },
+    { icon: featureIcon3, label: t("products.feature4") },
+    { icon: featureIcon8, label: t("products.feature5") },
+    { icon: featureIcon1, label: t("products.feature6") },
+  ];
+
+  const products = [
+    {
+      customIcon: cardIconBudget,
+      name: t("products.budget_name"),
+      shortName: "Budget",
+      eurPrice: 49,
+      tagline: t("products.budget_tagline"),
+      description: t("products.budget_desc"),
+      highlight: false,
+      href: "/budget",
+    },
+    {
+      customIcon: cardIconStoryboard,
+      name: t("products.storyboard_name"),
+      shortName: "Storyboard",
+      eurPrice: 39,
+      tagline: t("products.storyboard_tagline"),
+      description: t("products.storyboard_desc"),
+      highlight: false,
+      href: "/storyboard",
+    },
+    {
+      customIcon: cardIconStudio,
+      name: t("products.studio_name"),
+      shortName: "Studio",
+      eurPrice: 199,
+      tagline: t("products.studio_tagline"),
+      description: t("products.studio_desc"),
+      highlight: true,
+      href: "/studio-pro",
+    },
+  ];
+
   return (
     <section id="products" className="section-padding bg-[#F9F4FF] relative overflow-hidden">
       <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl pointer-events-none -translate-y-1/2" />
@@ -75,18 +81,18 @@ const ProductsSection = () => {
           className="text-center mb-9"
         >
           <SectionHeader
-            pillText="Products"
+            pillText={t("products.pill")}
             pillClassName="bg-white text-primary mb-0"
             title={
               <>
-                Built for teams who{" "}
+                {t("products.title1")}{" "}
                 <span className="font-lato font-extrabold md:text-[48px] tracking-normal bg-clip-text text-transparent bg-gradient-to-r from-[#409DFF] to-[#3207BC]">
-                  deliver under pressure.
+                  {t("products.title2")}
                 </span>
               </>
             }
             titleClassName="text-balance"
-            description="Pzaz is built for production teams who know that great ideas are not enough."
+            description={t("products.description")}
             descriptionClassName="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed"
           />
         </motion.div>
@@ -116,8 +122,7 @@ const ProductsSection = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="font-lato font-normal text-[20px] text-[#878787] text-center max-w-3xl mx-auto mt-8 mb-8 leading-relaxed"
         >
-          Whether you're running a feature film or managing multiple client productions, alignment is not optional.{" "}
-          Pzaz is built for teams who need coordination at production scale.
+          {t("products.feature_desc")}
         </motion.p>
 
         {/* CTAs: Start for Free + Watch Video */}
@@ -130,7 +135,7 @@ const ProductsSection = () => {
         >
           <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
             <Button size="lg" className="group px-8">
-              Start for Free
+              {t("products.cta_start")}
               <ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />
             </Button>
           </a>
@@ -147,7 +152,7 @@ const ProductsSection = () => {
             }
             onClick={() => window.open("https://www.youtube.com/watch?v=1AoykWK6yRI", "_blank", "noopener,noreferrer")}
           >
-            Watch Video
+            {t("products.cta_watch")}
           </Button>
         </motion.div>
 
@@ -160,9 +165,9 @@ const ProductsSection = () => {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="font-lato font-bold mt-[55px] mb-12 text-[24px] tracking-normal text-center md:mb-[74px]"
         >
-          Start with everything —{" "}
+          {t("products.divider")}{" "}
           <span className="font-lato font-normal italic text-[24px] tracking-normal text-[#878787]">
-            or just what you need.
+            {t("products.divider_sub")}
           </span>
         </motion.p>
 
@@ -180,7 +185,7 @@ const ProductsSection = () => {
             >
               {product.highlight && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full">
-                  Most Popular
+                  {t("products.most_popular")}
                 </div>
               )}
               
@@ -195,13 +200,13 @@ const ProductsSection = () => {
               
               <Link to={product.href}>
                 <Button variant={product.highlight ? "product-card-gradient" : "product-card"} size="product-card" className="group/btn mt-auto w-full">
-                  Explore {product.name.split(" ")[1]}
+                  {t("products.explore_btn", { name: product.shortName })}
                   <ArrowIcon className={`ml-2 group-hover/btn:translate-x-1 ${product.highlight ? "text-white" : "text-[#4827AF] group-hover/btn:text-white"}`} />
                 </Button>
               </Link>
               {(index === 0 || index === 1) && (
                 <p className="font-lato font-normal text-[14px] text-[#878787] text-center mt-3">
-                  Upgrade anytime. Your project stays intact.
+                  {t("products.upgrade_note")}
                 </p>
               )}
             </motion.div>
@@ -218,7 +223,7 @@ const ProductsSection = () => {
         >
           <Link to="/pricing">
             <Button variant="thin-cta" size="thin-cta" className="group/btn">
-              Explore All Products
+              {t("products.explore_all")}
               <ArrowIcon className="ml-2 text-white group-hover/btn:translate-x-1" />
             </Button>
           </Link>

@@ -12,8 +12,10 @@ import cardIconFast from "@/assets/card-icon-fast.svg";
 import solutionCardFast from "@/assets/solution-card-fast.png";
 import cardIconAligned from "@/assets/card-icon-aligned.svg";
 import solutionCardAligned from "@/assets/solution-card-aligned.png";
+import { useTranslation } from "react-i18next";
 
 const SolutionSection = () => {
+  const { t } = useTranslation();
   return (
     <section id="features" className="section-padding relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
@@ -26,18 +28,18 @@ const SolutionSection = () => {
           className="text-center mb-16"
         >
           <SectionHeader
-            pillText="The Solution"
+            pillText={t("solution.pill")}
             pillClassName="bg-primary/10 text-primary mb-0"
             title={
               <>
-                One Ecosystem.{" "}
+                {t("solution.title1")}{" "}
                 <span className="font-lato font-extrabold md:text-[48px] tracking-normal text-transparent bg-clip-text bg-gradient-to-l from-[#409DFF] to-[#3207BC]">
-                  Total Alignment.
+                  {t("solution.title2")}
                 </span>
               </>
             }
             titleClassName="mb-0 text-balance"
-            description="Pzaz keeps creative, operational and financial reality connected inside one living production system."
+            description={t("solution.description")}
             descriptionClassName="text-center"
           />
         </motion.div>
@@ -53,7 +55,7 @@ const SolutionSection = () => {
           {/* Row 1: Card 1 + nested 2 cards */}
           <SolutionCard
             icon={cardIconClarity}
-            trigger={"Work with clarity,\nnot chaos."}
+            trigger={t("solution.card1")}
             image={solutionCardClarity}
             index={0}
             hideArrow={true}
@@ -61,14 +63,14 @@ const SolutionSection = () => {
           <div className="flex flex-col md:flex-row gap-[22px] h-full">
             <SolutionCard
               icon={cardIconFast}
-              trigger={"Move fast\nwithout\nlosing control."}
+              trigger={t("solution.card2")}
               image={solutionCardFast}
               index={1}
               hideArrow={true}
             />
             <SolutionCard
               icon={cardIconAligned}
-              trigger={"Stay aligned,\neven when\nplans change."}
+              trigger={t("solution.card3")}
               image={solutionCardAligned}
               index={1}
               hideArrow={true}
@@ -78,14 +80,14 @@ const SolutionSection = () => {
           {/* Row 2: Card 3 + Card 4 */}
           <SolutionCard
             icon={cardIconBudget}
-            trigger={"Deliver without\nlast-minute panic."}
+            trigger={t("solution.card4")}
             image={solutionCardBudget}
             index={2}
             hideArrow={true}
           />
           <SolutionCard
             icon={cardIconTeam}
-            trigger={"Protect your margins\nwith fewer surprises."}
+            trigger={t("solution.card5")}
             image={solutionCardTeam}
             index={3}
             hideArrow={true}
@@ -100,9 +102,10 @@ const SolutionSection = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center"
         >
-          <p className="text-xl text-muted-foreground italic">
-            Run productions that feel calm, <span className="font-bold">controlled and predictable.</span>
-          </p>
+          <p
+            className="text-xl text-muted-foreground italic"
+            dangerouslySetInnerHTML={{ __html: t("solution.insight") }}
+          />
         </motion.div>
       </div>
     </section>

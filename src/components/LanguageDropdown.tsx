@@ -1,18 +1,17 @@
 import React, { useState, useRef, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 import globeIcon from "@/assets/icon-globe.svg";
+import { useLocale, SUPPORTED_LOCALES, type SupportedLocale } from "@/hooks/use-locale";
 
-const languages = [
-  { code: "en", label: "English" },
-  { code: "fr", label: "Français" },
-  { code: "es", label: "Español" },
-  { code: "de", label: "Deutsch" },
-];
+const languageLabels: Record<SupportedLocale, string> = {
+  en: "English",
+  ur: "اردو",
+};
 
 const LanguageDropdown = () => {
   const [open, setOpen] = useState(false);
-  const [selected, setSelected] = useState(languages[0]);
   const ref = useRef<HTMLDivElement>(null);
+  const { locale, navigateToLocale } = useLocale();
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -32,27 +31,27 @@ const LanguageDropdown = () => {
       >
         <img src={globeIcon} alt="" className="w-4 h-4" />
         <span className="text-[14px] font-normal text-[#3E3A4D] font-['Lato',sans-serif] align-middle">
-          {selected.label}
+          {languageLabels[locale]}
         </span>
         <ChevronDown className="w-3.5 h-3.5 text-[#3E3A4D]" />
       </button>
 
       {open && (
         <div className="absolute top-full left-0 mt-1 w-40 rounded-md border border-border bg-background shadow-md z-50 py-1">
-          {languages.map((lang) => (
+          {SUPPORTED_LOCALES.map((code) => (
             <button
-              key={lang.code}
+              key={code}
               onClick={() => {
-                setSelected(lang);
+                navigateToLocale(code);
                 setOpen(false);
               }}
               className={`w-full text-left px-4 py-2 text-[14px] transition-colors hover:bg-muted/50 ${
-                selected.code === lang.code
+                locale === code
                   ? "text-[#20124D] font-medium"
                   : "text-[#989BA0] font-normal"
               }`}
             >
-              {lang.label}
+              {languageLabels[code]}
             </button>
           ))}
         </div>
