@@ -11,6 +11,13 @@ const getInitialLang = () => {
 };
 const savedLang = getInitialLang();
 
+// Apply lang + dir synchronously so :lang(ur) CSS and RTL layout are correct
+// from the very first render — before any React useEffect runs.
+if (typeof document !== "undefined") {
+  document.documentElement.setAttribute("lang", savedLang);
+  document.documentElement.setAttribute("dir", savedLang === "ur" ? "rtl" : "ltr");
+}
+
 i18next.use(initReactI18next).init({
   lng: savedLang,
   fallbackLng: "en",
