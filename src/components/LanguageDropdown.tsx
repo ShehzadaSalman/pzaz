@@ -25,6 +25,8 @@ const LanguageDropdown = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  if (HIDDEN_HOSTNAMES.includes(window.location.hostname)) return null;
+
   return (
     <div className="relative" ref={ref}>
       <button
