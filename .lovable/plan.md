@@ -1,95 +1,25 @@
 
-## URL-Based Locale Routing for i18n
+## Fix: Urdu-Aware Line Height in Hero Headline
 
-**Goal:** Add locale-prefixed URLs so language is encoded in the path — e.g. `/ur/` for Urdu, `/` stays English (default). This works alongside the i18n system that was planned (react-i18next + JSON locale files) and must be compatible with the SSG prerender pipeline.
+**Problem:** The `<h1>` in `Hero.tsx` has a fixed `leading-[1.1]` class — tight line height designed for short Latin text. Urdu Nastaliq script has tall ascenders/descenders that need more breathing room (typically `leading-[1.6]` or higher).
 
-**URL structure:**
-```
-/           → English (default, no prefix)
-/ur/        → Urdu homepage
-/ur/script  → Urdu script page (future)
-```
+**Solution:** Use `i18n.language` (or `useLocale`) to conditionally apply a looser line height class when the active language is Urdu.
 
----
+### Change in `src/components/Hero.tsx`
 
-### How it works
+1. Import `useTranslation` is already present — also destructure `i18n` from it.
+2. Derive a boolean `isUrdu = i18n.language === "ur"`.
+3. Apply the line height conditionally on the `<h1>`:
+   - English: `leading-[1.1]` (current)
+   - Urdu: `leading-[1.6]`
 
-A new `LocaleWrapper` component reads the `:locale` param from the URL, calls `i18n.changeLanguage()`, sets `document.dir`, and renders the page. The existing routes are duplicated under a `/:locale/*` parent route. When no locale prefix exists, English is used.
-
-A `useLocale` hook provides the current locale and a `navigateToLocale()` helper so the `LanguageDropdown` can switch language by navigating to the prefixed URL instead of just changing state.
-
----
-
-### Files to create
-
-**1. `src/i18n.ts`** — Initialize i18next with `en` + `ur` resources (same as planned)
-
-**2. `src/locales/en.json`** — English homepage strings
-
-**3. `src/locales/ur.json`** — Urdu translations (RTL)
-
-**4. `src/hooks/use-locale.ts`**
-```ts
-// Returns { locale, navigateToLocale }
-// Reads :locale param or defaults to "en"
-```
-
-**5. `src/components/LocaleWrapper.tsx`**
 ```tsx
-// Reads :locale from URL params
-// Calls i18n.changeLanguage(locale) + sets dir on <html>
-// Renders <Outlet /> so child routes work normally
+// Inside Hero component
+const { t, i18n } = useTranslation();
+const isUrdu = i18n.language === "ur";
+
+// On the h1 element — replace the static leading-[1.1] with:
+className={`font-lato font-bold text-center mb-10 text-balance pt-[40px] md:pt-[60px] text-[32px] sm:text-5xl md:text-6xl lg:text-7xl ${isUrdu ? "leading-[1.6]" : "leading-[1.1]"}`}
 ```
 
----
-
-### Files to modify
-
-**6. `src/App.tsx`**
-- Wrap all existing routes inside a `/:locale?` parent route using `LocaleWrapper`
-- Add `<Route path="/:locale" element={<LocaleWrapper />}>` wrapping all page routes
-- The `path="/"` root (English default) stays as-is outside the locale prefix
-
-Route structure:
-```
-<Route element={<LocaleWrapper />}>           ← no locale = "en"
-  <Route path="/" element={<Index />} />
-  ...all other routes...
-</Route>
-
-<Route path="/:locale" element={<LocaleWrapper />}>
-  <Route index element={<Index />} />
-  <Route path="script" element={<Script />} />
-  ...mirror of all routes without leading slash...
-</Route>
-```
-
-**7. `src/components/LanguageDropdown.tsx`**
-- Import `useLocale` hook
-- On language select: call `navigateToLocale(code)` which navigates to `/ur/` (or `/` for English)
-- Reflect active locale from URL (not local state)
-
-**8. `src/routes.ts`**
-- Add `/ur` and all `/ur/*` homepage route equivalents to `staticRoutes` for SSG prerender
-
-**9. `src/main.tsx`**
-- Import `./i18n` at top so translations load before first render
-- Extend `allRoutes` to include `/ur` prefixed versions of homepage routes for prerendering
-
-**10. Homepage components** (`Hero.tsx`, `ProblemSection.tsx`, `SolutionSection.tsx`, `AIContextSection.tsx`, `ProductsSection.tsx`, `IntegrationsSection.tsx`, `SharedCTA.tsx`)
-- Replace hardcoded strings with `t()` calls
-
----
-
-### SSG / Prerender compatibility
-
-The `prerender()` function in `main.tsx` runs with `StaticRouter`. `LocaleWrapper` will detect the locale from the URL path during SSR so each `/ur/*` route prerenders with Urdu content and `dir="rtl"` set correctly in the rendered HTML.
-
-Only `/ur/` (the homepage) is added to the prerender list initially. Other `/ur/*` pages are client-rendered until translations are added to those pages.
-
----
-
-### What is NOT in scope
-- URL-based locale for non-homepage pages (they fall back to English until `t()` calls are added)
-- fr/de/es URL prefixes (kept as stubs)
-- hreflang tags (can be added later via SEO component)
+**Only 1 file changes:** `src/components/Hero.tsx`
