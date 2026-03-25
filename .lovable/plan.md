@@ -1,25 +1,23 @@
 
-## Fix: Urdu-Aware Line Height in Hero Headline
+## Fix: URL-First Language Initialization
 
-**Problem:** The `<h1>` in `Hero.tsx` has a fixed `leading-[1.1]` class — tight line height designed for short Latin text. Urdu Nastaliq script has tall ascenders/descenders that need more breathing room (typically `leading-[1.6]` or higher).
+**Root cause:** `src/i18n.ts` initializes the language from `localStorage` only. On a hard refresh of `/ur/`, `localStorage` may be "en" (or empty), so i18n starts in English before `LocaleWrapper`'s `useEffect` can correct it — but by then the page has already rendered in English.
 
-**Solution:** Use `i18n.language` (or `useLocale`) to conditionally apply a looser line height class when the active language is Urdu.
+**Standard approach:** The URL is the source of truth. Read the locale from the URL path *first*, fall back to `localStorage`, then default to "en".
 
-### Change in `src/components/Hero.tsx`
+### Change in `src/i18n.ts`
 
-1. Import `useTranslation` is already present — also destructure `i18n` from it.
-2. Derive a boolean `isUrdu = i18n.language === "ur"`.
-3. Apply the line height conditionally on the `<h1>`:
-   - English: `leading-[1.1]` (current)
-   - Urdu: `leading-[1.6]`
+Replace the single `savedLang` line with a function that checks the URL path segment before localStorage:
 
-```tsx
-// Inside Hero component
-const { t, i18n } = useTranslation();
-const isUrdu = i18n.language === "ur";
-
-// On the h1 element — replace the static leading-[1.1] with:
-className={`font-lato font-bold text-center mb-10 text-balance pt-[40px] md:pt-[60px] text-[32px] sm:text-5xl md:text-6xl lg:text-7xl ${isUrdu ? "leading-[1.6]" : "leading-[1.1]"}`}
+```ts
+const getInitialLang = () => {
+  if (typeof window === "undefined") return "en";
+  const pathSegment = window.location.pathname.split("/")[1];
+  if (pathSegment === "ur") return "ur";
+  return localStorage.getItem("lang") ?? "en";
+};
 ```
 
-**Only 1 file changes:** `src/components/Hero.tsx`
+This runs synchronously before React mounts, so i18n is initialized with the correct language from the very first render — no flash of English on `/ur/` refresh.
+
+**Only 1 file changes:** `src/i18n.ts`
