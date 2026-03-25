@@ -5,8 +5,10 @@ import { useLocale, SUPPORTED_LOCALES, type SupportedLocale } from "@/hooks/use-
 
 const languageLabels: Record<SupportedLocale, string> = {
   en: "English",
-  ur: "اردو",
+  ur: "Urdu",
 };
+
+const HIDDEN_HOSTNAMES = ["pzaz.io", "www.pzaz.io"];
 
 const LanguageDropdown = () => {
   const [open, setOpen] = useState(false);
