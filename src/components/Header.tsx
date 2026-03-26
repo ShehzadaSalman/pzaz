@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation, Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import pzazLogo from "@/assets/pzaz-logo.png";
 import LanguageDropdown from "@/components/LanguageDropdown";
 import ContactModal from "@/components/ContactModal";
@@ -84,103 +85,55 @@ interface NavItem {
   children?: NavItem[];
 }
 
-const defaultNavItems: NavItem[] = [
-  {
-    label: "Products",
-    to: "/#products",
-    isHash: true,
-    isDropdown: true,
-    children: [
-      { label: "Pzaz Indie", to: "/indie-filmmaking-software" },
-      { label: "Pzaz Planning Pro", to: "/film-preproduction-planning" },
-      { label: "Pzaz Studio Pro", to: "/studio-pro-software" },
-      { label: "Pzaz Budget", to: "/film-budgeting-software" },
-      { label: "Pzaz Storyboard", to: "/storyboard-software" },
+const useNavItems = (t: (key: string) => string) => {
+  const sharedChildren = {
+    products: [
+      { label: t("nav.nav_pzaz_indie"), to: "/indie-filmmaking-software" },
+      { label: t("nav.nav_planning_pro"), to: "/film-preproduction-planning" },
+      { label: t("nav.nav_studio_pro"), to: "/studio-pro-software" },
+      { label: t("nav.nav_budget"), to: "/film-budgeting-software" },
+      { label: t("nav.nav_storyboard"), to: "/storyboard-software" },
     ],
-  },
-  {
-    label: "Features",
-    to: "/script",
-    isDropdown: true,
-    children: [
-      { label: "Scriptwriting", to: "/script" },
-      { label: "Scene Breakdown", to: "/scene-breakdown-software" },
-      { label: "Collaboration Tools", to: "/film-collaboration-software" },
-      { label: "Task Management", to: "/production-task-management" },
-      { label: "File Sharing & Storage", to: "/film-file-sharing-storage" },
-      { label: "Project Management", to: "/film-project-management" },
+    features: [
+      { label: t("nav.nav_scriptwriting"), to: "/script" },
+      { label: t("nav.nav_scene_breakdown"), to: "/scene-breakdown-software" },
+      { label: t("nav.nav_collaboration"), to: "/film-collaboration-software" },
+      { label: t("nav.nav_task_management"), to: "/production-task-management" },
+      { label: t("nav.nav_file_sharing"), to: "/film-file-sharing-storage" },
+      { label: t("nav.nav_project_management"), to: "/film-project-management" },
     ],
-  },
-  {
-    label: "Solutions",
-    to: "/film-schools-software",
-    isDropdown: true,
-    children: [
-      { label: "Empowering Every Aspect of Filmmaking", to: "/empowering-filmmaking" },
-      { label: "For Indie Filmmakers", to: "/indie-filmmakers" },
-      { label: "For Film Schools and Students", to: "/film-schools-software" },
-      { label: "For Directors and Producers", to: "/software-for-directors-producers" },
-      { label: "For Documentary Filmmakers", to: "/documentary-filmmaking-software" },
-      { label: "For Cinematographers & Storyboard Artists", to: "/software-for-cinematographers" },
-      { label: "For Creative Agencies", to: "/creative-agency-production-software" },
-      { label: "For Production Teams", to: "/film-production-team-software" },
-      { label: "For Screenwriters", to: "/screenwriting-software" },
-      { label: "For TV & Series Creators", to: "/tv-series-production-software" },
-      { label: "For Investors & Funding Partners", to: "/film-investment-software" },
-      { label: "For Production Managers", to: "/software-for-production-managers" },
+    solutions: [
+      { label: t("nav.nav_empowering"), to: "/empowering-filmmaking" },
+      { label: t("nav.nav_indie_filmmakers"), to: "/indie-filmmakers" },
+      { label: t("nav.nav_film_schools"), to: "/film-schools-software" },
+      { label: t("nav.nav_directors"), to: "/software-for-directors-producers" },
+      { label: t("nav.nav_documentary"), to: "/documentary-filmmaking-software" },
+      { label: t("nav.nav_cinematographers"), to: "/software-for-cinematographers" },
+      { label: t("nav.nav_agencies"), to: "/creative-agency-production-software" },
+      { label: t("nav.nav_production_teams"), to: "/film-production-team-software" },
+      { label: t("nav.nav_screenwriters"), to: "/screenwriting-software" },
+      { label: t("nav.nav_tv_series"), to: "/tv-series-production-software" },
+      { label: t("nav.nav_investors"), to: "/film-investment-software" },
+      { label: t("nav.nav_production_managers"), to: "/software-for-production-managers" },
     ],
-  },
-  { label: "Pricing", to: "/pricing" },
-];
+  };
 
-const blogNavItems: NavItem[] = [
-  {
-    label: "Products",
-    to: "/#products",
-    isHash: true,
-    isDropdown: true,
-    children: [
-      { label: "Pzaz Indie", to: "/indie-filmmaking-software" },
-      { label: "Pzaz Planning Pro", to: "/film-preproduction-planning" },
-      { label: "Pzaz Studio Pro", to: "/studio-pro-software" },
-      { label: "Pzaz Budget", to: "/film-budgeting-software" },
-      { label: "Pzaz Storyboard", to: "/storyboard-software" },
-    ],
-  },
-  {
-    label: "Features",
-    to: "/script",
-    isDropdown: true,
-    children: [
-      { label: "Scriptwriting", to: "/script" },
-      { label: "Scene Breakdown", to: "/scene-breakdown-software" },
-      { label: "Collaboration Tools", to: "/film-collaboration-software" },
-      { label: "Task Management", to: "/production-task-management" },
-      { label: "File Sharing & Storage", to: "/film-file-sharing-storage" },
-      { label: "Project Management", to: "/film-project-management" },
-    ],
-  },
-  {
-    label: "Solutions",
-    to: "/film-schools-software",
-    isDropdown: true,
-    children: [
-      { label: "Empowering Every Aspect of Filmmaking", to: "/empowering-filmmaking" },
-      { label: "For Indie Filmmakers", to: "/indie-filmmakers" },
-      { label: "For Film Schools and Students", to: "/film-schools-software" },
-      { label: "For Directors and Producers", to: "/software-for-directors-producers" },
-      { label: "For Documentary Filmmakers", to: "/documentary-filmmaking-software" },
-      { label: "For Cinematographers & Storyboard Artists", to: "/software-for-cinematographers" },
-      { label: "For Creative Agencies", to: "/creative-agency-production-software" },
-      { label: "For Production Teams", to: "/film-production-team-software" },
-      { label: "For Screenwriters", to: "/screenwriting-software" },
-      { label: "For TV & Series Creators", to: "/tv-series-production-software" },
-      { label: "For Investors & Funding Partners", to: "/film-investment-software" },
-      { label: "For Production Managers", to: "/software-for-production-managers" },
-    ],
-  },
-  { label: "Pricing", to: "/pricing" },
-];
+  const defaultNavItems: NavItem[] = [
+    { label: t("nav.products"), to: "/#products", isHash: true, isDropdown: true, children: sharedChildren.products },
+    { label: t("nav.features"), to: "/script", isDropdown: true, children: sharedChildren.features },
+    { label: t("nav.solutions"), to: "/film-schools-software", isDropdown: true, children: sharedChildren.solutions },
+    { label: t("nav.pricing"), to: "/pricing" },
+  ];
+
+  const blogNavItems: NavItem[] = [
+    { label: t("nav.products"), to: "/#products", isHash: true, isDropdown: true, children: sharedChildren.products },
+    { label: t("nav.features"), to: "/script", isDropdown: true, children: sharedChildren.features },
+    { label: t("nav.solutions"), to: "/film-schools-software", isDropdown: true, children: sharedChildren.solutions },
+    { label: t("nav.pricing"), to: "/pricing" },
+  ];
+
+  return { defaultNavItems, blogNavItems };
+};
 
 interface HeaderProps {
   variant?: "fixed" | "sticky";
@@ -188,6 +141,7 @@ interface HeaderProps {
 
 
 const Header = ({ variant = "fixed" }: HeaderProps) => {
+  const { t } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -204,6 +158,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
   const isPricingPage = location.pathname === "/pricing";
   const isAboutPage = location.pathname === "/about-us";
 
+  const { defaultNavItems, blogNavItems } = useNavItems(t);
   const navItems = isBlogRelated ? blogNavItems : defaultNavItems;
 
   useEffect(() => {
@@ -377,7 +332,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
               className="transition-colors"
               style={{ color: "#20124D", fontFamily: "'Lato', sans-serif", fontWeight: 400, fontSize: 14, lineHeight: "24px" }}
             >
-              Contact
+              {t("nav.contact")}
             </button>
           </div>
 
@@ -385,12 +340,12 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
           <div className="hidden md:flex items-center gap-3">
             <a href="https://projector.pzaz.io/sign-in">
               <Button variant="ghost" size="sm">
-                Log in
+                {t("nav.login")}
               </Button>
             </a>
             <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
               <Button variant="default" size="sm">
-                Start for Free
+                {t("nav.start_free")}
               </Button>
             </a>
           </div>
@@ -453,7 +408,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
                   className="text-foreground font-medium py-3 text-left border-b border-border/30"
                   style={{ fontFamily: "'Lato', sans-serif" }}
                 >
-                  Contact
+                  {t("nav.contact")}
                 </button>
                 <div className="flex flex-col gap-3 pt-4 pb-2">
                   <div className="pb-1">
@@ -470,11 +425,11 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
                         background: "transparent",
                       }}
                     >
-                      Log in
+                      {t("nav.login")}
                     </button>
                   </a>
                   <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="w-full">
-                    <Button variant="default" className="w-full">Start for Free</Button>
+                    <Button variant="default" className="w-full">{t("nav.start_free")}</Button>
                   </a>
                 </div>
               </div>
