@@ -6,9 +6,11 @@ import ArrowIcon from "@/components/ui/ArrowIcon";
 import ctaPlayIcon from "@/assets/cta-play-icon.svg";
 import aiResearchIcon from "@/assets/ai-research-icon.svg";
 import { useIndieCheckoutUrl } from "@/lib/checkout";
+import { useTranslation } from "react-i18next";
 
 const BudgetHero = () => {
   const indieCheckoutUrl = useIndieCheckoutUrl();
+  const { t } = useTranslation();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       <div
@@ -24,7 +26,7 @@ const BudgetHero = () => {
         <div className="max-w-5xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <Pill
-              text="Production Budgeting Built for Connected Workflows"
+              text={t("budget.hero_pill")}
               className="text-primary mb-8 mt-[15px] bg-[#E4E4FE] border border-[#8651EF42]"
               icon={<img src={aiResearchIcon} alt="" className="w-4 h-4" />}
             />
@@ -36,12 +38,12 @@ const BudgetHero = () => {
             transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
             className="text-[40px] sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 text-balance"
           >
-            Budgets Don't Fail{" "}
+            {t("budget.hero_h1a")}{" "}
             <span
               className="bg-clip-text text-transparent"
               style={{ backgroundImage: "linear-gradient(247.38deg, #29FADF -2.17%, #8B1DFF 84.87%)" }}
             >
-              Because of Math.
+              {t("budget.hero_h1b")}
             </span>
           </motion.h1>
 
@@ -52,10 +54,10 @@ const BudgetHero = () => {
             className="max-w-3xl mx-auto mb-10"
           >
             <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-4">
-              They fail when information disconnects.
+              {t("budget.hero_sub1")}
             </p>
             <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
-              A production budget is not just a financial document. It is a living reflection of scope, timing, and creative intent. When it lives in isolation from the script, breakdown, and schedule, alignment breaks. And when alignment breaks, overruns follow.
+              {t("budget.hero_sub2")}
             </p>
           </motion.div>
 
@@ -67,7 +69,7 @@ const BudgetHero = () => {
           >
             <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="group px-8">
-                Start Free
+                {t("budget.hero_cta1")}
                 <ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />
               </Button>
             </a>
@@ -80,7 +82,7 @@ const BudgetHero = () => {
                   <img src={ctaPlayIcon} alt="" className="w-5 h-5 transition-all group-hover:[filter:brightness(0)_invert(1)]" />
                 }
               >
-                Watch Video
+                {t("budget.hero_cta2")}
               </Button>
             </a>
           </motion.div>
@@ -91,7 +93,7 @@ const BudgetHero = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-sm text-muted-foreground"
           >
-            Up and running in minutes.
+            {t("budget.hero_trust")}
           </motion.p>
         </div>
 
@@ -106,7 +108,6 @@ const BudgetHero = () => {
             <div className="p-2">
               <div className="bg-muted/50 rounded-xl aspect-[16/9] flex items-center justify-center relative overflow-hidden">
                 <div className="absolute inset-4 bg-background rounded-lg shadow-inner flex">
-                  {/* Sidebar */}
                   <div className="w-16 lg:w-52 border-r border-border/50 p-3 hidden sm:block">
                     <div className="flex items-center gap-2 mb-4">
                       <div className="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center">
@@ -122,7 +123,6 @@ const BudgetHero = () => {
                       ))}
                     </div>
                   </div>
-                  {/* Main */}
                   <div className="flex-1 p-4 lg:p-6">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="h-3 bg-primary/20 rounded w-32" />
@@ -147,7 +147,6 @@ const BudgetHero = () => {
                       ))}
                     </div>
                   </div>
-                  {/* Right */}
                   <div className="w-16 lg:w-48 border-l border-border/50 p-3 hidden md:block">
                     <div className="text-xs font-medium mb-3 hidden lg:block">Forecast vs Actual</div>
                     <div className="space-y-2">

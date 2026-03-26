@@ -5,9 +5,11 @@ import ArrowIcon from "@/components/ui/ArrowIcon";
 import SectionHeader from "@/components/SectionHeader";
 import iconStar from "@/assets/material-symbols_family-star.svg";
 import { useIndieCheckoutUrl } from "@/lib/checkout";
+import { useTranslation } from "react-i18next";
 
 const BudgetCTA = () => {
   const indieCheckoutUrl = useIndieCheckoutUrl();
+  const { t } = useTranslation();
   return (
     <section className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
@@ -27,18 +29,18 @@ const BudgetCTA = () => {
 
             <div className="relative p-8 md:p-16 md:py-24 pb-12 text-center">
               <SectionHeader
-                pillText="Real Financial Clarity"
+                pillText={t("budget.cta_pill")}
                 pillClassName="bg-white text-primary mb-0"
                 pillIcon={<img src={iconStar} alt="" className="w-4 h-4" />}
                 title={
                   <>
-                    Operate With Financial
+                    {t("budget.cta_title_line1")}
                     <br />
-                    Confidence.
+                    {t("budget.cta_title_line2")}
                   </>
                 }
                 titleClassName="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-primary-foreground"
-                description="When budgeting lives inside the same infrastructure as the rest of production, fragmentation begins to disappear. Creative ambition stays connected to operational reality."
+                description={t("budget.cta_desc")}
                 descriptionClassName="text-xl text-primary-foreground/80 max-w-xl mx-auto mb-10"
               />
 
@@ -50,18 +52,18 @@ const BudgetCTA = () => {
                     className="group bg-white/10 text-white border-white/30 hover:bg-white/20 rounded-[10px] px-8"
                     postfixIcon={<ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />}
                   >
-                    Start Building your Budget
+                    {t("budget.cta_primary")}
                   </Button>
                 </a>
                 <a href="https://calendly.com/filmmaking-app/30min" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" size="xl" className="text-white border-white/30 hover:bg-white/10 rounded-[10px]">
-                    Book a Demo
+                    {t("budget.cta_secondary")}
                   </Button>
                 </a>
               </div>
 
               <p className="mt-6 text-sm text-primary-foreground/60">
-                Run your production in sync. Operate with real financial clarity.
+                {t("budget.cta_bottom")}
               </p>
             </div>
           </motion.div>

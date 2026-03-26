@@ -10,43 +10,45 @@ import iconFlow from "@/assets/script/icon-flow.svg";
 import iconListCheck from "@/assets/script/icon-list-check.svg";
 import iconUserGroup from "@/assets/script/icon-user-group.svg";
 import iconTesting from "@/assets/script/icon-testing.svg";
-
-const features = [
-  { icon: iconDownload, title: "Import and export budgets freely" },
-  { icon: iconDocument, title: "Configure ledger structures for accountant compatibility" },
-  { icon: iconCloud, title: "Build multi-currency budgets for international productions" },
-  { icon: iconEngine, title: "Set taxes, fringes, and regional compliance rules" },
-  { icon: iconRefresh, title: "Create scenario budgets with structured version control" },
-  { icon: iconFlow, title: "Track forecasts against actuals in real time" },
-  { icon: iconListCheck, title: "Attach documents directly to budget line items" },
-  { icon: iconTesting, title: "Assign tasks within budget categories" },
-  { icon: iconUserGroup, title: "Collaborate live across departments" },
-];
+import { useTranslation } from "react-i18next";
 
 const BudgetFeatures = () => {
+  const { t } = useTranslation();
+  const features = [
+    { icon: iconDownload, title: t("budget.feat1") },
+    { icon: iconDocument, title: t("budget.feat2") },
+    { icon: iconCloud, title: t("budget.feat3") },
+    { icon: iconEngine, title: t("budget.feat4") },
+    { icon: iconRefresh, title: t("budget.feat5") },
+    { icon: iconFlow, title: t("budget.feat6") },
+    { icon: iconListCheck, title: t("budget.feat7") },
+    { icon: iconTesting, title: t("budget.feat8") },
+    { icon: iconUserGroup, title: t("budget.feat9") },
+  ];
+
   return (
     <section className="section-padding bg-[#FBFBFB] relative overflow-hidden">
       <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl pointer-events-none -translate-y-1/2" />
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <AnimatedSectionHeader
           wrapperClassName="text-center mb-16"
-          pillText="Built for Modern Production Teams"
+          pillText={t("budget.features_pill")}
           pillClassName="bg-primary/10 text-primary"
           title={
             <>
-              Built for Modern{" "}
+              {t("budget.features_title")}{" "}
               <span className="font-lato font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                Production Teams.
+                {t("budget.features_title_highlight")}
               </span>
             </>
           }
-          description="Rigorous financial control without requiring budgeting to live in a separate silo."
+          description={t("budget.features_desc")}
         />
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-[30px]">
           {features.map((feature, index) => (
             <motion.div
-              key={feature.title}
+              key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

@@ -7,8 +7,10 @@ import ArrowIcon from "@/components/ui/ArrowIcon";
 import ctaPlayIcon from "@/assets/cta-play-icon.svg";
 import aiResearchIcon from "@/assets/ai-research-icon.svg";
 import iconImportScript from "@/assets/icon-import-script.svg";
+import { useTranslation } from "react-i18next";
 
 const ScriptHero = () => {
+  const { t } = useTranslation();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Gradient background */}
@@ -32,36 +34,31 @@ const ScriptHero = () => {
             transition={{ duration: 0.5 }}
           >
             <Pill
-              text="Scriptwriting Software for Film Productions"
+              text={t("script.hero_pill")}
               className="text-primary mb-8 mt-[15px] bg-[#E4E4FE] border border-[#8651EF42]"
               icon={<img src={aiResearchIcon} alt="" className="w-4 h-4" />}
             />
           </motion.div>
 
-          {/* Headline */}
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
             className="text-[48px] sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 text-balance"
           >
-            Turn scripts into productions.{" "}
-            <span className="bg-clip-text text-transparent" style={{ backgroundImage: 'linear-gradient(247.38deg, #29FADF -2.17%, #8B1DFF 84.87%)' }}>Faster. With less risk.</span>
+            {t("script.hero_h1a")}{" "}
+            <span className="bg-clip-text text-transparent" style={{ backgroundImage: 'linear-gradient(247.38deg, #29FADF -2.17%, #8B1DFF 84.87%)' }}>{t("script.hero_h1b")}</span>
           </motion.h1>
 
-          {/* Subheadline */}
           <motion.p 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
             className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed"
           >
-            Pzaz Script transforms any screenplay — from any writing tool — into a production-ready 
-            system of data, decisions, and workflows. Built for producers, line producers, and 
-            production teams who need scripts that hold up in the real world.
+            {t("script.hero_sub")}
           </motion.p>
 
-          {/* CTAs */}
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -71,7 +68,7 @@ const ScriptHero = () => {
             <Button size="lg" className="group px-8"
               prefixIcon={<img src={iconImportScript} alt="" className="w-5 h-5" />}
             >
-              Import a Script
+              {t("script.hero_cta1")}
               <ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />
             </Button>
             <a href="https://calendly.com/filmmaking-app/30min" target="_blank" rel="noopener noreferrer">
@@ -80,26 +77,21 @@ const ScriptHero = () => {
                 size="lg"
                 className="group px-8 font-lato font-black text-xl leading-[25px] text-primary hover:text-primary-foreground"
                 prefixIcon={
-                  <img
-                    src={ctaPlayIcon}
-                    alt=""
-                    className="w-5 h-5 transition-all group-hover:[filter:brightness(0)_invert(1)]"
-                  />
+                  <img src={ctaPlayIcon} alt="" className="w-5 h-5 transition-all group-hover:[filter:brightness(0)_invert(1)]" />
                 }
               >
-                Book Studio Demo
+                {t("script.hero_cta2")}
               </Button>
             </a>
           </motion.div>
 
-          {/* Trust line */}
           <motion.p 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-sm text-muted-foreground"
           >
-            Works with Final Draft, Celtx, and industry-standard formats.
+            {t("script.hero_trust")}
           </motion.p>
         </div>
 

@@ -1,14 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
-
-const connections = [
-  { trigger: "A scene expands", result: "the budget reflects it" },
-  { trigger: "Breakdown elements change", result: "the cost structure adjusts" },
-  { trigger: "The schedule shifts", result: "the financial implications are already visible" },
-];
+import { useTranslation } from "react-i18next";
 
 const BudgetConnected = () => {
+  const { t } = useTranslation();
+  const connections = [
+    { trigger: t("budget.connected_item1_trigger"), result: t("budget.connected_item1_result") },
+    { trigger: t("budget.connected_item2_trigger"), result: t("budget.connected_item2_result") },
+    { trigger: t("budget.connected_item3_trigger"), result: t("budget.connected_item3_result") },
+  ];
+
   return (
     <section className="section-padding relative overflow-hidden">
       <div
@@ -25,13 +27,13 @@ const BudgetConnected = () => {
           >
             <AnimatedSectionHeader
               wrapperClassName=""
-              pillText="Connected Intelligence"
+              pillText={t("budget.connected_pill")}
               pillClassName="bg-primary/10 text-primary"
               title={
                 <>
-                  Budgeting Inside{" "}
+                  {t("budget.connected_title")}{" "}
                   <span className="font-lato font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                    the Production Flow.
+                    {t("budget.connected_title_highlight")}
                   </span>
                 </>
               }
@@ -39,10 +41,10 @@ const BudgetConnected = () => {
               className="mb-8"
             />
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Pzaz Budgeting sits inside the same environment as your script, breakdown, schedule and production workflow, so the financial picture stays connected to the decisions that shape the film.
+              {t("budget.connected_sub")}
             </p>
             <p className="text-lg font-semibold text-[#4D029B] italic">
-              One system, with financial clarity built in.
+              {t("budget.connected_highlight")}
             </p>
           </motion.div>
 
@@ -53,7 +55,9 @@ const BudgetConnected = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-4"
           >
-            <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-2">Nothing has to be passed between files</p>
+            <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-2">
+              {t("budget.connected_label")}
+            </p>
             {connections.map((item, i) => (
               <motion.div
                 key={i}
