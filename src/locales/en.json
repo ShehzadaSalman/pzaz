@@ -339,26 +339,29 @@
     "hero_pill": "For Independent Filmmakers",
     "hero_h1a": "Make Your Film.",
     "hero_h1b": "Own Your Process.",
+    "hero_badge": "Free. Permanently. For Independent Filmmakers.",
+    "hero_h1_gradient": "Look Real",
+    "hero_sub1": "Most independent films don't stall because the story is weak. They stall because the project doesn't look ready.",
+    "hero_sub2": "Notes are scattered. Plans are vague. Materials feel unfinished. When someone asks a practical question, the answer isn't clear.",
+    "hero_sub3": "It's not a talent issue. It's a structure issue.",
     "hero_sub": "Pzaz Indie gives independent filmmakers the same powerful tools used by professional studios — without the enterprise price tag.",
     "hero_cta1": "Start for Free",
-    "hero_cta2": "Book a Demo",
-    "hero_trust": "No credit card required."
-  },
-  "planning": {
-    "hero_pill": "Pre-Production Planning",
-    "hero_h1a": "Plan Every Detail.",
-    "hero_h1b": "Before Day One.",
-    "hero_sub": "From script to schedule, Pzaz Planning Pro gives you a structured, connected pre-production workflow that keeps every department ready and every decision visible.",
-    "hero_cta1": "Start for Free",
-    "hero_cta2": "Book a Demo"
+    "hero_cta2": "Watch Video",
+    "hero_trust": "Create in minutes.",
+    "hero_trust_no_cc": "No credit card required."
   },
   "studio_pro": {
     "hero_pill": "All-In-One Production OS",
-    "hero_h1a": "Run Your Entire",
+    "hero_badge": "For Growing Production Companies and Studios",
+    "hero_h1a": "Growth Reveals",
+    "hero_h1b_gradient": "Structural Weakness",
+    "hero_sub1": "Creative growth is exciting. Operational growth is dangerous.",
+    "hero_sub2": "As production companies scale, the problem is rarely ideas. It's coordination. One project can run on informal systems; a slate cannot.",
+    "hero_sub3": "Multiple films, multiple teams, overlapping timelines… what once felt agile begins to fragment. That's where invisible risk appears.",
     "hero_h1b": "Production from One Place.",
     "hero_sub": "Pzaz Studio Pro connects script, schedule, budget, team, and delivery into a single live workspace. No more fragmented tools. No more missed updates.",
-    "hero_cta1": "Get Studio Pro",
-    "hero_cta2": "Book a Demo"
+    "hero_cta1": "Start Free",
+    "hero_cta2": "Watch Video"
   },
   "scene_breakdown": {
     "hero_pill": "Scene Breakdown Software",
