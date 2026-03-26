@@ -1,43 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import pzazLogo from "@/assets/pzaz-logo.png";
-
-const linkRoutes: Record<string, string> = {
-  "Producer Blog": "/producer-blog",
-  "Blog": "/producer-blog",
-  "About": "/about-us",
-  "Privacy": "/privacy",
-  "Terms": "/terms-of-use",
-  "Terms of Use": "/terms-of-use",
-  "Imagine": "/imagine",
-  "Sales Team": "/sales-team",
-  "Breakdown": "/breakdown",
-  "Brand": "/brand",
-  "Culture": "/culture",
-  "Schools": "/film-schools-software",
-  "Screenwriters": "/screenwriting-software",
-  "TV & Series Creators": "/tv-series-production-software",
-  "Investors & Funding Partners": "/film-investment-software",
-  "Pricing": "/pricing",
-  "Script": "/script",
-  "Collaborate": "/collaborate",
-  "Pzaz vs Final Draft": "/pzaz-vs-final-draft",
-  "Pzaz Project": "/pzaz-project",
-  "Sell": "/sell",
-  "Shoot": "/shoot",
-  "Visualise": "/visualise",
-  "Write": "/write",
-  "Knowledge Base": "/knowledge-base",
-  "Demo Video": "/demo-video",
-};
-
-const footerLinks = {
-  Product: ["Breakdown", "Imagine", "Collaborate", "Pzaz Project", "Sell", "Shoot", "Visualise", "Write"],
-  Resources: ["Blog", "Pzaz vs Final Draft", "Knowledge Base", "Demo Video"],
-  Company: ["Sales Team", "Brand", "Culture", "Schools", "Screenwriters", "TV & Series Creators", "Investors & Funding Partners"],
-  Legal: ["Privacy", "Terms"],
-  Social: ["YouTube", "Instagram", "Facebook", "LinkedIn", "TikTok", "X"],
-};
 
 const socialLinks: Record<string, string> = {
   "YouTube": "https://www.youtube.com/@pzazofficial",
@@ -49,6 +13,48 @@ const socialLinks: Record<string, string> = {
 };
 
 const Footer = () => {
+  const { t } = useTranslation();
+
+  const footerLinks: Record<string, { label: string; route?: string; social?: string }[]> = {
+    [t("footer.product")]: [
+      { label: t("footer.breakdown"), route: "/breakdown" },
+      { label: t("footer.imagine"), route: "/imagine" },
+      { label: t("footer.collaborate"), route: "/collaborate" },
+      { label: t("footer.pzaz_project"), route: "/pzaz-project" },
+      { label: t("footer.sell"), route: "/sell" },
+      { label: t("footer.shoot"), route: "/shoot" },
+      { label: t("footer.visualise"), route: "/visualise" },
+      { label: t("footer.write"), route: "/write" },
+    ],
+    [t("footer.resources")]: [
+      { label: t("footer.blog"), route: "/producer-blog" },
+      { label: t("footer.pzaz_vs_fd"), route: "/pzaz-vs-final-draft" },
+      { label: t("footer.knowledge_base"), route: "/knowledge-base" },
+      { label: t("footer.demo_video"), route: "/demo-video" },
+    ],
+    [t("footer.company")]: [
+      { label: t("footer.sales_team"), route: "/sales-team" },
+      { label: t("footer.brand"), route: "/brand" },
+      { label: t("footer.culture"), route: "/culture" },
+      { label: t("footer.schools"), route: "/film-schools-software" },
+      { label: t("footer.screenwriters"), route: "/screenwriting-software" },
+      { label: t("footer.tv_series"), route: "/tv-series-production-software" },
+      { label: t("footer.investors"), route: "/film-investment-software" },
+    ],
+    [t("footer.legal")]: [
+      { label: t("footer.privacy"), route: "/privacy" },
+      { label: t("footer.terms"), route: "/terms-of-use" },
+    ],
+    [t("footer.social")]: [
+      { label: t("footer.youtube"), social: socialLinks["YouTube"] },
+      { label: t("footer.instagram"), social: socialLinks["Instagram"] },
+      { label: t("footer.facebook"), social: socialLinks["Facebook"] },
+      { label: t("footer.linkedin"), social: socialLinks["LinkedIn"] },
+      { label: t("footer.tiktok"), social: socialLinks["TikTok"] },
+      { label: t("footer.x"), social: socialLinks["X"] },
+    ],
+  };
+
   return (
     <footer className="pt-16 pb-8 border-t border-[#e0e0e0] bg-[#F8F8FC]">
       <div className="max-w-6xl mx-auto px-6">
@@ -65,26 +71,23 @@ const Footer = () => {
             <div key={category}>
               <h4 className="font-bold text-[14px] text-[#20124D] mb-4 align-middle">{category}</h4>
               <ul className="space-y-3">
-                {links.map((link) => {
-                  const route = linkRoutes[link];
-                  return (
-                    <li key={link}>
-                      {route ? (
-                        <Link to={route} className="text-[14px] font-normal text-[#20124D] hover:text-foreground transition-colors align-middle">
-                          {link}
-                        </Link>
-                      ) : socialLinks[link] ? (
-                        <a href={socialLinks[link]} target="_blank" rel="noopener noreferrer" className="text-[14px] font-normal text-[#20124D] hover:text-foreground transition-colors align-middle">
-                          {link}
-                        </a>
-                      ) : (
-                        <a href="#" className="text-[14px] font-normal text-[#20124D] hover:text-foreground transition-colors align-middle">
-                          {link}
-                        </a>
-                      )}
-                    </li>
-                  );
-                })}
+                {links.map((item) => (
+                  <li key={item.label}>
+                    {item.route ? (
+                      <Link to={item.route} className="text-[14px] font-normal text-[#20124D] hover:text-foreground transition-colors align-middle">
+                        {item.label}
+                      </Link>
+                    ) : item.social ? (
+                      <a href={item.social} target="_blank" rel="noopener noreferrer" className="text-[14px] font-normal text-[#20124D] hover:text-foreground transition-colors align-middle">
+                        {item.label}
+                      </a>
+                    ) : (
+                      <a href="#" className="text-[14px] font-normal text-[#20124D] hover:text-foreground transition-colors align-middle">
+                        {item.label}
+                      </a>
+                    )}
+                  </li>
+                ))}
               </ul>
             </div>
           ))}
@@ -92,7 +95,9 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="pt-8 border-t border-[#e0e0e0] flex items-center">
-          <p className="text-[12px] leading-[12px] font-normal align-middle text-[#20124D]" style={{ fontFamily: "'Open Sans', sans-serif" }}>© {new Date().getFullYear()} Pzaz.io. All rights reserved.</p>
+          <p className="text-[12px] leading-[12px] font-normal align-middle text-[#20124D]" style={{ fontFamily: "'Open Sans', sans-serif" }}>
+            {t("footer.copyright", { year: new Date().getFullYear() })}
+          </p>
         </div>
       </div>
     </footer>
