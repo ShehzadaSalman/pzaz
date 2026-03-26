@@ -332,7 +332,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
               className="transition-colors"
               style={{ color: "#20124D", fontFamily: "'Lato', sans-serif", fontWeight: 400, fontSize: 14, lineHeight: "24px" }}
             >
-              Contact
+              {t("nav.contact")}
             </button>
           </div>
 
