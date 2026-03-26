@@ -6,9 +6,11 @@ import ArrowIcon from "@/components/ui/ArrowIcon";
 import ctaPlayIcon from "@/assets/cta-play-icon.svg";
 import aiResearchIcon from "@/assets/ai-research-icon.svg";
 import { useIndieCheckoutUrl } from "@/lib/checkout";
+import { useTranslation } from "react-i18next";
 
 const StudioProHero = () => {
   const indieCheckoutUrl = useIndieCheckoutUrl();
+  const { t } = useTranslation();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       <div
@@ -24,7 +26,7 @@ const StudioProHero = () => {
         <div className="max-w-5xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <Pill
-              text="For Growing Production Companies and Studios"
+              text={t("studio_pro.hero_badge")}
               className="text-primary mb-8 mt-[15px] bg-[#E4E4FE] border border-[#8651EF42]"
               icon={<img src={aiResearchIcon} alt="" className="w-4 h-4" />}
             />
@@ -34,11 +36,11 @@ const StudioProHero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-            className="text-[40px] sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 text-balance"
+            className="text-[40px] sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.6] mb-6 text-balance"
           >
-            Growth Reveals{" "}
+            {t("studio_pro.hero_h1a")}{" "}
             <span className="bg-clip-text text-transparent" style={{ backgroundImage: "linear-gradient(247.38deg, #29FADF -2.17%, #8B1DFF 84.87%)" }}>
-              Structural Weakness
+              {t("studio_pro.hero_h1b_gradient")}
             </span>
           </motion.h1>
 
@@ -49,13 +51,13 @@ const StudioProHero = () => {
             className="max-w-3xl mx-auto mb-10"
           >
             <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-4">
-              Creative growth is exciting. Operational growth is dangerous.
+              {t("studio_pro.hero_sub1")}
             </p>
             <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-4">
-              As production companies scale, the problem is rarely ideas. It's coordination. One project can run on informal systems; a slate cannot.
+              {t("studio_pro.hero_sub2")}
             </p>
             <p className="text-lg sm:text-xl text-foreground font-semibold leading-relaxed">
-              Multiple films, multiple teams, overlapping timelines… what once felt agile begins to fragment. That's where invisible risk appears.
+              {t("studio_pro.hero_sub3")}
             </p>
           </motion.div>
 
@@ -67,7 +69,7 @@ const StudioProHero = () => {
           >
             <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="group px-8">
-                Start Free
+                {t("studio_pro.hero_cta1")}
                 <ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />
               </Button>
             </a>
@@ -78,7 +80,7 @@ const StudioProHero = () => {
                 className="group px-8 font-lato font-black text-xl leading-[25px] text-primary hover:text-primary-foreground"
                 prefixIcon={<img src={ctaPlayIcon} alt="" className="w-5 h-5 transition-all group-hover:[filter:brightness(0)_invert(1)]" />}
               >
-                Watch Video
+                {t("studio_pro.hero_cta2")}
               </Button>
             </a>
           </motion.div>

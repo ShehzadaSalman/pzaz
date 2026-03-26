@@ -6,9 +6,11 @@ import ArrowIcon from "@/components/ui/ArrowIcon";
 import ctaPlayIcon from "@/assets/cta-play-icon.svg";
 import aiResearchIcon from "@/assets/ai-research-icon.svg";
 import { useIndieCheckoutUrl } from "@/lib/checkout";
+import { useTranslation } from "react-i18next";
 
 const PlanningHero = () => {
   const indieCheckoutUrl = useIndieCheckoutUrl();
+  const { t } = useTranslation();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       <div
@@ -28,7 +30,7 @@ const PlanningHero = () => {
             transition={{ duration: 0.5 }}
           >
             <Pill
-              text="For Writer-Directors and Creative Leads"
+              text={t("planning.hero_pill")}
               className="text-primary mb-8 mt-[15px] bg-[#E4E4FE] border border-[#8651EF42]"
               icon={<img src={aiResearchIcon} alt="" className="w-4 h-4" />}
             />
@@ -38,14 +40,14 @@ const PlanningHero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-            className="text-[40px] sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 text-balance"
+            className="text-[40px] sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.6] mb-6 text-balance"
           >
-            Build Your Film{" "}
+            {t("planning.hero_h1a")}{" "}
             <span
               className="bg-clip-text text-transparent"
               style={{ backgroundImage: "linear-gradient(247.38deg, #29FADF -2.17%, #8B1DFF 84.87%)" }}
             >
-              Before You Shoot It
+              {t("planning.hero_h1b")}
             </span>
           </motion.h1>
 
@@ -56,13 +58,7 @@ const PlanningHero = () => {
             className="max-w-3xl mx-auto mb-10"
           >
             <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-4">
-              Preproduction is where films succeed or quietly fall apart. Not because the idea is weak, but because structure arrives too late.
-            </p>
-            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-4">
-              Versions multiply. Feedback fragments. Production realities surface after decisions are locked.
-            </p>
-            <p className="text-lg sm:text-xl text-foreground font-semibold leading-relaxed">
-              Planning Pro keeps creative development inside the same environment that will execute the film.
+              {t("planning.hero_sub")}
             </p>
           </motion.div>
 
@@ -74,11 +70,11 @@ const PlanningHero = () => {
           >
             <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="group px-8">
-                Start Free
+                {t("planning.hero_cta1")}
                 <ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />
               </Button>
             </a>
-            <a href="https://www.youtube.com/watch?v=9szESOfyK_8" target="_blank" rel="noopener noreferrer">
+            <a href="https://calendly.com/filmmaking-app/30min" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="outline"
                 size="lg"
@@ -91,19 +87,10 @@ const PlanningHero = () => {
                   />
                 }
               >
-                Watch Video
+                {t("planning.hero_cta2")}
               </Button>
             </a>
           </motion.div>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-sm text-muted-foreground"
-          >
-            Up and running in minutes.
-          </motion.p>
         </div>
 
         <motion.div

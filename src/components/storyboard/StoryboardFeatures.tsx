@@ -1,35 +1,36 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
-
-const features = [
-  { title: "Unlimited AI-Assisted Shots", description: "Generate unlimited AI-assisted shots within a scene to rapidly explore visual directions." },
-  { title: "Non-Destructive Iteration", description: "Iterate on an existing frame without losing composition or continuity." },
-  { title: "Frame Control", description: "Adjust framing, scale, and camera distance with precision." },
-  { title: "Style Switching", description: "Switch between black-and-white and colour outputs to match your creative intent." },
-  { title: "Reusable Elements", description: "Design reusable characters, locations and visual elements that persist across your project." },
-  { title: "Animatic Creation", description: "Create and edit animatics directly from any scene, adjust shot timing and preview pacing instantly." },
-  { title: "Secure Sharing", description: "Share secure, view-only animatic links with stakeholders for fast, frictionless feedback." },
-  { title: "Continuous Visual Workflow", description: "These tools are not isolated — they are part of a continuous workflow that supports experimentation first and precision later." },
-];
+import { useTranslation } from "react-i18next";
 
 const StoryboardFeatures = () => {
+  const { t } = useTranslation();
+  const features = [
+    { title: t("storyboard.feat1_title"), description: t("storyboard.feat1_desc") },
+    { title: t("storyboard.feat2_title"), description: t("storyboard.feat2_desc") },
+    { title: t("storyboard.feat3_title"), description: t("storyboard.feat3_desc") },
+    { title: t("storyboard.feat4_title"), description: t("storyboard.feat4_desc") },
+    { title: t("storyboard.feat5_title"), description: t("storyboard.feat5_desc") },
+    { title: t("storyboard.feat6_title"), description: t("storyboard.feat6_desc") },
+    { title: t("storyboard.feat7_title"), description: t("storyboard.feat7_desc") },
+    { title: t("storyboard.feat8_title"), description: t("storyboard.feat8_desc") },
+  ];
   return (
     <section className="section-padding bg-white relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <AnimatedSectionHeader
           wrapperClassName="text-center mb-16"
-          pillText="What You Get"
+          pillText={t("storyboard.features_pill")}
           pillClassName="bg-primary/10 text-primary"
           title={
             <>
-              Built for{" "}
+              {t("storyboard.features_title")}{" "}
               <span className="font-lato font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                Real Creative Work
+                {t("storyboard.features_title_highlight")}
               </span>
             </>
           }
-          description="Storyboarding inside Pzaz combines flexibility with control — everything you need to move from rough concept to production-ready boards."
+          description={t("storyboard.features_desc")}
         />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">

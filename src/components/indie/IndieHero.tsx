@@ -6,12 +6,13 @@ import ArrowIcon from "@/components/ui/ArrowIcon";
 import ctaPlayIcon from "@/assets/cta-play-icon.svg";
 import aiResearchIcon from "@/assets/ai-research-icon.svg";
 import { useIndieCheckoutUrl } from "@/lib/checkout";
+import { useTranslation } from "react-i18next";
 
 const IndieHero = () => {
   const indieCheckoutUrl = useIndieCheckoutUrl();
+  const { t } = useTranslation();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Gradient background */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -19,39 +20,34 @@ const IndieHero = () => {
             "radial-gradient(50.01% 50.01% at 50% 0%, rgba(170, 166, 255, 0.25) 0%, rgba(170, 166, 255, 0.05) 69.96%, rgba(170, 166, 255, 0) 90.38%)",
         }}
       />
-
-      {/* Subtle grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border)/0.5)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.5)_1px,transparent_1px)] bg-[size:80px_80px] opacity-30" />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
-          {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
             <Pill
-              text="Free. Permanently. For Independent Filmmakers."
+              text={t("indie.hero_badge")}
               className="text-primary mb-8 mt-[15px] bg-[#E4E4FE] border border-[#8651EF42]"
               icon={<img src={aiResearchIcon} alt="" className="w-4 h-4" />}
             />
           </motion.div>
 
-          {/* Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-            className="text-[40px] sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 text-balance"
+            className="text-[40px] sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.6] mb-6 text-balance"
           >
-            Make Your Film{" "}
+            {t("indie.hero_h1a")}{" "}
             <span className="bg-clip-text text-transparent" style={{ backgroundImage: "linear-gradient(247.38deg, #29FADF -2.17%, #8B1DFF 84.87%)" }}>
-              Look Real
+              {t("indie.hero_h1_gradient")}
             </span>
           </motion.h1>
 
-          {/* Subheadline */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -59,17 +55,16 @@ const IndieHero = () => {
             className="max-w-3xl mx-auto mb-10"
           >
             <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-4">
-              Most independent films don't stall because the story is weak. They stall because the project doesn't look ready.
+              {t("indie.hero_sub1")}
             </p>
             <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-4">
-              Notes are scattered. Plans are vague. Materials feel unfinished. When someone asks a practical question, the answer isn't clear.
+              {t("indie.hero_sub2")}
             </p>
             <p className="text-lg sm:text-xl text-foreground font-semibold leading-relaxed">
-              It's not a talent issue. It's a structure issue.
+              {t("indie.hero_sub3")}
             </p>
           </motion.div>
 
-          {/* CTAs */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -78,7 +73,7 @@ const IndieHero = () => {
           >
             <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="group px-8">
-                Start Free
+                {t("indie.hero_cta1")}
                 <ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />
               </Button>
             </a>
@@ -95,23 +90,21 @@ const IndieHero = () => {
                   />
                 }
               >
-                Watch Video
+                {t("indie.hero_cta2")}
               </Button>
             </a>
           </motion.div>
 
-          {/* Trust line */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-sm text-muted-foreground"
           >
-            Create in minutes.
+            {t("indie.hero_trust")}
           </motion.p>
         </div>
 
-        {/* Hero Visual */}
         <motion.div
           initial={{ opacity: 0, y: 50, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -123,7 +116,6 @@ const IndieHero = () => {
             <div className="p-2">
               <div className="bg-muted/50 rounded-xl aspect-[16/9] flex items-center justify-center relative overflow-hidden">
                 <div className="absolute inset-4 bg-background rounded-lg shadow-inner flex">
-                  {/* Left sidebar */}
                   <div className="w-16 lg:w-56 border-r border-border/50 p-3 hidden sm:block">
                     <div className="flex items-center gap-2 mb-4">
                       <div className="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center">
@@ -139,7 +131,6 @@ const IndieHero = () => {
                       ))}
                     </div>
                   </div>
-                  {/* Main content */}
                   <div className="flex-1 p-4 lg:p-6">
                     <div className="flex items-center gap-3 mb-6">
                       <div className="h-3 bg-primary/20 rounded w-32" />
@@ -155,7 +146,6 @@ const IndieHero = () => {
                       ))}
                     </div>
                   </div>
-                  {/* Right panel */}
                   <div className="w-16 lg:w-48 border-l border-border/50 p-3 hidden md:block">
                     <div className="text-xs font-medium mb-3 hidden lg:block">Project Status</div>
                     <div className="space-y-2">

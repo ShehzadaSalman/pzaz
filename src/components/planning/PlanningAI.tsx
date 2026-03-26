@@ -6,31 +6,16 @@ import iconScriptAnalysis from "@/assets/script/icon-script-analysis.svg";
 import iconCharacterTracking from "@/assets/script/icon-character-tracking.svg";
 import iconSceneSuggestions from "@/assets/script/icon-scene-suggestions.svg";
 import scriptAiPreview from "@/assets/script-ai-preview.png";
-
-const aiCards = [
-  {
-    title: "Structural Awareness",
-    description: "Detects practical elements within scenes and surfaces patterns you may not have consciously noticed.",
-    icon: iconScriptAnalysis,
-  },
-  {
-    title: "Early Breakdown Support",
-    description: "Supports breakdown preparation before it becomes urgent — operating inside the full context of your project.",
-    icon: iconCharacterTracking,
-  },
-  {
-    title: "Explore Without Losing Intent",
-    description: "Help you explore alternatives without losing the thread of your creative intent.",
-    icon: iconSceneSuggestions,
-  },
-  {
-    title: "Context-Aware Intelligence",
-    description: "Not a detached prompt box. It works inside your project, aware of your context, your draft, and your direction.",
-    icon: iconAiResearch,
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const PlanningAI = () => {
+  const { t } = useTranslation();
+  const aiCards = [
+    { title: t("planning.ai_card1_title"), description: t("planning.ai_card1_desc"), icon: iconScriptAnalysis },
+    { title: t("planning.ai_card2_title"), description: t("planning.ai_card2_desc"), icon: iconCharacterTracking },
+    { title: t("planning.ai_card3_title"), description: t("planning.ai_card3_desc"), icon: iconSceneSuggestions },
+    { title: t("planning.ai_card4_title"), description: t("planning.ai_card4_desc"), icon: iconAiResearch },
+  ];
   return (
     <section className="section-padding bg-[#FBFBFB]">
       <div className="container mx-auto px-6">
@@ -43,17 +28,17 @@ const PlanningAI = () => {
           >
             <SectionHeader
               align="left"
-              pillText="Built-in intelligence"
+              pillText={t("planning.ai_pill")}
               pillClassName="bg-primary/10 text-primary"
               title={
                 <>
-                  AI That Supports Structure{" "}
+                  {t("planning.ai_title")}{" "}
                   <span className="font-lato font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                    and Doesn't Replace Vision
+                    {t("planning.ai_title_highlight")}
                   </span>
                 </>
               }
-              description="AI inside Planning Pro has no ambition to outwrite you or out-direct you. Its role is subtler — it pays attention to structure. You lead. The system supports. Creative judgment remains entirely human."
+              description={t("planning.ai_desc")}
               className="mb-8"
             />
 

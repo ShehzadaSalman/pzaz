@@ -1,27 +1,28 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
-
-const benefits = [
-  "Script and structural breakdown evolve in the same conversation from day one.",
-  "Early visual thinking connects directly to the scenes it affects.",
-  "Complexity becomes visible immediately — while change is still cheap.",
-  "Production reality enters the conversation early, not as a surprise.",
-];
+import { useTranslation } from "react-i18next";
 
 const PlanningContext = () => {
+  const { t } = useTranslation();
+  const benefits = [
+    t("planning.context_b1"),
+    t("planning.context_b2"),
+    t("planning.context_b3"),
+    t("planning.context_b4"),
+  ];
   return (
     <section className="section-padding bg-white relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <AnimatedSectionHeader
           wrapperClassName="text-center mb-16"
-          pillText="The Solution"
+          pillText={t("planning.context_pill")}
           pillClassName="bg-primary/10 text-primary"
           title={
             <>
-              Preproduction Inside{" "}
+              {t("planning.context_title")}{" "}
               <span className="font-lato font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                Production Context
+                {t("planning.context_title_highlight")}
               </span>
             </>
           }
@@ -36,13 +37,13 @@ const PlanningContext = () => {
             className="space-y-5"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Planning Pro does something deceptively simple: it keeps the script, the structural breakdown, the early visual thinking and the first signs of execution all in the same conversation from day one.
+              {t("planning.context_p1")}
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Instead of allowing each discipline to develop politely out of sight of the others, it lets them influence each other while change is still cheap.
+              {t("planning.context_p2")}
             </p>
             <p className="text-xl font-bold text-foreground">
-              Preproduction stops being a series of corrective measures and becomes a series of deliberate decisions.
+              {t("planning.context_bold")}
             </p>
           </motion.div>
 

@@ -6,36 +6,20 @@ import iconAiFormatting from "@/assets/script/icon-ai-formatting.svg";
 import iconSceneSuggestions from "@/assets/script/icon-scene-suggestions.svg";
 import iconCharacterTracking from "@/assets/script/icon-character-tracking.svg";
 import iconScriptAnalysis from "@/assets/script/icon-script-analysis.svg";
-
-const aiCards = [
-  {
-    title: "AI-Powered Formatting",
-    description: "Automatically formats your script to industry standards as you write, so you never break creative flow.",
-    icon: iconCharacterTracking,
-  },
-  {
-    title: "Intelligent Scene Suggestions",
-    description: "Get contextual scene and dialogue recommendations based on your story's tone, genre, and structure.",
-    icon: iconScriptAnalysis,
-  },
-  {
-    title: "Smart Character Tracking",
-    description: "AI keeps track of character arcs, dialogue patterns, and continuity across your entire script.",
-    icon: iconAiFormatting,
-  },
-  {
-    title: "Instant Script Analysis",
-    description: "Receive real-time feedback on pacing, structure, and readability to sharpen every draft.",
-    icon: iconSceneSuggestions,
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const ScriptAI = () => {
+  const { t } = useTranslation();
+  const aiCards = [
+    { titleKey: "script.ai_card1_title", descKey: "script.ai_card1_desc", icon: iconCharacterTracking },
+    { titleKey: "script.ai_card2_title", descKey: "script.ai_card2_desc", icon: iconScriptAnalysis },
+    { titleKey: "script.ai_card3_title", descKey: "script.ai_card3_desc", icon: iconAiFormatting },
+    { titleKey: "script.ai_card4_title", descKey: "script.ai_card4_desc", icon: iconSceneSuggestions },
+  ];
   return (
     <section className="section-padding bg-[#FBFBFB]">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          {/* Left column — content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -44,24 +28,24 @@ const ScriptAI = () => {
           >
             <SectionHeader
               align="left"
-              pillText="Built-in intelligence"
+              pillText={t("script.ai_pill")}
               pillClassName="bg-primary/10 text-primary"
               title={
                 <>
-                  Smart AI tools for effortless{" "}
+                  {t("script.ai_title")}{" "}
                   <span className="font-lato font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                    scriptwriting.
+                    {t("script.ai_title_highlight")}
                   </span>
                 </>
               }
-              description="Let AI handle the heavy lifting — from formatting and continuity to scene suggestions — so you can focus on telling your story."
+              description={t("script.ai_desc")}
               className="mb-8"
             />
 
             <div className="grid md:grid-cols-2 gap-4">
               {aiCards.map((card, index) => (
                 <motion.div
-                  key={card.title}
+                  key={card.titleKey}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -73,10 +57,10 @@ const ScriptAI = () => {
                   </div>
                   <div>
                     <h4 className="font-lato font-bold text-[16px] leading-snug text-foreground mb-1">
-                      {card.title}
+                      {t(card.titleKey)}
                     </h4>
                     <p className="font-lato font-normal text-[16px] leading-[22px] text-[#878787]">
-                      {card.description}
+                      {t(card.descKey)}
                     </p>
                   </div>
                 </motion.div>
@@ -84,7 +68,6 @@ const ScriptAI = () => {
             </div>
           </motion.div>
 
-          {/* Right column — image */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
