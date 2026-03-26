@@ -2,35 +2,36 @@ import React from "react";
 import { motion } from "framer-motion";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
 import iconWarning from "@/assets/icon-warning.svg";
-
-const siloProblems = [
-  "Budgets live in one place while scripts evolve elsewhere.",
-  "Schedules adjust in another system entirely.",
-  "Information moves manually between files and departments.",
-  "Versions multiply, visibility narrows.",
-];
+import { useTranslation } from "react-i18next";
 
 const BudgetProblem = () => {
+  const { t } = useTranslation();
+  const siloProblems = [
+    t("budget.problem_item1"),
+    t("budget.problem_item2"),
+    t("budget.problem_item3"),
+    t("budget.problem_item4"),
+  ];
+
   return (
     <section className="section-padding bg-[#fbfbfb] relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <AnimatedSectionHeader
           wrapperClassName="text-center mb-12"
-          pillText="The Core Problem"
+          pillText={t("budget.problem_pill")}
           pillIcon={null}
           pillClassName="bg-[#FF404017] text-[#EB5757]"
           title={
             <>
-              When Budgeting Lives in a Silo,{" "}
-              <span className="text-[#FF4040]">Production Loses Clarity.</span>
+              {t("budget.problem_title")}{" "}
+              <span className="text-[#FF4040]">{t("budget.problem_title_highlight")}</span>
             </>
           }
-          description="Traditional budgeting tools are powerful, trusted, and built to support complex productions. But they often operate as standalone systems."
+          description={t("budget.problem_desc")}
           className="mb-12"
         />
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-          {/* Problem cards */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -39,7 +40,7 @@ const BudgetProblem = () => {
             className="bg-white py-8 px-8 border border-[#D4BAF4] rounded-[38px]"
           >
             <h3 className="font-lato font-bold text-2xl pt-4 pb-8 text-foreground">
-              Financial insight becomes reactive, not timely.
+              {t("budget.problem_card_title")}
             </h3>
             <div className="space-y-4">
               {siloProblems.map((problem, i) => (
@@ -51,7 +52,6 @@ const BudgetProblem = () => {
             </div>
           </motion.div>
 
-          {/* Right statement */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -61,12 +61,12 @@ const BudgetProblem = () => {
           >
             <div className="bg-white rounded-[28px] border-2 border-[#D4BAF4] p-8">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                As information moves manually between files and departments, clarity begins to fade. Versions multiply, visibility narrows, and financial insight becomes reactive instead of timely.
+                {t("budget.problem_right1")}
               </p>
             </div>
             <div className="bg-[#F7F2FD] rounded-[28px] border-2 border-[#D4BAF4] p-8">
               <p className="font-lato font-bold text-[20px] text-[#4D029B] italic">
-                This is not a spreadsheet problem. It is a coordination problem.
+                {t("budget.problem_right2")}
               </p>
             </div>
           </motion.div>

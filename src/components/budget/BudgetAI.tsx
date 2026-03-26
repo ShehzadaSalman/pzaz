@@ -6,31 +6,17 @@ import iconScriptAnalysis from "@/assets/script/icon-script-analysis.svg";
 import iconCharacterTracking from "@/assets/script/icon-character-tracking.svg";
 import iconSceneSuggestions from "@/assets/script/icon-scene-suggestions.svg";
 import scriptAiPreview from "@/assets/script-ai-preview.png";
-
-const aiCards = [
-  {
-    title: "Structured Budget Generation",
-    description: "Generate structured budgets directly from breakdown data — no manual re-entry between systems.",
-    icon: iconScriptAnalysis,
-  },
-  {
-    title: "Cost Pattern Highlighting",
-    description: "AI highlights cost patterns and anomalies so financial risks surface before they become overruns.",
-    icon: iconCharacterTracking,
-  },
-  {
-    title: "Forecasting Comparisons",
-    description: "Support scenario forecasting with structured comparisons across budget versions and schedule changes.",
-    icon: iconAiResearch,
-  },
-  {
-    title: "Judgment Stays Human",
-    description: "Accountants remain in control. Producers remain responsible. AI adds speed and structure where it helps.",
-    icon: iconSceneSuggestions,
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const BudgetAI = () => {
+  const { t } = useTranslation();
+  const aiCards = [
+    { title: t("budget.ai_card1_title"), description: t("budget.ai_card1_desc"), icon: iconScriptAnalysis },
+    { title: t("budget.ai_card2_title"), description: t("budget.ai_card2_desc"), icon: iconCharacterTracking },
+    { title: t("budget.ai_card3_title"), description: t("budget.ai_card3_desc"), icon: iconAiResearch },
+    { title: t("budget.ai_card4_title"), description: t("budget.ai_card4_desc"), icon: iconSceneSuggestions },
+  ];
+
   return (
     <section className="section-padding relative overflow-hidden">
       <div
@@ -47,24 +33,24 @@ const BudgetAI = () => {
           >
             <SectionHeader
               align="left"
-              pillText="AI Inside Financial Context"
+              pillText={t("budget.ai_pill")}
               pillClassName="bg-primary/10 text-primary"
               title={
                 <>
-                  AI Inside{" "}
+                  {t("budget.ai_title")}{" "}
                   <span className="font-lato font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                    Financial Context.
+                    {t("budget.ai_title_highlight")}
                   </span>
                 </>
               }
-              description="AI can generate numbers quickly, but numbers without context rarely run a production. In Pzaz, AI works within the full coordination of your project — not outside it."
+              description={t("budget.ai_desc")}
               className="mb-8"
             />
 
             <div className="grid md:grid-cols-2 gap-4">
               {aiCards.map((card, index) => (
                 <motion.div
-                  key={card.title}
+                  key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -83,7 +69,7 @@ const BudgetAI = () => {
             </div>
 
             <p className="mt-6 font-lato font-semibold text-[16px] text-[#4D029B] italic">
-              Clarity improves, and at the same time, judgment stays human.
+              {t("budget.ai_highlight")}
             </p>
           </motion.div>
 
