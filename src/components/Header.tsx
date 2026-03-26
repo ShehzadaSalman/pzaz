@@ -408,7 +408,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
                   className="text-foreground font-medium py-3 text-left border-b border-border/30"
                   style={{ fontFamily: "'Lato', sans-serif" }}
                 >
-                  Contact
+                  {t("nav.contact")}
                 </button>
                 <div className="flex flex-col gap-3 pt-4 pb-2">
                   <div className="pb-1">
@@ -425,11 +425,11 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
                         background: "transparent",
                       }}
                     >
-                      Log in
+                      {t("nav.login")}
                     </button>
                   </a>
                   <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="w-full">
-                    <Button variant="default" className="w-full">Start for Free</Button>
+                    <Button variant="default" className="w-full">{t("nav.start_free")}</Button>
                   </a>
                 </div>
               </div>
