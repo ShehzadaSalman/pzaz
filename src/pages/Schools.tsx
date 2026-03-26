@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import PageLayout from "@/components/layout/PageLayout";
 import SEO from "@/components/SEO";
 import SectionHeader from "@/components/SectionHeader";
@@ -80,6 +81,7 @@ const flowSteps = [
 ];
 
 const Schools = () => {
+  const { t } = useTranslation();
   return (
     <PageLayout>
       <SEO
@@ -112,7 +114,7 @@ const Schools = () => {
           <div className="max-w-5xl mx-auto text-center">
             <motion.div {...fadeUp(0)}>
               <Pill
-                text="Free for Film Schools & Students"
+                text={t("schools.pill_free")}
                 className="text-primary mb-8 mt-[15px] bg-[#E4E4FE] border border-[#8651EF42]"
                 icon={<img src={iconStar} alt="" className="w-4 h-4" />}
               />
@@ -124,12 +126,12 @@ const Schools = () => {
               transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
               className="text-[38px] sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 text-balance"
             >
-              The First Filmmaking Platform{" "}
+              {t("schools.hero_h1a")}{" "}
               <span
                 className="bg-clip-text text-transparent"
                 style={{ backgroundImage: "linear-gradient(247.38deg, #29FADF -2.17%, #8B1DFF 84.87%)" }}
               >
-                Built for Film Schools
+                {t("schools.hero_h1b")}
               </span>
             </motion.h1>
 
@@ -140,12 +142,10 @@ const Schools = () => {
               className="max-w-3xl mx-auto mb-10"
             >
               <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-4">
-                Pzaz is an all-in-one filmmaking workspace that replaces scripts, planning tools,
-                production management, and collaboration software with one platform designed
-                specifically for film schools.
+                {t("schools.hero_p1")}
               </p>
               <p className="text-lg sm:text-xl font-semibold text-foreground leading-relaxed">
-                Completely free for schools and students.
+                {t("schools.hero_p2")}
               </p>
             </motion.div>
 
@@ -157,7 +157,7 @@ const Schools = () => {
             >
               <a href="https://calendly.com/filmmaking-app/30min" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="group px-8">
-                  Book a Demo
+                  {t("schools.hero_cta1")}
                   <ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />
                 </Button>
               </a>
@@ -174,7 +174,7 @@ const Schools = () => {
                     />
                   }
                 >
-                  Get Pzaz for Your School
+                  {t("schools.hero_cta2")}
                 </Button>
               </a>
             </motion.div>
@@ -185,7 +185,7 @@ const Schools = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-sm text-muted-foreground"
             >
-              No licenses or hidden costs.
+              {t("schools.hero_note")}
             </motion.p>
           </div>
 

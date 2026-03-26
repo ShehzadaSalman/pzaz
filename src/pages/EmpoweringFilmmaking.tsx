@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import PageLayout from "@/components/layout/PageLayout";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
@@ -248,6 +249,7 @@ const AudienceCard = ({
 };
 
 const EmpoweringFilmmaking = () => {
+  const { t } = useTranslation();
   const indieCheckoutUrl = useIndieCheckoutUrl();
 
   return (
@@ -276,38 +278,33 @@ const EmpoweringFilmmaking = () => {
             transition={{ duration: 0.6 }}
           >
             <span className="inline-block mb-4 px-3 py-1 rounded-full text-xs font-lato font-bold uppercase tracking-widest bg-primary/10 text-primary">
-              Solutions
+              {t("empowering_page.pill")}
             </span>
             <h1 className="font-lato font-extrabold text-4xl md:text-[52px] leading-tight text-foreground mb-6">
-              A Platform Designed to Support the{" "}
+              {t("empowering_page.hero_h1a")}{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-l from-[#409DFF] to-[#3207BC]">
-                Entire Filmmaking Ecosystem
+                {t("empowering_page.hero_h1b")}
               </span>
             </h1>
             <p className="font-lato text-lg leading-relaxed text-[#878787] mb-4">
-              Filmmaking is not a single discipline. It is a coordinated process
-              shaped by both creative judgment and operational decisions.
+              {t("empowering_page.hero_p1")}
             </p>
             <p className="font-lato text-lg leading-relaxed text-[#878787] mb-4">
-              Pzaz was designed to support this reality. Writers, directors,
-              producers, crews and investors each engage with production from
-              different perspectives. The platform adapts to these roles so
-              collaboration becomes structured, clear and reliable.
+              {t("empowering_page.hero_p2")}
             </p>
             <p className="font-lato text-lg leading-relaxed text-[#878787] mb-10">
-              The result is greater clarity, stronger execution and more
-              predictable outcomes.
+              {t("empowering_page.hero_p3")}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
                 <Button variant="default" size="lg" className="w-full sm:w-auto">
-                  Start Now
+                  {t("empowering_page.hero_cta1")}
                 </Button>
               </a>
               <Link to="#solutions">
                 <Button variant="outline" size="lg" className="w-full sm:w-auto">
-                  Find Your Solution
+                  {t("empowering_page.hero_cta2")}
                 </Button>
               </Link>
             </div>

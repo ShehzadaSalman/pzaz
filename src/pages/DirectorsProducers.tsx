@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import PageLayout from "@/components/layout/PageLayout";
 import SEO from "@/components/SEO";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
@@ -92,6 +93,7 @@ const additionalTools = [
 ];
 
 const DirectorsProducers = () => {
+  const { t } = useTranslation();
   const indieCheckoutUrl = useIndieCheckoutUrl();
 
   return (

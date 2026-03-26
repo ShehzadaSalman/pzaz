@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import PageLayout from "@/components/layout/PageLayout";
 import SEO from "@/components/SEO";
 import SectionHeader from "@/components/SectionHeader";
@@ -58,6 +59,7 @@ const additionalTools = [
 ];
 
 const InvestorsFunding = () => {
+  const { t } = useTranslation();
   const indieCheckoutUrl = useIndieCheckoutUrl();
 
   return (
