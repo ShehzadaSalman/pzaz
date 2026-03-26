@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
+import { useTranslation } from "react-i18next";
 
 const StoryboardProblem = () => {
+  const { t } = useTranslation();
   return (
     <section className="section-padding bg-[#fbfbfb] relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
@@ -15,13 +17,13 @@ const StoryboardProblem = () => {
           >
             <AnimatedSectionHeader
               wrapperClassName=""
-              pillText="The Problem"
+              pillText={t("storyboard.problem_pill")}
               pillClassName="bg-primary/10 text-primary"
               title={
                 <>
-                  When Creativity Slows Down,{" "}
+                  {t("storyboard.problem_title")}{" "}
                   <span className="font-lato font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                    Productions Drift
+                    {t("storyboard.problem_title_highlight")}
                   </span>
                 </>
               }
@@ -38,13 +40,13 @@ const StoryboardProblem = () => {
             className="space-y-5"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Traditional storyboarding is powerful but slow. Once drawn, boards can become rigid. Iteration takes time. Collaboration happens outside the frame.
+              {t("storyboard.problem_p1")}
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              AI-only tools move fast, but often without continuity or control. They generate options, not direction. Creative teams are left sorting through outputs instead of shaping intent.
+              {t("storyboard.problem_p2")}
             </p>
             <p className="text-xl font-bold text-[#4D029B] italic">
-              This is not just a tooling issue. It is a creative workflow issue.
+              {t("storyboard.problem_quote")}
             </p>
           </motion.div>
         </div>

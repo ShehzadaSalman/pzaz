@@ -1,14 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
-
-const points = [
-  "Rewrites remain inside a living production context, where structural elements are surfaced as you develop.",
-  "Feedback stays attached to the scenes it concerns.",
-  "Early planning signals emerge while choices are still flexible, not after they've calcified into commitments.",
-];
+import { useTranslation } from "react-i18next";
 
 const PlanningHandoff = () => {
+  const { t } = useTranslation();
+  const points = [
+    t("planning.handoff_point1"),
+    t("planning.handoff_point2"),
+    t("planning.handoff_point3"),
+  ];
   return (
     <section className="section-padding bg-[#FBFBFB] relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
@@ -21,13 +22,13 @@ const PlanningHandoff = () => {
         >
           <AnimatedSectionHeader
             wrapperClassName="text-center"
-            pillText="The Shift"
+            pillText={t("planning.handoff_pill")}
             pillClassName="bg-primary/10 text-primary"
             title={
               <>
-                From Isolated Writing to{" "}
+                {t("planning.handoff_title")}{" "}
                 <span className="font-lato font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                  Structured Preproduction
+                  {t("planning.handoff_title_highlight")}
                 </span>
               </>
             }
@@ -42,10 +43,10 @@ const PlanningHandoff = () => {
             className="bg-white rounded-[38px] border border-[#D4BAF4] p-8 md:p-12 mb-10"
           >
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Without structure, development tends to culminate in a ceremonial moment: the script is declared "finished," exported, and handed over as if it were a completed object. Only then does production begin the real translation. And it's at that translation stage that misalignment politely reveals itself.
+              {t("planning.handoff_p1")}
             </p>
             <p className="text-xl font-semibold text-[#4D029B] mb-8">
-              Planning Pro removes the drama of the handoff entirely.
+              {t("planning.handoff_bold")}
             </p>
 
             <div className="space-y-4">
@@ -73,7 +74,7 @@ const PlanningHandoff = () => {
             className="text-center"
           >
             <p className="text-xl font-bold text-foreground">
-              You're not polishing a document for delivery. You're constructing a production from the inside out.
+              {t("planning.handoff_closing")}
             </p>
           </motion.div>
         </motion.div>

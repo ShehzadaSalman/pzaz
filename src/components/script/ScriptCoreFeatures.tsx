@@ -1,51 +1,36 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
-
-const coreFeatures = [
-  {
-    title: "From concept to screen",
-    description:
-      "A complete scriptwriting ecosystem. Brainstorm ideas, draft scripts, and move seamlessly into production planning.",
-  },
-  {
-    title: "Focus on the story",
-    description:
-      "Automatic industry-standard formatting. Formatting happens automatically, so you stay immersed in your narrative.",
-  },
-  {
-    title: "Every version. Always safe.",
-    description: "Track changes, compare drafts, and restore previous versions instantly. Nothing is ever lost.",
-  },
-  {
-    title: "Write together, in real time",
-    description: "Co-write and edit scripts live with your team, no matter where they are in the world.",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const ScriptCoreFeatures = () => {
+  const { t } = useTranslation();
+  const coreFeatures = [
+    { title: t("script.core_feat1_title"), description: t("script.core_feat1_desc") },
+    { title: t("script.core_feat2_title"), description: t("script.core_feat2_desc") },
+    { title: t("script.core_feat3_title"), description: t("script.core_feat3_desc") },
+    { title: t("script.core_feat4_title"), description: t("script.core_feat4_desc") },
+  ];
   return (
     <section className="section-padding relative overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          {/* Core Experience Section */}
           <AnimatedSectionHeader
             wrapperClassName="text-center mb-12"
-            pillText="Core Experience"
+            pillText={t("script.core_pill")}
             pillClassName="bg-primary/10 text-primary"
             title={
               <>
-                Complete Script{" "}
+                {t("script.core_title")}{" "}
                 <span className="font-lato font-extrabold md:text-[48px] tracking-normal text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                  Lifecycle Solution
+                  {t("script.core_title_highlight")}
                 </span>
               </>
             }
-            description="One platform. The complete script lifecycle. Everything your script needs — from the first idea to production — in one intuitive workspace."
+            description={t("script.core_desc")}
             motionProps={{ initial: { opacity: 0, y: 30 } }}
           />
 
-          {/* Core feature cards */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-[29px]">
             {coreFeatures.map((item, index) => (
               <motion.div

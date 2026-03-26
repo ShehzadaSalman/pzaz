@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
+import { useTranslation } from "react-i18next";
 
 const PlanningProblem = () => {
+  const { t } = useTranslation();
   return (
     <section className="section-padding bg-[#fbfbfb] relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
@@ -15,13 +17,13 @@ const PlanningProblem = () => {
           >
             <AnimatedSectionHeader
               wrapperClassName=""
-              pillText="The Problem"
+              pillText={t("planning.problem_pill")}
               pillClassName="bg-primary/10 text-primary"
               title={
                 <>
-                  When Preproduction Lives{" "}
+                  {t("planning.problem_title")}{" "}
                   <span className="font-lato font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                    in Pieces, Alignment Slips
+                    {t("planning.problem_title_highlight")}
                   </span>
                 </>
               }
@@ -38,16 +40,16 @@ const PlanningProblem = () => {
             className="space-y-5"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              In most film workflows, writing enjoys a kind of glorious isolation. The draft comes first, planning politely waits its turn, and budget conversations only enter the room once the scope has already stretched itself comfortably beyond financial gravity.
+              {t("planning.problem_p1")}
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              For a while, the script feels complete. Then breakdown begins. Then the arithmetic of reality arrives, and suddenly the elegant creative decisions made upstream turn out to have very practical downstream consequences.
+              {t("planning.problem_p2")}
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Structural adjustments at that point aren't impossible, but they are expensive — whether emotionally, financially, or politically.
+              {t("planning.problem_p3")}
             </p>
             <p className="text-xl font-bold text-[#4D029B] italic">
-              This isn't a failure of imagination. It's a failure of coordination.
+              {t("planning.problem_quote")}
             </p>
           </motion.div>
         </div>

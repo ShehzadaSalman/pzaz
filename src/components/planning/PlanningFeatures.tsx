@@ -1,51 +1,34 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
-
-const features = [
-  {
-    title: "Live, Interconnected Scenes",
-    description: "Write and revise with scenes that remain live and interconnected rather than drifting into static versions.",
-  },
-  {
-    title: "Structured Version Control",
-    description: "Maintain structured version control that reflects evolution instead of chaos.",
-  },
-  {
-    title: "Element Detection",
-    description: "Key production elements are detected as you develop, not weeks later during a frantic breakdown.",
-  },
-  {
-    title: "Visual Thinking Connected",
-    description: "Early visual thinking connects directly to the scenes it affects, so aesthetic ambition and practical implication grow side by side.",
-  },
-  {
-    title: "Anchored Feedback",
-    description: "Feedback stays anchored to exact moments in the script, not scattered across emails and documents.",
-  },
-  {
-    title: "Continuous Environment",
-    description: "Your script doesn't move through disconnected stages. It evolves inside one continuous production environment.",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const PlanningFeatures = () => {
+  const { t } = useTranslation();
+  const features = [
+    { title: t("planning.feat1_title"), description: t("planning.feat1_desc") },
+    { title: t("planning.feat2_title"), description: t("planning.feat2_desc") },
+    { title: t("planning.feat3_title"), description: t("planning.feat3_desc") },
+    { title: t("planning.feat4_title"), description: t("planning.feat4_desc") },
+    { title: t("planning.feat5_title"), description: t("planning.feat5_desc") },
+    { title: t("planning.feat6_title"), description: t("planning.feat6_desc") },
+  ];
   return (
     <section className="section-padding bg-white relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <AnimatedSectionHeader
           wrapperClassName="text-center mb-16"
-          pillText="What You Get"
+          pillText={t("planning.features_pill")}
           pillClassName="bg-primary/10 text-primary"
           title={
             <>
-              Built for{" "}
+              {t("planning.features_title")}{" "}
               <span className="font-lato font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                Preproduction Discipline
+                {t("planning.features_title_highlight")}
               </span>
             </>
           }
-          description="Planning Pro provides a structured environment for writer-directors who are not just drafting a screenplay, but preparing a film to be made."
+          description={t("planning.features_desc")}
         />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -74,7 +57,7 @@ const PlanningFeatures = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="text-center text-lg font-semibold text-[#4D029B] mt-12 italic"
         >
-          Each capability reinforces alignment between what you intend creatively and what will be required operationally.
+          {t("planning.features_closing")}
         </motion.p>
       </div>
     </section>

@@ -5,9 +5,11 @@ import ArrowIcon from "@/components/ui/ArrowIcon";
 import SectionHeader from "@/components/SectionHeader";
 import iconStar from "@/assets/material-symbols_family-star.svg";
 import { useIndieCheckoutUrl } from "@/lib/checkout";
+import { useTranslation } from "react-i18next";
 
 const PlanningCTA = () => {
   const indieCheckoutUrl = useIndieCheckoutUrl();
+  const { t } = useTranslation();
   return (
     <section className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
@@ -27,23 +29,23 @@ const PlanningCTA = () => {
 
             <div className="relative p-8 md:p-16 md:py-24 pb-12 text-center">
               <SectionHeader
-                pillText="Planning Pro"
+                pillText={t("planning.cta_pill")}
                 pillClassName="bg-white text-primary mb-0"
                 pillIcon={<img src={iconStar} alt="" className="w-4 h-4" />}
                 title={
                   <>
-                    Protect the Vision by{" "}
+                    {t("planning.cta_title_line1")}
                     <br />
-                    Structuring It Early
+                    {t("planning.cta_title_line2")}
                   </>
                 }
                 titleClassName="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-primary-foreground"
-                description="Preproduction isn't administrative overhead. It's the moment where imagination encounters physics, budgets, time, and people. Planning Pro decides to work with them rather than pretend they don't exist."
+                description={t("planning.cta_desc")}
                 descriptionClassName="text-xl text-primary-foreground/80 max-w-xl mx-auto mb-10"
               />
 
               <p className="text-primary-foreground/70 text-lg mb-8 max-w-2xl mx-auto">
-                Develop inside production reality, not outside it.
+                {t("planning.cta_body")}
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -54,7 +56,7 @@ const PlanningCTA = () => {
                     className="group bg-white/10 text-white border-white/30 hover:bg-white/20 rounded-[10px] px-8"
                     postfixIcon={<ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />}
                   >
-                    Start Planning Pro
+                    {t("planning.cta_primary")}
                   </Button>
                 </a>
                 <a href="https://calendly.com/filmmaking-app/30min" target="_blank" rel="noopener noreferrer">
@@ -63,13 +65,13 @@ const PlanningCTA = () => {
                     variant="outline"
                     className="group bg-white/10 text-white border-white/30 hover:bg-white/20 rounded-[10px] px-8"
                   >
-                    Book a Demo
+                    {t("planning.cta_secondary")}
                   </Button>
                 </a>
               </div>
 
               <p className="mt-6 text-sm text-primary-foreground/60">
-                Build your film before you shoot it — inside the same context that will eventually carry it to set.
+                {t("planning.cta_bottom")}
               </p>
             </div>
           </motion.div>
