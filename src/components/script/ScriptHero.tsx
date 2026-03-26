@@ -7,8 +7,10 @@ import ArrowIcon from "@/components/ui/ArrowIcon";
 import ctaPlayIcon from "@/assets/cta-play-icon.svg";
 import aiResearchIcon from "@/assets/ai-research-icon.svg";
 import iconImportScript from "@/assets/icon-import-script.svg";
+import { useTranslation } from "react-i18next";
 
 const ScriptHero = () => {
+  const { t } = useTranslation();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Gradient background */}

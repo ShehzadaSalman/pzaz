@@ -1,20 +1,22 @@
 import React from "react";
 import SharedCTA from "@/components/SharedCTA";
+import { useTranslation } from "react-i18next";
 
 const ScriptCTA = () => {
+  const { t } = useTranslation();
   return (
     <SharedCTA
-      pillText="Free for 7 days"
+      pillText={t("script.cta_pill")}
       title={
         <>
-          Write your script.
+          {t("script.cta_title_line1")}
           <br />
-          Your way. With Pzaz.
+          {t("script.cta_title_line2")}
         </>
       }
-      description="Your story deserves a tool built for the future. Start writing today — it's free, no credit card required."
-      primaryButtonText="Get Started Free"
-      secondaryButtonText="Book a demo"
+      description={t("script.cta_desc")}
+      primaryButtonText={t("script.cta_primary")}
+      secondaryButtonText={t("script.cta_secondary")}
       showLanguagesImage={false}
       backgroundStyle={{ background: "radial-gradient(88.07% 62.52% at 50% 0%, #9D87FF 0%, #5C28A4 95%)" }}
     />
