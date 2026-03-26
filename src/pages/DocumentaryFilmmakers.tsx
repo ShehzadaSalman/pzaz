@@ -99,6 +99,7 @@ const additionalTools = [
 ];
 
 const DocumentaryFilmmakers = () => {
+  const { t } = useTranslation();
   const indieCheckoutUrl = useIndieCheckoutUrl();
 
   return (

@@ -93,6 +93,7 @@ const additionalTools = [
 ];
 
 const DirectorsProducers = () => {
+  const { t } = useTranslation();
   const indieCheckoutUrl = useIndieCheckoutUrl();
 
   return (

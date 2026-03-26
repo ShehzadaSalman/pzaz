@@ -59,6 +59,7 @@ const additionalTools = [
 ];
 
 const InvestorsFunding = () => {
+  const { t } = useTranslation();
   const indieCheckoutUrl = useIndieCheckoutUrl();
 
   return (

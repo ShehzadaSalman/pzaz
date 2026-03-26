@@ -59,6 +59,7 @@ const supportTools = [
 ];
 
 const TVSeriesCreators = () => {
+  const { t } = useTranslation();
   const indieCheckoutUrl = useIndieCheckoutUrl();
 
   return (

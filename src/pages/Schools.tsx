@@ -81,6 +81,7 @@ const flowSteps = [
 ];
 
 const Schools = () => {
+  const { t } = useTranslation();
   return (
     <PageLayout>
       <SEO

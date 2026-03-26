@@ -110,6 +110,7 @@ const testimonials = [
 ];
 
 const IndieFilmmakers = () => {
+  const { t } = useTranslation();
   const indieCheckoutUrl = useIndieCheckoutUrl();
 
   return (

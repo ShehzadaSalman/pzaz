@@ -62,6 +62,7 @@ const coreTools = [
 ];
 
 const ProductionManagers = () => {
+  const { t } = useTranslation();
   const indieCheckoutUrl = useIndieCheckoutUrl();
 
   return (

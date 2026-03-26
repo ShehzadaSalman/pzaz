@@ -146,6 +146,7 @@ const supportTools = [
 ];
 
 const CreativeAgencies = () => {
+  const { t } = useTranslation();
   const indieCheckoutUrl = useIndieCheckoutUrl();
 
   return (

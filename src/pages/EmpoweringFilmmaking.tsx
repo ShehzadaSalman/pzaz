@@ -249,6 +249,7 @@ const AudienceCard = ({
 };
 
 const EmpoweringFilmmaking = () => {
+  const { t } = useTranslation();
   const indieCheckoutUrl = useIndieCheckoutUrl();
 
   return (

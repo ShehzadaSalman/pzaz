@@ -103,6 +103,7 @@ const additionalTools = [
 
 
 const Cinematographers = () => {
+  const { t } = useTranslation();
   const indieCheckoutUrl = useIndieCheckoutUrl();
 
   return (
