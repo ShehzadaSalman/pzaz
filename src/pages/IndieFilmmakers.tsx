@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import PageLayout from "@/components/layout/PageLayout";
 import SEO from "@/components/SEO";
 import StudioCard from "@/components/script/StudioCard";
