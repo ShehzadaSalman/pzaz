@@ -6,8 +6,10 @@ import ArrowIcon from "@/components/ui/ArrowIcon";
 import ctaPlayIcon from "@/assets/cta-play-icon.svg";
 import aiResearchIcon from "@/assets/ai-research-icon.svg";
 import { useIndieCheckoutUrl } from "@/lib/checkout";
+import { useTranslation } from "react-i18next";
 
 const SceneBreakdownHero = () => {
+  const { t } = useTranslation();
   const indieCheckoutUrl = useIndieCheckoutUrl();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
@@ -28,7 +30,7 @@ const SceneBreakdownHero = () => {
             transition={{ duration: 0.5 }}
           >
             <Pill
-              text="For Directors and Production Teams"
+              text={t("scene_breakdown.hero_pill")}
               className="text-primary mb-8 mt-[15px] bg-[#E4E4FE] border border-[#8651EF42]"
               icon={<img src={aiResearchIcon} alt="" className="w-4 h-4" />}
             />
@@ -40,12 +42,12 @@ const SceneBreakdownHero = () => {
             transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
             className="text-[40px] sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 text-balance"
           >
-            Scenes Don't Break Down{" "}
+            {t("scene_breakdown.hero_h1a")}{" "}
             <span
               className="bg-clip-text text-transparent"
               style={{ backgroundImage: "linear-gradient(247.38deg, #29FADF -2.17%, #8B1DFF 84.87%)" }}
             >
-              Because of Detail.
+              {t("scene_breakdown.hero_h1b")}
             </span>
           </motion.h1>
 
@@ -55,11 +57,8 @@ const SceneBreakdownHero = () => {
             transition={{ duration: 0.6, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
             className="max-w-3xl mx-auto mb-10"
           >
-            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-4">
-              Tag, Organise, Prepare: Break down scenes, add shots, assign teams, and track progress.
-            </p>
-            <p className="text-lg sm:text-xl text-foreground font-semibold leading-relaxed">
-              All in one seamless platform.
+            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
+              {t("scene_breakdown.hero_sub")}
             </p>
           </motion.div>
 
@@ -71,7 +70,7 @@ const SceneBreakdownHero = () => {
           >
             <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="group px-8">
-                Start Free
+                {t("scene_breakdown.hero_cta1")}
                 <ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />
               </Button>
             </a>
@@ -88,7 +87,7 @@ const SceneBreakdownHero = () => {
                   />
                 }
               >
-                Watch Video
+                {t("scene_breakdown.hero_cta2")}
               </Button>
             </a>
           </motion.div>
@@ -99,7 +98,7 @@ const SceneBreakdownHero = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-sm text-muted-foreground"
           >
-            Break down your first scene.
+            {t("scene_breakdown.hero_trust")}
           </motion.p>
         </div>
 
@@ -114,7 +113,6 @@ const SceneBreakdownHero = () => {
             <div className="p-2">
               <div className="bg-muted/50 rounded-xl aspect-[16/9] flex items-center justify-center relative overflow-hidden">
                 <div className="absolute inset-4 bg-background rounded-lg shadow-inner flex flex-col">
-                  {/* Toolbar */}
                   <div className="flex items-center gap-2 border-b border-border/50 px-4 py-2">
                     <div className="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center">
                       <span className="text-primary-foreground text-xs font-bold">B</span>
@@ -128,7 +126,6 @@ const SceneBreakdownHero = () => {
                       ))}
                     </div>
                   </div>
-                  {/* Scene stripboard */}
                   <div className="flex-1 p-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
                     {[
                       { scene: "INT. OFFICE – DAY", dept: "Camera, Art", crew: "3 cast, 2 crew" },

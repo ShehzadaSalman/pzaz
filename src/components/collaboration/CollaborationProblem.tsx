@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
+import { useTranslation } from "react-i18next";
 
 const CollaborationProblem = () => {
+  const { t } = useTranslation();
   return (
     <section className="section-padding bg-[#fbfbfb] relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
@@ -15,13 +17,13 @@ const CollaborationProblem = () => {
           >
             <AnimatedSectionHeader
               wrapperClassName=""
-              pillText="The Problem"
+              pillText={t("collaboration.problem_pill")}
               pillClassName="bg-primary/10 text-primary"
               title={
                 <>
-                  When Communication Fragments,{" "}
+                  {t("collaboration.problem_title")}{" "}
                   <span className="font-lato font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                    Production Slows
+                    {t("collaboration.problem_title_highlight")}
                   </span>
                 </>
               }
@@ -38,13 +40,13 @@ const CollaborationProblem = () => {
             className="space-y-5"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Most productions rely on a patchwork of communication tools. Conversations happen everywhere, but decisions rarely stay connected to the work they affect.
+              {t("collaboration.problem_p1")}
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Feedback drifts away from scenes, updates travel between threads and teams spend time reconstructing what was already decided.
+              {t("collaboration.problem_p2")}
             </p>
             <p className="text-xl font-bold text-[#4D029B] italic">
-              This is not a messaging problem. It is a coordination problem.
+              {t("collaboration.problem_quote")}
             </p>
           </motion.div>
         </div>

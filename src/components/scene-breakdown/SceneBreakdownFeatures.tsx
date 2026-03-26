@@ -1,41 +1,43 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
-
-const features = [
-  { title: "Scene Lists from Storyboards", description: "Generate scene lists directly from storyboards, keeping visual planning and breakdown in sync." },
-  { title: "Unlimited Shots", description: "Add unlimited shots to explore visual ideas without restrictions." },
-  { title: "Scene Metadata", description: "Attach images, notes and scene metadata for a complete picture of every scene." },
-  { title: "Team Assignment", description: "Assign cast, crew and departments to scenes to keep everyone aligned." },
-  { title: "Stripboard Progress Tracking", description: "Track filming progress directly in the stripboard as production moves forward." },
-  { title: "Flexible Views", description: "Switch between visual, framed and list views to match how you think and work." },
-  { title: "Live Collaboration", description: "Collaborate in real time with your production team, wherever they are." },
-  { title: "Connected Workflow", description: "Keep scene planning connected to the wider production workflow — no isolated silos." },
-];
+import { useTranslation } from "react-i18next";
 
 const SceneBreakdownFeatures = () => {
+  const { t } = useTranslation();
+  const features = [
+    { title: t("scene_breakdown.feat1_title"), description: t("scene_breakdown.feat1_desc") },
+    { title: t("scene_breakdown.feat2_title"), description: t("scene_breakdown.feat2_desc") },
+    { title: t("scene_breakdown.feat3_title"), description: t("scene_breakdown.feat3_desc") },
+    { title: t("scene_breakdown.feat4_title"), description: t("scene_breakdown.feat4_desc") },
+    { title: t("scene_breakdown.feat5_title"), description: t("scene_breakdown.feat5_desc") },
+    { title: t("scene_breakdown.feat6_title"), description: t("scene_breakdown.feat6_desc") },
+    { title: t("scene_breakdown.feat7_title"), description: t("scene_breakdown.feat7_desc") },
+    { title: t("scene_breakdown.feat8_title"), description: t("scene_breakdown.feat8_desc") },
+  ];
+
   return (
     <section className="section-padding bg-white relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <AnimatedSectionHeader
           wrapperClassName="text-center mb-16"
-          pillText="What You Get"
+          pillText={t("scene_breakdown.features_pill")}
           pillClassName="bg-primary/10 text-primary"
           title={
             <>
-              Built for{" "}
+              {t("scene_breakdown.features_title")}{" "}
               <span className="font-lato font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                Real Production Work
+                {t("scene_breakdown.features_title_highlight")}
               </span>
             </>
           }
-          description="Pzaz Scene Breakdown supports the practical rhythm of filmmaking, where creative thinking and logistical clarity need to coexist rather than take turns."
+          description={t("scene_breakdown.features_desc")}
         />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, i) => (
             <motion.div
-              key={feature.title}
+              key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -58,8 +60,8 @@ const SceneBreakdownFeatures = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center mt-10 text-lg text-[#878787]"
         >
-          Each feature is useful on its own. Together, they create something more valuable:{" "}
-          <span className="font-semibold text-foreground">alignment.</span>
+          {t("scene_breakdown.features_footer_pre")}{" "}
+          <span className="font-semibold text-foreground">{t("scene_breakdown.features_footer_highlight")}</span>
         </motion.p>
       </div>
     </section>

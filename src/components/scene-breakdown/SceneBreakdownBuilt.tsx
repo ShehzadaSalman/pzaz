@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
+import { useTranslation } from "react-i18next";
 
 const SceneBreakdownBuilt = () => {
+  const { t } = useTranslation();
   return (
     <section className="section-padding bg-[#fbfbfb] relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
@@ -15,13 +17,13 @@ const SceneBreakdownBuilt = () => {
           >
             <AnimatedSectionHeader
               wrapperClassName=""
-              pillText="For Filmmakers"
+              pillText={t("scene_breakdown.built_pill")}
               pillClassName="bg-primary/10 text-primary"
               title={
                 <>
-                  Designed for Filmmakers,{" "}
+                  {t("scene_breakdown.built_title")}{" "}
                   <span className="font-lato font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                    Built with Creators
+                    {t("scene_breakdown.built_title_highlight")}
                   </span>
                 </>
               }
@@ -38,10 +40,10 @@ const SceneBreakdownBuilt = () => {
             className="space-y-5"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Pzaz was shaped alongside directors, producers and coordinators who deal with the practical reality of turning scripts into shootable scenes.
+              {t("scene_breakdown.built_p1")}
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Whether you are preparing a short film or a larger production, it helps you see and organise each scene in a way that keeps creative intent aligned with what production actually requires.
+              {t("scene_breakdown.built_p2")}
             </p>
           </motion.div>
         </div>

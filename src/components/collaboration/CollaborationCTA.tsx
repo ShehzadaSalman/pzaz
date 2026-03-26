@@ -5,8 +5,10 @@ import ArrowIcon from "@/components/ui/ArrowIcon";
 import SectionHeader from "@/components/SectionHeader";
 import iconStar from "@/assets/material-symbols_family-star.svg";
 import { useIndieCheckoutUrl } from "@/lib/checkout";
+import { useTranslation } from "react-i18next";
 
 const CollaborationCTA = () => {
+  const { t } = useTranslation();
   const indieCheckoutUrl = useIndieCheckoutUrl();
   return (
     <section className="py-24 relative overflow-hidden">
@@ -27,24 +29,20 @@ const CollaborationCTA = () => {
 
             <div className="relative p-8 md:p-16 md:py-24 pb-12 text-center">
               <SectionHeader
-                pillText="Collaboration Tools"
+                pillText={t("collaboration.cta_pill")}
                 pillClassName="bg-white text-primary mb-0"
                 pillIcon={<img src={iconStar} alt="" className="w-4 h-4" />}
-                title={
-                  <>
-                    Collaborate With Clarity.
-                  </>
-                }
+                title={t("collaboration.cta_title")}
                 titleClassName="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-primary-foreground"
-                description="Communicate clearly. Coordinate naturally. Keep your production in sync."
+                description={t("collaboration.cta_desc")}
                 descriptionClassName="text-xl text-primary-foreground/80 max-w-xl mx-auto mb-4"
               />
 
               <p className="text-primary-foreground/70 text-lg mb-4 max-w-2xl mx-auto">
-                Bring your team into one coordinated environment. With Pzaz.
+                {t("collaboration.cta_body")}
               </p>
               <p className="text-primary-foreground/60 text-base mb-10 max-w-xl mx-auto italic">
-                Your story deserves a tool built for the future.
+                {t("collaboration.cta_bottom")}
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -55,7 +53,7 @@ const CollaborationCTA = () => {
                     className="group bg-white/10 text-white border-white/30 hover:bg-white/20 rounded-[10px] px-8"
                     postfixIcon={<ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />}
                   >
-                    Start Collaborating
+                    {t("collaboration.cta_primary")}
                   </Button>
                 </a>
                 <a href="https://calendly.com/filmmaking-app/30min" target="_blank" rel="noopener noreferrer">
@@ -64,7 +62,7 @@ const CollaborationCTA = () => {
                     variant="outline"
                     className="bg-white/10 text-white border-white/30 hover:bg-white/20 rounded-[10px] px-8"
                   >
-                    Book a Demo
+                    {t("collaboration.cta_secondary")}
                   </Button>
                 </a>
               </div>

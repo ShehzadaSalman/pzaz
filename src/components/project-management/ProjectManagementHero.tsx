@@ -7,8 +7,10 @@ import ArrowIcon from "@/components/ui/ArrowIcon";
 import ctaPlayIcon from "@/assets/cta-play-icon.svg";
 import aiResearchIcon from "@/assets/ai-research-icon.svg";
 import { useIndieCheckoutUrl } from "@/lib/checkout";
+import { useTranslation } from "react-i18next";
 
 const ProjectManagementHero = () => {
+  const { t } = useTranslation();
   const indieCheckoutUrl = useIndieCheckoutUrl();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
@@ -25,7 +27,7 @@ const ProjectManagementHero = () => {
         <div className="max-w-5xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <Pill
-              text="Project Management for Film Productions"
+              text={t("project_management.hero_pill")}
               className="text-primary mb-8 mt-[15px] bg-[#E4E4FE] border border-[#8651EF42]"
               icon={<img src={aiResearchIcon} alt="" className="w-4 h-4" />}
             />
@@ -37,12 +39,12 @@ const ProjectManagementHero = () => {
             transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
             className="text-[48px] sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 text-balance"
           >
-            The Mistake Most Filmmakers{" "}
+            {t("project_management.hero_h1a")}{" "}
             <span
               className="bg-clip-text text-transparent"
               style={{ backgroundImage: "linear-gradient(247.38deg, #29FADF -2.17%, #8B1DFF 84.87%)" }}
             >
-              Don't Even Know They're Making.
+              {t("project_management.hero_h1b")}
             </span>
           </motion.h1>
 
@@ -52,7 +54,7 @@ const ProjectManagementHero = () => {
             transition={{ duration: 0.6, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
             className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-4 leading-relaxed"
           >
-            It's not distribution, nor budgeting. It's not even getting your script right.
+            {t("project_management.hero_sub1")}
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -60,7 +62,7 @@ const ProjectManagementHero = () => {
             transition={{ duration: 0.6, delay: 0.15, ease: [0.4, 0, 0.2, 1] }}
             className="text-lg sm:text-xl font-semibold text-foreground max-w-3xl mx-auto mb-10 leading-relaxed"
           >
-            It's project management — and hardly anybody talks about it.
+            {t("project_management.hero_sub2")}
           </motion.p>
 
           <motion.div
@@ -75,7 +77,7 @@ const ProjectManagementHero = () => {
                 className="group px-8"
                 prefixIcon={<LayoutDashboard className="w-5 h-5" />}
               >
-                Manage Your First Project
+                {t("project_management.hero_cta1")}
                 <ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />
               </Button>
             </a>
@@ -92,7 +94,7 @@ const ProjectManagementHero = () => {
                   />
                 }
               >
-                Watch Video
+                {t("project_management.hero_cta2")}
               </Button>
             </a>
           </motion.div>
@@ -103,11 +105,10 @@ const ProjectManagementHero = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-sm text-muted-foreground"
           >
-            Up and running in minutes.
+            {t("project_management.hero_trust")}
           </motion.p>
         </div>
 
-        {/* Hero Visual — command center mockup */}
         <motion.div
           initial={{ opacity: 0, y: 50, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -119,7 +120,6 @@ const ProjectManagementHero = () => {
             <div className="p-2">
               <div className="bg-muted/50 rounded-xl aspect-[16/9] flex items-center justify-center relative overflow-hidden">
                 <div className="absolute inset-4 bg-background rounded-lg shadow-inner flex">
-                  {/* Left sidebar */}
                   <div className="w-16 lg:w-52 border-r border-border/50 p-3 hidden sm:block">
                     <div className="flex items-center gap-2 mb-5">
                       <div className="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center">
@@ -142,8 +142,6 @@ const ProjectManagementHero = () => {
                       )}
                     </div>
                   </div>
-
-                  {/* Main content */}
                   <div className="flex-1 p-4 overflow-hidden">
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center gap-2">
@@ -156,8 +154,6 @@ const ProjectManagementHero = () => {
                         ))}
                       </div>
                     </div>
-
-                    {/* Stats row */}
                     <div className="grid grid-cols-4 gap-2 mb-4">
                       {[
                         { label: "Shoot Days", val: "18", color: "bg-primary/10 text-primary" },
@@ -171,22 +167,14 @@ const ProjectManagementHero = () => {
                         </div>
                       ))}
                     </div>
-
-                    {/* Timeline strip */}
                     <div className="rounded-lg border border-border/40 bg-muted/20 p-3 mb-3">
-                      <p className="text-[9px] font-bold text-muted-foreground uppercase tracking-wide mb-2 hidden lg:block">
-                        Production Timeline
-                      </p>
+                      <p className="text-[9px] font-bold text-muted-foreground uppercase tracking-wide mb-2 hidden lg:block">Production Timeline</p>
                       <div className="flex gap-1">
                         {["Pre-Prod", "Week 1", "Week 2", "Week 3", "Post", "Delivery"].map((ph, i) => (
                           <div
                             key={ph}
                             className={`flex-1 h-5 rounded text-[7px] flex items-center justify-center font-medium hidden lg:flex ${
-                              i < 2
-                                ? "bg-primary/70 text-white"
-                                : i === 2
-                                ? "bg-primary/30 text-primary"
-                                : "bg-muted text-muted-foreground"
+                              i < 2 ? "bg-primary/70 text-white" : i === 2 ? "bg-primary/30 text-primary" : "bg-muted text-muted-foreground"
                             }`}
                           >
                             {ph}
@@ -194,8 +182,6 @@ const ProjectManagementHero = () => {
                         ))}
                       </div>
                     </div>
-
-                    {/* Activity feed */}
                     <div className="space-y-1.5">
                       {[
                         { msg: "Script v4 locked by Director", time: "2m ago", dot: "bg-green-400" },
@@ -210,8 +196,6 @@ const ProjectManagementHero = () => {
                       ))}
                     </div>
                   </div>
-
-                  {/* Right panel */}
                   <div className="w-16 lg:w-52 border-l border-border/50 p-3 hidden md:block">
                     <div className="text-xs font-bold mb-3 hidden lg:block">Project Health</div>
                     <div className="space-y-2 mb-4">
@@ -232,9 +216,7 @@ const ProjectManagementHero = () => {
                         </div>
                       ))}
                     </div>
-                    <div className="text-[9px] font-bold text-muted-foreground mb-2 hidden lg:block">
-                      TEAM ONLINE
-                    </div>
+                    <div className="text-[9px] font-bold text-muted-foreground mb-2 hidden lg:block">TEAM ONLINE</div>
                     <div className="flex flex-wrap gap-1">
                       {["D", "P", "A", "C", "E"].map((initial, i) => (
                         <div

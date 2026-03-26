@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
+import { useTranslation } from "react-i18next";
 
 const SceneBreakdownAI = () => {
+  const { t } = useTranslation();
   return (
     <section className="section-padding bg-white relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
@@ -15,13 +17,13 @@ const SceneBreakdownAI = () => {
             className="space-y-5 order-2 md:order-1"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Inside Pzaz, AI operates within the context of your scenes and storyboards. It can help generate synthetic shots, explore visual ideas and iterate on frames without detaching them from the production structure.
+              {t("scene_breakdown.ai_p1")}
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              It does not decide what the film should look like. That remains firmly human territory.
+              {t("scene_breakdown.ai_p2")}
             </p>
             <p className="text-xl font-bold text-[#4D029B] italic">
-              Humans decide. AI strengthens the clarity.
+              {t("scene_breakdown.ai_quote")}
             </p>
           </motion.div>
 
@@ -34,17 +36,17 @@ const SceneBreakdownAI = () => {
           >
             <AnimatedSectionHeader
               wrapperClassName=""
-              pillText="AI"
+              pillText={t("scene_breakdown.ai_pill")}
               pillClassName="bg-primary/10 text-primary"
               title={
                 <>
-                  Built-In Intelligence.{" "}
+                  {t("scene_breakdown.ai_title")}{" "}
                   <span className="font-lato font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                    AI Inside Creative Context.
+                    {t("scene_breakdown.ai_title_highlight")}
                   </span>
                 </>
               }
-              description="AI is very good at generating images. Productions, unfortunately, require something slightly more complicated than images."
+              description={t("scene_breakdown.ai_desc")}
               align="left"
               className="mb-8"
             />

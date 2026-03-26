@@ -7,8 +7,10 @@ import ArrowIcon from "@/components/ui/ArrowIcon";
 import ctaPlayIcon from "@/assets/cta-play-icon.svg";
 import aiResearchIcon from "@/assets/ai-research-icon.svg";
 import { useIndieCheckoutUrl } from "@/lib/checkout";
+import { useTranslation } from "react-i18next";
 
 const FileSharingHero = () => {
+  const { t } = useTranslation();
   const indieCheckoutUrl = useIndieCheckoutUrl();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
@@ -25,7 +27,7 @@ const FileSharingHero = () => {
         <div className="max-w-5xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <Pill
-              text="File Sharing & Media Storage for Film Teams"
+              text={t("file_sharing.hero_pill")}
               className="text-primary mb-8 mt-[15px] bg-[#E4E4FE] border border-[#8651EF42]"
               icon={<img src={aiResearchIcon} alt="" className="w-4 h-4" />}
             />
@@ -37,9 +39,9 @@ const FileSharingHero = () => {
             transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
             className="text-[48px] sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 text-balance"
           >
-            Centralise, Share &{" "}
+            {t("file_sharing.hero_h1a")}{" "}
             <span className="bg-clip-text text-transparent" style={{ backgroundImage: "linear-gradient(247.38deg, #29FADF -2.17%, #8B1DFF 84.87%)" }}>
-              Protect Your Production Assets.
+              {t("file_sharing.hero_h1b")}
             </span>
           </motion.h1>
 
@@ -49,7 +51,7 @@ const FileSharingHero = () => {
             transition={{ duration: 0.6, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
             className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed"
           >
-            Film productions generate enormous amounts of material. Files live in cloud drives, private folders, email threads, and messaging apps. Different versions circulate. Links expire. Teams ask the same question repeatedly: which file is the real one?
+            {t("file_sharing.hero_sub")}
           </motion.p>
 
           <motion.div
@@ -62,7 +64,7 @@ const FileSharingHero = () => {
               <Button size="lg" className="group px-8"
                 prefixIcon={<FolderOpen className="w-5 h-5" />}
               >
-                Start Free
+                {t("file_sharing.hero_cta1")}
                 <ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />
               </Button>
             </a>
@@ -75,7 +77,7 @@ const FileSharingHero = () => {
                   <img src={ctaPlayIcon} alt="" className="w-5 h-5 transition-all group-hover:[filter:brightness(0)_invert(1)]" />
                 }
               >
-                Watch Demo
+                {t("file_sharing.hero_cta2")}
               </Button>
             </a>
           </motion.div>
@@ -86,11 +88,10 @@ const FileSharingHero = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-sm text-muted-foreground"
           >
-            Up and running in minutes.
+            {t("file_sharing.hero_trust")}
           </motion.p>
         </div>
 
-        {/* Hero Visual — media library mockup */}
         <motion.div
           initial={{ opacity: 0, y: 50, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -102,7 +103,6 @@ const FileSharingHero = () => {
             <div className="p-2">
               <div className="bg-muted/50 rounded-xl aspect-[16/9] flex items-center justify-center relative overflow-hidden">
                 <div className="absolute inset-4 bg-background rounded-lg shadow-inner flex">
-                  {/* Sidebar */}
                   <div className="w-16 lg:w-52 border-r border-border/50 p-3 hidden sm:block">
                     <div className="flex items-center gap-2 mb-4">
                       <div className="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center">
@@ -118,7 +118,6 @@ const FileSharingHero = () => {
                       ))}
                     </div>
                   </div>
-                  {/* Grid */}
                   <div className="flex-1 p-4">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="h-3 bg-primary/20 rounded w-32" />
@@ -126,14 +125,14 @@ const FileSharingHero = () => {
                     </div>
                     <div className="grid grid-cols-4 gap-2">
                       {[
-                        { name: "scene-12-ref.jpg", type: "img", color: "bg-purple-100" },
-                        { name: "script_v4_FINAL.pdf", type: "pdf", color: "bg-blue-50" },
-                        { name: "moodboard-v2.png", type: "img", color: "bg-pink-50" },
-                        { name: "call-sheet-week3.xlsx", type: "doc", color: "bg-green-50" },
-                        { name: "shot-list-D12.pdf", type: "pdf", color: "bg-yellow-50" },
-                        { name: "costume-ref.jpg", type: "img", color: "bg-orange-50" },
-                        { name: "budget_draft_v5.xlsx", type: "doc", color: "bg-teal-50" },
-                        { name: "storyboard-act2.png", type: "img", color: "bg-purple-50" },
+                        { name: "scene-12-ref.jpg", color: "bg-purple-100" },
+                        { name: "script_v4_FINAL.pdf", color: "bg-blue-50" },
+                        { name: "moodboard-v2.png", color: "bg-pink-50" },
+                        { name: "call-sheet-week3.xlsx", color: "bg-green-50" },
+                        { name: "shot-list-D12.pdf", color: "bg-yellow-50" },
+                        { name: "costume-ref.jpg", color: "bg-orange-50" },
+                        { name: "budget_draft_v5.xlsx", color: "bg-teal-50" },
+                        { name: "storyboard-act2.png", color: "bg-purple-50" },
                       ].map((file, i) => (
                         <div key={i} className={`rounded-lg border border-border/40 ${file.color} p-2 flex flex-col gap-1 hidden lg:flex`}>
                           <div className="w-full aspect-square rounded bg-white/60 flex items-center justify-center">
@@ -144,7 +143,6 @@ const FileSharingHero = () => {
                       ))}
                     </div>
                   </div>
-                  {/* Right Panel */}
                   <div className="w-16 lg:w-56 border-l border-border/50 p-3 hidden md:block">
                     <div className="text-xs font-medium mb-3 hidden lg:block">File Details</div>
                     <div className="space-y-2">
