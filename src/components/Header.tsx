@@ -340,12 +340,12 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
           <div className="hidden md:flex items-center gap-3">
             <a href="https://projector.pzaz.io/sign-in">
               <Button variant="ghost" size="sm">
-                Log in
+                {t("nav.login")}
               </Button>
             </a>
             <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
               <Button variant="default" size="sm">
-                Start for Free
+                {t("nav.start_free")}
               </Button>
             </a>
           </div>
