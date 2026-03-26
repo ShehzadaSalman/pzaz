@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
+import { useTranslation } from "react-i18next";
 
 const SceneBreakdownCraft = () => {
+  const { t } = useTranslation();
   return (
     <section className="section-padding bg-[#fbfbfb] relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
@@ -15,17 +17,17 @@ const SceneBreakdownCraft = () => {
           >
             <AnimatedSectionHeader
               wrapperClassName=""
-              pillText="The Craft"
+              pillText={t("scene_breakdown.craft_pill")}
               pillClassName="bg-primary/10 text-primary"
               title={
                 <>
-                  Respecting the Craft.{" "}
+                  {t("scene_breakdown.craft_title")}{" "}
                   <span className="font-lato font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                    Improving the Structure.
+                    {t("scene_breakdown.craft_title_highlight")}
                   </span>
                 </>
               }
-              description="Scene breakdown has always been part of the filmmaking craft. For years it has been managed through documents, spreadsheets and a great deal of experience."
+              description={t("scene_breakdown.craft_desc")}
               align="left"
               className="mb-8"
             />
@@ -39,13 +41,13 @@ const SceneBreakdownCraft = () => {
             className="space-y-5"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Pzaz doesn't attempt to reinvent that practice.
+              {t("scene_breakdown.craft_p1")}
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              It simply places the breakdown inside a connected production environment where creative ideas, operational planning and collaboration remain part of the same conversation.
+              {t("scene_breakdown.craft_p2")}
             </p>
             <p className="text-xl font-bold text-[#4D029B] italic">
-              Structure serves the craft. Not the other way around.
+              {t("scene_breakdown.craft_quote")}
             </p>
           </motion.div>
         </div>

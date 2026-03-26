@@ -5,8 +5,10 @@ import ArrowIcon from "@/components/ui/ArrowIcon";
 import SectionHeader from "@/components/SectionHeader";
 import iconStar from "@/assets/material-symbols_family-star.svg";
 import { useIndieCheckoutUrl } from "@/lib/checkout";
+import { useTranslation } from "react-i18next";
 
 const FileSharingCTA = () => {
+  const { t } = useTranslation();
   const indieCheckoutUrl = useIndieCheckoutUrl();
   return (
     <section className="py-24 relative overflow-hidden">
@@ -27,17 +29,17 @@ const FileSharingCTA = () => {
 
             <div className="relative p-8 md:p-16 md:py-24 pb-12 text-center">
               <SectionHeader
-                pillText="File Sharing & Media Storage"
+                pillText={t("file_sharing.cta_pill")}
                 pillClassName="bg-white text-primary mb-0"
                 pillIcon={<img src={iconStar} alt="" className="w-4 h-4" />}
-                title="Keep Your Production Library in Sync."
+                title={t("file_sharing.cta_title")}
                 titleClassName="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-primary-foreground"
-                description="When media storage lives inside the same infrastructure as the rest of production, your files stay organised and your project vision stays clear."
+                description={t("file_sharing.cta_desc")}
                 descriptionClassName="text-xl text-primary-foreground/80 max-w-xl mx-auto mb-4"
               />
 
               <p className="text-primary-foreground/70 text-lg mb-10 max-w-2xl mx-auto">
-                Centralise your files. Protect your assets. Keep your production in sync.
+                {t("file_sharing.cta_body")}
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -48,7 +50,7 @@ const FileSharingCTA = () => {
                     className="group bg-white/10 text-white border-white/30 hover:bg-white/20 rounded-[10px] px-8"
                     postfixIcon={<ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />}
                   >
-                    Start Free
+                    {t("file_sharing.cta_primary")}
                   </Button>
                 </a>
                 <a href="https://calendly.com/filmmaking-app/30min" target="_blank" rel="noopener noreferrer">
@@ -57,7 +59,7 @@ const FileSharingCTA = () => {
                     variant="outline"
                     className="bg-white/10 text-white border-white/30 hover:bg-white/20 rounded-[10px] px-8"
                   >
-                    Book a Demo
+                    {t("file_sharing.cta_secondary")}
                   </Button>
                 </a>
               </div>

@@ -6,35 +6,17 @@ import iconBell from "@/assets/script/icon-bell.svg";
 import iconShapes2 from "@/assets/script/icon-shapes-2.svg";
 import iconMoneyBag from "@/assets/script/icon-money-bag.svg";
 import iconSafetyCert from "@/assets/script/icon-safety-cert.svg";
-
-const reframeCards = [
-  {
-    icon: iconShapes2,
-    title: "Everything talks to everything",
-    description:
-      "Scripts, breakdowns, schedules, communication, budgets, tasks, and files all live in the same environment — so when something changes, the production knows.",
-  },
-  {
-    icon: iconSafetyCert,
-    title: "One source of truth",
-    description:
-      "No more scattered versions. Everyone sees the same evolving state of the production, from the director to the line producer to the crew.",
-  },
-  {
-    icon: iconBell,
-    title: "AI with full project context",
-    description:
-      "AI operates within the complete production environment — not in isolation. It helps teams move faster without losing alignment.",
-  },
-  {
-    icon: iconMoneyBag,
-    title: "Your First AD, Line Producer & Post Supervisor — in one place",
-    description:
-      "Pzaz is project management cleverly disguised as filmmaking software. An AI-enhanced command centre for the entire production.",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const ProjectManagementOS = () => {
+  const { t } = useTranslation();
+  const reframeCards = [
+    { icon: iconShapes2, title: t("project_management.os_card1_title"), description: t("project_management.os_card1_desc") },
+    { icon: iconSafetyCert, title: t("project_management.os_card2_title"), description: t("project_management.os_card2_desc") },
+    { icon: iconBell, title: t("project_management.os_card3_title"), description: t("project_management.os_card3_desc") },
+    { icon: iconMoneyBag, title: t("project_management.os_card4_title"), description: t("project_management.os_card4_desc") },
+  ];
+
   return (
     <section className="section-padding relative overflow-hidden">
       <div
@@ -52,18 +34,18 @@ const ProjectManagementOS = () => {
           >
             <AnimatedSectionHeader
               wrapperClassName="text-center"
-              pillText="Enter Pzaz"
+              pillText={t("project_management.os_pill")}
               pillIcon={<img src={flowchartIcon} alt="" className="w-4 h-4" />}
               pillClassName="bg-primary/10 text-primary"
               title={
                 <>
-                  The Only Work OS{" "}
+                  {t("project_management.os_title")}{" "}
                   <span className="font-lato font-extrabold text-[48px] tracking-normal text-transparent bg-clip-text bg-gradient-to-l from-[#409DFF] to-[#3207BC]">
-                    for Filmmakers.
+                    {t("project_management.os_title_highlight")}
                   </span>
                 </>
               }
-              description="Filmmakers don't just need a place to store files. They deserve a place where their projects are connected and alive."
+              description={t("project_management.os_desc")}
               descriptionClassName="text-lg text-muted-foreground"
               className="mb-10"
             />
@@ -71,7 +53,7 @@ const ProjectManagementOS = () => {
             <div className="grid md:grid-cols-2 gap-[45px] max-w-6xl mx-auto mb-12 md:mb-[80px]">
               {reframeCards.map((card, index) => (
                 <motion.div
-                  key={card.title}
+                  key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -94,14 +76,13 @@ const ProjectManagementOS = () => {
             </div>
 
             <p className="text-xl text-muted-foreground italic">
-              It's not just software.{" "}
+              {t("project_management.os_footer_pre")}{" "}
               <span className="text-foreground font-semibold not-italic">
-                It's the infrastructure your film has always needed.
+                {t("project_management.os_footer_highlight")}
               </span>
             </p>
           </motion.div>
 
-          {/* Promise Banner */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -115,13 +96,13 @@ const ProjectManagementOS = () => {
           >
             <div className="relative p-10 sm:p-16 text-center">
               <h3 className="font-lato font-extrabold text-2xl md:text-[48px] md:leading-[70px] tracking-normal text-primary-foreground mb-4">
-                Pzaz doesn't add another tool to the pile.
+                {t("project_management.banner_h1")}
               </h3>
               <p className="font-lato font-extrabold text-4xl md:text-[56px] md:leading-[70px] tracking-normal text-primary-foreground mb-8">
-                It puts the whole production in one place.
+                {t("project_management.banner_h2")}
               </p>
               <p className="font-lato font-normal md:text-[20px] md:leading-[30px] tracking-normal text-center text-[#ECECEC] max-w-2xl mx-auto">
-                Scripts, schedules, breakdowns, budgets, tasks, files, and communication — all inside the same environment. No plug-ins. No exports. No scattered information.
+                {t("project_management.banner_desc")}
               </p>
             </div>
           </motion.div>

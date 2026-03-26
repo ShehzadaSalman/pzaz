@@ -1,51 +1,41 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
-
-const coreCapabilities = [
-  {
-    title: "One board, whole production",
-    description: "Tasks live inside the same environment as scripts and schedules. No separate tool, no context switching.",
-  },
-  {
-    title: "Ownership that sticks",
-    description: "Every task has a named owner connected to a real department, not just a name in a spreadsheet.",
-  },
-  {
-    title: "Deadlines that mean something",
-    description: "Dates reflect actual production timing because they exist inside the scheduling context.",
-  },
-  {
-    title: "AI that helps — not decides",
-    description: "AI surfaces dependencies and helps prioritise based on production structure. Humans still make the calls.",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const TaskManagementCoreFeatures = () => {
+  const { t } = useTranslation();
+  const coreCapabilities = [
+    { title: t("task_management.core_feat1_title"), description: t("task_management.core_feat1_desc") },
+    { title: t("task_management.core_feat2_title"), description: t("task_management.core_feat2_desc") },
+    { title: t("task_management.core_feat3_title"), description: t("task_management.core_feat3_desc") },
+    { title: t("task_management.core_feat4_title"), description: t("task_management.core_feat4_desc") },
+  ];
+
   return (
     <section className="section-padding relative overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <AnimatedSectionHeader
             wrapperClassName="text-center mb-12"
-            pillText="Core Experience"
+            pillText={t("task_management.core_pill")}
             pillClassName="bg-primary/10 text-primary"
             title={
               <>
-                Complete Task{" "}
+                {t("task_management.core_title")}{" "}
                 <span className="font-lato font-extrabold md:text-[48px] tracking-normal text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                  Coordination System
+                  {t("task_management.core_title_highlight")}
                 </span>
               </>
             }
-            description="One platform. The complete production task lifecycle. Everything your team needs — from assignment to completion — in one connected workspace."
+            description={t("task_management.core_desc")}
             motionProps={{ initial: { opacity: 0, y: 30 } }}
           />
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-[29px]">
             {coreCapabilities.map((item, index) => (
               <motion.div
-                key={item.title}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

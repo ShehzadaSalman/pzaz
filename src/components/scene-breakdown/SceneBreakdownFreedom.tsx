@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
+import { useTranslation } from "react-i18next";
 
 const SceneBreakdownFreedom = () => {
+  const { t } = useTranslation();
   return (
     <section className="section-padding bg-[#fbfbfb] relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
@@ -15,17 +17,17 @@ const SceneBreakdownFreedom = () => {
           >
             <AnimatedSectionHeader
               wrapperClassName=""
-              pillText="Creative Freedom"
+              pillText={t("scene_breakdown.freedom_pill")}
               pillClassName="bg-primary/10 text-primary"
               title={
                 <>
-                  Creative Exploration{" "}
+                  {t("scene_breakdown.freedom_title")}{" "}
                   <span className="font-lato font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                    Without Administrative Weight.
+                    {t("scene_breakdown.freedom_title_highlight")}
                   </span>
                 </>
               }
-              description="Pzaz keeps scene planning structured but flexible inside a modern, cloud-based environment where directors, producers and departments can work naturally together."
+              description={t("scene_breakdown.freedom_desc")}
               align="left"
               className="mb-8"
             />
@@ -39,13 +41,13 @@ const SceneBreakdownFreedom = () => {
             className="space-y-5"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Shots can evolve. Scenes can grow. Production details can develop alongside the creative process.
+              {t("scene_breakdown.freedom_p1")}
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              The system holds the structure and you keep the freedom.
+              {t("scene_breakdown.freedom_p2")}
             </p>
             <p className="text-xl font-bold text-[#4D029B] italic">
-              Plan your scenes with clarity. Prepare your production with confidence.
+              {t("scene_breakdown.freedom_quote")}
             </p>
           </motion.div>
         </div>

@@ -5,8 +5,10 @@ import ArrowIcon from "@/components/ui/ArrowIcon";
 import SectionHeader from "@/components/SectionHeader";
 import iconStar from "@/assets/material-symbols_family-star.svg";
 import { useIndieCheckoutUrl } from "@/lib/checkout";
+import { useTranslation } from "react-i18next";
 
 const SceneBreakdownCTA = () => {
+  const { t } = useTranslation();
   const indieCheckoutUrl = useIndieCheckoutUrl();
   return (
     <section className="py-24 relative overflow-hidden">
@@ -27,23 +29,17 @@ const SceneBreakdownCTA = () => {
 
             <div className="relative p-8 md:p-16 md:py-24 pb-12 text-center">
               <SectionHeader
-                pillText="Scene Breakdown"
+                pillText={t("scene_breakdown.cta_pill")}
                 pillClassName="bg-white text-primary mb-0"
                 pillIcon={<img src={iconStar} alt="" className="w-4 h-4" />}
-                title={
-                  <>
-                    Start Breaking Down
-                    <br />
-                    Today with Pzaz.
-                  </>
-                }
+                title={t("scene_breakdown.cta_title")}
                 titleClassName="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-primary-foreground"
-                description="When scene breakdown sits inside the same infrastructure as the rest of production, fragmentation disappears."
+                description={t("scene_breakdown.cta_desc")}
                 descriptionClassName="text-xl text-primary-foreground/80 max-w-xl mx-auto mb-4"
               />
 
               <p className="text-primary-foreground/70 text-lg mb-10 max-w-2xl mx-auto">
-                Creative vision remains connected to operational detail. Departments stay aligned. Production teams move faster because everyone sees the same picture.
+                {t("scene_breakdown.cta_body")}
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -54,7 +50,7 @@ const SceneBreakdownCTA = () => {
                     className="group bg-white/10 text-white border-white/30 hover:bg-white/20 rounded-[10px] px-8"
                     postfixIcon={<ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />}
                   >
-                    Break Down Your First Scene
+                    {t("scene_breakdown.cta_primary")}
                   </Button>
                 </a>
                 <a href="https://calendly.com/filmmaking-app/30min" target="_blank" rel="noopener noreferrer">
@@ -63,13 +59,13 @@ const SceneBreakdownCTA = () => {
                     variant="outline"
                     className="bg-white/10 text-white border-white/30 hover:bg-white/20 rounded-[10px] px-8"
                   >
-                    Book a Demo
+                    {t("scene_breakdown.cta_secondary")}
                   </Button>
                 </a>
               </div>
 
               <p className="mt-6 text-sm text-primary-foreground/60">
-                Edit the film before you shoot it.
+                {t("scene_breakdown.cta_bottom")}
               </p>
             </div>
           </motion.div>
