@@ -141,6 +141,7 @@ interface HeaderProps {
 
 
 const Header = ({ variant = "fixed" }: HeaderProps) => {
+  const { t } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -157,6 +158,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
   const isPricingPage = location.pathname === "/pricing";
   const isAboutPage = location.pathname === "/about-us";
 
+  const { defaultNavItems, blogNavItems } = useNavItems(t);
   const navItems = isBlogRelated ? blogNavItems : defaultNavItems;
 
   useEffect(() => {
