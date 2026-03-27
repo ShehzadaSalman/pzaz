@@ -110,46 +110,13 @@ const SceneBreakdownHero = () => {
           className="mt-16 lg:mt-24 max-w-6xl mx-auto"
         >
           <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border/50 bg-card">
-            <div className="absolute inset-0 gradient-hero-bg opacity-5" />
-            <div className="p-2">
-              <div className="bg-muted/50 rounded-xl aspect-[16/9] flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-4 bg-background rounded-lg shadow-inner flex flex-col">
-                  <div className="flex items-center gap-2 border-b border-border/50 px-4 py-2">
-                    <div className="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center">
-                      <span className="text-primary-foreground text-xs font-bold">B</span>
-                    </div>
-                    <span className="text-xs font-medium hidden lg:block">Scene Breakdown</span>
-                    <div className="ml-auto flex gap-2">
-                      {["Scene 1", "Scene 2", "Scene 3", "Scene 4"].map((s, i) => (
-                        <div key={i} className={`h-5 px-2 rounded text-[10px] flex items-center ${i === 0 ? "bg-primary/20 text-primary" : "bg-muted text-muted-foreground"}`}>
-                          <span className="hidden sm:block">{s}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="flex-1 p-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
-                    {[
-                      { scene: "INT. OFFICE – DAY", dept: "Camera, Art", crew: "3 cast, 2 crew" },
-                      { scene: "EXT. STREET – NIGHT", dept: "Lighting, Sound", crew: "1 cast, 4 crew" },
-                      { scene: "INT. STUDIO – DAY", dept: "Camera, Makeup", crew: "5 cast, 6 crew" },
-                    ].map((row, i) => (
-                      <div key={i} className={`rounded-lg border-2 ${i === 0 ? "border-primary/40 bg-primary/5" : "border-border/40 bg-muted/40"} p-3 flex flex-col gap-2`}>
-                        <p className="text-[10px] font-bold text-foreground hidden lg:block">{row.scene}</p>
-                        <div className="flex gap-1 flex-wrap">
-                          {row.dept.split(", ").map((d) => (
-                            <span key={d} className="text-[8px] px-1.5 py-0.5 rounded bg-primary/10 text-primary hidden lg:block">{d}</span>
-                          ))}
-                        </div>
-                        <p className="text-[8px] text-muted-foreground hidden lg:block">{row.crew}</p>
-                        <div className="w-full h-2 rounded bg-muted-foreground/10 mt-auto">
-                          <div className={`h-2 rounded bg-primary/40`} style={{ width: `${[70, 30, 50][i]}%` }} />
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
+            <img
+              src={sceneBreakdownBanner}
+              alt="Pzaz Scene Breakdown interface"
+              className="w-full h-auto"
+              loading="eager"
+            />
+          </div>
           </div>
         </motion.div>
       </div>
