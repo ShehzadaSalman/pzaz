@@ -107,7 +107,6 @@ const FileSharingHero = () => {
               loading="eager"
             />
           </div>
-          </div>
         </motion.div>
       </div>
     </section>
