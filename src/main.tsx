@@ -44,13 +44,71 @@ interface HelmetContextFilled {
 const blogRoutes = blogPosts.map((post) => `/producer-blog/${post.slug}`);
 const allRoutes = new Set([...staticRoutes, ...blogRoutes]);
 
+/**
+ * Map a route path to the i18n namespaces it needs.
+ */
+function getNamespacesForRoute(url: string): string[] {
+  // Strip locale prefix to get the "bare" path
+  const bare = url.replace(/^\/(ur)(\/|$)/, "/").replace(/\/$/, "") || "/";
+
+  const map: Record<string, string[]> = {
+    "/": ["common", "home"],
+    "/script": ["common", "script"],
+    "/pricing": ["common", "pricing"],
+    "/about-us": ["common", "about"],
+    "/brand": ["common", "brand"],
+    "/culture": ["common", "culture"],
+    "/privacy": ["common", "privacy"],
+    "/terms-of-use": ["common", "terms"],
+    "/indie-filmmaking-software": ["common", "indie"],
+    "/film-budgeting-software": ["common", "budget"],
+    "/film-preproduction-planning": ["common", "planning"],
+    "/studio-pro-software": ["common", "studio-pro"],
+    "/storyboard-software": ["common", "storyboard"],
+    "/scene-breakdown-software": ["common", "scene-breakdown"],
+    "/film-collaboration-software": ["common", "collaboration"],
+    "/production-task-management": ["common", "task-management"],
+    "/film-file-sharing-storage": ["common", "file-sharing"],
+    "/film-project-management": ["common", "project-management"],
+    "/knowledge-base": ["common", "knowledge-base"],
+  };
+
+  // Exact match
+  if (map[bare]) return map[bare];
+
+  // Prefix matches (knowledge-base articles, blog, solutions pages)
+  if (bare.startsWith("/knowledge-base/")) return ["common", "knowledge-base"];
+  if (bare.startsWith("/producer-blog")) return ["common", "blog"];
+
+  // Solutions pages all use "solutions" namespace
+  const solutionPrefixes = [
+    "/film-schools-software", "/software-for-directors-producers",
+    "/documentary-filmmaking-software", "/software-for-cinematographers",
+    "/creative-agency-production-software", "/film-production-team-software",
+    "/screenwriting-software", "/tv-series-production-software",
+    "/film-investment-software", "/software-for-production-managers",
+    "/empowering-filmmaking", "/indie-filmmakers",
+  ];
+  if (solutionPrefixes.some((p) => bare.startsWith(p))) return ["common", "solutions"];
+
+  // Default fallback
+  return ["common", "home"];
+}
+
 export async function prerender(data: { url: string }) {
   const { renderToString } = await import("react-dom/server");
   const { StaticRouter } = await import("react-router-dom/server");
   const { HelmetProvider: HP } = await import("react-helmet-async");
   const { QueryClient, QueryClientProvider } = await import("@tanstack/react-query");
+  const { I18nextProvider } = await import("react-i18next");
+  const { initI18nForSSR } = await import("./i18n");
 
   const url = data.url ?? "/";
+
+  // Detect locale and load translations before render
+  const locale = url.startsWith("/ur/") || url === "/ur" ? "ur" : "en";
+  const namespaces = getNamespacesForRoute(url);
+  const i18nInstance = await initI18nForSSR(locale, namespaces);
 
   const helmetContext: Record<string, unknown> = {};
   const queryClient = new QueryClient();
@@ -58,9 +116,11 @@ export async function prerender(data: { url: string }) {
   const html = renderToString(
     <QueryClientProvider client={queryClient}>
       <HP context={helmetContext}>
-        <StaticRouter location={url}>
-          <AppRoutes />
-        </StaticRouter>
+        <I18nextProvider i18n={i18nInstance}>
+          <StaticRouter location={url}>
+            <AppRoutes />
+          </StaticRouter>
+        </I18nextProvider>
       </HP>
     </QueryClientProvider>
   );
