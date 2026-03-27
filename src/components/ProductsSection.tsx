@@ -124,63 +124,6 @@ const ProductsSection = () => {
           </div>
         </motion.div>
 
-        {/* Products grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-[46px] max-w-6xl mx-auto">
-          {products.map((product, index) => (
-            <motion.div
-              key={product.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 * index }}
-              className={`group relative rounded-[38px] p-8 ${index === 2 ? 'pb-[54px]' : 'pb-[17px]'} border-2 border-[#D4BAF4] bg-white transition-all duration-300 hover:shadow-xl flex flex-col`}
-              style={index === 2 ? { background: "radial-gradient(181.71% 129% at 50% -66.48%, #D1CFFF 0%, #FFFFFF 95%)" } : undefined}
-            >
-              {product.highlight && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full">
-                  {t("products.most_popular")}
-                </div>
-              )}
-              
-              <div className="flex items-center justify-between mb-6">
-                <img src={product.customIcon} alt={product.name} className="w-[60px] h-[60px]" />
-                <span className="font-lato font-normal text-[24px] text-[#4D029B]">{symbol}{getPrice(product.eurPrice, `product-${product.eurPrice}`)}/mo</span>
-              </div>
-              
-              <h3 className="font-lato font-bold text-[32px] text-[#4D029B] mb-2">{product.name}</h3>
-              <p className="font-lato font-bold text-[16px] text-[#A805FF] mb-4">{product.tagline}</p>
-              <p className="font-lato font-normal text-[16px] text-[#878787] leading-relaxed mb-6 flex-grow">{product.description}</p>
-              
-              <Link to={product.href}>
-                <Button variant={product.highlight ? "product-card-gradient" : "product-card"} size="product-card" className="group/btn mt-auto w-full">
-                  {t("products.explore_btn", { name: product.shortName })}
-                  <ArrowIcon className={`ml-2 group-hover/btn:translate-x-1 ${product.highlight ? "text-white" : "text-[#4827AF] group-hover/btn:text-white"}`} />
-                </Button>
-              </Link>
-              {(index === 0 || index === 1) && (
-                <p className="font-lato font-normal text-[14px] text-[#878787] text-center mt-3">
-                  {t("products.upgrade_note")}
-                </p>
-              )}
-            </motion.div>
-          ))}
-        </div>
-
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="flex justify-center mt-[60px]"
-        >
-          <Link to="/pricing">
-            <Button variant="thin-cta" size="thin-cta" className="group/btn">
-              {t("products.explore_all")}
-              <ArrowIcon className="ml-2 text-white group-hover/btn:translate-x-1" />
-            </Button>
-          </Link>
-        </motion.div>
       </div>
     </section>
   );
