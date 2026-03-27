@@ -124,7 +124,6 @@ const ProjectManagementHero = () => {
               loading="eager"
             />
           </div>
-          </div>
         </motion.div>
       </div>
     </section>
