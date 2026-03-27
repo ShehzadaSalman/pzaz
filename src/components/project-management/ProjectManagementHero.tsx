@@ -10,7 +10,7 @@ import { useIndieCheckoutUrl } from "@/lib/checkout";
 import { useTranslation } from "react-i18next";
 
 const ProjectManagementHero = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('project-management');
   const indieCheckoutUrl = useIndieCheckoutUrl();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">

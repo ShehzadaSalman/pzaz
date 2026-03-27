@@ -4,7 +4,7 @@ import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
 import { useTranslation } from "react-i18next";
 
 const BudgetConnected = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('budget');
   const connections = [
     { trigger: t("budget.connected_item1_trigger"), result: t("budget.connected_item1_result") },
     { trigger: t("budget.connected_item2_trigger"), result: t("budget.connected_item2_result") },

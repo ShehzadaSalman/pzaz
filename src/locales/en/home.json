@@ -1,0 +1,89 @@
+{
+  "hero": {
+    "headline1": "Screen productions rarely fail because of creativity.",
+    "headline2": "They fail because information falls apart.",
+    "description_short": "Scripts change. Schedules shift. Budgets move. Teams miss updates. Pzaz keeps your script, plan, budget, timeline, and team perfectly in sync from the first draft to final delivery.",
+    "description_short_more": " Things change and everything updates automatically. Stay focused on the story while Pzaz keeps the production aligned.",
+    "description_full": "Scripts change. Schedules shift. Budgets move. Teams miss updates. Pzaz keeps your script, plan, budget, timeline, and team perfectly in sync from the first draft to final delivery. Things change and everything updates automatically.",
+    "description_full2": "Stay focused on the story while Pzaz keeps the production aligned.",
+    "cta_primary": "Start for Free",
+    "cta_primary_sub": "No credit card.",
+    "cta_secondary": "Book a Demo",
+    "cta_secondary_sub": "Be up and running in 15 minutes.",
+    "read_more": "read more"
+  },
+  "problem": {
+    "pill": "The Problem",
+    "title1": "Plans change.",
+    "title2": "Productions break.",
+    "description": "Every time your team switches tools, context disappears. That turns into rework, delays and budget pressure. Production loses alignment.",
+    "card1_title": "Context Loss",
+    "card1_desc": "Switching between disconnected apps can erase up to 60% of working context.",
+    "card2_title": "Digital Fatigue",
+    "card2_desc": "Constant tool switching drains focus and performance drops by up to 30%.",
+    "card3_title": "Fragmented Data",
+    "card3_desc": "When information isn't connected, mistakes multiply."
+  },
+  "solution": {
+    "pill": "The Solution",
+    "title1": "One Ecosystem.",
+    "title2": "Total Alignment.",
+    "description": "Pzaz keeps creative, operational and financial reality connected inside one living production system.",
+    "card1": "Work with clarity,\nnot chaos.",
+    "card2": "Move fast\nwithout\nlosing control.",
+    "card3": "Stay aligned,\neven when\nplans change.",
+    "card4": "Deliver without\nlast-minute panic.",
+    "card5": "Protect your margins\nwith fewer surprises.",
+    "insight": "Run productions that feel calm, <strong>controlled and predictable.</strong>"
+  },
+  "ai_context": {
+    "heading": "AI without context is guesswork.",
+    "para1": "AI can generate impressive answers in seconds. But impressive answers don't run productions. Without full production context, outputs don't connect, decisions don't propagate, and teams fall out of alignment.",
+    "para2": "That's why AI-first tools look powerful, yet still leave productions fragmented. It's also why 95% of companies fail to unlock real AI value.",
+    "para3": "Pzaz connects your full production context so your tools, AI agents and your teams work together in harmony.",
+    "caption": "You're in control while AI assist. <strong>The production stays aligned.</strong>"
+  },
+  "products": {
+    "pill": "Products",
+    "title1": "Built for teams who",
+    "title2": "deliver under pressure.",
+    "description": "Pzaz is built for production teams who know that great ideas are not enough.",
+    "feature1": "Feature films",
+    "feature2": "Episodic television",
+    "feature3": "Animation and VFX productions",
+    "feature4": "Commercial and branded campaigns",
+    "feature5": "Digital-first and vertical series",
+    "feature6": "And more...",
+    "feature_desc": "Whether you're running a feature film or managing multiple client productions, alignment is not optional. Pzaz is built for teams who need coordination at production scale.",
+    "cta_start": "Start for Free",
+    "cta_watch": "Watch Video",
+    "divider": "Start with everything —",
+    "divider_sub": "or just what you need.",
+    "most_popular": "Most Popular",
+    "explore_all": "Explore All Products",
+    "upgrade_note": "Upgrade anytime. Your project stays intact.",
+    "budget_name": "Pzaz Budget",
+    "budget_tagline": "Professional budgeting & cost control",
+    "budget_desc": "For producers and line producers who need clarity and confidence. Turn your script into a structured production budget that stays in sync as plans change.",
+    "storyboard_name": "Pzaz Storyboard",
+    "storyboard_tagline": "Visualize the film before you shoot",
+    "storyboard_desc": "For directors and visual storytellers. Turn scenes into storyboards in seconds and refine shots collaboratively before production starts.",
+    "studio_name": "Pzaz Studio",
+    "studio_tagline": "All-in-one production system",
+    "studio_desc": "For full productions and teams that need everything connected in real time. Script, schedule, budget, storyboard, and collaboration in one live workspace.",
+    "explore_btn": "Explore {{name}}"
+  },
+  "integrations": {
+    "pill": "Integrations",
+    "title": "Works with your existing tools",
+    "description": "No lock-in. No barriers. Just filmmaking.",
+    "cta": "Contact Us"
+  },
+  "cta": {
+    "pill": "Free 7-day trial",
+    "title": "Run Your Next Production in Sync.",
+    "description": "Stop managing fragmentation. Start operating with full alignment.",
+    "primary": "Get started free",
+    "secondary": "Schedule a demo"
+  }
+}

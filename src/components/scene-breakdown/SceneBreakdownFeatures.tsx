@@ -4,7 +4,7 @@ import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
 import { useTranslation } from "react-i18next";
 
 const SceneBreakdownFeatures = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('scene-breakdown');
   const features = [
     { title: t("scene_breakdown.feat1_title"), description: t("scene_breakdown.feat1_desc") },
     { title: t("scene_breakdown.feat2_title"), description: t("scene_breakdown.feat2_desc") },

@@ -6,7 +6,7 @@ import iconWarning from "@/assets/icon-warning.svg";
 import { useTranslation } from "react-i18next";
 
 const ProjectManagementProblem = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('project-management');
   const questions = [
     t("project_management.problem_q1"),
     t("project_management.problem_q2"),

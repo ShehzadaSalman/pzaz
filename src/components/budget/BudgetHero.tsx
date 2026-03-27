@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 
 const BudgetHero = () => {
   const indieCheckoutUrl = useIndieCheckoutUrl();
-  const { t } = useTranslation();
+  const { t } = useTranslation('budget');
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       <div

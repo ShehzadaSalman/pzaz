@@ -4,7 +4,7 @@ import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
 import { useTranslation } from "react-i18next";
 
 const ScriptCoreFeatures = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('script');
   const coreFeatures = [
     { title: t("script.core_feat1_title"), description: t("script.core_feat1_desc") },
     { title: t("script.core_feat2_title"), description: t("script.core_feat2_desc") },

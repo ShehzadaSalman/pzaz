@@ -21,7 +21,7 @@ import ctaPlayIcon from "@/assets/cta-play-icon.svg";
 import { useTranslation } from "react-i18next";
 
 const ProductsSection = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('home');
   const { symbol, getPrice } = useCurrency();
   const indieCheckoutUrl = useIndieCheckoutUrl();
 

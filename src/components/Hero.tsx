@@ -7,7 +7,7 @@ import { useIndieCheckoutUrl } from "@/lib/checkout";
 import { useTranslation } from "react-i18next";
 
 const HeroDescription = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('home');
   const [expanded, setExpanded] = useState(false);
   return (
     <motion.div
@@ -42,7 +42,7 @@ const HeroDescription = () => {
 };
 
 const Hero = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('home');
   const isUrdu = i18n.language === "ur";
   const indieCheckoutUrl = useIndieCheckoutUrl();
   return (

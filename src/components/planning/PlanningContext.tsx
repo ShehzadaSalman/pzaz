@@ -4,7 +4,7 @@ import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
 import { useTranslation } from "react-i18next";
 
 const PlanningContext = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('planning');
   const benefits = [
     t("planning.context_b1"),
     t("planning.context_b2"),

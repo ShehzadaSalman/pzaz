@@ -15,7 +15,7 @@ import ScriptPromise from "@/components/script/ScriptPromise";
 import { useTranslation } from "react-i18next";
 
 const ScriptShift = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('script');
   const scriptCards = [
     { icon: iconShapes2, title: t("script.shift_card1"), image: solutionCardPreview },
     { icon: iconMoneyBag, title: t("script.shift_card2"), image: solutionCardSchedule },

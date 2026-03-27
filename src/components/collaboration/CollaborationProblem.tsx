@@ -4,7 +4,7 @@ import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
 import { useTranslation } from "react-i18next";
 
 const CollaborationProblem = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('collaboration');
   return (
     <section className="section-padding bg-[#fbfbfb] relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">

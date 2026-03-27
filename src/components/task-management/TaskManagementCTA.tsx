@@ -8,7 +8,7 @@ import { useIndieCheckoutUrl } from "@/lib/checkout";
 import { useTranslation } from "react-i18next";
 
 const TaskManagementCTA = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('task-management');
   const indieCheckoutUrl = useIndieCheckoutUrl();
   return (
     <section className="py-24 relative overflow-hidden">

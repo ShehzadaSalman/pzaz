@@ -9,7 +9,7 @@ import iconScriptAnalysis from "@/assets/script/icon-script-analysis.svg";
 import { useTranslation } from "react-i18next";
 
 const ScriptAI = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('script');
   const aiCards = [
     { titleKey: "script.ai_card1_title", descKey: "script.ai_card1_desc", icon: iconCharacterTracking },
     { titleKey: "script.ai_card2_title", descKey: "script.ai_card2_desc", icon: iconScriptAnalysis },

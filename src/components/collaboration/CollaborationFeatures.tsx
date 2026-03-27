@@ -4,7 +4,7 @@ import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
 import { useTranslation } from "react-i18next";
 
 const CollaborationFeatures = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('collaboration');
   const features = [
     { title: t("collaboration.feat1_title"), description: t("collaboration.feat1_desc") },
     { title: t("collaboration.feat2_title"), description: t("collaboration.feat2_desc") },

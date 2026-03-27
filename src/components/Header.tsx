@@ -141,7 +141,7 @@ interface HeaderProps {
 
 
 const Header = ({ variant = "fixed" }: HeaderProps) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);

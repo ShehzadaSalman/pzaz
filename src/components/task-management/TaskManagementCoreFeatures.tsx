@@ -4,7 +4,7 @@ import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
 import { useTranslation } from "react-i18next";
 
 const TaskManagementCoreFeatures = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('task-management');
   const coreCapabilities = [
     { title: t("task_management.core_feat1_title"), description: t("task_management.core_feat1_desc") },
     { title: t("task_management.core_feat2_title"), description: t("task_management.core_feat2_desc") },

@@ -7,7 +7,7 @@ import ContactModal from "@/components/ContactModal";
 import { useTranslation } from "react-i18next";
 
 const IntegrationsSection = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('home');
   const [contactOpen, setContactOpen] = useState(false);
 
   return (

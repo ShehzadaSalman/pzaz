@@ -16,7 +16,7 @@ import iconEngine from "@/assets/script/icon-engine.svg";
 import { useTranslation } from "react-i18next";
 
 const ScriptUSPs = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('script');
   const usps = [
     {
       title: "Tool-Agnostic Script Intake",

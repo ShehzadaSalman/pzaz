@@ -7,7 +7,7 @@ import SectionHeader from "@/components/SectionHeader";
 import { useTranslation } from "react-i18next";
 
 const ProblemSection = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('home');
   const [isDesktop, setIsDesktop] = React.useState(false);
   React.useEffect(() => {
     const check = () => setIsDesktop(window.innerWidth >= 1024);

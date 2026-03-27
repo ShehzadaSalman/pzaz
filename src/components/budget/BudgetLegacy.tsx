@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 const BudgetLegacy = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('budget');
   return (
     <section className="section-padding relative overflow-hidden">
       <div
