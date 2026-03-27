@@ -117,7 +117,6 @@ const SceneBreakdownHero = () => {
               loading="eager"
             />
           </div>
-          </div>
         </motion.div>
       </div>
     </section>
