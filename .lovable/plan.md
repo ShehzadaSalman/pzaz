@@ -1,60 +1,33 @@
 
 
-## Performance Analysis: i18n / Language Update Impact
+## Fix: Prevent raw i18n keys flashing on page refresh
 
-### Key Findings
+### Root Cause
 
-**1. Bundle Size — Both locale files loaded eagerly**
+The i18n config has `useSuspense: false`, which means components render immediately with raw translation keys (like `hero.headline1`, `script.hero_h1a`) as fallback text while their namespace JSON files load asynchronously. Only `common` and `home` namespaces are pre-bundled for English — every other page's translations arrive a moment later, causing the flash.
 
-`en.json` (1,924 lines) and `ur.json` (1,932 lines) are both statically imported in `src/i18n.ts` and bundled into the main JS entry point. Every visitor — even English-only — downloads the full Urdu translation payload. Estimated combined JSON size: ~120-150 KB uncompressed (~30-40 KB gzipped).
+### Solution
 
-**2. Core Web Vitals — No measurable regression**
+Re-enable React Suspense for i18n so that components wait for their translations before rendering, and show a clean branded loader instead of raw keys.
 
-| Metric | English (`/`) | Notes |
-|--------|--------------|-------|
-| FCP | 6.7s | Dev server (Vite HMR), not production — expected to be slow |
-| CLS | 0.085 | Good (< 0.1 threshold) |
-| JS Heap | 29.4 MB | Normal for a marketing site with framer-motion + lucide |
-| DOM Nodes | 449 | Light |
-| Script Duration | 872ms | Dominated by lucide-react (157KB), framer-motion (97KB), not i18n |
+### Changes
 
-The i18n library (`i18next` + `react-i18next`) adds minimal runtime overhead — key lookups are O(1) hash maps. The `t()` calls themselves are negligible.
+**1. `src/i18n.ts`** — Set `useSuspense: true`
+- Change `useSuspense: false` to `useSuspense: true`
+- This makes `useTranslation()` suspend the component tree until the requested namespace is loaded
 
-**3. Component Impact — 77 files now import `useTranslation`**
+**2. `src/App.tsx`** — Replace `<Suspense fallback={null}>` with a branded loading screen
+- Create a minimal `PageLoader` component inline (Pzaz logo centered, subtle fade-in)
+- Use it as the Suspense fallback so users see the brand loader for ~200-400ms while translations + lazy components load together
 
-Each `useTranslation()` hook subscribes to i18n language change events. With 77 components subscribed, a language switch triggers a re-render cascade across all mounted components. On the home page (~15 components mounted), this is fine. On pages with many sections (~8-10 components), still manageable.
+**3. `src/main.tsx`** — Wait for `initPromise` before mounting React
+- Import `initPromise` from `./i18n`
+- Wrap `createRoot().render()` inside `initPromise.then(...)` so the default namespace (`common`) is guaranteed loaded before first render
+- This prevents even Header/Footer keys from flashing
 
-**4. RTL CSS — Minimal overhead**
-
-The `:lang(ur)` CSS selector adds a single `line-height: 2 !important` rule. The `dir="rtl"` attribute is set synchronously before first paint via `i18n.ts`, so there's no layout shift on Urdu pages.
-
-**5. Route Duplication**
-
-`routes.ts` now has ~35 additional `/ur/*` entries for prerendering. This increases build time for static generation but has zero runtime impact.
-
----
-
-### Bottlenecks (not caused by i18n)
-
-The top performance costs remain unchanged from before the language update:
-- **lucide-react.js**: 157KB, 271ms load — tree-shaking not working (imports entire icon set)
-- **framer-motion.js**: 97KB — animation library overhead
-- **Brevo widget iframe**: 1.5s load — third-party chat widget
-- **fbevents.js**: 95KB — Meta Pixel tracking
-
----
-
-### Recommendations to Optimize
-
-| Priority | Action | Impact |
-|----------|--------|--------|
-| High | **Lazy-load `ur.json`** — use i18next-http-backend or dynamic `import()` so Urdu JSON is only fetched when user switches to `/ur` | Saves ~15-20KB gzipped for 95%+ of visitors |
-| Medium | **Split locale files by page namespace** — e.g. `ur/script.json`, `ur/budget.json` loaded per-route | Reduces per-page payload further |
-| Low | **Audit lucide-react imports** — switch to `import { Icon } from "lucide-react"` named imports for tree-shaking | Saves ~100KB (unrelated to i18n but biggest win) |
-
----
-
-### Verdict
-
-The i18n integration has **negligible performance impact** at runtime. The only concern is the eager bundling of both locale files (~30-40KB gzipped extra for English-only visitors), which can be solved with lazy loading. The actual page rendering speed, CLS, and memory usage are unaffected by the translation work.
+### What this achieves
+- Zero raw translation keys visible on any page, any locale
+- Brief branded loader (~200-400ms) on hard refresh while translations load
+- No impact on subsequent client-side navigation (namespaces cache after first load)
+- English homepage remains near-instant since `common` + `home` are pre-bundled
 
