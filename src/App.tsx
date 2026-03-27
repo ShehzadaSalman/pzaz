@@ -8,6 +8,17 @@ import ScrollToTop from "./components/ScrollToTop";
 import MetaPixelTracker from "./components/MetaPixelTracker";
 import LocaleWrapper from "./components/LocaleWrapper";
 
+/** Branded loader shown while lazy pages + translations load */
+const PageLoader = () => (
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-background">
+    <img
+      src="/Pzaz_Logo.svg"
+      alt="Pzaz"
+      className="h-10 animate-pulse"
+    />
+  </div>
+);
+
 // ─── Lazy-loaded pages ────────────────────────────────────────────────────────
 const Index = lazy(() => import("./pages/Index"));
 const Script = lazy(() => import("./pages/Script"));
