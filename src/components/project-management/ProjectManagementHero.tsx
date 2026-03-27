@@ -117,123 +117,13 @@ const ProjectManagementHero = () => {
           className="mt-16 lg:mt-24 max-w-6xl mx-auto"
         >
           <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border/50 bg-card">
-            <div className="absolute inset-0 gradient-hero-bg opacity-5" />
-            <div className="p-2">
-              <div className="bg-muted/50 rounded-xl aspect-[16/9] flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-4 bg-background rounded-lg shadow-inner flex">
-                  <div className="w-16 lg:w-52 border-r border-border/50 p-3 hidden sm:block">
-                    <div className="flex items-center gap-2 mb-5">
-                      <div className="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center">
-                        <LayoutDashboard className="w-4 h-4 text-primary-foreground" />
-                      </div>
-                      <span className="text-xs font-bold hidden lg:block">My Project</span>
-                    </div>
-                    <div className="space-y-1 mb-4">
-                      {["Overview", "Script", "Breakdown", "Schedule", "Budget", "Files", "Tasks", "Team"].map(
-                        (item, i) => (
-                          <div
-                            key={i}
-                            className={`h-6 px-2 rounded text-[10px] flex items-center cursor-pointer ${
-                              i === 0 ? "bg-primary/20 text-primary" : "text-muted-foreground hover:bg-muted"
-                            }`}
-                          >
-                            <span className="truncate hidden lg:block">{item}</span>
-                          </div>
-                        )
-                      )}
-                    </div>
-                  </div>
-                  <div className="flex-1 p-4 overflow-hidden">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center gap-2">
-                        <div className="h-3 bg-primary/30 rounded w-28" />
-                        <div className="h-3 bg-muted rounded w-16" />
-                      </div>
-                      <div className="flex gap-1">
-                        {["Script", "Schedule", "Budget"].map((t) => (
-                          <div key={t} className="h-5 px-2 rounded-full bg-muted text-[9px] flex items-center text-muted-foreground hidden lg:flex">{t}</div>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="grid grid-cols-4 gap-2 mb-4">
-                      {[
-                        { label: "Shoot Days", val: "18", color: "bg-primary/10 text-primary" },
-                        { label: "Open Tasks", val: "24", color: "bg-amber-50 text-amber-600" },
-                        { label: "Budget Used", val: "62%", color: "bg-green-50 text-green-600" },
-                        { label: "Scenes Done", val: "41", color: "bg-purple-50 text-purple-600" },
-                      ].map((s) => (
-                        <div key={s.label} className={`rounded-xl p-3 ${s.color} border border-current/20`}>
-                          <p className="text-[14px] font-bold hidden lg:block">{s.val}</p>
-                          <p className="text-[8px] opacity-70 hidden lg:block">{s.label}</p>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="rounded-lg border border-border/40 bg-muted/20 p-3 mb-3">
-                      <p className="text-[9px] font-bold text-muted-foreground uppercase tracking-wide mb-2 hidden lg:block">Production Timeline</p>
-                      <div className="flex gap-1">
-                        {["Pre-Prod", "Week 1", "Week 2", "Week 3", "Post", "Delivery"].map((ph, i) => (
-                          <div
-                            key={ph}
-                            className={`flex-1 h-5 rounded text-[7px] flex items-center justify-center font-medium hidden lg:flex ${
-                              i < 2 ? "bg-primary/70 text-white" : i === 2 ? "bg-primary/30 text-primary" : "bg-muted text-muted-foreground"
-                            }`}
-                          >
-                            {ph}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="space-y-1.5">
-                      {[
-                        { msg: "Script v4 locked by Director", time: "2m ago", dot: "bg-green-400" },
-                        { msg: "Call sheet sent — Shoot Day 3", time: "1h ago", dot: "bg-primary" },
-                        { msg: "Budget updated by Line Producer", time: "3h ago", dot: "bg-amber-400" },
-                      ].map((a) => (
-                        <div key={a.msg} className="flex items-center gap-2 p-2 rounded-lg bg-muted/40 hidden lg:flex">
-                          <div className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${a.dot}`} />
-                          <p className="text-[9px] text-foreground flex-1">{a.msg}</p>
-                          <p className="text-[8px] text-muted-foreground">{a.time}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="w-16 lg:w-52 border-l border-border/50 p-3 hidden md:block">
-                    <div className="text-xs font-bold mb-3 hidden lg:block">Project Health</div>
-                    <div className="space-y-2 mb-4">
-                      {[
-                        { label: "Script", pct: 100, color: "bg-green-400" },
-                        { label: "Schedule", pct: 75, color: "bg-primary" },
-                        { label: "Budget", pct: 62, color: "bg-amber-400" },
-                        { label: "Tasks", pct: 48, color: "bg-purple-400" },
-                      ].map((p) => (
-                        <div key={p.label} className="hidden lg:block">
-                          <div className="flex justify-between mb-0.5">
-                            <span className="text-[9px] text-muted-foreground">{p.label}</span>
-                            <span className="text-[9px] font-medium">{p.pct}%</span>
-                          </div>
-                          <div className="h-1.5 bg-muted rounded-full overflow-hidden">
-                            <div className={`h-full ${p.color} rounded-full`} style={{ width: `${p.pct}%` }} />
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="text-[9px] font-bold text-muted-foreground mb-2 hidden lg:block">TEAM ONLINE</div>
-                    <div className="flex flex-wrap gap-1">
-                      {["D", "P", "A", "C", "E"].map((initial, i) => (
-                        <div
-                          key={i}
-                          className={`w-6 h-6 rounded-full flex items-center justify-center text-[9px] font-bold text-white hidden lg:flex ${
-                            ["bg-primary", "bg-purple-500", "bg-teal-500", "bg-amber-500", "bg-pink-500"][i]
-                          }`}
-                        >
-                          {initial}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <img
+              src={projectManagementBanner}
+              alt="Pzaz Project Management interface"
+              className="w-full h-auto"
+              loading="eager"
+            />
+          </div>
           </div>
         </motion.div>
       </div>
