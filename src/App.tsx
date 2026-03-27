@@ -65,7 +65,7 @@ export const AppRoutes = () => (
   <>
     <ScrollToTop />
     <MetaPixelTracker />
-    <Suspense fallback={null}>
+    <Suspense fallback={<PageLoader />}>
       <Routes>
         {/* ── Default English routes (no locale prefix) ── */}
         <Route element={<LocaleWrapper />}>

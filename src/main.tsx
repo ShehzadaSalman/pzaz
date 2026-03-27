@@ -15,12 +15,17 @@ if (typeof window !== "undefined") {
   import("@/hooks/use-currency").then(({ warmGeoDetect }) => warmGeoDetect());
 }
 
-// Client-side hydration — guarded so it does not run during SSR prerendering
+// Client-side hydration — wait for i18n init so the default namespace
+// ("common") is ready before first render, preventing key flashes.
 if (typeof window !== "undefined") {
-  createRoot(document.getElementById("root")!).render(
-    <HelmetProvider>
-      <App />
-    </HelmetProvider>
+  import("./i18n").then(({ initPromise }) =>
+    initPromise.then(() => {
+      createRoot(document.getElementById("root")!).render(
+        <HelmetProvider>
+          <App />
+        </HelmetProvider>
+      );
+    })
   );
 }
 
