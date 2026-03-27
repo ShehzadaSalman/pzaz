@@ -100,63 +100,13 @@ const TaskManagementHero = () => {
           className="mt-16 lg:mt-24 max-w-6xl mx-auto"
         >
           <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border/50 bg-card">
-            <div className="absolute inset-0 gradient-hero-bg opacity-5" />
-            <div className="p-2">
-              <div className="bg-muted/50 rounded-xl aspect-[16/9] flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-4 bg-background rounded-lg shadow-inner flex">
-                  <div className="w-16 lg:w-52 border-r border-border/50 p-3 hidden sm:block">
-                    <div className="flex items-center gap-2 mb-4">
-                      <div className="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center">
-                        <LayoutList className="w-4 h-4 text-primary-foreground" />
-                      </div>
-                      <span className="text-xs font-medium hidden lg:block">Projects</span>
-                    </div>
-                    <div className="space-y-2">
-                      {["Feature Film A", "Short Project B", "Episodic S1", "Pre-prod C"].map((p, i) => (
-                        <div key={i} className={`h-6 px-2 rounded text-[10px] flex items-center ${i === 0 ? "bg-primary/20 text-primary" : "bg-muted text-muted-foreground"}`}>
-                          <span className="truncate hidden lg:block">{p}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="flex-1 p-4">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="h-3 bg-primary/20 rounded w-24" />
-                      <div className="h-3 bg-muted rounded w-16" />
-                    </div>
-                    <div className="grid grid-cols-4 gap-2 h-full">
-                      {[
-                        { col: "To Do", color: "border-border/40 bg-muted/40", tasks: ["Location scout", "Wardrobe prep", "Cast confirmations"] },
-                        { col: "In Progress", color: "border-primary/40 bg-primary/5", tasks: ["Camera setup", "Script locked", "Call sheets"] },
-                        { col: "Review", color: "border-amber-300/40 bg-amber-50/40", tasks: ["Shot list v2", "Budget draft"] },
-                        { col: "Done", color: "border-green-300/40 bg-green-50/40", tasks: ["Casting complete", "Budget approved", "Locations booked"] },
-                      ].map((col, i) => (
-                        <div key={i} className="flex flex-col gap-1.5">
-                          <p className="text-[8px] font-bold text-muted-foreground uppercase tracking-wide hidden lg:block mb-1">{col.col}</p>
-                          {col.tasks.map((task) => (
-                            <div key={task} className={`rounded border ${col.color} px-2 py-1.5 hidden lg:flex items-start gap-1.5`}>
-                              <div className="w-1.5 h-1.5 rounded-full bg-current opacity-40 mt-0.5 flex-shrink-0" />
-                              <p className="text-[8px] text-foreground font-medium leading-tight">{task}</p>
-                            </div>
-                          ))}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="w-16 lg:w-56 border-l border-border/50 p-3 hidden md:block">
-                    <div className="text-xs font-medium mb-3 hidden lg:block">Task Detail</div>
-                    <div className="space-y-2">
-                      {["Owner", "Due Date", "Department", "Priority"].map((f, i) => (
-                        <div key={i} className="flex items-center justify-between p-2 bg-muted/50 rounded">
-                          <span className="text-[10px] text-muted-foreground hidden lg:block">{f}</span>
-                          <span className="text-[10px] font-medium text-primary">{["A. Chen", "Mar 12", "Camera", "High"][i]}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <img
+              src={taskManagementBanner}
+              alt="Pzaz Task Management interface"
+              className="w-full h-auto"
+              loading="eager"
+            />
+          </div>
           </div>
         </motion.div>
       </div>
