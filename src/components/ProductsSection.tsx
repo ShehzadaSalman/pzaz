@@ -1,8 +1,7 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useCurrency } from "@/hooks/use-currency";
-import { useIndieCheckoutUrl } from "@/lib/checkout";
 import ArrowIcon from "@/components/ui/ArrowIcon";
 import { Button } from "@/components/ui/button";
 import SectionHeader from "@/components/SectionHeader";
@@ -14,30 +13,6 @@ import { useTranslation } from "react-i18next";
 const ProductsSection = () => {
   const { t } = useTranslation('home');
   const { symbol, getPrice } = useCurrency();
-  const indieCheckoutUrl = useIndieCheckoutUrl();
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const video2Ref = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const videos = [videoRef.current, video2Ref.current].filter(Boolean) as HTMLVideoElement[];
-    
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const video = entry.target as HTMLVideoElement;
-          if (entry.isIntersecting) {
-            video.play().catch(() => {});
-          } else {
-            video.pause();
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
-
-    videos.forEach((v) => observer.observe(v));
-    return () => observer.disconnect();
-  }, []);
 
   const products = [
     {
@@ -78,52 +53,110 @@ const ProductsSection = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         {/* Section header */}
-
-        {/* Video */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="max-w-6xl mx-auto mb-[60px]"
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
         >
-          <div className="rounded-2xl overflow-hidden">
-            <video
-              ref={videoRef}
-              className="w-full"
-              muted
-              playsInline
-              preload="metadata"
-            >
-              <source src="/videos/products-section.mp4" type="video/mp4" />
-            </video>
-          </div>
+          <SectionHeader
+            pillText={t("products.pill")}
+            pillClassName="bg-primary/10 text-primary"
+            title={
+              <>
+                {t("products.title1")}{" "}
+                <span className="gradient-text">{t("products.title2")}</span>
+              </>
+            }
+            description={t("products.description")}
+          />
         </motion.div>
 
-        <div className="mb-[87px]" />
-        <hr className="border-0 border-t border-[#E3D6F5] max-w-6xl mx-auto" />
-
-        {/* Part 2 Video */}
+        {/* Divider text */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="max-w-6xl mx-auto mt-[55px] mb-[74px]"
+          transition={{ duration: 0.5 }}
+          className="text-center mb-12"
         >
-          <div className="rounded-2xl overflow-hidden">
-            <video
-              ref={video2Ref}
-              className="w-full"
-              muted
-              playsInline
-              preload="metadata"
-            >
-              <source src="/videos/products-section-p2.mp4" type="video/mp4" />
-            </video>
-          </div>
+          <p className="text-lg font-semibold text-foreground">
+            {t("products.divider")}{" "}
+            <span className="text-muted-foreground font-normal">{t("products.divider_sub")}</span>
+          </p>
         </motion.div>
 
+        {/* Product cards */}
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+          {products.map((product, index) => (
+            <motion.div
+              key={product.shortName}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 * index }}
+              className={`relative rounded-2xl p-6 border ${
+                product.highlight
+                  ? "border-primary bg-white shadow-lg"
+                  : "border-border bg-white"
+              }`}
+            >
+              {product.highlight && (
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-semibold">
+                  {t("products.most_popular")}
+                </span>
+              )}
+
+              <div className="flex items-center gap-3 mb-4">
+                <img src={product.customIcon} alt="" className="w-10 h-10" />
+                <div>
+                  <h3 className="font-bold text-lg text-foreground">{product.name}</h3>
+                  <p className="text-sm text-muted-foreground">{product.tagline}</p>
+                </div>
+              </div>
+
+              <div className="mb-4">
+                <span className="text-3xl font-bold text-foreground">
+                  {symbol}{getPrice(product.eurPrice)}
+                </span>
+                <span className="text-muted-foreground text-sm">/mo</span>
+              </div>
+
+              <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+                {product.description}
+              </p>
+
+              <Button
+                variant={product.highlight ? "default" : "outline"}
+                className="w-full group"
+                asChild
+              >
+                <Link to={product.href}>
+                  {t("products.explore_btn", { name: product.shortName })}
+                  <ArrowIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </Button>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Explore all */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center"
+        >
+          <Button variant="outline" size="lg" asChild>
+            <Link to="/pricing">
+              {t("products.explore_all")}
+              <ArrowIcon className="w-4 h-4 ml-2" />
+            </Link>
+          </Button>
+          <p className="text-sm text-muted-foreground mt-3">{t("products.upgrade_note")}</p>
+        </motion.div>
       </div>
     </section>
   );
