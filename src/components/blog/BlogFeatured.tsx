@@ -1,10 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { blogPosts } from "@/data/blogData";
+import { blogPostsUr } from "@/data/blogDataUr";
 import BlogCard from "@/components/blog/BlogCard";
-
+import { useTranslation } from "react-i18next";
+import { useLocale } from "@/hooks/use-locale";
 const BlogFeatured = () => {
-  const featuredPosts = blogPosts.filter((post) => post.featured).slice(0, 2);
+  const { t } = useTranslation("blog");
+  const { locale } = useLocale();
+  const posts = locale === "ur" ? blogPostsUr : blogPosts;
+  const featuredPosts = posts.filter((post) => post.featured).slice(0, 2);
 
   if (featuredPosts.length === 0) return null;
 
@@ -12,7 +17,7 @@ const BlogFeatured = () => {
     <section className="py-12 border-b border-border/50">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between mb-8">
-          <h2 className="text-2xl font-bold text-foreground">Featured Articles</h2>
+          <h2 className="text-2xl font-bold text-foreground">{t("blog.featured_title")}</h2>
         </div>
 
         <div className="flex flex-col gap-8">

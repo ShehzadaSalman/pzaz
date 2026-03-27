@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import type { BlogPost } from "@/data/blogData";
 import { Badge } from "@/components/ui/badge";
+import { useLocale } from "@/hooks/use-locale";
 
 interface BlogCardProps {
   post: BlogPost;
@@ -8,6 +9,7 @@ interface BlogCardProps {
 }
 
 const BlogCard = ({ post, featured = false }: BlogCardProps) => {
+  const { prefix } = useLocale();
   const category = Array.isArray(post.category) ? post.category[0] : post.category;
   const readTime = `${post.readingTime} min read`;
 
@@ -54,7 +56,7 @@ const BlogCard = ({ post, featured = false }: BlogCardProps) => {
 
   return (
     <Link
-      to={`/producer-blog/${post.slug}`}
+      to={`${prefix}/producer-blog/${post.slug}`}
       className="group flex h-full flex-col overflow-hidden rounded-xl bg-card shadow-[var(--shadow-card)] transition-all duration-300 hover:shadow-[var(--shadow-card-hover)] hover:-translate-y-1"
     >
       <div className="relative aspect-[16/10] overflow-hidden">

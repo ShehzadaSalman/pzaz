@@ -3,6 +3,8 @@ import PageLayout from "@/components/layout/PageLayout";
 import ProducerBlogHero from "@/components/producer-blog/ProducerBlogHero";
 import BlogCard from "@/components/blog/BlogCard";
 import { blogPosts } from "@/data/blogData";
+import { blogPostsUr } from "@/data/blogDataUr";
+import { useLocale } from "@/hooks/use-locale";
 import {
   Pagination,
   PaginationContent,
@@ -19,8 +21,10 @@ const POSTS_PER_PAGE = 6;
 
 const ProducerBlog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
+  const { locale } = useLocale();
+  const posts = locale === "ur" ? blogPostsUr : blogPosts;
   const [activeCategory, setActiveCategory] = useState("all");
-  const filteredPosts = blogPosts.filter((post) => {
+  const filteredPosts = posts.filter((post) => {
     if (post.featured) return false;
     if (activeCategory === "all") return true;
     return Array.isArray(post.category)

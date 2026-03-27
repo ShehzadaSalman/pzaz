@@ -2,11 +2,15 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Newspaper, Film, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { useLocale } from "@/hooks/use-locale";
 
 const BlogHero = () => {
+  const { t } = useTranslation("blog");
+  const { prefix } = useLocale();
+
   return (
     <section className="pt-32 pb-16 relative overflow-hidden">
-      {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
       
       <div className="max-w-6xl mx-auto px-6 relative z-10">
@@ -16,35 +20,32 @@ const BlogHero = () => {
           transition={{ duration: 0.6 }}
           className="max-w-6xl mx-auto text-center"
         >
-          {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
             <Newspaper className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">The Film Maker Entrepreneur</span>
+            <span className="text-sm font-medium text-primary">{t("blog.badge")}</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-            Interviews, Industry
-            <span className="gradient-text"> &amp; Info</span>
+            {t("blog.hero_title_1")}
+            <span className="gradient-text">{t("blog.hero_title_2")}</span>
           </h1>
 
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-            Filmmaker interviews, industry insights, production tips, film business school 
-            and the latest in film production technology. Get Pzazzed!
+            {t("blog.hero_desc")}
           </p>
 
-          {/* Topic pills */}
           <div className="flex flex-wrap items-center justify-center gap-3">
-            <Link to="/producer-blog/category/industry-insights" className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border hover:border-primary/40 hover:bg-primary/5 transition-colors">
+            <Link to={`${prefix}/producer-blog/category/industry-insights`} className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border hover:border-primary/40 hover:bg-primary/5 transition-colors">
               <Film className="w-4 h-4 text-primary" />
-              <span className="text-sm text-foreground">Industry Insights</span>
+              <span className="text-sm text-foreground">{t("blog.pill_industry")}</span>
             </Link>
-            <Link to="/producer-blog/category/production-tips" className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border hover:border-primary/40 hover:bg-primary/5 transition-colors">
+            <Link to={`${prefix}/producer-blog/category/production-tips`} className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border hover:border-primary/40 hover:bg-primary/5 transition-colors">
               <Lightbulb className="w-4 h-4 text-primary" />
-              <span className="text-sm text-foreground">Production Tips</span>
+              <span className="text-sm text-foreground">{t("blog.pill_production")}</span>
             </Link>
-            <Link to="/producer-blog/category/filmmaker-interviews" className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border hover:border-primary/40 hover:bg-primary/5 transition-colors">
+            <Link to={`${prefix}/producer-blog/category/filmmaker-interviews`} className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border hover:border-primary/40 hover:bg-primary/5 transition-colors">
               <Newspaper className="w-4 h-4 text-primary" />
-              <span className="text-sm text-foreground">Filmmaker Interviews</span>
+              <span className="text-sm text-foreground">{t("blog.pill_interviews")}</span>
             </Link>
           </div>
         </motion.div>

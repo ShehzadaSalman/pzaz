@@ -4,17 +4,23 @@ import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { blogPosts, categories } from "@/data/blogData";
+import { blogPostsUr, categoriesUr } from "@/data/blogDataUr";
 import BlogCard from "@/components/blog/BlogCard";
-
+import { useTranslation } from "react-i18next";
+import { useLocale } from "@/hooks/use-locale";
 const POSTS_PER_PAGE = 9;
 
 const BlogGrid = () => {
+  const { t } = useTranslation("blog");
+  const { locale } = useLocale();
+  const isUr = locale === "ur";
+  const posts = isUr ? blogPostsUr : blogPosts;
+  const cats = isUr ? categoriesUr : categories;
   const [activeCategory, setActiveCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
   const [visibleCount, setVisibleCount] = useState(POSTS_PER_PAGE);
-  
 
-  const filteredPosts = blogPosts.filter((post) => {
+  const filteredPosts = posts.filter((post) => {
     if (post.featured) return false;
     const matchesCategory = activeCategory === "all" || 
       (Array.isArray(post.category) ? post.category.includes(activeCategory as any) : post.category === activeCategory);
@@ -44,7 +50,7 @@ const BlogGrid = () => {
         {/* Filters */}
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 mb-12">
           <div className="flex flex-wrap gap-2">
-            {categories.map((category) => (
+            {cats.map((category) => (
               <Button
                 key={category.id}
                 variant={activeCategory === category.id ? "default" : "outline"}
@@ -60,7 +66,7 @@ const BlogGrid = () => {
           <div className="relative w-full lg:w-80">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
             <Input
-              placeholder="Search articles..."
+              placeholder={t("blog.search_placeholder")}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="pl-10"
@@ -92,7 +98,7 @@ const BlogGrid = () => {
               onClick={loadMore}
               className="rounded-full"
             >
-              Load More Articles
+              {t("blog.load_more")}
             </Button>
           </div>
         )}
@@ -100,7 +106,7 @@ const BlogGrid = () => {
         {/* Empty State */}
         {filteredPosts.length === 0 && (
           <div className="text-center py-16">
-            <p className="text-muted-foreground text-lg">No articles found matching your criteria.</p>
+            <p className="text-muted-foreground text-lg">{t("blog.empty_state")}</p>
             <Button
               variant="outline"
               className="mt-4"
@@ -109,7 +115,7 @@ const BlogGrid = () => {
                 setSearchQuery("");
               }}
             >
-              Clear filters
+              {t("blog.clear_filters")}
             </Button>
           </div>
         )}

@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { categories } from "@/data/blogData";
+import { categoriesUr } from "@/data/blogDataUr";
+import { useLocale } from "@/hooks/use-locale";
 
 interface ProducerBlogHeroProps {
   activeCategory: string;
@@ -8,6 +10,8 @@ interface ProducerBlogHeroProps {
 }
 
 const ProducerBlogHero = ({ activeCategory, onCategoryChange }: ProducerBlogHeroProps) => {
+  const { locale } = useLocale();
+  const cats = locale === "ur" ? categoriesUr : categories;
   return (
     <section className="pt-28 md:pt-32 pb-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#F0EAFF] via-[#F5F5F7] to-transparent pointer-events-none" />
@@ -38,7 +42,7 @@ const ProducerBlogHero = ({ activeCategory, onCategoryChange }: ProducerBlogHero
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex flex-wrap items-center justify-center gap-3"
         >
-          {categories.map((category) => (
+          {cats.map((category) => (
             <button
               key={category.id}
               onClick={() => onCategoryChange(category.id)}
