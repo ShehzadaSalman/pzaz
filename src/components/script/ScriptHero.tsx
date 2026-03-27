@@ -111,7 +111,6 @@ const ScriptHero = () => {
               loading="eager"
             />
           </div>
-          </div>
         </motion.div>
       </div>
     </section>
