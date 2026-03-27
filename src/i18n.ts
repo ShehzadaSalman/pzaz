@@ -50,7 +50,7 @@ const initPromise = i18next
       // Disable Suspense to prevent blank screens while translations load.
       // Components render immediately with fallback keys, then update when
       // the namespace finishes loading — no FCP penalty.
-      useSuspense: false,
+      useSuspense: true,
     },
   });
 
