@@ -11,6 +11,7 @@ interface ArticleRelatedProps {
 }
 
 const ArticleRelated = ({ currentSlug, category }: ArticleRelatedProps) => {
+  const { prefix } = useLocale();
   const categoryMatchedPosts = blogPosts
     .filter((post) => post.slug !== currentSlug)
     .filter((post) => Array.isArray(post.category) ? post.category.includes(category) : post.category === category)
@@ -29,7 +30,7 @@ const ArticleRelated = ({ currentSlug, category }: ArticleRelatedProps) => {
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center justify-between mb-10">
               <h2 className="text-2xl font-bold text-foreground">Related Articles</h2>
-              <Link to="/producer-blog" className="text-primary font-medium flex items-center gap-1 hover:gap-2 transition-all">
+              <Link to={`${prefix}/producer-blog`} className="text-primary font-medium flex items-center gap-1 hover:gap-2 transition-all">
                 View all <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -46,7 +47,7 @@ const ArticleRelated = ({ currentSlug, category }: ArticleRelatedProps) => {
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center justify-between mb-10">
             <h2 className="text-2xl font-bold text-foreground">Related Articles</h2>
-            <Link to="/producer-blog" className="text-primary font-medium flex items-center gap-1 hover:gap-2 transition-all">
+            <Link to={`${prefix}/producer-blog`} className="text-primary font-medium flex items-center gap-1 hover:gap-2 transition-all">
               View all <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -61,7 +62,7 @@ const ArticleRelated = ({ currentSlug, category }: ArticleRelatedProps) => {
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 className="group"
               >
-                <Link to={`/producer-blog/${post.slug}`}>
+                <Link to={`${prefix}/producer-blog/${post.slug}`}>
                   <div className="aspect-[16/10] rounded-xl overflow-hidden mb-4 bg-gradient-to-br from-muted to-muted/50">
                     <img
                       src={post.featuredImage}
