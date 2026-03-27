@@ -126,4 +126,8 @@ export const staticRoutes: string[] = [
   "/ur/indie-filmmakers",
   "/ur/demo-video",
   "/ur/sales-team",
+  "/ur/brand",
+  "/ur/culture",
+  "/ur/privacy",
+  "/ur/terms-of-use",
 ];
