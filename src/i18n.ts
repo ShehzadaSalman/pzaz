@@ -1,6 +1,6 @@
 import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
-import enJSON from "./locales/en.json";
+import resourcesToBackend from "i18next-resources-to-backend";
 
 const getInitialLang = () => {
   if (typeof window === "undefined") return "en";
@@ -17,35 +17,29 @@ if (typeof document !== "undefined") {
   document.documentElement.setAttribute("dir", savedLang === "ur" ? "rtl" : "ltr");
 }
 
-// Only English is bundled eagerly. Urdu is loaded on demand.
-const resources: Record<string, { translation: Record<string, unknown> }> = {
-  en: { translation: enJSON },
-};
-
-// If the initial language is Urdu, load it synchronously-ish before init
-const initPromise = (async () => {
-  if (savedLang === "ur") {
-    const urJSON = await import("./locales/ur.json");
-    resources.ur = { translation: urJSON.default ?? urJSON };
-  }
-
-  await i18next.use(initReactI18next).init({
+// All namespaces are loaded on-demand via dynamic import.
+// This means each page only loads the translations it needs.
+const initPromise = i18next
+  .use(initReactI18next)
+  .use(
+    resourcesToBackend(
+      (language: string, namespace: string) =>
+        import(`./locales/${language}/${namespace}.json`)
+    )
+  )
+  .init({
     lng: savedLang,
     fallbackLng: "en",
-    resources,
+    defaultNS: "common",
+    ns: ["common"], // Only common is loaded eagerly on every page
+    partialBundledLanguages: true,
     interpolation: {
       escapeValue: false,
     },
+    react: {
+      useSuspense: true,
+    },
   });
-})();
-
-// Lazy-load Urdu when switching languages at runtime
-i18next.on("languageChanged", async (lng) => {
-  if (lng === "ur" && !i18next.hasResourceBundle("ur", "translation")) {
-    const urJSON = await import("./locales/ur.json");
-    i18next.addResourceBundle("ur", "translation", urJSON.default ?? urJSON, true, true);
-  }
-});
 
 export { initPromise };
 export default i18next;
