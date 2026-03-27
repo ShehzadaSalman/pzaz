@@ -28,17 +28,6 @@ const AIContextSection = () => {
   return (
     <section className="section-padding relative overflow-hidden" style={{ backgroundColor: "#FBFBFB" }}>
       <div className="container mx-auto px-6 relative z-10">
-        {/* Heading */}
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="font-lato font-extrabold text-[48px] leading-[56px] text-foreground text-center mb-12"
-        >
-          {t("ai_context.heading")}
-        </motion.h2>
-
         {/* Video */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -60,15 +49,6 @@ const AIContextSection = () => {
           </div>
         </motion.div>
 
-        {/* Caption below video */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="font-lato font-normal text-[20px] leading-[30px] text-[#878787] text-center mt-8"
-          dangerouslySetInnerHTML={{ __html: t("ai_context.caption") }}
-        />
       </div>
     </section>
   );
