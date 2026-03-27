@@ -4,12 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Mail, Sparkles, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
 import { z } from "zod";
+import { useTranslation } from "react-i18next";
 
 const newsletterSchema = z.object({
   email: z.string().trim().email({ message: "Please enter a valid email address" }).max(255),
 });
 
 const BlogNewsletter = () => {
+  const { t } = useTranslation("blog");
   const [email, setEmail] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -40,11 +42,11 @@ const BlogNewsletter = () => {
         setEmail("");
       } else {
         setStatus("error");
-        setError("Something went wrong. Please try again.");
+        setError(t("blog.newsletter_error_generic"));
       }
     } catch {
       setStatus("error");
-      setError("Unable to subscribe. Please try again later.");
+      setError(t("blog.newsletter_error_network"));
     }
   };
 
@@ -60,22 +62,21 @@ const BlogNewsletter = () => {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Stay Updated</span>
+            <span className="text-sm font-medium text-primary">{t("blog.newsletter_badge")}</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            Get weekly insights in your inbox
+            {t("blog.newsletter_title")}
           </h2>
 
           <p className="text-lg text-muted-foreground mb-8">
-            Join 5,000+ filmmakers receiving our weekly digest of industry insights,
-            production tips, and exclusive interviews.
+            {t("blog.newsletter_desc")}
           </p>
 
           {status === "success" ? (
             <div className="flex items-center justify-center gap-2 text-primary font-medium">
               <CheckCircle className="w-5 h-5" />
-              <span>You're subscribed! Welcome aboard.</span>
+              <span>{t("blog.newsletter_success")}</span>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
@@ -83,7 +84,7 @@ const BlogNewsletter = () => {
                 <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                 <Input
                   type="email"
-                  placeholder="Enter your email"
+                  placeholder={t("blog.newsletter_email_placeholder")}
                   className="pl-10 h-12"
                   value={email}
                   onChange={(e) => { setEmail(e.target.value); setError(null); }}
@@ -92,8 +93,8 @@ const BlogNewsletter = () => {
               </div>
               <Button type="submit" size="lg" className="h-12" disabled={status === "loading"}>
                 {status === "loading" ? (
-                  <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Subscribing...</>
-                ) : "Subscribe"}
+                  <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> {t("blog.newsletter_subscribing")}</>
+                ) : t("blog.newsletter_subscribe")}
               </Button>
             </form>
           )}
@@ -107,7 +108,7 @@ const BlogNewsletter = () => {
 
           {status !== "success" && (
             <p className="text-sm text-muted-foreground mt-4">
-              No spam, unsubscribe anytime. We respect your inbox.
+              {t("blog.newsletter_no_spam")}
             </p>
           )}
         </motion.div>
