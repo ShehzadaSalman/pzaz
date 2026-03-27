@@ -1,33 +1,48 @@
 
 
-## Fix: Prevent raw i18n keys flashing on page refresh
+## Fix: Pre-render Urdu pages with actual translations (SSG approach)
 
-### Root Cause
+### Problem
 
-The i18n config has `useSuspense: false`, which means components render immediately with raw translation keys (like `hero.headline1`, `script.hero_h1a`) as fallback text while their namespace JSON files load asynchronously. Only `common` and `home` namespaces are pre-bundled for English — every other page's translations arrive a moment later, causing the flash.
+The `prerender()` function in `main.tsx` generates static HTML for all routes including `/ur/*`, but:
+1. `getInitialLang()` returns `"en"` during SSR (no `window`)
+2. `renderToString` is synchronous — can't resolve async `import()` for Urdu namespaces
+3. Result: Urdu pages are pre-rendered with English fallbacks or raw keys
+
+This means on hard refresh, users see the wrong content until React hydrates and i18next loads the correct translations client-side.
 
 ### Solution
 
-Re-enable React Suspense for i18n so that components wait for their translations before rendering, and show a clean branded loader instead of raw keys.
+Load the correct language and all required namespaces **before** calling `renderToString` in the `prerender()` function. This bakes the fully translated content into the static HTML for every route — zero flash, better SEO, faster perceived load.
 
 ### Changes
 
-**1. `src/i18n.ts`** — Set `useSuspense: true`
-- Change `useSuspense: false` to `useSuspense: true`
-- This makes `useTranslation()` suspend the component tree until the requested namespace is loaded
+**1. `src/i18n.ts`** — Export a factory function for SSR
+- Add an `initI18nForSSR(locale, namespaces)` function that creates a fresh i18next instance with all needed namespaces pre-loaded synchronously (using `await import()`)
+- The existing client-side init stays unchanged
 
-**2. `src/App.tsx`** — Replace `<Suspense fallback={null}>` with a branded loading screen
-- Create a minimal `PageLoader` component inline (Pzaz logo centered, subtle fade-in)
-- Use it as the Suspense fallback so users see the brand loader for ~200-400ms while translations + lazy components load together
+**2. `src/main.tsx` — `prerender()` function**
+- Detect locale from `data.url` (if path starts with `/ur/`, locale = `"ur"`, else `"en"`)
+- Determine which namespaces the route needs (map route patterns to namespace names)
+- Call `initI18nForSSR(locale, namespaces)` and await it before `renderToString`
+- Pass the initialized i18n instance via `I18nextProvider` in the SSR tree
+- This ensures `renderToString` outputs fully translated HTML for every page
 
-**3. `src/main.tsx`** — Wait for `initPromise` before mounting React
-- Import `initPromise` from `./i18n`
-- Wrap `createRoot().render()` inside `initPromise.then(...)` so the default namespace (`common`) is guaranteed loaded before first render
-- This prevents even Header/Footer keys from flashing
+**3. Route-to-namespace mapping**
+- Create a simple mapping: `/script` → `["common", "script"]`, `/pricing` → `["common", "pricing"]`, etc.
+- Default to `["common", "home"]` for the index route
+- This ensures only relevant namespaces are loaded per route during prerender
 
 ### What this achieves
-- Zero raw translation keys visible on any page, any locale
-- Brief branded loader (~200-400ms) on hard refresh while translations load
-- No impact on subsequent client-side navigation (namespaces cache after first load)
-- English homepage remains near-instant since `common` + `home` are pre-bundled
+- Every pre-rendered page (English and Urdu) contains fully translated content in the static HTML
+- Zero translation key flash on hard refresh — content is already in the HTML before JS loads
+- Better SEO for Urdu pages — search engines see actual Urdu text
+- No need for client-side loaders or CSS hiding tricks
+- Client-side hydration still works normally for navigation between pages
+
+### Technical notes
+- `renderToString` doesn't support Suspense, so all translations must be loaded before the call
+- The `I18nextProvider` from `react-i18next` allows passing a custom i18n instance for SSR
+- Bundle size is unaffected — translations are only loaded at build time, not shipped in the JS bundle
+- The existing client-side `useSuspense: true` + `PageLoader` remains as a safety net for client-side navigation to new namespaces
 
