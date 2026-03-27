@@ -130,4 +130,8 @@ export const staticRoutes: string[] = [
   "/ur/culture",
   "/ur/privacy",
   "/ur/terms-of-use",
+  "/ur/producer-blog",
+  "/ur/producer-blog/category/industry-insights",
+  "/ur/producer-blog/category/production-tips",
+  "/ur/producer-blog/category/filmmaker-interviews",
 ];

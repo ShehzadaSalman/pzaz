@@ -9,13 +9,19 @@ import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { blogPosts } from "@/data/blogData";
 import { blogPosts as blogPostsFull } from "@/data/blogDataFull";
+import { blogPostsUr } from "@/data/blogDataUr";
+import { useLocale } from "@/hooks/use-locale";
 
 const BlogArticle = () => {
   const { slug } = useParams<{ slug: string }>();
-  const article = blogPosts.find((post) => post.slug === slug);
+  const { locale, prefix } = useLocale();
+  const isUr = locale === "ur";
 
-  // Look up full content synchronously so it's available on first render (critical for SEO/pre-rendering)
-  const fullArticle = blogPostsFull.find((post) => post.slug === slug);
+  const posts = isUr ? blogPostsUr : blogPosts;
+  const article = posts.find((post) => post.slug === slug);
+
+  // Full content lookup – Urdu articles have content inline; English uses blogDataFull
+  const fullArticle = isUr ? null : blogPostsFull.find((post) => post.slug === slug);
   const displayArticle = article
     ? { ...article, content: fullArticle?.content || article.content }
     : null;
@@ -29,12 +35,16 @@ const BlogArticle = () => {
       <PageLayout>
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-foreground mb-4">Article Not Found</h1>
-            <p className="text-muted-foreground mb-6">The article you're looking for doesn't exist.</p>
-            <Link to="/producer-blog">
+            <h1 className="text-4xl font-bold text-foreground mb-4">
+              {isUr ? "مضمون نہیں ملا" : "Article Not Found"}
+            </h1>
+            <p className="text-muted-foreground mb-6">
+              {isUr ? "آپ جو مضمون تلاش کر رہے ہیں وہ موجود نہیں۔" : "The article you're looking for doesn't exist."}
+            </p>
+            <Link to={`${prefix}/producer-blog`}>
               <Button variant="ghost" className="gap-2">
                 <ArrowLeft className="w-4 h-4" />
-                Back to Blog
+                {isUr ? "بلاگ پر واپس جائیں" : "Back to Blog"}
               </Button>
             </Link>
           </div>
@@ -43,19 +53,20 @@ const BlogArticle = () => {
     );
   }
 
+  const blogBase = `https://pzaz.io${prefix}/producer-blog`;
+
   return (
     <PageLayout headerVariant="sticky">
       <SEO
         title={article.seo?.title || `${article.title} | Pzaz`}
         description={article.seo?.description || article.excerpt}
         image={article.seo?.ogImage || (article.featuredImage !== "/placeholder.svg" ? article.featuredImage : "https://pzaz.io/og-image.png")}
-        url={`https://pzaz.io/producer-blog/${slug}`}
+        url={`${blogBase}/${slug}`}
         type="article"
         keywords={article.seo?.keywords}
         canonical={article.seo?.canonical}
       />
 
-      {/* JSON-LD Article Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -68,25 +79,18 @@ const BlogArticle = () => {
             author: { "@type": "Person", name: article.authorName },
             datePublished: article.publishedAt,
             dateModified: article.publishedAt,
-            url: `https://pzaz.io/producer-blog/${slug}`,
-            mainEntityOfPage: {
-              "@type": "WebPage",
-              "@id": `https://pzaz.io/producer-blog/${slug}`,
-            },
+            url: `${blogBase}/${slug}`,
+            mainEntityOfPage: { "@type": "WebPage", "@id": `${blogBase}/${slug}` },
             publisher: {
               "@type": "Organization",
               name: "Pzaz",
               url: "https://pzaz.io",
-              logo: {
-                "@type": "ImageObject",
-                url: "https://pzaz.io/og-image.png",
-              },
+              logo: { "@type": "ImageObject", url: "https://pzaz.io/og-image.png" },
             },
           }),
         }}
       />
 
-      {/* BreadcrumbList JSON-LD */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -94,9 +98,9 @@ const BlogArticle = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://pzaz.io" },
-              { "@type": "ListItem", position: 2, name: "Blog", item: "https://pzaz.io/producer-blog" },
-              { "@type": "ListItem", position: 3, name: article.title, item: `https://pzaz.io/producer-blog/${slug}` },
+              { "@type": "ListItem", position: 1, name: isUr ? "ہوم" : "Home", item: `https://pzaz.io${prefix}` },
+              { "@type": "ListItem", position: 2, name: isUr ? "بلاگ" : "Blog", item: blogBase },
+              { "@type": "ListItem", position: 3, name: article.title, item: `${blogBase}/${slug}` },
             ],
           }),
         }}

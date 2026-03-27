@@ -10,7 +10,9 @@ import SEO from "@/components/SEO";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { blogPosts, majorCategories, categories } from "@/data/blogData";
+import { blogPostsUr, majorCategoriesUr, categoriesUr } from "@/data/blogDataUr";
 import type { MajorCategoryId } from "@/data/blogData";
+import { useLocale } from "@/hooks/use-locale";
 
 const categoryIcons: Record<string, React.ReactNode> = {
   "industry-insights": <Film className="w-5 h-5" />,
@@ -22,6 +24,12 @@ const BlogCategory = () => {
   const { categorySlug } = useParams<{ categorySlug: string }>();
   const [activeSubCategory, setActiveSubCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
+  const { locale, prefix } = useLocale();
+  const isUr = locale === "ur";
+
+  const majCats = isUr ? majorCategoriesUr : majorCategories;
+  const allPosts = isUr ? blogPostsUr : blogPosts;
+  const allCats = isUr ? categoriesUr : categories;
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "auto" });
@@ -29,13 +37,13 @@ const BlogCategory = () => {
     setSearchQuery("");
   }, [categorySlug]);
 
-  const category = majorCategories.find((c) => c.slug === categorySlug);
+  const category = majCats.find((c) => c.slug === categorySlug);
 
   if (!category) {
-    return <Navigate to="/producer-blog" replace />;
+    return <Navigate to={`${prefix}/producer-blog`} replace />;
   }
 
-  const majorPosts = blogPosts.filter((p) => p.majorCategory === category.id);
+  const majorPosts = allPosts.filter((p) => p.majorCategory === category.id);
 
   const filteredPosts = majorPosts.filter((post) => {
     const matchesSubCategory =
@@ -49,8 +57,7 @@ const BlogCategory = () => {
     return matchesSubCategory && matchesSearch;
   });
 
-  // Get sub-categories that actually have posts in this major category
-  const relevantSubCategories = categories.filter(
+  const relevantSubCategories = allCats.filter(
     (cat) =>
       cat.id === "all" ||
       majorPosts.some((post) =>
@@ -65,8 +72,8 @@ const BlogCategory = () => {
       <SEO
         title={`${category.id} – Pzaz Blog`}
         description={category.description}
-        url={`https://pzaz.io/producer-blog/category/${category.slug}`}
-        canonical={`https://pzaz.io/producer-blog/category/${category.slug}`}
+        url={`https://pzaz.io${prefix}/producer-blog/category/${category.slug}`}
+        canonical={`https://pzaz.io${prefix}/producer-blog/category/${category.slug}`}
       />
       <Header />
       <main>
@@ -104,11 +111,11 @@ const BlogCategory = () => {
             <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 mb-12">
               <div className="flex flex-wrap items-center gap-2">
                 <Link
-                  to="/producer-blog"
+                  to={`${prefix}/producer-blog`}
                   className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-sm font-medium text-primary hover:bg-primary/10 transition-colors"
                 >
                   <ArrowLeft className="w-3.5 h-3.5" />
-                  All Articles
+                  {isUr ? "تمام مضامین" : "All Articles"}
                 </Link>
                 <div className="w-px h-6 bg-border mx-1 hidden sm:block" />
                 {relevantSubCategories.filter((cat) => cat.id !== "all").map((cat) => (
@@ -127,7 +134,7 @@ const BlogCategory = () => {
               <div className="relative w-full lg:w-80">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                 <Input
-                  placeholder="Search articles..."
+                  placeholder={isUr ? "مضامین تلاش کریں..." : "Search articles..."}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-10"
@@ -136,7 +143,7 @@ const BlogCategory = () => {
             </div>
 
             <p className="text-muted-foreground mb-8">
-              {filteredPosts.length} article{filteredPosts.length !== 1 ? "s" : ""}
+              {filteredPosts.length} {isUr ? "مضامین" : (filteredPosts.length !== 1 ? "articles" : "article")}
             </p>
 
             <div className="flex flex-col gap-8">
@@ -155,7 +162,9 @@ const BlogCategory = () => {
 
             {filteredPosts.length === 0 && (
               <div className="text-center py-16">
-                <p className="text-muted-foreground text-lg">No articles found matching your criteria.</p>
+                <p className="text-muted-foreground text-lg">
+                  {isUr ? "آپ کے معیار سے مطابقت رکھنے والا کوئی مضمون نہیں ملا۔" : "No articles found matching your criteria."}
+                </p>
                 <Button
                   variant="outline"
                   className="mt-4"
@@ -164,7 +173,7 @@ const BlogCategory = () => {
                     setSearchQuery("");
                   }}
                 >
-                  Clear filters
+                  {isUr ? "فلٹرز صاف کریں" : "Clear filters"}
                 </Button>
               </div>
             )}
