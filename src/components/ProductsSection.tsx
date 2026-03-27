@@ -75,29 +75,6 @@ const ProductsSection = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         {/* Section header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-9"
-        >
-          <SectionHeader
-            pillText={t("products.pill")}
-            pillClassName="bg-white text-primary mb-0"
-            title={
-              <>
-                {t("products.title1")}{" "}
-                <span className="font-lato font-extrabold md:text-[48px] tracking-normal bg-clip-text text-transparent bg-gradient-to-r from-[#409DFF] to-[#3207BC]">
-                  {t("products.title2")}
-                </span>
-              </>
-            }
-            titleClassName="text-balance"
-            description={t("products.description")}
-            descriptionClassName="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed"
-          />
-        </motion.div>
 
         {/* Video */}
         <motion.div
