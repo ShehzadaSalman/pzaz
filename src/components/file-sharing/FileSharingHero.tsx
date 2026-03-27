@@ -8,6 +8,7 @@ import ctaPlayIcon from "@/assets/cta-play-icon.svg";
 import aiResearchIcon from "@/assets/ai-research-icon.svg";
 import { useIndieCheckoutUrl } from "@/lib/checkout";
 import { useTranslation } from "react-i18next";
+import fileSharingBanner from "@/assets/file-sharing-hero-banner.png";
 
 const FileSharingHero = () => {
   const { t } = useTranslation('file-sharing');
