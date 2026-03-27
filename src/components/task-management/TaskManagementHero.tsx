@@ -107,7 +107,6 @@ const TaskManagementHero = () => {
               loading="eager"
             />
           </div>
-          </div>
         </motion.div>
       </div>
     </section>
