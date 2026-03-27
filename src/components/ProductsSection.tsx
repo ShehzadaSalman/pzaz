@@ -16,23 +16,26 @@ const ProductsSection = () => {
   const { symbol, getPrice } = useCurrency();
   const indieCheckoutUrl = useIndieCheckoutUrl();
   const videoRef = useRef<HTMLVideoElement>(null);
+  const video2Ref = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
+    const videos = [videoRef.current, video2Ref.current].filter(Boolean) as HTMLVideoElement[];
+    
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          video.play().catch(() => {});
-        } else {
-          video.pause();
-        }
+      (entries) => {
+        entries.forEach((entry) => {
+          const video = entry.target as HTMLVideoElement;
+          if (entry.isIntersecting) {
+            video.play().catch(() => {});
+          } else {
+            video.pause();
+          }
+        });
       },
       { threshold: 0.3 }
     );
 
-    observer.observe(video);
+    videos.forEach((v) => observer.observe(v));
     return () => observer.disconnect();
   }, []);
 
@@ -99,18 +102,27 @@ const ProductsSection = () => {
 
         <div className="mb-[87px]" />
         <hr className="border-0 border-t border-[#E3D6F5] max-w-6xl mx-auto" />
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
+
+        {/* Part 2 Video */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="font-lato font-bold mt-[55px] mb-12 text-[24px] tracking-normal text-center md:mb-[74px]"
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="max-w-6xl mx-auto mt-[55px] mb-[74px]"
         >
-          {t("products.divider")}{" "}
-          <span className="font-lato font-normal italic text-[24px] tracking-normal text-[#878787]">
-            {t("products.divider_sub")}
-          </span>
-        </motion.p>
+          <div className="rounded-2xl overflow-hidden">
+            <video
+              ref={video2Ref}
+              className="w-full"
+              muted
+              playsInline
+              preload="metadata"
+            >
+              <source src="/videos/products-section-p2.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </motion.div>
 
         {/* Products grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-[46px] max-w-6xl mx-auto">
