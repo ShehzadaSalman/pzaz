@@ -2,16 +2,25 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import { getArticleBySlug, getRelatedArticles, kbCategories } from "@/data/knowledgeBaseData";
+import { kbArticlesUr, kbCategoriesUr } from "@/data/knowledgeBaseDataUr";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import KBSearchBar from "@/components/knowledge-base/KBSearchBar";
 import SEO from "@/components/SEO";
 import NotFound from "./NotFound";
+import { useLocale } from "@/hooks/use-locale";
+import type { KBArticle } from "@/data/knowledgeBaseData";
 
-const categoryLabel: Record<string, string> = {
+const categoryLabelEn: Record<string, string> = {
   "getting-started": "Getting Started",
   "functions": "Functions",
   "tools-and-features": "Tools & Features",
+};
+
+const categoryLabelUr: Record<string, string> = {
+  "getting-started": "شروعات",
+  "functions": "فنکشنز",
+  "tools-and-features": "ٹولز اور خصوصیات",
 };
 
 const renderContent = (content: string): React.ReactNode[] => {
@@ -69,33 +78,49 @@ const renderContent = (content: string): React.ReactNode[] => {
 
 const KnowledgeBaseArticle = () => {
   const { slug } = useParams<{ slug: string }>();
-  const article = slug ? getArticleBySlug(slug) : undefined;
+  const { locale, prefix } = useLocale();
+  const isUr = locale === "ur";
+
+  const article = isUr
+    ? kbArticlesUr.find((a) => a.slug === slug)
+    : slug ? getArticleBySlug(slug) : undefined;
 
   if (!article) return <NotFound />;
 
-  const related = getRelatedArticles(article);
+  const related = isUr
+    ? (article.relatedSlugs || [])
+        .map((s) => kbArticlesUr.find((a) => a.slug === s))
+        .filter((a): a is KBArticle => !!a)
+    : getRelatedArticles(article);
+
+  const categoryLabel = isUr ? categoryLabelUr : categoryLabelEn;
   const catLabel = categoryLabel[article.category];
-  const catMeta = kbCategories.find((c) => c.id === article.category);
+  const cats = isUr ? kbCategoriesUr : kbCategories;
+  const catMeta = cats.find((c) => c.id === article.category);
 
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title={`${article.title} – Pzaz Knowledge Base`}
-        description={`Learn about ${article.title} in Pzaz.`}
-        url={`https://pzaz.io/knowledge-base/${article.slug}`}
-        canonical={`https://pzaz.io/knowledge-base/${article.slug}`}
+        title={`${article.title} – Pzaz ${isUr ? "نالج بیس" : "Knowledge Base"}`}
+        description={`${isUr ? "جانیں" : "Learn about"} ${article.title}${isUr ? " Pzaz میں۔" : " in Pzaz."}`}
+        url={`https://pzaz.io${prefix}/knowledge-base/${article.slug}`}
+        canonical={`https://pzaz.io${prefix}/knowledge-base/${article.slug}`}
       />
       <Header variant="sticky" />
 
       <div className="max-w-5xl mx-auto px-6 pt-10 pb-4">
         {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8" aria-label="Breadcrumb">
-          <Link to="/" className="hover:text-foreground transition-colors">Home</Link>
+          <Link to={`${prefix}/`} className="hover:text-foreground transition-colors">
+            {isUr ? "ہوم" : "Home"}
+          </Link>
           <ChevronRight className="h-3.5 w-3.5" />
-          <Link to="/knowledge-base" className="hover:text-foreground transition-colors">Knowledge Base</Link>
+          <Link to={`${prefix}/knowledge-base`} className="hover:text-foreground transition-colors">
+            {isUr ? "نالج بیس" : "Knowledge Base"}
+          </Link>
           <ChevronRight className="h-3.5 w-3.5" />
           <Link
-            to={`/knowledge-base`}
+            to={`${prefix}/knowledge-base`}
             className="hover:text-foreground transition-colors"
           >
             {catLabel}
@@ -106,7 +131,7 @@ const KnowledgeBaseArticle = () => {
 
         {/* Search */}
         <div className="mb-10">
-          <KBSearchBar placeholder="Search the knowledge base…" />
+          <KBSearchBar placeholder={isUr ? "نالج بیس تلاش کریں…" : "Search the knowledge base…"} />
         </div>
       </div>
 
@@ -132,13 +157,13 @@ const KnowledgeBaseArticle = () => {
             <aside>
               <div className="rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-card)] sticky top-24">
                 <h3 className="text-sm font-semibold text-foreground mb-4 uppercase tracking-wider">
-                  Related Articles
+                  {isUr ? "متعلقہ مضامین" : "Related Articles"}
                 </h3>
                 <ul className="flex flex-col gap-1">
                   {related.map((rel) => (
                     <li key={rel.slug}>
                       <Link
-                        to={`/knowledge-base/${rel.slug}`}
+                        to={`${prefix}/knowledge-base/${rel.slug}`}
                         className="flex items-start gap-2 text-sm text-foreground/80 hover:text-primary transition-colors py-2 group"
                       >
                         <ChevronRight className="h-3.5 w-3.5 mt-0.5 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
@@ -150,10 +175,10 @@ const KnowledgeBaseArticle = () => {
 
                 <div className="mt-6 pt-5 border-t border-border">
                   <Link
-                    to="/knowledge-base"
+                    to={`${prefix}/knowledge-base`}
                     className="text-xs text-primary hover:underline"
                   >
-                    ← Back to Knowledge Base
+                    {isUr ? "← نالج بیس پر واپس" : "← Back to Knowledge Base"}
                   </Link>
                 </div>
               </div>

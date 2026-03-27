@@ -2,11 +2,25 @@ import React, { useState, useRef, useEffect } from "react";
 import { Search, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { kbArticles, KBArticle } from "@/data/knowledgeBaseData";
+import { kbArticlesUr } from "@/data/knowledgeBaseDataUr";
+import { useLocale } from "@/hooks/use-locale";
 
 interface KBSearchBarProps {
   placeholder?: string;
   autoFocus?: boolean;
 }
+
+const categoryLabelEn: Record<string, string> = {
+  "getting-started": "Getting Started",
+  "functions": "Functions",
+  "tools-and-features": "Tools & Features",
+};
+
+const categoryLabelUr: Record<string, string> = {
+  "getting-started": "شروعات",
+  "functions": "فنکشنز",
+  "tools-and-features": "ٹولز اور خصوصیات",
+};
 
 const KBSearchBar = ({ placeholder = "Search the knowledge base…", autoFocus = false }: KBSearchBarProps) => {
   const [query, setQuery] = useState("");
@@ -14,6 +28,10 @@ const KBSearchBar = ({ placeholder = "Search the knowledge base…", autoFocus =
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
+  const { locale, prefix } = useLocale();
+  const isUr = locale === "ur";
+  const articles = isUr ? kbArticlesUr : kbArticles;
+  const categoryLabel = isUr ? categoryLabelUr : categoryLabelEn;
 
   useEffect(() => {
     const q = query.trim().toLowerCase();
@@ -22,12 +40,12 @@ const KBSearchBar = ({ placeholder = "Search the knowledge base…", autoFocus =
       setOpen(false);
       return;
     }
-    const matched = kbArticles.filter((a) =>
+    const matched = articles.filter((a) =>
       a.title.toLowerCase().includes(q) || a.category.replace(/-/g, " ").includes(q)
     );
     setResults(matched.slice(0, 8));
     setOpen(matched.length > 0);
-  }, [query]);
+  }, [query, articles]);
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {
@@ -42,13 +60,7 @@ const KBSearchBar = ({ placeholder = "Search the knowledge base…", autoFocus =
   const handleSelect = (slug: string) => {
     setQuery("");
     setOpen(false);
-    navigate(`/knowledge-base/${slug}`);
-  };
-
-  const categoryLabel: Record<string, string> = {
-    "getting-started": "Getting Started",
-    "functions": "Functions",
-    "tools-and-features": "Tools & Features",
+    navigate(`${prefix}/knowledge-base/${slug}`);
   };
 
   return (
