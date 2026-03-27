@@ -1,12 +1,12 @@
 /**
  * Urdu translations for blog post metadata (titles, excerpts).
- * Slugs, images, dates, and structural fields remain unchanged.
- * Full article content lives in blogDataFullUr.ts.
+ * Full article content is merged from blogContentUr.ts.
  */
 
 const BLOG_IMG = "https://zrlonqczjzkgzmxiwdcl.supabase.co/storage/v1/object/public/blog-images";
 
 import type { BlogPost, BlogCategoryId, BlogFilterCategoryId, MajorCategoryId } from "./blogData";
+import blogContentUr from "./blogContentUr";
 
 export const categoriesUr: { id: BlogFilterCategoryId; label: string }[] = [
   { id: "all", label: "سب" },
