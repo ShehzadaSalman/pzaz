@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Clock, ArrowRight } from "lucide-react";
 import { BlogCategoryId, blogPosts } from "@/data/blogData";
+import { useLocale } from "@/hooks/use-locale";
 
 interface ArticleRelatedProps {
   currentSlug: string;
