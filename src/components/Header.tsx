@@ -268,7 +268,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 4 }}
                         transition={{ duration: 0.15 }}
-                        className="absolute top-full left-0 mt-2 py-2 min-w-[180px] rounded-lg border bg-background shadow-lg"
+                        className="absolute top-full left-0 mt-2 py-2 min-w-[180px] rounded-lg border bg-background shadow-lg whitespace-nowrap"
                         style={{ borderColor: "#D4BAF4" }}
                       >
                         {item.children?.map((child) =>
