@@ -100,64 +100,13 @@ const FileSharingHero = () => {
           className="mt-16 lg:mt-24 max-w-6xl mx-auto"
         >
           <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border/50 bg-card">
-            <div className="absolute inset-0 gradient-hero-bg opacity-5" />
-            <div className="p-2">
-              <div className="bg-muted/50 rounded-xl aspect-[16/9] flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-4 bg-background rounded-lg shadow-inner flex">
-                  <div className="w-16 lg:w-52 border-r border-border/50 p-3 hidden sm:block">
-                    <div className="flex items-center gap-2 mb-4">
-                      <div className="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center">
-                        <FolderOpen className="w-4 h-4 text-primary-foreground" />
-                      </div>
-                      <span className="text-xs font-medium hidden lg:block">Media Library</span>
-                    </div>
-                    <div className="space-y-2">
-                      {["Scripts", "Storyboards", "Reference Imgs", "Raw Footage", "Exports"].map((f, i) => (
-                        <div key={i} className={`h-6 px-2 rounded text-[10px] flex items-center ${i === 0 ? "bg-primary/20 text-primary" : "bg-muted text-muted-foreground"}`}>
-                          <span className="truncate hidden lg:block">{f}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="flex-1 p-4">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="h-3 bg-primary/20 rounded w-32" />
-                      <div className="h-3 bg-muted rounded w-20" />
-                    </div>
-                    <div className="grid grid-cols-4 gap-2">
-                      {[
-                        { name: "scene-12-ref.jpg", color: "bg-purple-100" },
-                        { name: "script_v4_FINAL.pdf", color: "bg-blue-50" },
-                        { name: "moodboard-v2.png", color: "bg-pink-50" },
-                        { name: "call-sheet-week3.xlsx", color: "bg-green-50" },
-                        { name: "shot-list-D12.pdf", color: "bg-yellow-50" },
-                        { name: "costume-ref.jpg", color: "bg-orange-50" },
-                        { name: "budget_draft_v5.xlsx", color: "bg-teal-50" },
-                        { name: "storyboard-act2.png", color: "bg-purple-50" },
-                      ].map((file, i) => (
-                        <div key={i} className={`rounded-lg border border-border/40 ${file.color} p-2 flex flex-col gap-1 hidden lg:flex`}>
-                          <div className="w-full aspect-square rounded bg-white/60 flex items-center justify-center">
-                            <div className="w-4 h-5 rounded-sm bg-current opacity-20" />
-                          </div>
-                          <p className="text-[7px] text-foreground/60 truncate leading-tight">{file.name}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="w-16 lg:w-56 border-l border-border/50 p-3 hidden md:block">
-                    <div className="text-xs font-medium mb-3 hidden lg:block">File Details</div>
-                    <div className="space-y-2">
-                      {["Scene", "Version", "Shared with", "Updated"].map((f, i) => (
-                        <div key={i} className="flex items-center justify-between p-2 bg-muted/50 rounded">
-                          <span className="text-[10px] text-muted-foreground hidden lg:block">{f}</span>
-                          <span className="text-[10px] font-medium text-primary">{["Scene 12", "v4 FINAL", "All Depts", "2h ago"][i]}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <img
+              src={fileSharingBanner}
+              alt="Pzaz File Sharing & Storage interface"
+              className="w-full h-auto"
+              loading="eager"
+            />
+          </div>
           </div>
         </motion.div>
       </div>
