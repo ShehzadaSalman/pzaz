@@ -2,6 +2,11 @@ import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
 import resourcesToBackend from "i18next-resources-to-backend";
 
+// Bundle English common translations inline so English users never wait for
+// a network request before first paint. Other languages and namespaces are
+// still loaded on-demand via dynamic import.
+import enCommon from "./locales/en/common.json";
+
 const getInitialLang = () => {
   if (typeof window === "undefined") return "en";
   const pathSegment = window.location.pathname.split("/")[1];
@@ -31,13 +36,20 @@ const initPromise = i18next
     lng: savedLang,
     fallbackLng: "en",
     defaultNS: "common",
-    ns: ["common"], // Only common is loaded eagerly on every page
+    ns: ["common"],
     partialBundledLanguages: true,
+    // Pre-bundle English common so it's available synchronously
+    resources: {
+      en: { common: enCommon },
+    },
     interpolation: {
       escapeValue: false,
     },
     react: {
-      useSuspense: true,
+      // Disable Suspense to prevent blank screens while translations load.
+      // Components render immediately with fallback keys, then update when
+      // the namespace finishes loading — no FCP penalty.
+      useSuspense: false,
     },
   });
 
