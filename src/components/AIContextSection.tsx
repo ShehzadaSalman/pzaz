@@ -1,10 +1,30 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import aiContextIllustration from "@/assets/ai-context-illustration.svg";
 import { useTranslation } from "react-i18next";
 
 const AIContextSection = () => {
   const { t } = useTranslation('home');
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="section-padding relative overflow-hidden" style={{ backgroundColor: "#FBFBFB" }}>
       <div className="container mx-auto px-6 relative z-10">
@@ -19,36 +39,28 @@ const AIContextSection = () => {
           {t("ai_context.heading")}
         </motion.h2>
 
-        {/* Two-column description */}
+        {/* Video */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid md:grid-cols-2 gap-8 md:gap-52 max-w-5xl mx-auto relative z-10 mb-[-80px]"
+          className="max-w-6xl mx-auto"
         >
-          <p className="font-lato font-normal text-[20px] leading-[30px] text-[#878787]">
-            {t("ai_context.para1")}
-          </p>
-          <p className="font-lato font-normal text-[20px] leading-[30px] text-[#878787]">
-            {t("ai_context.para2")}
-            <br /><br />
-            {t("ai_context.para3")}
-          </p>
+          <div className="rounded-2xl overflow-hidden">
+            <video
+              ref={videoRef}
+              className="w-full"
+              muted
+              playsInline
+              preload="metadata"
+            >
+              <source src="/videos/ai-context-section.mp4" type="video/mp4" />
+            </video>
+          </div>
         </motion.div>
 
-        {/* Illustration — slides up behind the text */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex justify-center relative z-0 mt-16 md:mt-0"
-        >
-          <img src={aiContextIllustration} alt="AI context illustration" className="w-full max-w-3xl h-auto" width="768" height="516" loading="lazy" />
-        </motion.div>
-
-        {/* Caption below illustration */}
+        {/* Caption below video */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
