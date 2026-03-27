@@ -7,6 +7,7 @@ import ctaPlayIcon from "@/assets/cta-play-icon.svg";
 import aiResearchIcon from "@/assets/ai-research-icon.svg";
 import { useIndieCheckoutUrl } from "@/lib/checkout";
 import { useTranslation } from "react-i18next";
+import collaborationBanner from "@/assets/collaboration-hero-banner.png";
 
 const CollaborationHero = () => {
   const { t } = useTranslation('collaboration');
