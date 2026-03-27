@@ -1,16 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { CreditCard, RefreshCcw, ArrowUpDown, Globe, Film } from "lucide-react";
-
-const trustItems = [
-  { icon: <CreditCard className="w-5 h-5" />, text: "Start free, no credit card" },
-  { icon: <RefreshCcw className="w-5 h-5" />, text: "Cancel anytime" },
-  { icon: <ArrowUpDown className="w-5 h-5" />, text: "Upgrade or downgrade instantly" },
-  { icon: <Globe className="w-5 h-5" />, text: "Multilingual collaboration" },
-  { icon: <Film className="w-5 h-5" />, text: "Built by filmmakers, for filmmakers" }
-];
+import { useTranslation } from "react-i18next";
 
 const PricingTrust = () => {
+  const { t } = useTranslation("pricing");
+
+  const trustItems = [
+    { icon: <CreditCard className="w-5 h-5" />, text: t("pricing.trust_no_card") },
+    { icon: <RefreshCcw className="w-5 h-5" />, text: t("pricing.trust_cancel") },
+    { icon: <ArrowUpDown className="w-5 h-5" />, text: t("pricing.trust_upgrade") },
+    { icon: <Globe className="w-5 h-5" />, text: t("pricing.trust_multilingual") },
+    { icon: <Film className="w-5 h-5" />, text: t("pricing.trust_filmmakers") },
+  ];
+
   return (
     <section className="py-16 relative">
       <div className="container mx-auto px-6">
