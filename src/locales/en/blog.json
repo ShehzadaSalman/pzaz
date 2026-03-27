@@ -1,0 +1,29 @@
+{
+  "blog": {
+    "seo_title": "Pzaz Blog – Filmmaker Interviews, Industry Insights & Production Tips",
+    "seo_desc": "The Film Maker Entrepreneur blog by Pzaz. Interviews, industry insights, production tips, film business advice and the latest in film production technology.",
+    "badge": "The Film Maker Entrepreneur",
+    "hero_title_1": "Interviews, Industry",
+    "hero_title_2": " & Info",
+    "hero_desc": "Filmmaker interviews, industry insights, production tips, film business school and the latest in film production technology. Get Pzazzed!",
+    "pill_industry": "Industry Insights",
+    "pill_production": "Production Tips",
+    "pill_interviews": "Filmmaker Interviews",
+    "featured_title": "Featured Articles",
+    "search_placeholder": "Search articles...",
+    "load_more": "Load More Articles",
+    "empty_state": "No articles found matching your criteria.",
+    "clear_filters": "Clear filters",
+    "newsletter_badge": "Stay Updated",
+    "newsletter_title": "Get weekly insights in your inbox",
+    "newsletter_desc": "Join 5,000+ filmmakers receiving our weekly digest of industry insights, production tips, and exclusive interviews.",
+    "newsletter_success": "You're subscribed! Welcome aboard.",
+    "newsletter_email_placeholder": "Enter your email",
+    "newsletter_subscribe": "Subscribe",
+    "newsletter_subscribing": "Subscribing...",
+    "newsletter_no_spam": "No spam, unsubscribe anytime. We respect your inbox.",
+    "newsletter_error_generic": "Something went wrong. Please try again.",
+    "newsletter_error_network": "Unable to subscribe. Please try again later.",
+    "cat_all": "all"
+  }
+}
