@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useCurrency } from "@/hooks/use-currency";
@@ -9,30 +9,32 @@ import SectionHeader from "@/components/SectionHeader";
 import cardIconBudget from "@/assets/card-icon-budget-product.svg";
 import cardIconStoryboard from "@/assets/card-icon-storyboard.svg";
 import cardIconStudio from "@/assets/card-icon-studio.svg";
-import featureIcon1 from "@/assets/feature-icon-1.svg";
-import featureIcon2 from "@/assets/feature-icon-2.png";
-import featureIcon3 from "@/assets/feature-icon-3.svg";
-import featureIcon4 from "@/assets/feature-icon-4.svg";
-import featureIcon5 from "@/assets/feature-icon-5.svg";
-import featureIcon6 from "@/assets/feature-icon-6.svg";
-import featureIcon7 from "@/assets/feature-icon-7.svg";
-import featureIcon8 from "@/assets/feature-icon-8.svg";
-import ctaPlayIcon from "@/assets/cta-play-icon.svg";
 import { useTranslation } from "react-i18next";
 
 const ProductsSection = () => {
   const { t } = useTranslation('home');
   const { symbol, getPrice } = useCurrency();
   const indieCheckoutUrl = useIndieCheckoutUrl();
+  const videoRef = useRef<HTMLVideoElement>(null);
 
-  const featureCards = [
-    { icon: featureIcon7, label: t("products.feature1") },
-    { icon: featureIcon5, label: t("products.feature2") },
-    { icon: featureIcon4, label: t("products.feature3") },
-    { icon: featureIcon3, label: t("products.feature4") },
-    { icon: featureIcon8, label: t("products.feature5") },
-    { icon: featureIcon1, label: t("products.feature6") },
-  ];
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
 
   const products = [
     {
@@ -97,63 +99,26 @@ const ProductsSection = () => {
           />
         </motion.div>
 
-        {/* Feature cards grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[37px] max-w-6xl mx-auto mb-[60px]">
-          {featureCards.map((card, index) => (
-            <motion.div
-              key={card.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.05 * index }}
-              className="flex items-center gap-[23px] bg-white border border-[#D4BAF4] rounded-[30px] px-[31px] py-[28px]"
-            >
-              <img src={card.icon} alt={card.label} className="w-[40px] h-[40px] shrink-0" />
-              <span className="font-lato font-bold text-[20px] leading-tight">{card.label}</span>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Feature cards description */}
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="font-lato font-normal text-[20px] text-[#878787] text-center max-w-3xl mx-auto mt-8 mb-8 leading-relaxed"
-        >
-          {t("products.feature_desc")}
-        </motion.p>
-
-        {/* CTAs: Start for Free + Watch Video */}
+        {/* Video */}
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-[60px]"
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="max-w-5xl mx-auto mb-[60px]"
         >
-          <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
-            <Button size="lg" className="group px-8">
-              {t("products.cta_start")}
-              <ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />
-            </Button>
-          </a>
-          <Button
-            variant="outline"
-            size="lg"
-            className="group px-8 font-lato font-black text-xl leading-[25px] text-primary hover:text-primary-foreground rounded-[10px]"
-            prefixIcon={
-              <img
-                src={ctaPlayIcon}
-                alt=""
-                className="w-5 h-5 transition-all group-hover:[filter:brightness(0)_invert(1)]"
-              />
-            }
-            onClick={() => window.open("https://www.youtube.com/watch?v=1AoykWK6yRI", "_blank", "noopener,noreferrer")}
-          >
-            {t("products.cta_watch")}
-          </Button>
+          <div className="rounded-2xl overflow-hidden shadow-xl">
+            <video
+              ref={videoRef}
+              className="w-full"
+              muted
+              loop
+              playsInline
+              preload="metadata"
+            >
+              <source src="/videos/products-section.mp4" type="video/mp4" />
+            </video>
+          </div>
         </motion.div>
 
         <div className="mb-[87px]" />
