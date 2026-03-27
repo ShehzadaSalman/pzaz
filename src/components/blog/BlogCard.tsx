@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import type { BlogPost } from "@/data/blogData";
 import { Badge } from "@/components/ui/badge";
+import { useLocale } from "@/hooks/use-locale";
 
 interface BlogCardProps {
   post: BlogPost;
@@ -8,6 +9,7 @@ interface BlogCardProps {
 }
 
 const BlogCard = ({ post, featured = false }: BlogCardProps) => {
+  const { prefix } = useLocale();
   const category = Array.isArray(post.category) ? post.category[0] : post.category;
   const readTime = `${post.readingTime} min read`;
 
