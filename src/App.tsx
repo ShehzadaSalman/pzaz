@@ -188,6 +188,10 @@ export const AppRoutes = () => (
           <Route path="culture" element={<Culture />} />
           <Route path="privacy" element={<Privacy />} />
           <Route path="terms-of-use" element={<Terms />} />
+          {/* Blog */}
+          <Route path="producer-blog" element={<Blog />} />
+          <Route path="producer-blog/category/:categorySlug" element={<BlogCategory />} />
+          <Route path="producer-blog/:slug" element={<BlogArticle />} />
           <Route path="*" element={<NotFound />} />
         </Route>
 
