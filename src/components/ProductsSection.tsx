@@ -105,14 +105,13 @@ const ProductsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="max-w-5xl mx-auto mb-[60px]"
+          className="max-w-6xl mx-auto mb-[60px]"
         >
-          <div className="rounded-2xl overflow-hidden shadow-xl">
+          <div className="rounded-2xl overflow-hidden">
             <video
               ref={videoRef}
               className="w-full"
               muted
-              loop
               playsInline
               preload="metadata"
             >
