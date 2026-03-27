@@ -59,7 +59,7 @@ const additionalTools = [
 ];
 
 const Screenwriters = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('solutions');
   const indieCheckoutUrl = useIndieCheckoutUrl();
 
   return (

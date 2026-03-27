@@ -4,7 +4,7 @@ import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
 import { useTranslation } from "react-i18next";
 
 const BudgetBehaviourChange = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('budget');
   const changes = [
     { before: t("budget.shift_b1"), after: t("budget.shift_a1") },
     { before: t("budget.shift_b2"), after: t("budget.shift_a2") },

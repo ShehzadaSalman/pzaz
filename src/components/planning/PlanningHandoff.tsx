@@ -4,7 +4,7 @@ import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
 import { useTranslation } from "react-i18next";
 
 const PlanningHandoff = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('planning');
   const points = [
     t("planning.handoff_point1"),
     t("planning.handoff_point2"),

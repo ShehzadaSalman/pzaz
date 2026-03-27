@@ -4,7 +4,7 @@ import aiContextIllustration from "@/assets/ai-context-illustration.svg";
 import { useTranslation } from "react-i18next";
 
 const AIContextSection = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('home');
   return (
     <section className="section-padding relative overflow-hidden" style={{ backgroundColor: "#FBFBFB" }}>
       <div className="container mx-auto px-6 relative z-10">

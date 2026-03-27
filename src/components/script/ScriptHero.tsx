@@ -10,7 +10,7 @@ import iconImportScript from "@/assets/icon-import-script.svg";
 import { useTranslation } from "react-i18next";
 
 const ScriptHero = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('script');
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Gradient background */}

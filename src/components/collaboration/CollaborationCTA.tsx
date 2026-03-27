@@ -8,7 +8,7 @@ import { useIndieCheckoutUrl } from "@/lib/checkout";
 import { useTranslation } from "react-i18next";
 
 const CollaborationCTA = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('collaboration');
   const indieCheckoutUrl = useIndieCheckoutUrl();
   return (
     <section className="py-24 relative overflow-hidden">

@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 
 const StudioProHero = () => {
   const indieCheckoutUrl = useIndieCheckoutUrl();
-  const { t } = useTranslation();
+  const { t } = useTranslation('studio-pro');
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       <div

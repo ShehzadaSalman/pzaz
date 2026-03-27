@@ -4,7 +4,7 @@ import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
 import { useTranslation } from "react-i18next";
 
 const StoryboardFeatures = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('storyboard');
   const features = [
     { title: t("storyboard.feat1_title"), description: t("storyboard.feat1_desc") },
     { title: t("storyboard.feat2_title"), description: t("storyboard.feat2_desc") },

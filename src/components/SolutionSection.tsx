@@ -15,7 +15,7 @@ import solutionCardAligned from "@/assets/solution-card-aligned.png";
 import { useTranslation } from "react-i18next";
 
 const SolutionSection = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('home');
   return (
     <section id="features" className="section-padding relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">

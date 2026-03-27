@@ -9,7 +9,7 @@ import scriptAiPreview from "@/assets/script-ai-preview.png";
 import { useTranslation } from "react-i18next";
 
 const BudgetAI = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('budget');
   const aiCards = [
     { title: t("budget.ai_card1_title"), description: t("budget.ai_card1_desc"), icon: iconScriptAnalysis },
     { title: t("budget.ai_card2_title"), description: t("budget.ai_card2_desc"), icon: iconCharacterTracking },

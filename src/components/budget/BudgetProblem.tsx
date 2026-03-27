@@ -5,7 +5,7 @@ import iconWarning from "@/assets/icon-warning.svg";
 import { useTranslation } from "react-i18next";
 
 const BudgetProblem = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('budget');
   const siloProblems = [
     t("budget.problem_item1"),
     t("budget.problem_item2"),

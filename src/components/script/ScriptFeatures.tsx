@@ -20,7 +20,7 @@ import iconDrag from "@/assets/script/icon-drag.svg";
 import { useTranslation } from "react-i18next";
 
 const ScriptFeatures = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('script');
   const features = [
     { titleKey: "script.feat1", image: featureCard1, icon: iconCloud },
     { titleKey: "script.feat2", image: featureCard2, icon: iconLock },

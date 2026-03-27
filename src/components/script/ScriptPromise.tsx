@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 const ScriptPromise = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('script');
   return (
     <div className="max-w-6xl mx-auto px-6 relative z-10">
       <div className="max-w-6xl mx-auto">

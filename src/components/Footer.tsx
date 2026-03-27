@@ -13,7 +13,7 @@ const socialLinks: Record<string, string> = {
 };
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
 
   const footerLinks: Record<string, { label: string; route?: string; social?: string }[]> = {
     [t("footer.product")]: [

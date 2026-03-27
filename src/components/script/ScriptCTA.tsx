@@ -3,7 +3,7 @@ import SharedCTA from "@/components/SharedCTA";
 import { useTranslation } from "react-i18next";
 
 const ScriptCTA = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('script');
   return (
     <SharedCTA
       pillText={t("script.cta_pill")}

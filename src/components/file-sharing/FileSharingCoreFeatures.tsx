@@ -4,7 +4,7 @@ import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
 import { useTranslation } from "react-i18next";
 
 const FileSharingCoreFeatures = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('file-sharing');
   const coreCapabilities = [
     { title: t("file_sharing.core_feat1_title"), description: t("file_sharing.core_feat1_desc") },
     { title: t("file_sharing.core_feat2_title"), description: t("file_sharing.core_feat2_desc") },

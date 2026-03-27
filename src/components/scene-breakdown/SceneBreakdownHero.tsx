@@ -9,7 +9,7 @@ import { useIndieCheckoutUrl } from "@/lib/checkout";
 import { useTranslation } from "react-i18next";
 
 const SceneBreakdownHero = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('scene-breakdown');
   const indieCheckoutUrl = useIndieCheckoutUrl();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">

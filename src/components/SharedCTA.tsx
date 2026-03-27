@@ -29,7 +29,7 @@ const SharedCTA = ({
   showLanguagesImage = true,
   backgroundStyle,
 }: SharedCTAProps) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('home');
   const indieCheckoutUrl = useIndieCheckoutUrl();
 
   const resolvedPill = pillText ?? t("cta.pill");

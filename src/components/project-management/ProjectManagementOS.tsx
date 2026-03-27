@@ -9,7 +9,7 @@ import iconSafetyCert from "@/assets/script/icon-safety-cert.svg";
 import { useTranslation } from "react-i18next";
 
 const ProjectManagementOS = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('project-management');
   const reframeCards = [
     { icon: iconShapes2, title: t("project_management.os_card1_title"), description: t("project_management.os_card1_desc") },
     { icon: iconSafetyCert, title: t("project_management.os_card2_title"), description: t("project_management.os_card2_desc") },

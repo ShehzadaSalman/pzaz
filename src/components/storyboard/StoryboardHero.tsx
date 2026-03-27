@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 
 const StoryboardHero = () => {
   const indieCheckoutUrl = useIndieCheckoutUrl();
-  const { t } = useTranslation();
+  const { t } = useTranslation('storyboard');
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       <div

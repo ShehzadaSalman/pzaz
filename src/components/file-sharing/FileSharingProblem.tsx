@@ -6,7 +6,7 @@ import iconWarning from "@/assets/icon-warning.svg";
 import { useTranslation } from "react-i18next";
 
 const FileSharingProblem = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('file-sharing');
   const questions = [
     t("file_sharing.problem_q1"),
     t("file_sharing.problem_q2"),

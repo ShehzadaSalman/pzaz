@@ -13,7 +13,7 @@ import iconTesting from "@/assets/script/icon-testing.svg";
 import { useTranslation } from "react-i18next";
 
 const BudgetFeatures = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('budget');
   const features = [
     { icon: iconDownload, title: t("budget.feat1") },
     { icon: iconDocument, title: t("budget.feat2") },
