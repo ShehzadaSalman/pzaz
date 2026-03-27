@@ -8,6 +8,7 @@ import ctaPlayIcon from "@/assets/cta-play-icon.svg";
 import aiResearchIcon from "@/assets/ai-research-icon.svg";
 import { useIndieCheckoutUrl } from "@/lib/checkout";
 import { useTranslation } from "react-i18next";
+import taskManagementBanner from "@/assets/task-management-hero-banner.png";
 
 const TaskManagementHero = () => {
   const { t } = useTranslation('task-management');
