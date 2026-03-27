@@ -104,58 +104,13 @@ const ScriptHero = () => {
           className="mt-16 lg:mt-24 max-w-6xl mx-auto"
         >
           <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border/50 bg-card">
-            <div className="absolute inset-0 gradient-hero-bg opacity-5" />
-            <div className="p-2">
-              <div className="bg-muted/50 rounded-xl aspect-[16/9] flex items-center justify-center relative overflow-hidden">
-                {/* Mock Script Editor UI */}
-                <div className="absolute inset-4 bg-background rounded-lg shadow-inner flex">
-                  {/* Sidebar - Scene Navigator */}
-                  <div className="w-16 lg:w-56 border-r border-border/50 p-3 hidden sm:block">
-                    <div className="flex items-center gap-2 mb-4">
-                      <div className="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center">
-                        <FileText className="w-4 h-4 text-primary-foreground" />
-                      </div>
-                      <span className="text-xs font-medium hidden lg:block">Scene Navigator</span>
-                    </div>
-                    <div className="space-y-2">
-                      {['INT. OFFICE - DAY', 'EXT. STREET - NIGHT', 'INT. APARTMENT - EVENING', 'EXT. ROOFTOP - DAWN', 'INT. CAR - MOVING'].map((scene, i) => (
-                        <div key={i} className={`h-6 px-2 rounded text-[10px] flex items-center ${i === 0 ? 'bg-primary/20 text-primary' : 'bg-muted text-muted-foreground'}`}>
-                          <span className="truncate hidden lg:block">{scene}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  {/* Main Script Content */}
-                  <div className="flex-1 p-4 lg:p-6">
-                    <div className="flex items-center gap-3 mb-6">
-                      <div className="h-3 bg-primary/20 rounded w-24" />
-                      <div className="h-3 bg-muted rounded w-16" />
-                      <div className="h-3 bg-muted rounded w-20" />
-                    </div>
-                    <div className="space-y-3">
-                      <div className="h-2 bg-muted-foreground/20 rounded w-1/3 mx-auto" />
-                      <div className="h-2 bg-muted rounded w-full" />
-                      <div className="h-2 bg-muted rounded w-5/6" />
-                      <div className="mt-4 h-2 bg-muted-foreground/20 rounded w-1/4 mx-auto" />
-                      <div className="h-2 bg-muted rounded w-3/4 mx-auto" />
-                      <div className="h-2 bg-muted rounded w-2/3 mx-auto" />
-                    </div>
-                  </div>
-                  {/* Right Panel - Breakdown */}
-                  <div className="w-16 lg:w-64 border-l border-border/50 p-3 hidden md:block">
-                    <div className="text-xs font-medium mb-3 hidden lg:block">Auto Breakdown</div>
-                    <div className="space-y-2">
-                      {['Characters', 'Locations', 'Props', 'Wardrobe'].map((cat, i) => (
-                        <div key={i} className="flex items-center justify-between p-2 bg-muted/50 rounded">
-                          <span className="text-[10px] text-muted-foreground hidden lg:block">{cat}</span>
-                          <span className="text-[10px] font-medium text-primary">{[3, 2, 5, 1][i]}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <img
+              src={scriptHeroBanner}
+              alt="Pzaz Scriptwriting interface showing script editor with AI assistant"
+              className="w-full h-auto"
+              loading="eager"
+            />
+          </div>
           </div>
         </motion.div>
       </div>
