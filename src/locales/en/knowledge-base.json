@@ -1,0 +1,20 @@
+{
+  "kb": {
+    "seo_title": "Knowledge Base – Pzaz",
+    "seo_desc": "Browse guides, tutorials, and references for Pzaz film production software.",
+    "hero_title": "Knowledge Base",
+    "hero_desc": "Find guides, tutorials, and answers to get the most out of Pzaz.",
+    "search_placeholder": "Search the knowledge base…",
+    "cat_getting_started": "Getting Started",
+    "cat_getting_started_desc": "Everything you need to know to get up and running with Pzaz.",
+    "cat_functions": "Functions",
+    "cat_functions_desc": "Learn about Pzaz's core AI-powered functions and how to use them.",
+    "cat_tools": "Tools & Features",
+    "cat_tools_desc": "Deep dives into every production tool available in your workspace.",
+    "breadcrumb_home": "Home",
+    "breadcrumb_kb": "Knowledge Base",
+    "related_title": "Related Articles",
+    "back_to_kb": "← Back to Knowledge Base",
+    "article_search_placeholder": "Search the knowledge base…"
+  }
+}

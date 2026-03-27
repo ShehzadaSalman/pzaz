@@ -184,6 +184,10 @@ export const AppRoutes = () => (
           <Route path="indie-filmmakers" element={<IndieFilmmakers />} />
           <Route path="demo-video" element={<VideoPlayer />} />
           <Route path="sales-team" element={<SalesTeam />} />
+          <Route path="brand" element={<Brand />} />
+          <Route path="culture" element={<Culture />} />
+          <Route path="privacy" element={<Privacy />} />
+          <Route path="terms-of-use" element={<Terms />} />
           <Route path="*" element={<NotFound />} />
         </Route>
 
