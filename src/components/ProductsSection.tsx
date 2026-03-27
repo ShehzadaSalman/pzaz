@@ -16,23 +16,26 @@ const ProductsSection = () => {
   const { symbol, getPrice } = useCurrency();
   const indieCheckoutUrl = useIndieCheckoutUrl();
   const videoRef = useRef<HTMLVideoElement>(null);
+  const video2Ref = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
+    const videos = [videoRef.current, video2Ref.current].filter(Boolean) as HTMLVideoElement[];
+    
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          video.play().catch(() => {});
-        } else {
-          video.pause();
-        }
+      (entries) => {
+        entries.forEach((entry) => {
+          const video = entry.target as HTMLVideoElement;
+          if (entry.isIntersecting) {
+            video.play().catch(() => {});
+          } else {
+            video.pause();
+          }
+        });
       },
       { threshold: 0.3 }
     );
 
-    observer.observe(video);
+    videos.forEach((v) => observer.observe(v));
     return () => observer.disconnect();
   }, []);
 
