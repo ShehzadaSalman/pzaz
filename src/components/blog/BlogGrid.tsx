@@ -98,7 +98,7 @@ const BlogGrid = () => {
               onClick={loadMore}
               className="rounded-full"
             >
-              Load More Articles
+              {t("blog.load_more")}
             </Button>
           </div>
         )}
@@ -106,7 +106,7 @@ const BlogGrid = () => {
         {/* Empty State */}
         {filteredPosts.length === 0 && (
           <div className="text-center py-16">
-            <p className="text-muted-foreground text-lg">No articles found matching your criteria.</p>
+            <p className="text-muted-foreground text-lg">{t("blog.empty_state")}</p>
             <Button
               variant="outline"
               className="mt-4"
