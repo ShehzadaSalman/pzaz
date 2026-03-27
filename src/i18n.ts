@@ -6,6 +6,7 @@ import resourcesToBackend from "i18next-resources-to-backend";
 // a network request before first paint. Other languages and namespaces are
 // still loaded on-demand via dynamic import.
 import enCommon from "./locales/en/common.json";
+import enHome from "./locales/en/home.json";
 
 const getInitialLang = () => {
   if (typeof window === "undefined") return "en";
@@ -40,7 +41,7 @@ const initPromise = i18next
     partialBundledLanguages: true,
     // Pre-bundle English common so it's available synchronously
     resources: {
-      en: { common: enCommon },
+      en: { common: enCommon, home: enHome },
     },
     interpolation: {
       escapeValue: false,
