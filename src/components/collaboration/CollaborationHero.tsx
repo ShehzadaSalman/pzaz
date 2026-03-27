@@ -113,46 +113,13 @@ const CollaborationHero = () => {
           className="mt-16 lg:mt-24 max-w-6xl mx-auto"
         >
           <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border/50 bg-card">
-            <div className="p-2">
-              <div className="bg-muted/50 rounded-xl aspect-[16/9] flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-4 bg-background rounded-lg shadow-inner flex flex-col">
-                  <div className="flex items-center gap-2 border-b border-border/50 px-4 py-2">
-                    <div className="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center">
-                      <span className="text-primary-foreground text-xs font-bold">C</span>
-                    </div>
-                    <span className="text-xs font-medium hidden lg:block">Team Collaboration</span>
-                    <div className="ml-auto flex gap-2">
-                      {["Chat", "Tasks", "Files", "Activity"].map((s, i) => (
-                        <div key={i} className={`h-5 px-2 rounded text-[10px] flex items-center ${i === 0 ? "bg-primary/20 text-primary" : "bg-muted text-muted-foreground"}`}>
-                          <span className="hidden sm:block">{s}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="flex-1 p-4 grid grid-cols-3 gap-3">
-                    <div className="col-span-1 flex flex-col gap-2">
-                      {["Scene 12 – Feedback", "Budget Review", "Crew Schedule", "Script Draft v3"].map((item, i) => (
-                        <div key={i} className={`rounded-lg border px-3 py-2 text-[9px] font-medium ${i === 0 ? "border-primary/40 bg-primary/5 text-primary" : "border-border/40 bg-muted/40 text-muted-foreground"} hidden lg:block`}>
-                          {item}
-                        </div>
-                      ))}
-                    </div>
-                    <div className="col-span-2 flex flex-col gap-2 border-l border-border/30 pl-3">
-                      {[
-                        { user: "Director", msg: "Can we adjust the lighting in this shot?", time: "2m ago", me: false },
-                        { user: "DP", msg: "Agreed — I'll flag it for the gaffer.", time: "1m ago", me: false },
-                        { user: "You", msg: "Added to Scene 12 notes.", time: "just now", me: true },
-                      ].map((m, i) => (
-                        <div key={i} className={`flex flex-col gap-0.5 ${m.me ? "items-end" : "items-start"} hidden lg:flex`}>
-                          <span className="text-[8px] text-muted-foreground">{m.user} · {m.time}</span>
-                          <div className={`text-[9px] px-2 py-1 rounded-lg max-w-[80%] ${m.me ? "bg-primary/15 text-primary" : "bg-muted text-foreground"}`}>{m.msg}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <img
+              src={collaborationBanner}
+              alt="Pzaz Collaboration Tools interface"
+              className="w-full h-auto"
+              loading="eager"
+            />
+          </div>
           </div>
         </motion.div>
       </div>
