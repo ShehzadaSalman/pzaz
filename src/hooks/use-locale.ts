@@ -50,5 +50,6 @@ export function useLocale() {
     }
   }
 
-  return { locale: currentLocale, navigateToLocale };
+  const prefix = currentLocale === "en" ? "" : `/${currentLocale}`;
+  return { locale: currentLocale, prefix, navigateToLocale };
 }
