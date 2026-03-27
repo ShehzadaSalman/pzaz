@@ -41,7 +41,7 @@ const initPromise = i18next
     partialBundledLanguages: true,
     // Pre-bundle English common so it's available synchronously
     resources: {
-      en: { common: enCommon },
+      en: { common: enCommon, home: enHome },
     },
     interpolation: {
       escapeValue: false,
