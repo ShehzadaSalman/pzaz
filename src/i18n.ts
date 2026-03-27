@@ -6,6 +6,7 @@ import resourcesToBackend from "i18next-resources-to-backend";
 // a network request before first paint. Other languages and namespaces are
 // still loaded on-demand via dynamic import.
 import enCommon from "./locales/en/common.json";
+import enHome from "./locales/en/home.json";
 
 const getInitialLang = () => {
   if (typeof window === "undefined") return "en";
