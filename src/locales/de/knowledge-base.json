@@ -1,0 +1,20 @@
+{
+  "kb": {
+    "seo_title": "Wissensdatenbank – Pzaz",
+    "seo_desc": "Durchsuchen Sie Anleitungen, Tutorials und Referenzen für die Filmproduktionssoftware Pzaz.",
+    "hero_title": "Wissensdatenbank",
+    "hero_desc": "Finden Sie Anleitungen, Tutorials und Antworten, um das Beste aus Pzaz herauszuholen.",
+    "search_placeholder": "Wissensdatenbank durchsuchen…",
+    "cat_getting_started": "Erste Schritte",
+    "cat_getting_started_desc": "Alles, was Sie wissen müssen, um mit Pzaz loszulegen.",
+    "cat_functions": "Funktionen",
+    "cat_functions_desc": "Erfahren Sie mehr über die KI-gestützten Kernfunktionen von Pzaz und wie Sie sie nutzen.",
+    "cat_tools": "Tools & Features",
+    "cat_tools_desc": "Vertiefte Einblicke in jedes Produktionstool in Ihrem Arbeitsbereich.",
+    "breadcrumb_home": "Startseite",
+    "breadcrumb_kb": "Wissensdatenbank",
+    "related_title": "Verwandte Artikel",
+    "back_to_kb": "← Zurück zur Wissensdatenbank",
+    "article_search_placeholder": "Wissensdatenbank durchsuchen…"
+  }
+}

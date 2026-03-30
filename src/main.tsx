@@ -48,14 +48,16 @@ const urBlogRoutes = blogPostsUr.map((post) => `/ur/producer-blog/${post.slug}`)
 const frBlogRoutes = blogPostsFr.map((post) => `/fr/producer-blog/${post.slug}`);
 // Spanish blog routes — reuse English slugs (same slugs, different locale prefix)
 const esBlogRoutes = blogPosts.map((post) => `/es/producer-blog/${post.slug}`);
-const allRoutes = new Set([...staticRoutes, ...blogRoutes, ...urBlogRoutes, ...frBlogRoutes, ...esBlogRoutes]);
+// German blog routes
+const deBlogRoutes = blogPosts.map((post) => `/de/producer-blog/${post.slug}`);
+const allRoutes = new Set([...staticRoutes, ...blogRoutes, ...urBlogRoutes, ...frBlogRoutes, ...esBlogRoutes, ...deBlogRoutes]);
 
 /**
  * Map a route path to the i18n namespaces it needs.
  */
 function getNamespacesForRoute(url: string): string[] {
   // Strip locale prefix to get the "bare" path
-  const bare = url.replace(/^\/(ur|fr|es)(\/|$)/, "/").replace(/\/$/, "") || "/";
+  const bare = url.replace(/^\/(ur|fr|es|de)(\/|$)/, "/").replace(/\/$/, "") || "/";
 
   const map: Record<string, string[]> = {
     "/": ["common", "home"],
@@ -120,7 +122,7 @@ export async function prerender(data: { url: string }) {
   const url = data.url ?? "/";
 
   // Detect locale and load translations before render
-  const locale = url.startsWith("/ur/") || url === "/ur" ? "ur" : url.startsWith("/fr/") || url === "/fr" ? "fr" : url.startsWith("/es/") || url === "/es" ? "es" : "en";
+  const locale = url.startsWith("/ur/") || url === "/ur" ? "ur" : url.startsWith("/fr/") || url === "/fr" ? "fr" : url.startsWith("/es/") || url === "/es" ? "es" : url.startsWith("/de/") || url === "/de" ? "de" : "en";
   const namespaces = getNamespacesForRoute(url);
   const i18nInstance = await initI18nForSSR(locale, namespaces);
 

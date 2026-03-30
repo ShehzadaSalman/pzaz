@@ -5,7 +5,7 @@
     <script>
       (function() {
         var seg = window.location.pathname.split('/')[1];
-        var lang = seg === 'ur' ? 'ur' : seg === 'fr' ? 'fr' : seg === 'es' ? 'es' : 'en';
+        var lang = seg === 'ur' ? 'ur' : seg === 'fr' ? 'fr' : seg === 'es' ? 'es' : seg === 'de' ? 'de' : 'en';
         document.documentElement.setAttribute('lang', lang);
         document.documentElement.setAttribute('dir', lang === 'ur' ? 'rtl' : 'ltr');
       })();

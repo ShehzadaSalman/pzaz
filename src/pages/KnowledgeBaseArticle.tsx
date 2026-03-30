@@ -5,6 +5,7 @@ import { getArticleBySlug, getRelatedArticles, kbCategories } from "@/data/knowl
 import { kbArticlesUr, kbCategoriesUr } from "@/data/knowledgeBaseDataUr";
 import { kbArticlesFr, kbCategoriesFr } from "@/data/knowledgeBaseDataFr";
 import { kbArticlesEs, kbCategoriesEs } from "@/data/knowledgeBaseDataEs";
+import { kbArticlesDe, kbCategoriesDe } from "@/data/knowledgeBaseDataDe";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import KBSearchBar from "@/components/knowledge-base/KBSearchBar";
@@ -97,6 +98,7 @@ const KnowledgeBaseArticle = () => {
   const isUr = locale === "ur";
   const isFr = locale === "fr";
   const isEs = locale === "es";
+  const isDe = locale === "de";
   const { t } = useTranslation("knowledge-base");
 
   const article = isUr
@@ -105,7 +107,9 @@ const KnowledgeBaseArticle = () => {
       ? kbArticlesFr.find((a) => a.slug === slug)
       : isEs
         ? kbArticlesEs.find((a) => a.slug === slug)
-        : slug ? getArticleBySlug(slug) : undefined;
+        : isDe
+          ? kbArticlesDe.find((a) => a.slug === slug)
+          : slug ? getArticleBySlug(slug) : undefined;
 
   if (!article) return <NotFound />;
 
