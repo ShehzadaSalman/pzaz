@@ -1,7 +1,9 @@
 /**
- * Spanish blog content — falls back to English content for now.
+ * Spanish translations for blog article body content.
+ * Maps slug -> translated content string.
+ * Full article content is loaded on demand from blogDataFull.ts (English fallback).
  */
-import blogContentFull from "./blogDataFull";
 
-const blogContentEs: Record<string, string> = blogContentFull;
+const blogContentEs: Record<string, string> = {};
+
 export default blogContentEs;
