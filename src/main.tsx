@@ -55,7 +55,7 @@ const allRoutes = new Set([...staticRoutes, ...blogRoutes, ...urBlogRoutes, ...f
  */
 function getNamespacesForRoute(url: string): string[] {
   // Strip locale prefix to get the "bare" path
-  const bare = url.replace(/^\/(ur|fr|es)(\/|$)/, "/").replace(/\/$/, "") || "/";
+  const bare = url.replace(/^\/(ur|fr|es|de)(\/|$)/, "/").replace(/\/$/, "") || "/";
 
   const map: Record<string, string[]> = {
     "/": ["common", "home"],
