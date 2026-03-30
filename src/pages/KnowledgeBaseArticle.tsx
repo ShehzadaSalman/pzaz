@@ -125,7 +125,7 @@ const KnowledgeBaseArticle = () => {
 
   const categoryLabel = isUr ? categoryLabelUr : isFr ? categoryLabelFr : isEs ? categoryLabelEs : categoryLabelEn;
   const catLabel = categoryLabel[article.category];
-  const cats = isUr ? kbCategoriesUr : isFr ? kbCategoriesFr : kbCategories;
+  const cats = isUr ? kbCategoriesUr : isFr ? kbCategoriesFr : isEs ? kbCategoriesEs : kbCategories;
   const catMeta = cats.find((c) => c.id === article.category);
 
   return (

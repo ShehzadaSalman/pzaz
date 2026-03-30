@@ -24,7 +24,7 @@ const KnowledgeBase = () => {
   const isUr = locale === "ur";
   const isFr = locale === "fr";
   const isEs = locale === "es";
-  const cats = isUr ? kbCategoriesUr : isFr ? kbCategoriesFr : isEs ? kbCategories : kbCategories;
+  const cats = isUr ? kbCategoriesUr : isFr ? kbCategoriesFr : isEs ? kbCategoriesEs : kbCategories;
   const getArticles = (catId: KBArticle["category"]) =>
     isUr
       ? kbArticlesUr.filter((a) => a.category === catId)
