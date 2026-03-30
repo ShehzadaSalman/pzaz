@@ -4,12 +4,14 @@ import { ChevronRight } from "lucide-react";
 import { getArticleBySlug, getRelatedArticles, kbCategories } from "@/data/knowledgeBaseData";
 import { kbArticlesUr, kbCategoriesUr } from "@/data/knowledgeBaseDataUr";
 import { kbArticlesFr, kbCategoriesFr } from "@/data/knowledgeBaseDataFr";
+import { kbArticlesEs } from "@/data/knowledgeBaseDataEs";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import KBSearchBar from "@/components/knowledge-base/KBSearchBar";
 import SEO from "@/components/SEO";
 import NotFound from "./NotFound";
 import { useLocale } from "@/hooks/use-locale";
+import { useTranslation } from "react-i18next";
 import type { KBArticle } from "@/data/knowledgeBaseData";
 
 const categoryLabelEn: Record<string, string> = {
@@ -28,6 +30,12 @@ const categoryLabelFr: Record<string, string> = {
   "getting-started": "Pour Commencer",
   "functions": "Fonctions",
   "tools-and-features": "Outils & Fonctionnalités",
+};
+
+const categoryLabelEs: Record<string, string> = {
+  "getting-started": "Primeros Pasos",
+  "functions": "Funciones",
+  "tools-and-features": "Herramientas y Funcionalidades",
 };
 
 const renderContent = (content: string): React.ReactNode[] => {
@@ -88,12 +96,16 @@ const KnowledgeBaseArticle = () => {
   const { locale, prefix } = useLocale();
   const isUr = locale === "ur";
   const isFr = locale === "fr";
+  const isEs = locale === "es";
+  const { t } = useTranslation("knowledge-base");
 
   const article = isUr
     ? kbArticlesUr.find((a) => a.slug === slug)
     : isFr
       ? kbArticlesFr.find((a) => a.slug === slug)
-      : slug ? getArticleBySlug(slug) : undefined;
+      : isEs
+        ? kbArticlesEs.find((a) => a.slug === slug)
+        : slug ? getArticleBySlug(slug) : undefined;
 
   if (!article) return <NotFound />;
 
@@ -105,9 +117,13 @@ const KnowledgeBaseArticle = () => {
       ? (article.relatedSlugs || [])
           .map((s) => kbArticlesFr.find((a) => a.slug === s))
           .filter((a): a is KBArticle => !!a)
-      : getRelatedArticles(article);
+      : isEs
+        ? (article.relatedSlugs || [])
+            .map((s) => kbArticlesEs.find((a) => a.slug === s))
+            .filter((a): a is KBArticle => !!a)
+        : getRelatedArticles(article);
 
-  const categoryLabel = isUr ? categoryLabelUr : isFr ? categoryLabelFr : categoryLabelEn;
+  const categoryLabel = isUr ? categoryLabelUr : isFr ? categoryLabelFr : isEs ? categoryLabelEs : categoryLabelEn;
   const catLabel = categoryLabel[article.category];
   const cats = isUr ? kbCategoriesUr : isFr ? kbCategoriesFr : kbCategories;
   const catMeta = cats.find((c) => c.id === article.category);
@@ -115,8 +131,8 @@ const KnowledgeBaseArticle = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title={`${article.title} – Pzaz ${isUr ? "نالج بیس" : "Knowledge Base"}`}
-        description={`${isUr ? "جانیں" : "Learn about"} ${article.title}${isUr ? " Pzaz میں۔" : " in Pzaz."}`}
+        title={`${article.title} – Pzaz ${t("kb.hero_title")}`}
+        description={`${t("kb.seo_desc")} ${article.title}`}
         url={`https://pzaz.io${prefix}/knowledge-base/${article.slug}`}
         canonical={`https://pzaz.io${prefix}/knowledge-base/${article.slug}`}
       />
@@ -126,11 +142,11 @@ const KnowledgeBaseArticle = () => {
         {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8" aria-label="Breadcrumb">
           <Link to={`${prefix}/`} className="hover:text-foreground transition-colors">
-            {isUr ? "ہوم" : "Home"}
+            {t("kb.breadcrumb_home")}
           </Link>
           <ChevronRight className="h-3.5 w-3.5" />
           <Link to={`${prefix}/knowledge-base`} className="hover:text-foreground transition-colors">
-            {isUr ? "نالج بیس" : "Knowledge Base"}
+            {t("kb.breadcrumb_kb")}
           </Link>
           <ChevronRight className="h-3.5 w-3.5" />
           <Link
@@ -145,7 +161,7 @@ const KnowledgeBaseArticle = () => {
 
         {/* Search */}
         <div className="mb-10">
-          <KBSearchBar placeholder={isUr ? "نالج بیس تلاش کریں…" : "Search the knowledge base…"} />
+          <KBSearchBar placeholder={t("kb.article_search_placeholder")} />
         </div>
       </div>
 
@@ -171,7 +187,7 @@ const KnowledgeBaseArticle = () => {
             <aside>
               <div className="rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-card)] sticky top-24">
                 <h3 className="text-sm font-semibold text-foreground mb-4 uppercase tracking-wider">
-                  {isUr ? "متعلقہ مضامین" : "Related Articles"}
+                  {t("kb.related_title")}
                 </h3>
                 <ul className="flex flex-col gap-1">
                   {related.map((rel) => (
@@ -192,7 +208,7 @@ const KnowledgeBaseArticle = () => {
                     to={`${prefix}/knowledge-base`}
                     className="text-xs text-primary hover:underline"
                   >
-                    {isUr ? "← نالج بیس پر واپس" : "← Back to Knowledge Base"}
+                    {t("kb.back_to_kb")}
                   </Link>
                 </div>
               </div>

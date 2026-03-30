@@ -3,6 +3,8 @@ import { Search, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { kbArticles, KBArticle } from "@/data/knowledgeBaseData";
 import { kbArticlesUr } from "@/data/knowledgeBaseDataUr";
+import { kbArticlesFr } from "@/data/knowledgeBaseDataFr";
+import { kbArticlesEs } from "@/data/knowledgeBaseDataEs";
 import { useLocale } from "@/hooks/use-locale";
 
 interface KBSearchBarProps {
@@ -22,6 +24,18 @@ const categoryLabelUr: Record<string, string> = {
   "tools-and-features": "ٹولز اور خصوصیات",
 };
 
+const categoryLabelFr: Record<string, string> = {
+  "getting-started": "Pour Commencer",
+  "functions": "Fonctions",
+  "tools-and-features": "Outils & Fonctionnalités",
+};
+
+const categoryLabelEs: Record<string, string> = {
+  "getting-started": "Primeros Pasos",
+  "functions": "Funciones",
+  "tools-and-features": "Herramientas y Funcionalidades",
+};
+
 const KBSearchBar = ({ placeholder = "Search the knowledge base…", autoFocus = false }: KBSearchBarProps) => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<KBArticle[]>([]);
@@ -29,9 +43,8 @@ const KBSearchBar = ({ placeholder = "Search the knowledge base…", autoFocus =
   const containerRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
   const { locale, prefix } = useLocale();
-  const isUr = locale === "ur";
-  const articles = isUr ? kbArticlesUr : kbArticles;
-  const categoryLabel = isUr ? categoryLabelUr : categoryLabelEn;
+  const articles = locale === "ur" ? kbArticlesUr : locale === "fr" ? kbArticlesFr : locale === "es" ? kbArticlesEs : kbArticles;
+  const categoryLabel = locale === "ur" ? categoryLabelUr : locale === "fr" ? categoryLabelFr : locale === "es" ? categoryLabelEs : categoryLabelEn;
 
   useEffect(() => {
     const q = query.trim().toLowerCase();
