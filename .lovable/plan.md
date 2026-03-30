@@ -1,91 +1,69 @@
 
 
-## Add French as a Third Language
+## Add Spanish (Español) Language
 
 ### Overview
-French needs to be added alongside English and Urdu across the entire site. This is a large but well-patterned task thanks to the existing i18n infrastructure. The work breaks into two phases: infrastructure wiring (small) and translation content (large).
+Follow the exact same pattern used for French and Urdu. Spanish is LTR like French, so no RTL concerns. The work is: infrastructure wiring (small), translation files (large), route registration + pre-rendering (medium).
 
 ---
 
-### Phase 1: Infrastructure Wiring (8 files)
+### Phase 1: Infrastructure Wiring (~8 files)
 
-**1. Register "fr" as a supported locale**
-- `src/hooks/use-locale.ts` — add `"fr"` to `SUPPORTED_LOCALES`; update the regex in `navigateToLocale` from `/(ur)` to `/(ur|fr)` so locale stripping works for both non-English locales
+1. **`src/hooks/use-locale.ts`** — Add `"es"` to `SUPPORTED_LOCALES`. Update regex `/(ur|fr)/` → `/(ur|fr|es)/` in two places.
 
-**2. Language detection scripts**
-- `index.html` line 8 — expand `seg === 'ur' ? 'ur' : 'en'` to also check for `'fr'`
-- `src/i18n.ts` line 14 — same change in `getInitialLang()`
+2. **`src/i18n.ts`** — Add `"es"` detection in `getInitialLang()`.
 
-**3. Language dropdown**
-- `src/components/LanguageDropdown.tsx` — add `fr: "French"` to the `languageLabels` map (no other change needed; the dropdown already iterates `SUPPORTED_LOCALES`)
+3. **`src/components/LocaleWrapper.tsx`** — No changes needed (already generic via `SUPPORTED_LOCALES`).
 
-**4. LocaleWrapper**
-- `src/components/LocaleWrapper.tsx` — no change needed (already reads from `SUPPORTED_LOCALES` and only adds RTL for `ur`)
+4. **`src/components/LanguageDropdown.tsx`** — Add `es: "Español"` to `languageLabels`.
 
-**5. Pre-render routes**
-- `src/routes.ts` — duplicate all `/ur/...` routes as `/fr/...` (~47 new entries)
+5. **`src/App.tsx`** — Add a `<Route path="/es" element={<LocaleWrapper />}>` block mirroring the `/fr` block with all sub-routes.
 
-**6. Router**
-- `src/App.tsx` (or wherever `/:locale/*` routes are declared) — should already work via the dynamic `:locale` param; verify no hardcoded `"ur"` checks exist
+6. **`index.html`** — Update the synchronous lang/dir snippet to recognize `"es"` path segment.
+
+7. **`src/main.tsx`** — Update locale detection regex to include `es`. Import Spanish blog data. Add Spanish blog routes to `allRoutes`.
+
+8. **`vite.config.ts`** — Add Spanish blog routes to sitemap generation.
 
 ---
 
-### Phase 2: Translation Files (23 namespace files)
+### Phase 2: Translation Files (23 files)
 
-Create `src/locales/fr/` directory with one JSON file per namespace, matching the English structure:
+Create `src/locales/es/` directory with Spanish translations for all 23 namespaces, translated from the English originals:
 
-```text
-src/locales/fr/
-├── about.json
-├── blog.json
-├── brand.json
-├── budget.json
-├── collaboration.json
-├── common.json          ← nav, footer, contact, 404, sales
-├── culture.json
-├── file-sharing.json
-├── home.json
-├── indie.json
-├── knowledge-base.json
-├── planning.json
-├── pricing.json
-├── privacy.json
-├── project-management.json
-├── scene-breakdown.json
-├── script.json
-├── solutions.json
-├── storyboard.json
-├── studio-pro.json
-├── task-management.json
-├── terms.json
-└── vs-final-draft.json
-```
-
-Each file will contain the same keys as its English counterpart, with professional French translations. Film industry terms (e.g., "storyboard", "script breakdown") will use their standard French equivalents where they exist, or keep the English term when it is industry-standard in French.
+`common.json`, `home.json`, `script.json`, `pricing.json`, `budget.json`, `planning.json`, `indie.json`, `storyboard.json`, `studio-pro.json`, `scene-breakdown.json`, `collaboration.json`, `file-sharing.json`, `task-management.json`, `project-management.json`, `solutions.json`, `about.json`, `blog.json`, `brand.json`, `culture.json`, `knowledge-base.json`, `privacy.json`, `terms.json`, `vs-final-draft.json`
 
 ---
 
-### Phase 3: Blog & Knowledge Base Content
+### Phase 3: Blog & Knowledge Base Data
 
-The blog and knowledge base articles have their content stored in data files (`src/data/blogData.ts`, `src/data/blogDataFull.ts`, `src/data/knowledgeBaseData.ts`). For Urdu, separate `*Ur.ts` files were created. The same pattern will be followed:
-
-- Create `src/data/blogDataFr.ts` and `src/data/blogContentFr.ts` with French blog content
-- Create `src/data/knowledgeBaseDataFr.ts` with French KB articles
-- Update the blog/KB pages to select the correct data file based on locale (same pattern as the Ur data switching)
+1. **`src/data/blogDataEs.ts`** — Translate all 49 blog post metadata (title, excerpt, content references) into Spanish.
+2. **`src/data/blogContentEs.ts`** — Translate full blog article content into Spanish.
+3. **`src/data/knowledgeBaseDataEs.ts`** — Translate all 34 KB articles into Spanish.
+4. Update blog/KB page components to import and use Spanish data when `locale === "es"`.
 
 ---
 
-### Estimated scale
-- **Infrastructure**: ~8 files, small edits each
-- **Translation JSONs**: 23 new files (copy English keys, translate values)
-- **Blog/KB data**: 3 new data files
-- **Pre-render routes**: ~47 new route entries
+### Phase 4: Route Registration & Pre-rendering
 
-### Execution order
-1. Infrastructure wiring first (so `/fr/` routes work immediately with English fallback)
-2. `common.json` and `home.json` (so nav/footer/homepage render in French)
+1. **`src/routes.ts`** — Add all `/es/` routes (main pages + 34 KB articles), mirroring the `/fr/` block.
+2. Spanish blog routes (49 articles) are generated dynamically in `main.tsx` from `blogDataEs`.
+3. Sitemap in `vite.config.ts` picks them up automatically.
+
+---
+
+### Execution Order
+1. Infrastructure wiring first (so `/es/` routes work with English fallback)
+2. `common.json` + `home.json` (nav/footer/homepage in Spanish)
 3. Product pages (script, budget, planning, storyboard, studio-pro, indie)
 4. Feature pages (scene-breakdown, collaboration, file-sharing, task-management, project-management)
-5. Solution pages, pricing, about, brand, culture, privacy, terms, vs-final-draft
-6. Blog and Knowledge Base content last
+5. Remaining pages (solutions, pricing, about, brand, culture, privacy, terms, vs-final-draft)
+6. Blog data + KB data last
+
+### Estimated Scope
+- ~8 infrastructure file edits
+- ~23 new translation JSON files in `src/locales/es/`
+- ~3 new data files (blog + KB)
+- ~1 new route block in `routes.ts` (~90 lines)
+- ~1 new route block in `App.tsx` (~50 lines)
 
