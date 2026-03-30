@@ -206,6 +206,61 @@ export const AppRoutes = () => (
           <Route path="*" element={<NotFound />} />
         </Route>
 
+        {/* ── Locale-prefixed routes — /fr/* ── */}
+        <Route path="/fr" element={<LocaleWrapper />}>
+          <Route index element={<Index />} />
+          <Route path="script" element={<Script />} />
+          <Route path="pricing" element={<Pricing />} />
+          <Route path="about-us" element={<AboutUs />} />
+          <Route path="breakdown" element={<Breakdown />} />
+          <Route path="imagine" element={<Imagine />} />
+          <Route path="collaborate" element={<Collaborate />} />
+          <Route path="pzaz-vs-final-draft" element={<PzazVsFinalDraft />} />
+          <Route path="knowledge-base" element={<KnowledgeBase />} />
+          <Route path="knowledge-base/:slug" element={<KnowledgeBaseArticle />} />
+          <Route path="pzaz-project" element={<PzazProject />} />
+          <Route path="sell" element={<Sell />} />
+          <Route path="shoot" element={<Shoot />} />
+          <Route path="visualise" element={<Visualise />} />
+          <Route path="write" element={<Write />} />
+          {/* Products */}
+          <Route path="indie-filmmaking-software" element={<Indie />} />
+          <Route path="film-budgeting-software" element={<Budget />} />
+          <Route path="film-preproduction-planning" element={<Planning />} />
+          <Route path="studio-pro-software" element={<StudioPro />} />
+          <Route path="storyboard-software" element={<Storyboard />} />
+          {/* Features */}
+          <Route path="scene-breakdown-software" element={<SceneBreakdown />} />
+          <Route path="film-collaboration-software" element={<CollaborationTools />} />
+          <Route path="production-task-management" element={<TaskManagement />} />
+          <Route path="film-file-sharing-storage" element={<FileSharing />} />
+          <Route path="film-project-management" element={<ProjectManagement />} />
+          {/* Solutions */}
+          <Route path="film-schools-software" element={<Schools />} />
+          <Route path="software-for-directors-producers" element={<DirectorsProducers />} />
+          <Route path="documentary-filmmaking-software" element={<DocumentaryFilmmakers />} />
+          <Route path="software-for-cinematographers" element={<Cinematographers />} />
+          <Route path="creative-agency-production-software" element={<CreativeAgencies />} />
+          <Route path="film-production-team-software" element={<ProductionTeams />} />
+          <Route path="screenwriting-software" element={<Screenwriters />} />
+          <Route path="tv-series-production-software" element={<TVSeriesCreators />} />
+          <Route path="film-investment-software" element={<InvestorsFunding />} />
+          <Route path="software-for-production-managers" element={<ProductionManagers />} />
+          <Route path="empowering-filmmaking" element={<EmpoweringFilmmaking />} />
+          <Route path="indie-filmmakers" element={<IndieFilmmakers />} />
+          <Route path="demo-video" element={<VideoPlayer />} />
+          <Route path="sales-team" element={<SalesTeam />} />
+          <Route path="brand" element={<Brand />} />
+          <Route path="culture" element={<Culture />} />
+          <Route path="privacy" element={<Privacy />} />
+          <Route path="terms-of-use" element={<Terms />} />
+          {/* Blog */}
+          <Route path="producer-blog" element={<Blog />} />
+          <Route path="producer-blog/category/:categorySlug" element={<BlogCategory />} />
+          <Route path="producer-blog/:slug" element={<BlogArticle />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
