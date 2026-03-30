@@ -2,6 +2,8 @@ import React, { useRef, useState, useEffect } from "react";
 import { Clock, Calendar, User, Share2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { BlogPost } from "@/data/blogData";
+import { useTranslation } from "react-i18next";
+import { useLocale } from "@/hooks/use-locale";
 
 interface ArticleContentProps {
   article: BlogPost;
@@ -10,10 +12,13 @@ interface ArticleContentProps {
 const ArticleContent = ({ article }: ArticleContentProps) => {
   const [showShareMenu, setShowShareMenu] = useState(false);
   const shareMenuRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation("blog");
+  const { locale } = useLocale();
 
   const categories = Array.isArray(article.category) ? article.category : [article.category];
 
-  const formattedDate = new Date(article.publishedAt).toLocaleDateString("en-GB", {
+  const dateLocale = locale === "ur" ? "ur-PK" : "en-GB";
+  const formattedDate = new Date(article.publishedAt).toLocaleDateString(dateLocale, {
     day: "numeric",
     month: "long",
     year: "numeric",
@@ -126,12 +131,12 @@ const ArticleContent = ({ article }: ArticleContentProps) => {
             </span>
             <span className="flex items-center gap-1.5">
               <Clock className="h-4 w-4" />
-              {article.readingTime} min read
+              {article.readingTime} {t("blog.min_read")}
             </span>
             <div className="relative ml-auto" ref={shareMenuRef}>
               <button onClick={() => setShowShareMenu((prev) => !prev)} className="flex items-center gap-1.5 text-primary transition-colors hover:text-primary/80">
                 <Share2 className="h-4 w-4" />
-                Share
+                {t("blog.share")}
               </button>
               {showShareMenu && (
                 <div className="absolute right-0 mt-2 w-44 rounded-md border border-border bg-background p-2 shadow-md z-20">

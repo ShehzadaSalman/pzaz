@@ -2,9 +2,9 @@ import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import { Mail, Phone } from "lucide-react";
 import teamTom from "@/assets/team-tom.webp";
 import teamVince from "@/assets/team-vince.webp";
+import { useTranslation } from "react-i18next";
 
 const teamMembers = [
   {
@@ -25,11 +25,13 @@ const teamMembers = [
 ];
 
 const SalesTeam = () => {
+  const { t } = useTranslation("common");
+
   return (
     <>
       <SEO
-        title="Meet Our Sales Team – Pzaz"
-        description="Reach out to the Pzaz sales team directly. We're here to assist you personally."
+        title={t("sales.seo_title")}
+        description={t("sales.seo_desc")}
         url="https://pzaz.io/sales-team"
       />
       <Header />
@@ -39,19 +41,19 @@ const SalesTeam = () => {
             className="text-4xl md:text-5xl font-bold mb-4"
             style={{ color: "#20124D", fontFamily: "'Lato', sans-serif" }}
           >
-            Meet Our Sales Team.
+            {t("sales.heading")}
           </h1>
           <p
             className="text-lg md:text-xl mb-2"
             style={{ color: "#4E2273", fontFamily: "'Lato', sans-serif" }}
           >
-            We're here to assist you personally.
+            {t("sales.subtitle")}
           </p>
           <p
             className="text-base"
             style={{ color: "#6B7280", fontFamily: "'Lato', sans-serif" }}
           >
-            Reach out directly—we're always happy to help!
+            {t("sales.reach_out")}
           </p>
         </div>
 
@@ -104,7 +106,7 @@ const SalesTeam = () => {
                   rel="noopener noreferrer"
                   className="text-sm font-medium text-[#20124D] underline underline-offset-2 hover:text-[#5C28A4] transition-colors mt-1 font-['Lato']"
                 >
-                  Download VCard
+                  {t("sales.download_vcard")}
                 </a>
               </div>
             </div>

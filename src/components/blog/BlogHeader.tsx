@@ -6,36 +6,40 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import pzazLogo from "@/assets/pzaz-logo.png";
 import { useIndieCheckoutUrl } from "@/lib/checkout";
+import { useTranslation } from "react-i18next";
+import { useLocale } from "@/hooks/use-locale";
 
 const BlogHeader = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const indieCheckoutUrl = useIndieCheckoutUrl();
+  const { t } = useTranslation("blog");
+  const { prefix } = useLocale();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/50">
       <div className="container mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
+          <Link to={`${prefix}/`} className="flex items-center gap-2 group">
             <img src={pzazLogo} alt="Pzaz" className="h-8" />
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <Link to="/about-us" className="text-muted-foreground hover:text-foreground transition-colors font-medium text-sm">
-              About
+            <Link to={`${prefix}/about-us`} className="text-muted-foreground hover:text-foreground transition-colors font-medium text-sm">
+              {t("blog.nav_about")}
             </Link>
-            <Link to="/producer-blog" className="text-foreground font-medium text-sm">
-              Blog
+            <Link to={`${prefix}/producer-blog`} className="text-foreground font-medium text-sm">
+              {t("blog.nav_blog")}
             </Link>
-            <Link to="/script" className="text-muted-foreground hover:text-foreground transition-colors font-medium text-sm">
-              Script
+            <Link to={`${prefix}/script`} className="text-muted-foreground hover:text-foreground transition-colors font-medium text-sm">
+              {t("blog.nav_script")}
             </Link>
-            <Link to="/pricing" className="text-muted-foreground hover:text-foreground transition-colors font-medium text-sm">
-              Pricing
+            <Link to={`${prefix}/pricing`} className="text-muted-foreground hover:text-foreground transition-colors font-medium text-sm">
+              {t("blog.nav_pricing")}
             </Link>
-            <a href="/#products" className="text-muted-foreground hover:text-foreground transition-colors font-medium text-sm">
-              Products
+            <a href={`${prefix}/#products`} className="text-muted-foreground hover:text-foreground transition-colors font-medium text-sm">
+              {t("blog.nav_products")}
             </a>
           </div>
 
@@ -43,12 +47,12 @@ const BlogHeader = () => {
           <div className="hidden md:flex items-center gap-3">
             <a href="https://projector.pzaz.io/sign-in">
               <Button variant="ghost" size="sm">
-                Log in
+                {t("blog.nav_login")}
               </Button>
             </a>
             <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
               <Button variant="default" size="sm">
-                Start for Free
+                {t("blog.nav_start_free")}
               </Button>
             </a>
           </div>
@@ -73,14 +77,14 @@ const BlogHeader = () => {
             className="md:hidden bg-background border-t border-border/50"
           >
             <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
-              <Link to="/about-us" className="text-foreground font-medium py-2">About</Link>
-              <Link to="/producer-blog" className="text-foreground font-medium py-2">Blog</Link>
-              <Link to="/script" className="text-foreground font-medium py-2">Script</Link>
-              <Link to="/pricing" className="text-foreground font-medium py-2">Pricing</Link>
-              <a href="/#products" className="text-foreground font-medium py-2">Products</a>
+              <Link to={`${prefix}/about-us`} className="text-foreground font-medium py-2">{t("blog.nav_about")}</Link>
+              <Link to={`${prefix}/producer-blog`} className="text-foreground font-medium py-2">{t("blog.nav_blog")}</Link>
+              <Link to={`${prefix}/script`} className="text-foreground font-medium py-2">{t("blog.nav_script")}</Link>
+              <Link to={`${prefix}/pricing`} className="text-foreground font-medium py-2">{t("blog.nav_pricing")}</Link>
+              <a href={`${prefix}/#products`} className="text-foreground font-medium py-2">{t("blog.nav_products")}</a>
               <hr className="border-border/50" />
-              <a href="https://projector.pzaz.io/sign-in"><Button variant="ghost" className="justify-start">Log in</Button></a>
-              <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer"><Button variant="default">Start for Free</Button></a>
+              <a href="https://projector.pzaz.io/sign-in"><Button variant="ghost" className="justify-start">{t("blog.nav_login")}</Button></a>
+              <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer"><Button variant="default">{t("blog.nav_start_free")}</Button></a>
             </div>
           </motion.div>
         )}

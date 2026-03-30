@@ -2,12 +2,15 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Twitter, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 interface ArticleAuthorProps {
   authorName: string;
 }
 
 const ArticleAuthor = ({ authorName }: ArticleAuthorProps) => {
+  const { t } = useTranslation("blog");
+
   return (
     <section className="py-8">
       <div className="container mx-auto px-6">
@@ -30,7 +33,7 @@ const ArticleAuthor = ({ authorName }: ArticleAuthorProps) => {
               </div>
               
               <div className="flex-1">
-                <p className="text-sm text-primary font-medium mb-1">Written by</p>
+                <p className="text-sm text-primary font-medium mb-1">{t("blog.written_by")}</p>
                 <h3 className="text-xl font-bold text-foreground mb-4">{authorName}</h3>
                 
                 <div className="flex items-center gap-2">
