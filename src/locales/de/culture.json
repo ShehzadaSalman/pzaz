@@ -1,0 +1,51 @@
+{
+  "culture": {
+    "seo_title": "Nuestra cultura – Pzaz",
+    "seo_desc": "Descubre el manifiesto cultural de Pzaz — nuestros principios, valores y lo que hace que nuestro equipo de ensueño funcione.",
+    "hero_title_1": "Cultura ",
+    "hero_title_2": "Pzaz.",
+    "manifesto_title": "Nuestro manifiesto cultural.",
+    "manifesto_p1": "En Pzaz.io, creemos que la cultura cinematográfica es tan esencial como la amistad — nos conecta, nos inspira y crea experiencias compartidas. Por eso estamos comprometidos a apoyar la creación y entrega de historias a audiencias de todo el mundo.",
+    "manifesto_p2": "Las experiencias excepcionales del cliente impulsan todo lo que hacemos, y sabemos que eso comienza con una cultura de empleados extraordinaria. Por eso aspiramos a ser más eficientes, más rápidos, más innovadores y mejores — cada día.",
+    "manifesto_p3": "Si estás considerando unirte a nosotros, tómate un momento para entender cómo operamos. Nuestro enfoque puede no ser para todos, pero define quiénes somos: un equipo dedicado a la perspicacia, la innovación y el impacto.",
+    "principles_title": "Nuestros principios.",
+    "principles": [
+      { "title": "Claridad del por qué.", "desc": "Siempre sabemos por qué hacemos lo que hacemos — porque la claridad inspira y construye confianza y lealtad." },
+      { "title": "Consistencia del qué.", "desc": "Lo que hacemos demuestra lo que creemos. Entregamos servicios de alta calidad y buscamos superar las expectativas en cada punto de contacto." },
+      { "title": "La disciplina del cómo.", "desc": "La innovación nos impulsa. La responsabilidad nos guía. La confianza nos sostiene. Entregamos lo que prometemos y creamos soluciones innovadoras." },
+      { "title": "El culto al asombro.", "desc": "No somos solo mejores que el promedio — aspiramos a asombrar. Los momentos cotidianos de 'Wow' construyen confianza, y los momentos ocasionales de 'Pow' profundizan las conexiones." }
+    ],
+    "culture_title": "La cultura Pzaz.",
+    "culture_p1": "En Pzaz, las personas van primero. Prosperamos con flexibilidad, creatividad y colaboración, haciéndonos una organización divertida, feliz y exitosa.",
+    "culture_p2": "Valoramos la integridad, la excelencia, el respeto, la inclusión y el trabajo en equipo. Lo que nos diferencia:",
+    "traits": [
+      "Los empleados toman decisiones independientes.",
+      "Compartimos información abierta y honestamente.",
+      "Priorizamos la comunicación sincera.",
+      "Evitamos reglas innecesarias.",
+      "Solo mantenemos a quienes demuestran que lo desean."
+    ],
+    "values_title": "Nuestros valores.",
+    "values_desc": "En Pzaz, nuestros valores dan forma a quiénes recompensamos y retenemos. Si estos resuenan contigo, prosperarás aquí:",
+    "values": [
+      { "title": "Coraje.", "desc": "Habla, toma riesgos inteligentes y abraza la vulnerabilidad por la verdad." },
+      { "title": "Curiosidad.", "desc": "Aprende con entusiasmo, piensa creativamente y busca perspectivas diversas." },
+      { "title": "Impacto.", "desc": "Entrega resultados, haz que tus colegas mejoren y prioriza lo que importa." },
+      { "title": "Desinterés.", "desc": "Pon a Pzaz primero, mantente de mente abierta y ayuda a otros a tener éxito." },
+      { "title": "Pasión.", "desc": "Inspira excelencia, preocúpate profundamente y mantente optimista." },
+      { "title": "Integridad.", "desc": "Sé auténtico, transparente y respetuoso. Reconoce los errores." },
+      { "title": "Innovación.", "desc": "Resuelve problemas difíciles, simplifica y prospera con el cambio." },
+      { "title": "Comunicación.", "desc": "Clara, concisa y abierta. Escucha bien, adáptate y da retroalimentación oportuna." }
+    ],
+    "dream_title": "El equipo de ensueño.",
+    "dream_desc": "En Pzaz, nuestro equipo de ensueño es descentralizado pero unido por objetivos compartidos. Buscamos individuos que prosperen de forma independiente pero sobresalgan en colaboración, encarnando una mentalidad de crecimiento continuo, retroalimentación abierta y respeto mutuo.",
+    "dream_team": [
+      { "title": "Mejores.", "desc": "Siempre nos esforzamos por mejorar, convirtiendo cada experiencia en un paso hacia la excelencia." },
+      { "title": "Capaces.", "desc": "No se trata solo de brillantez — se trata de colaboración, creatividad y éxito compartido. Las recompensas crecen con los logros." },
+      { "title": "Retroalimentación.", "desc": "Honestidad sobre amabilidad, respeto ante todo. La comunicación abierta fomenta la mejora constante." },
+      { "title": "Estabilidad y sostenibilidad.", "desc": "Crecemos juntos en los buenos tiempos y nos mantenemos fuertes en los desafíos, priorizando el éxito sostenible sobre la velocidad." },
+      { "title": "Confianza.", "desc": "El apoyo mutuo y la fe en las habilidades de los demás impulsan nuestro éxito colectivo." },
+      { "title": "Únicos.", "desc": "Buscamos pioneros — aquellos que no temen los riesgos y están ansiosos por crecer con nosotros, dando forma al futuro juntos." }
+    ]
+  }
+}
