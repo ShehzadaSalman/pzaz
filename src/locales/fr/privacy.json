@@ -1,57 +1,57 @@
 {
   "privacy": {
-    "seo_title": "Privacy Policy | Pzaz",
-    "seo_desc": "Read the Pzaz Privacy Policy to understand how we collect, use, and protect your personal data in accordance with GDPR.",
-    "page_title": "Pzaz Privacy Policy",
-    "date": "Date: January 12, 2024",
-    "toc_label": "Contents",
-    "intro": "Welcome to Pzaz! Our Privacy Policy explains how we handle your information when you use Pzaz, following the General Data Protection Regulation (GDPR). By using Pzaz, you're agreeing to this policy.",
+    "seo_title": "Politique de Confidentialité | Pzaz",
+    "seo_desc": "Lisez la Politique de Confidentialité de Pzaz pour comprendre comment nous collectons, utilisons et protégeons vos données personnelles conformément au RGPD.",
+    "page_title": "Politique de Confidentialité Pzaz",
+    "date": "Date : 12 janvier 2024",
+    "toc_label": "Sommaire",
+    "intro": "Bienvenue sur Pzaz ! Notre Politique de Confidentialité explique comment nous traitons vos informations lorsque vous utilisez Pzaz, conformément au Règlement Général sur la Protection des Données (RGPD). En utilisant Pzaz, vous acceptez cette politique.",
     "sections": [
       {
         "id": "id_1",
-        "title": "Collecting and Using Your Information",
-        "content": "We collect various data types, including personal details like your name and contact information, demographic data such as age and occupation, and location data from your device or IP address. We also gather usage and technical data about your interactions with our services and the devices you use. Our use of cookies and tracking technologies helps us understand service usage patterns. For transactions, we collect payment details and store any information you share in communications with us. Additionally, we may receive data from your social media interactions and other information you provide for service delivery.\n\nWe only take what we need to offer our services."
+        "title": "Collecte et Utilisation de Vos Informations",
+        "content": "Nous collectons différents types de données, notamment des informations personnelles comme votre nom et vos coordonnées, des données démographiques telles que l'âge et la profession, et des données de localisation à partir de votre appareil ou adresse IP. Nous recueillons également des données d'utilisation et techniques sur vos interactions avec nos services et les appareils que vous utilisez. Notre utilisation de cookies et de technologies de suivi nous aide à comprendre les habitudes d'utilisation du service. Pour les transactions, nous collectons les détails de paiement et conservons toute information que vous partagez dans vos communications avec nous. De plus, nous pouvons recevoir des données de vos interactions sur les réseaux sociaux et d'autres informations que vous fournissez pour la prestation de services.\n\nNous ne prenons que ce dont nous avons besoin pour offrir nos services."
       },
-      { "id": "id_2", "title": "Your Rights Under GDPR", "content": "We follow GDPR, and you have rights over your data, like accessing, correcting, deleting it, limiting how we use it, objecting to our use, transferring it elsewhere, withdrawing consent, and complaining to authorities. You can ask for any of this by contacting us." },
-      { "id": "id_3", "title": "Data Transfer", "content": "Your data might be stored or processed outside your area, where different laws might apply, but we'll protect it as stated in this policy." },
+      { "id": "id_2", "title": "Vos Droits en Vertu du RGPD", "content": "Nous respectons le RGPD, et vous avez des droits sur vos données, comme y accéder, les corriger, les supprimer, limiter leur utilisation, vous opposer à notre utilisation, les transférer ailleurs, retirer votre consentement et porter plainte auprès des autorités. Vous pouvez demander l'exercice de ces droits en nous contactant." },
+      { "id": "id_3", "title": "Transfert de Données", "content": "Vos données peuvent être stockées ou traitées en dehors de votre zone, où des lois différentes peuvent s'appliquer, mais nous les protégerons comme indiqué dans cette politique." },
       {
         "id": "id_4",
-        "title": "Disclosing Data",
-        "content": "We might share your personal data for the following reasons:",
+        "title": "Divulgation des Données",
+        "content": "Nous pouvons partager vos données personnelles pour les raisons suivantes :",
         "bullets": [
-          { "label": "Legal Compliance", "text": "To comply with legal requirements, such as court orders." },
-          { "label": "Protection", "text": "To protect and defend Pzaz, our property, users, and the company." },
-          { "label": "Investigation", "text": "To investigate or prevent potential wrongdoing related to the Service." },
-          { "label": "Safety", "text": "To ensure the safety of users and the company." },
-          { "label": "Business Transactions", "text": "If Pzaz is part of a business transaction like a merger or sale." }
+          { "label": "Conformité Légale", "text": "Pour répondre aux exigences légales, comme les ordonnances judiciaires." },
+          { "label": "Protection", "text": "Pour protéger et défendre Pzaz, nos biens, nos utilisateurs et l'entreprise." },
+          { "label": "Enquête", "text": "Pour enquêter ou prévenir d'éventuels actes répréhensibles liés au Service." },
+          { "label": "Sécurité", "text": "Pour assurer la sécurité des utilisateurs et de l'entreprise." },
+          { "label": "Transactions Commerciales", "text": "Si Pzaz fait partie d'une transaction commerciale comme une fusion ou une vente." }
         ]
       },
       {
         "id": "id_5",
-        "title": "Data Security",
-        "content": "We take several measures to protect your data, including:",
+        "title": "Sécurité des Données",
+        "content": "Nous prenons plusieurs mesures pour protéger vos données, notamment :",
         "bullets": [
-          { "label": "Encryption", "text": "We encrypt your data during transmission, reception, and storage." },
-          { "label": "Regular Audits", "text": "We regularly check our system for safety and security vulnerabilities." },
-          { "label": "Access Control", "text": "We restrict access to your data to authorised personnel only." }
+          { "label": "Chiffrement", "text": "Nous chiffrons vos données pendant la transmission, la réception et le stockage." },
+          { "label": "Audits Réguliers", "text": "Nous vérifions régulièrement notre système pour détecter les vulnérabilités de sécurité." },
+          { "label": "Contrôle d'Accès", "text": "Nous restreignons l'accès à vos données au personnel autorisé uniquement." }
         ]
       },
-      { "id": "id_6", "title": "Using Service Providers", "content": "We hire others to help run our service. These providers can access your data only to do their jobs for us, such as payment processing. They are obligated to protect your data and abide by privacy standards." },
-      { "id": "id_7", "title": "External Links", "content": "Our service may link to other sites. We're not responsible for their privacy practices, so always be cautious and review the privacy policies of any external sites you visit." },
-      { "id": "id_8", "title": "Payments", "content": "We process subscription payments securely and in line with GDPR and use trusted payment gateways. Your payment data is handled with the utmost security and confidentiality." },
-      { "id": "id_9", "title": "Policy Changes", "content": "We might change this policy. Check back here for updates. Your continued service use after changes signifies your acceptance of the new terms." },
-      { "id": "id_10", "title": "Contact Us", "content": "Questions or want to exercise your rights? Email us at " },
+      { "id": "id_6", "title": "Utilisation de Prestataires", "content": "Nous faisons appel à des tiers pour nous aider à gérer notre service. Ces prestataires ne peuvent accéder à vos données que pour effectuer leur travail pour nous, comme le traitement des paiements. Ils sont tenus de protéger vos données et de respecter les normes de confidentialité." },
+      { "id": "id_7", "title": "Liens Externes", "content": "Notre service peut contenir des liens vers d'autres sites. Nous ne sommes pas responsables de leurs pratiques de confidentialité, alors soyez toujours prudent et consultez les politiques de confidentialité des sites externes que vous visitez." },
+      { "id": "id_8", "title": "Paiements", "content": "Nous traitons les paiements d'abonnement de manière sécurisée et conformément au RGPD, en utilisant des passerelles de paiement de confiance. Vos données de paiement sont traitées avec la plus grande sécurité et confidentialité." },
+      { "id": "id_9", "title": "Modifications de la Politique", "content": "Nous pouvons modifier cette politique. Revenez ici pour les mises à jour. Votre utilisation continue du service après les modifications signifie votre acceptation des nouvelles conditions." },
+      { "id": "id_10", "title": "Nous Contacter", "content": "Des questions ou souhaitez exercer vos droits ? Écrivez-nous à " },
       {
         "id": "id_11",
-        "title": "Cookie Policy",
-        "content": "Cookies are small files that websites place on your device to remember your preferences. We use cookies to understand and remember your preferences, improve our site, and offer a personalised experience. There are different types of cookies:",
+        "title": "Politique de Cookies",
+        "content": "Les cookies sont de petits fichiers que les sites web placent sur votre appareil pour mémoriser vos préférences. Nous utilisons des cookies pour comprendre et mémoriser vos préférences, améliorer notre site et offrir une expérience personnalisée. Il existe différents types de cookies :",
         "bullets": [
-          { "label": "Essential", "text": "For website functionality." },
-          { "label": "Performance", "text": "To improve the site." },
-          { "label": "Functionality", "text": "To remember your preferences." },
-          { "label": "Targeting", "text": "Used by advertisers." }
+          { "label": "Essentiels", "text": "Pour le fonctionnement du site web." },
+          { "label": "Performance", "text": "Pour améliorer le site." },
+          { "label": "Fonctionnalité", "text": "Pour mémoriser vos préférences." },
+          { "label": "Ciblage", "text": "Utilisés par les annonceurs." }
         ],
-        "footer": "You can disable and delete cookies in your browser, which may impact how our website functions. For detailed information on cookies, visit aboutcookies.org.\n\nQuestions about cookies? Email us at support@pzaz.io."
+        "footer": "Vous pouvez désactiver et supprimer les cookies dans votre navigateur, ce qui peut affecter le fonctionnement de notre site web. Pour des informations détaillées sur les cookies, visitez aboutcookies.org.\n\nDes questions sur les cookies ? Écrivez-nous à support@pzaz.io."
       }
     ]
   }

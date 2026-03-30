@@ -1,51 +1,51 @@
 {
   "culture": {
-    "seo_title": "Our Culture – Pzaz",
-    "seo_desc": "Discover Pzaz's culture manifesto — our principles, values, and what makes our dream team tick.",
-    "hero_title_1": "Pzaz ",
-    "hero_title_2": "Culture.",
-    "manifesto_title": "Our Culture Manifesto.",
-    "manifesto_p1": "At Pzaz.io, we believe film culture is as essential as friendship—it connects us, inspires us, and creates shared experiences. That's why we're committed to support the creation and delivery of stories to audiences around the globe.",
-    "manifesto_p2": "Exceptional customer experiences drive everything we do, and we know that starts with an extraordinary employee culture. That's why we aim to be leaner, faster, more innovative, and better—every single day.",
-    "manifesto_p3": "If you're considering joining us, take a moment to understand how we operate. Our approach may not suit everyone, but it defines who we are: a team dedicated to insight, innovation, and making an impact.",
-    "principles_title": "Our Principles.",
+    "seo_title": "Notre Culture – Pzaz",
+    "seo_desc": "Découvrez le manifeste culturel de Pzaz — nos principes, nos valeurs et ce qui fait de notre équipe de rêve une réalité.",
+    "hero_title_1": "Culture ",
+    "hero_title_2": "Pzaz.",
+    "manifesto_title": "Notre Manifeste Culturel.",
+    "manifesto_p1": "Chez Pzaz.io, nous croyons que la culture cinématographique est aussi essentielle que l'amitié — elle nous connecte, nous inspire et crée des expériences partagées. C'est pourquoi nous nous engageons à soutenir la création et la diffusion d'histoires auprès de publics du monde entier.",
+    "manifesto_p2": "Des expériences client exceptionnelles guident tout ce que nous faisons, et nous savons que cela commence par une culture d'entreprise extraordinaire. C'est pourquoi nous visons à être plus agiles, plus rapides, plus innovants et meilleurs — chaque jour.",
+    "manifesto_p3": "Si vous envisagez de nous rejoindre, prenez un moment pour comprendre notre fonctionnement. Notre approche ne convient pas à tout le monde, mais elle définit qui nous sommes : une équipe dédiée à la perspicacité, à l'innovation et à l'impact.",
+    "principles_title": "Nos Principes.",
     "principles": [
-      { "title": "Clarity of Why.", "desc": "We always know why we do what we do—because clarity inspires and builds trust and loyalty." },
-      { "title": "Consistency of What.", "desc": "What we do proves what we believe. We deliver top-quality services and aim to exceed expectations at every touchpoint." },
-      { "title": "The Discipline of How.", "desc": "Innovation drives us. Accountability guides us. Trust sustains us. We deliver what we promise and create groundbreaking solutions." },
-      { "title": "The Cult of Amazement.", "desc": "We're not just better than average—we aim to amaze. Everyday 'Wow' moments build trust, and occasional 'Pow' moments deepen connections." }
+      { "title": "Clarté du Pourquoi.", "desc": "Nous savons toujours pourquoi nous faisons ce que nous faisons — car la clarté inspire et crée confiance et loyauté." },
+      { "title": "Cohérence du Quoi.", "desc": "Ce que nous faisons prouve ce que nous croyons. Nous offrons des services de qualité supérieure et visons à dépasser les attentes à chaque point de contact." },
+      { "title": "La Discipline du Comment.", "desc": "L'innovation nous anime. La responsabilité nous guide. La confiance nous soutient. Nous tenons nos promesses et créons des solutions révolutionnaires." },
+      { "title": "Le Culte de l'Émerveillement.", "desc": "Nous ne sommes pas juste meilleurs que la moyenne — nous visons l'émerveillement. Les moments « Wow » quotidiens construisent la confiance, et les moments « Pow » occasionnels approfondissent les connexions." }
     ],
-    "culture_title": "The Pzaz Culture.",
-    "culture_p1": "At Pzaz, people come first. We thrive on flexibility, creativity, and collaboration, making us a fun, happy and successful organisation.",
-    "culture_p2": "We value integrity, excellence, respect, inclusion, and teamwork. What sets us apart:",
+    "culture_title": "La Culture Pzaz.",
+    "culture_p1": "Chez Pzaz, les personnes passent en premier. Nous prospérons grâce à la flexibilité, la créativité et la collaboration, faisant de nous une organisation amusante, heureuse et performante.",
+    "culture_p2": "Nous valorisons l'intégrité, l'excellence, le respect, l'inclusion et le travail d'équipe. Ce qui nous distingue :",
     "traits": [
-      "Employees make independent decisions.",
-      "We share information openly and honestly.",
-      "We prioritize candid communication.",
-      "We avoid unnecessary rules.",
-      "We keep only those that show they want it."
+      "Les employés prennent des décisions indépendantes.",
+      "Nous partageons l'information ouvertement et honnêtement.",
+      "Nous privilégions la communication franche.",
+      "Nous évitons les règles inutiles.",
+      "Nous ne gardons que ceux qui montrent qu'ils le veulent."
     ],
-    "values_title": "Our Values.",
-    "values_desc": "At Pzaz, our values shape who we reward and retain. If these resonate with you, you'll thrive here:",
+    "values_title": "Nos Valeurs.",
+    "values_desc": "Chez Pzaz, nos valeurs façonnent qui nous récompensons et retenons. Si elles résonnent en vous, vous vous épanouirez ici :",
     "values": [
-      { "title": "Courage.", "desc": "Speak up, take smart risks, and embrace vulnerability for the truth." },
-      { "title": "Curiosity.", "desc": "Learn eagerly, think creatively, and seek diverse perspectives." },
-      { "title": "Impact.", "desc": "Deliver results, make colleagues better, and prioritize what matters." },
-      { "title": "Selflessness.", "desc": "Put Pzaz first, stay open-minded, and help others succeed." },
-      { "title": "Passion.", "desc": "Inspire excellence, care deeply, and stay optimistic." },
-      { "title": "Integrity.", "desc": "Be authentic, transparent, and respectful. Own mistakes." },
-      { "title": "Innovation.", "desc": "Solve hard problems, simplify, and thrive on change." },
-      { "title": "Communication.", "desc": "Clear, concise, and open. Listen well, adapt, and give timely feedback." }
+      { "title": "Courage.", "desc": "Exprimez-vous, prenez des risques intelligents et embrassez la vulnérabilité pour la vérité." },
+      { "title": "Curiosité.", "desc": "Apprenez avec enthousiasme, pensez de manière créative et recherchez des perspectives diverses." },
+      { "title": "Impact.", "desc": "Produisez des résultats, rendez vos collègues meilleurs et priorisez ce qui compte." },
+      { "title": "Altruisme.", "desc": "Mettez Pzaz en premier, restez ouvert d'esprit et aidez les autres à réussir." },
+      { "title": "Passion.", "desc": "Inspirez l'excellence, souciez-vous profondément et restez optimiste." },
+      { "title": "Intégrité.", "desc": "Soyez authentique, transparent et respectueux. Assumez vos erreurs." },
+      { "title": "Innovation.", "desc": "Résolvez les problèmes difficiles, simplifiez et prospérez dans le changement." },
+      { "title": "Communication.", "desc": "Claire, concise et ouverte. Écoutez bien, adaptez-vous et donnez des retours en temps utile." }
     ],
-    "dream_title": "The Dream Team.",
-    "dream_desc": "At Pzaz, our dream team is decentralized yet united by shared goals. We seek individuals who thrive independently but excel collaboratively, embodying a mindset of continuous growth, open feedback, and mutual respect.",
+    "dream_title": "L'Équipe de Rêve.",
+    "dream_desc": "Chez Pzaz, notre équipe de rêve est décentralisée mais unie par des objectifs communs. Nous recherchons des individus qui s'épanouissent de manière indépendante mais excellent en collaboration, incarnant un état d'esprit de croissance continue, de feedback ouvert et de respect mutuel.",
     "dream_team": [
-      { "title": "Better.", "desc": "We're always striving to improve, turning every experience into a step toward excellence." },
-      { "title": "Capable.", "desc": "It's not just about brilliance—it's about collaboration, creativity, and shared success. Rewards grow with achievements." },
-      { "title": "Feedback.", "desc": "Honesty over kindness, respect above all. Open communication fosters constant improvement." },
-      { "title": "Stability & Sustainability.", "desc": "We grow together in good times and stand strong in challenges, prioritizing sustainable success over speed." },
-      { "title": "Trust.", "desc": "Mutual support and belief in each other's skills drive our collective success." },
-      { "title": "Unique.", "desc": "We seek trailblazers—those unafraid of risks and eager to grow with us, shaping the future together." }
+      { "title": "Meilleurs.", "desc": "Nous cherchons toujours à nous améliorer, transformant chaque expérience en un pas vers l'excellence." },
+      { "title": "Compétents.", "desc": "Il ne s'agit pas seulement de brillance — c'est la collaboration, la créativité et le succès partagé. Les récompenses grandissent avec les réalisations." },
+      { "title": "Feedback.", "desc": "L'honnêteté avant la gentillesse, le respect avant tout. La communication ouverte favorise l'amélioration constante." },
+      { "title": "Stabilité et Durabilité.", "desc": "Nous grandissons ensemble dans les bons moments et restons solides face aux défis, privilégiant le succès durable à la vitesse." },
+      { "title": "Confiance.", "desc": "Le soutien mutuel et la confiance dans les compétences de chacun alimentent notre succès collectif." },
+      { "title": "Uniques.", "desc": "Nous cherchons des pionniers — ceux qui n'ont pas peur des risques et désireux de grandir avec nous, façonnant l'avenir ensemble." }
     ]
   }
 }
