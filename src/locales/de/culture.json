@@ -1,51 +1,51 @@
 {
   "culture": {
-    "seo_title": "Nuestra cultura – Pzaz",
-    "seo_desc": "Descubre el manifiesto cultural de Pzaz — nuestros principios, valores y lo que hace que nuestro equipo de ensueño funcione.",
-    "hero_title_1": "Cultura ",
-    "hero_title_2": "Pzaz.",
-    "manifesto_title": "Nuestro manifiesto cultural.",
-    "manifesto_p1": "En Pzaz.io, creemos que la cultura cinematográfica es tan esencial como la amistad — nos conecta, nos inspira y crea experiencias compartidas. Por eso estamos comprometidos a apoyar la creación y entrega de historias a audiencias de todo el mundo.",
-    "manifesto_p2": "Las experiencias excepcionales del cliente impulsan todo lo que hacemos, y sabemos que eso comienza con una cultura de empleados extraordinaria. Por eso aspiramos a ser más eficientes, más rápidos, más innovadores y mejores — cada día.",
-    "manifesto_p3": "Si estás considerando unirte a nosotros, tómate un momento para entender cómo operamos. Nuestro enfoque puede no ser para todos, pero define quiénes somos: un equipo dedicado a la perspicacia, la innovación y el impacto.",
-    "principles_title": "Nuestros principios.",
+    "seo_title": "Unsere Kultur – Pzaz",
+    "seo_desc": "Entdecken Sie das Kulturmanifest von Pzaz — unsere Prinzipien, Werte und was unser Dreamteam ausmacht.",
+    "hero_title_1": "Pzaz ",
+    "hero_title_2": "Kultur.",
+    "manifesto_title": "Unser Kulturmanifest.",
+    "manifesto_p1": "Bei Pzaz.io glauben wir, dass Filmkultur so essenziell ist wie Freundschaft — sie verbindet uns, inspiriert uns und schafft gemeinsame Erlebnisse. Deshalb setzen wir uns dafür ein, die Erstellung und Bereitstellung von Geschichten für Zuschauer weltweit zu unterstützen.",
+    "manifesto_p2": "Außergewöhnliche Kundenerlebnisse treiben alles an, was wir tun, und wir wissen, dass dies mit einer außergewöhnlichen Mitarbeiterkultur beginnt. Deshalb streben wir danach, schlanker, schneller, innovativer und besser zu sein — jeden einzelnen Tag.",
+    "manifesto_p3": "Wenn Sie erwägen, uns beizutreten, nehmen Sie sich einen Moment, um zu verstehen, wie wir arbeiten. Unser Ansatz passt vielleicht nicht zu jedem, aber er definiert, wer wir sind: ein Team, das sich für Einblick, Innovation und Wirkung einsetzt.",
+    "principles_title": "Unsere Prinzipien.",
     "principles": [
-      { "title": "Claridad del por qué.", "desc": "Siempre sabemos por qué hacemos lo que hacemos — porque la claridad inspira y construye confianza y lealtad." },
-      { "title": "Consistencia del qué.", "desc": "Lo que hacemos demuestra lo que creemos. Entregamos servicios de alta calidad y buscamos superar las expectativas en cada punto de contacto." },
-      { "title": "La disciplina del cómo.", "desc": "La innovación nos impulsa. La responsabilidad nos guía. La confianza nos sostiene. Entregamos lo que prometemos y creamos soluciones innovadoras." },
-      { "title": "El culto al asombro.", "desc": "No somos solo mejores que el promedio — aspiramos a asombrar. Los momentos cotidianos de 'Wow' construyen confianza, y los momentos ocasionales de 'Pow' profundizan las conexiones." }
+      { "title": "Klarheit des Warum.", "desc": "Wir wissen immer, warum wir tun, was wir tun — denn Klarheit inspiriert und schafft Vertrauen und Loyalität." },
+      { "title": "Konsistenz des Was.", "desc": "Was wir tun, beweist, woran wir glauben. Wir liefern erstklassige Dienste und streben danach, Erwartungen an jedem Berührungspunkt zu übertreffen." },
+      { "title": "Die Disziplin des Wie.", "desc": "Innovation treibt uns an. Verantwortlichkeit leitet uns. Vertrauen trägt uns. Wir halten, was wir versprechen, und schaffen bahnbrechende Lösungen." },
+      { "title": "Der Kult des Erstaunens.", "desc": "Wir sind nicht nur besser als der Durchschnitt — wir wollen begeistern. Alltägliche 'Wow'-Momente bauen Vertrauen auf, und gelegentliche 'Pow'-Momente vertiefen Verbindungen." }
     ],
-    "culture_title": "La cultura Pzaz.",
-    "culture_p1": "En Pzaz, las personas van primero. Prosperamos con flexibilidad, creatividad y colaboración, haciéndonos una organización divertida, feliz y exitosa.",
-    "culture_p2": "Valoramos la integridad, la excelencia, el respeto, la inclusión y el trabajo en equipo. Lo que nos diferencia:",
+    "culture_title": "Die Pzaz-Kultur.",
+    "culture_p1": "Bei Pzaz stehen Menschen an erster Stelle. Wir gedeihen durch Flexibilität, Kreativität und Zusammenarbeit und sind eine spaßige, glückliche und erfolgreiche Organisation.",
+    "culture_p2": "Wir schätzen Integrität, Exzellenz, Respekt, Inklusion und Teamarbeit. Was uns unterscheidet:",
     "traits": [
-      "Los empleados toman decisiones independientes.",
-      "Compartimos información abierta y honestamente.",
-      "Priorizamos la comunicación sincera.",
-      "Evitamos reglas innecesarias.",
-      "Solo mantenemos a quienes demuestran que lo desean."
+      "Mitarbeiter treffen unabhängige Entscheidungen.",
+      "Wir teilen Informationen offen und ehrlich.",
+      "Wir priorisieren offene Kommunikation.",
+      "Wir vermeiden unnötige Regeln.",
+      "Wir behalten nur diejenigen, die zeigen, dass sie es wollen."
     ],
-    "values_title": "Nuestros valores.",
-    "values_desc": "En Pzaz, nuestros valores dan forma a quiénes recompensamos y retenemos. Si estos resuenan contigo, prosperarás aquí:",
+    "values_title": "Unsere Werte.",
+    "values_desc": "Bei Pzaz prägen unsere Werte, wen wir belohnen und behalten. Wenn diese bei Ihnen ankommen, werden Sie hier aufblühen:",
     "values": [
-      { "title": "Coraje.", "desc": "Habla, toma riesgos inteligentes y abraza la vulnerabilidad por la verdad." },
-      { "title": "Curiosidad.", "desc": "Aprende con entusiasmo, piensa creativamente y busca perspectivas diversas." },
-      { "title": "Impacto.", "desc": "Entrega resultados, haz que tus colegas mejoren y prioriza lo que importa." },
-      { "title": "Desinterés.", "desc": "Pon a Pzaz primero, mantente de mente abierta y ayuda a otros a tener éxito." },
-      { "title": "Pasión.", "desc": "Inspira excelencia, preocúpate profundamente y mantente optimista." },
-      { "title": "Integridad.", "desc": "Sé auténtico, transparente y respetuoso. Reconoce los errores." },
-      { "title": "Innovación.", "desc": "Resuelve problemas difíciles, simplifica y prospera con el cambio." },
-      { "title": "Comunicación.", "desc": "Clara, concisa y abierta. Escucha bien, adáptate y da retroalimentación oportuna." }
+      { "title": "Mut.", "desc": "Sprechen Sie sich aus, gehen Sie kluge Risiken ein und seien Sie verletzlich für die Wahrheit." },
+      { "title": "Neugier.", "desc": "Lernen Sie eifrig, denken Sie kreativ und suchen Sie vielfältige Perspektiven." },
+      { "title": "Wirkung.", "desc": "Liefern Sie Ergebnisse, machen Sie Kollegen besser und priorisieren Sie das Wichtige." },
+      { "title": "Selbstlosigkeit.", "desc": "Stellen Sie Pzaz an erste Stelle, bleiben Sie offen und helfen Sie anderen, erfolgreich zu sein." },
+      { "title": "Leidenschaft.", "desc": "Inspirieren Sie Exzellenz, kümmern Sie sich aufrichtig und bleiben Sie optimistisch." },
+      { "title": "Integrität.", "desc": "Seien Sie authentisch, transparent und respektvoll. Stehen Sie zu Fehlern." },
+      { "title": "Innovation.", "desc": "Lösen Sie schwierige Probleme, vereinfachen Sie und gedeihen Sie im Wandel." },
+      { "title": "Kommunikation.", "desc": "Klar, prägnant und offen. Hören Sie gut zu, passen Sie sich an und geben Sie zeitnahes Feedback." }
     ],
-    "dream_title": "El equipo de ensueño.",
-    "dream_desc": "En Pzaz, nuestro equipo de ensueño es descentralizado pero unido por objetivos compartidos. Buscamos individuos que prosperen de forma independiente pero sobresalgan en colaboración, encarnando una mentalidad de crecimiento continuo, retroalimentación abierta y respeto mutuo.",
+    "dream_title": "Das Dreamteam.",
+    "dream_desc": "Bei Pzaz ist unser Dreamteam dezentral, aber durch gemeinsame Ziele vereint. Wir suchen Menschen, die unabhängig gedeihen, aber kollaborativ glänzen und eine Denkweise von kontinuierlichem Wachstum, offenem Feedback und gegenseitigem Respekt verkörpern.",
     "dream_team": [
-      { "title": "Mejores.", "desc": "Siempre nos esforzamos por mejorar, convirtiendo cada experiencia en un paso hacia la excelencia." },
-      { "title": "Capaces.", "desc": "No se trata solo de brillantez — se trata de colaboración, creatividad y éxito compartido. Las recompensas crecen con los logros." },
-      { "title": "Retroalimentación.", "desc": "Honestidad sobre amabilidad, respeto ante todo. La comunicación abierta fomenta la mejora constante." },
-      { "title": "Estabilidad y sostenibilidad.", "desc": "Crecemos juntos en los buenos tiempos y nos mantenemos fuertes en los desafíos, priorizando el éxito sostenible sobre la velocidad." },
-      { "title": "Confianza.", "desc": "El apoyo mutuo y la fe en las habilidades de los demás impulsan nuestro éxito colectivo." },
-      { "title": "Únicos.", "desc": "Buscamos pioneros — aquellos que no temen los riesgos y están ansiosos por crecer con nosotros, dando forma al futuro juntos." }
+      { "title": "Besser.", "desc": "Wir streben stets danach, uns zu verbessern und jede Erfahrung in einen Schritt zur Exzellenz zu verwandeln." },
+      { "title": "Fähig.", "desc": "Es geht nicht nur um Brillanz — es geht um Zusammenarbeit, Kreativität und gemeinsamen Erfolg. Belohnungen wachsen mit Leistungen." },
+      { "title": "Feedback.", "desc": "Ehrlichkeit vor Freundlichkeit, Respekt über allem. Offene Kommunikation fördert ständige Verbesserung." },
+      { "title": "Stabilität & Nachhaltigkeit.", "desc": "Wir wachsen gemeinsam in guten Zeiten und stehen in Herausforderungen zusammen, wobei wir nachhaltigen Erfolg vor Geschwindigkeit priorisieren." },
+      { "title": "Vertrauen.", "desc": "Gegenseitige Unterstützung und der Glaube an die Fähigkeiten des anderen treiben unseren gemeinsamen Erfolg an." },
+      { "title": "Einzigartig.", "desc": "Wir suchen Wegbereiter — diejenigen, die keine Angst vor Risiken haben und mit uns wachsen und die Zukunft gemeinsam gestalten wollen." }
     ]
   }
 }
