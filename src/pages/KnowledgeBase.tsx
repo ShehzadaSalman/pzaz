@@ -25,7 +25,8 @@ const KnowledgeBase = () => {
   const isUr = locale === "ur";
   const isFr = locale === "fr";
   const isEs = locale === "es";
-  const cats = isUr ? kbCategoriesUr : isFr ? kbCategoriesFr : isEs ? kbCategoriesEs : kbCategories;
+  const isDe = locale === "de";
+  const cats = isUr ? kbCategoriesUr : isFr ? kbCategoriesFr : isEs ? kbCategoriesEs : isDe ? kbCategoriesDe : kbCategories;
   const getArticles = (catId: KBArticle["category"]) =>
     isUr
       ? kbArticlesUr.filter((a) => a.category === catId)
@@ -33,7 +34,9 @@ const KnowledgeBase = () => {
         ? kbArticlesFr.filter((a) => a.category === catId)
         : isEs
           ? kbArticlesEs.filter((a) => a.category === catId)
-          : getArticlesByCategory(catId);
+          : isDe
+            ? kbArticlesDe.filter((a) => a.category === catId)
+            : getArticlesByCategory(catId);
 
   return (
     <div className="min-h-screen bg-background">

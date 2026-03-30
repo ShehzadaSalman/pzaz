@@ -98,6 +98,7 @@ const KnowledgeBaseArticle = () => {
   const isUr = locale === "ur";
   const isFr = locale === "fr";
   const isEs = locale === "es";
+  const isDe = locale === "de";
   const { t } = useTranslation("knowledge-base");
 
   const article = isUr
@@ -106,7 +107,9 @@ const KnowledgeBaseArticle = () => {
       ? kbArticlesFr.find((a) => a.slug === slug)
       : isEs
         ? kbArticlesEs.find((a) => a.slug === slug)
-        : slug ? getArticleBySlug(slug) : undefined;
+        : isDe
+          ? kbArticlesDe.find((a) => a.slug === slug)
+          : slug ? getArticleBySlug(slug) : undefined;
 
   if (!article) return <NotFound />;
 
