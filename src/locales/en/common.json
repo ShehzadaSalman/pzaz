@@ -65,5 +65,38 @@
     "tiktok": "TikTok",
     "x": "X",
     "copyright": "© {{year}} Pzaz.io. All rights reserved."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "desc": "Fill out the form below and we'll get back to you shortly.",
+    "full_name": "Full Name",
+    "company_name": "Company Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "message": "Message",
+    "placeholder_name": "John Doe",
+    "placeholder_company": "Acme Inc.",
+    "placeholder_email": "john@example.com",
+    "placeholder_phone": "+1 (555) 000-0000",
+    "placeholder_message": "How can we help you?",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success_title": "Message sent!",
+    "success_desc": "We'll get back to you soon.",
+    "error_required": "Please fill in all required fields.",
+    "error_generic": "Something went wrong. Please try again."
+  },
+  "not_found": {
+    "title": "404",
+    "message": "Oops! Page not found",
+    "return_home": "Return to Home"
+  },
+  "sales": {
+    "seo_title": "Meet Our Sales Team – Pzaz",
+    "seo_desc": "Reach out to the Pzaz sales team directly. We're here to assist you personally.",
+    "heading": "Meet Our Sales Team.",
+    "subtitle": "We're here to assist you personally.",
+    "reach_out": "Reach out directly—we're always happy to help!",
+    "download_vcard": "Download VCard"
   }
 }

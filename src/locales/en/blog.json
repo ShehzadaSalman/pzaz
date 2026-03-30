@@ -24,6 +24,22 @@
     "newsletter_no_spam": "No spam, unsubscribe anytime. We respect your inbox.",
     "newsletter_error_generic": "Something went wrong. Please try again.",
     "newsletter_error_network": "Unable to subscribe. Please try again later.",
-    "cat_all": "all"
+    "cat_all": "all",
+    "producer_hero_title": "The Film Maker Entrepreneur",
+    "producer_hero_subtitle": "Interviews, Industry and Info. Get Pzazzed !",
+    "min_read": "min read",
+    "min": "min",
+    "share": "Share",
+    "written_by": "Written by",
+    "related_articles": "Related Articles",
+    "view_all": "View all",
+    "more_coming": "More articles coming soon.",
+    "nav_about": "About",
+    "nav_blog": "Blog",
+    "nav_script": "Script",
+    "nav_pricing": "Pricing",
+    "nav_products": "Products",
+    "nav_login": "Log in",
+    "nav_start_free": "Start for Free"
   }
 }
