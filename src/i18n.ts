@@ -11,8 +11,7 @@ import enHome from "./locales/en/home.json";
 const getInitialLang = () => {
   if (typeof window === "undefined") return "en";
   const pathSegment = window.location.pathname.split("/")[1];
-  if (pathSegment === "ur") return "ur";
-  return localStorage.getItem("lang") ?? "en";
+  return pathSegment === "ur" ? "ur" : "en";
 };
 const savedLang = getInitialLang();
 
