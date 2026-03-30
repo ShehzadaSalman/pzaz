@@ -30,7 +30,7 @@ const Footer = () => {
       { label: t("footer.blog"), route: "/producer-blog" },
       { label: t("footer.pzaz_vs_fd"), route: "/pzaz-vs-final-draft" },
       { label: t("footer.knowledge_base"), route: "/knowledge-base" },
-      { label: t("footer.demo_video"), route: "/demo-video" },
+      
     ],
     [t("footer.company")]: [
       { label: t("footer.sales_team"), route: "/sales-team" },
