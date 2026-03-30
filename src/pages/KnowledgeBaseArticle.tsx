@@ -4,7 +4,7 @@ import { ChevronRight } from "lucide-react";
 import { getArticleBySlug, getRelatedArticles, kbCategories } from "@/data/knowledgeBaseData";
 import { kbArticlesUr, kbCategoriesUr } from "@/data/knowledgeBaseDataUr";
 import { kbArticlesFr, kbCategoriesFr } from "@/data/knowledgeBaseDataFr";
-import { kbArticlesEs } from "@/data/knowledgeBaseDataEs";
+import { kbArticlesEs, kbCategoriesEs } from "@/data/knowledgeBaseDataEs";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import KBSearchBar from "@/components/knowledge-base/KBSearchBar";
