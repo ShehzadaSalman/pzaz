@@ -40,7 +40,7 @@ const primaryToolIcons = [iconDocument, iconListCheck, iconUserGroup, iconFlow];
 const additionalToolIcons = [iconCloud, iconSprint, iconEngine];
 
 const DirectorsProducers = () => {
-  const { t } = useTranslation('solutions');
+  const { t } = useTranslation('solutions-directors');
   const indieCheckoutUrl = useIndieCheckoutUrl();
 
   const primaryTools = [

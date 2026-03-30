@@ -38,7 +38,7 @@ const toolIcons = [iconDocument, iconScenesSuggestions, iconFlow, iconGlobe];
 const addIcons = [iconListCheck, iconSprint, iconShapes];
 
 const DocumentaryFilmmakers = () => {
-  const { t } = useTranslation('solutions');
+  const { t } = useTranslation('solutions-documentary');
   const indieCheckoutUrl = useIndieCheckoutUrl();
 
   const primaryTools = [1, 2, 3, 4].map((n, i) => ({

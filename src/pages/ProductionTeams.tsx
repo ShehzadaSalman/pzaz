@@ -97,7 +97,7 @@ const additionalTools = [
 ];
 
 const ProductionTeams = () => {
-  const { t } = useTranslation('solutions');
+  const { t } = useTranslation('solutions-teams');
   const indieCheckoutUrl = useIndieCheckoutUrl();
 
   return (
