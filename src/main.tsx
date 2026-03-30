@@ -86,16 +86,24 @@ function getNamespacesForRoute(url: string): string[] {
   if (bare.startsWith("/knowledge-base/")) return ["common", "knowledge-base"];
   if (bare.startsWith("/producer-blog")) return ["common", "blog"];
 
-  // Solutions pages all use "solutions" namespace
-  const solutionPrefixes = [
-    "/film-schools-software", "/software-for-directors-producers",
-    "/documentary-filmmaking-software", "/software-for-cinematographers",
-    "/creative-agency-production-software", "/film-production-team-software",
-    "/screenwriting-software", "/tv-series-production-software",
-    "/film-investment-software", "/software-for-production-managers",
-    "/empowering-filmmaking", "/indie-filmmakers",
-  ];
-  if (solutionPrefixes.some((p) => bare.startsWith(p))) return ["common", "solutions"];
+  // Solutions pages — each has its own namespace for performance
+  const solutionMap: Record<string, string> = {
+    "/film-schools-software": "solutions-schools",
+    "/software-for-directors-producers": "solutions-directors",
+    "/documentary-filmmaking-software": "solutions-documentary",
+    "/software-for-cinematographers": "solutions-cinematographers",
+    "/creative-agency-production-software": "solutions-agencies",
+    "/film-production-team-software": "solutions-teams",
+    "/screenwriting-software": "solutions-screenwriters",
+    "/tv-series-production-software": "solutions-tv-series",
+    "/film-investment-software": "solutions-investors",
+    "/software-for-production-managers": "solutions-prod-managers",
+    "/empowering-filmmaking": "solutions-empowering",
+    "/indie-filmmakers": "solutions-indie-filmmakers",
+  };
+  for (const [slug, ns] of Object.entries(solutionMap)) {
+    if (bare.startsWith(slug)) return ["common", ns];
+  }
 
   // Default fallback
   return ["common", "home"];
