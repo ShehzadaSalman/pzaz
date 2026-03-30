@@ -1,57 +1,57 @@
 {
   "privacy": {
-    "seo_title": "Política de privacidad | Pzaz",
-    "seo_desc": "Lee la Política de privacidad de Pzaz para entender cómo recopilamos, usamos y protegemos tus datos personales de acuerdo con el RGPD.",
-    "page_title": "Política de privacidad de Pzaz",
-    "date": "Fecha: 12 de enero de 2024",
-    "toc_label": "Contenido",
-    "intro": "¡Bienvenido a Pzaz! Nuestra Política de privacidad explica cómo gestionamos tu información cuando usas Pzaz, siguiendo el Reglamento General de Protección de Datos (RGPD). Al usar Pzaz, aceptas esta política.",
+    "seo_title": "Datenschutzrichtlinie | Pzaz",
+    "seo_desc": "Lesen Sie die Pzaz-Datenschutzrichtlinie, um zu verstehen, wie wir Ihre personenbezogenen Daten gemäß der DSGVO erfassen, verwenden und schützen.",
+    "page_title": "Pzaz Datenschutzrichtlinie",
+    "date": "Datum: 12. Januar 2024",
+    "toc_label": "Inhalt",
+    "intro": "Willkommen bei Pzaz! Unsere Datenschutzrichtlinie erklärt, wie wir Ihre Informationen handhaben, wenn Sie Pzaz nutzen, gemäß der Datenschutz-Grundverordnung (DSGVO). Durch die Nutzung von Pzaz stimmen Sie dieser Richtlinie zu.",
     "sections": [
       {
         "id": "id_1",
-        "title": "Recopilación y uso de tu información",
-        "content": "Recopilamos varios tipos de datos, incluyendo datos personales como tu nombre e información de contacto, datos demográficos como edad y ocupación, y datos de ubicación de tu dispositivo o dirección IP. También recopilamos datos de uso y técnicos sobre tus interacciones con nuestros servicios y los dispositivos que usas. Nuestro uso de cookies y tecnologías de seguimiento nos ayuda a entender los patrones de uso del servicio. Para transacciones, recopilamos datos de pago y almacenamos cualquier información que compartas en comunicaciones con nosotros. Además, podemos recibir datos de tus interacciones en redes sociales y otra información que proporcionas para la prestación del servicio.\n\nSolo tomamos lo que necesitamos para ofrecer nuestros servicios."
+        "title": "Erhebung und Verwendung Ihrer Informationen",
+        "content": "Wir erfassen verschiedene Datentypen, darunter persönliche Angaben wie Ihren Namen und Kontaktinformationen, demografische Daten wie Alter und Beruf sowie Standortdaten von Ihrem Gerät oder Ihrer IP-Adresse. Wir erheben auch Nutzungs- und technische Daten über Ihre Interaktionen mit unseren Diensten und den von Ihnen verwendeten Geräten. Unsere Verwendung von Cookies und Tracking-Technologien hilft uns, Nutzungsmuster zu verstehen. Für Transaktionen erfassen wir Zahlungsdetails und speichern alle Informationen, die Sie in der Kommunikation mit uns teilen.\n\nWir nehmen nur das, was wir brauchen, um unsere Dienste anzubieten."
       },
-      { "id": "id_2", "title": "Tus derechos bajo el RGPD", "content": "Seguimos el RGPD, y tienes derechos sobre tus datos, como acceder, corregir, eliminarlos, limitar cómo los usamos, oponerte a nuestro uso, transferirlos a otro lugar, retirar el consentimiento y presentar quejas ante las autoridades. Puedes solicitar cualquiera de estos derechos contactándonos." },
-      { "id": "id_3", "title": "Transferencia de datos", "content": "Tus datos podrían almacenarse o procesarse fuera de tu área, donde pueden aplicarse leyes diferentes, pero los protegeremos según lo establecido en esta política." },
+      { "id": "id_2", "title": "Ihre Rechte gemäß DSGVO", "content": "Wir befolgen die DSGVO und Sie haben Rechte über Ihre Daten, wie den Zugang, die Berichtigung, Löschung, Einschränkung der Nutzung, Widerspruch gegen unsere Nutzung, Übertragung an andere, Widerruf der Einwilligung und Beschwerde bei Behörden. Sie können all dies anfordern, indem Sie uns kontaktieren." },
+      { "id": "id_3", "title": "Datenübermittlung", "content": "Ihre Daten könnten außerhalb Ihres Gebiets gespeichert oder verarbeitet werden, wo andere Gesetze gelten können, aber wir schützen sie wie in dieser Richtlinie angegeben." },
       {
         "id": "id_4",
-        "title": "Divulgación de datos",
-        "content": "Podríamos compartir tus datos personales por las siguientes razones:",
+        "title": "Datenweitergabe",
+        "content": "Wir könnten Ihre personenbezogenen Daten aus folgenden Gründen teilen:",
         "bullets": [
-          { "label": "Cumplimiento legal", "text": "Para cumplir con requisitos legales, como órdenes judiciales." },
-          { "label": "Protección", "text": "Para proteger y defender a Pzaz, nuestra propiedad, usuarios y la empresa." },
-          { "label": "Investigación", "text": "Para investigar o prevenir posibles irregularidades relacionadas con el Servicio." },
-          { "label": "Seguridad", "text": "Para garantizar la seguridad de los usuarios y la empresa." },
-          { "label": "Transacciones comerciales", "text": "Si Pzaz es parte de una transacción comercial como una fusión o venta." }
+          { "label": "Gesetzliche Einhaltung", "text": "Um gesetzlichen Anforderungen nachzukommen, wie z.B. Gerichtsbeschlüssen." },
+          { "label": "Schutz", "text": "Um Pzaz, unser Eigentum, unsere Nutzer und das Unternehmen zu schützen und zu verteidigen." },
+          { "label": "Untersuchung", "text": "Um potenzielle Vergehen im Zusammenhang mit dem Dienst zu untersuchen oder zu verhindern." },
+          { "label": "Sicherheit", "text": "Um die Sicherheit der Nutzer und des Unternehmens zu gewährleisten." },
+          { "label": "Geschäftstransaktionen", "text": "Wenn Pzaz an einer Geschäftstransaktion wie einer Fusion oder einem Verkauf beteiligt ist." }
         ]
       },
       {
         "id": "id_5",
-        "title": "Seguridad de datos",
-        "content": "Tomamos varias medidas para proteger tus datos, incluyendo:",
+        "title": "Datensicherheit",
+        "content": "Wir ergreifen verschiedene Maßnahmen zum Schutz Ihrer Daten, darunter:",
         "bullets": [
-          { "label": "Cifrado", "text": "Ciframos tus datos durante la transmisión, recepción y almacenamiento." },
-          { "label": "Auditorías regulares", "text": "Revisamos regularmente nuestro sistema en busca de vulnerabilidades de seguridad." },
-          { "label": "Control de acceso", "text": "Restringimos el acceso a tus datos solo al personal autorizado." }
+          { "label": "Verschlüsselung", "text": "Wir verschlüsseln Ihre Daten bei der Übertragung, dem Empfang und der Speicherung." },
+          { "label": "Regelmäßige Audits", "text": "Wir überprüfen regelmäßig unser System auf Sicherheitslücken." },
+          { "label": "Zugangskontrollen", "text": "Wir beschränken den Zugang zu Ihren Daten auf autorisiertes Personal." }
         ]
       },
-      { "id": "id_6", "title": "Uso de proveedores de servicios", "content": "Contratamos a terceros para ayudar a operar nuestro servicio. Estos proveedores pueden acceder a tus datos solo para realizar su trabajo para nosotros, como el procesamiento de pagos. Están obligados a proteger tus datos y cumplir con los estándares de privacidad." },
-      { "id": "id_7", "title": "Enlaces externos", "content": "Nuestro servicio puede enlazar a otros sitios. No somos responsables de sus prácticas de privacidad, así que siempre ten precaución y revisa las políticas de privacidad de cualquier sitio externo que visites." },
-      { "id": "id_8", "title": "Pagos", "content": "Procesamos los pagos de suscripción de forma segura y conforme al RGPD, y utilizamos pasarelas de pago confiables. Tus datos de pago se manejan con la máxima seguridad y confidencialidad." },
-      { "id": "id_9", "title": "Cambios en la política", "content": "Podríamos cambiar esta política. Vuelve aquí para actualizaciones. Tu uso continuado del servicio después de los cambios significa tu aceptación de los nuevos términos." },
-      { "id": "id_10", "title": "Contáctanos", "content": "¿Preguntas o quieres ejercer tus derechos? Envíanos un correo a " },
+      { "id": "id_6", "title": "Einsatz von Dienstleistern", "content": "Wir beauftragen andere, uns beim Betrieb unseres Dienstes zu helfen. Diese Anbieter können nur auf Ihre Daten zugreifen, um ihre Aufgaben für uns zu erledigen. Sie sind verpflichtet, Ihre Daten zu schützen und Datenschutzstandards einzuhalten." },
+      { "id": "id_7", "title": "Externe Links", "content": "Unser Dienst kann zu anderen Websites verlinken. Wir sind nicht für deren Datenschutzpraktiken verantwortlich, seien Sie also stets vorsichtig und überprüfen Sie die Datenschutzrichtlinien externer Websites." },
+      { "id": "id_8", "title": "Zahlungen", "content": "Wir verarbeiten Abonnementzahlungen sicher und gemäß der DSGVO und nutzen vertrauenswürdige Zahlungsgateways. Ihre Zahlungsdaten werden mit höchster Sicherheit und Vertraulichkeit behandelt." },
+      { "id": "id_9", "title": "Richtlinienänderungen", "content": "Wir könnten diese Richtlinie ändern. Schauen Sie hier für Updates nach. Ihre fortgesetzte Nutzung des Dienstes nach Änderungen bedeutet Ihre Zustimmung zu den neuen Bedingungen." },
+      { "id": "id_10", "title": "Kontaktieren Sie uns", "content": "Fragen oder möchten Sie Ihre Rechte ausüben? Schreiben Sie uns an " },
       {
         "id": "id_11",
-        "title": "Política de cookies",
-        "content": "Las cookies son pequeños archivos que los sitios web colocan en tu dispositivo para recordar tus preferencias. Usamos cookies para entender y recordar tus preferencias, mejorar nuestro sitio y ofrecer una experiencia personalizada. Hay diferentes tipos de cookies:",
+        "title": "Cookie-Richtlinie",
+        "content": "Cookies sind kleine Dateien, die Websites auf Ihrem Gerät platzieren, um Ihre Präferenzen zu merken. Wir verwenden Cookies, um Ihre Präferenzen zu verstehen und zu merken, unsere Website zu verbessern und ein personalisiertes Erlebnis zu bieten. Es gibt verschiedene Arten von Cookies:",
         "bullets": [
-          { "label": "Esenciales", "text": "Para la funcionalidad del sitio web." },
-          { "label": "Rendimiento", "text": "Para mejorar el sitio." },
-          { "label": "Funcionalidad", "text": "Para recordar tus preferencias." },
-          { "label": "Segmentación", "text": "Usadas por anunciantes." }
+          { "label": "Essenziell", "text": "Für die Website-Funktionalität." },
+          { "label": "Leistung", "text": "Zur Verbesserung der Website." },
+          { "label": "Funktionalität", "text": "Um Ihre Präferenzen zu merken." },
+          { "label": "Targeting", "text": "Von Werbetreibenden verwendet." }
         ],
-        "footer": "Puedes desactivar y eliminar cookies en tu navegador, lo que puede afectar el funcionamiento de nuestro sitio web. Para información detallada sobre cookies, visita aboutcookies.org.\n\n¿Preguntas sobre cookies? Envíanos un correo a support@pzaz.io."
+        "footer": "Sie können Cookies in Ihrem Browser deaktivieren und löschen, was die Funktionsweise unserer Website beeinflussen kann. Für detaillierte Informationen über Cookies besuchen Sie aboutcookies.org.\n\nFragen zu Cookies? Schreiben Sie uns an support@pzaz.io."
       }
     ]
   }
