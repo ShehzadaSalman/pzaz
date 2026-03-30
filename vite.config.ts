@@ -52,7 +52,8 @@ export default defineConfig(({ mode }) => {
     const enBlogRoutes = slugMatches.map((m) => `/producer-blog/${m[1]}`);
     const urBlogRoutes = slugMatches.map((m) => `/ur/producer-blog/${m[1]}`);
     const frBlogRoutes = slugMatches.map((m) => `/fr/producer-blog/${m[1]}`);
-    blogRoutes = [...enBlogRoutes, ...urBlogRoutes, ...frBlogRoutes];
+    const esBlogRoutes = slugMatches.map((m) => `/es/producer-blog/${m[1]}`);
+    blogRoutes = [...enBlogRoutes, ...urBlogRoutes, ...frBlogRoutes, ...esBlogRoutes];
   } catch {
     // fallback: no blog routes
   }

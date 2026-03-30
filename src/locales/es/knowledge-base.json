@@ -1,0 +1,20 @@
+{
+  "kb": {
+    "seo_title": "Base de conocimiento – Pzaz",
+    "seo_desc": "Explora guías, tutoriales y referencias del software de producción cinematográfica Pzaz.",
+    "hero_title": "Base de conocimiento",
+    "hero_desc": "Encuentra guías, tutoriales y respuestas para sacar el máximo provecho de Pzaz.",
+    "search_placeholder": "Buscar en la base de conocimiento…",
+    "cat_getting_started": "Primeros pasos",
+    "cat_getting_started_desc": "Todo lo que necesitas saber para empezar a usar Pzaz.",
+    "cat_functions": "Funciones",
+    "cat_functions_desc": "Aprende sobre las funciones principales de Pzaz impulsadas por IA y cómo usarlas.",
+    "cat_tools": "Herramientas y funcionalidades",
+    "cat_tools_desc": "Profundizaciones en cada herramienta de producción disponible en tu espacio de trabajo.",
+    "breadcrumb_home": "Inicio",
+    "breadcrumb_kb": "Base de conocimiento",
+    "related_title": "Artículos relacionados",
+    "back_to_kb": "← Volver a la base de conocimiento",
+    "article_search_placeholder": "Buscar en la base de conocimiento…"
+  }
+}
