@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
 
 const StoryboardMomentum = () => {
+  const { t } = useTranslation("storyboard");
   return (
     <section className="section-padding bg-white relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
@@ -15,13 +17,13 @@ const StoryboardMomentum = () => {
             className="space-y-5 order-2 md:order-1"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Directors can explore ideas quickly. Teams can brainstorm visually. Shots evolve without starting from scratch.
+              {t("storyboard.momentum_p1")}
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              What begins as a rough concept can be refined, layered, and developed into something production-ready.
+              {t("storyboard.momentum_p2")}
             </p>
             <p className="text-xl font-bold text-[#4D029B] italic">
-              The process feels fluid. Ideas move forward instead of getting stuck.
+              {t("storyboard.momentum_quote")}
             </p>
           </motion.div>
 
@@ -34,17 +36,17 @@ const StoryboardMomentum = () => {
           >
             <AnimatedSectionHeader
               wrapperClassName=""
-              pillText="The Solution"
+              pillText={t("storyboard.momentum_pill")}
               pillClassName="bg-primary/10 text-primary"
               title={
                 <>
-                  A Creative Process{" "}
+                  {t("storyboard.momentum_title")}{" "}
                   <span className="font-lato font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                    Designed for Momentum
+                    {t("storyboard.momentum_title_highlight")}
                   </span>
                 </>
               }
-              description="Pzaz Storyboarding is built for rapid visual development inside a structured production environment."
+              description={t("storyboard.momentum_desc")}
               align="left"
               className="mb-8"
             />

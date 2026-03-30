@@ -1,42 +1,33 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
 
-const steps = [
-  {
-    number: "01",
-    title: "Generate",
-    description: "Generate synthetic shots to test visual directions quickly, without committing to a final frame.",
-  },
-  {
-    number: "02",
-    title: "Iterate",
-    description: "Iterate on existing frames to refine composition without resetting continuity or losing the thread of your intent.",
-  },
-  {
-    number: "03",
-    title: "Adjust",
-    description: "Adjust framing, tone, character positioning, and style. Early exploration stays rough; later frames become precise.",
-  },
-];
-
 const StoryboardComposition = () => {
+  const { t } = useTranslation("storyboard");
+
+  const steps = [
+    { number: "01", title: t("storyboard.composition_step1_title"), description: t("storyboard.composition_step1_desc") },
+    { number: "02", title: t("storyboard.composition_step2_title"), description: t("storyboard.composition_step2_desc") },
+    { number: "03", title: t("storyboard.composition_step3_title"), description: t("storyboard.composition_step3_desc") },
+  ];
+
   return (
     <section className="section-padding bg-[#fbfbfb] relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <AnimatedSectionHeader
           wrapperClassName="text-center mb-16"
-          pillText="The Process"
+          pillText={t("storyboard.composition_pill")}
           pillClassName="bg-primary/10 text-primary"
           title={
             <>
-              From Brainstorm{" "}
+              {t("storyboard.composition_title")}{" "}
               <span className="font-lato font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                to Composition
+                {t("storyboard.composition_title_highlight")}
               </span>
             </>
           }
-          description="Creation inside Pzaz is not a single step. It is a progression. The goal is not volume. It is clarity."
+          description={t("storyboard.composition_desc")}
         />
 
         <div className="grid md:grid-cols-3 gap-8">

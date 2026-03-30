@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
 
 const StoryboardAnimatics = () => {
+  const { t } = useTranslation("storyboard");
   return (
     <section className="section-padding bg-white relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
@@ -15,13 +17,13 @@ const StoryboardAnimatics = () => {
             className="space-y-5 order-2 md:order-1"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              From any scene, you can adjust shot duration, preview pacing, and step through sequences frame by frame.
+              {t("storyboard.animatics_p1")}
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Rhythm becomes visible early, when it can still influence decisions.
+              {t("storyboard.animatics_p2")}
             </p>
             <p className="text-xl font-bold text-[#4D029B] italic">
-              You are not simply arranging images. You are shaping the experience.
+              {t("storyboard.animatics_quote")}
             </p>
           </motion.div>
 
@@ -34,17 +36,17 @@ const StoryboardAnimatics = () => {
           >
             <AnimatedSectionHeader
               wrapperClassName=""
-              pillText="Animatics"
+              pillText={t("storyboard.animatics_pill")}
               pillClassName="bg-primary/10 text-primary"
               title={
                 <>
-                  Animatics That Support{" "}
+                  {t("storyboard.animatics_title")}{" "}
                   <span className="font-lato font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                    the Creative Flow
+                    {t("storyboard.animatics_title_highlight")}
                   </span>
                 </>
               }
-              description="Once shots are defined, they move naturally into animatics."
+              description={t("storyboard.animatics_desc")}
               align="left"
               className="mb-8"
             />
