@@ -4,6 +4,7 @@ import ProducerBlogHero from "@/components/producer-blog/ProducerBlogHero";
 import BlogCard from "@/components/blog/BlogCard";
 import { blogPosts } from "@/data/blogData";
 import { blogPostsUr } from "@/data/blogDataUr";
+import { blogPostsFr } from "@/data/blogDataFr";
 import { useLocale } from "@/hooks/use-locale";
 import {
   Pagination,
