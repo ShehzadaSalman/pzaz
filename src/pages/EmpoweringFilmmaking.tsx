@@ -249,7 +249,7 @@ const AudienceCard = ({
 };
 
 const EmpoweringFilmmaking = () => {
-  const { t } = useTranslation('solutions');
+  const { t } = useTranslation('solutions-empowering');
   const indieCheckoutUrl = useIndieCheckoutUrl();
 
   return (
