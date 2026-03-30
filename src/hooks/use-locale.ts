@@ -40,11 +40,11 @@ export function useLocale() {
     // Build the new path
     if (targetLocale === "en") {
       // Strip any locale prefix from the current path
-      const stripped = location.pathname.replace(/^\/(ur|fr|es)(\/|$)/, "/");
+      const stripped = location.pathname.replace(/^\/(ur|fr|es|de)(\/|$)/, "/");
       navigate(stripped || "/", { replace: true });
     } else {
       // Prepend locale prefix
-      const withoutLocale = location.pathname.replace(/^\/(ur|fr|es)(\/|$)/, "/");
+      const withoutLocale = location.pathname.replace(/^\/(ur|fr|es|de)(\/|$)/, "/");
       const newPath = `/${targetLocale}${withoutLocale === "/" ? "" : withoutLocale}`;
       navigate(newPath, { replace: true });
     }
