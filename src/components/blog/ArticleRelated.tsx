@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Clock, ArrowRight } from "lucide-react";
 import { BlogCategoryId, blogPosts } from "@/data/blogData";
 import { useLocale } from "@/hooks/use-locale";
+import { useTranslation } from "react-i18next";
 
 interface ArticleRelatedProps {
   currentSlug: string;
@@ -12,6 +13,7 @@ interface ArticleRelatedProps {
 
 const ArticleRelated = ({ currentSlug, category }: ArticleRelatedProps) => {
   const { prefix } = useLocale();
+  const { t } = useTranslation("blog");
   const categoryMatchedPosts = blogPosts
     .filter((post) => post.slug !== currentSlug)
     .filter((post) => Array.isArray(post.category) ? post.category.includes(category) : post.category === category)
@@ -29,12 +31,12 @@ const ArticleRelated = ({ currentSlug, category }: ArticleRelatedProps) => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center justify-between mb-10">
-              <h2 className="text-2xl font-bold text-foreground">Related Articles</h2>
+              <h2 className="text-2xl font-bold text-foreground">{t("blog.related_articles")}</h2>
               <Link to={`${prefix}/producer-blog`} className="text-primary font-medium flex items-center gap-1 hover:gap-2 transition-all">
-                View all <ArrowRight className="w-4 h-4" />
+                {t("blog.view_all")} <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
-            <p className="text-muted-foreground">More articles coming soon.</p>
+            <p className="text-muted-foreground">{t("blog.more_coming")}</p>
           </div>
         </div>
       </section>
@@ -46,9 +48,9 @@ const ArticleRelated = ({ currentSlug, category }: ArticleRelatedProps) => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center justify-between mb-10">
-            <h2 className="text-2xl font-bold text-foreground">Related Articles</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t("blog.related_articles")}</h2>
             <Link to={`${prefix}/producer-blog`} className="text-primary font-medium flex items-center gap-1 hover:gap-2 transition-all">
-              View all <ArrowRight className="w-4 h-4" />
+              {t("blog.view_all")} <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
@@ -79,7 +81,7 @@ const ArticleRelated = ({ currentSlug, category }: ArticleRelatedProps) => {
                       <span>•</span>
                       <div className="flex items-center gap-1">
                         <Clock className="w-3 h-3" />
-                        <span>{post.readingTime} min</span>
+                        <span>{post.readingTime} {t("blog.min")}</span>
                       </div>
                     </div>
 

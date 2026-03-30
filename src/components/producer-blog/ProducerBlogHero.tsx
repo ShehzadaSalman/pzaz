@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { categories } from "@/data/blogData";
 import { categoriesUr } from "@/data/blogDataUr";
 import { useLocale } from "@/hooks/use-locale";
+import { useTranslation } from "react-i18next";
 
 interface ProducerBlogHeroProps {
   activeCategory: string;
@@ -11,6 +12,7 @@ interface ProducerBlogHeroProps {
 
 const ProducerBlogHero = ({ activeCategory, onCategoryChange }: ProducerBlogHeroProps) => {
   const { locale } = useLocale();
+  const { t } = useTranslation("blog");
   const cats = locale === "ur" ? categoriesUr : categories;
   return (
     <section className="pt-28 md:pt-32 pb-12 relative overflow-hidden">
@@ -24,7 +26,7 @@ const ProducerBlogHero = ({ activeCategory, onCategoryChange }: ProducerBlogHero
           className="font-gloock font-medium text-[64px] md:text-[96px] leading-[1] bg-clip-text text-transparent mb-4"
           style={{ backgroundImage: 'linear-gradient(91deg, #5C28A4 9.57%, #00D1FF 85.93%)' }}
         >
-          The Film Maker Entrepreneur
+          {t("blog.producer_hero_title")}
         </motion.h1>
 
         <motion.p
@@ -33,7 +35,7 @@ const ProducerBlogHero = ({ activeCategory, onCategoryChange }: ProducerBlogHero
           transition={{ duration: 0.5, delay: 0.1 }}
           className="font-gloock font-bold text-[28px] leading-normal md:text-[46px] md:leading-[1] text-black mb-10"
         >
-          Interviews, Industry and Info. Get Pzazzed !
+          {t("blog.producer_hero_subtitle")}
         </motion.p>
 
         <motion.div

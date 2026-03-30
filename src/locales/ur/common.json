@@ -65,5 +65,38 @@
     "tiktok": "TikTok",
     "x": "X",
     "copyright": "© {{year}} Pzaz.io. جملہ حقوق محفوظ ہیں۔"
+  },
+  "contact": {
+    "title": "ہم سے رابطہ کریں",
+    "desc": "نیچے فارم پُر کریں اور ہم جلد آپ سے رابطہ کریں گے۔",
+    "full_name": "پورا نام",
+    "company_name": "کمپنی کا نام",
+    "email": "ای میل ایڈریس",
+    "phone": "فون نمبر",
+    "message": "پیغام",
+    "placeholder_name": "آپ کا نام",
+    "placeholder_company": "کمپنی کا نام",
+    "placeholder_email": "example@email.com",
+    "placeholder_phone": "+92 300 0000000",
+    "placeholder_message": "ہم آپ کی کیسے مدد کر سکتے ہیں؟",
+    "send": "پیغام بھیجیں",
+    "sending": "بھیجا جا رہا ہے...",
+    "success_title": "پیغام بھیج دیا گیا!",
+    "success_desc": "ہم جلد آپ سے رابطہ کریں گے۔",
+    "error_required": "براہ کرم تمام ضروری فیلڈز پُر کریں۔",
+    "error_generic": "کچھ غلط ہو گیا۔ براہ کرم دوبارہ کوشش کریں۔"
+  },
+  "not_found": {
+    "title": "404",
+    "message": "صفحہ نہیں ملا!",
+    "return_home": "ہوم پیج پر واپس جائیں"
+  },
+  "sales": {
+    "seo_title": "ہماری سیلز ٹیم سے ملیں – Pzaz",
+    "seo_desc": "Pzaz سیلز ٹیم سے براہ راست رابطہ کریں۔ ہم آپ کی ذاتی طور پر مدد کے لیے حاضر ہیں۔",
+    "heading": "ہماری سیلز ٹیم سے ملیں۔",
+    "subtitle": "ہم آپ کی ذاتی طور پر مدد کے لیے حاضر ہیں۔",
+    "reach_out": "براہ راست رابطہ کریں — ہم ہمیشہ مدد کے لیے خوش ہیں!",
+    "download_vcard": "VCard ڈاؤن لوڈ کریں"
   }
 }

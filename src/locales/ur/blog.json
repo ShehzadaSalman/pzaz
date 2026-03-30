@@ -24,6 +24,22 @@
     "newsletter_no_spam": "کوئی سپیم نہیں، کسی بھی وقت ان سبسکرائب کریں۔ ہم آپ کے ان باکس کا احترام کرتے ہیں۔",
     "newsletter_error_generic": "کچھ غلط ہو گیا۔ براہ کرم دوبارہ کوشش کریں۔",
     "newsletter_error_network": "سبسکرائب کرنے سے قاصر۔ براہ کرم بعد میں دوبارہ کوشش کریں۔",
-    "cat_all": "سب"
+    "cat_all": "سب",
+    "producer_hero_title": "فلم میکر انٹرپرینیور",
+    "producer_hero_subtitle": "انٹرویوز، صنعت اور معلومات۔ Get Pzazzed!",
+    "min_read": "منٹ پڑھنے کا وقت",
+    "min": "منٹ",
+    "share": "شیئر کریں",
+    "written_by": "تحریر",
+    "related_articles": "متعلقہ مضامین",
+    "view_all": "سب دیکھیں",
+    "more_coming": "مزید مضامین جلد آ رہے ہیں۔",
+    "nav_about": "ہمارے بارے میں",
+    "nav_blog": "بلاگ",
+    "nav_script": "اسکرپٹ",
+    "nav_pricing": "قیمت",
+    "nav_products": "مصنوعات",
+    "nav_login": "لاگ ان",
+    "nav_start_free": "مفت شروع کریں"
   }
 }

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import type { BlogPost } from "@/data/blogData";
 import { Badge } from "@/components/ui/badge";
 import { useLocale } from "@/hooks/use-locale";
+import { useTranslation } from "react-i18next";
 
 interface BlogCardProps {
   post: BlogPost;
@@ -9,9 +10,11 @@ interface BlogCardProps {
 }
 
 const BlogCard = ({ post, featured = false }: BlogCardProps) => {
-  const { prefix } = useLocale();
+  const { prefix, locale } = useLocale();
+  const { t } = useTranslation("blog");
   const category = Array.isArray(post.category) ? post.category[0] : post.category;
-  const readTime = `${post.readingTime} min read`;
+  const readTime = `${post.readingTime} ${t("blog.min_read")}`;
+  const dateLocale = locale === "ur" ? "ur-PK" : "en-GB";
 
   if (featured) {
     return (
@@ -43,7 +46,7 @@ const BlogCard = ({ post, featured = false }: BlogCardProps) => {
               <span>{post.authorName}</span>
               <span>·</span>
               <time dateTime={post.publishedAt}>
-                {new Date(post.publishedAt).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}
+                {new Date(post.publishedAt).toLocaleDateString(dateLocale, { day: "numeric", month: "long", year: "numeric" })}
               </time>
               <span>·</span>
               <span>{readTime}</span>
@@ -81,7 +84,7 @@ const BlogCard = ({ post, featured = false }: BlogCardProps) => {
         </p>
         <div className="flex items-center gap-3 text-xs text-muted-foreground">
           <time dateTime={post.publishedAt}>
-            {new Date(post.publishedAt).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}
+            {new Date(post.publishedAt).toLocaleDateString(dateLocale, { day: "numeric", month: "short", year: "numeric" })}
           </time>
           <span>·</span>
           <span>{readTime}</span>
