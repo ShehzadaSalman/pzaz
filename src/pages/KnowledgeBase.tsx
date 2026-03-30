@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import { KBArticle, kbCategories, getArticlesByCategory } from "@/data/knowledgeBaseData";
 import { kbCategoriesUr, kbArticlesUr } from "@/data/knowledgeBaseDataUr";
+import { kbCategoriesFr, kbArticlesFr } from "@/data/knowledgeBaseDataFr";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import KBSearchBar from "@/components/knowledge-base/KBSearchBar";
@@ -18,11 +19,14 @@ const categoryOrder: Array<KBArticle["category"]> = [
 const KnowledgeBase = () => {
   const { locale, prefix } = useLocale();
   const isUr = locale === "ur";
-  const cats = isUr ? kbCategoriesUr : kbCategories;
+  const isFr = locale === "fr";
+  const cats = isUr ? kbCategoriesUr : isFr ? kbCategoriesFr : kbCategories;
   const getArticles = (catId: KBArticle["category"]) =>
     isUr
       ? kbArticlesUr.filter((a) => a.category === catId)
-      : getArticlesByCategory(catId);
+      : isFr
+        ? kbArticlesFr.filter((a) => a.category === catId)
+        : getArticlesByCategory(catId);
 
   return (
     <div className="min-h-screen bg-background">

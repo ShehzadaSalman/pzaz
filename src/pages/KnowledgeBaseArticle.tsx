@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import { getArticleBySlug, getRelatedArticles, kbCategories } from "@/data/knowledgeBaseData";
 import { kbArticlesUr, kbCategoriesUr } from "@/data/knowledgeBaseDataUr";
+import { kbArticlesFr, kbCategoriesFr } from "@/data/knowledgeBaseDataFr";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import KBSearchBar from "@/components/knowledge-base/KBSearchBar";
@@ -21,6 +22,12 @@ const categoryLabelUr: Record<string, string> = {
   "getting-started": "شروعات",
   "functions": "فنکشنز",
   "tools-and-features": "ٹولز اور خصوصیات",
+};
+
+const categoryLabelFr: Record<string, string> = {
+  "getting-started": "Pour Commencer",
+  "functions": "Fonctions",
+  "tools-and-features": "Outils & Fonctionnalités",
 };
 
 const renderContent = (content: string): React.ReactNode[] => {
@@ -80,10 +87,13 @@ const KnowledgeBaseArticle = () => {
   const { slug } = useParams<{ slug: string }>();
   const { locale, prefix } = useLocale();
   const isUr = locale === "ur";
+  const isFr = locale === "fr";
 
   const article = isUr
     ? kbArticlesUr.find((a) => a.slug === slug)
-    : slug ? getArticleBySlug(slug) : undefined;
+    : isFr
+      ? kbArticlesFr.find((a) => a.slug === slug)
+      : slug ? getArticleBySlug(slug) : undefined;
 
   if (!article) return <NotFound />;
 
@@ -91,11 +101,15 @@ const KnowledgeBaseArticle = () => {
     ? (article.relatedSlugs || [])
         .map((s) => kbArticlesUr.find((a) => a.slug === s))
         .filter((a): a is KBArticle => !!a)
-    : getRelatedArticles(article);
+    : isFr
+      ? (article.relatedSlugs || [])
+          .map((s) => kbArticlesFr.find((a) => a.slug === s))
+          .filter((a): a is KBArticle => !!a)
+      : getRelatedArticles(article);
 
-  const categoryLabel = isUr ? categoryLabelUr : categoryLabelEn;
+  const categoryLabel = isUr ? categoryLabelUr : isFr ? categoryLabelFr : categoryLabelEn;
   const catLabel = categoryLabel[article.category];
-  const cats = isUr ? kbCategoriesUr : kbCategories;
+  const cats = isUr ? kbCategoriesUr : isFr ? kbCategoriesFr : kbCategories;
   const catMeta = cats.find((c) => c.id === article.category);
 
   return (
