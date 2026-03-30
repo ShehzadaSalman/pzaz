@@ -4,11 +4,13 @@ import { ChevronRight } from "lucide-react";
 import { KBArticle, kbCategories, getArticlesByCategory } from "@/data/knowledgeBaseData";
 import { kbCategoriesUr, kbArticlesUr } from "@/data/knowledgeBaseDataUr";
 import { kbCategoriesFr, kbArticlesFr } from "@/data/knowledgeBaseDataFr";
+import { kbArticlesEs } from "@/data/knowledgeBaseDataEs";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import KBSearchBar from "@/components/knowledge-base/KBSearchBar";
 import SEO from "@/components/SEO";
 import { useLocale } from "@/hooks/use-locale";
+import { useTranslation } from "react-i18next";
 
 const categoryOrder: Array<KBArticle["category"]> = [
   "getting-started",
@@ -18,21 +20,25 @@ const categoryOrder: Array<KBArticle["category"]> = [
 
 const KnowledgeBase = () => {
   const { locale, prefix } = useLocale();
+  const { t } = useTranslation("knowledge-base");
   const isUr = locale === "ur";
   const isFr = locale === "fr";
-  const cats = isUr ? kbCategoriesUr : isFr ? kbCategoriesFr : kbCategories;
+  const isEs = locale === "es";
+  const cats = isUr ? kbCategoriesUr : isFr ? kbCategoriesFr : isEs ? kbCategories : kbCategories;
   const getArticles = (catId: KBArticle["category"]) =>
     isUr
       ? kbArticlesUr.filter((a) => a.category === catId)
       : isFr
         ? kbArticlesFr.filter((a) => a.category === catId)
-        : getArticlesByCategory(catId);
+        : isEs
+          ? kbArticlesEs.filter((a) => a.category === catId)
+          : getArticlesByCategory(catId);
 
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title={isUr ? "نالج بیس – Pzaz" : "Knowledge Base – Pzaz"}
-        description={isUr ? "Pzaz فلم پروڈکشن سافٹ ویئر کی گائیڈز اور ٹیوٹوریلز براؤز کریں۔" : "Browse guides, tutorials, and references for Pzaz film production software."}
+        title={t("kb.seo_title")}
+        description={t("kb.seo_desc")}
         url={`https://pzaz.io${prefix}/knowledge-base`}
         canonical={`https://pzaz.io${prefix}/knowledge-base`}
       />
@@ -41,12 +47,10 @@ const KnowledgeBase = () => {
       {/* Hero */}
       <section className="pt-28 pb-16 text-center px-6" style={{ background: "var(--gradient-hero)" }}>
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-          {isUr ? "نالج بیس" : "Knowledge Base"}
+          {t("kb.hero_title")}
         </h1>
         <p className="text-white/80 text-lg mb-10 max-w-xl mx-auto">
-          {isUr
-            ? "Pzaz سے زیادہ سے زیادہ فائدہ اٹھانے کے لیے گائیڈز، ٹیوٹوریلز اور جوابات تلاش کریں۔"
-            : "Find guides, tutorials, and answers to get the most out of Pzaz."}
+          {t("kb.hero_desc")}
         </p>
         <KBSearchBar />
       </section>
