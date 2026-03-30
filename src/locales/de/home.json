@@ -1,0 +1,89 @@
+{
+  "hero": {
+    "headline1": "Filmproduktionen scheitern selten an Kreativität.",
+    "headline2": "Sie scheitern, weil Informationen zerfallen.",
+    "description_short": "Drehbücher ändern sich. Zeitpläne verschieben sich. Budgets schwanken. Teams verpassen Updates. Pzaz hält Drehbuch, Plan, Budget, Zeitplan und Team perfekt synchron — vom ersten Entwurf bis zur finalen Lieferung.",
+    "description_short_more": " Wenn sich etwas ändert, aktualisiert sich alles automatisch. Konzentrieren Sie sich auf die Geschichte, während Pzaz die Produktion im Einklang hält.",
+    "description_full": "Drehbücher ändern sich. Zeitpläne verschieben sich. Budgets schwanken. Teams verpassen Updates. Pzaz hält Drehbuch, Plan, Budget, Zeitplan und Team perfekt synchron — vom ersten Entwurf bis zur finalen Lieferung. Wenn sich etwas ändert, aktualisiert sich alles automatisch.",
+    "description_full2": "Konzentrieren Sie sich auf die Geschichte, während Pzaz die Produktion im Einklang hält.",
+    "cta_primary": "Kostenlos starten",
+    "cta_primary_sub": "Keine Kreditkarte nötig.",
+    "cta_secondary": "Demo buchen",
+    "cta_secondary_sub": "In 15 Minuten startklar.",
+    "read_more": "mehr lesen"
+  },
+  "problem": {
+    "pill": "Das Problem",
+    "title1": "Pläne ändern sich.",
+    "title2": "Produktionen zerbrechen.",
+    "description": "Jedes Mal, wenn Ihr Team das Tool wechselt, geht der Kontext verloren. Das verursacht Nacharbeit, Verzögerungen und Budgetdruck. Die Produktion verliert die Ausrichtung.",
+    "card1_title": "Kontextverlust",
+    "card1_desc": "Der Wechsel zwischen unverbundenen Apps kann bis zu 60 % des Arbeitskontexts auslöschen.",
+    "card2_title": "Digitale Ermüdung",
+    "card2_desc": "Ständiger Tool-Wechsel erschöpft die Konzentration und die Leistung sinkt um bis zu 30 %.",
+    "card3_title": "Fragmentierte Daten",
+    "card3_desc": "Wenn Informationen nicht verbunden sind, vervielfachen sich Fehler."
+  },
+  "solution": {
+    "pill": "Die Lösung",
+    "title1": "Ein Ökosystem.",
+    "title2": "Vollständige Ausrichtung.",
+    "description": "Pzaz hält die kreative, operative und finanzielle Realität in einem lebendigen Produktionssystem verbunden.",
+    "card1": "Arbeiten Sie mit Klarheit,\nnicht mit Chaos.",
+    "card2": "Bewegen Sie sich schnell\nohne die\nKontrolle zu verlieren.",
+    "card3": "Bleiben Sie ausgerichtet,\nauch wenn\nsich Pläne ändern.",
+    "card4": "Liefern Sie ohne\nPanik in\nletzter Minute.",
+    "card5": "Schützen Sie Ihre Margen\nmit weniger Überraschungen.",
+    "insight": "Führen Sie Produktionen, die sich ruhig, <strong>kontrolliert und berechenbar anfühlen.</strong>"
+  },
+  "ai_context": {
+    "heading": "KI ohne Kontext ist Raterei.",
+    "para1": "KI kann in Sekunden beeindruckende Antworten generieren. Aber beeindruckende Antworten leiten keine Produktionen. Ohne den vollständigen Produktionskontext passen die Ergebnisse nicht, Entscheidungen pflanzen sich nicht fort und Teams verlieren die Ausrichtung.",
+    "para2": "Deshalb wirken Tools, die KI priorisieren, leistungsstark, lassen Produktionen aber dennoch fragmentiert. Es ist auch der Grund, warum 95 % der Unternehmen den echten Wert von KI nicht freisetzen können.",
+    "para3": "Pzaz verbindet Ihren gesamten Produktionskontext, damit Ihre Tools, KI-Agenten und Teams harmonisch zusammenarbeiten.",
+    "caption": "Sie behalten die Kontrolle, während KI unterstützt. <strong>Die Produktion bleibt im Einklang.</strong>"
+  },
+  "products": {
+    "pill": "Produkte",
+    "title1": "Gemacht für Teams, die",
+    "title2": "unter Druck liefern.",
+    "description": "Pzaz ist für Produktionsteams gebaut, die wissen, dass großartige Ideen allein nicht reichen.",
+    "feature1": "Spielfilme",
+    "feature2": "Episodisches Fernsehen",
+    "feature3": "Animation & VFX-Produktionen",
+    "feature4": "Werbe- & Markenkampagnen",
+    "feature5": "Digitale & vertikale Serien",
+    "feature6": "Und mehr...",
+    "feature_desc": "Ob Sie einen Spielfilm leiten oder mehrere Kundenproduktionen managen — Ausrichtung ist keine Option. Pzaz ist für Teams gebaut, die Koordination im Produktionsmaßstab brauchen.",
+    "cta_start": "Kostenlos starten",
+    "cta_watch": "Video ansehen",
+    "divider": "Starten Sie mit allem —",
+    "divider_sub": "oder nur mit dem, was Sie brauchen.",
+    "most_popular": "Am beliebtesten",
+    "explore_all": "Alle Produkte erkunden",
+    "upgrade_note": "Jederzeit upgraden. Ihr Projekt bleibt intakt.",
+    "budget_name": "Pzaz Budget",
+    "budget_tagline": "Professionelle Budgets und Kostenkontrolle",
+    "budget_desc": "Für Produzenten und Produktionsleiter, die Klarheit und Vertrauen brauchen. Verwandeln Sie Ihr Drehbuch in ein strukturiertes Produktionsbudget, das synchron bleibt, wenn sich Pläne ändern.",
+    "storyboard_name": "Pzaz Storyboard",
+    "storyboard_tagline": "Visualisieren Sie den Film vor dem Dreh",
+    "storyboard_desc": "Für Regisseure und visuelle Geschichtenerzähler. Verwandeln Sie Szenen in Sekunden in Storyboards und verfeinern Sie Einstellungen kollaborativ, bevor die Produktion beginnt.",
+    "studio_name": "Pzaz Studio",
+    "studio_tagline": "All-in-One-Produktionssystem",
+    "studio_desc": "Für vollständige Produktionen und Teams, die alles in Echtzeit verbunden brauchen. Drehbuch, Zeitplan, Budget, Storyboard und Zusammenarbeit in einem lebendigen Arbeitsbereich.",
+    "explore_btn": "{{name}} erkunden"
+  },
+  "integrations": {
+    "pill": "Integrationen",
+    "title": "Funktioniert mit Ihren bestehenden Tools",
+    "description": "Keine Lock-ins. Keine Barrieren. Nur Film.",
+    "cta": "Kontaktieren Sie uns"
+  },
+  "cta": {
+    "pill": "7-tägige kostenlose Testversion",
+    "title": "Führen Sie Ihre nächste Produktion synchron.",
+    "description": "Hören Sie auf, Fragmentierung zu managen. Beginnen Sie, mit vollständiger Ausrichtung zu arbeiten.",
+    "primary": "Kostenlos starten",
+    "secondary": "Demo vereinbaren"
+  }
+}
