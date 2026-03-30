@@ -41,7 +41,7 @@ export default defineConfig(({ mode }) => {
     staticRoutes = ["/"];
   }
 
-  // Blog routes for sitemap
+  // Blog routes for sitemap (all locales)
   let blogRoutes: string[] = [];
   try {
     const dataFileContent = fs.readFileSync(
@@ -49,7 +49,10 @@ export default defineConfig(({ mode }) => {
       "utf-8"
     );
     const slugMatches = [...dataFileContent.matchAll(/slug:\s*"([^"]+)"/g)];
-    blogRoutes = slugMatches.map((m) => `/producer-blog/${m[1]}`);
+    const enBlogRoutes = slugMatches.map((m) => `/producer-blog/${m[1]}`);
+    const urBlogRoutes = slugMatches.map((m) => `/ur/producer-blog/${m[1]}`);
+    const frBlogRoutes = slugMatches.map((m) => `/fr/producer-blog/${m[1]}`);
+    blogRoutes = [...enBlogRoutes, ...urBlogRoutes, ...frBlogRoutes];
   } catch {
     // fallback: no blog routes
   }
