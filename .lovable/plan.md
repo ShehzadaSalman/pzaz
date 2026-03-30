@@ -1,70 +1,64 @@
 
 
-## Complete Spanish Translations + Split Solutions Namespace for Performance
+## Add German (Deutsch) Language
 
 ### Overview
-Two tasks: (1) Translate `solutions.json` into Spanish, and (2) split the monolithic 877-line `solutions` namespace into per-page namespaces so each solution page only loads ~60-80 lines instead of 877.
+Follow the exact same pattern used for Spanish. German is LTR like French/Spanish, so no RTL concerns. The work mirrors what was done for `es` — infrastructure wiring, 34 translation JSON files, data files, route registration, and pre-rendering.
 
 ---
 
-### Part A: Split `solutions.json` into per-page namespaces (all 4 locales)
+### Phase 1: Infrastructure Wiring (~8 files)
 
-**Why**: Currently every solution page loads all 877 lines of `solutions.json` even though each page only uses ~60-80 keys. Splitting means each page fetches only its own ~2KB file.
-
-**New files** (per locale: en, fr, ur, es = 12 files x 4 = 48 files):
-
-| New namespace file | Source keys | Used by |
-|---|---|---|
-| `solutions-schools.json` | `schools.*` + `schools_full.*` | `Schools.tsx` |
-| `solutions-directors.json` | `directors.*` | `DirectorsProducers.tsx` |
-| `solutions-documentary.json` | `documentary.*` | `DocumentaryFilmmakers.tsx` |
-| `solutions-cinematographers.json` | `cinematographers.*` | `Cinematographers.tsx` |
-| `solutions-agencies.json` | `agencies.*` | `CreativeAgencies.tsx` |
-| `solutions-teams.json` | `production_teams.*` + `prod_teams.*` | `ProductionTeams.tsx` |
-| `solutions-screenwriters.json` | `screenwriters.*` | `Screenwriters.tsx` |
-| `solutions-tv-series.json` | `tv_series.*` | `TVSeriesCreators.tsx` |
-| `solutions-investors.json` | `investors.*` | `InvestorsFunding.tsx` |
-| `solutions-prod-managers.json` | `production_managers.*` + `prod_managers.*` | `ProductionManagers.tsx` |
-| `solutions-empowering.json` | `empowering.*` + `empowering_page.*` | `EmpoweringFilmmaking.tsx` |
-| `solutions-indie-filmmakers.json` | `indie_filmmakers.*` + `indie_filmmakers_page.*` | `IndieFilmmakers.tsx` |
-
-**Key changes per file**:
-- Flatten: remove the top-level key (e.g., `schools.hero_h1a` becomes just `hero_h1a`)
-- Each page component changes `useTranslation('solutions')` to `useTranslation('solutions-schools')` (etc.)
-- Update `t("schools.hero_h1a")` → `t("hero_h1a")` in each page component
-- Keep the old `solutions.json` deleted (or empty) in all 4 locales
-- Update `main.tsx` `getNamespacesForRoute()` to map each solution slug to its specific namespace
-
-**12 page components to update**: Schools, DirectorsProducers, DocumentaryFilmmakers, Cinematographers, CreativeAgencies, ProductionTeams, Screenwriters, TVSeriesCreators, InvestorsFunding, ProductionManagers, EmpoweringFilmmaking, IndieFilmmakers.
+1. **`src/hooks/use-locale.ts`** — Add `"de"` to `SUPPORTED_LOCALES`; update regex `/^\/(ur|fr|es)/` → `/^\/(ur|fr|es|de)/`
+2. **`src/components/LocaleWrapper.tsx`** — No change needed (already dynamic from `SUPPORTED_LOCALES`)
+3. **`src/components/LanguageDropdown.tsx`** — Add `de: "Deutsch"` to `languageLabels`
+4. **`src/i18n.ts`** — Add `"de"` to `getInitialLang()` detection
+5. **`index.html`** — Add `"de"` to the synchronous lang/dir snippet
+6. **`src/App.tsx`** — Add `<Route path="de">` block mirroring the `es` block with all child routes
+7. **`src/routes.ts`** — Add `/de` route block (~90 lines) for pre-rendering
+8. **`src/main.tsx`** — Add `"de"` to the locale loop in `getNamespacesForRoute()`
 
 ---
 
-### Part B: Translate all new Spanish solution files
+### Phase 2: Translation Files (~34 JSON files in `src/locales/de/`)
 
-While splitting, translate the English content into Spanish for all 12 new `src/locales/es/solutions-*.json` files.
+Create all files matching the Spanish locale directory:
 
----
+`common.json`, `home.json`, `script.json`, `pricing.json`, `about.json`, `blog.json`, `brand.json`, `budget.json`, `collaboration.json`, `culture.json`, `file-sharing.json`, `indie.json`, `knowledge-base.json`, `planning.json`, `privacy.json`, `project-management.json`, `scene-breakdown.json`, `storyboard.json`, `studio-pro.json`, `task-management.json`, `terms.json`, `vs-final-draft.json`, plus 12 `solutions-*.json` files.
 
-### Part C: Remaining Spanish translations
-
-1. **Knowledge Base data** (`src/data/knowledgeBaseDataEs.ts`) — Translate all 34 KB article titles, descriptions, and body content into Spanish
-2. **Blog data** (`src/data/blogDataEs.ts` + `blogContentEs.ts`) — Translate all 49 blog post metadata (titles, excerpts) and full article content into Spanish
+All translated from English into proper German with professional film industry terminology.
 
 ---
 
-### Execution order
+### Phase 3: Data Files (~3 files)
 
-1. Split English `solutions.json` into 12 per-page namespace files + update 12 page components
-2. Split French `solutions.json` into 12 files (already translated)
-3. Split Urdu `solutions.json` into 12 files (already translated)
-4. Create 12 Spanish solution files with full translations
-5. Delete old `solutions.json` from all 4 locales
-6. Update `main.tsx` namespace mapping for solution routes
-7. Translate KB and blog content into Spanish
+1. **`src/data/knowledgeBaseDataDe.ts`** — Translate all 34 KB articles (titles, descriptions, body)
+2. **`src/data/blogDataDe.ts`** — Translate 49 blog post metadata (titles, excerpts)
+3. **`src/data/blogContentDe.ts`** — Translate full body content for all 49 blog articles
 
-### Technical details
+Update `KnowledgeBase.tsx`, `KnowledgeBaseArticle.tsx`, `BlogArticle.tsx`, and related components to include `de` in their locale selection logic.
 
-- The `i18n.ts` dynamic import `./locales/${language}/${namespace}.json` automatically resolves the new filenames — no config change needed
-- Pre-rendering already covers all `/es/` solution routes in `routes.ts`
-- Each split file will be ~2-5KB instead of one 30KB+ file
+---
+
+### Phase 4: Pre-rendering
+
+All `/de/` routes will be statically rendered to HTML via the existing SSG pipeline — no additional config beyond adding routes to `routes.ts`.
+
+---
+
+### Estimated Scope
+- ~8 infrastructure file edits
+- ~34 new translation JSON files in `src/locales/de/`
+- ~3 new data files (blog + KB)
+- ~90 new route entries in `routes.ts`
+- ~50 new route entries in `App.tsx`
+
+### Execution Order
+1. Infrastructure wiring (all 8 files)
+2. Core page translations (common, home, script, pricing, about)
+3. Product + feature page translations
+4. Solution page translations (12 split namespace files)
+5. Remaining pages (brand, culture, privacy, terms, vs-final-draft)
+6. KB data + blog data + blog content
+7. Component updates for `de` locale selection
 
