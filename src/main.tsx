@@ -46,18 +46,8 @@ interface HelmetContextFilled {
 const blogRoutes = blogPosts.map((post) => `/producer-blog/${post.slug}`);
 const urBlogRoutes = blogPostsUr.map((post) => `/ur/producer-blog/${post.slug}`);
 const frBlogRoutes = blogPostsFr.map((post) => `/fr/producer-blog/${post.slug}`);
-
-// Spanish blog routes — reuse English slugs until blogDataEs is created
-let esBlogRoutes: string[] = [];
-try {
-  // Will be populated once blogDataEs.ts exists
-  const { blogPostsEs } = await import("./data/blogDataEs") as any;
-  if (blogPostsEs) esBlogRoutes = blogPostsEs.map((post: any) => `/es/producer-blog/${post.slug}`);
-} catch {
-  // blogDataEs not yet created — use English slugs as fallback
-  esBlogRoutes = blogPosts.map((post) => `/es/producer-blog/${post.slug}`);
-}
-
+// Spanish blog routes — reuse English slugs (same slugs, different locale prefix)
+const esBlogRoutes = blogPosts.map((post) => `/es/producer-blog/${post.slug}`);
 const allRoutes = new Set([...staticRoutes, ...blogRoutes, ...urBlogRoutes, ...frBlogRoutes, ...esBlogRoutes]);
 
 /**
