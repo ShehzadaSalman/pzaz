@@ -5,6 +5,7 @@ import { KBArticle, kbCategories, getArticlesByCategory } from "@/data/knowledge
 import { kbCategoriesUr, kbArticlesUr } from "@/data/knowledgeBaseDataUr";
 import { kbCategoriesFr, kbArticlesFr } from "@/data/knowledgeBaseDataFr";
 import { kbArticlesEs, kbCategoriesEs } from "@/data/knowledgeBaseDataEs";
+import { kbArticlesDe, kbCategoriesDe } from "@/data/knowledgeBaseDataDe";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import KBSearchBar from "@/components/knowledge-base/KBSearchBar";
