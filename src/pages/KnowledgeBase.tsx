@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import { KBArticle, kbCategories, getArticlesByCategory } from "@/data/knowledgeBaseData";
 import { kbCategoriesUr, kbArticlesUr } from "@/data/knowledgeBaseDataUr";
+import { kbCategoriesFr, kbArticlesFr } from "@/data/knowledgeBaseDataFr";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import KBSearchBar from "@/components/knowledge-base/KBSearchBar";
