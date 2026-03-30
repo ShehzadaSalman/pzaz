@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
+import { Trans, useTranslation } from "react-i18next";
 import iconDocument from "@/assets/script/icon-document.svg";
 import iconUserGroup from "@/assets/script/icon-user-group.svg";
 import iconFlow from "@/assets/script/icon-flow.svg";
@@ -11,19 +12,17 @@ import iconListCheck from "@/assets/script/icon-list-check.svg";
 import iconThList from "@/assets/script/icon-th-list.svg";
 import iconSprint from "@/assets/script/icon-sprint.svg";
 
-const features = [
-  { icon: iconCloud, title: "A shared production workspace" },
-  { icon: iconUserGroup, title: "Inbox and team chat" },
-  { icon: iconFlow, title: "Calendar and scheduling" },
-  { icon: iconDocument, title: "File management and document hub" },
-  { icon: iconTextLine, title: "Script development and narrative tools" },
-  { icon: iconShapes, title: "Ideation boards and moodboards" },
-  { icon: iconThList, title: "Breakdown and stripboard planning" },
-  { icon: iconListCheck, title: "Task coordination with notes and attachments" },
-  { icon: iconSprint, title: "Production essentials like call sheets" },
-];
+const featureIcons = [iconCloud, iconUserGroup, iconFlow, iconDocument, iconTextLine, iconShapes, iconThList, iconListCheck, iconSprint];
+const featureKeys = ["f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9"];
 
 const IndieWhatYouGet = () => {
+  const { t } = useTranslation('indie');
+
+  const features = featureKeys.map((key, i) => ({
+    icon: featureIcons[i],
+    title: t(`indie.whatyouget_${key}`),
+  }));
+
   return (
     <section id="features" className="section-padding bg-[#FBFBFB] relative overflow-hidden">
       <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl pointer-events-none -translate-y-1/2" />
@@ -31,24 +30,24 @@ const IndieWhatYouGet = () => {
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <AnimatedSectionHeader
           wrapperClassName="text-center mb-16"
-          pillText="Everything Included"
+          pillText={t("indie.whatyouget_pill")}
           pillClassName="bg-primary/10 text-primary"
           title={
             <>
-              What You{" "}
+              {t("indie.whatyouget_title")}{" "}
               <span className="font-lato font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                Get
+                {t("indie.whatyouget_title_gradient")}
               </span>
             </>
           }
-          description="Everything you need to prepare your film properly:"
+          description={t("indie.whatyouget_description")}
         />
 
         {/* Feature grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-[30px] mb-12">
           {features.map((feature, index) => (
             <motion.div
-              key={feature.title}
+              key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -74,10 +73,14 @@ const IndieWhatYouGet = () => {
           className="max-w-3xl mx-auto text-center bg-white rounded-[38px] border-2 border-[#D4BAF4] p-8"
         >
           <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-            The plan includes <span className="font-semibold text-foreground">1 core user</span>, up to <span className="font-semibold text-foreground">3 external collaborators</span>, and <span className="font-semibold text-foreground">1 active project</span> at a time. You also receive <span className="font-semibold text-foreground">100 AI credits per month</span> to support structured development inside your film's working environment.
+            <Trans
+              i18nKey="indie.whatyouget_plan"
+              ns="indie"
+              components={{ bold: <span className="font-semibold text-foreground" /> }}
+            />
           </p>
           <p className="text-lg font-semibold text-[#4D029B] italic">
-            Enough to build something serious. Simple enough to stay clear.
+            {t("indie.whatyouget_closing")}
           </p>
         </motion.div>
       </div>

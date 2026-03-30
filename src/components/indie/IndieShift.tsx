@@ -1,8 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
+import { useTranslation } from "react-i18next";
 
 const IndieShift = () => {
+  const { t } = useTranslation('indie');
+
   return (
     <section className="section-padding bg-[#FBFBFB] relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
@@ -15,13 +18,13 @@ const IndieShift = () => {
         >
           <AnimatedSectionHeader
             wrapperClassName="text-center"
-            pillText="The Shift"
+            pillText={t("indie.shift_pill")}
             pillClassName="bg-primary/10 text-primary"
             title={
               <>
-                From Passion Project{" "}
+                {t("indie.shift_title")}{" "}
                 <span className="font-lato font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                  to Prepared Project
+                  {t("indie.shift_title_gradient")}
                 </span>
               </>
             }
@@ -36,17 +39,17 @@ const IndieShift = () => {
             className="bg-white rounded-[38px] border border-[#D4BAF4] p-8 md:p-12 mb-10"
           >
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Most independent filmmakers compensate with effort. More messages. More revisions. More late nights trying to organise everything before a call.
+              {t("indie.shift_p1")}
             </p>
             <p className="text-xl font-semibold text-[#4D029B] mb-8">
-              Indie changes this feeling.
+              {t("indie.shift_p2")}
             </p>
 
             <div className="space-y-4">
               {[
-                "Your development lives next to your planning.",
-                "Your ideas connect to your breakdown.",
-                "Your collaborators see the same evolving context.",
+                t("indie.shift_point1"),
+                t("indie.shift_point2"),
+                t("indie.shift_point3"),
               ].map((point, i) => (
                 <motion.div
                   key={i}
@@ -71,10 +74,10 @@ const IndieShift = () => {
             className="text-center space-y-4"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              You're not scrambling to assemble your film before every meeting.
+              {t("indie.shift_closing1")}
             </p>
             <p className="text-xl font-bold text-foreground">
-              Instead, you're building it steadily, visibly, confidently.
+              {t("indie.shift_closing2")}
             </p>
           </motion.div>
         </motion.div>

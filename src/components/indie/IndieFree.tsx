@@ -1,8 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
+import { useTranslation } from "react-i18next";
 
 const IndieFree = () => {
+  const { t } = useTranslation('indie');
+
   return (
     <section className="section-padding relative overflow-hidden">
       <div
@@ -19,13 +22,13 @@ const IndieFree = () => {
         >
           <AnimatedSectionHeader
             wrapperClassName="text-center"
-            pillText="Free. Always."
+            pillText={t("indie.free_pill")}
             pillClassName="bg-[#E4E4FE] border border-[#8651EF42] text-primary"
             title={
               <>
-                Indie is free.{" "}
+                {t("indie.free_title")}{" "}
                 <span className="font-lato font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                  Permanently.
+                  {t("indie.free_title_gradient")}
                 </span>
               </>
             }
@@ -40,15 +43,15 @@ const IndieFree = () => {
             className="space-y-5 text-left bg-white rounded-[38px] border-2 border-[#D4BAF4] p-8 md:p-12"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Built for independent reality, Indie is not a teaser tier. It is the structural foundation every independent film deserves.
+              {t("indie.free_p1")}
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4 pt-2">
               {[
-                "No subscriptions",
-                "No artificial limits",
-                "No lock-in's",
-                "No upgrades to unlock",
+                t("indie.free_item1"),
+                t("indie.free_item2"),
+                t("indie.free_item3"),
+                t("indie.free_item4"),
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3 p-4 bg-[#F7F2FD] rounded-xl">
                   <div className="w-2 h-2 rounded-full bg-[#A805FF] flex-shrink-0" />
@@ -58,7 +61,7 @@ const IndieFree = () => {
             </div>
 
             <p className="text-lg font-semibold text-[#4D029B] pt-2 italic">
-              With Indie, you don't need permission to operate like a professional.
+              {t("indie.free_closing")}
             </p>
           </motion.div>
         </motion.div>

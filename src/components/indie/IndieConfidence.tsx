@@ -2,15 +2,18 @@ import React from "react";
 import { motion } from "framer-motion";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
 import { CheckCircle } from "lucide-react";
-
-const questions = [
-  "Can you explain your scope clearly?",
-  "Can you show how the film unfolds visually?",
-  "Can you demonstrate that you've thought beyond the draft?",
-  "Can you answer production questions without hesitation?",
-];
+import { useTranslation } from "react-i18next";
 
 const IndieConfidence = () => {
+  const { t } = useTranslation('indie');
+
+  const questions = [
+    t("indie.confidence_q1"),
+    t("indie.confidence_q2"),
+    t("indie.confidence_q3"),
+    t("indie.confidence_q4"),
+  ];
+
   return (
     <section className="section-padding bg-[#fbfbfb] relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
@@ -24,13 +27,13 @@ const IndieConfidence = () => {
           >
             <AnimatedSectionHeader
               wrapperClassName=""
-              pillText="Why It Matters"
+              pillText={t("indie.confidence_pill")}
               pillClassName="bg-primary/10 text-primary"
               title={
                 <>
-                  Confidence Is Built,{" "}
+                  {t("indie.confidence_title")}{" "}
                   <span className="font-lato font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                    Not Imagined
+                    {t("indie.confidence_title_gradient")}
                   </span>
                 </>
               }
@@ -38,10 +41,10 @@ const IndieConfidence = () => {
               className="mb-8"
             />
             <p className="text-lg text-muted-foreground mb-4 leading-relaxed font-semibold">
-              Funding is emotional.
+              {t("indie.confidence_p1")}
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Producers, partners and investors are not just evaluating your script. They are evaluating whether you can execute it.
+              {t("indie.confidence_p2")}
             </p>
           </motion.div>
 
@@ -77,7 +80,7 @@ const IndieConfidence = () => {
               className="pt-4"
             >
               <p className="font-lato font-bold text-[18px] text-[#4D029B] italic">
-                Structure creates confidence. Confidence attracts belief.
+                {t("indie.confidence_closing")}
               </p>
             </motion.div>
           </motion.div>

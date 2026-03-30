@@ -1,8 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
+import { useTranslation } from "react-i18next";
 
 const IndieHome = () => {
+  const { t } = useTranslation('indie');
+
   return (
     <section className="section-padding relative overflow-hidden">
       <div
@@ -20,13 +23,13 @@ const IndieHome = () => {
           >
             <AnimatedSectionHeader
               wrapperClassName=""
-              pillText="Your Production Home"
+              pillText={t("indie.home_pill")}
               pillClassName="bg-primary/10 text-primary"
               title={
                 <>
-                  One Place Where Your{" "}
+                  {t("indie.home_title")}{" "}
                   <span className="font-lato font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                    Film Comes Together
+                    {t("indie.home_title_gradient")}
                   </span>
                 </>
               }
@@ -34,13 +37,13 @@ const IndieHome = () => {
               className="mb-8"
             />
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Indie gives your project a home.
+              {t("indie.home_p1")}
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              A single environment where your script, ideas, planning, collaborators and production thinking live together and evolve together. When everything sits in one place, your film starts to feel real.
+              {t("indie.home_p2")}
             </p>
             <p className="text-lg text-foreground font-semibold leading-relaxed italic">
-              And when it feels real to you, it feels real to others.
+              {t("indie.home_p3")}
             </p>
           </motion.div>
 
@@ -56,7 +59,7 @@ const IndieHome = () => {
                 <div className="w-3 h-3 rounded-full bg-red-400" />
                 <div className="w-3 h-3 rounded-full bg-yellow-400" />
                 <div className="w-3 h-3 rounded-full bg-green-400" />
-                <span className="ml-2 text-xs text-muted-foreground font-medium">My Film Project</span>
+                <span className="ml-2 text-xs text-muted-foreground font-medium">{t("indie.home_project_name")}</span>
               </div>
               <div className="space-y-3">
                 {[
@@ -79,7 +82,7 @@ const IndieHome = () => {
                 ))}
               </div>
               <div className="mt-4 pt-4 border-t border-[#E6D7F7]">
-                <p className="text-xs text-[#A805FF] font-semibold">Everything in one place. Everything connected.</p>
+                <p className="text-xs text-[#A805FF] font-semibold">{t("indie.home_tagline")}</p>
               </div>
             </div>
           </motion.div>
