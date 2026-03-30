@@ -1,48 +1,38 @@
 
 
-## Fix: Pre-render Urdu pages with actual translations (SSG approach)
+## Fix: Language should be determined by URL, not localStorage
 
 ### Problem
+When a user visits `/ur`, localStorage saves `lang=ur`. If they then navigate to `/` (English home), two places still read that localStorage value and incorrectly apply Urdu:
 
-The `prerender()` function in `main.tsx` generates static HTML for all routes including `/ur/*`, but:
-1. `getInitialLang()` returns `"en"` during SSR (no `window`)
-2. `renderToString` is synchronous — can't resolve async `import()` for Urdu namespaces
-3. Result: Urdu pages are pre-rendered with English fallbacks or raw keys
+1. **`index.html` line 8** — the synchronous script falls back to `localStorage.getItem('lang')` when the URL segment isn't `ur`
+2. **`src/i18n.ts` line 15** — `getInitialLang()` does the same fallback
 
-This means on hard refresh, users see the wrong content until React hydrates and i18next loads the correct translations client-side.
+Since pre-rendered pages already have the correct language baked in, the URL is the single source of truth. localStorage should only be used on `/ur` routes, never to override English routes.
 
-### Solution
+### Fix (2 files, minimal changes)
 
-Load the correct language and all required namespaces **before** calling `renderToString` in the `prerender()` function. This bakes the fully translated content into the static HTML for every route — zero flash, better SEO, faster perceived load.
+**1. `index.html` — synchronous lang script**
+Change the fallback: if the URL path doesn't start with `/ur`, always use `'en'`. Remove the localStorage fallback entirely from this script.
 
-### Changes
+```js
+var seg = window.location.pathname.split('/')[1];
+var lang = seg === 'ur' ? 'ur' : 'en';
+```
 
-**1. `src/i18n.ts`** — Export a factory function for SSR
-- Add an `initI18nForSSR(locale, namespaces)` function that creates a fresh i18next instance with all needed namespaces pre-loaded synchronously (using `await import()`)
-- The existing client-side init stays unchanged
+**2. `src/i18n.ts` — `getInitialLang()`**
+Same fix: URL is the authority. If path doesn't start with `/ur`, default to `'en'`.
 
-**2. `src/main.tsx` — `prerender()` function**
-- Detect locale from `data.url` (if path starts with `/ur/`, locale = `"ur"`, else `"en"`)
-- Determine which namespaces the route needs (map route patterns to namespace names)
-- Call `initI18nForSSR(locale, namespaces)` and await it before `renderToString`
-- Pass the initialized i18n instance via `I18nextProvider` in the SSR tree
-- This ensures `renderToString` outputs fully translated HTML for every page
+```ts
+const getInitialLang = () => {
+  if (typeof window === "undefined") return "en";
+  const pathSegment = window.location.pathname.split("/")[1];
+  return pathSegment === "ur" ? "ur" : "en";
+};
+```
 
-**3. Route-to-namespace mapping**
-- Create a simple mapping: `/script` → `["common", "script"]`, `/pricing` → `["common", "pricing"]`, etc.
-- Default to `["common", "home"]` for the index route
-- This ensures only relevant namespaces are loaded per route during prerender
-
-### What this achieves
-- Every pre-rendered page (English and Urdu) contains fully translated content in the static HTML
-- Zero translation key flash on hard refresh — content is already in the HTML before JS loads
-- Better SEO for Urdu pages — search engines see actual Urdu text
-- No need for client-side loaders or CSS hiding tricks
-- Client-side hydration still works normally for navigation between pages
-
-### Technical notes
-- `renderToString` doesn't support Suspense, so all translations must be loaded before the call
-- The `I18nextProvider` from `react-i18next` allows passing a custom i18n instance for SSR
-- Bundle size is unaffected — translations are only loaded at build time, not shipped in the JS bundle
-- The existing client-side `useSuspense: true` + `PageLoader` remains as a safety net for client-side navigation to new namespaces
+### Why this is safe
+- Pre-rendered HTML already has correct `lang`/`dir` attributes baked in
+- The `LocaleWrapper` component still sets localStorage on navigation (for analytics etc.), but it no longer drives initial language selection
+- Client-side navigation between `/` and `/ur` uses `navigateToLocale()` which explicitly changes i18n language — no localStorage dependency
 
