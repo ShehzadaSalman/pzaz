@@ -5,6 +5,7 @@ import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useIndieCheckoutUrl } from "@/lib/checkout";
+import { useTranslation } from "react-i18next";
 
 import heroImg from "@/assets/vs-final-draft/hero.webp";
 import problemImg from "@/assets/vs-final-draft/problem.webp";
@@ -18,42 +19,6 @@ import slidePlanningImg from "@/assets/vs-final-draft/slide-planning.webp";
 import slideScheduleImg from "@/assets/vs-final-draft/slide-schedule.webp";
 import builtForTeamsImg from "@/assets/vs-final-draft/built-for-teams.webp";
 import finalVerdictImg from "@/assets/vs-final-draft/final-verdict.webp";
-
-const comparisonRows = [
-  { feature: "Automatic Formatting", pzaz: true, finalDraft: true },
-  { feature: "Script Versioning", pzaz: true, finalDraft: true },
-  { feature: "Real-Time Collaboration", pzaz: "Yes (built-in, free)", finalDraft: "Yes (via paid add-on)" },
-  { feature: "Cross-Device Syncing", pzaz: true, finalDraft: true },
-  { feature: "Storyboarding", pzaz: "Yes (visual integration)", finalDraft: false },
-  { feature: "Scheduling", pzaz: true, finalDraft: false },
-  { feature: "Scene Breakdown", pzaz: true, finalDraft: false },
-  { feature: "Shot Lists", pzaz: true, finalDraft: false },
-  { feature: "Cloud-Based", pzaz: true, finalDraft: "No (requires manual saving)" },
-  { feature: "Free Version", pzaz: true, finalDraft: false },
-  { feature: "AI-Assisted Writing", pzaz: true, finalDraft: false },
-  { feature: "Media Storage", pzaz: "Yes (Integrated)", finalDraft: false },
-];
-
-const slides = [
-  {
-    tab: "Storyboard Your Script",
-    title: "Storyboard Your Script",
-    body: "Pzaz's integrated storyboard feature allows you to visualise your project. Final Draft doesn't offer this tool, so you won't be able to map out your shots within the same platform.",
-    image: slideStoryboardImg,
-  },
-  {
-    tab: "Plan Every Detail",
-    title: "Plan Every Detail with Scene and Shot Planning",
-    body: "Take your project beyond the page with Pzaz's scene and shot planning tools. You can manage everything from camera angles to shoot schedules, ensuring your vision comes to life precisely as you imagined. Final Draft lacks these crucial production tools, leaving you to handle these tasks elsewhere.",
-    image: slidePlanningImg,
-  },
-  {
-    tab: "Stay on Schedule",
-    title: "Stay on Schedule with Smart Shooting Planning",
-    body: "With Pzaz, you can seamlessly manage your crew, locations, and timelines using its integrated planning tools. With everything you need in one place, you can keep your production running smoothly. Final Draft doesn't offer any production planning features.",
-    image: slideScheduleImg,
-  },
-];
 
 const CheckIcon = () => (
   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -79,12 +44,49 @@ const CellValue = ({ value }: { value: boolean | string }) => {
 const PzazVsFinalDraft = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const indieCheckoutUrl = useIndieCheckoutUrl();
+  const { t } = useTranslation("vs-final-draft");
+
+  const comparisonRows = [
+    { feature: t("vs.row_auto_format"), pzaz: true, finalDraft: true },
+    { feature: t("vs.row_versioning"), pzaz: true, finalDraft: true },
+    { feature: t("vs.row_collab"), pzaz: t("vs.row_collab_pzaz"), finalDraft: t("vs.row_collab_fd") },
+    { feature: t("vs.row_sync"), pzaz: true, finalDraft: true },
+    { feature: t("vs.row_storyboard"), pzaz: t("vs.row_storyboard_pzaz"), finalDraft: false },
+    { feature: t("vs.row_scheduling"), pzaz: true, finalDraft: false },
+    { feature: t("vs.row_breakdown"), pzaz: true, finalDraft: false },
+    { feature: t("vs.row_shot_lists"), pzaz: true, finalDraft: false },
+    { feature: t("vs.row_cloud"), pzaz: true, finalDraft: t("vs.row_cloud_fd") },
+    { feature: t("vs.row_free"), pzaz: true, finalDraft: false },
+    { feature: t("vs.row_ai"), pzaz: true, finalDraft: false },
+    { feature: t("vs.row_media"), pzaz: t("vs.row_media_pzaz"), finalDraft: false },
+  ];
+
+  const slides = [
+    {
+      tab: t("vs.slide1_tab"),
+      title: t("vs.slide1_title"),
+      body: t("vs.slide1_body"),
+      image: slideStoryboardImg,
+    },
+    {
+      tab: t("vs.slide2_tab"),
+      title: t("vs.slide2_title"),
+      body: t("vs.slide2_body"),
+      image: slidePlanningImg,
+    },
+    {
+      tab: t("vs.slide3_tab"),
+      title: t("vs.slide3_title"),
+      body: t("vs.slide3_body"),
+      image: slideScheduleImg,
+    },
+  ];
 
   return (
     <>
       <SEO
-        title="Pzaz vs. Final Draft – The Complete Film Production Hub"
-        description="See how Pzaz outperforms Final Draft with end-to-end production tools: storyboarding, scheduling, real-time collaboration, AI writing, and more — all in one platform."
+        title={t("vs.seo_title")}
+        description={t("vs.seo_desc")}
         url="https://pzaz.io/pzaz-vs-final-draft/"
         canonical="https://pzaz.io/pzaz-vs-final-draft/"
         keywords={["pzaz vs final draft", "final draft alternative", "film production software", "screenwriting software comparison", "all-in-one filmmaking platform"]}
@@ -96,20 +98,18 @@ const PzazVsFinalDraft = () => {
         <section className="max-w-6xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-[#5C28A3] mb-4">
-              Pzaz vs. Final Draft: Elevate Your Entire Production Process
+              {t("vs.hero_badge")}
             </p>
             <h1 className="text-4xl md:text-5xl font-bold text-[#20124D] leading-tight mb-6">
-              Why Settle for Just Scriptwriting? Unlock a Full-Film Production Hub with Pzaz
+              {t("vs.hero_title")}
             </h1>
-            <p className="text-[#4E2273] text-lg leading-relaxed mb-8">
-              <strong>Looking for a scriptwriting tool that goes beyond the basics?</strong> While Final Draft has long been an industry standard for writing scripts, Pzaz offers much more. Pzaz doesn't stop at writing—it's an all-in-one platform that integrates the entire production process. Here's how we stand apart from Final Draft.
-            </p>
+            <p className="text-[#4E2273] text-lg leading-relaxed mb-8" dangerouslySetInnerHTML={{ __html: t("vs.hero_desc") }} />
             <div className="flex flex-wrap gap-4">
               <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
-                <Button variant="default" size="lg">Start for Free</Button>
+                <Button variant="default" size="lg">{t("vs.start_free")}</Button>
               </a>
               <a href="https://calendly.com/filmmaking-app/30min" target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" size="lg">Book a Demo</Button>
+                <Button variant="outline" size="lg">{t("vs.book_demo")}</Button>
               </a>
             </div>
           </div>
@@ -125,12 +125,12 @@ const PzazVsFinalDraft = () => {
               <img src={problemImg} alt="Final Draft limitation" className="w-full rounded-2xl shadow" />
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-[#5C28A3] mb-3">The Problem.</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-[#5C28A3] mb-3">{t("vs.problem_badge")}</p>
               <h2 className="text-3xl md:text-4xl font-bold text-[#20124D] mb-5">
-                Final Draft is designed exclusively for writing scripts.
+                {t("vs.problem_title")}
               </h2>
               <p className="text-[#4E2273] text-lg leading-relaxed">
-                It's great for formatting, editing, and professional scriptwriting. However, once the script is written, you must export and jump between other tools to manage production.
+                {t("vs.problem_desc")}
               </p>
             </div>
           </div>
@@ -140,12 +140,12 @@ const PzazVsFinalDraft = () => {
         <section className="py-16 md:py-20">
           <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-[#5C28A3] mb-3">The Solution.</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-[#5C28A3] mb-3">{t("vs.solution_badge")}</p>
               <h2 className="text-3xl md:text-4xl font-bold text-[#20124D] mb-5">
-                Pzaz: More Than Scriptwriting.
+                {t("vs.solution_title")}
               </h2>
               <p className="text-[#4E2273] text-lg leading-relaxed">
-                Pzaz changes the game by providing a complete ecosystem—from scriptwriting to budgeting, scheduling, and real-time collaboration. Everything is unified in a single platform. Pzaz is your command centre for the entire production.
+                {t("vs.solution_desc")}
               </p>
             </div>
             <div>
@@ -158,20 +158,20 @@ const PzazVsFinalDraft = () => {
         <section className="bg-[#F8F2FF] py-16 md:py-20">
           <div className="max-w-5xl mx-auto px-6">
             <h2 className="text-3xl md:text-4xl font-bold text-[#20124D] text-center mb-10">
-              A Side-by-Side Look: Pzaz vs. Final Draft
+              {t("vs.table_title")}
             </h2>
             <div className="overflow-x-auto rounded-2xl border border-[#D4BAF4] shadow-sm bg-white">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-[#D4BAF4]">
-                    <th className="text-left px-6 py-4 text-[#20124D] font-semibold w-1/2">Feature</th>
+                    <th className="text-left px-6 py-4 text-[#20124D] font-semibold w-1/2">{t("vs.table_feature")}</th>
                     <th className="px-6 py-4 text-[#5C28A3] font-bold text-center">Pzaz</th>
                     <th className="px-6 py-4 text-[#888] font-semibold text-center">Final Draft</th>
                   </tr>
                 </thead>
                 <tbody>
                   {comparisonRows.map((row, i) => (
-                    <tr key={row.feature} className={i % 2 === 0 ? "bg-white" : "bg-[#FAF7FF]"}>
+                    <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-[#FAF7FF]"}>
                       <td className="px-6 py-4 text-[#20124D] font-medium">{row.feature}</td>
                       <td className="px-6 py-4 text-center">
                         <div className="flex justify-center"><CellValue value={row.pzaz} /></div>
@@ -191,21 +191,17 @@ const PzazVsFinalDraft = () => {
         <section className="py-16 md:py-20">
           <div className="max-w-4xl mx-auto px-6 text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-[#20124D] mb-5">
-              Why Pzaz? The Complete Production Solution.
+              {t("vs.why_title")}
             </h2>
-            <p className="text-[#4E2273] text-lg leading-relaxed">
-              Unlike Final Draft, Pzaz allows you to <strong>visualise and manage every aspect of your filmmaking</strong> process—from script to screen. Whether you're planning detailed scenes, creating comprehensive shot lists, or managing your cast and locations, Pzaz brings it all together in one easy-to-use platform.
-            </p>
+            <p className="text-[#4E2273] text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: t("vs.why_desc") }} />
           </div>
 
           {/* End-to-end Integration */}
           <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center mb-20">
             <div>
               <img src={iconIntegrationImg} alt="End-to-end integration icon" className="w-14 h-14 mb-5 object-contain" />
-              <h3 className="text-2xl md:text-3xl font-bold text-[#20124D] mb-4">End-to-End Integration.</h3>
-              <p className="text-[#4E2273] text-lg leading-relaxed">
-                With Pzaz, you don't just write. You create, organise, and produce—all in one place. There's no need to switch between multiple tools or platforms. <strong>Final Draft only handles your scriptwriting</strong>, leaving you to juggle various other apps for production tasks.
-              </p>
+              <h3 className="text-2xl md:text-3xl font-bold text-[#20124D] mb-4">{t("vs.integration_title")}</h3>
+              <p className="text-[#4E2273] text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: t("vs.integration_desc") }} />
             </div>
             <div>
               <img src={featureIntegrationImg} alt="Pzaz end-to-end integration" className="w-full rounded-2xl shadow" />
@@ -216,10 +212,8 @@ const PzazVsFinalDraft = () => {
           <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <div className="md:order-2">
               <img src={iconCollaborationImg} alt="Collaboration icon" className="w-14 h-14 mb-5 object-contain" />
-              <h3 className="text-2xl md:text-3xl font-bold text-[#20124D] mb-4">Real-Time Collaboration—At No Extra Cost.</h3>
-              <p className="text-[#4E2273] text-lg leading-relaxed">
-                Pzaz supports seamless, real-time collaboration, allowing your team to work on the same project without additional setup or fees. In contrast, <strong>Final Draft requires an extra paid add-on for collaboration</strong>, which doesn't cover production tasks like scheduling or shot planning.
-              </p>
+              <h3 className="text-2xl md:text-3xl font-bold text-[#20124D] mb-4">{t("vs.collab_title")}</h3>
+              <p className="text-[#4E2273] text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: t("vs.collab_desc") }} />
             </div>
             <div className="md:order-1">
               <img src={featureCollaborationImg} alt="Pzaz real-time collaboration" className="w-full rounded-2xl shadow" />
@@ -230,16 +224,16 @@ const PzazVsFinalDraft = () => {
         {/* ── Unique Features Slider ── */}
         <section className="bg-[#F8F2FF] py-16 md:py-20">
           <div className="max-w-6xl mx-auto px-6">
-            <p className="text-xs font-semibold uppercase tracking-widest text-[#5C28A3] text-center mb-3">Unique Pzaz Features</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-[#5C28A3] text-center mb-3">{t("vs.unique_badge")}</p>
             <h2 className="text-3xl md:text-4xl font-bold text-[#20124D] text-center mb-10">
-              Unique Pzaz Features You Won't Find in Final Draft
+              {t("vs.unique_title")}
             </h2>
 
             {/* Tab buttons */}
             <div className="flex flex-wrap justify-center gap-3 mb-10">
               {slides.map((slide, i) => (
                 <button
-                  key={slide.tab}
+                  key={i}
                   onClick={() => setActiveSlide(i)}
                   className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all border ${
                     activeSlide === i
@@ -278,20 +272,20 @@ const PzazVsFinalDraft = () => {
           <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-[#20124D] mb-6">
-                Pzaz: Built for Teams, Designed for Filmmakers.
+                {t("vs.teams_title")}
               </h2>
               <p className="text-[#4E2273] text-lg leading-relaxed mb-8">
-                Whether you're an independent filmmaker or part of a large production team, Pzaz grows with your needs. The platform is designed to be flexible, scalable, and cost-effective, so you don't have to pay for extra tools or features. Everything you need for your project is already integrated into Pzaz.
+                {t("vs.teams_desc")}
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
-                  <Button variant="default" size="lg">Start for Free</Button>
+                  <Button variant="default" size="lg">{t("vs.start_free")}</Button>
                 </a>
                 <a href="https://calendly.com/filmmaking-app/30min" target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" size="lg">Book a Demo</Button>
+                  <Button variant="outline" size="lg">{t("vs.book_demo")}</Button>
                 </a>
               </div>
-              <p className="text-xs text-[#888] mt-3">No credit card, no time limit. Up and running in 15 min.</p>
+              <p className="text-xs text-[#888] mt-3">{t("vs.no_credit_card")}</p>
             </div>
             <div>
               <img src={builtForTeamsImg} alt="Pzaz built for teams" className="w-full rounded-2xl shadow" />
@@ -304,20 +298,20 @@ const PzazVsFinalDraft = () => {
           <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Final Verdict: Why Pzaz is the Smarter Choice Over Final Draft.
+                {t("vs.verdict_title")}
               </h2>
               <p className="text-[#D4BAF4] text-lg leading-relaxed mb-8">
-                Final Draft might be an excellent tool for writing, but Pzaz is a complete production hub. When it comes to writing, organising, and managing your film's production, Pzaz does it—without the need for extra software or fees. Start creating, collaborating, and producing more efficiently today.
+                {t("vs.verdict_desc")}
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href={indieCheckoutUrl} target="_blank" rel="noopener noreferrer">
-                  <Button variant="default" size="lg" className="bg-white text-[#20124D] hover:bg-white/90">Start for Free</Button>
+                  <Button variant="default" size="lg" className="bg-white text-[#20124D] hover:bg-white/90">{t("vs.start_free")}</Button>
                 </a>
                 <a href="https://calendly.com/filmmaking-app/30min" target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10">Book a Demo</Button>
+                  <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10">{t("vs.book_demo")}</Button>
                 </a>
               </div>
-              <p className="text-xs text-[#D4BAF4]/70 mt-3">No credit card, no time limit. Up and running in 15 min.</p>
+              <p className="text-xs text-[#D4BAF4]/70 mt-3">{t("vs.no_credit_card")}</p>
             </div>
             <div>
               <img src={finalVerdictImg} alt="Pzaz final verdict" className="w-full rounded-2xl shadow-xl" />
