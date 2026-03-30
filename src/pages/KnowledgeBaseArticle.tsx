@@ -4,7 +4,7 @@ import { ChevronRight } from "lucide-react";
 import { getArticleBySlug, getRelatedArticles, kbCategories } from "@/data/knowledgeBaseData";
 import { kbArticlesUr, kbCategoriesUr } from "@/data/knowledgeBaseDataUr";
 import { kbArticlesFr, kbCategoriesFr } from "@/data/knowledgeBaseDataFr";
-import { kbArticlesEs } from "@/data/knowledgeBaseDataEs";
+import { kbArticlesEs, kbCategoriesEs } from "@/data/knowledgeBaseDataEs";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import KBSearchBar from "@/components/knowledge-base/KBSearchBar";
@@ -125,7 +125,7 @@ const KnowledgeBaseArticle = () => {
 
   const categoryLabel = isUr ? categoryLabelUr : isFr ? categoryLabelFr : isEs ? categoryLabelEs : categoryLabelEn;
   const catLabel = categoryLabel[article.category];
-  const cats = isUr ? kbCategoriesUr : isFr ? kbCategoriesFr : kbCategories;
+  const cats = isUr ? kbCategoriesUr : isFr ? kbCategoriesFr : isEs ? kbCategoriesEs : kbCategories;
   const catMeta = cats.find((c) => c.id === article.category);
 
   return (

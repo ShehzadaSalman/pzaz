@@ -4,7 +4,7 @@ import { ChevronRight } from "lucide-react";
 import { KBArticle, kbCategories, getArticlesByCategory } from "@/data/knowledgeBaseData";
 import { kbCategoriesUr, kbArticlesUr } from "@/data/knowledgeBaseDataUr";
 import { kbCategoriesFr, kbArticlesFr } from "@/data/knowledgeBaseDataFr";
-import { kbArticlesEs } from "@/data/knowledgeBaseDataEs";
+import { kbArticlesEs, kbCategoriesEs } from "@/data/knowledgeBaseDataEs";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import KBSearchBar from "@/components/knowledge-base/KBSearchBar";
@@ -24,7 +24,7 @@ const KnowledgeBase = () => {
   const isUr = locale === "ur";
   const isFr = locale === "fr";
   const isEs = locale === "es";
-  const cats = isUr ? kbCategoriesUr : isFr ? kbCategoriesFr : isEs ? kbCategories : kbCategories;
+  const cats = isUr ? kbCategoriesUr : isFr ? kbCategoriesFr : isEs ? kbCategoriesEs : kbCategories;
   const getArticles = (catId: KBArticle["category"]) =>
     isUr
       ? kbArticlesUr.filter((a) => a.category === catId)
