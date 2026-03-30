@@ -6,6 +6,7 @@ import { useLocale, SUPPORTED_LOCALES, type SupportedLocale } from "@/hooks/use-
 const languageLabels: Record<SupportedLocale, string> = {
   en: "English",
   ur: "Urdu",
+  fr: "Français",
 };
 
 const HIDDEN_HOSTNAMES = ["pzaz.io", "www.pzaz.io"];
