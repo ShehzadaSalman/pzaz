@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
 
 const StoryboardCollaborate = () => {
+  const { t } = useTranslation("storyboard");
   return (
     <section className="section-padding bg-[#fbfbfb] relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
@@ -15,17 +17,17 @@ const StoryboardCollaborate = () => {
           >
             <AnimatedSectionHeader
               wrapperClassName=""
-              pillText="Collaboration"
+              pillText={t("storyboard.collaborate_pill")}
               pillClassName="bg-primary/10 text-primary"
               title={
                 <>
-                  Collaborate{" "}
+                  {t("storyboard.collaborate_title")}{" "}
                   <span className="font-lato font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                    Inside the Frame
+                    {t("storyboard.collaborate_title_highlight")}
                   </span>
                 </>
               }
-              description="Storyboarding is rarely a solo process. Directors, cinematographers, producers and clients all need to see and respond to visual intent."
+              description={t("storyboard.collaborate_desc")}
               align="left"
               className="mb-8"
             />
@@ -39,13 +41,13 @@ const StoryboardCollaborate = () => {
             className="space-y-5"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Inside Pzaz, collaboration happens directly on the storyboard. Comments, refinements and discussions stay connected to the frame they refer to.
+              {t("storyboard.collaborate_p1")}
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Animatics can be previewed instantly. Timing can be adjusted without exporting files. Feedback becomes constructive instead of fragmented.
+              {t("storyboard.collaborate_p2")}
             </p>
             <p className="text-xl font-bold text-[#4D029B] italic">
-              Creative alignment happens earlier.
+              {t("storyboard.collaborate_quote")}
             </p>
           </motion.div>
         </div>

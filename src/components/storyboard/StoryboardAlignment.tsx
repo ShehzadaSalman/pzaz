@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import AnimatedSectionHeader from "@/components/AnimatedSectionHeader";
 
 const StoryboardAlignment = () => {
+  const { t } = useTranslation("storyboard");
   return (
     <section className="section-padding bg-[#fbfbfb] relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
@@ -15,17 +17,17 @@ const StoryboardAlignment = () => {
           >
             <AnimatedSectionHeader
               wrapperClassName=""
-              pillText="Connected System"
+              pillText={t("storyboard.alignment_pill")}
               pillClassName="bg-primary/10 text-primary"
               title={
                 <>
-                  Creative Exploration,{" "}
+                  {t("storyboard.alignment_title")}{" "}
                   <span className="font-lato font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                    Production Alignment
+                    {t("storyboard.alignment_title_highlight")}
                   </span>
                 </>
               }
-              description="Because storyboarding lives inside the broader Pzaz system, visual decisions do not disappear after approval."
+              description={t("storyboard.alignment_desc")}
               align="left"
               className="mb-8"
             />
@@ -39,10 +41,10 @@ const StoryboardAlignment = () => {
             className="space-y-5"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Storyboard changes inform animatics. Animatics clarify production conversations. Creative evolution remains connected to scheduling and planning.
+              {t("storyboard.alignment_p1")}
             </p>
             <p className="text-xl font-bold text-[#4D029B] italic">
-              Exploration does not create chaos. It stays aligned.
+              {t("storyboard.alignment_quote")}
             </p>
           </motion.div>
         </div>
