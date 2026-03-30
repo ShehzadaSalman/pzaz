@@ -1,28 +1,28 @@
 {
   "empowering": {
-    "hero_pill": "Empowering Every Aspect of Filmmaking",
-    "hero_h1a": "Every Role.",
-    "hero_h1b": "Every Stage. One Platform.",
-    "hero_sub": "Pzaz is built to support every person in a production — from the writer in development to the delivery team at the finish line.",
-    "hero_cta1": "Start for Free",
-    "hero_cta2": "Book a Demo"
+    "hero_pill": "Potenciando Cada Aspecto del Cine",
+    "hero_h1a": "Cada Rol.",
+    "hero_h1b": "Cada Etapa. Una Plataforma.",
+    "hero_sub": "Pzaz está diseñado para apoyar a cada persona en una producción — desde el escritor en desarrollo hasta el equipo de entrega en la línea de meta.",
+    "hero_cta1": "Comenzar Gratis",
+    "hero_cta2": "Reservar una Demo"
   },
   "empowering_page": {
-    "pill": "Solutions",
-    "hero_h1a": "A Platform Designed to Support the",
-    "hero_h1b": "Entire Filmmaking Ecosystem",
-    "hero_p1": "Filmmaking is not a single discipline. It is a coordinated process shaped by both creative judgment and operational decisions.",
-    "hero_p2": "Pzaz was designed to support this reality. Writers, directors, producers, crews and investors each engage with production from different perspectives. The platform adapts to these roles so collaboration becomes structured, clear and reliable.",
-    "hero_p3": "The result is greater clarity, stronger execution and more predictable outcomes.",
-    "hero_cta1": "Start Now",
-    "hero_cta2": "Find Your Solution",
-    "grid_h2": "Built for Every Role in Production",
-    "grid_desc": "Select your role below to explore how Pzaz supports your specific workflow.",
-    "cta_pill": "Get Started",
-    "cta_h2": "Ready to Transform Your Filmmaking Process",
-    "cta_p1": "Creative industries often underestimate the value of well designed systems.",
-    "cta_p2": "Pzaz introduces structural clarity to filmmaking so effort is directed toward outcomes rather than operational alignment.",
-    "cta_btn": "Get Started for Free",
-    "cta_note": "No credit card required. Start creating."
+    "pill": "Soluciones",
+    "hero_h1a": "Una Plataforma Diseñada para Apoyar el",
+    "hero_h1b": "Ecosistema Cinematográfico Completo",
+    "hero_p1": "El cine no es una sola disciplina. Es un proceso coordinado formado tanto por el juicio creativo como por las decisiones operativas.",
+    "hero_p2": "Pzaz fue diseñado para apoyar esta realidad. Escritores, directores, productores, equipos e inversores se involucran cada uno con la producción desde diferentes perspectivas. La plataforma se adapta a estos roles para que la colaboración sea estructurada, clara y confiable.",
+    "hero_p3": "El resultado es mayor claridad, ejecución más sólida y resultados más predecibles.",
+    "hero_cta1": "Comenzar Ahora",
+    "hero_cta2": "Encuentra Tu Solución",
+    "grid_h2": "Diseñado para Cada Rol en Producción",
+    "grid_desc": "Selecciona tu rol a continuación para explorar cómo Pzaz apoya tu flujo de trabajo específico.",
+    "cta_pill": "Comenzar",
+    "cta_h2": "Listo para Transformar Tu Proceso Cinematográfico",
+    "cta_p1": "Las industrias creativas a menudo subestiman el valor de sistemas bien diseñados.",
+    "cta_p2": "Pzaz introduce claridad estructural al cine para que el esfuerzo se dirija hacia los resultados en lugar de la alineación operativa.",
+    "cta_btn": "Comenzar Gratis",
+    "cta_note": "No se requiere tarjeta de crédito. Empieza a crear."
   }
 }
