@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { blogPosts } from "@/data/blogData";
 import { blogPosts as blogPostsFull } from "@/data/blogDataFull";
 import { blogPostsUr } from "@/data/blogDataUr";
+import { blogPostsFr } from "@/data/blogDataFr";
 import { useLocale } from "@/hooks/use-locale";
 
 const BlogArticle = () => {
@@ -17,11 +18,12 @@ const BlogArticle = () => {
   const { locale, prefix } = useLocale();
   const isUr = locale === "ur";
 
-  const posts = isUr ? blogPostsUr : blogPosts;
+  const isFr = locale === "fr";
+  const posts = isUr ? blogPostsUr : isFr ? blogPostsFr : blogPosts;
   const article = posts.find((post) => post.slug === slug);
 
-  // Full content lookup – Urdu articles have content inline; English uses blogDataFull
-  const fullArticle = isUr ? null : blogPostsFull.find((post) => post.slug === slug);
+  // Full content lookup – Urdu/French articles have content inline; English uses blogDataFull
+  const fullArticle = (isUr || isFr) ? null : blogPostsFull.find((post) => post.slug === slug);
   const displayArticle = article
     ? { ...article, content: fullArticle?.content || article.content }
     : null;
