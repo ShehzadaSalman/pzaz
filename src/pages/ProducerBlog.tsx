@@ -22,7 +22,7 @@ const POSTS_PER_PAGE = 6;
 const ProducerBlog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const { locale } = useLocale();
-  const posts = locale === "ur" ? blogPostsUr : blogPosts;
+  const posts = locale === "ur" ? blogPostsUr : locale === "fr" ? blogPostsFr : blogPosts;
   const [activeCategory, setActiveCategory] = useState("all");
   const filteredPosts = posts.filter((post) => {
     if (post.featured) return false;
