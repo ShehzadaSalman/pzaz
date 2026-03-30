@@ -1,12 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 import ArrowIcon from "@/components/ui/ArrowIcon";
 import SectionHeader from "@/components/SectionHeader";
 import iconStar from "@/assets/material-symbols_family-star.svg";
 
 const IndieCTA = () => {
+  const { t } = useTranslation('indie');
+
   return (
     <section className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
@@ -27,18 +30,18 @@ const IndieCTA = () => {
 
             <div className="relative p-8 md:p-16 md:py-24 pb-12 text-center">
               <SectionHeader
-                pillText="Free Forever"
+                pillText={t("indie.cta_pill")}
                 pillClassName="bg-white text-primary mb-0"
                 pillIcon={<img src={iconStar} alt="" className="w-4 h-4" />}
                 title={
                   <>
-                    Stay Independent.{" "}
+                    {t("indie.cta_title_line1")}{" "}
                     <br />
-                    Look Prepared.
+                    {t("indie.cta_title_line2")}
                   </>
                 }
                 titleClassName="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-primary-foreground"
-                description="You don't need a studio budget to operate with real structure. Indie gives you the kind of structural confidence usually associated with larger productions — without cost, without friction, and without forcing compromise."
+                description={t("indie.cta_description")}
                 descriptionClassName="text-xl text-primary-foreground/80 max-w-xl mx-auto mb-10"
               />
 
@@ -50,13 +53,13 @@ const IndieCTA = () => {
                     className="group bg-white/10 text-white border-white/30 hover:bg-white/20 rounded-[10px] px-8"
                     postfixIcon={<ArrowIcon className="w-12 h-12 group-hover:translate-x-1 text-white" />}
                   >
-                    Start Indie — Free Forever
+                    {t("indie.cta_button")}
                   </Button>
                 </a>
               </div>
 
               <p className="mt-6 text-sm text-primary-foreground/60">
-                Build your film on something solid.
+                {t("indie.cta_closing")}
               </p>
             </div>
           </motion.div>

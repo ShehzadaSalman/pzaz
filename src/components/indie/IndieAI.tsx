@@ -1,36 +1,24 @@
 import React from "react";
 import { motion } from "framer-motion";
 import SectionHeader from "@/components/SectionHeader";
+import { useTranslation } from "react-i18next";
 import iconAiResearch from "@/assets/script/icon-ai-research.svg";
 import iconScriptAnalysis from "@/assets/script/icon-script-analysis.svg";
 import iconCharacterTracking from "@/assets/script/icon-character-tracking.svg";
 import iconSceneSuggestions from "@/assets/script/icon-scene-suggestions.svg";
 import scriptAiPreview from "@/assets/script-ai-preview.png";
 
-const aiCards = [
-  {
-    title: "Surface Script Structure",
-    description: "See the structure of what you've already written — elements, patterns, and opportunities you might have missed.",
-    icon: iconScriptAnalysis,
-  },
-  {
-    title: "Early Breakdown Thinking",
-    description: "AI supports early breakdown thinking by surfacing elements inside your script without imposing a direction.",
-    icon: iconCharacterTracking,
-  },
-  {
-    title: "Explore Alternatives",
-    description: "Think a step ahead without losing your tone. Explore alternatives while keeping your creative voice intact.",
-    icon: iconSceneSuggestions,
-  },
-  {
-    title: "Context-Aware Intelligence",
-    description: "Works inside your project — aware of your context, your draft, and most importantly, your direction.",
-    icon: iconAiResearch,
-  },
-];
+const cardIcons = [iconScriptAnalysis, iconCharacterTracking, iconSceneSuggestions, iconAiResearch];
 
 const IndieAI = () => {
+  const { t } = useTranslation('indie');
+
+  const aiCards = [1, 2, 3, 4].map((n, i) => ({
+    title: t(`indie.ai_card${n}_title`),
+    description: t(`indie.ai_card${n}_desc`),
+    icon: cardIcons[i],
+  }));
+
   return (
     <section className="section-padding bg-[#FBFBFB]">
       <div className="container mx-auto px-6">
@@ -44,24 +32,24 @@ const IndieAI = () => {
           >
             <SectionHeader
               align="left"
-              pillText="Built-in intelligence"
+              pillText={t("indie.ai_pill")}
               pillClassName="bg-primary/10 text-primary"
               title={
                 <>
-                  AI That Strengthens{" "}
+                  {t("indie.ai_title")}{" "}
                   <span className="font-lato font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#3207BC] to-[#409DFF]">
-                    Your Preparation
+                    {t("indie.ai_title_gradient")}
                   </span>
                 </>
               }
-              description="AI in Indie isn't there to hijack your screenplay or impersonate your voice. Its job is quieter and far more useful. You remain the author and you keep your independence, but your process becomes sharper."
+              description={t("indie.ai_description")}
               className="mb-8"
             />
 
             <div className="grid md:grid-cols-2 gap-4">
               {aiCards.map((card, index) => (
                 <motion.div
-                  key={card.title}
+                  key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
