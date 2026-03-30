@@ -1,20 +1,20 @@
 {
   "kb": {
-    "seo_title": "Knowledge Base – Pzaz",
-    "seo_desc": "Browse guides, tutorials, and references for Pzaz film production software.",
-    "hero_title": "Knowledge Base",
-    "hero_desc": "Find guides, tutorials, and answers to get the most out of Pzaz.",
-    "search_placeholder": "Search the knowledge base…",
-    "cat_getting_started": "Getting Started",
-    "cat_getting_started_desc": "Everything you need to know to get up and running with Pzaz.",
-    "cat_functions": "Functions",
-    "cat_functions_desc": "Learn about Pzaz's core AI-powered functions and how to use them.",
-    "cat_tools": "Tools & Features",
-    "cat_tools_desc": "Deep dives into every production tool available in your workspace.",
-    "breadcrumb_home": "Home",
-    "breadcrumb_kb": "Knowledge Base",
-    "related_title": "Related Articles",
-    "back_to_kb": "← Back to Knowledge Base",
-    "article_search_placeholder": "Search the knowledge base…"
+    "seo_title": "Base de Connaissances – Pzaz",
+    "seo_desc": "Parcourez les guides, tutoriels et références du logiciel de production cinématographique Pzaz.",
+    "hero_title": "Base de Connaissances",
+    "hero_desc": "Trouvez des guides, tutoriels et réponses pour tirer le meilleur parti de Pzaz.",
+    "search_placeholder": "Rechercher dans la base de connaissances…",
+    "cat_getting_started": "Premiers Pas",
+    "cat_getting_started_desc": "Tout ce que vous devez savoir pour démarrer avec Pzaz.",
+    "cat_functions": "Fonctions",
+    "cat_functions_desc": "Découvrez les fonctions IA principales de Pzaz et comment les utiliser.",
+    "cat_tools": "Outils et Fonctionnalités",
+    "cat_tools_desc": "Guides approfondis de chaque outil de production disponible dans votre espace de travail.",
+    "breadcrumb_home": "Accueil",
+    "breadcrumb_kb": "Base de Connaissances",
+    "related_title": "Articles Connexes",
+    "back_to_kb": "← Retour à la Base de Connaissances",
+    "article_search_placeholder": "Rechercher dans la base de connaissances…"
   }
 }
