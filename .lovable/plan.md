@@ -1,70 +1,91 @@
 
 
-## Translate 10 Remaining Components to Urdu
+## Add French as a Third Language
 
-### Scope
-30 components were translated in the previous batch. This covers the final 10 components with hardcoded English text.
+### Overview
+French needs to be added alongside English and Urdu across the entire site. This is a large but well-patterned task thanks to the existing i18n infrastructure. The work breaks into two phases: infrastructure wiring (small) and translation content (large).
 
-### Implementation
+---
 
-**Group 1: Blog components (6 files)**
+### Phase 1: Infrastructure Wiring (8 files)
 
-Add new keys to `src/locales/en/blog.json` and `src/locales/ur/blog.json`:
-- `blog.producer_hero_title` / `blog.producer_hero_subtitle` — for ProducerBlogHero
-- `blog.min_read`, `blog.share`, `blog.written_by`, `blog.related_articles`, `blog.view_all`, `blog.more_coming` — for ArticleContent, ArticleAuthor, ArticleRelated
-- `blog.nav_about`, `blog.nav_blog`, `blog.nav_script`, `blog.nav_pricing`, `blog.nav_products`, `blog.nav_login`, `blog.nav_start_free` — for BlogHeader
+**1. Register "fr" as a supported locale**
+- `src/hooks/use-locale.ts` — add `"fr"` to `SUPPORTED_LOCALES`; update the regex in `navigateToLocale` from `/(ur)` to `/(ur|fr)` so locale stripping works for both non-English locales
 
-Component changes:
-1. **ProducerBlogHero.tsx** — add `useTranslation('blog')`, replace "The Film Maker Entrepreneur" and subtitle with `t()` calls
-2. **ArticleContent.tsx** — add `useTranslation('blog')`, replace "min read" and "Share" with `t()` calls; use locale-aware date formatting based on `locale`
-3. **ArticleAuthor.tsx** — add `useTranslation('blog')`, replace "Written by" with `t()`
-4. **ArticleRelated.tsx** — add `useTranslation('blog')`, replace "Related Articles", "View all", "More articles coming soon", "min" with `t()` calls
-5. **BlogHeader.tsx** — add `useTranslation('blog')` and `useLocale()`, replace nav labels ("About", "Blog", "Script", "Pricing", "Products", "Log in", "Start for Free") with `t()` calls; use `prefix` for Link paths
-6. **BlogCard.tsx** — add `useTranslation('blog')`, replace "min read" with `t()`; use locale-aware date formatting
+**2. Language detection scripts**
+- `index.html` line 8 — expand `seg === 'ur' ? 'ur' : 'en'` to also check for `'fr'`
+- `src/i18n.ts` line 14 — same change in `getInitialLang()`
 
-**Group 2: ContactModal (1 file)**
+**3. Language dropdown**
+- `src/components/LanguageDropdown.tsx` — add `fr: "French"` to the `languageLabels` map (no other change needed; the dropdown already iterates `SUPPORTED_LOCALES`)
 
-Add new keys to `src/locales/en/common.json` and `src/locales/ur/common.json`:
-- `contact.title`, `contact.desc`, `contact.full_name`, `contact.company_name`, `contact.email`, `contact.phone`, `contact.message`, `contact.send`, `contact.sending`, `contact.success_title`, `contact.success_desc`, `contact.error_required`, `contact.error_generic`, plus placeholder keys
+**4. LocaleWrapper**
+- `src/components/LocaleWrapper.tsx` — no change needed (already reads from `SUPPORTED_LOCALES` and only adds RTL for `ur`)
 
-7. **ContactModal.tsx** — add `useTranslation('common')`, replace all labels, placeholders, and toast messages with `t()` calls
+**5. Pre-render routes**
+- `src/routes.ts` — duplicate all `/ur/...` routes as `/fr/...` (~47 new entries)
 
-**Group 3: NotFound (1 file)**
+**6. Router**
+- `src/App.tsx` (or wherever `/:locale/*` routes are declared) — should already work via the dynamic `:locale` param; verify no hardcoded `"ur"` checks exist
 
-Add keys to `src/locales/en/common.json` and `src/locales/ur/common.json`:
-- `not_found.title`, `not_found.message`, `not_found.return_home`
+---
 
-8. **NotFound.tsx** — add `useTranslation('common')` and `useLocale()`, replace hardcoded text with `t()` calls; use `prefix` for home link
+### Phase 2: Translation Files (23 namespace files)
 
-**Group 4: SalesTeam (1 file)**
+Create `src/locales/fr/` directory with one JSON file per namespace, matching the English structure:
 
-Add keys to `src/locales/en/common.json` and `src/locales/ur/common.json`:
-- `sales.seo_title`, `sales.seo_desc`, `sales.heading`, `sales.subtitle`, `sales.reach_out`, `sales.download_vcard`
+```text
+src/locales/fr/
+├── about.json
+├── blog.json
+├── brand.json
+├── budget.json
+├── collaboration.json
+├── common.json          ← nav, footer, contact, 404, sales
+├── culture.json
+├── file-sharing.json
+├── home.json
+├── indie.json
+├── knowledge-base.json
+├── planning.json
+├── pricing.json
+├── privacy.json
+├── project-management.json
+├── scene-breakdown.json
+├── script.json
+├── solutions.json
+├── storyboard.json
+├── studio-pro.json
+├── task-management.json
+├── terms.json
+└── vs-final-draft.json
+```
 
-9. **SalesTeam.tsx** — add `useTranslation('common')`, replace heading, subtitle, description, "Download VCard" with `t()` calls
+Each file will contain the same keys as its English counterpart, with professional French translations. Film industry terms (e.g., "storyboard", "script breakdown") will use their standard French equivalents where they exist, or keep the English term when it is industry-standard in French.
 
-**Group 5: PzazVsFinalDraft (1 file)**
+---
 
-Create new namespace files `src/locales/en/vs-final-draft.json` and `src/locales/ur/vs-final-draft.json` with all strings:
-- SEO, hero, problem, solution section texts
-- Comparison table feature names and string values (12 rows)
-- "Why Pzaz" section texts
-- 3 slide tabs/titles/bodies
-- "Built for Teams" section
-- "Final Verdict" section
-- Shared CTAs: "Start for Free", "Book a Demo", "No credit card..." footnote
+### Phase 3: Blog & Knowledge Base Content
 
-10. **PzazVsFinalDraft.tsx** — add `useTranslation('vs-final-draft')`, replace all hardcoded English with `t()` calls; register new namespace in `src/i18n.ts` if needed
+The blog and knowledge base articles have their content stored in data files (`src/data/blogData.ts`, `src/data/blogDataFull.ts`, `src/data/knowledgeBaseData.ts`). For Urdu, separate `*Ur.ts` files were created. The same pattern will be followed:
 
-### Urdu translations approach
-All Urdu translations follow the established meaning-first approach with professional film terminology preserved in English where appropriate (e.g., "Final Draft", "Storyboard", "Shot Lists").
+- Create `src/data/blogDataFr.ts` and `src/data/blogContentFr.ts` with French blog content
+- Create `src/data/knowledgeBaseDataFr.ts` with French KB articles
+- Update the blog/KB pages to select the correct data file based on locale (same pattern as the Ur data switching)
 
-### Files changed
-- `src/locales/en/blog.json` — add ~15 new keys
-- `src/locales/ur/blog.json` — add ~15 new keys
-- `src/locales/en/common.json` — add ~15 new keys
-- `src/locales/ur/common.json` — add ~15 new keys
-- `src/locales/en/vs-final-draft.json` — new file (~60 keys)
-- `src/locales/ur/vs-final-draft.json` — new file (~60 keys)
-- 10 component/page files refactored to use `useTranslation`
+---
+
+### Estimated scale
+- **Infrastructure**: ~8 files, small edits each
+- **Translation JSONs**: 23 new files (copy English keys, translate values)
+- **Blog/KB data**: 3 new data files
+- **Pre-render routes**: ~47 new route entries
+
+### Execution order
+1. Infrastructure wiring first (so `/fr/` routes work immediately with English fallback)
+2. `common.json` and `home.json` (so nav/footer/homepage render in French)
+3. Product pages (script, budget, planning, storyboard, studio-pro, indie)
+4. Feature pages (scene-breakdown, collaboration, file-sharing, task-management, project-management)
+5. Solution pages, pricing, about, brand, culture, privacy, terms, vs-final-draft
+6. Blog and Knowledge Base content last
 
