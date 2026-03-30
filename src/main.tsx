@@ -6,6 +6,8 @@ import "./i18n";
 import App, { AppRoutes } from "./App";
 import { staticRoutes } from "./routes";
 import { blogPosts } from "./data/blogData";
+import { blogPostsUr } from "./data/blogDataUr";
+import { blogPostsFr } from "./data/blogDataFr";
 
 // ─── Warm geo-detect as early as possible ────────────────────────────────────
 // Kick this off before React mounts so the promise is already resolving by the
@@ -42,14 +44,16 @@ interface HelmetContextFilled {
 
 // All routes to prerender (static + blog articles)
 const blogRoutes = blogPosts.map((post) => `/producer-blog/${post.slug}`);
-const allRoutes = new Set([...staticRoutes, ...blogRoutes]);
+const urBlogRoutes = blogPostsUr.map((post) => `/ur/producer-blog/${post.slug}`);
+const frBlogRoutes = blogPostsFr.map((post) => `/fr/producer-blog/${post.slug}`);
+const allRoutes = new Set([...staticRoutes, ...blogRoutes, ...urBlogRoutes, ...frBlogRoutes]);
 
 /**
  * Map a route path to the i18n namespaces it needs.
  */
 function getNamespacesForRoute(url: string): string[] {
   // Strip locale prefix to get the "bare" path
-  const bare = url.replace(/^\/(ur)(\/|$)/, "/").replace(/\/$/, "") || "/";
+  const bare = url.replace(/^\/(ur|fr)(\/|$)/, "/").replace(/\/$/, "") || "/";
 
   const map: Record<string, string[]> = {
     "/": ["common", "home"],
@@ -106,7 +110,7 @@ export async function prerender(data: { url: string }) {
   const url = data.url ?? "/";
 
   // Detect locale and load translations before render
-  const locale = url.startsWith("/ur/") || url === "/ur" ? "ur" : "en";
+  const locale = url.startsWith("/ur/") || url === "/ur" ? "ur" : url.startsWith("/fr/") || url === "/fr" ? "fr" : "en";
   const namespaces = getNamespacesForRoute(url);
   const i18nInstance = await initI18nForSSR(locale, namespaces);
 
