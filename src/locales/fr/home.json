@@ -1,0 +1,89 @@
+{
+  "hero": {
+    "headline1": "Les productions audiovisuelles échouent rarement par manque de créativité.",
+    "headline2": "Elles échouent quand l'information se désagrège.",
+    "description_short": "Les scénarios changent. Les plannings bougent. Les budgets évoluent. Les équipes ratent des mises à jour. Pzaz garde votre scénario, plan, budget, calendrier et équipe parfaitement synchronisés, du premier brouillon à la livraison finale.",
+    "description_short_more": " Les choses changent et tout se met à jour automatiquement. Concentrez-vous sur l'histoire pendant que Pzaz maintient la production alignée.",
+    "description_full": "Les scénarios changent. Les plannings bougent. Les budgets évoluent. Les équipes ratent des mises à jour. Pzaz garde votre scénario, plan, budget, calendrier et équipe parfaitement synchronisés, du premier brouillon à la livraison finale. Les choses changent et tout se met à jour automatiquement.",
+    "description_full2": "Concentrez-vous sur l'histoire pendant que Pzaz maintient la production alignée.",
+    "cta_primary": "Commencer gratuitement",
+    "cta_primary_sub": "Sans carte bancaire.",
+    "cta_secondary": "Réserver une démo",
+    "cta_secondary_sub": "Opérationnel en 15 minutes.",
+    "read_more": "en savoir plus"
+  },
+  "problem": {
+    "pill": "Le Problème",
+    "title1": "Les plans changent.",
+    "title2": "Les productions craquent.",
+    "description": "Chaque fois que votre équipe change d'outil, le contexte disparaît. Cela entraîne des reprises, des retards et une pression budgétaire. La production perd son alignement.",
+    "card1_title": "Perte de contexte",
+    "card1_desc": "Passer d'une application déconnectée à l'autre peut effacer jusqu'à 60 % du contexte de travail.",
+    "card2_title": "Fatigue numérique",
+    "card2_desc": "Le changement constant d'outils épuise la concentration et la performance chute de 30 %.",
+    "card3_title": "Données fragmentées",
+    "card3_desc": "Quand l'information n'est pas connectée, les erreurs se multiplient."
+  },
+  "solution": {
+    "pill": "La Solution",
+    "title1": "Un écosystème.",
+    "title2": "Un alignement total.",
+    "description": "Pzaz connecte les réalités créatives, opérationnelles et financières au sein d'un système de production vivant.",
+    "card1": "Travaillez avec clarté,\npas dans le chaos.",
+    "card2": "Avancez vite\nsans perdre\nle contrôle.",
+    "card3": "Restez alignés,\nmême quand\nles plans changent.",
+    "card4": "Livrez sans\npanique de\ndernière minute.",
+    "card5": "Protégez vos marges\navec moins de surprises.",
+    "insight": "Dirigez des productions qui semblent calmes, <strong>maîtrisées et prévisibles.</strong>"
+  },
+  "ai_context": {
+    "heading": "L'IA sans contexte, c'est de la devinette.",
+    "para1": "L'IA peut générer des réponses impressionnantes en quelques secondes. Mais les réponses impressionnantes ne dirigent pas les productions. Sans le contexte complet de la production, les résultats ne se connectent pas, les décisions ne se propagent pas, et les équipes perdent leur alignement.",
+    "para2": "C'est pourquoi les outils « IA-first » semblent puissants, mais laissent les productions fragmentées. C'est aussi pourquoi 95 % des entreprises échouent à exploiter la vraie valeur de l'IA.",
+    "para3": "Pzaz connecte l'intégralité du contexte de votre production pour que vos outils, vos agents IA et vos équipes travaillent ensemble en harmonie.",
+    "caption": "Vous gardez le contrôle pendant que l'IA assiste. <strong>La production reste alignée.</strong>"
+  },
+  "products": {
+    "pill": "Produits",
+    "title1": "Conçu pour les équipes qui",
+    "title2": "livrent sous pression.",
+    "description": "Pzaz est conçu pour les équipes de production qui savent que les bonnes idées ne suffisent pas.",
+    "feature1": "Longs métrages",
+    "feature2": "Télévision épisodique",
+    "feature3": "Animation et productions VFX",
+    "feature4": "Campagnes commerciales et de marque",
+    "feature5": "Séries digitales et verticales",
+    "feature6": "Et bien plus...",
+    "feature_desc": "Que vous dirigiez un long métrage ou gériez plusieurs productions pour des clients, l'alignement n'est pas optionnel. Pzaz est conçu pour les équipes qui ont besoin de coordination à l'échelle de la production.",
+    "cta_start": "Commencer gratuitement",
+    "cta_watch": "Voir la vidéo",
+    "divider": "Commencez avec tout —",
+    "divider_sub": "ou juste ce qu'il vous faut.",
+    "most_popular": "Le plus populaire",
+    "explore_all": "Explorer tous les produits",
+    "upgrade_note": "Passez à un niveau supérieur à tout moment. Votre projet reste intact.",
+    "budget_name": "Pzaz Budget",
+    "budget_tagline": "Budgétisation professionnelle et contrôle des coûts",
+    "budget_desc": "Pour les producteurs et directeurs de production qui ont besoin de clarté et de confiance. Transformez votre scénario en un budget de production structuré qui reste synchronisé quand les plans changent.",
+    "storyboard_name": "Pzaz Storyboard",
+    "storyboard_tagline": "Visualisez le film avant de le tourner",
+    "storyboard_desc": "Pour les réalisateurs et conteurs visuels. Transformez des scènes en storyboards en quelques secondes et affinez les plans collaborativement avant le début de la production.",
+    "studio_name": "Pzaz Studio",
+    "studio_tagline": "Système de production tout-en-un",
+    "studio_desc": "Pour les productions complètes et les équipes qui ont besoin que tout soit connecté en temps réel. Scénario, planning, budget, storyboard et collaboration dans un seul espace de travail vivant.",
+    "explore_btn": "Explorer {{name}}"
+  },
+  "integrations": {
+    "pill": "Intégrations",
+    "title": "Fonctionne avec vos outils existants",
+    "description": "Pas de verrouillage. Pas de barrières. Juste du cinéma.",
+    "cta": "Contactez-nous"
+  },
+  "cta": {
+    "pill": "Essai gratuit de 7 jours",
+    "title": "Dirigez votre prochaine production en synchronisation.",
+    "description": "Arrêtez de gérer la fragmentation. Commencez à opérer avec un alignement total.",
+    "primary": "Commencer gratuitement",
+    "secondary": "Planifier une démo"
+  }
+}
