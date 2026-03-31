@@ -155,9 +155,9 @@ const KnowledgeBaseArticle = () => {
                 .filter((a): a is KBArticle => !!a)
             : getRelatedArticles(article);
 
-  const categoryLabel = isUr ? categoryLabelUr : isFr ? categoryLabelFr : isEs ? categoryLabelEs : isIt ? categoryLabelIt : categoryLabelEn;
+  const categoryLabel = isUr ? categoryLabelUr : isFr ? categoryLabelFr : isEs ? categoryLabelEs : isIt ? categoryLabelIt : isPt ? categoryLabelPt : categoryLabelEn;
   const catLabel = categoryLabel[article.category];
-  const cats = isUr ? kbCategoriesUr : isFr ? kbCategoriesFr : isEs ? kbCategoriesEs : isIt ? kbCategoriesIt : kbCategories;
+  const cats = isUr ? kbCategoriesUr : isFr ? kbCategoriesFr : isEs ? kbCategoriesEs : isIt ? kbCategoriesIt : isPt ? kbCategoriesPt : kbCategories;
   const catMeta = cats.find((c) => c.id === article.category);
 
   return (
