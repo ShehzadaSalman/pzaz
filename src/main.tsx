@@ -124,7 +124,7 @@ export async function prerender(data: { url: string }) {
   const url = data.url ?? "/";
 
   // Detect locale and load translations before render
-  const locale = url.startsWith("/ur/") || url === "/ur" ? "ur" : url.startsWith("/fr/") || url === "/fr" ? "fr" : url.startsWith("/es/") || url === "/es" ? "es" : url.startsWith("/de/") || url === "/de" ? "de" : "en";
+  const locale = url.startsWith("/ur/") || url === "/ur" ? "ur" : url.startsWith("/fr/") || url === "/fr" ? "fr" : url.startsWith("/es/") || url === "/es" ? "es" : url.startsWith("/de/") || url === "/de" ? "de" : url.startsWith("/it/") || url === "/it" ? "it" : "en";
   const namespaces = getNamespacesForRoute(url);
   const i18nInstance = await initI18nForSSR(locale, namespaces);
 
