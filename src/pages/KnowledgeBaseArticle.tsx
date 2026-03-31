@@ -114,6 +114,7 @@ const KnowledgeBaseArticle = () => {
   const isEs = locale === "es";
   const isDe = locale === "de";
   const isIt = locale === "it";
+  const isPt = locale === "pt";
   const { t } = useTranslation("knowledge-base");
 
   const article = isUr
