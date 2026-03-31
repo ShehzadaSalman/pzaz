@@ -1,0 +1,51 @@
+{
+  "culture": {
+    "seo_title": "La Nostra Cultura – Pzaz",
+    "seo_desc": "Scopri il manifesto culturale di Pzaz — i nostri principi, valori e cosa rende speciale il nostro dream team.",
+    "hero_title_1": "Pzaz ",
+    "hero_title_2": "Cultura.",
+    "manifesto_title": "Il Nostro Manifesto Culturale.",
+    "manifesto_p1": "In Pzaz.io, crediamo che la cultura cinematografica sia essenziale quanto l'amicizia — ci connette, ci ispira e crea esperienze condivise. Ecco perché ci impegniamo a supportare la creazione e la distribuzione di storie al pubblico di tutto il mondo.",
+    "manifesto_p2": "Esperienze cliente eccezionali guidano tutto ciò che facciamo, e sappiamo che tutto inizia con una cultura dei dipendenti straordinaria. Ecco perché puntiamo ad essere più snelli, più veloci, più innovativi e migliori — ogni singolo giorno.",
+    "manifesto_p3": "Se stai considerando di unirti a noi, prenditi un momento per capire come operiamo. Il nostro approccio potrebbe non essere adatto a tutti, ma definisce chi siamo: un team dedicato all'intuizione, all'innovazione e a fare la differenza.",
+    "principles_title": "I Nostri Principi.",
+    "principles": [
+      { "title": "Chiarezza del Perché.", "desc": "Sappiamo sempre perché facciamo ciò che facciamo — perché la chiarezza ispira e costruisce fiducia e lealtà." },
+      { "title": "Coerenza del Cosa.", "desc": "Ciò che facciamo dimostra ciò in cui crediamo. Offriamo servizi di alta qualità e puntiamo a superare le aspettative in ogni punto di contatto." },
+      { "title": "La Disciplina del Come.", "desc": "L'innovazione ci guida. La responsabilità ci orienta. La fiducia ci sostiene. Manteniamo ciò che promettiamo e creiamo soluzioni rivoluzionarie." },
+      { "title": "Il Culto dello Stupore.", "desc": "Non siamo semplicemente migliori della media — puntiamo a stupire. I momenti 'Wow' quotidiani costruiscono fiducia, e i momenti 'Pow' occasionali approfondiscono le connessioni." }
+    ],
+    "culture_title": "La Cultura Pzaz.",
+    "culture_p1": "In Pzaz, le persone vengono prima. Prosperiamo nella flessibilità, creatività e collaborazione, rendendoci un'organizzazione divertente, felice e di successo.",
+    "culture_p2": "Valorizziamo integrità, eccellenza, rispetto, inclusione e lavoro di squadra. Ciò che ci distingue:",
+    "traits": [
+      "I dipendenti prendono decisioni indipendenti.",
+      "Condividiamo le informazioni apertamente e onestamente.",
+      "Diamo priorità alla comunicazione sincera.",
+      "Evitiamo regole inutili.",
+      "Manteniamo solo chi dimostra di volerlo."
+    ],
+    "values_title": "I Nostri Valori.",
+    "values_desc": "In Pzaz, i nostri valori plasmano chi premiamo e manteniamo. Se risuonano con te, qui prospererai:",
+    "values": [
+      { "title": "Coraggio.", "desc": "Parla chiaro, prendi rischi intelligenti e abbraccia la vulnerabilità per la verità." },
+      { "title": "Curiosità.", "desc": "Impara con entusiasmo, pensa creativamente e cerca prospettive diverse." },
+      { "title": "Impatto.", "desc": "Ottieni risultati, rendi migliori i colleghi e dai priorità a ciò che conta." },
+      { "title": "Altruismo.", "desc": "Metti Pzaz al primo posto, mantieni la mente aperta e aiuta gli altri a avere successo." },
+      { "title": "Passione.", "desc": "Ispira l'eccellenza, prenditi cura profondamente e resta ottimista." },
+      { "title": "Integrità.", "desc": "Sii autentico, trasparente e rispettoso. Assumiti la responsabilità degli errori." },
+      { "title": "Innovazione.", "desc": "Risolvi problemi difficili, semplifica e prospera nel cambiamento." },
+      { "title": "Comunicazione.", "desc": "Chiara, concisa e aperta. Ascolta bene, adattati e dai feedback tempestivi." }
+    ],
+    "dream_title": "Il Dream Team.",
+    "dream_desc": "In Pzaz, il nostro dream team è decentralizzato ma unito da obiettivi condivisi. Cerchiamo individui che prosperano indipendentemente ma eccellono collaborativamente, incarnando una mentalità di crescita continua, feedback aperto e rispetto reciproco.",
+    "dream_team": [
+      { "title": "Migliori.", "desc": "Cerchiamo sempre di migliorare, trasformando ogni esperienza in un passo verso l'eccellenza." },
+      { "title": "Capaci.", "desc": "Non si tratta solo di brillantezza — si tratta di collaborazione, creatività e successo condiviso. Le ricompense crescono con i risultati." },
+      { "title": "Feedback.", "desc": "Onestà prima della gentilezza, rispetto sopra tutto. La comunicazione aperta favorisce il miglioramento costante." },
+      { "title": "Stabilità e Sostenibilità.", "desc": "Cresciamo insieme nei momenti buoni e restiamo forti nelle sfide, dando priorità al successo sostenibile rispetto alla velocità." },
+      { "title": "Fiducia.", "desc": "Il supporto reciproco e la fiducia nelle competenze degli altri guidano il nostro successo collettivo." },
+      { "title": "Unici.", "desc": "Cerchiamo pionieri — coloro che non temono i rischi e desiderano crescere con noi, plasmando il futuro insieme." }
+    ]
+  }
+}
