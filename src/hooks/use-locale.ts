@@ -44,7 +44,7 @@ export function useLocale() {
       navigate(stripped || "/", { replace: true });
     } else {
       // Prepend locale prefix
-      const withoutLocale = location.pathname.replace(/^\/(ur|fr|es|de|it)(\/|$)/, "/");
+      const withoutLocale = location.pathname.replace(/^\/(ur|fr|es|de|it|pt)(\/|$)/, "/");
       const newPath = `/${targetLocale}${withoutLocale === "/" ? "" : withoutLocale}`;
       navigate(newPath, { replace: true });
     }

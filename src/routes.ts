@@ -103,7 +103,7 @@ const kbSlugs: string[] = [
 const kbRoutes = kbSlugs.map((s) => `/knowledge-base/${s}`);
 
 /** Supported non-default locales */
-const locales = ["ur", "fr", "es", "de", "it"];
+const locales = ["ur", "fr", "es", "de", "it", "pt"];
 
 /** Legacy paths that redirect — pre-rendered so direct server hits work */
 const legacyRedirects: string[] = [
