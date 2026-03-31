@@ -24,7 +24,8 @@ const BlogArticle = () => {
   const isFr = locale === "fr";
   const isDe = locale === "de";
   const isIt = locale === "it";
-  const posts = isUr ? blogPostsUr : isFr ? blogPostsFr : isDe ? blogPostsDe : isIt ? blogPostsIt : blogPosts;
+  const isPt = locale === "pt";
+  const posts = isUr ? blogPostsUr : isFr ? blogPostsFr : isDe ? blogPostsDe : isIt ? blogPostsIt : isPt ? blogPostsPt : blogPosts;
   const article = posts.find((post) => post.slug === slug);
 
   // Full content lookup – Urdu/French/German/Italian articles have content inline; English uses blogDataFull
