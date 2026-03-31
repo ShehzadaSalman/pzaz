@@ -86,51 +86,52 @@ interface NavItem {
   children?: NavItem[];
 }
 
-const useNavItems = (t: (key: string) => string) => {
+const useNavItems = (t: (key: string) => string, prefix: string) => {
+  const p = prefix; // locale prefix e.g. "" or "/fr"
   const sharedChildren = {
     products: [
-      { label: t("nav.nav_pzaz_indie"), to: "/indie-filmmaking-software" },
-      { label: t("nav.nav_planning_pro"), to: "/film-preproduction-planning" },
-      { label: t("nav.nav_studio_pro"), to: "/studio-pro-software" },
-      { label: t("nav.nav_budget"), to: "/film-budgeting-software" },
-      { label: t("nav.nav_storyboard"), to: "/storyboard-software" },
+      { label: t("nav.nav_pzaz_indie"), to: `${p}/indie-filmmaking-software` },
+      { label: t("nav.nav_planning_pro"), to: `${p}/film-preproduction-planning` },
+      { label: t("nav.nav_studio_pro"), to: `${p}/studio-pro-software` },
+      { label: t("nav.nav_budget"), to: `${p}/film-budgeting-software` },
+      { label: t("nav.nav_storyboard"), to: `${p}/storyboard-software` },
     ],
     features: [
-      { label: t("nav.nav_scriptwriting"), to: "/script" },
-      { label: t("nav.nav_scene_breakdown"), to: "/scene-breakdown-software" },
-      { label: t("nav.nav_collaboration"), to: "/film-collaboration-software" },
-      { label: t("nav.nav_task_management"), to: "/production-task-management" },
-      { label: t("nav.nav_file_sharing"), to: "/film-file-sharing-storage" },
-      { label: t("nav.nav_project_management"), to: "/film-project-management" },
+      { label: t("nav.nav_scriptwriting"), to: `${p}/script` },
+      { label: t("nav.nav_scene_breakdown"), to: `${p}/scene-breakdown-software` },
+      { label: t("nav.nav_collaboration"), to: `${p}/film-collaboration-software` },
+      { label: t("nav.nav_task_management"), to: `${p}/production-task-management` },
+      { label: t("nav.nav_file_sharing"), to: `${p}/film-file-sharing-storage` },
+      { label: t("nav.nav_project_management"), to: `${p}/film-project-management` },
     ],
     solutions: [
-      { label: t("nav.nav_empowering"), to: "/empowering-filmmaking" },
-      { label: t("nav.nav_indie_filmmakers"), to: "/indie-filmmakers" },
-      { label: t("nav.nav_film_schools"), to: "/film-schools-software" },
-      { label: t("nav.nav_directors"), to: "/software-for-directors-producers" },
-      { label: t("nav.nav_documentary"), to: "/documentary-filmmaking-software" },
-      { label: t("nav.nav_cinematographers"), to: "/software-for-cinematographers" },
-      { label: t("nav.nav_agencies"), to: "/creative-agency-production-software" },
-      { label: t("nav.nav_production_teams"), to: "/film-production-team-software" },
-      { label: t("nav.nav_screenwriters"), to: "/screenwriting-software" },
-      { label: t("nav.nav_tv_series"), to: "/tv-series-production-software" },
-      { label: t("nav.nav_investors"), to: "/film-investment-software" },
-      { label: t("nav.nav_production_managers"), to: "/software-for-production-managers" },
+      { label: t("nav.nav_empowering"), to: `${p}/empowering-filmmaking` },
+      { label: t("nav.nav_indie_filmmakers"), to: `${p}/indie-filmmakers` },
+      { label: t("nav.nav_film_schools"), to: `${p}/film-schools-software` },
+      { label: t("nav.nav_directors"), to: `${p}/software-for-directors-producers` },
+      { label: t("nav.nav_documentary"), to: `${p}/documentary-filmmaking-software` },
+      { label: t("nav.nav_cinematographers"), to: `${p}/software-for-cinematographers` },
+      { label: t("nav.nav_agencies"), to: `${p}/creative-agency-production-software` },
+      { label: t("nav.nav_production_teams"), to: `${p}/film-production-team-software` },
+      { label: t("nav.nav_screenwriters"), to: `${p}/screenwriting-software` },
+      { label: t("nav.nav_tv_series"), to: `${p}/tv-series-production-software` },
+      { label: t("nav.nav_investors"), to: `${p}/film-investment-software` },
+      { label: t("nav.nav_production_managers"), to: `${p}/software-for-production-managers` },
     ],
   };
 
   const defaultNavItems: NavItem[] = [
-    { label: t("nav.products"), to: "/#products", isHash: true, isDropdown: true, children: sharedChildren.products },
-    { label: t("nav.features"), to: "/script", isDropdown: true, children: sharedChildren.features },
-    { label: t("nav.solutions"), to: "/film-schools-software", isDropdown: true, children: sharedChildren.solutions },
-    { label: t("nav.pricing"), to: "/pricing" },
+    { label: t("nav.products"), to: `${p}/#products`, isHash: true, isDropdown: true, children: sharedChildren.products },
+    { label: t("nav.features"), to: `${p}/script`, isDropdown: true, children: sharedChildren.features },
+    { label: t("nav.solutions"), to: `${p}/film-schools-software`, isDropdown: true, children: sharedChildren.solutions },
+    { label: t("nav.pricing"), to: `${p}/pricing` },
   ];
 
   const blogNavItems: NavItem[] = [
-    { label: t("nav.products"), to: "/#products", isHash: true, isDropdown: true, children: sharedChildren.products },
-    { label: t("nav.features"), to: "/script", isDropdown: true, children: sharedChildren.features },
-    { label: t("nav.solutions"), to: "/film-schools-software", isDropdown: true, children: sharedChildren.solutions },
-    { label: t("nav.pricing"), to: "/pricing" },
+    { label: t("nav.products"), to: `${p}/#products`, isHash: true, isDropdown: true, children: sharedChildren.products },
+    { label: t("nav.features"), to: `${p}/script`, isDropdown: true, children: sharedChildren.features },
+    { label: t("nav.solutions"), to: `${p}/film-schools-software`, isDropdown: true, children: sharedChildren.solutions },
+    { label: t("nav.pricing"), to: `${p}/pricing` },
   ];
 
   return { defaultNavItems, blogNavItems };
