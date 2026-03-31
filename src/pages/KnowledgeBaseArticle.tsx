@@ -149,7 +149,11 @@ const KnowledgeBaseArticle = () => {
           ? (article.relatedSlugs || [])
               .map((s) => kbArticlesIt.find((a) => a.slug === s))
               .filter((a): a is KBArticle => !!a)
-          : getRelatedArticles(article);
+          : isPt
+            ? (article.relatedSlugs || [])
+                .map((s) => kbArticlesPt.find((a) => a.slug === s))
+                .filter((a): a is KBArticle => !!a)
+            : getRelatedArticles(article);
 
   const categoryLabel = isUr ? categoryLabelUr : isFr ? categoryLabelFr : isEs ? categoryLabelEs : isIt ? categoryLabelIt : categoryLabelEn;
   const catLabel = categoryLabel[article.category];
