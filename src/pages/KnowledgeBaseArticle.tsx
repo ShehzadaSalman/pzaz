@@ -106,6 +106,7 @@ const KnowledgeBaseArticle = () => {
   const isFr = locale === "fr";
   const isEs = locale === "es";
   const isDe = locale === "de";
+  const isIt = locale === "it";
   const { t } = useTranslation("knowledge-base");
 
   const article = isUr
@@ -116,7 +117,9 @@ const KnowledgeBaseArticle = () => {
         ? kbArticlesEs.find((a) => a.slug === slug)
         : isDe
           ? kbArticlesDe.find((a) => a.slug === slug)
-          : slug ? getArticleBySlug(slug) : undefined;
+          : isIt
+            ? kbArticlesIt.find((a) => a.slug === slug)
+            : slug ? getArticleBySlug(slug) : undefined;
 
   if (!article) return <NotFound />;
 
@@ -132,11 +135,15 @@ const KnowledgeBaseArticle = () => {
         ? (article.relatedSlugs || [])
             .map((s) => kbArticlesEs.find((a) => a.slug === s))
             .filter((a): a is KBArticle => !!a)
-        : getRelatedArticles(article);
+        : isIt
+          ? (article.relatedSlugs || [])
+              .map((s) => kbArticlesIt.find((a) => a.slug === s))
+              .filter((a): a is KBArticle => !!a)
+          : getRelatedArticles(article);
 
-  const categoryLabel = isUr ? categoryLabelUr : isFr ? categoryLabelFr : isEs ? categoryLabelEs : categoryLabelEn;
+  const categoryLabel = isUr ? categoryLabelUr : isFr ? categoryLabelFr : isEs ? categoryLabelEs : isIt ? categoryLabelIt : categoryLabelEn;
   const catLabel = categoryLabel[article.category];
-  const cats = isUr ? kbCategoriesUr : isFr ? kbCategoriesFr : isEs ? kbCategoriesEs : kbCategories;
+  const cats = isUr ? kbCategoriesUr : isFr ? kbCategoriesFr : isEs ? kbCategoriesEs : isIt ? kbCategoriesIt : kbCategories;
   const catMeta = cats.find((c) => c.id === article.category);
 
   return (
