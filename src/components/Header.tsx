@@ -90,7 +90,7 @@ const useNavItems = (t: (key: string) => string, prefix: string) => {
   const p = prefix; // locale prefix e.g. "" or "/fr"
   const sharedChildren = {
     products: [
-      { label: t("nav.nav_pzaz_indie"), to: `${p}/indie-filmmaking-software` },
+      { label: t("nav.nav_pzaz_indie"), to: `${p}/film-production-software/indie-filmmakers` },
       { label: t("nav.nav_planning_pro"), to: `${p}/film-preproduction-planning` },
       { label: t("nav.nav_studio_pro"), to: `${p}/studio-pro-software` },
       { label: t("nav.nav_budget"), to: `${p}/film-budgeting-software` },
@@ -156,7 +156,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
   // Strip locale prefix for page detection
   const bare = location.pathname.replace(/^\/(ur|fr|es|de)(\/|$)/, "/");
   const isScriptPage = bare === "/script";
-  const isIndiePage = bare === "/indie-filmmaking-software";
+  const isIndiePage = bare === "/film-production-software/indie-filmmakers";
   const isPlanningPage = bare === "/film-preproduction-planning";
   const isStudioProPage = bare === "/studio-pro-software";
   const isStoryboardPage = bare === "/storyboard-software";

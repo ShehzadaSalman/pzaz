@@ -68,7 +68,7 @@ function getNamespacesForRoute(url: string): string[] {
     "/culture": ["common", "culture"],
     "/privacy": ["common", "privacy"],
     "/terms-of-use": ["common", "terms"],
-    "/indie-filmmaking-software": ["common", "indie"],
+    "/film-production-software/indie-filmmakers": ["common", "indie"],
     "/film-budgeting-software": ["common", "budget"],
     "/film-preproduction-planning": ["common", "planning"],
     "/studio-pro-software": ["common", "studio-pro"],
