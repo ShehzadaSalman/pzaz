@@ -203,7 +203,7 @@ const IndieFilmmakers = () => {
                 Pzaz simplifies the filmmaking process by unifying the tools required to plan, create
                 and deliver a film within one coherent system.
               </p>
-              <Link to="/indie-filmmaking-software">
+              <Link to="/film-production-software/indie-filmmakers">
                 <Button variant="outline" size="sm">
                   Learn More
                 </Button>

@@ -156,7 +156,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
   // Strip locale prefix for page detection
   const bare = location.pathname.replace(/^\/(ur|fr|es|de)(\/|$)/, "/");
   const isScriptPage = bare === "/script";
-  const isIndiePage = bare === "/indie-filmmaking-software";
+  const isIndiePage = bare === "/film-production-software/indie-filmmakers";
   const isPlanningPage = bare === "/film-preproduction-planning";
   const isStudioProPage = bare === "/studio-pro-software";
   const isStoryboardPage = bare === "/storyboard-software";

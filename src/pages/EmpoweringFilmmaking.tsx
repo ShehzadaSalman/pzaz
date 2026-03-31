@@ -36,7 +36,7 @@ const audiences = [
       "Production planning and scheduling tools",
       "Real time collaboration across distributed teams",
     ],
-    link: "/indie-filmmaking-software",
+    link: "/film-production-software/indie-filmmakers",
   },
   {
     id: "screenwriters",
