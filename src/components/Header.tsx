@@ -180,14 +180,14 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const isKnowledgeBase = location.pathname.startsWith("/knowledge-base");
+  const isKnowledgeBase = bare.startsWith("/knowledge-base");
 
-  const isSolutionsActive = isIndiePage || isPlanningPage || isStudioProPage || isStoryboardPage || location.pathname === "/film-budgeting-software";
-  const isSceneBreakdownPage = location.pathname === "/scene-breakdown-software";
-  const isCollaborationToolsPage = location.pathname === "/film-collaboration-software";
-  const isTaskManagementPage = location.pathname === "/production-task-management";
-  const isFileSharingPage = location.pathname === "/film-file-sharing-storage";
-  const isProjectManagementPage = location.pathname === "/film-project-management";
+  const isSolutionsActive = isIndiePage || isPlanningPage || isStudioProPage || isStoryboardPage || bare === "/film-budgeting-software";
+  const isSceneBreakdownPage = bare === "/scene-breakdown-software";
+  const isCollaborationToolsPage = bare === "/film-collaboration-software";
+  const isTaskManagementPage = bare === "/production-task-management";
+  const isFileSharingPage = bare === "/film-file-sharing-storage";
+  const isProjectManagementPage = bare === "/film-project-management";
   const isFeaturesActive = isScriptPage || isSceneBreakdownPage || isCollaborationToolsPage || isTaskManagementPage || isFileSharingPage || isProjectManagementPage;
 
   const isActive = (item: NavItem) => {
