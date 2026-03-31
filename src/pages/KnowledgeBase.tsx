@@ -7,6 +7,25 @@ import { kbCategoriesFr, kbArticlesFr } from "@/data/knowledgeBaseDataFr";
 import { kbArticlesEs, kbCategoriesEs } from "@/data/knowledgeBaseDataEs";
 import { kbArticlesDe, kbCategoriesDe } from "@/data/knowledgeBaseDataDe";
 import { kbArticlesIt, kbCategoriesIt } from "@/data/knowledgeBaseDataIt";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import KBSearchBar from "@/components/knowledge-base/KBSearchBar";
+import SEO from "@/components/SEO";
+import { useLocale } from "@/hooks/use-locale";
+import { useTranslation } from "react-i18next";
+
+const categoryOrder: Array<KBArticle["category"]> = [
+  "getting-started",
+  "functions",
+  "tools-and-features",
+];
+
+const KnowledgeBase = () => {
+  const { locale, prefix } = useLocale();
+  const { t } = useTranslation("knowledge-base");
+  const isUr = locale === "ur";
+  const isFr = locale === "fr";
+  const isEs = locale === "es";
   const isDe = locale === "de";
   const isIt = locale === "it";
   const cats = isUr ? kbCategoriesUr : isFr ? kbCategoriesFr : isEs ? kbCategoriesEs : isDe ? kbCategoriesDe : isIt ? kbCategoriesIt : kbCategories;
