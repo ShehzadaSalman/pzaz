@@ -1,0 +1,122 @@
+{
+  "privacy": {
+    "seo_title": "Política de Privacidade | Pzaz",
+    "seo_desc": "Leia a Política de Privacidade do Pzaz para compreender como recolhemos, usamos e protegemos os seus dados pessoais de acordo com o RGPD.",
+    "page_title": "Política de Privacidade do Pzaz",
+    "date": "Data: 12 de janeiro de 2024",
+    "toc_label": "Índice",
+    "intro": "Bem-vindo ao Pzaz! A nossa Política de Privacidade explica como tratamos as suas informações quando usa o Pzaz, seguindo o Regulamento Geral de Proteção de Dados (RGPD). Ao usar o Pzaz, está a concordar com esta política.",
+    "sections": [
+      {
+        "id": "id_1",
+        "title": "Recolha e Uso das Suas Informações",
+        "content": "Recolhemos vários tipos de dados, incluindo dados pessoais como nome e informação de contacto, dados demográficos como idade e ocupação, e dados de localização. Também recolhemos dados de utilização e dados técnicos. O uso de cookies ajuda-nos a compreender padrões. Para transações, recolhemos dados de pagamento.\n\nRecolhemos apenas o necessário para oferecer os nossos serviços."
+      },
+      {
+        "id": "id_2",
+        "title": "Os Seus Direitos ao Abrigo do RGPD",
+        "content": "Seguimos o RGPD, e tem direitos sobre os seus dados, como aceder, corrigir, eliminar, limitar o uso, opor-se ao uso, transferir os dados, retirar consentimento e apresentar queixa às autoridades."
+      },
+      {
+        "id": "id_3",
+        "title": "Transferência de Dados",
+        "content": "Os seus dados podem ser armazenados ou processados fora da sua área, onde podem aplicar-se leis diferentes, mas protegemo-los conforme esta política."
+      },
+      {
+        "id": "id_4",
+        "title": "Divulgação de Dados",
+        "content": "Podemos partilhar os seus dados pessoais pelas seguintes razões:",
+        "bullets": [
+          {
+            "label": "Conformidade Legal",
+            "text": "Para cumprir requisitos legais."
+          },
+          {
+            "label": "Proteção",
+            "text": "Para proteger o Pzaz, a nossa propriedade e utilizadores."
+          },
+          {
+            "label": "Investigação",
+            "text": "Para investigar ou prevenir potenciais irregularidades."
+          },
+          {
+            "label": "Segurança",
+            "text": "Para garantir a segurança dos utilizadores."
+          },
+          {
+            "label": "Transações Comerciais",
+            "text": "Se o Pzaz fizer parte de uma transação comercial como fusão ou venda."
+          }
+        ]
+      },
+      {
+        "id": "id_5",
+        "title": "Segurança dos Dados",
+        "content": "Tomamos várias medidas para proteger os seus dados, incluindo:",
+        "bullets": [
+          {
+            "label": "Encriptação",
+            "text": "Encriptamos os seus dados durante transmissão, receção e armazenamento."
+          },
+          {
+            "label": "Auditorias Regulares",
+            "text": "Verificamos regularmente o nosso sistema."
+          },
+          {
+            "label": "Controlo de Acesso",
+            "text": "Restringimos o acesso a pessoal autorizado."
+          }
+        ]
+      },
+      {
+        "id": "id_6",
+        "title": "Utilização de Prestadores de Serviços",
+        "content": "Contratamos terceiros para ajudar a operar o nosso serviço. Estes prestadores podem aceder aos seus dados apenas para realizar os seus trabalhos para nós."
+      },
+      {
+        "id": "id_7",
+        "title": "Links Externos",
+        "content": "O nosso serviço pode ter links para outros sites. Não somos responsáveis pelas suas práticas de privacidade."
+      },
+      {
+        "id": "id_8",
+        "title": "Pagamentos",
+        "content": "Processamos pagamentos de subscrição de forma segura e em conformidade com o RGPD."
+      },
+      {
+        "id": "id_9",
+        "title": "Alterações à Política",
+        "content": "Podemos alterar esta política. Verifique aqui regularmente. O uso continuado após alterações significa aceitação."
+      },
+      {
+        "id": "id_10",
+        "title": "Contacte-nos",
+        "content": "Questões ou quer exercer os seus direitos? Envie-nos email para "
+      },
+      {
+        "id": "id_11",
+        "title": "Política de Cookies",
+        "content": "Cookies são pequenos ficheiros que os sites colocam no seu dispositivo. Usamos cookies para compreender preferências e melhorar o site. Existem diferentes tipos:",
+        "bullets": [
+          {
+            "label": "Essenciais",
+            "text": "Para funcionalidade do site."
+          },
+          {
+            "label": "Desempenho",
+            "text": "Para melhorar o site."
+          },
+          {
+            "label": "Funcionalidade",
+            "text": "Para lembrar preferências."
+          },
+          {
+            "label": "Segmentação",
+            "text": "Usados por anunciantes."
+          }
+        ],
+        "footer": "Pode desativar e eliminar cookies no seu navegador. Para informações detalhadas visite aboutcookies.org.\n\nQuestões sobre cookies? Envie email para support@pzaz.io."
+      }
+    ]
+  }
+}

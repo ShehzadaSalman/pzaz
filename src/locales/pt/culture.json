@@ -1,0 +1,105 @@
+{
+  "culture": {
+    "seo_title": "A Nossa Cultura – Pzaz",
+    "seo_desc": "Descubra o manifesto cultural do Pzaz — os nossos princípios, valores e o que faz a nossa equipa de sonho funcionar.",
+    "hero_title_1": "Pzaz ",
+    "hero_title_2": "Cultura.",
+    "manifesto_title": "O Nosso Manifesto Cultural.",
+    "manifesto_p1": "No Pzaz.io, acreditamos que a cultura cinematográfica é tão essencial como a amizade — conecta-nos, inspira-nos e cria experiências partilhadas.",
+    "manifesto_p2": "Experiências excecionais para o cliente guiam tudo o que fazemos, e sabemos que isso começa com uma cultura de equipa extraordinária.",
+    "manifesto_p3": "Se está a considerar juntar-se a nós, dedique um momento a compreender como operamos.",
+    "principles_title": "Os Nossos Princípios.",
+    "principles": [
+      {
+        "title": "Clareza do Porquê.",
+        "desc": "Sabemos sempre porque fazemos o que fazemos."
+      },
+      {
+        "title": "Consistência do Quê.",
+        "desc": "O que fazemos prova o que acreditamos."
+      },
+      {
+        "title": "A Disciplina do Como.",
+        "desc": "A inovação guia-nos. A responsabilidade orienta-nos."
+      },
+      {
+        "title": "O Culto do Deslumbramento.",
+        "desc": "Não somos apenas melhores que a média — aspiramos a deslumbrar."
+      }
+    ],
+    "culture_title": "A Cultura Pzaz.",
+    "culture_p1": "No Pzaz, as pessoas vêm primeiro.",
+    "culture_p2": "Valorizamos integridade, excelência, respeito, inclusão e trabalho de equipa.",
+    "traits": [
+      "Os funcionários tomam decisões independentes.",
+      "Partilhamos informação aberta e honestamente.",
+      "Priorizamos comunicação franca.",
+      "Evitamos regras desnecessárias.",
+      "Mantemos apenas aqueles que mostram que querem estar."
+    ],
+    "values_title": "Os Nossos Valores.",
+    "values_desc": "No Pzaz, os nossos valores moldam quem recompensamos e retemos.",
+    "values": [
+      {
+        "title": "Coragem.",
+        "desc": "Fale, assuma riscos inteligentes e abrace a vulnerabilidade."
+      },
+      {
+        "title": "Curiosidade.",
+        "desc": "Aprenda com entusiasmo e procure perspetivas diversas."
+      },
+      {
+        "title": "Impacto.",
+        "desc": "Entregue resultados e priorize o que importa."
+      },
+      {
+        "title": "Altruísmo.",
+        "desc": "Coloque o Pzaz primeiro e ajude os outros."
+      },
+      {
+        "title": "Paixão.",
+        "desc": "Inspire excelência e mantenha-se otimista."
+      },
+      {
+        "title": "Integridade.",
+        "desc": "Seja autêntico, transparente e respeitoso."
+      },
+      {
+        "title": "Inovação.",
+        "desc": "Resolva problemas difíceis e simplifique."
+      },
+      {
+        "title": "Comunicação.",
+        "desc": "Clara, concisa e aberta."
+      }
+    ],
+    "dream_title": "A Equipa de Sonho.",
+    "dream_desc": "No Pzaz, a nossa equipa de sonho é descentralizada mas unida por objetivos partilhados.",
+    "dream_team": [
+      {
+        "title": "Melhor.",
+        "desc": "Estamos sempre a esforçar-nos por melhorar."
+      },
+      {
+        "title": "Capaz.",
+        "desc": "Não é só brilhantismo — é colaboração e sucesso partilhado."
+      },
+      {
+        "title": "Feedback.",
+        "desc": "Honestidade acima de gentileza, respeito acima de tudo."
+      },
+      {
+        "title": "Estabilidade e Sustentabilidade.",
+        "desc": "Crescemos juntos nos bons momentos e mantemo-nos fortes nos desafios."
+      },
+      {
+        "title": "Confiança.",
+        "desc": "Apoio mútuo e crença nas competências de cada um."
+      },
+      {
+        "title": "Único.",
+        "desc": "Procuramos pioneiros — quem não tem medo de riscos."
+      }
+    ]
+  }
+}
