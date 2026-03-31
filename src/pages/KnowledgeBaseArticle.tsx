@@ -47,6 +47,12 @@ const categoryLabelIt: Record<string, string> = {
   "tools-and-features": "Strumenti e Funzionalità",
 };
 
+const categoryLabelPt: Record<string, string> = {
+  "getting-started": "Para Começar",
+  "functions": "Funções",
+  "tools-and-features": "Ferramentas e Funcionalidades",
+};
+
 const renderContent = (content: string): React.ReactNode[] => {
   const lines = content.trim().split("\n");
   const elements: React.ReactNode[] = [];
