@@ -1,507 +1,507 @@
 import { KBArticle } from "./knowledgeBaseData";
 
 export const kbArticlesDe: KBArticle[] = [
-  // Primeros Pasos
+  // Erste Schritte
   {
     id: "gs-1",
     slug: "book-a-personalised-product-demonstration",
-    title: "Reservar una Demostración Personalizada del Producto",
+    title: "Persönliche Produktdemo buchen",
     category: "getting-started",
-    content: `## Reservar una Demostración Personalizada del Producto
+    content: `## Persönliche Produktdemo buchen
 
-### Estamos aquí para ayudarte a sacar el máximo provecho de nuestra herramienta.
+### Wir helfen dir, das Beste aus unserem Tool herauszuholen.
 
-Somos un equipo de amantes del cine y profesionales creativos de la producción cinematográfica. Si hay algo que nos gusta más que las películas, ¡es ayudar a otros cineastas a tener éxito y cumplir sus ambiciones creativas!
+Wir sind ein Team von Filmliebhabern und kreativen Produktionsprofis. Wenn es etwas gibt, das wir mehr lieben als Filme, dann ist es, anderen Filmemachern beim Erfolg zu helfen und ihre kreativen Ambitionen zu verwirklichen!
 
-Por eso estamos disponibles todos los días para hablar por videollamada si quieres contarnos tus necesidades o aprender más sobre lo que la aplicación tiene para ofrecer.
+Deshalb sind wir jeden Tag für Videogespräche verfügbar, wenn du uns deine Bedürfnisse erläutern oder mehr darüber erfahren möchtest, was die App zu bieten hat.
 
-## ¡Contáctanos hoy!
+## Kontaktiere uns noch heute!
 
-Para organizar una demostración personalizada y detallada con nosotros, simplemente haz clic en el siguiente enlace de Calendly y sigue las instrucciones: [RESERVAR UNA LLAMADA](https://calendly.com/filmmaking-app/30min)`,
+Um eine persönliche und ausführliche Demo mit uns zu vereinbaren, klicke einfach auf den folgenden Calendly-Link und folge den Anweisungen: [GESPRÄCH BUCHEN](https://calendly.com/filmmaking-app/30min)`,
     relatedSlugs: ["writing-your-script-with-pzaz", "getting-started-with-workflows", "pzaz-101"],
   },
   {
     id: "gs-2",
     slug: "writing-your-script-with-pzaz",
-    title: "Escribir Tu Guion con Pzaz",
+    title: "Dein Drehbuch mit Pzaz schreiben",
     category: "getting-started",
-    content: `## Escribir Tu Guion con Pzaz
+    content: `## Dein Drehbuch mit Pzaz schreiben
 
-### Introducción
+### Einführung
 
-Con la herramienta de escritura de guiones, puedes transformar tus ideas en un guion completamente estructurado — ya sea que empieces desde cero o importes un proyecto existente. La herramienta simplifica cada paso, permitiéndote personalizar tu página de título, agregar actos, escenas, personajes, diálogos y transiciones, y construir un flujo narrativo fluido.
+Mit dem Drehbuch-Tool kannst du deine Ideen in ein vollständig strukturiertes Drehbuch verwandeln — egal ob du bei Null anfängst oder ein bestehendes Projekt importierst. Das Tool vereinfacht jeden Schritt und ermöglicht es dir, deine Titelseite anzupassen, Akte, Szenen, Figuren, Dialoge und Übergänge hinzuzufügen und einen fließenden Erzählfluss aufzubauen.
 
-## Para Empezar
+## Loslegen
 
-Comienza tu guion importándolo o creando uno nuevo desde cero. El primer guion que crees será marcado como el **"Guion principal"** — esto significa que solo este guion puede usarse para el desglose de guion, storyboarding, organización de hojas de llamado y para crear automáticamente elementos, equipamiento, equipo y reparto, y objetos de locación en la sección de Producción del menú principal. Todos los demás guiones importados, creados o duplicados se contarán como borradores.
+Beginne dein Drehbuch, indem du es importierst oder ein neues von Grund auf erstellst. Das erste Drehbuch, das du erstellst, wird als **„Hauptdrehbuch"** markiert — das bedeutet, dass nur dieses Drehbuch für die Drehbuchanalyse, Storyboarding, Dispositionslisten-Organisation und die automatische Erstellung von Elementen, Ausrüstung, Team und Besetzung sowie Drehort-Objekten im Produktionsbereich des Hauptmenüs verwendet werden kann. Alle anderen importierten, erstellten oder duplizierten Drehbücher werden als Entwürfe gezählt.
 
-Si tienes múltiples guiones en tu proyecto, el primero de la lista será marcado como "Guion Principal" por defecto.
+Wenn du mehrere Drehbücher in deinem Projekt hast, wird das erste in der Liste standardmäßig als „Hauptdrehbuch" markiert.
 
-## Importar/Exportar Guion
+## Drehbuch importieren/exportieren
 
-Cuando presiones el botón **"Nuevo Guion"**, tendrás 2 opciones — "Comenzar nuevo guion" o "Importar existente". La aplicación soporta importación de .PDF y archivos de Final Draft (.FDX).
+Wenn du den Button **„Neues Drehbuch"** drückst, hast du 2 Optionen — „Neues Drehbuch beginnen" oder „Bestehendes importieren". Die App unterstützt den Import von .PDF und Final Draft Dateien (.FDX).
 
-Para exportar tu guion, haz clic en el menú de 3 puntos en la esquina superior derecha de la herramienta y presiona la opción **"Exportar Guion"**. Aquí puedes elegir el formato — .FDX o .PDF — e incluir o excluir la página de título.
+Um dein Drehbuch zu exportieren, klicke auf das 3-Punkte-Menü in der oberen rechten Ecke des Tools und drücke die Option **„Drehbuch exportieren"**. Hier kannst du das Format wählen — .FDX oder .PDF — und die Titelseite ein- oder ausschließen.
 
-> Ten en cuenta que si el archivo es grande, puede que necesites esperar unos segundos hasta que el documento esté listo para imprimir.
+> Beachte, dass du bei großen Dateien möglicherweise einige Sekunden warten musst, bis das Dokument druckbereit ist.
 
-## Navegación
+## Navigation
 
-La navegación es intuitiva gracias a la barra lateral, permitiéndote reorganizar escenas rápidamente, editar diálogos o saltar a secciones específicas usando la función de búsqueda. Cada actualización ocurre en tiempo real.
+Die Navigation ist dank der Seitenleiste intuitiv und ermöglicht es dir, Szenen schnell umzuordnen, Dialoge zu bearbeiten oder mit der Suchfunktion zu bestimmten Abschnitten zu springen. Jede Aktualisierung erfolgt in Echtzeit.
 
-## El Asistente de IA
+## Der KI-Assistent
 
-¿Necesitas apoyo creativo? El asistente de IA integrado proporciona sugerencias e ideas inteligentes para refinar tu guion, haciendo el proceso de escritura más rápido e intuitivo.`,
+Brauchst du kreative Unterstützung? Der integrierte KI-Assistent liefert intelligente Vorschläge und Ideen, um dein Drehbuch zu verfeinern und den Schreibprozess schneller und intuitiver zu gestalten.`,
     relatedSlugs: ["book-a-personalised-product-demonstration", "ai-security-and-privacy-at-pzaz", "getting-started-with-workflows"],
   },
   {
     id: "gs-3",
     slug: "ai-security-and-privacy-at-pzaz",
-    title: "IA, Seguridad y Privacidad",
+    title: "KI, Sicherheit und Datenschutz",
     category: "getting-started",
-    content: `## IA, Seguridad y Privacidad
+    content: `## KI, Sicherheit und Datenschutz
 
-Nos tomamos la seguridad y la privacidad en serio, garantizando que tu trabajo creativo permanezca protegido.
+Wir nehmen Sicherheit und Datenschutz ernst und stellen sicher, dass deine kreative Arbeit geschützt bleibt.
 
-**Nunca usamos tus guiones, notas o datos para el entrenamiento de IA. Tu trabajo es privado y accesible solo para ti y los colaboradores que elijas.**
+**Wir verwenden deine Drehbücher, Notizen oder Daten niemals für das KI-Training. Deine Arbeit ist privat und nur für dich und die von dir gewählten Mitarbeiter zugänglich.**
 
-## Seguridad de Datos
+## Datensicherheit
 
-Para mantener tus datos seguros, la aplicación utiliza cifrado de extremo a extremo con **TLS** para datos en tránsito y cifrado **AES-256** para archivos almacenados. Nuestra infraestructura sigue los estándares de seguridad más altos de la industria.
+Um deine Daten sicher zu halten, verwendet die App Ende-zu-Ende-Verschlüsselung mit **TLS** für Daten während der Übertragung und **AES-256**-Verschlüsselung für gespeicherte Dateien. Unsere Infrastruktur folgt den höchsten Sicherheitsstandards der Branche.
 
-## Controles de Acceso
+## Zugriffskontrollen
 
-Proporcionamos controles de acceso estrictos para que puedas gestionar quién ve y edita tu contenido. Tus proyectos permanecen en un espacio de trabajo privado.
+Wir bieten strenge Zugriffskontrollen, damit du verwalten kannst, wer deine Inhalte sehen und bearbeiten darf. Deine Projekte bleiben in einem privaten Workspace.
 
-## Perspectivas
+## Ausblick
 
-Estamos ampliando nuestras medidas de seguridad con:
+Wir erweitern unsere Sicherheitsmaßnahmen um:
 
-- **Autenticación de dos factores (2FA)** — una capa adicional de protección de inicio de sesión
-- **Permisos avanzados de archivos** — control más granular sobre quién puede acceder a qué
-- **Compartir enlaces seguros** — control mejorado sobre el contenido compartido
+- **Zwei-Faktor-Authentifizierung (2FA)** — eine zusätzliche Schutzebene beim Login
+- **Erweiterte Dateiberechtigungen** — feinere Kontrolle darüber, wer auf was zugreifen kann
+- **Sicheres Link-Teilen** — verbesserte Kontrolle über geteilte Inhalte
 
-Con nuestra aplicación, puedes concentrarte en tu trabajo creativo sin preocupaciones de seguridad. ¿Tienes preguntas? Contáctanos a través del Chat en Vivo en la sección **OBTENER AYUDA**.`,
+Mit unserer App kannst du dich auf deine kreative Arbeit konzentrieren, ohne dir Sorgen um die Sicherheit machen zu müssen. Fragen? Kontaktiere uns über den Live-Chat im Bereich **HILFE ERHALTEN**.`,
     relatedSlugs: ["book-a-personalised-product-demonstration", "writing-your-script-with-pzaz", "pzaz-101"],
   },
   {
     id: "gs-4",
     slug: "getting-started-with-workflows",
-    title: "Primeros Pasos con los Workflows",
+    title: "Erste Schritte mit Workflows",
     category: "getting-started",
-    content: `## Primeros Pasos con los Workflows
+    content: `## Erste Schritte mit Workflows
 
-### ¿Qué son los Workflows?
+### Was sind Workflows?
 
-Los workflows representan procesos internos — una serie de pasos repetibles necesarios para lograr un resultado. Un workflow puede ser tan simple como "Por hacer > Haciendo > Hecho" o más complejo, como los pasos de un ciclo de ventas.
+Workflows stellen interne Prozesse dar — eine Reihe wiederholbarer Schritte, die nötig sind, um ein Ergebnis zu erzielen. Ein Workflow kann so einfach sein wie „Zu erledigen > In Bearbeitung > Erledigt" oder komplexer, wie die Schritte eines Vertriebszyklus.
 
-Los workflows se visualizan en tableros. Puedes crear tantos tableros como necesites, cada uno representando un proceso diferente (ej: Desarrollo, Marketing, Contratación). Creas un workflow agregando columnas a un tablero. Las tarjetas se arrastran de una columna a otra a medida que avanzan. Este formato se conoce como un **tablero Kanban**.
+Workflows werden auf Boards visualisiert. Du kannst so viele Boards erstellen, wie du benötigst, wobei jedes einen anderen Prozess darstellt (z. B. Entwicklung, Marketing, Besetzung). Du erstellst einen Workflow, indem du einem Board Spalten hinzufügst. Karten werden von einer Spalte zur nächsten gezogen, wenn sie fortschreiten. Dieses Format ist als **Kanban-Board** bekannt.
 
-## Crear Tu Primer Workflow
+## Deinen ersten Workflow erstellen
 
-Al comenzar, un tablero Kanban se cargará con una sola columna, representando el inicio de tu workflow — no puede ser eliminada ni renombrada. Para agregar columnas, haz clic en los tres puntos verticales y selecciona **Agregar Encabezado**.
+Beim Start wird ein Kanban-Board mit einer einzelnen Spalte geladen, die den Beginn deines Workflows darstellt — sie kann weder gelöscht noch umbenannt werden. Um Spalten hinzuzufügen, klicke auf die drei vertikalen Punkte und wähle **Überschrift hinzufügen**.
 
-Por ejemplo, un workflow de marketing de contenido podría incluir: Sin asignar, Priorizado, Redacción, Edición y Publicado.
+Beispielsweise könnte ein Content-Marketing-Workflow umfassen: Nicht zugewiesen, Priorisiert, Entwurf, Bearbeitung und Veröffentlicht.
 
-## Agregar un Workflow Adicional
+## Einen zusätzlichen Workflow hinzufügen
 
-Solo el propietario del Filmspace puede agregar un nuevo espacio de trabajo. Selecciona la sección **'Gestionar'** en el menú lateral, luego **'+ Nuevo Workflow'**.
+Nur der Filmspace-Eigentümer kann einen neuen Workspace hinzufügen. Wähle den Bereich **‚Verwalten'** im Seitenmenü, dann **‚+ Neuer Workflow'**.
 
-## Agregar Elementos de Trabajo
+## Arbeitselemente hinzufügen
 
-Para crear tarjetas, haz clic en los tres puntos verticales de cualquier columna y selecciona **Agregar Tarjeta**. Cada tarjeta debe tener un título claro y descriptivo. Puedes documentar las tarjetas con:
+Um Karten zu erstellen, klicke auf die drei vertikalen Punkte einer beliebigen Spalte und wähle **Karte hinzufügen**. Jede Karte sollte einen klaren, beschreibenden Titel haben. Du kannst die Karten dokumentieren mit:
 
-- Descripciones
-- Fechas de vencimiento
-- Adjuntos (documentos o enlaces)
-- Tareas y subtareas
-- Asignación de miembros del equipo`,
+- Beschreibungen
+- Fälligkeitsdaten
+- Anhängen (Dokumente oder Links)
+- Aufgaben und Unteraufgaben
+- Zuweisung von Teammitgliedern`,
     relatedSlugs: ["pzaz-101", "writing-your-script-with-pzaz", "book-a-personalised-product-demonstration"],
   },
   {
     id: "gs-5",
     slug: "pzaz-101",
-    title: "El Principio",
+    title: "Das Prinzip",
     category: "getting-started",
-    content: `## El Principio
+    content: `## Das Prinzip
 
-## Introducción a "El Principio"
+## Einführung in „Das Prinzip"
 
-Bienvenido a nuestra plataforma, donde la simplicidad se encuentra con el poder. Creemos que las herramientas deben adaptarse a ti — no al revés. Por eso construimos nuestra plataforma sobre el **Principio**, una filosofía UX diseñada para que cualquiera pueda empezar fácilmente, desarrollar sus capacidades, colaborar y desbloquear funciones poderosas a su propio ritmo.
+Willkommen auf unserer Plattform, wo Einfachheit auf Leistung trifft. Wir glauben, dass Werkzeuge sich an dich anpassen sollten — nicht umgekehrt. Deshalb haben wir unsere Plattform auf dem **Prinzip** aufgebaut, einer UX-Philosophie, die es jedem ermöglicht, einfach zu starten, Fähigkeiten zu entwickeln, zusammenzuarbeiten und leistungsstarke Funktionen in eigenem Tempo freizuschalten.
 
-### ¿Qué es el Principio?
+### Was ist das Prinzip?
 
-El Principio se basa en tres ideas fundamentales:
+Das Prinzip basiert auf drei Grundideen:
 
-1. **La plataforma crece contigo:** Es como un lienzo en blanco, listo para cualquier tarea o proyecto. Lo básico viene de forma natural y el dominio se logra de manera intuitiva.
-2. **Flexibilidad tipo Lego:** Cada funcionalidad está construida con bloques simples y modulares. Como las piezas de Lego, se ensamblan fácilmente y te permiten construir cualquier cosa.
-3. **Apoyo donde importa:** La IA no está para reemplazar tu creatividad sino para inspirarla, estimularla y apoyarla.
+1. **Die Plattform wächst mit dir:** Sie ist wie eine leere Leinwand, bereit für jede Aufgabe oder jedes Projekt. Die Grundlagen kommen natürlich und die Beherrschung wird intuitiv erlangt.
+2. **Lego-Flexibilität:** Jede Funktionalität besteht aus einfachen, modularen Bausteinen. Wie Lego-Steine lassen sie sich leicht zusammensetzen und ermöglichen dir, alles zu bauen.
+3. **Unterstützung, wo es zählt:** KI ist nicht dazu da, deine Kreativität zu ersetzen, sondern sie zu inspirieren, anzuregen und zu unterstützen.
 
-## Tu Lienzo: Objetos y Tarjetas
+## Deine Leinwand: Objekte und Karten
 
-Comienza con un lienzo en blanco donde puedes crear **objetos** para rastrear tareas, proyectos, guiones, archivos, presupuestos y más.
+Beginne mit einer leeren Leinwand, auf der du **Objekte** erstellen kannst, um Aufgaben, Projekte, Drehbücher, Dateien, Budgets und mehr zu verfolgen.
 
-Cada objeto muestra detalles clave (como plazos y prioridades). Ábrelo para acceder a una **tarjeta** — un espacio personalizable para gestionar todos los detalles.
+Jedes Objekt zeigt wichtige Details an (wie Fristen und Prioritäten). Öffne es, um auf eine **Karte** zuzugreifen — einen anpassbaren Raum zur Verwaltung aller Details.
 
-## Bloques: Construir Tu Workflow
+## Blöcke: Deinen Workflow aufbauen
 
-Las tarjetas están compuestas de bloques que representan segmentos lógicos de información o funcionalidades.
+Karten bestehen aus Blöcken, die logische Informations- oder Funktionssegmente darstellen.
 
-## Organizar Tu Trabajo
+## Deine Arbeit organisieren
 
-Cada objeto se agrupa en una **categoría**, comenzando con la **Bandeja de entrada** por defecto. Puedes crear tantas categorías como necesites.
+Jedes Objekt wird in einer **Kategorie** gruppiert, beginnend mit dem **Posteingang** als Standard. Du kannst so viele Kategorien erstellen, wie du benötigst.
 
-Gestiona tu trabajo con:
+Verwalte deine Arbeit mit:
 
-- **Vista de Lista** — Ideal para ordenar por temas
-- **Vista de Tablero** — Seguir el progreso por etapas`,
+- **Listenansicht** — Ideal zum Sortieren nach Themen
+- **Board-Ansicht** — Fortschritt nach Phasen verfolgen`,
     relatedSlugs: ["getting-started-with-workflows", "writing-your-script-with-pzaz", "ai-security-and-privacy-at-pzaz"],
   },
 
-  // Funciones
+  // Funktionen
   {
     id: "fn-1",
     slug: "pzaz-security-features",
-    title: "Nuestras Funciones de Seguridad: Protegiendo Tus Datos",
+    title: "Unsere Sicherheitsfunktionen: Schutz deiner Daten",
     category: "functions",
-    content: `## Nuestras Funciones de Seguridad: Protegiendo Tus Datos
+    content: `## Unsere Sicherheitsfunktionen: Schutz deiner Daten
 
-Entendemos que la seguridad es una prioridad máxima para nuestros usuarios. Ya sea que estés colaborando en un guion, compartiendo planes de producción o almacenando detalles sensibles de proyecto, tus datos merecen el más alto nivel de protección.
+Wir wissen, dass Sicherheit für unsere Nutzer höchste Priorität hat. Ob du an einem Drehbuch zusammenarbeitest, Produktionspläne teilst oder sensible Projektdetails speicherst — deine Daten verdienen das höchste Schutzniveau.
 
-## Cifrado: Protegiendo Tus Datos en Todas Partes
+## Verschlüsselung: Schutz deiner Daten überall
 
-Cada vez que subes o accedes a un archivo, está protegido por cifrado. Durante el tránsito, tus archivos están asegurados con **TLS**. Una vez almacenados en nuestros servidores, tus datos están protegidos con cifrado **AES-256**.
+Jedes Mal, wenn du eine Datei hochlädst oder darauf zugreifst, ist sie durch Verschlüsselung geschützt. Während der Übertragung sind deine Dateien mit **TLS** gesichert. Einmal auf unseren Servern gespeichert, sind deine Daten mit **AES-256**-Verschlüsselung geschützt.
 
-## Controles de Acceso: Simplicidad Gestionada
+## Zugriffskontrollen: Einfach verwaltet
 
-Permitimos a los administradores otorgar o restringir el acceso al almacenamiento, garantizando que solo los usuarios autorizados puedan utilizar esta funcionalidad. Estamos trabajando para proporcionar un control aún más granular.
+Wir ermöglichen Administratoren, den Zugang zum Speicher zu gewähren oder einzuschränken und sicherzustellen, dass nur autorisierte Benutzer diese Funktionalität nutzen können. Wir arbeiten daran, noch feinere Kontrolle zu bieten.
 
-## Perspectivas: Mejoras Futuras
+## Ausblick: Zukünftige Verbesserungen
 
-- **Autenticación de dos factores (2FA)** — capa adicional de protección de inicio de sesión
-- **Controles de acceso mejorados** — permisos a nivel de archivo
-- **Opciones avanzadas para compartir enlaces** — protección con contraseña y configuración de expiración
+- **Zwei-Faktor-Authentifizierung (2FA)** — zusätzliche Schutzebene beim Login
+- **Erweiterte Zugriffskontrollen** — Berechtigungen auf Dateiebene
+- **Erweiterte Link-Sharing-Optionen** — Passwortschutz und Ablaufeinstellungen
 
-No somos solo una herramienta para cineastas — somos un socio de confianza en tu viaje creativo.`,
+Wir sind nicht nur ein Tool für Filmemacher — wir sind ein vertrauenswürdiger Partner auf deiner kreativen Reise.`,
     relatedSlugs: ["card-anatomy", "delete-your-account", "get-support"],
   },
   {
     id: "fn-2",
     slug: "card-anatomy",
-    title: "Anatomía de una Tarjeta",
+    title: "Aufbau einer Karte",
     category: "functions",
-    content: `## Anatomía de una Tarjeta
+    content: `## Aufbau einer Karte
 
-### ¿De qué están compuestas las tarjetas?
+### Woraus bestehen Karten?
 
-Con las tarjetas en la herramienta, puedes crear workflows adaptados a las exigencias únicas de la producción cinematográfica. Las tarjetas son la base de esta plataforma — capturan ideas, documentan tareas y ejecutan iniciativas.
+Mit den Karten im Tool kannst du Workflows erstellen, die den einzigartigen Anforderungen der Filmproduktion angepasst sind. Karten sind das Fundament dieser Plattform — sie erfassen Ideen, dokumentieren Aufgaben und setzen Initiativen um.
 
-## Gestionar Tarjetas
+## Karten verwalten
 
-El contenedor de tarjeta muestra información de alto nivel: título, fecha de vencimiento, miembros del equipo asignados, estado del workflow, tamaño de tarea y adjuntos. Hacer clic en una tarjeta abre sus detalles.
+Der Karten-Container zeigt übergeordnete Informationen an: Titel, Fälligkeitsdatum, zugewiesene Teammitglieder, Workflow-Status, Aufgabengröße und Anhänge. Ein Klick auf eine Karte öffnet ihre Details.
 
-Puedes gestionar múltiples tarjetas marcando las casillas de verificación. Mantén **CTRL** y haz clic en una tarjeta para activar la casilla — una vez seleccionadas, puedes filtrar, mover, rechazar o eliminar a través de la barra de herramientas del tablero.
+Du kannst mehrere Karten verwalten, indem du die Kontrollkästchen markierst. Halte **STRG** gedrückt und klicke auf eine Karte, um das Kontrollkästchen zu aktivieren — einmal ausgewählt, kannst du über die Board-Toolbar filtern, verschieben, ablehnen oder löschen.
 
-## #BuenoSaberlo
+## #GutZuWissen
 
-Los bloques de tarjetas ofrecen flexibilidad permitiéndote personalizar las tarjetas para necesidades específicas. Algunos bloques se cargan por defecto y el bloque de descripción no puede ser eliminado.`,
+Kartenblöcke bieten Flexibilität, indem sie dir ermöglichen, Karten für spezifische Bedürfnisse anzupassen. Einige Blöcke werden standardmäßig geladen und der Beschreibungsblock kann nicht entfernt werden.`,
     relatedSlugs: ["add-or-remove-blocks", "pzaz-security-features", "your-pzaz-profile"],
   },
   {
     id: "fn-3",
     slug: "delete-your-account",
-    title: "Eliminar Tu Cuenta",
+    title: "Dein Konto löschen",
     category: "functions",
-    content: `## Eliminar Tu Cuenta
+    content: `## Dein Konto löschen
 
-Para eliminar permanentemente tu cuenta, contacta a nuestro equipo a través de la página de **Chat en Vivo** de la aplicación, ubicada en la sección **Obtener Ayuda**. Nuestro equipo procesará tu solicitud y eliminará tu cuenta de nuestra base de datos de forma segura.
+Um dein Konto dauerhaft zu löschen, kontaktiere unser Team über die **Live-Chat**-Seite der App im Bereich **Hilfe erhalten**. Unser Team wird deine Anfrage bearbeiten und dein Konto sicher aus unserer Datenbank entfernen.
 
-Ten en cuenta que estamos legalmente obligados a retener la información financiera, pero todos los demás datos serán eliminados permanentemente — esta acción es irreversible.
+Bitte beachte, dass wir gesetzlich verpflichtet sind, Finanzinformationen aufzubewahren, aber alle anderen Daten werden dauerhaft gelöscht — diese Aktion ist unwiderruflich.
 
-Antes de proceder, te animamos a compartir tus preocupaciones o comentarios. Estamos aquí para garantizar que tu experiencia cumpla con tus expectativas.
+Bevor du fortfährst, ermutigen wir dich, deine Bedenken oder dein Feedback mit uns zu teilen. Wir sind hier, um sicherzustellen, dass deine Erfahrung deinen Erwartungen entspricht.
 
-> **Advertencia:** La eliminación de la cuenta es permanente e irreversible. Todos tus proyectos y datos serán borrados.`,
+> **Warnung:** Die Kontolöschung ist dauerhaft und unwiderruflich. Alle deine Projekte und Daten werden gelöscht.`,
     relatedSlugs: ["cancelling-or-closing-your-account", "get-support", "leave-feedback"],
   },
   {
     id: "fn-4",
     slug: "cancelling-or-closing-your-account",
-    title: "Cancelar o Cerrar Tu Cuenta",
+    title: "Dein Konto kündigen oder schließen",
     category: "functions",
-    content: `## Cancelar o Cerrar Tu Cuenta
+    content: `## Dein Konto kündigen oder schließen
 
-Si deseas cerrar tu cuenta, contacta a nuestro equipo a través de la página de **Chat en Vivo** de la aplicación, ubicada en la sección **Obtener Ayuda**. Te asistiremos en el proceso.
+Wenn du dein Konto schließen möchtest, kontaktiere unser Team über die **Live-Chat**-Seite der App im Bereich **Hilfe erhalten**. Wir unterstützen dich bei dem Prozess.
 
-## Antes de Irte
+## Bevor du gehst
 
-Nos encantaría entender tu experiencia y cómo podemos mejorar. Si algo no funciona para ti, nuestro equipo de soporte está listo para ayudar — no dudes en contactarnos antes de tomar esta decisión.
+Wir würden gerne deine Erfahrung verstehen und erfahren, wie wir uns verbessern können. Wenn etwas für dich nicht funktioniert, ist unser Support-Team bereit zu helfen — zögere nicht, uns zu kontaktieren, bevor du diese Entscheidung triffst.
 
-> **Nota:** Si solo necesitas cancelar una suscripción en lugar de eliminar completamente tu cuenta, nuestro equipo puede asistirte a través del mismo canal de Chat en Vivo.`,
+> **Hinweis:** Wenn du nur ein Abonnement kündigen und nicht dein gesamtes Konto löschen möchtest, kann unser Team dich über denselben Live-Chat-Kanal unterstützen.`,
     relatedSlugs: ["delete-your-account", "get-support", "leave-feedback"],
   },
   {
     id: "fn-5",
     slug: "your-pzaz-profile",
-    title: "Tu Perfil de Pzaz",
+    title: "Dein Pzaz-Profil",
     category: "functions",
-    content: `## Tu Perfil de Pzaz
+    content: `## Dein Pzaz-Profil
 
-Tu perfil es tu identidad — tómate un momento para personalizarlo. Actualizar tus datos o agregar un avatar creativo asegura que tu cuenta refleje tu estilo.
+Dein Profil ist deine Identität — nimm dir einen Moment, um es zu personalisieren. Das Aktualisieren deiner Daten oder das Hinzufügen eines kreativen Avatars stellt sicher, dass dein Konto deinen Stil widerspiegelt.
 
-## Editar Tu Perfil
+## Dein Profil bearbeiten
 
-Para editar tu perfil, haz clic en el icono del menú en la esquina inferior izquierda. Desde ahí puedes:
+Um dein Profil zu bearbeiten, klicke auf das Menüsymbol in der unteren linken Ecke. Von dort aus kannst du:
 
-- **Cambiar tu nombre de usuario** — Cómo aparece tu nombre para los colaboradores
-- **Actualizar tu dirección de correo electrónico** — Mantén tus datos de contacto actualizados
-- **Restablecer tu contraseña** — Mantén la seguridad de la cuenta
-- **Subir una nueva foto de perfil** — Agrega un avatar que te represente`,
+- **Deinen Benutzernamen ändern** — Wie dein Name für Mitarbeiter angezeigt wird
+- **Deine E-Mail-Adresse aktualisieren** — Halte deine Kontaktdaten auf dem neuesten Stand
+- **Dein Passwort zurücksetzen** — Sorge für die Sicherheit deines Kontos
+- **Ein neues Profilbild hochladen** — Füge einen Avatar hinzu, der dich repräsentiert`,
     relatedSlugs: ["card-anatomy", "pzaz-security-features", "cancelling-or-closing-your-account"],
   },
   {
     id: "fn-6",
     slug: "add-or-remove-blocks",
-    title: "Agregar o Eliminar Bloques",
+    title: "Blöcke hinzufügen oder entfernen",
     category: "functions",
-    content: `## Agregar o Eliminar Bloques
+    content: `## Blöcke hinzufügen oder entfernen
 
-**Personaliza las Tarjetas para Máxima Flexibilidad**
+**Karten für maximale Flexibilität anpassen**
 
-Puedes personalizar las tarjetas para enriquecer tu workflow de producción agregando o eliminando funcionalidades.
+Du kannst Karten anpassen, um deinen Produktions-Workflow zu bereichern, indem du Funktionalitäten hinzufügst oder entfernst.
 
-## Cómo Funciona
+## So funktioniert es
 
-No todos los bloques son compatibles con cada tipo de tarjeta. Algunos se cargan por defecto, otros deben agregarse manualmente. El título y la descripción no son bloques y por lo tanto no pueden ser eliminados.
+Nicht alle Blöcke sind mit jedem Kartentyp kompatibel. Einige werden standardmäßig geladen, andere müssen manuell hinzugefügt werden. Titel und Beschreibung sind keine Blöcke und können daher nicht entfernt werden.
 
-Haz clic en el **icono 'Bloques'** en el encabezado de la tarjeta para agregar o eliminar un bloque.
+Klicke auf das **‚Blöcke'-Symbol** im Kartenkopf, um einen Block hinzuzufügen oder zu entfernen.
 
-## Puntos Clave
+## Wichtige Punkte
 
-- **Bloques por defecto** se cargan automáticamente al crear una tarjeta
-- **Bloques opcionales** pueden agregarse manualmente
-- **El título y la descripción** son permanentes y no pueden ser eliminados
-- La disponibilidad de bloques varía según el tipo de tarjeta`,
+- **Standardblöcke** werden beim Erstellen einer Karte automatisch geladen
+- **Optionale Blöcke** können manuell hinzugefügt werden
+- **Titel und Beschreibung** sind dauerhaft und können nicht entfernt werden
+- Die Verfügbarkeit von Blöcken variiert je nach Kartentyp`,
     relatedSlugs: ["card-anatomy", "your-pzaz-profile", "pzaz-security-features"],
   },
   {
     id: "fn-7",
     slug: "leave-feedback",
-    title: "Dejar Comentarios",
+    title: "Feedback geben",
     category: "functions",
-    content: `## Dejar Comentarios
+    content: `## Feedback geben
 
-**Ayuda a Dar Forma al Futuro**
+**Hilf mit, die Zukunft zu gestalten**
 
-¡Nos encantaría escucharte! Comparte tus impresiones — lo que te gusta, lo que podría mejorar y las nuevas funciones que te gustaría ver.
+Wir freuen uns auf dein Feedback! Teile deine Eindrücke — was dir gefällt, was verbessert werden könnte und welche neuen Funktionen du dir wünschst.
 
-## Cómo Dar Tu Opinión
+## So gibst du Feedback
 
-Tus ideas juegan un papel crucial para ayudarnos a priorizar funciones y refinar la plataforma para servir mejor a la comunidad cinematográfica y creativa.
+Deine Ideen spielen eine entscheidende Rolle, um uns bei der Priorisierung von Funktionen zu helfen und die Plattform besser auf die Film- und Kreativ-Community auszurichten.
 
-Comparte tus opiniones a través de la página de **Chat en Vivo** de la aplicación, en la sección **Obtener Ayuda**.
+Teile deine Meinung über die **Live-Chat**-Seite der App im Bereich **Hilfe erhalten**.
 
-¡Gracias por ayudarnos a crecer!`,
+Danke, dass du uns beim Wachsen hilfst!`,
     relatedSlugs: ["get-support", "reporting-a-bug", "cancelling-or-closing-your-account"],
   },
   {
     id: "fn-8",
     slug: "helpful-tools-for-capturing-screenshots-and-videos",
-    title: "Herramientas Útiles para Capturar Capturas de Pantalla y Videos",
+    title: "Nützliche Tools für Screenshots und Videos",
     category: "functions",
-    content: `## Herramientas Útiles para Capturar Capturas de Pantalla y Videos
+    content: `## Nützliche Tools für Screenshots und Videos
 
-Si usas Google Chrome, recomendamos la extensión **Nimbus Screen Shot and Video Recorder**. Esta herramienta te permite:
+Wenn du Google Chrome verwendest, empfehlen wir die Erweiterung **Nimbus Screen Shot and Video Recorder**. Dieses Tool ermöglicht dir:
 
-- Capturar capturas de pantalla completas o parciales
-- Grabar tu pantalla para mostrar el problema
-- Editar, anotar y guardar tus capturas o grabaciones
+- Vollständige oder teilweise Screenshots aufnehmen
+- Deinen Bildschirm aufzeichnen, um das Problem zu zeigen
+- Deine Aufnahmen bearbeiten, kommentieren und speichern
 
-Puedes adjuntar estos archivos a tu mensaje de soporte para una comunicación más precisa y una resolución más rápida.
+Du kannst diese Dateien an deine Support-Nachricht anhängen für eine präzisere Kommunikation und schnellere Lösung.
 
-## Por Qué es Útil
+## Warum das hilfreich ist
 
-Proporcionar contexto visual — capturas de pantalla o grabaciones de pantalla — acelera enormemente nuestra capacidad para diagnosticar y resolver problemas.
+Visuellen Kontext zu liefern — Screenshots oder Bildschirmaufnahmen — beschleunigt unsere Fähigkeit, Probleme zu diagnostizieren und zu lösen, erheblich.
 
-Nuestro equipo se compromete a brindarte la mejor experiencia posible.`,
+Unser Team ist bestrebt, dir die bestmögliche Erfahrung zu bieten.`,
     relatedSlugs: ["reporting-a-bug", "get-support", "leave-feedback"],
   },
   {
     id: "fn-9",
     slug: "reporting-a-bug",
-    title: "Reportar un Error",
+    title: "Einen Fehler melden",
     category: "functions",
-    content: `## Reportar un Error
+    content: `## Einen Fehler melden
 
-Si encuentras un error, proporciona todos los detalles posibles para ayudarnos a diagnosticar y resolver el problema eficientemente.
+Wenn du einen Fehler findest, liefere so viele Details wie möglich, um uns bei der effizienten Diagnose und Behebung zu helfen.
 
-## Qué Incluir
+## Was du einschließen solltest
 
-- **Una descripción detallada** del error
-- **Comportamiento esperado vs real** — lo que esperabas vs lo que ocurrió
-- **Pasos para reproducir** — los pasos específicos que provocaron el error
-- **Tu entorno** — el dispositivo, sistema operativo y navegador
-- **Capturas de pantalla o videos** — cualquier captura relevante
+- **Eine detaillierte Beschreibung** des Fehlers
+- **Erwartetes vs. tatsächliches Verhalten** — was du erwartet hast vs. was passiert ist
+- **Schritte zur Reproduktion** — die spezifischen Schritte, die den Fehler ausgelöst haben
+- **Deine Umgebung** — Gerät, Betriebssystem und Browser
+- **Screenshots oder Videos** — alle relevanten Aufnahmen
 
-## Cómo Reportar
+## So meldest du einen Fehler
 
-Contacta a nuestro equipo a través de la página de **Chat en Vivo** de la aplicación, en la sección **Obtener Ayuda**.
+Kontaktiere unser Team über die **Live-Chat**-Seite der App im Bereich **Hilfe erhalten**.
 
-> Consejo: Usa la extensión de Chrome Nimbus Screen Shot & Video Recorder para capturar y anotar fácilmente.`,
+> Tipp: Nutze die Chrome-Erweiterung Nimbus Screen Shot & Video Recorder zum einfachen Aufnehmen und Kommentieren.`,
     relatedSlugs: ["helpful-tools-for-capturing-screenshots-and-videos", "get-support", "leave-feedback"],
   },
   {
     id: "fn-10",
     slug: "get-support",
-    title: "Obtener Soporte",
+    title: "Support erhalten",
     category: "functions",
-    content: `## Obtener Soporte
+    content: `## Support erhalten
 
-### ¡Estamos Aquí para Ayudarte!
+### Wir sind für dich da!
 
-¿Tienes un problema o necesitas orientación? Nuestro equipo está listo para asistirte.
+Hast du ein Problem oder brauchst du Orientierung? Unser Team steht bereit, dir zu helfen.
 
-## Cómo Contactarnos
+## So kontaktierst du uns
 
-Contacta a nuestro equipo a través de la página de **Chat en Vivo** de la aplicación, en la sección **Obtener Ayuda**. Un miembro del equipo responderá rápidamente.
+Kontaktiere unser Team über die **Live-Chat**-Seite der App im Bereich **Hilfe erhalten**. Ein Teammitglied wird schnell antworten.
 
-## Cómo Podemos Ayudarte
+## Wie wir dir helfen können
 
-- Problemas técnicos y errores
-- Consultas de cuenta y facturación
-- Orientación sobre funciones
-- Comentarios y solicitudes de funciones
-- Preguntas generales sobre el producto`,
+- Technische Probleme und Fehler
+- Konto- und Rechnungsfragen
+- Funktionsanleitung
+- Feedback und Feature-Wünsche
+- Allgemeine Produktfragen`,
     relatedSlugs: ["reporting-a-bug", "leave-feedback", "helpful-tools-for-capturing-screenshots-and-videos"],
   },
 
-  // Herramientas y Funcionalidades
+  // Werkzeuge und Funktionen
   {
     id: "tf-1",
     slug: "script-breakdown",
-    title: "Desglose de Guion",
+    title: "Drehbuchanalyse",
     category: "tools-and-features",
-    content: `## Desglose de Guion
+    content: `## Drehbuchanalyse
 
-## Introducción
+## Einführung
 
-Nos complace presentar la función de **Desglose de Guion** — una herramienta poderosa diseñada para ayudarte a preparar y planificar tu producción cinematográfica o televisiva con más detalle que nunca.
+Wir freuen uns, die **Drehbuchanalyse**-Funktion vorzustellen — ein leistungsstarkes Werkzeug, das dir hilft, deine Film- oder TV-Produktion detaillierter als je zuvor vorzubereiten und zu planen.
 
-Esta función te permite usar tu guion como base para organizar todo lo que necesitarás para la producción — desde utilería y vestuario hasta locaciones y reparto.
+Diese Funktion ermöglicht es dir, dein Drehbuch als Grundlage zu nutzen, um alles zu organisieren, was du für die Produktion benötigst — von Requisiten und Kostümen bis hin zu Drehorten und Besetzung.
 
-## Para Empezar
+## Loslegen
 
-Primero, crea o sube tu guion. Una vez subido, tu guion será tratado como el **guion maestro** — solo este será analizado para el desglose.
+Erstelle oder lade zuerst dein Drehbuch hoch. Einmal hochgeladen, wird dein Drehbuch als **Hauptdrehbuch** behandelt — nur dieses wird für die Analyse herangezogen.
 
-La aplicación generará automáticamente una lista de todas las escenas. Selecciona **Desglose** en el menú de navegación.
+Die App generiert automatisch eine Liste aller Szenen. Wähle **Analyse** im Navigationsmenü.
 
-## Funcionalidades
+## Funktionen
 
-- **Generar automáticamente una lista de escenas** a partir del guion maestro
-- **Ver metadatos de escena** — presencia de personajes y cobertura
-- **Etiquetar elementos esenciales** — reparto, utilería, vehículos, vestuario, acrobacias, efectos especiales, etc.
-- **Organizar con resaltados de colores** por categoría
-- **Buscar y filtrar elementos etiquetados**
-- **Crear o eliminar categorías personalizadas**
+- **Automatisch eine Szenenliste generieren** aus dem Hauptdrehbuch
+- **Szenen-Metadaten anzeigen** — Figurenpräsenz und Abdeckung
+- **Wesentliche Elemente markieren** — Besetzung, Requisiten, Fahrzeuge, Kostüme, Stunts, Spezialeffekte usw.
+- **Mit farblicher Hervorhebung** nach Kategorie organisieren
+- **Markierte Elemente suchen und filtern**
+- **Benutzerdefinierte Kategorien erstellen oder löschen**
 
-## Etiquetar Elementos en Tu Guion
+## Elemente in deinem Drehbuch markieren
 
-1. Navega a la sección **Desglose** y selecciona la escena
-2. En la vista enfocada, resalta la palabra o frase a etiquetar
-3. Aparecerá un popup — elige la sección y categoría
-4. Haz clic en **Etiquetar** — el elemento se resaltará con un código de color
+1. Navigiere zum Bereich **Analyse** und wähle die Szene
+2. Markiere in der fokussierten Ansicht das Wort oder den Satz
+3. Ein Popup erscheint — wähle den Bereich und die Kategorie
+4. Klicke auf **Markieren** — das Element wird farblich hervorgehoben
 
-## ¿Qué Sigue?
+## Was kommt als Nächstes?
 
-Después del etiquetado, todos los elementos relevantes aparecerán automáticamente en sus respectivas secciones de la aplicación.`,
+Nach dem Markieren erscheinen alle relevanten Elemente automatisch in ihren jeweiligen App-Bereichen.`,
     relatedSlugs: ["scenes", "storyboard", "stripboard"],
   },
   {
     id: "tf-2",
     slug: "documents-section",
-    title: "Sección de Documentos",
+    title: "Dokumenten-Bereich",
     category: "tools-and-features",
-    content: `## Sección de Documentos
+    content: `## Dokumenten-Bereich
 
-### Introducción
+### Einführung
 
-¡Hemos reintroducido la sección de Documentos gracias a los comentarios de nuestros usuarios!
+Wir haben den Dokumenten-Bereich dank des Feedbacks unserer Nutzer wieder eingeführt!
 
-## Para Empezar
+## Loslegen
 
-La sección de Documentos te permite crear un número ilimitado de libros y páginas. Cada página debe estar contenida dentro de un libro. Haz clic en el campo de texto en la parte superior de la pantalla, ingresa un título y presiona Enter.
+Der Dokumenten-Bereich ermöglicht es dir, eine unbegrenzte Anzahl von Büchern und Seiten zu erstellen. Jede Seite muss in einem Buch enthalten sein. Klicke auf das Textfeld oben auf dem Bildschirm, gib einen Titel ein und drücke Enter.
 
-## Funcionalidades
+## Funktionen
 
-- Crea un número ilimitado de páginas en un número ilimitado de libros
-- Formatea con encabezados (H1–H6), viñetas, listas numeradas e hipervínculos
-- Organiza toda la documentación de tu proyecto en un solo lugar
-- Crea cualquier tipo de documento — desde tratamientos hasta procedimientos en el set
+- Erstelle eine unbegrenzte Anzahl von Seiten in unbegrenzt vielen Büchern
+- Formatiere mit Überschriften (H1–H6), Aufzählungszeichen, nummerierten Listen und Hyperlinks
+- Organisiere alle Projektdokumente an einem Ort
+- Erstelle jede Art von Dokument — von Treatments bis hin zu Set-Verfahren
 
-Para cualquier asistencia, contacta al equipo de soporte a través del Chat en Vivo.`,
+Für Unterstützung kontaktiere das Support-Team über den Live-Chat.`,
     relatedSlugs: ["your-filmspace", "manage-section", "card-blocks"],
   },
   {
     id: "tf-3",
     slug: "manage-section",
-    title: "Sección Gestionar",
+    title: "Verwalten-Bereich",
     category: "tools-and-features",
-    content: `## Sección Gestionar
+    content: `## Verwalten-Bereich
 
-### Tu Tablero Personal
+### Dein persönliches Dashboard
 
-El tablero personal es tu espacio para ver el trabajo y las tareas que solo te conciernen. Verás dos tipos de elementos:
+Das persönliche Dashboard ist dein Bereich, um Arbeit und Aufgaben zu sehen, die nur dich betreffen. Du siehst zwei Arten von Elementen:
 
-1. **Todos** — tareas visibles solo para ti.
-2. **Tarjetas de workflow** — si eres propietario de una tarjeta de workflow o has sido agregado a ella, también aparecerá aquí.
+1. **Alle** — Aufgaben, die nur für dich sichtbar sind.
+2. **Workflow-Karten** — wenn du Eigentümer einer Workflow-Karte bist oder ihr hinzugefügt wurdest, erscheint sie auch hier.
 
-El tablero se divide en dos secciones — la bandeja de entrada (lista a la izquierda) y las columnas del tablero (a la derecha). Puedes arrastrar y soltar los todos o tarjetas de la lista a las columnas.
+Das Dashboard ist in zwei Bereiche unterteilt — den Posteingang (Liste links) und die Board-Spalten (rechts). Du kannst Todos oder Karten per Drag-and-Drop von der Liste in die Spalten ziehen.
 
-Para agregar columnas adicionales, haz clic en el icono **"+"** en la parte superior de cualquier columna.
+Um zusätzliche Spalten hinzuzufügen, klicke auf das **„+"**-Symbol oben in einer beliebigen Spalte.
 
-## Tablero de Workflow
+## Workflow-Board
 
-El propietario del Filmspace puede crear tantos tableros de workflow como desee con el botón **"+ Nuevo Workflow"**.
+Der Filmspace-Eigentümer kann beliebig viele Workflow-Boards mit dem Button **„+ Neuer Workflow"** erstellen.
 
-Solo las tarjetas serán visibles en un tablero de workflow, no los todos personales.`,
+Nur Karten sind in einem Workflow-Board sichtbar, nicht die persönlichen Todos.`,
     relatedSlugs: ["board-views", "personal-to-dos", "getting-started-with-workflows"],
   },
   {
     id: "tf-4",
     slug: "shots",
-    title: "Planos",
+    title: "Einstellungen",
     category: "tools-and-features",
-    content: `## Planos
+    content: `## Einstellungen
 
-### Planifica y rastrea todos los planos individuales de tu película.
+### Plane und verfolge alle einzelnen Einstellungen deines Films.
 
-La función de Planos te permite desglosar cada escena en planos de cámara específicos y organizarlos según tu cronograma de rodaje.
+Die Einstellungen-Funktion ermöglicht es dir, jede Szene in spezifische Kameraeinstellungen aufzugliedern und sie nach deinem Drehplan zu organisieren.
 
-## ¿Cómo Puede Ayudarme la Función de Planos?
+## Wie kann die Einstellungen-Funktion mir helfen?
 
-Como productor, director u otra persona involucrada en una producción, puedes estar seguro de que la función de Planos te permite registrar toda la información relevante — ángulos de cámara, movimientos requeridos, lentes específicos, etc.
+Als Produzent, Regisseur oder andere beteiligte Person einer Produktion kannst du sicher sein, dass die Einstellungen-Funktion es dir ermöglicht, alle relevanten Informationen zu erfassen — Kamerawinkel, erforderliche Bewegungen, spezifische Objektive usw.
 
-Además, la herramienta contiene un **asistente de IA** integrado que puede generar automáticamente imágenes de vista previa para cada uno de tus planos, basándose en las indicaciones que proporciones.
+Zusätzlich enthält das Tool einen integrierten **KI-Assistenten**, der automatisch Vorschaubilder für jede deiner Einstellungen generieren kann, basierend auf den von dir bereitgestellten Beschreibungen.
 
-Puedes enviar indicaciones 'positivas' y 'negativas'. La IA puede generar tus imágenes en diferentes estilos — fotográfico, futurista, anime, ¡etc.!`,
+Du kannst ‚positive' und ‚negative' Beschreibungen eingeben. Die KI kann deine Bilder in verschiedenen Stilen generieren — fotografisch, futuristisch, Anime und mehr!`,
     relatedSlugs: ["scenes", "storyboard", "script-breakdown"],
   },
   {
     id: "tf-5",
     slug: "scenes",
-    title: "Escenas",
+    title: "Szenen",
     category: "tools-and-features",
-    content: `## Escenas
+    content: `## Szenen
 
-### Organiza y gestiona la estructura narrativa de tu película; desglosa tu guion en escenas y rastrea su progreso durante la producción.
+### Organisiere und verwalte die Erzählstruktur deines Films; gliedere dein Drehbuch in Szenen und verfolge ihren Fortschritt während der Produktion.
 
-La función de Escenas te permite dividir tu guion en unidades manejables y rastrear el estado de cada escena a lo largo del proceso de producción.
+Die Szenen-Funktion ermöglicht es dir, dein Drehbuch in handhabbare Einheiten aufzuteilen und den Status jeder Szene im gesamten Produktionsprozess zu verfolgen.
 
-## ¿Cómo Funciona?
+## Wie funktioniert es?
 
-- Al entrar en la sección de Escenas por primera vez, selecciona un guion del menú de la izquierda
-- Una vez seleccionado el guion, cada escena generará un panel
-- Nuestra herramienta te permite usar el **Asistente de IA** para generar una imagen de vista previa para cada escena
-- Tienes gran flexibilidad — puedes generar imágenes en muchos estilos y proporcionar indicaciones muy variadas. ¡También puedes subir tus propias imágenes!`,
+- Beim ersten Betreten des Szenen-Bereichs wähle ein Drehbuch aus dem linken Menü
+- Sobald das Drehbuch ausgewählt ist, wird für jede Szene ein Panel generiert
+- Unser Tool ermöglicht es dir, den **KI-Assistenten** zu verwenden, um ein Vorschaubild für jede Szene zu generieren
+- Du hast große Flexibilität — du kannst Bilder in vielen Stilen generieren und sehr unterschiedliche Beschreibungen bereitstellen. Du kannst auch eigene Bilder hochladen!`,
     relatedSlugs: ["shots", "storyboard", "script-breakdown"],
   },
   {
@@ -511,32 +511,32 @@ La función de Escenas te permite dividir tu guion en unidades manejables y rast
     category: "tools-and-features",
     content: `## Storyboard
 
-### Organiza y visualiza los momentos clave y planos de tu película
+### Organisiere und visualisiere die Schlüsselmomente und Einstellungen deines Films
 
-La función de Storyboard te ayuda a planificar visualmente y organizar las escenas clave de tu película — desglosa cada escena en planos individuales y represéntalos con imágenes, dibujos o notas.
+Die Storyboard-Funktion hilft dir, die Schlüsselszenen deines Films visuell zu planen und zu organisieren — gliedere jede Szene in einzelne Einstellungen und stelle sie mit Bildern, Zeichnungen oder Notizen dar.
 
-## Dónde Encontrarlo
+## Wo du es findest
 
-Encontrarás el **Storyboard** en la sección **"Preproducción"** del menú de navegación izquierdo.
+Du findest das **Storyboard** im Abschnitt **„Vorproduktion"** des linken Navigationsmenüs.
 
-## Dos Formas de Crear Tu Storyboard
+## Zwei Wege, dein Storyboard zu erstellen
 
-### 1. Auto-Generación desde el Guion Maestro
+### 1. Automatische Generierung aus dem Hauptdrehbuch
 
-Sube tu guion y la aplicación extraerá automáticamente tus escenas. Cada escena se convierte en su propio storyboard — listo para agregar planos, ángulos de cámara y detalles.
+Lade dein Drehbuch hoch und die App extrahiert automatisch deine Szenen. Jede Szene wird zu ihrem eigenen Storyboard — bereit zum Hinzufügen von Einstellungen, Kamerawinkeln und Details.
 
-### 2. Construir desde Cero
+### 2. Von Grund auf erstellen
 
-Crea un storyboard personalizado y agrega escenas manualmente — ideal para proyectos experimentales o documentales.
+Erstelle ein benutzerdefiniertes Storyboard und füge Szenen manuell hinzu — ideal für experimentelle oder dokumentarische Projekte.
 
-## Agrega Planos Detallados a Cada Escena
+## Detaillierte Einstellungen zu jeder Szene hinzufügen
 
-- Ubicación y momento de la escena
-- Diálogos de los personajes
-- Detalles del plano (ángulo, movimiento, tamaño)
-- Información de cámara
-- Temporización
-- Comentarios y notas`,
+- Schauplatz und Zeitpunkt der Szene
+- Figurendialoge
+- Einstellungsdetails (Winkel, Bewegung, Größe)
+- Kamerainformationen
+- Timing
+- Kommentare und Notizen`,
     relatedSlugs: ["scenes", "shots", "stripboard"],
   },
   {
@@ -546,71 +546,71 @@ Crea un storyboard personalizado y agrega escenas manualmente — ideal para pro
     category: "tools-and-features",
     content: `## Stripboard
 
-### Organiza y agiliza tu cronograma de producción
+### Organisiere und optimiere deinen Produktionszeitplan
 
-La función Stripboard está diseñada para ayudarte a gestionar tu cronograma de rodaje. Te permite desglosar tu guion en escenas y organizarlas visualmente para planificar cada día de rodaje.
+Die Stripboard-Funktion ist dafür konzipiert, dir bei der Verwaltung deines Drehplans zu helfen. Sie ermöglicht es dir, dein Drehbuch in Szenen aufzugliedern und sie visuell zu organisieren, um jeden Drehtag zu planen.
 
-## ¿Cómo Usar el Stripboard Eficientemente?
+## Wie nutzt du das Stripboard effizient?
 
-Primero crea un guion. Abre la sección Stripboard, selecciona un guion existente del menú izquierdo — verás un desglose claro de cada escena. Luego asigna días de rodaje y recursos.
+Erstelle zuerst ein Drehbuch. Öffne den Stripboard-Bereich und wähle ein bestehendes Drehbuch aus dem linken Menü — du siehst eine klare Aufgliederung jeder Szene. Weise dann Drehtage und Ressourcen zu.
 
-Puedes:
+Du kannst:
 
-- Mover escenas cuando cambie el cronograma
-- Monitorear la disponibilidad del equipo y locaciones
-- Rastrear qué escenas están listas, en progreso o completadas
-- Visualizar todo el flujo de producción de principio a fin`,
+- Szenen verschieben, wenn sich der Zeitplan ändert
+- Die Verfügbarkeit von Crew und Drehorten überwachen
+- Verfolgen, welche Szenen fertig, in Bearbeitung oder abgeschlossen sind
+- Den gesamten Produktionsablauf von Anfang bis Ende visualisieren`,
     relatedSlugs: ["call-sheets", "scenes", "storyboard"],
   },
   {
     id: "tf-8",
     slug: "call-sheets",
-    title: "Hojas de Llamado",
+    title: "Dispositionslisten",
     category: "tools-and-features",
-    content: `## Hojas de Llamado
+    content: `## Dispositionslisten
 
-### Coordina y comunica la logística de tu rodaje
+### Koordiniere und kommuniziere die Logistik deines Drehs
 
-La función de Hojas de Llamado te permite organizar y distribuir los cronogramas diarios a tu equipo — todos saben dónde estar y cuándo.
+Die Dispositionslisten-Funktion ermöglicht es dir, die Tagespläne für dein Team zu organisieren und zu verteilen — jeder weiß, wo er wann sein muss.
 
-## ¿Cómo Usar las Hojas de Llamado?
+## Wie nutzt du die Dispositionslisten?
 
-Comienza planificando los días de rodaje e ingresa los detalles pertinentes:
+Beginne mit der Planung der Drehtage und gib die relevanten Details ein:
 
-- Hora de llamado para cada miembro del equipo
-- Información de locación
-- Requisitos especiales del día
+- Startzeit für jedes Teammitglied
+- Drehort-Informationen
+- Besondere Anforderungen des Tages
 
-Puedes distribuir las hojas de llamado por correo electrónico directamente desde la plataforma.
+Du kannst die Dispositionslisten per E-Mail direkt von der Plattform aus verteilen.
 
-La aplicación permite rastrear la disponibilidad del equipo y gestionar los cambios. Las actualizaciones en tiempo real y las notificaciones instantáneas están disponibles.`,
+Die App ermöglicht es, die Crew-Verfügbarkeit zu verfolgen und Änderungen zu verwalten. Echtzeit-Updates und sofortige Benachrichtigungen sind verfügbar.`,
     relatedSlugs: ["stripboard", "department", "roles-permissions-in-pzaz"],
   },
   {
     id: "tf-9",
     slug: "department",
-    title: "Sección de Producción",
+    title: "Produktions-Bereich",
     category: "tools-and-features",
-    content: `## Sección de Producción
+    content: `## Produktions-Bereich
 
-### Gestiona todos los aspectos de tu proceso de producción en un hub centralizado.
+### Verwalte alle Aspekte deines Produktionsprozesses in einem zentralen Hub.
 
-La sección de Producción de la aplicación proporciona herramientas para rastrear todo lo que necesitas para que tu producción funcione sin problemas.
+Der Produktions-Bereich der App bietet Werkzeuge, um alles zu verfolgen, was du für einen reibungslosen Produktionsablauf benötigst.
 
-## ¿Qué Contiene esta Sección?
+## Was enthält dieser Bereich?
 
-La sección de Producción comprende: **Casting, Equipo, Locaciones, Elementos y Equipamiento**.
+Der Produktions-Bereich umfasst: **Besetzung, Crew, Drehorte, Elemente und Ausrüstung**.
 
-## ¿Cómo Puede Ayudarme la Sección de Producción?
+## Wie kann der Produktions-Bereich mir helfen?
 
-Desde la coordinación de tareas entre equipos hasta el seguimiento del estado de los elementos de producción — la función de Producción proporciona todas las herramientas para mantener todo sincronizado.
+Von der Koordination von Aufgaben zwischen Teams bis zur Statusverfolgung von Produktionselementen — die Produktionsfunktion bietet alle Werkzeuge, um alles synchron zu halten.
 
-Puedes agregar toda la información relevante:
+Du kannst alle relevanten Informationen hinzufügen:
 
-- Detalles financieros
-- Detalles de la compañía o agencia
-- Detalles y direcciones de recogida
-- Comentarios ilimitados`,
+- Finanzdaten
+- Firma oder Agentur-Details
+- Abhol-Details und Adressen
+- Unbegrenzte Kommentare`,
     relatedSlugs: ["call-sheets", "script-breakdown", "roles-permissions-in-pzaz"],
   },
   {
@@ -620,261 +620,227 @@ Puedes agregar toda la información relevante:
     category: "tools-and-features",
     content: `## Moodboard
 
-### Registra tus ideas para el tono y estilo de tu proyecto
+### Halte deine Ideen für Ton und Stil deines Projekts fest
 
-La función **Moodboard** permite a los cineastas conceptualizar visualmente y comunicar la estética y el tono de sus proyectos — una herramienta creativa para compilar imágenes, paletas de colores y elementos de diseño.
+Die **Moodboard**-Funktion ermöglicht es Filmemachern, die Ästhetik und den Ton ihrer Projekte visuell zu konzipieren und zu kommunizieren — ein kreatives Werkzeug zum Zusammenstellen von Bildern, Farbpaletten und Designelementen.
 
-## ¿Qué Puedes Hacer?
+## Was kannst du tun?
 
-- **Compilación Visual** — Reúne y organiza elementos para crear una representación visual cohesiva
-- **Diferentes Tipos de Elementos** — Agrega imágenes, colores específicos (formato RGBA) y fuentes (formato TTF)
-- **Edición Colaborativa** — Comparte los moodboards con los miembros del equipo para una dirección visual unificada`,
+- **Visuelle Zusammenstellung** — Sammle und organisiere Elemente, um eine stimmige visuelle Darstellung zu erstellen
+- **Verschiedene Element-Typen** — Füge Bilder, spezifische Farben (RGBA-Format) und Schriftarten (TTF-Format) hinzu
+- **Kollaborative Bearbeitung** — Teile Moodboards mit Teammitgliedern für eine einheitliche visuelle Ausrichtung`,
     relatedSlugs: ["scenes", "storyboard", "documents-section"],
   },
   {
     id: "tf-11",
     slug: "team-chats",
-    title: "Chats de Equipo",
+    title: "Team-Chats",
     category: "tools-and-features",
-    content: `## Chats de Equipo
+    content: `## Team-Chats
 
-### Mejora la comunicación de tu proyecto con los Chats de Equipo
+### Verbessere die Projektkommunikation mit Team-Chats
 
-La comunicación efectiva es vital en la producción cinematográfica y de video. La función de mensajería ofrece capacidades de mensajería en tiempo real, permitiendo una colaboración fluida entre los miembros del equipo.
+Effektive Kommunikation ist in der Film- und Videoproduktion unerlässlich. Die Messaging-Funktion bietet Echtzeit-Nachrichtenfähigkeiten für eine nahtlose Zusammenarbeit zwischen Teammitgliedern.
 
-## ¿Qué Ofrece la Función de Chat de Equipo?
+## Was bietet die Team-Chat-Funktion?
 
-- **Mensajería en Tiempo Real** — Conversaciones instantáneas para resolver problemas rápidamente
-- **Versatilidad** — Mensajes de voz, emojis y adjuntos de archivos
-- **Chats de Grupo** — Discusiones entre múltiples miembros, departamentos o grupos de proyecto
-- **Integración con Otras Herramientas** — Hub de comunicación centralizado complementario a la gestión de tareas`,
+- **Echtzeit-Nachrichten** — Sofortige Gespräche zur schnellen Problemlösung
+- **Vielseitigkeit** — Sprachnachrichten, Emojis und Dateianhänge
+- **Gruppenchats** — Diskussionen zwischen mehreren Mitgliedern, Abteilungen oder Projektgruppen
+- **Integration mit anderen Tools** — Zentraler Kommunikations-Hub als Ergänzung zum Aufgabenmanagement`,
     relatedSlugs: ["file-sharing-media-storage", "add-and-remove-team-members-filmspace", "your-filmspace"],
   },
   {
     id: "tf-12",
     slug: "file-sharing-media-storage",
-    title: "Compartir Archivos y Almacenamiento de Medios",
+    title: "Dateifreigabe und Medienspeicher",
     category: "tools-and-features",
-    content: `## Compartir Archivos y Almacenamiento de Medios
+    content: `## Dateifreigabe und Medienspeicher
 
-### Simplifica la gestión y el intercambio de tus archivos y medios
+### Vereinfache die Verwaltung und den Austausch deiner Dateien und Medien
 
-Nuestra función **Drive** proporciona un repositorio centralizado para todos los documentos y medios relacionados con la producción.
+Unsere **Drive**-Funktion bietet ein zentrales Repository für alle produktionsbezogenen Dokumente und Medien.
 
-## Funcionalidades Detalladas
+## Detaillierte Funktionen
 
-- **Almacenamiento Centralizado** — Almacena guiones, storyboards, cronogramas y documentos esenciales en un solo lugar seguro
-- **Integraciones Fluidas** — La aplicación se integra con Google Drive, Slack y Adobe Suite
-- **Control de Versiones** — Rastrea cambios y mantén el historial de versiones`,
+- **Zentraler Speicher** — Speichere Drehbücher, Storyboards, Zeitpläne und wichtige Dokumente an einem sicheren Ort
+- **Nahtlose Integrationen** — Die App integriert sich mit Google Drive, Slack und Adobe Suite
+- **Versionskontrolle** — Verfolge Änderungen und behalte den Versionsverlauf`,
     relatedSlugs: ["team-chats", "documents-section", "your-filmspace"],
   },
   {
     id: "tf-13",
     slug: "budgeting",
-    title: "Presupuesto",
+    title: "Budgetierung",
     category: "tools-and-features",
-    content: `## Presupuesto
+    content: `## Budgetierung
 
-**¿Cómo Funciona el Presupuesto en la Aplicación?**
+**Wie funktioniert die Budgetierung in der App?**
 
-Nuestra aplicación ofrece una herramienta de presupuesto automatizada diseñada para simplificar la planificación financiera de producciones cinematográficas y de video. Al integrar el presupuesto directamente con la escritura de guiones, los desgloses y la planificación.
+Unsere App bietet ein automatisiertes Budgetierungs-Tool, das die Finanzplanung für Film- und Videoproduktionen vereinfacht. Durch die direkte Integration der Budgetierung mit Drehbuchschreiben, Analysen und Planung.
 
-## ¿Qué Significa 'Por Encima' y 'Por Debajo' de la Línea?
+## Was bedeutet ‚Above' und ‚Below the Line'?
 
-- **Costos Por Encima de la Línea (ATL)** — Costos fijos e iniciales asociados con roles creativos y de toma de decisiones (guionistas, directores, productores)
-- **Costos Por Debajo de la Línea (BTL)** — Gastos variables de producción (salarios del equipo, alquiler de equipos, tarifas de locación)
+- **Kosten Above the Line (ATL)** — Fixe und anfängliche Kosten für kreative und Entscheidungsrollen (Drehbuchautoren, Regisseure, Produzenten)
+- **Kosten Below the Line (BTL)** — Variable Produktionskosten (Crew-Gehälter, Ausrüstungsmiete, Drehort-Gebühren)
 
-La aplicación te permite ver los costos ATL o BTL por separado o combinados.
+Die App ermöglicht es dir, ATL- oder BTL-Kosten separat oder kombiniert anzuzeigen.
 
-## Funciones Clave de la Herramienta de Presupuesto
+## Schlüsselfunktionen des Budgetierungs-Tools
 
-- **Menú Izquierdo** — Categorías: Por Encima de la Línea, Por Debajo de la Línea y Vista de Presupuesto Combinada
-- **Panel Derecho** — Todas las partidas presupuestarias, con selección de moneda flexible (Euros, Libras, Dólares)
-- **Monto total** mostrado en la esquina superior derecha
+- **Linkes Menü** — Kategorien: Above the Line, Below the Line und Kombinierte Budgetansicht
+- **Rechtes Panel** — Alle Budgetposten mit flexibler Währungsauswahl (Euro, Pfund, Dollar)
+- **Gesamtbetrag** in der oberen rechten Ecke angezeigt
 
-## Agregar y Gestionar Partidas Presupuestarias
+## Budgetposten hinzufügen und verwalten
 
-Haz clic en el botón morado, selecciona el tipo, ingresa el nombre y presiona Enter.
+Klicke auf den lila Button, wähle den Typ, gib den Namen ein und drücke Enter.
 
-## Exportar Tu Presupuesto
+## Dein Budget exportieren
 
-Exporta en **PDF** o **Excel (.xls)**.`,
+Exportiere als **PDF** oder **Excel (.xls)**.`,
     relatedSlugs: ["department", "script-breakdown", "your-filmspace"],
   },
   {
     id: "tf-14",
     slug: "board-views",
-    title: "Vistas de Tablero",
+    title: "Board-Ansichten",
     category: "tools-and-features",
-    content: `## Vistas de Tablero
+    content: `## Board-Ansichten
 
-### ¿Qué son los Tableros?
+### Was sind Boards?
 
-Los tableros de workflow ofrecen una vista híbrida — una lista de elementos a la izquierda y una vista en columnas a la derecha. Puedes mover fácilmente los Todos y Tarjetas entre estas dos secciones.
+Workflow-Boards bieten eine hybride Ansicht — eine Elementliste links und eine Spaltenansicht rechts. Du kannst Todos und Karten einfach zwischen diesen beiden Bereichen verschieben.
 
-## Gestión Flexible de Workflows
+## Flexible Workflow-Verwaltung
 
-La vista en columnas se organiza en columnas verticales representando las etapas del workflow. Las tarjetas pueden moverse entre columnas a medida que avanzan. Puedes agregar, eliminar y renombrar estas columnas fácilmente.
+Die Spaltenansicht ist in vertikale Spalten organisiert, die die Workflow-Phasen darstellen. Karten können zwischen Spalten verschoben werden, wenn sie fortschreiten. Du kannst diese Spalten einfach hinzufügen, entfernen und umbenennen.
 
-Por ejemplo, podrías nombrar las columnas "Preproducción" o "Revisión" — o simplemente "Por hacer", "Haciendo" y "Hecho".`,
+Beispielsweise könntest du die Spalten „Vorproduktion" oder „Review" nennen — oder einfach „Zu erledigen", „In Bearbeitung" und „Erledigt".`,
     relatedSlugs: ["manage-section", "personal-to-dos", "getting-started-with-workflows"],
   },
   {
     id: "tf-15",
     slug: "add-and-remove-team-members-filmspace",
-    title: "Agregar y Eliminar Miembros del Equipo – Filmspace",
+    title: "Teammitglieder hinzufügen und entfernen – Filmspace",
     category: "tools-and-features",
-    content: `## Agregar y Eliminar Miembros del Equipo – Filmspace
+    content: `## Teammitglieder hinzufügen und entfernen – Filmspace
 
-Invita a personas a unirse a tu equipo o agrega colaboradores a tu Filmspace para colaborar en tus proyectos creativos.
+Lade Personen ein, deinem Team beizutreten, oder füge Mitarbeiter zu deinem Filmspace hinzu, um an deinen kreativen Projekten zusammenzuarbeiten.
 
-## Agregar Miembros del Equipo
+## Teammitglieder hinzufügen
 
-Navega a **Perfil y Configuración** y haz clic en **Invitar Miembros**. Ingresa el nombre y dirección de correo electrónico, opcionalmente agrega una nota personal, y haz clic en **Enviar Invitación**. Una vez aceptada, la persona accederá a tu Filmspace.
+Navigiere zu **Profil und Einstellungen** und klicke auf **Mitglieder einladen**. Gib Name und E-Mail-Adresse ein, füge optional eine persönliche Notiz hinzu und klicke auf **Einladung senden**. Nach Annahme hat die Person Zugang zu deinem Filmspace.
 
-## Eliminar Miembros del Equipo
+## Teammitglieder entfernen
 
-Abre **Configuración**. Haz clic en el **icono de Más Opciones (tres puntos)** junto al miembro y confirma.
+Öffne **Einstellungen**. Klicke auf das **Weitere-Optionen-Symbol (drei Punkte)** neben dem Mitglied und bestätige.
 
-## #BuenoSaberlo
+## #GutZuWissen
 
-Solo los **Propietarios de Filmspace** pueden agregar o eliminar miembros del equipo.`,
+Nur **Filmspace-Eigentümer** können Teammitglieder hinzufügen oder entfernen.`,
     relatedSlugs: ["roles-permissions-in-pzaz", "your-filmspace", "team-chats"],
   },
   {
     id: "tf-16",
     slug: "roles-permissions-in-pzaz",
-    title: "Roles y Permisos en Pzaz",
+    title: "Rollen und Berechtigungen in Pzaz",
     category: "tools-and-features",
-    content: `## Roles y Permisos en Pzaz
+    content: `## Rollen und Berechtigungen in Pzaz
 
-### Roles y Permisos Actualizados
+### Aktualisierte Rollen und Berechtigungen
 
-Cada miembro de Filmspace tiene un rol con permisos específicos. Hay cinco roles principales:
+Jedes Filmspace-Mitglied hat eine Rolle mit spezifischen Berechtigungen. Es gibt fünf Hauptrollen:
 
-1. **Propietario del Filmspace** — Control total sobre el Filmspace, facturación y todas las configuraciones
-2. **Administrador del Filmspace** — Puede compartir tareas administrativas
-3. **Líder Creativo** — Enfocado en la dirección creativa y decisiones editoriales
-4. **Miembro del Equipo** — Acceso de trabajo completo; puede crear su propio Filmspace
-5. **Colaborador** — Acceso mínimo, específico para tareas asignadas, sin puesto de pago
+1. **Filmspace-Eigentümer** — Volle Kontrolle über den Filmspace, Abrechnung und alle Einstellungen
+2. **Filmspace-Administrator** — Kann administrative Aufgaben teilen
+3. **Kreativleitung** — Fokussiert auf kreative Richtung und redaktionelle Entscheidungen
+4. **Teammitglied** — Vollständiger Arbeitszugang; kann eigenen Filmspace erstellen
+5. **Mitarbeiter** — Minimaler Zugang, spezifisch für zugewiesene Aufgaben, kein bezahlter Platz
 
-## Personalizar Roles
+## Rollen anpassen
 
-Puedes personalizar los permisos de todos los roles excepto el Propietario del Filmspace.
+Du kannst die Berechtigungen aller Rollen außer dem Filmspace-Eigentümer anpassen.
 
-Los Colaboradores son únicos — sus permisos siempre son mínimos y específicos.
+Mitarbeiter sind einzigartig — ihre Berechtigungen sind immer minimal und spezifisch.
 
-## Puestos y Acceso
+## Plätze und Zugang
 
-Los primeros cuatro roles tienen **puestos de pago**. Los Colaboradores no ocupan puestos de pago.
+Die ersten vier Rollen haben **bezahlte Plätze**. Mitarbeiter belegen keine bezahlten Plätze.
 
-## #BuenoSaberlo
+## #GutZuWissen
 
-Los roles y permisos están diseñados para fomentar la colaboración manteniendo límites claros.`,
+Rollen und Berechtigungen sind so gestaltet, dass sie Zusammenarbeit fördern und gleichzeitig klare Grenzen einhalten.`,
     relatedSlugs: ["add-and-remove-team-members-filmspace", "your-filmspace", "team-chats"],
   },
   {
     id: "tf-17",
     slug: "personal-to-dos",
-    title: "Todos Personales",
+    title: "Persönliche Todos",
     category: "tools-and-features",
-    content: `## Todos Personales
+    content: `## Persönliche Todos
 
-### ¿Cuál es la Diferencia entre una Tarjeta y un Todo?
+### Was ist der Unterschied zwischen einer Karte und einem Todo?
 
-Un **todo** solo es visible para el usuario que lo creó. En cambio, una **tarjeta** es visible para todos los miembros del tablero.
+Ein **Todo** ist nur für den Benutzer sichtbar, der es erstellt hat. Eine **Karte** hingegen ist für alle Board-Mitglieder sichtbar.
 
-## ¿Qué son los Todos Personales?
+## Was sind persönliche Todos?
 
-Mantén el control de tus prioridades con los Todos Personales. Son elementos privados, visibles solo para ti, accesibles a través de la Bandeja de entrada.
+Behalte die Kontrolle über deine Prioritäten mit persönlichen Todos. Sie sind private Elemente, die nur für dich sichtbar und über den Posteingang zugänglich sind.
 
-## La Bandeja de Entrada — Tu Herramienta Poderosa
+## Der Posteingang — Dein leistungsstarkes Werkzeug
 
-Sin importar cuántos proyectos de cine estés gestionando — todo está consolidado en tu Bandeja de entrada.
+Egal wie viele Filmprojekte du verwaltest — alles ist in deinem Posteingang konsolidiert.
 
-Muestra una vista híbrida — una lista a la izquierda y tantas columnas como desees a la derecha. Los elementos archivados se almacenan en una sección de Archivo dedicada.
+Er zeigt eine hybride Ansicht — eine Liste links und beliebig viele Spalten rechts. Archivierte Elemente werden in einem dedizierten Archivbereich gespeichert.
 
-## Gestionar Todos Personales
+## Persönliche Todos verwalten
 
-- Agrega notas, fechas de vencimiento o adjuntos a cada tarea
-- Prioriza marcándolos o moviéndolos entre etapas
-- Convierte los Todos en tarjetas compartidas
+- Füge Notizen, Fälligkeitsdaten oder Anhänge zu jeder Aufgabe hinzu
+- Priorisiere durch Markierung oder Verschieben zwischen Phasen
+- Wandle Todos in geteilte Karten um
 
-## #BuenoSaberlo
+## #GutZuWissen
 
-Tus Todos son más que recordatorios — son parte de un conjunto de herramientas optimizado para apoyar tu proceso creativo.`,
+Deine Todos sind mehr als Erinnerungen — sie sind Teil eines optimierten Toolsets zur Unterstützung deines kreativen Prozesses.`,
     relatedSlugs: ["manage-section", "board-views", "card-blocks"],
   },
   {
     id: "tf-18",
     slug: "card-blocks",
-    title: "Bloques de Tarjeta",
+    title: "Kartenblöcke",
     category: "tools-and-features",
-    content: `## Bloques de Tarjeta
+    content: `## Kartenblöcke
 
-### ¿Qué son los Bloques?
+### Was sind Blöcke?
 
-Los bloques son componentes modulares que puedes agregar o eliminar de las tarjetas para adaptarlas a tus necesidades. Cada bloque proporciona una funcionalidad única — haciendo las tarjetas adaptables a diferentes tareas y workflows.
+Blöcke sind modulare Komponenten, die du zu Karten hinzufügen oder von ihnen entfernen kannst, um sie an deine Bedürfnisse anzupassen. Jeder Block bietet eine einzigartige Funktionalität — dadurch werden Karten an verschiedene Aufgaben und Workflows anpassbar.
 
-Por ejemplo, el bloque de descripción permite agregar información detallada, mientras que otros como las checklists o fechas de vencimiento permiten el seguimiento de tareas y la gestión de plazos.
+Zum Beispiel erlaubt der Beschreibungsblock das Hinzufügen detaillierter Informationen, während andere wie Checklisten oder Fälligkeitsdaten die Aufgabenverfolgung und Fristenverwaltung ermöglichen.
 
-## Por Qué los Bloques son Importantes
+## Warum Blöcke wichtig sind
 
-Los bloques ayudan a personalizar las tarjetas según las necesidades de tu proyecto:
-
-- Flexibilidad para adaptar las tarjetas a las diferentes etapas de producción
-- Mejora de la colaboración con comentarios y adjuntos
-- Herramientas e información fácilmente accesibles
-
-Agregar o eliminar bloques es simple a través del panel **'Agregar/Eliminar Bloques'** en el encabezado de la tarjeta.
-
-## #BuenoSaberlo
-
-Algunos bloques se cargan por defecto, otros son opcionales. Excepto el **bloque de Descripción**, todos los bloques pueden ser eliminados — las tarjetas son completamente personalizables.`,
+Blöcke bieten Flexibilität für den gesamten Lebenszyklus eines Filmprojekts. Von der Ideenfindung bis zur Endabnahme behältst du die Kontrolle über genau die Informationen, die du brauchst — ohne unnötige Komplexität.`,
     relatedSlugs: ["card-anatomy", "add-or-remove-blocks", "personal-to-dos"],
   },
   {
     id: "tf-19",
     slug: "your-filmspace",
-    title: "Tu Filmspace",
+    title: "Dein Filmspace",
     category: "tools-and-features",
-    content: `## Tu Filmspace
+    content: `## Dein Filmspace
 
-### ¿Qué es un Filmspace?
+### Was ist ein Filmspace?
 
-El Filmspace es tu espacio de trabajo todo en uno, diseñado específicamente para cineastas, creadores de video y equipos de producción. Es donde puedes desarrollar y refinar tus ideas, priorizar proyectos, planificar y ejecutar workflows de producción, y fomentar una colaboración fluida dentro de tu equipo.
+Ein Filmspace ist dein zentraler Workspace. Er hält alles zusammen — Team, Projekte, Kommunikation und Produktionswerkzeuge. Jeder Filmspace wird von seinem Eigentümer erstellt und verwaltet.
 
-## Tu Hub Creativo
+## Filmspace erstellen
 
-A diferencia de las herramientas de gestión de proyectos estándar, un Filmspace está construido específicamente para la industria del cine y el video — combinando herramientas de workflow poderosas para agilizar cada etapa del proceso de producción.
+Registriere dich und erstelle deinen ersten Filmspace. Du wirst als **Eigentümer** dieses Filmspace eingestuft und hast volle Kontrolle über Einstellungen und Mitgliederverwaltung.
 
-- **Un Filmspace** es ideal para proyectos pequeños y medianos
-- **Múltiples Filmspaces** son adecuados para equipos grandes que gestionan diferentes proyectos, clientes o visiones creativas
+## Teammitglieder einladen
 
-## #BuenoSaberlo
-
-No solo estás rastreando tareas — estás gestionando todo el viaje creativo, desde la preproducción hasta la entrega final.`,
+Lade Mitglieder ein und weise ihnen Rollen zu — vom Administrator bis zum Mitarbeiter. Jedes Mitglied sieht nur die Bereiche, die für seine Rolle relevant sind.`,
     relatedSlugs: ["add-and-remove-team-members-filmspace", "roles-permissions-in-pzaz", "manage-section"],
   },
 ];
-
-export const kbCategoriesDe = [
-  {
-    id: "getting-started",
-    title: "Primeros Pasos",
-    description: "Todo lo que necesitas saber para empezar a usar Pzaz.",
-    icon: "🚀",
-  },
-  {
-    id: "functions",
-    title: "Funciones",
-    description: "Aprende sobre las funciones IA de Pzaz y cómo usarlas.",
-    icon: "⚡",
-  },
-  {
-    id: "tools-and-features",
-    title: "Herramientas y Funcionalidades",
-    description: "Guías detalladas de cada herramienta de producción disponible en tu espacio de trabajo.",
-    icon: "🛠️",
-  },
-] as const;

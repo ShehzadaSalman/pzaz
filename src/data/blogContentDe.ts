@@ -1,606 +1,606 @@
 /**
- * Spanish translations for blog article body content.
+ * German translations for blog article body content.
  * Maps slug -> translated content string.
  */
 
 const blogContentDe: Record<string, string> = {
   "best-film-screenwriting-software-usa": `
-La escritura de guiones trata de dar vida a ideas audaces. Para hacerlo de manera efectiva, los cineastas independientes necesitan software que impulse la creatividad, se adapte a su flujo de trabajo y haga la colaboración fluida.
+Das Drehbuchschreiben dreht sich darum, mutige Ideen zum Leben zu erwecken. Um dies effektiv zu tun, brauchen unabhängige Filmemacher Software, die die Kreativität fördert, sich an ihren Workflow anpasst und die Zusammenarbeit nahtlos gestaltet.
 
-Para descubrir lo que 6,260,767 opiniones de cineastas independientes en EE.UU. pensaban sobre el software de escritura de guiones, utilizamos perfiles de audiencia impulsados por IA para sintetizar información de discusiones en línea durante un año que terminó el 7 de julio de 2025. Esto nos dio una visión clara de lo que los cineastas buscan en software de escritura de guiones, los desafíos que enfrentan actualmente y cómo se ve el futuro.
+Um herauszufinden, was 6.260.767 Meinungen unabhängiger US-Filmemacher über Drehbuchsoftware denken, nutzten wir KI-gestützte Zielgruppenprofile, um Erkenntnisse aus einjährigen Online-Diskussionen bis zum 7. Juli 2025 zusammenzufassen. Dies gab uns einen klaren Überblick darüber, was Filmemacher bei Drehbuchsoftware suchen, welche Herausforderungen sie aktuell haben und wie die Zukunft aussieht.
 
-## Índice
+## Inhaltsverzeichnis
 
-- Final Draft y Fade In son las herramientas de escritura de guiones preferidas por el 28% de los cineastas independientes
-- El menor costo inspira al 27% de los cineastas independientes a cambiar a un nuevo software
-- El 22% de los cineastas independientes prefiere una plataforma basada en web
-- El 21% de los cineastas independientes coincide en que el almacenamiento en la nube es esencial
-- El formato Fountain es una opción de exportación esencial para el 59% de los cineastas independientes
-- El 32% de los cineastas independientes encuentra frustrante la falta de recursos de soporte
-- Los comentarios y retroalimentación son esenciales para la colaboración del 76% de los cineastas independientes
-- El 21% de los cineastas independientes coincide en que la estructura de arrastrar y soltar es esencial
-- Las sugerencias de prompts de personajes son esenciales para el 24% de los cineastas independientes
-- El 25% de los cineastas independientes prefiere una estética audaz y creativa
-- La lluvia de ideas es crucial para el 33% de los cineastas independientes
-- El 75% de los cineastas independientes descubre nuevo software en foros de escritura de guiones
-- El 28% de los cineastas independientes quiere soluciones de IA integradas
-- Las demostraciones individuales son esenciales para el 23% de los cineastas independientes
-- El 32% de los cineastas independientes de nuestra audiencia probablemente se encuentran en California
-- Metodología
+- Final Draft und Fade In sind die bevorzugten Drehbuchtools für 28 % der unabhängigen Filmemacher
+- Niedrigere Kosten inspirieren 27 % der unabhängigen Filmemacher zum Wechsel zu neuer Software
+- 22 % der unabhängigen Filmemacher bevorzugen eine webbasierte Plattform
+- 21 % der unabhängigen Filmemacher sind sich einig, dass Cloud-Speicher unverzichtbar ist
+- Das Fountain-Format ist eine unverzichtbare Exportoption für 59 % der unabhängigen Filmemacher
+- 32 % der unabhängigen Filmemacher finden fehlende Support-Ressourcen frustrierend
+- Kommentare und Feedback sind für die Zusammenarbeit von 76 % der unabhängigen Filmemacher unverzichtbar
+- 21 % der unabhängigen Filmemacher halten Drag-and-Drop-Strukturierung für unverzichtbar
+- Charakter-Prompt-Vorschläge sind für 24 % der unabhängigen Filmemacher unverzichtbar
+- 25 % der unabhängigen Filmemacher bevorzugen eine mutige und kreative Ästhetik
+- Brainstorming ist für 33 % der unabhängigen Filmemacher entscheidend
+- 75 % der unabhängigen Filmemacher entdecken neue Software in Drehbuchforen
+- 28 % der unabhängigen Filmemacher wünschen sich integrierte KI-Lösungen
+- Einzeldemonstrationen sind für 23 % der unabhängigen Filmemacher unverzichtbar
+- 32 % der unabhängigen Filmemacher in unserer Zielgruppe befinden sich wahrscheinlich in Kalifornien
+- Methodik
 
-## ¿Qué software de escritura de guiones ha utilizado?
+## Welche Drehbuchsoftware haben Sie verwendet?
 
-### Final Draft y Fade In son las herramientas preferidas por el 28% de los cineastas independientes
+### Final Draft und Fade In sind die bevorzugten Tools für 28 % der unabhängigen Filmemacher
 
-![Herramientas de escritura más utilizadas](https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Screenshot-2025-07-22-at-11.17.23.png)
+![Meistgenutzte Drehbuch-Tools](https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Screenshot-2025-07-22-at-11.17.23.png)
 
-El mercado de software de escritura de guiones se estima en $500 millones en 2025 y se proyecta que alcance los $1.8 mil millones para 2033. Para esta audiencia de más de seis millones de cineastas independientes, dos herramientas destacan como las más utilizadas: Final Draft y Fade In. Ambas son las herramientas preferidas del 14% cada una.
+Der Markt für Drehbuchsoftware wird für 2025 auf 500 Millionen Dollar geschätzt und soll bis 2033 auf 1,8 Milliarden Dollar anwachsen. Für diese Zielgruppe von über sechs Millionen unabhängigen Filmemachern stechen zwei Tools als meistgenutzt hervor: Final Draft und Fade In. Beide sind jeweils die bevorzugten Tools von 14 %.
 
-## ¿Qué le inspira a cambiar a un nuevo software de escritura de guiones?
+## Was inspiriert Sie zum Wechsel zu neuer Drehbuchsoftware?
 
-### El menor costo inspira al 27% de los cineastas independientes a cambiar
+### Niedrigere Kosten inspirieren 27 % der unabhängigen Filmemacher zum Wechsel
 
-![Motivadores para cambiar](https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Screenshot-2025-07-22-at-11.19.54.png)
+![Wechselmotivatoren](https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Screenshot-2025-07-22-at-11.19.54.png)
 
-El menor costo es el detonante más fuerte para cambiar. El 27% definitivamente cambiaría por precio y el 23% podría cambiar.
+Niedrigere Kosten sind der stärkste Auslöser für einen Wechsel. 27 % würden definitiv wegen des Preises wechseln und 23 % könnten wechseln.
 
-## ¿Qué entorno de escritura de guiones prefiere?
+## Welche Drehbuch-Schreibumgebung bevorzugen Sie?
 
-### El 22% de los cineastas independientes prefiere una plataforma basada en web
+### 22 % der unabhängigen Filmemacher bevorzugen eine webbasierte Plattform
 
-![Entornos de escritura preferidos](https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Screenshot-2025-07-22-at-11.22.04.png)
+![Bevorzugte Schreibumgebungen](https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Screenshot-2025-07-22-at-11.22.04.png)
 
-Las plataformas basadas en web lideran las preferencias, seguidas por el acceso híbrido de escritorio y nube.
+Webbasierte Plattformen liegen bei den Präferenzen vorn, gefolgt von hybridem Desktop- und Cloud-Zugang.
 
-## ¿Qué característica valora más en el software de escritura?
+## Welche Funktion schätzen Sie bei Drehbuchsoftware am meisten?
 
-### El 21% de los cineastas independientes considera esencial el almacenamiento en la nube
+### 21 % der unabhängigen Filmemacher halten Cloud-Speicher für unverzichtbar
 
-![Característica más valorada](https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Screenshot-2025-07-22-at-11.25.13.png)
+![Meistgeschätzte Funktion](https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Screenshot-2025-07-22-at-11.25.13.png)
 
-El almacenamiento basado en la nube es la característica más valorada en general, impulsada por las necesidades de accesibilidad, guardado automático y colaboración.
+Cloud-basierter Speicher ist die insgesamt meistgeschätzte Funktion, getrieben von den Anforderungen an Zugänglichkeit, automatisches Speichern und Zusammenarbeit.
 
-## ¿Qué opciones de exportación son más útiles?
+## Welche Exportoptionen sind am nützlichsten?
 
-### El formato Fountain es esencial para el 59% de los cineastas independientes
+### Das Fountain-Format ist für 59 % der unabhängigen Filmemacher unverzichtbar
 
-![Preferencias de opciones de exportación](https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Screenshot-2025-07-22-at-11.26.47.png)
+![Exportoptionen-Präferenzen](https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Screenshot-2025-07-22-at-11.26.47.png)
 
-Fountain domina claramente los formatos de exportación preferidos por su portabilidad, flexibilidad y herramientas abiertas.
+Fountain dominiert klar die bevorzugten Exportformate aufgrund seiner Portabilität, Flexibilität und offenen Tools.
 
-## ¿Qué es lo más frustrante de su software de escritura actual?
+## Was ist am frustrierendsten an Ihrer aktuellen Drehbuchsoftware?
 
-### El 32% de los cineastas independientes encuentra frustrante la falta de recursos de soporte
+### 32 % der unabhängigen Filmemacher finden fehlende Support-Ressourcen frustrierend
 
-![Principales frustraciones](https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Screenshot-2025-07-22-at-11.28.28.png)
+![Größte Frustrationen](https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Screenshot-2025-07-22-at-11.28.28.png)
 
-La calidad del soporte es un gran punto de dolor. La falta de recursos de soporte superó al desorden de la interfaz, los problemas de sincronización y los límites de personalización.
+Die Support-Qualität ist ein großer Schmerzpunkt. Fehlende Support-Ressourcen übertrafen Interface-Unübersichtlichkeit, Synchronisierungsprobleme und Anpassungsgrenzen.
 
-## ¿Qué tipo de colaboración necesita más?
+## Welche Art der Zusammenarbeit benötigen Sie am meisten?
 
-### Los comentarios y retroalimentación son esenciales para el 76% de los cineastas independientes
+### Kommentare und Feedback sind für 76 % der unabhängigen Filmemacher unverzichtbar
 
-![Necesidades de colaboración](https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Screenshot-2025-07-22-at-11.30.02.png)
+![Zusammenarbeitsbedürfnisse](https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Screenshot-2025-07-22-at-11.30.02.png)
 
-Los comentarios y retroalimentación son la preferencia clara de colaboración. Las funciones de escritura compartida y control de versiones son importantes, pero la demanda se centra en los flujos de revisión y retroalimentación.
+Kommentare und Feedback sind die klare Zusammenarbeitspräferenz. Gemeinsames Schreiben und Versionskontrolle sind wichtig, aber die Nachfrage konzentriert sich auf Review- und Feedback-Workflows.
 
-## ¿Qué le ayuda a mantener organizado su flujo de trabajo?
+## Was hilft Ihnen, Ihren Workflow organisiert zu halten?
 
-### El 21% de los cineastas independientes considera esencial la estructura de arrastrar y soltar
+### 21 % der unabhängigen Filmemacher halten Drag-and-Drop-Strukturierung für unverzichtbar
 
-![Herramientas de organización del flujo de trabajo](https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Screenshot-2025-07-22-at-11.42.05.png)
+![Workflow-Organisations-Tools](https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Screenshot-2025-07-22-at-11.42.05.png)
 
-La estructura de arrastrar y soltar es el organizador más fuerte. El esquema de escenas, las tarjetas de índice y las carpetas de investigación también ayudan.
+Drag-and-Drop-Strukturierung ist der stärkste Organisator. Szenenübersichten, Karteikarten und Recherche-Ordner helfen ebenfalls.
 
-## ¿En qué tipo de soporte de formato de guión confía más?
+## Auf welche Art von Drehbuchformat-Unterstützung verlassen Sie sich am meisten?
 
-### Las sugerencias de prompts de personajes son esenciales para el 24% de los cineastas independientes
+### Charakter-Prompt-Vorschläge sind für 24 % der unabhängigen Filmemacher unverzichtbar
 
-![Preferencias de soporte de formato](https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Screenshot-2025-07-22-at-11.43.22.png)
+![Formatunterstützungs-Präferenzen](https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Screenshot-2025-07-22-at-11.43.22.png)
 
-Las sugerencias de prompts de personajes lideran esta categoría, seguidas de herramientas de paginación y sangría automática.
+Charakter-Prompt-Vorschläge führen diese Kategorie an, gefolgt von Paginierungstools und automatischer Einrückung.
 
-### ¿Qué estética prefiere en el software de escritura de guiones?
+### Welche Ästhetik bevorzugen Sie bei Drehbuchsoftware?
 
-### El 25% de los cineastas independientes prefiere una estética audaz y creativa
+### 25 % der unabhängigen Filmemacher bevorzugen eine mutige und kreative Ästhetik
 
-![Preferencias de estética](https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Screenshot-2025-07-22-at-11.46.13.png)
+![Ästhetik-Präferenzen](https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Screenshot-2025-07-22-at-11.46.13.png)
 
-El diseño visual audaz y creativo lidera, con la apariencia personalizable justo detrás.
+Mutiges und kreatives visuelles Design liegt vorn, mit anpassbarem Look knapp dahinter.
 
-## ¿Qué parte del proceso de escritura es más importante agilizar?
+## Welchen Teil des Schreibprozesses ist es am wichtigsten zu beschleunigen?
 
-### La lluvia de ideas es crucial para el 33% de los cineastas independientes
+### Brainstorming ist für 33 % der unabhängigen Filmemacher entscheidend
 
-![Proceso más importante para agilizar](https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Screenshot-2025-07-22-at-11.48.36.png)
+![Wichtigster zu beschleunigender Prozess](https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Screenshot-2025-07-22-at-11.48.36.png)
 
-La lluvia de ideas es el proceso más grande para agilizar, siendo la escritura del primer borrador y el esquema prioridades secundarias.
+Brainstorming ist der größte zu beschleunigende Prozess, wobei die Erstellung des ersten Entwurfs und die Gliederung sekundäre Prioritäten sind.
 
-## ¿Cómo descubre normalmente nuevo software de escritura?
+## Wie entdecken Sie normalerweise neue Drehbuchsoftware?
 
-### El 75% de los cineastas independientes descubre nuevo software en foros de escritura
+### 75 % der unabhängigen Filmemacher entdecken neue Software in Drehbuchforen
 
-![Fuentes de descubrimiento](https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Screenshot-2025-07-22-at-11.49.55.png)
+![Entdeckungsquellen](https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Screenshot-2025-07-22-at-11.49.55.png)
 
-Los foros son la fuente dominante de descubrimiento, las reseñas en línea y los eventos quedan muy atrás.
+Foren sind die dominierende Entdeckungsquelle, Online-Rezensionen und Events liegen weit dahinter.
 
-## ¿Qué característica le gustaría ver añadida?
+## Welche Funktion würden Sie sich wünschen?
 
-### El 28% de los cineastas independientes quiere soluciones de IA integradas
+### 28 % der unabhängigen Filmemacher wünschen sich integrierte KI-Lösungen
 
-![Características más deseadas](https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Screenshot-2025-07-22-at-11.51.44.png)
+![Meistgewünschte Funktionen](https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Screenshot-2025-07-22-at-11.51.44.png)
 
-Las sugerencias de IA integradas son la adición más deseada. Las plantillas de género y la integración de presupuestos también están en demanda.
+Integrierte KI-Vorschläge sind die meistgewünschte Ergänzung. Genre-Vorlagen und Budgetintegration sind ebenfalls gefragt.
 
-## ¿Qué formación en software de escritura es más útil?
+## Welche Schulung für Drehbuchsoftware ist am nützlichsten?
 
-### Las demostraciones individuales son esenciales para el 23% de los cineastas independientes
+### Einzeldemonstrationen sind für 23 % der unabhängigen Filmemacher unverzichtbar
 
-![Preferencias de formación y soporte](https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Screenshot-2025-07-22-at-11.53.32.png)
+![Schulungs- und Support-Präferenzen](https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Screenshot-2025-07-22-at-11.53.32.png)
 
-Las demostraciones individuales lideran la efectividad del soporte, seguidas de los tutoriales interactivos.
+Einzeldemonstrationen führen bei der Support-Effektivität, gefolgt von interaktiven Tutorials.
 
-## ¿Qué región describe mejor su ubicación actual?
+## Welche Region beschreibt Ihren aktuellen Standort am besten?
 
-### El 32% de los cineastas independientes de nuestra audiencia probablemente se encuentran en California
+### 32 % der unabhängigen Filmemacher in unserer Zielgruppe befinden sich wahrscheinlich in Kalifornien
 
-![Distribución regional](https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Screenshot-2025-07-22-at-12.15.06.png)
+![Regionale Verteilung](https://pzaz.io/producer-blog/wp-content/uploads/2025/07/Screenshot-2025-07-22-at-12.15.06.png)
 
-California es la región más representada en la muestra, Illinois también muestra una concentración significativa.
+Kalifornien ist die am stärksten vertretene Region in der Stichprobe, Illinois zeigt ebenfalls eine signifikante Konzentration.
 
-Esta encuesta de cineastas independientes estadounidenses presenta una imagen de mercado impulsada por la creatividad, la colaboración y la conciencia de costos, con una demanda creciente de herramientas impulsadas por IA y centradas en el flujo de trabajo.
+Diese Umfrage unter unabhängigen US-Filmemachern zeichnet ein Marktbild, das von Kreativität, Zusammenarbeit und Kostenbewusstsein geprägt ist, mit wachsender Nachfrage nach KI-gestützten und workflow-zentrierten Tools.
 
-## Metodología
+## Methodik
 
-Obtenido de una muestra de 6,260,767 opiniones de cineastas independientes estadounidenses utilizando Artios en X, Reddit, TikTok, LinkedIn, Threads y BlueSky. Las respuestas se recopilaron dentro de un intervalo de confianza del 95% y un margen de error del 5%.
+Gewonnen aus einer Stichprobe von 6.260.767 Meinungen unabhängiger US-Filmemacher unter Verwendung von Artios auf X, Reddit, TikTok, LinkedIn, Threads und BlueSky. Die Antworten wurden innerhalb eines Konfidenzintervalls von 95 % und einer Fehlermarge von 5 % erhoben.
 
-### Sobre la muestra representativa
+### Über die repräsentative Stichprobe
 
-- El 52% de los cineastas independientes en EE.UU. tienen entre 35 y 64 años.
-- El 54% son hombres y el 46% mujeres.
-- El 38% gana entre $120,000 y $200,000 anuales.
+- 52 % der unabhängigen Filmemacher in den USA sind zwischen 35 und 64 Jahre alt.
+- 54 % sind männlich und 46 % weiblich.
+- 38 % verdienen zwischen 120.000 und 200.000 Dollar jährlich.
 `,
 
   "film-task-management-statistics-usa": `
-La producción cinematográfica exitosa es imposible sin gestión de tareas, especialmente para cineastas independientes con presupuestos limitados y plazos ajustados.
+Erfolgreiche Filmproduktion ist ohne Aufgabenmanagement unmöglich, besonders für unabhängige Filmemacher mit begrenzten Budgets und engen Fristen.
 
-Se obtuvieron insights impulsados por IA de nuestra audiencia de 1,063 cineastas indie, proporcionando información sobre gestión de tareas, colaboración en equipo y dependencias de tareas.
+KI-gestützte Erkenntnisse wurden aus unserer Zielgruppe von 1.063 Indie-Filmemachern gewonnen und liefern Informationen über Aufgabenmanagement, Teamzusammenarbeit und Aufgabenabhängigkeiten.
 
-## Índice
+## Inhaltsverzeichnis
 
-- El 100% de los cineastas independientes realizan reuniones regulares de equipo para las responsabilidades de tareas
-- El 100% de los cineastas indie confían en los jefes de departamento para las dependencias de tareas
-- El 100% de los cineastas gestionan tareas superpuestas con listas de prioridades
-- El 100% de los cineastas monitorean la finalización de tareas mediante actualizaciones de equipo
-- El 64% de los cineastas utilizan listas compartidas durante la producción
-- Los memos de voz son utilizados por el 100% de los cineastas para ideas espontáneas
-- El 80% de los cineastas indie prefieren videoconferencias para la colaboración en tiempo real
-- Cumplir plazos es el aspecto más difícil para el 44%
-- Los tableros visuales de tareas son los más útiles para el 100% de los cineastas
-- El 83% de los cineastas indie están ubicados en el Medio Oeste
-- Metodología
+- 100 % der unabhängigen Filmemacher führen regelmäßige Teambesprechungen für Aufgabenverantwortlichkeiten durch
+- 100 % der Indie-Filmemacher verlassen sich bei Aufgabenabhängigkeiten auf Abteilungsleiter
+- 100 % der Filmemacher managen sich überschneidende Aufgaben mit Prioritätslisten
+- 100 % der Filmemacher überwachen den Aufgabenfortschritt durch Team-Updates
+- 64 % der Filmemacher nutzen gemeinsame Listen während der Produktion
+- Sprachmemos werden von 100 % der Filmemacher für spontane Ideen genutzt
+- 80 % der Indie-Filmemacher bevorzugen Videokonferenzen für die Echtzeit-Zusammenarbeit
+- Das Einhalten von Fristen ist der schwierigste Aspekt für 44 %
+- Visuelle Aufgaben-Boards sind für 100 % der Filmemacher am nützlichsten
+- 83 % der Indie-Filmemacher befinden sich im Mittleren Westen
+- Methodik
 
-## ¿Cómo asegura la comunicación clara de responsabilidades de tareas?
+## Wie stellen Sie eine klare Kommunikation von Aufgabenverantwortlichkeiten sicher?
 
-### El 100% de los cineastas independientes realizan reuniones regulares de equipo
+### 100 % der unabhängigen Filmemacher führen regelmäßige Teambesprechungen durch
 
-![Comunicación de responsabilidades de tareas](https://pzaz.io/producer-blog/wp-content/uploads/2025/05/Screenshot-2025-05-20-at-19.33.41.png)
+![Kommunikation von Aufgabenverantwortlichkeiten](https://pzaz.io/producer-blog/wp-content/uploads/2025/05/Screenshot-2025-05-20-at-19.33.41.png)
 
-Toda nuestra audiencia de 1,063 cineastas independientes coincidió — confían en reuniones regulares de equipo. Las organizaciones dedican aproximadamente el 15% de su tiempo colectivo a reuniones.
+Unsere gesamte Zielgruppe von 1.063 unabhängigen Filmemachern war sich einig — sie verlassen sich auf regelmäßige Teambesprechungen. Organisationen widmen etwa 15 % ihrer gemeinsamen Zeit Besprechungen.
 
-## ¿Cómo gestiona las dependencias de tareas?
+## Wie managen Sie Aufgabenabhängigkeiten?
 
-### El 100% de los cineastas indie confían en los jefes de departamento
+### 100 % der Indie-Filmemacher verlassen sich auf Abteilungsleiter
 
-![Dependencias de tareas](https://pzaz.io/producer-blog/wp-content/uploads/2025/05/Screenshot-2025-05-20-at-20.11.57.png)
+![Aufgabenabhängigkeiten](https://pzaz.io/producer-blog/wp-content/uploads/2025/05/Screenshot-2025-05-20-at-20.11.57.png)
 
-El 100% de la audiencia dijo que confían en los jefes de departamento. Estos actúan como puente entre la visión y la ejecución.
+100 % der Zielgruppe sagten, dass sie sich auf Abteilungsleiter verlassen. Diese fungieren als Brücke zwischen Vision und Umsetzung.
 
-## ¿Cómo gestiona tareas superpuestas entre departamentos?
+## Wie managen Sie sich überschneidende Aufgaben zwischen Abteilungen?
 
-### El 100% de los cineastas gestionan tareas superpuestas con listas de prioridades
+### 100 % der Filmemacher managen sich überschneidende Aufgaben mit Prioritätslisten
 
-![Gestión de tareas superpuestas](https://pzaz.io/producer-blog/wp-content/uploads/2025/05/Screenshot-2025-05-20-at-20.15.31.png)
+![Management überschneidender Aufgaben](https://pzaz.io/producer-blog/wp-content/uploads/2025/05/Screenshot-2025-05-20-at-20.15.31.png)
 
-El 100% de la audiencia dijo que utilizan listas de prioridades para gestionar tareas superpuestas.
+100 % der Zielgruppe sagten, dass sie Prioritätslisten nutzen, um sich überschneidende Aufgaben zu managen.
 
-## ¿Cómo monitorea la finalización de tareas?
+## Wie überwachen Sie den Aufgabenabschluss?
 
-### El 100% de los cineastas monitorean mediante actualizaciones de equipo
+### 100 % der Filmemacher überwachen durch Team-Updates
 
-![Monitoreo de finalización de tareas](https://pzaz.io/producer-blog/wp-content/uploads/2025/05/Screenshot-2025-05-20-at-20.20.50.png)
+![Überwachung des Aufgabenabschlusses](https://pzaz.io/producer-blog/wp-content/uploads/2025/05/Screenshot-2025-05-20-at-20.20.50.png)
 
-Las actualizaciones de equipo son el método preferido para el 100% de la audiencia.
+Team-Updates sind die bevorzugte Methode für 100 % der Zielgruppe.
 
-## ¿Cómo gestiona principalmente las tareas durante la producción?
+## Wie managen Sie Aufgaben hauptsächlich während der Produktion?
 
-### El 64% de los cineastas utilizan listas compartidas
+### 64 % der Filmemacher nutzen gemeinsame Listen
 
-![Gestión de tareas durante la producción](https://pzaz.io/producer-blog/wp-content/uploads/2025/05/Screenshot-2025-05-20-at-20.23.08.png)
+![Aufgabenmanagement während der Produktion](https://pzaz.io/producer-blog/wp-content/uploads/2025/05/Screenshot-2025-05-20-at-20.23.08.png)
 
-El 64% utiliza listas compartidas. El 36% restante gestiona tareas a través del chat del equipo.
+64 % nutzen gemeinsame Listen. Die restlichen 36 % managen Aufgaben über den Team-Chat.
 
-## ¿Cómo captura ideas espontáneas?
+## Wie halten Sie spontane Ideen fest?
 
-### Los memos de voz son utilizados por el 100% de los cineastas
+### Sprachmemos werden von 100 % der Filmemacher genutzt
 
-![Ideas espontáneas](https://pzaz.io/producer-blog/wp-content/uploads/2025/05/Screenshot-2025-05-20-at-20.36.20.png)
+![Spontane Ideen](https://pzaz.io/producer-blog/wp-content/uploads/2025/05/Screenshot-2025-05-20-at-20.36.20.png)
 
-El 100% de los cineastas utilizan memos de voz. Según una encuesta Vox/YouGov de 2023, el 62% de los estadounidenses han enviado un mensaje de voz.
+100 % der Filmemacher nutzen Sprachmemos. Laut einer Vox/YouGov-Umfrage von 2023 haben 62 % der Amerikaner eine Sprachnachricht gesendet.
 
-## ¿Qué herramientas utiliza para la colaboración en tiempo real?
+## Welche Tools nutzen Sie für die Echtzeit-Zusammenarbeit?
 
-### El 80% de los cineastas indie prefieren videoconferencias
+### 80 % der Indie-Filmemacher bevorzugen Videokonferenzen
 
-![Herramientas de colaboración en tiempo real](https://pzaz.io/producer-blog/wp-content/uploads/2025/05/Screenshot-2025-05-20-at-20.39.05.png)
+![Echtzeit-Zusammenarbeitstools](https://pzaz.io/producer-blog/wp-content/uploads/2025/05/Screenshot-2025-05-20-at-20.39.05.png)
 
-El 80% utiliza videoconferencias. El 20% restante utiliza funciones de chat integradas.
+80 % nutzen Videokonferenzen. Die restlichen 20 % nutzen integrierte Chat-Funktionen.
 
-## ¿Qué aspecto de la gestión de tareas es más difícil?
+## Welcher Aspekt des Aufgabenmanagements ist am schwierigsten?
 
-### Cumplir plazos es lo más difícil para el 44%
+### Fristen einhalten ist für 44 % am schwierigsten
 
-![Desafíos de gestión de tareas](https://pzaz.io/producer-blog/wp-content/uploads/2025/05/Screenshot-2025-05-20-at-20.50.33.png)
+![Herausforderungen im Aufgabenmanagement](https://pzaz.io/producer-blog/wp-content/uploads/2025/05/Screenshot-2025-05-20-at-20.50.33.png)
 
-Para el 44% cumplir plazos es lo más difícil. El 31% señaló el seguimiento del progreso y el 24% la priorización de tareas.
+Für 44 % ist das Einhalten von Fristen am schwierigsten. 31 % nannten die Fortschrittsverfolgung und 24 % die Aufgabenpriorisierung.
 
-## ¿Qué función es más útil para el seguimiento del progreso de tareas?
+## Welche Funktion ist für die Fortschrittsverfolgung am nützlichsten?
 
-### Los tableros visuales de tareas son los más útiles para el 100% de los cineastas
+### Visuelle Aufgaben-Boards sind für 100 % der Filmemacher am nützlichsten
 
-![Seguimiento del progreso de tareas](https://pzaz.io/producer-blog/wp-content/uploads/2025/05/Screenshot-2025-05-20-at-20.52.46.png)
+![Fortschrittsverfolgung bei Aufgaben](https://pzaz.io/producer-blog/wp-content/uploads/2025/05/Screenshot-2025-05-20-at-20.52.46.png)
 
-El 100% de la audiencia dijo que los tableros visuales de tareas son los más útiles.
+100 % der Zielgruppe sagten, dass visuelle Aufgaben-Boards am nützlichsten sind.
 
-## ¿Cuál es su base de producción principal?
+## Wo ist Ihr hauptsächlicher Produktionsstandort?
 
-### El 83% de los cineastas indie están ubicados en el Medio Oeste
+### 83 % der Indie-Filmemacher befinden sich im Mittleren Westen
 
-![Distribución regional](https://pzaz.io/producer-blog/wp-content/uploads/2025/05/Screenshot-2025-05-20-at-21.02.25.png)
+![Regionale Verteilung](https://pzaz.io/producer-blog/wp-content/uploads/2025/05/Screenshot-2025-05-20-at-21.02.25.png)
 
-El 83% está en el Medio Oeste. Solo el 17% en el Suroeste. La participación de Los Ángeles en el empleo de cine y TV fue del 27% en 2023.
+83 % sind im Mittleren Westen. Nur 17 % im Südwesten. Der Anteil von Los Angeles an der Film- und TV-Beschäftigung lag 2023 bei 27 %.
 
-## Metodología
+## Methodik
 
-Obtenido de 1,063 opiniones de cineastas independientes estadounidenses. Respuestas recopiladas dentro de un intervalo de confianza del 65% y un margen de error del 47%.
+Gewonnen aus 1.063 Meinungen unabhängiger US-Filmemacher. Antworten erhoben innerhalb eines Konfidenzintervalls von 65 % und einer Fehlermarge von 47 %.
 
-### Sobre la muestra representativa
+### Über die repräsentative Stichprobe
 
-- El 73% son mayores de 45 años.
-- El 56% son hombres y el 44% mujeres.
-- El 81% gana entre $500,000 y $1 millón anuales.
+- 73 % sind älter als 45 Jahre.
+- 56 % sind männlich und 44 % weiblich.
+- 81 % verdienen zwischen 500.000 und 1 Million Dollar jährlich.
 `,
 
-  "pzaz-product-update-storyboards-are-here": `## 🎬 Presentamos la nueva función de Storyboard en Pzaz
+  "pzaz-product-update-storyboards-are-here": `## 🎬 Die neue Storyboard-Funktion in Pzaz
 
-Estamos encantados de anunciar el lanzamiento de una nueva función en Pzaz que revolucionará la planificación de su película — ¡conozca los **Storyboards**!
+Wir freuen uns, den Start einer neuen Funktion in Pzaz anzukündigen, die die Planung deines Films revolutionieren wird — lerne die **Storyboards** kennen!
 
-### Dónde encontrarlo
+### Wo du es findest
 
-Encontrará la función de **Storyboard** en el menú de navegación izquierdo bajo la nueva **sección "Pre-producción"**.
+Du findest die **Storyboard**-Funktion im linken Navigationsmenü unter dem neuen **Abschnitt „Vorproduktion"**.
 
-### Dos formas de crear un Storyboard
+### Zwei Wege, ein Storyboard zu erstellen
 
-**1. Generar automáticamente desde el Guión Maestro**
+**1. Automatisch aus dem Hauptdrehbuch generieren**
 
-Suba su guión y Pzaz extraerá automáticamente sus escenas.
+Lade dein Drehbuch hoch und Pzaz extrahiert automatisch deine Szenen.
 
-**2. Crear desde cero**
+**2. Von Grund auf erstellen**
 
-Cree storyboards personalizados y añada escenas manualmente.
+Erstelle benutzerdefinierte Storyboards und füge Szenen manuell hinzu.
 
-### Añada tomas detalladas a cada escena
+### Detaillierte Einstellungen zu jeder Szene hinzufügen
 
-- **Ubicación de la escena**
-- **Hora del día**
-- **Diálogos de personajes**
-- **Detalles de toma**
-- **Información de cámara**
-- **Temporización**
-- **Comentarios y notas**
+- **Schauplatz der Szene**
+- **Tageszeit**
+- **Charakterdialoge**
+- **Einstellungsdetails**
+- **Kamerainformationen**
+- **Timing**
+- **Kommentare und Notizen**
 
-### Del guión al calendario, más rápido
+### Vom Drehbuch zum Drehplan, schneller
 
-El Storyboard de Pzaz facilita la transición de la planificación creativa a la producción práctica.
+Das Pzaz Storyboard erleichtert den Übergang von der kreativen Planung zur praktischen Produktion.
 
-### Pruébelo hoy
+### Teste es heute
 
-¡Estamos muy emocionados de que pruebe la herramienta de Storyboarding de Pzaz!
+Wir freuen uns, dass du das Storyboarding-Tool von Pzaz ausprobierst!
 
-### ¿Preguntas o comentarios?
+### Fragen oder Feedback?
 
-Contacte a nuestro equipo de soporte. ¡Comencemos a hacer storyboards!
+Kontaktiere unser Support-Team. Lass uns mit dem Storyboarding beginnen!
 `,
 
-  "pzaz-update-may-system-release": `**Déjenos contarle sobre nuestra última actualización de producto…**
+  "pzaz-update-may-system-release": `**Lass uns dir von unserem neuesten Produkt-Update erzählen…**
 
-Estamos encantados de anunciar nuevas actualizaciones en **Pzaz**, diseñadas para agilizar su flujo de trabajo de producción.
+Wir freuen uns, neue Updates für **Pzaz** anzukündigen, die deinen Produktions-Workflow optimieren.
 
-### La sección de Documentos está de vuelta
+### Der Dokumenten-Bereich ist zurück
 
-- Cree páginas ilimitadas en libros ilimitados.
-- Formatee con encabezados (H1–H6), viñetas, listas numeradas e hipervínculos.
-- Organice toda la documentación del proyecto en un lugar centralizado.
+- Erstelle unbegrenzt viele Seiten in unbegrenzt vielen Büchern.
+- Formatiere mit Überschriften (H1–H6), Aufzählungszeichen, nummerierten Listen und Hyperlinks.
+- Organisiere alle Projektdokumente an einem zentralen Ort.
 
-### Equipo y Reparto — Ahora en tableros separados
+### Crew & Besetzung — Jetzt auf separaten Boards
 
-Hemos separado Equipo y Reparto en **tableros separados para una gestión más fácil y limpia**.
+Wir haben Crew und Besetzung in **separate Boards für einfacheres und übersichtlicheres Management** aufgeteilt.
 
-### Página de Presupuesto — Completamente renovada
+### Budget-Seite — Komplett überarbeitet
 
-- Función de exportación restaurada.
-- Flujo simplificado para eliminar elementos (con confirmación).
-- Diseño de columnas mejorado para una navegación más fácil.
+- Exportfunktion wiederhergestellt.
+- Vereinfachter Ablauf zum Entfernen von Elementen (mit Bestätigung).
+- Verbessertes Spaltenlayout für einfachere Navigation.
 
-Esté atento a la próxima actualización de producto.
+Bleib dran für das nächste Produkt-Update.
 `,
 
-  "film-scheduling-statistics-usa": `Detrás de cada gran película hay un calendario sólido. ¿Cómo manejan los cineastas independientes la programación en 2025?
+  "film-scheduling-statistics-usa": `Hinter jedem großartigen Film steckt ein solider Zeitplan. Wie handhaben unabhängige Filmemacher die Drehplanung im Jahr 2025?
 
-Se obtuvieron insights impulsados por IA de los datos de 16,608 cineastas indie.
+KI-gestützte Erkenntnisse aus den Daten von 16.608 Indie-Filmemachern.
 
-### Índice
+### Inhaltsverzeichnis
 
-- El 100% de los cineastas independientes confían en asistentes para los calendarios de producción
-- El 83% de los cineastas señalan los cambios de último momento como el mayor obstáculo
-- La mala programación afecta el presupuesto y la línea de tiempo del 93% de los cineastas
-- El 68% de los cineastas responsabilizan al 1er AD o gerentes de producción en conflictos de calendario
-- El 100% de los cineastas independientes han utilizado herramientas de programación
-- El 100% de los cineastas utilizarían una herramienta que reduzca el tiempo de programación a la mitad
-- El 64% de los cineastas priorizan la facilidad de uso
-- El 56% de los cineastas dice que los días de rodaje se mantienen según el calendario la mitad del tiempo
-- El 52% de los cineastas utilizan apps de mensajería para compartir el calendario final
-- Los documentales son el tipo de proyecto más común para el 47% de los cineastas independientes
-- El 67% de los cineastas independientes están ubicados en el Medio Oeste
-- Metodología
+- 100 % der unabhängigen Filmemacher verlassen sich bei Produktionszeitplänen auf Assistenten
+- 83 % der Filmemacher nennen Last-Minute-Änderungen als größtes Hindernis
+- Schlechte Planung beeinträchtigt Budget und Zeitplan bei 93 % der Filmemacher
+- 68 % der Filmemacher machen den 1. AD oder Herstellungsleiter bei Terminplanungskonflikten verantwortlich
+- 100 % der unabhängigen Filmemacher haben Planungstools verwendet
+- 100 % der Filmemacher würden ein Tool nutzen, das die Planungszeit halbiert
+- 64 % der Filmemacher priorisieren Benutzerfreundlichkeit
+- 56 % der Filmemacher sagen, dass Drehtage in der Hälfte der Fälle planmäßig verlaufen
+- 52 % der Filmemacher nutzen Messenger-Apps, um den finalen Zeitplan zu teilen
+- Dokumentarfilme sind der häufigste Projekttyp für 47 % der unabhängigen Filmemacher
+- 67 % der unabhängigen Filmemacher befinden sich im Mittleren Westen
+- Methodik
 
-## ¿Cómo gestiona los calendarios de producción?
+## Wie verwalten Sie Produktionszeitpläne?
 
-### El 100% de los cineastas independientes confían en asistentes
+### 100 % der unabhängigen Filmemacher verlassen sich auf Assistenten
 
-![Gestión de calendarios de producción](https://pzaz.io/producer-blog/wp-content/uploads/2025/04/Screenshot-2025-04-22-at-10.57.15.png)
+![Verwaltung von Produktionszeitplänen](https://pzaz.io/producer-blog/wp-content/uploads/2025/04/Screenshot-2025-04-22-at-10.57.15.png)
 
-Cada uno de nuestros 16,608 cineastas independientes confía en asistentes.
+Jeder unserer 16.608 unabhängigen Filmemacher verlässt sich auf Assistenten.
 
-## ¿Cuál es el mayor desafío?
+## Was ist die größte Herausforderung?
 
-### El 83% señala los cambios de último momento
+### 83 % nennen Last-Minute-Änderungen
 
-![Mayor desafío](https://pzaz.io/producer-blog/wp-content/uploads/2025/04/Screenshot-2025-04-22-at-10.59.16.png)
+![Größte Herausforderung](https://pzaz.io/producer-blog/wp-content/uploads/2025/04/Screenshot-2025-04-22-at-10.59.16.png)
 
-El 83% señaló los cambios de último momento como el mayor desafío. El 17% señala los flujos de trabajo de herramientas.
+83 % nannten Last-Minute-Änderungen als die größte Herausforderung. 17 % nannten Tool-Workflows.
 
-## ¿Con qué frecuencia la mala programación afecta el presupuesto?
+## Wie oft beeinträchtigt schlechte Planung das Budget?
 
-### El 93% de los cineastas ven afectados presupuesto y línea de tiempo
+### Bei 93 % der Filmemacher sind Budget und Zeitplan betroffen
 
-![Impacto de la mala programación](https://pzaz.io/producer-blog/wp-content/uploads/2025/04/Screenshot-2025-04-22-at-11.01.51.png)
+![Auswirkungen schlechter Planung](https://pzaz.io/producer-blog/wp-content/uploads/2025/04/Screenshot-2025-04-22-at-11.01.51.png)
 
-El costo promedio de un cortometraje es de $700 a $1,500 por minuto, por lo que el impacto en el presupuesto del 93% tiene sentido.
+Die durchschnittlichen Kosten eines Kurzfilms betragen 700 bis 1.500 Dollar pro Minute, daher macht die Budgetauswirkung von 93 % Sinn.
 
-## ¿Quién tiene la última palabra en conflictos de calendario?
+## Wer hat das letzte Wort bei Terminplanungskonflikten?
 
-### El 68% señala al 1er AD o gerentes de producción
+### 68 % nennen den 1. AD oder Herstellungsleiter
 
-![Conflictos de calendario](https://pzaz.io/producer-blog/wp-content/uploads/2025/04/Screenshot-2025-04-22-at-11.02.58.png)
+![Terminplanungskonflikte](https://pzaz.io/producer-blog/wp-content/uploads/2025/04/Screenshot-2025-04-22-at-11.02.58.png)
 
-Para el 68%, la decisión recae en el 1er AD o gerente de producción.
+Für 68 % liegt die Entscheidung beim 1. AD oder Herstellungsleiter.
 
-## Metodología
+## Methodik
 
-Obtenido de 16,608 opiniones de cineastas independientes estadounidenses. Respuestas recopiladas dentro de un intervalo de confianza del 95% y un margen de error del 5%.
+Gewonnen aus 16.608 Meinungen unabhängiger US-Filmemacher. Antworten erhoben innerhalb eines Konfidenzintervalls von 95 % und einer Fehlermarge von 5 %.
 
-- El 57% son hombres y el 43% mujeres.
-- El 80% gana entre $40,000 y $120,000 anuales.
+- 57 % sind männlich und 43 % weiblich.
+- 80 % verdienen zwischen 40.000 und 120.000 Dollar jährlich.
 `,
 
-  "pzaz-update-april-system-release": `## Lanzamiento del sistema — Abril 2025
+  "pzaz-update-april-system-release": `## Systemrelease — April 2025
 
-Esta versión incluye varias mejoras importantes:
+Diese Version enthält mehrere wichtige Verbesserungen:
 
-### Nuevas funciones
+### Neue Funktionen
 
-- **Plantillas de flujo de trabajo**: Comience inmediatamente con plantillas prediseñadas.
-- **Sección de gestión renovada**: Navegación más intuitiva y mejor rendimiento.
-- **Rediseño completo de UX**: Interfaz limpia y moderna para una mejor experiencia.
+- **Workflow-Vorlagen**: Starte sofort mit vorgefertigten Vorlagen.
+- **Überarbeiteter Verwaltungsbereich**: Intuitivere Navigation und bessere Leistung.
+- **Komplette UX-Überarbeitung**: Saubere, moderne Benutzeroberfläche für ein besseres Erlebnis.
 
-### Corrección de errores
+### Fehlerbehebungen
 
-- Diversas mejoras de UI y rendimiento.
+- Diverse UI- und Performance-Verbesserungen.
 
-¡Esté atento a más actualizaciones!
+Bleib dran für weitere Updates!
 `,
 
   "film-crew-hiring-management-statistics": `
-Insights impulsados por IA de 4,436 cineastas independientes — contratación de equipo, gestión y puntos de presión en 2025.
+KI-gestützte Erkenntnisse von 4.436 unabhängigen Filmemachern — Crew-Einstellung, Management und Druckpunkte 2025.
 
-## Índice
+## Inhaltsverzeichnis
 
-- El 57% de los cineastas independientes contratan equipo por referencias personales
-- El 25% considera ineficaces las tarifas por hora
-- El 65% dice que encontrar equipo es un desafío importante
-- El 52% dice que la incompatibilidad de equipos es el mayor desafío
-- El costo es el factor más importante para el 51%
-- El 84% utiliza Trello
-- Mejorar la comunicación es la principal prioridad para el 42%
-- El 100% espera que el proceso se vuelva más fluido
+- 57 % der unabhängigen Filmemacher stellen Crew über persönliche Empfehlungen ein
+- 25 % halten Stundensätze für ineffektiv
+- 65 % sagen, dass die Crew-Suche eine große Herausforderung ist
+- 52 % sagen, dass Teamunverträglichkeit die größte Herausforderung ist
+- Kosten sind der wichtigste Faktor für 51 %
+- 84 % nutzen Trello
+- Verbesserung der Kommunikation ist die oberste Priorität für 42 %
+- 100 % erwarten, dass der Prozess reibungsloser wird
 
-![Métodos de contratación](https://pzaz.io/producer-blog/wp-content/uploads/2025/04/Screenshot-2025-04-03-at-14.58.07.png)
+![Einstellungsmethoden](https://pzaz.io/producer-blog/wp-content/uploads/2025/04/Screenshot-2025-04-03-at-14.58.07.png)
 
-El 57% utiliza referencias personales. El 43% depende de agencias.
+57 % nutzen persönliche Empfehlungen. 43 % verlassen sich auf Agenturen.
 
-![Herramientas de colaboración](https://pzaz.io/producer-blog/wp-content/uploads/2025/04/Screenshot-2025-04-03-at-15.23.10.png)
+![Zusammenarbeitstools](https://pzaz.io/producer-blog/wp-content/uploads/2025/04/Screenshot-2025-04-03-at-15.23.10.png)
 
-Trello es el preferido del 84%, Asana está en el 12%.
+Trello ist der Favorit von 84 %, Asana liegt bei 12 %.
 
-## Metodología
+## Methodik
 
-Obtenido de 4,436 cineastas independientes estadounidenses. Dentro de un intervalo de confianza del 65%.
+Gewonnen aus 4.436 unabhängigen US-Filmemachern. Innerhalb eines Konfidenzintervalls von 65 %.
 `,
 
-  "vagelis-karampasoglou-telling-stories-that-breathe": `Vagelis Karampasoglou no es solo un actor — es un verdadero narrador. Combinando la perspicacia emocional de la actuación con la precisión de un escritor, su trabajo sirve como puente entre la verdad interior y la expresión exterior.
+  "vagelis-karampasoglou-telling-stories-that-breathe": `Vagelis Karampasoglou ist nicht nur ein Schauspieler — er ist ein wahrer Geschichtenerzähler. Er verbindet die emotionale Tiefe der Schauspielkunst mit der Präzision eines Autors, und sein Werk dient als Brücke zwischen innerer Wahrheit und äußerem Ausdruck.
 
-Con raíces en el teatro y el cine, ha desarrollado una voz creativa llena de honestidad, vulnerabilidad y realismo emocional. Su actuación es sutil pero poderosa — una intensidad silenciosa que invita a la audiencia no solo a observar sino a sentir.
+Mit Wurzeln in Theater und Film hat er eine kreative Stimme entwickelt, die von Ehrlichkeit, Verletzlichkeit und emotionalem Realismus geprägt ist. Sein Spiel ist subtil, aber kraftvoll — eine leise Intensität, die das Publikum einlädt, nicht nur zu beobachten, sondern zu fühlen.
 
-En un momento en que la industria se inclina hacia las fórmulas y el brillo, Vagelis Karampasoglou representa algo diferente: una narrativa que respira, sana y se atreve a ser auténtica.`,
+In einer Zeit, in der die Branche zu Formeln und Oberflächlichkeit neigt, steht Vagelis Karampasoglou für etwas anderes: Storytelling, das atmet, heilt und den Mut hat, authentisch zu sein.`,
 
-  "march-product-update": `## Actualización de producto — Marzo 2025
+  "march-product-update": `## Produkt-Update — März 2025
 
-La primavera está llegando, y hemos lanzado una actualización fresca de Pzaz con nuevas funciones y mejoras.
+Der Frühling kommt, und wir haben ein frisches Pzaz-Update mit neuen Funktionen und Verbesserungen veröffentlicht.
 
-### Nuevas funciones y mejoras:
+### Neue Funktionen und Verbesserungen:
 
-- Nuevos elementos de UI renovados
-- Navegación y experiencia de usuario mejoradas
-- Optimización del rendimiento
-- Varias correcciones de errores
+- Überarbeitete neue UI-Elemente
+- Verbesserte Navigation und Benutzererfahrung
+- Leistungsoptimierung
+- Diverse Fehlerbehebungen
 
-¡Como siempre, sus comentarios son valiosos!
+Wie immer sind eure Rückmeldungen wertvoll!
 `,
 
-  "from-architecture-to-documentary-film": `La cineasta peruana Lizbeth Yarlequé tomó un camino no convencional hacia el cine documental, impulsada por un propósito y pasión por contar historias.
+  "from-architecture-to-documentary-film": `Die peruanische Filmemacherin Lizbeth Yarlequé wählte einen unkonventionellen Weg zum Dokumentarfilm, angetrieben von Sinn und Leidenschaft für das Geschichtenerzählen.
 
-De la arquitectura al cine documental — su viaje nos muestra que la pasión creativa no conoce límites. Trayendo sus habilidades y formación académica al cine, Lizbeth encontró el camino para contar historias significativas.
+Von der Architektur zum Dokumentarfilm — ihre Reise zeigt uns, dass kreative Leidenschaft keine Grenzen kennt. Mit ihren Fähigkeiten und ihrer akademischen Ausbildung fand Lizbeth den Weg, bedeutungsvolle Geschichten zu erzählen.
 
-¡Vea la entrevista completa en YouTube!
+Schau dir das vollständige Interview auf YouTube an!
 `,
 
   "film-production-software-usa": `
-En un mundo donde "luces, cámara, acción" es solo el comienzo, la verdadera magia ocurre detrás de escena con las herramientas que mantienen cada toma, calendario y guión en el camino correcto.
+In einer Welt, in der „Licht, Kamera, Action" nur der Anfang ist, passiert die wahre Magie hinter den Kulissen mit den Tools, die jede Einstellung, jeden Zeitplan und jedes Drehbuch auf Kurs halten.
 
-Se obtuvieron insights impulsados por IA de 130,979 opiniones de cineastas.
+KI-gestützte Erkenntnisse aus 130.979 Filmemacher-Meinungen.
 
-## Mejor software general de producción cinematográfica 2025 – Pzaz
+## Beste Filmproduktionssoftware insgesamt 2025 – Pzaz
 
-Pzaz es una plataforma de cine todo en uno que conecta programación, gestión de guiones, colaboración y flujos de trabajo de postproducción en un solo lugar.
+Pzaz ist eine All-in-One-Filmplattform, die Drehplanung, Drehbuchverwaltung, Zusammenarbeit und Postproduktions-Workflows an einem Ort verbindet.
 
-## ¿Qué función es más importante en el flujo de trabajo diario?
+## Welche Funktion ist im täglichen Workflow am wichtigsten?
 
-### El soporte de edición es lo más importante para el 41%
+### Schnittunterstützung ist für 41 % am wichtigsten
 
-![Preferencias de flujo de trabajo diario](https://pzaz.io/producer-blog/wp-content/uploads/2025/06/Screenshot-2025-06-27-at-13.36.19.png)
+![Tägliche Workflow-Präferenzen](https://pzaz.io/producer-blog/wp-content/uploads/2025/06/Screenshot-2025-06-27-at-13.36.19.png)
 
-## ¿Qué es lo más importante en la gestión del equipo de cine?
+## Was ist bei der Filmcrew-Verwaltung am wichtigsten?
 
-### El 43% considera esencial el seguimiento del progreso
+### 43 % halten Fortschrittsverfolgung für unverzichtbar
 
-![Preferencias de gestión de equipo](https://pzaz.io/producer-blog/wp-content/uploads/2025/06/Screenshot-2025-06-27-at-13.41.36.png)
+![Crew-Management-Präferenzen](https://pzaz.io/producer-blog/wp-content/uploads/2025/06/Screenshot-2025-06-27-at-13.41.36.png)
 
-## ¿Qué busca al elegir nuevo software?
+## Worauf achten Sie bei der Auswahl neuer Software?
 
-### El 33% prioriza la facilidad de uso
+### 33 % priorisieren Benutzerfreundlichkeit
 
-![Criterios de selección de software](https://pzaz.io/producer-blog/wp-content/uploads/2025/06/Screenshot-2025-06-27-at-14.00.20.png)
+![Software-Auswahlkriterien](https://pzaz.io/producer-blog/wp-content/uploads/2025/06/Screenshot-2025-06-27-at-14.00.20.png)
 
-## ¿Cuál es el formato de película más común?
+## Was ist das häufigste Filmformat?
 
-### El 49% hace cortometrajes
+### 49 % machen Kurzfilme
 
-![Preferencias de formato de película](https://pzaz.io/producer-blog/wp-content/uploads/2025/06/Screenshot-2025-06-27-at-14.04.14.png)
+![Filmformat-Präferenzen](https://pzaz.io/producer-blog/wp-content/uploads/2025/06/Screenshot-2025-06-27-at-14.04.14.png)
 
-## ¿Cuál es su ciudad?
+## Wo ist Ihre Stadt?
 
-### El 46% está en la ciudad de Nueva York
+### 46 % sind in New York City
 
-![Distribución por ciudad](https://pzaz.io/producer-blog/wp-content/uploads/2025/06/Screenshot-2025-06-27-at-14.48.59.png)
+![Stadtverteilung](https://pzaz.io/producer-blog/wp-content/uploads/2025/06/Screenshot-2025-06-27-at-14.48.59.png)
 
-## Metodología
+## Methodik
 
-Obtenido de 130,979 opiniones de cineastas independientes. Dentro de un intervalo de confianza del 50%.
+Gewonnen aus 130.979 Meinungen unabhängiger Filmemacher. Innerhalb eines Konfidenzintervalls von 50 %.
 
-- El 35% tiene entre 25 y 54 años.
-- El 53% son hombres y el 47% mujeres.
+- 35 % sind zwischen 25 und 54 Jahre alt.
+- 53 % sind männlich und 47 % weiblich.
 `,
 
-  "scene-breakdown-statistics-for-usa": `Análisis basado en datos de los métodos de desglose de escenas de 9,406 cineastas independientes estadounidenses — colaboración, herramientas y tendencias de la industria en 2025. Estadísticas detalladas y gráficos disponibles en el contenido en inglés.`,
+  "scene-breakdown-statistics-for-usa": `Datengestützte Analyse der Szenen-Aufschlüsselungsmethoden von 9.406 unabhängigen US-Filmemachern — Zusammenarbeit, Tools und Branchentrends 2025. Detaillierte Statistiken und Grafiken im englischen Inhalt verfügbar.`,
 
-  "february-update": `Esta actualización incluye derechos de usuario, un nuevo tipo de usuario gratuito — colaborador, mejoras en la herramienta de escritura de guiones, base de conocimientos, chats grupales y estado de usuario activo. Nuevas funciones: nueva estrategia de precios, derechos de usuario, colaboradores, gestión de elementos de escritura de guiones, base de conocimientos, chats grupales.`,
+  "february-update": `Dieses Update umfasst Benutzerrechte, einen neuen kostenlosen Benutzertyp — Mitarbeiter, Verbesserungen am Drehbuch-Tool, Wissensdatenbank, Gruppenchats und aktiven Benutzerstatus. Neue Funktionen: neue Preisstrategie, Benutzerrechte, Mitarbeiter, Drehbuch-Elementverwaltung, Wissensdatenbank, Gruppenchats.`,
 
-  "from-small-town-greece-to-filmmaking": `El viaje de Angelika desde el pequeño pueblo de Kavala hasta el cine es un testimonio de pasión y perseverancia. Inspirada desde la infancia por películas clásicas de Hollywood, en sus veintes se sintió atraída por el cine artístico. Dejó la ingeniería eléctrica por las bellas artes y estudió teatro en Salónica. Su primera película, 'Be Like Angel Padalos', es una mezcla de animación, danza y poesía.`,
+  "from-small-town-greece-to-filmmaking": `Angelikas Reise von der Kleinstadt Kavala zum Film ist ein Zeugnis für Leidenschaft und Ausdauer. Inspiriert seit ihrer Kindheit von klassischen Hollywood-Filmen, fühlte sie sich in ihren Zwanzigern zum Arthouse-Kino hingezogen. Sie gab das Elektrotechnikstudium zugunsten der bildenden Kunst auf und studierte Theater in Thessaloniki. Ihr erster Film ‚Be Like Angel Padalos' ist eine Mischung aus Animation, Tanz und Poesie.`,
 
-  "the-journey-of-a-filmmaker-from-childhood-inspiration-to-cinematic-creation-christos-megarchiotis-interview-with-pzaz": `De la inspiración infantil en ciencia ficción y clásicos de terror hasta una carrera completa en el cine. Comenzando a los 8 años en una tienda de alquiler de videos, Alien, The Terminator y Jurassic Park dejaron una profunda impresión. Los experimentos cinematográficos comenzaron a los 17 años. Activo en dirección, producción, cinematografía, edición y música desde 2004.`,
+  "the-journey-of-a-filmmaker-from-childhood-inspiration-to-cinematic-creation-christos-megarchiotis-interview-with-pzaz": `Von der Kindheitsinspiration durch Science-Fiction und Horrorklassiker bis hin zu einer vollständigen Karriere im Film. Beginnend mit 8 Jahren in einer Videothek hinterließen Alien, The Terminator und Jurassic Park einen tiefen Eindruck. Die filmischen Experimente begannen mit 17 Jahren. Seit 2004 aktiv in Regie, Produktion, Kameraarbeit, Schnitt und Musik.`,
 
-  "storyboarding-statistics-usa": `Insights impulsados por IA de 272,496 cineastas — métodos de storyboarding, preferencias de software y tendencias de narrativa visual en 2025. El 42.3% de los cineastas crean storyboards para el desarrollo de la historia. Más del 30% dice que la claridad es el mayor beneficio del storyboarding. Estadísticas detalladas disponibles en el contenido en inglés.`,
+  "storyboarding-statistics-usa": `KI-gestützte Erkenntnisse von 272.496 Filmemachern — Storyboarding-Methoden, Software-Präferenzen und Trends im visuellen Storytelling 2025. 42,3 % der Filmemacher erstellen Storyboards für die Geschichtsentwicklung. Über 30 % sagen, dass Klarheit der größte Vorteil des Storyboardings ist. Detaillierte Statistiken im englischen Inhalt verfügbar.`,
 
-  "stephen-tejas-a-decade-of-filmmaking-mastery-exclusive-filmmaker-interview": `Stephen Tejas comparte su viaje de una década en el cine — desde las inspiraciones de la infancia y los fundamentos de la fotografía hasta completar un largometraje independiente de comedia de terror. ¡Vea la entrevista completa en YouTube!`,
+  "stephen-tejas-a-decade-of-filmmaking-mastery-exclusive-filmmaker-interview": `Stephen Tejas teilt seine zehnjährige Reise als Filmemacher — von den Kindheitsinspirationen und Fotografiewurzeln bis zur Fertigstellung eines unabhängigen Horror-Komödien-Spielfilms. Schau dir das vollständige Interview auf YouTube an!`,
 
-  "pzaz-release-happy-new-year-update": `Propuestas, mood boards, soporte de chat interactivo y múltiples correcciones de errores están incluidos en la actualización de Año Nuevo de Pzaz. Nuevas funciones: sección de propuestas, mood boards, soporte de chat en vivo.`,
+  "pzaz-release-happy-new-year-update": `Proposals, Moodboards, interaktiver Chat-Support und mehrere Fehlerbehebungen sind im Pzaz-Neujahrs-Update enthalten. Neue Funktionen: Proposals-Bereich, Moodboards, Live-Chat-Support.`,
 
-  "screenwriting-statistics-usa": `Insights impulsados por IA de 21,107 guionistas estadounidenses — salarios, motivaciones, preferencias de software, desafíos y demografía de la industria de escritura de guiones. El 70.5% utiliza Scrivener. El 35.3% de los guionistas considera la escritura de diálogos como lo más difícil. Estadísticas detalladas disponibles en el contenido en inglés.`,
+  "screenwriting-statistics-usa": `KI-gestützte Erkenntnisse von 21.107 US-Drehbuchautoren — Gehälter, Motivationen, Software-Präferenzen, Herausforderungen und Demografie der Drehbuchindustrie. 70,5 % nutzen Scrivener. 35,3 % der Drehbuchautoren halten das Dialogschreiben für am schwierigsten. Detaillierte Statistiken im englischen Inhalt verfügbar.`,
 
-  "emmanuel-martin-hernandez-the-journey-of-an-independent-filmmaker": `Emmanuel Martin Hernández comparte su viaje de Santiago de Cuba a Montreal. Inspirado por las películas de Martin Scorsese, Francis Ford Coppola y Jim Jarmusch, su pasión se despertó en la infancia. Su primer proyecto fue Santiago City (2003). ¡Vea la entrevista completa en YouTube!`,
+  "emmanuel-martin-hernandez-the-journey-of-an-independent-filmmaker": `Emmanuel Martin Hernández teilt seine Reise von Santiago de Cuba nach Montreal. Inspiriert von den Filmen von Martin Scorsese, Francis Ford Coppola und Jim Jarmusch wurde seine Leidenschaft in der Kindheit geweckt. Sein erstes Projekt war Santiago City (2003). Schau dir das vollständige Interview auf YouTube an!`,
 
-  "pzaz-november-2024-update": `Actualización de noviembre 2024: exportación de guiones en PDF, mejoras en la bandeja de entrada con vista Kanban, nuevo diseño de configuración y múltiples correcciones de errores.`,
+  "pzaz-november-2024-update": `November 2024 Update: PDF-Drehbuchexport, Posteingang-Verbesserungen mit Kanban-Ansicht, neues Einstellungsdesign und mehrere Fehlerbehebungen.`,
 
-  "pzaz-import-export-update": `Importación/exportación de guiones en formatos .FDX y .PDF, gestión de carpetas de bandeja de entrada y múltiples mejoras de UI están incluidas en esta actualización.`,
+  "pzaz-import-export-update": `Drehbuch-Import/Export in .FDX- und .PDF-Formaten, Posteingang-Ordnerverwaltung und mehrere UI-Verbesserungen sind in diesem Update enthalten.`,
 
-  "redefining-the-independent-film-value-chain-in-2024": `IA, financiación blockchain, distribución digital y una hoja de ruta para los productores de hoy en la cadena de valor del cine independiente en evolución. Análisis detallado disponible en el contenido en inglés.`,
+  "redefining-the-independent-film-value-chain-in-2024": `KI, Blockchain-Finanzierung, digitale Distribution und ein Fahrplan für heutige Produzenten in der sich entwickelnden Wertschöpfungskette des unabhängigen Films. Detaillierte Analyse im englischen Inhalt verfügbar.`,
 
-  "rule-of-three-in-storytelling": `Descubra cómo la antigua regla de tres da forma a la dinámica de personajes, la estructura de la trama, los triángulos amorosos y la narrativa visual en el cine y la literatura. Ejemplos de esta regla en The Dark Knight, Lord of the Rings y otras obras maestras. Artículo detallado disponible en el contenido en inglés.`,
+  "rule-of-three-in-storytelling": `Entdecke, wie die zeitlose Dreierregel Charakterdynamiken, Plotstrukturen, Liebesdreiecke und visuelles Storytelling in Film und Literatur prägt. Beispiele dieser Regel in The Dark Knight, Herr der Ringe und anderen Meisterwerken. Detaillierter Artikel im englischen Inhalt verfügbar.`,
 
-  "movie-production-market-usa-2024": `Revisión completa del mercado de producción cinematográfica de EE.UU. en 2024 — tamaño de mercado alcanzando $26.92 mil millones para 2030, tendencias de streaming, adopción de IA y recuperación post-COVID. Hollywood posee más del 85% de los ingresos mundiales de taquilla. Análisis detallado disponible en el contenido en inglés.`,
+  "movie-production-market-usa-2024": `Umfassende Übersicht des US-Filmproduktionsmarktes 2024 — Marktgröße von 26,92 Milliarden Dollar bis 2030, Streaming-Trends, KI-Adoption und Post-COVID-Erholung. Hollywood besitzt über 85 % der weltweiten Kinokasseneinnahmen. Detaillierte Analyse im englischen Inhalt verfügbar.`,
 
-  "pzaz-major-update": `Gran actualización de funciones de Pzaz: nuevo editor de guiones, diseño de configuración actualizado, botón de invitación, página de ubicaciones, sección de elementos, espacio de trabajo demo y llamadas VOIP 1-a-1.`,
+  "pzaz-major-update": `Großes Pzaz-Funktions-Update: neuer Drehbuch-Editor, überarbeitetes Einstellungsdesign, Einladungsbutton, Drehorte-Seite, Elementebereich, Demo-Workspace und 1-zu-1 VOIP-Anrufe.`,
 
-  "filmmaking-software-comparison": `Comparación objetiva de StudioBinder, Celtx, Movie Magic, Yamdu, Final Draft y Pzaz en escritura de guiones, colaboración, programación y presupuestación. Comparación detallada disponible en el contenido en inglés.`,
+  "filmmaking-software-comparison": `Objektiver Vergleich von StudioBinder, Celtx, Movie Magic, Yamdu, Final Draft und Pzaz in den Bereichen Drehbuch, Zusammenarbeit, Drehplanung und Budgetierung. Detaillierter Vergleich im englischen Inhalt verfügbar.`,
 
-  "storytelling-statistics-worldwide": `Tendencias y estadísticas de narrativa basadas en encuestas de más de 4.1 millones de personas en plataformas de redes sociales en 2024. Estadísticas detalladas disponibles en el contenido en inglés.`,
+  "storytelling-statistics-worldwide": `Storytelling-Trends und -Statistiken basierend auf Umfragen von über 4,1 Millionen Menschen auf Social-Media-Plattformen 2024. Detaillierte Statistiken im englischen Inhalt verfügbar.`,
 
-  "introducing-new-inbox-feature-and-various-bugfixes": `Nueva función de bandeja de entrada: mejoras en funciones existentes, una nueva y potente herramienta de bandeja de entrada para mantenerlo organizado y múltiples correcciones de errores.`,
+  "introducing-new-inbox-feature-and-various-bugfixes": `Neue Posteingang-Funktion: Verbesserungen bestehender Funktionen, ein neues leistungsstarkes Posteingang-Tool für bessere Organisation und mehrere Fehlerbehebungen.`,
 
-  "new-updates-and-enhancements": `Nueva funcionalidad: herramienta Film Info, mejoras en la planificación de días de rodaje, permisos de espacio de trabajo, mejoras en el menú de navegación lateral, notificaciones de chat.`,
+  "new-updates-and-enhancements": `Neue Funktionalität: Film Info Tool, Verbesserungen bei der Drehtageplanung, Workspace-Berechtigungen, Verbesserungen im seitlichen Navigationsmenü, Chat-Benachrichtigungen.`,
 
-  "film-producer-director-and-screenwriter-cathy-durant-discusses-the-secrets-of-successful-film-production-with-pzaz": `Entrevista exclusiva con la experimentada cineasta estadounidense Cathy Durant. La importancia de la capacidad de venta, la diferencia entre independiente y trabajo por encargo, el papel del productor y el proyecto 'Going Out A Champion'. ¡Vea la entrevista completa en YouTube!`,
+  "film-producer-director-and-screenwriter-cathy-durant-discusses-the-secrets-of-successful-film-production-with-pzaz": `Exklusives Interview mit der erfahrenen amerikanischen Filmemacherin Cathy Durant. Die Bedeutung des Verkaufens, der Unterschied zwischen Independent und Auftragsarbeit, die Rolle des Produzenten und das Projekt ‚Going Out A Champion'. Schau dir das vollständige Interview auf YouTube an!`,
 
-  "new-features-shooting-planning-stripboard": `Introducción de la herramienta de planificación de rodaje — planifique días de rodaje, escenas, ubicaciones, clima, gestión de equipo y seguimiento del progreso con el nuevo stripboard. Correcciones: sincronización de escenas, información de tomas y duplicación de chat.`,
+  "new-features-shooting-planning-stripboard": `Einführung des Drehplanungs-Tools — plane Drehtage, Szenen, Drehorte, Wetter, Crew-Management und verfolge den Fortschritt mit dem neuen Stripboard. Fehlerbehebungen: Szenen-Synchronisation, Einstellungsinformationen und Chat-Duplizierung.`,
 
-  "lindsey-paulette-on-filmmaking-opportunities": `Entrevista con la escritora, productora y directora estadounidense Lindsey Paulette sobre oportunidades en el cine. Trabajo independiente, formación teatral, educación y la película 'The Trip'. ¡Vea la entrevista completa en YouTube!`,
+  "lindsey-paulette-on-filmmaking-opportunities": `Interview mit der amerikanischen Autorin, Produzentin und Regisseurin Lindsey Paulette über Chancen im Filmemachen. Freiberufliche Arbeit, Theaterausbildung, Bildung und der Film ‚The Trip'. Schau dir das vollständige Interview auf YouTube an!`,
 
-  "film-director-dean-midas-on-his-love-for-horror-and-filmmaking-lessons-in-pzaz-interview": `Entrevista exclusiva con el director de cine de terror Dean Midas — su amor por el género de terror, hacer películas con bajo presupuesto y equilibrar el cine con el trabajo y la vida familiar. 'The Devil\\'s Stone' ganó el voto del público en Pinewood Studios. ¡Vea la entrevista completa en YouTube!`,
+  "film-director-dean-midas-on-his-love-for-horror-and-filmmaking-lessons-in-pzaz-interview": `Exklusives Interview mit Horror-Regisseur Dean Midas — seine Liebe zum Horror-Genre, das Drehen von Filmen mit kleinem Budget und die Balance zwischen Filmemachen, Beruf und Familienleben. ‚The Devil\\'s Stone' gewann die Publikumsabstimmung in den Pinewood Studios. Schau dir das vollständige Interview auf YouTube an!`,
 
-  "new-features-enhancements-and-bug-fixes-in-our-latest-release": `Mejoras en escenas, tomas, storyboard, actualizaciones de navegación y correcciones de errores importantes en la última versión de Pzaz.`,
+  "new-features-enhancements-and-bug-fixes-in-our-latest-release": `Verbesserungen bei Szenen, Einstellungen, Storyboard, Navigations-Updates und wichtige Fehlerbehebungen im neuesten Pzaz-Release.`,
 
-  "film-producer-candice-delavante-discusses-the-art-and-challenges-of-documentary-filmmaking-in-an-exclusive-interview-with-pzaz": `Entrevista exclusiva con la productora de cine y televisión Candice Delavante sobre cine documental, contratación del equipo adecuado y el poder transformador de los documentales. ¡Vea la entrevista completa en YouTube!`,
+  "film-producer-candice-delavante-discusses-the-art-and-challenges-of-documentary-filmmaking-in-an-exclusive-interview-with-pzaz": `Exklusives Interview mit der Film- und Fernsehproduzentin Candice Delavante über Dokumentarfilm, die richtige Crew finden und die transformative Kraft von Dokumentarfilmen. Schau dir das vollständige Interview auf YouTube an!`,
 
-  "film-director-henrik-bjerregaard-clausen": `Entrevista exclusiva con el experimentado director de cine danés Henrik Bjerregaard Clausen sobre autenticidad, gestión del tiempo y equilibrar el cine con la vida familiar. ¡Vea la entrevista completa en YouTube!`,
+  "film-director-henrik-bjerregaard-clausen": `Exklusives Interview mit dem erfahrenen dänischen Filmregisseur Henrik Bjerregaard Clausen über Authentizität, Zeitmanagement und die Balance zwischen Filmemachen und Familienleben. Schau dir das vollständige Interview auf YouTube an!`,
 
-  "film-industry-statistics": `Estadísticas de la industria cinematográfica para 2024 — participación del público, ingresos de taquilla, rendimiento del cine independiente y distribución por género. Las películas de acción poseen el 53.43% de la cuota de mercado con $3.98 mil millones en ingresos. Estadísticas detalladas disponibles en el contenido en inglés.`,
+  "film-industry-statistics": `Statistiken der Filmindustrie 2024 — Zuschauerbeteiligung, Kinokasseneinnahmen, Independent-Film-Performance und Genre-Verteilung. Actionfilme halten 53,43 % des Marktanteils mit 3,98 Milliarden Dollar Umsatz. Detaillierte Statistiken im englischen Inhalt verfügbar.`,
 
-  "scriptwriting-software-best-practice-guide-2024": `Guía completa para elegir el mejor software de escritura de guiones en 2024 — Final Draft, Celtx, Scrivener, Fade In, WriterDuet, StudioBinder y Pzaz. Revisión detallada de pros y contras de cada herramienta disponible en el contenido en inglés.`,
+  "scriptwriting-software-best-practice-guide-2024": `Umfassender Leitfaden zur Auswahl der besten Drehbuchsoftware 2024 — Final Draft, Celtx, Scrivener, Fade In, WriterDuet, StudioBinder und Pzaz. Detaillierte Übersicht der Vor- und Nachteile jedes Tools im englischen Inhalt verfügbar.`,
 
-  "the-film-makers-production-secret-weapon": `Presentación de Pzaz — revolucionando el proceso cinematográfico con gestión integral de tareas, herramientas de colaboración y funciones creativas. Artículo detallado disponible en el contenido en inglés.`,
+  "the-film-makers-production-secret-weapon": `Vorstellung von Pzaz — revolutioniert den Filmprozess mit umfassendem Aufgabenmanagement, Zusammenarbeitstools und kreativen Funktionen. Detaillierter Artikel im englischen Inhalt verfügbar.`,
 
-  "filmmakers-guide-business-strategy": `Plan Lean Startup para cineastas — propuesta de valor, segmentos de clientes, canales de distribución, flujos de ingresos, competencia, asociaciones, métricas de éxito y presupuestación. Guía detallada disponible en el contenido en inglés.`,
+  "filmmakers-guide-business-strategy": `Lean Startup Plan für Filmemacher — Wertversprechen, Kundensegmente, Vertriebskanäle, Einnahmequellen, Wettbewerb, Partnerschaften, Erfolgskennzahlen und Budgetierung. Detaillierter Leitfaden im englischen Inhalt verfügbar.`,
 
-  "strategic-planning-for-filmmakers-navigating-business-plans-for-success": `Planificación estratégica para cineastas — planes de negocio para largometrajes, cortometrajes, documentales, independientes y series/franquicias. Guía detallada disponible en el contenido en inglés.`,
+  "strategic-planning-for-filmmakers-navigating-business-plans-for-success": `Strategische Planung für Filmemacher — Business-Pläne für Spielfilme, Kurzfilme, Dokumentarfilme, Independent-Produktionen und Serien/Franchises. Detaillierter Leitfaden im englischen Inhalt verfügbar.`,
 
-  "sunk-cost-fallacy-filmmaking": `La falacia del costo hundido en el cine — guía para productores y directores para evitar decisiones irracionales desde la preproducción hasta el postlanzamiento. Artículo detallado disponible en el contenido en inglés.`,
+  "sunk-cost-fallacy-filmmaking": `Der Sunk-Cost-Irrtum im Filmemachen — Leitfaden für Produzenten und Regisseure zur Vermeidung irrationaler Entscheidungen von der Vorproduktion bis nach der Veröffentlichung. Detaillierter Artikel im englischen Inhalt verfügbar.`,
 
-  "the-canvas-business-model-for-film-tv-and-video-production": `Business Model Canvas para cineastas, productores de TV y creadores de video — propuesta de valor, segmentos de clientes, canales, asociaciones, costos y flujos de ingresos. Guía detallada disponible en el contenido en inglés.`,
+  "the-canvas-business-model-for-film-tv-and-video-production": `Business Model Canvas für Filmemacher, TV-Produzenten und Videokreative — Wertversprechen, Kundensegmente, Kanäle, Partnerschaften, Kosten und Einnahmequellen. Detaillierter Leitfaden im englischen Inhalt verfügbar.`,
 
-  "get-a-glimpse-into-the-world-of-independent-filmmaking-with-film-producer-athanasia-bartzoka": `Entrevista con la productora de cine Athanasia Bartzoka, radicada en Londres, sobre su viaje de las finanzas al cine, crowdfunding, festivales de cine y consejos para aspirantes a cineastas. ¡Vea la entrevista completa en YouTube!`,
+  "get-a-glimpse-into-the-world-of-independent-filmmaking-with-film-producer-athanasia-bartzoka": `Interview mit der in London ansässigen Filmproduzentin Athanasia Bartzoka über ihren Weg von der Finanzwelt zum Film, Crowdfunding, Filmfestivals und Tipps für angehende Filmemacher. Schau dir das vollständige Interview auf YouTube an!`,
 
-  "mastering-the-art-of-value-hypothesis-a-filmmakers-strategic-blueprint": `Hipótesis de valor y Value Proposition Canvas — un plan estratégico para que los cineastas comprendan a su audiencia y desarrollen propuestas de valor convincentes. Guía detallada disponible en el contenido en inglés.`,
+  "mastering-the-art-of-value-hypothesis-a-filmmakers-strategic-blueprint": `Werthypothese und Value Proposition Canvas — ein strategischer Plan für Filmemacher, um ihr Publikum zu verstehen und überzeugende Wertversprechen zu entwickeln. Detaillierter Leitfaden im englischen Inhalt verfügbar.`,
 
-  "visual-artist-and-screenwriter-ivan-alexiev-dives-into-the-world-of-independent-financing": `Entrevista con el artista visual y guionista Ivan Alexiev sobre su viaje creativo de las artes visuales al cine independiente, estrategias de autofinanciación y consejos para aspirantes a cineastas. ¡Vea la entrevista completa en YouTube!`,
+  "visual-artist-and-screenwriter-ivan-alexiev-dives-into-the-world-of-independent-financing": `Interview mit dem bildenden Künstler und Drehbuchautor Ivan Alexiev über seine kreative Reise von der bildenden Kunst zum unabhängigen Film, Eigenfinanzierungsstrategien und Tipps für angehende Filmemacher. Schau dir das vollständige Interview auf YouTube an!`,
 
-  "pzaz-where-films-are-made-introduction": `El comienzo de nuestro viaje para empoderar a los cineastas emprendedores — la historia detrás de escena de la pasión, el propósito y la misión de revolucionar el cine independiente. Pzaz, donde se hacen las películas.`,
+  "pzaz-where-films-are-made-introduction": `Der Beginn unserer Reise zur Stärkung unternehmerischer Filmemacher — die Hinter-den-Kulissen-Geschichte über Leidenschaft, Sinn und die Mission, das unabhängige Filmemachen zu revolutionieren. Pzaz, wo Filme gemacht werden.`,
 
-  "pzaz-tv-offers-independent-film-productions-a-gateway-to-success": `![Pzaz intermediario](https://pzaz.io/producer-blog/wp-content/uploads/2025/01/matchmaker.png)
+  "pzaz-tv-offers-independent-film-productions-a-gateway-to-success": `![Pzaz Vermittler](https://pzaz.io/producer-blog/wp-content/uploads/2025/01/matchmaker.png)
 
-Pzaz TV se ha reposicionado como intermediario de largometrajes europeos independientes, proporcionando a los productores de cine independiente un nuevo camino para llegar a audiencias globales. La empresa ofrece a las producciones cinematográficas independientes de toda Europa un camino más rápido para llegar a audiencias mundiales.
+Pzaz TV hat sich als Vermittler europäischer unabhängiger Spielfilme positioniert und bietet unabhängigen Filmproduzenten einen neuen Weg zum globalen Publikum. Das Unternehmen bietet unabhängigen Filmproduktionen aus ganz Europa einen schnelleren Weg zu einem weltweiten Publikum.
 
-## La misión de Pzaz TV
+## Die Mission von Pzaz TV
 
-Los cineastas independientes a menudo enfrentan barreras en la distribución. Pzaz TV llena ese vacío — conectando cineastas directamente con audiencias y eliminando las barreras de distribución tradicionales.
+Unabhängige Filmemacher stoßen oft auf Barrieren bei der Distribution. Pzaz TV füllt diese Lücke — verbindet Filmemacher direkt mit dem Publikum und beseitigt traditionelle Vertriebsbarrieren.
 
-## ¿Qué significa para los cineastas independientes?
+## Was bedeutet das für unabhängige Filmemacher?
 
-- Acceso directo a audiencias globales
-- Libertad de los intermediarios de distribución tradicionales
-- Promoción del cine independiente europeo
+- Direkter Zugang zu einem globalen Publikum
+- Unabhängigkeit von traditionellen Vertriebsmittlern
+- Förderung des europäischen unabhängigen Kinos
 
-Pzaz TV está comprometido con llevar la voz de los cineastas independientes al escenario mundial.
+Pzaz TV ist der Stimme unabhängiger Filmemacher auf der Weltbühne verpflichtet.
 `,
 
 };
