@@ -153,7 +153,7 @@ export const AppRoutes = () => (
           <Route path="/film-production-solution/tv-production-software" element={<TVSeriesCreators />} />
           <Route path="/film-production-solution/film-budgeting-software" element={<InvestorsFunding />} />
           <Route path="/film-production-solution/software-for-production-managers" element={<ProductionManagers />} />
-          <Route path="/demo-video" element={<VideoPlayer />} />
+          <Route path="/introductory-video" element={<VideoPlayer />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms-of-use" element={<Terms />} />
           {/* Blog */}
