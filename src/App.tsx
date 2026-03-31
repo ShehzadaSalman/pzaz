@@ -225,7 +225,7 @@ export const AppRoutes = () => (
           <Route path="visualise" element={<Visualise />} />
           <Route path="write" element={<Write />} />
           {/* Products */}
-          <Route path="indie-filmmaking-software" element={<Indie />} />
+          <Route path="film-production-software/indie-filmmakers" element={<Indie />} />
           <Route path="film-budgeting-software" element={<Budget />} />
           <Route path="film-preproduction-planning" element={<Planning />} />
           <Route path="studio-pro-software" element={<StudioPro />} />
