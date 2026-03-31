@@ -151,16 +151,20 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
   const navRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLElement>(null);
   const location = useLocation();
-  const isScriptPage = location.pathname === "/script";
-  const isIndiePage = location.pathname === "/indie-filmmaking-software";
-  const isPlanningPage = location.pathname === "/film-preproduction-planning";
-  const isStudioProPage = location.pathname === "/studio-pro-software";
-  const isStoryboardPage = location.pathname === "/storyboard-software";
-  const isBlogRelated = location.pathname.startsWith("/blog") || location.pathname.startsWith("/producer-blog");
-  const isPricingPage = location.pathname === "/pricing";
-  const isAboutPage = location.pathname === "/about-us";
+  const { prefix } = useLocale();
 
-  const { defaultNavItems, blogNavItems } = useNavItems(t);
+  // Strip locale prefix for page detection
+  const bare = location.pathname.replace(/^\/(ur|fr|es|de)(\/|$)/, "/");
+  const isScriptPage = bare === "/script";
+  const isIndiePage = bare === "/indie-filmmaking-software";
+  const isPlanningPage = bare === "/film-preproduction-planning";
+  const isStudioProPage = bare === "/studio-pro-software";
+  const isStoryboardPage = bare === "/storyboard-software";
+  const isBlogRelated = bare.startsWith("/blog") || bare.startsWith("/producer-blog");
+  const isPricingPage = bare === "/pricing";
+  const isAboutPage = bare === "/about-us";
+
+  const { defaultNavItems, blogNavItems } = useNavItems(t, prefix);
   const navItems = isBlogRelated ? blogNavItems : defaultNavItems;
 
   useEffect(() => {
