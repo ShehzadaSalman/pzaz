@@ -6,6 +6,7 @@ import { kbCategoriesUr, kbArticlesUr } from "@/data/knowledgeBaseDataUr";
 import { kbCategoriesFr, kbArticlesFr } from "@/data/knowledgeBaseDataFr";
 import { kbArticlesEs, kbCategoriesEs } from "@/data/knowledgeBaseDataEs";
 import { kbArticlesDe, kbCategoriesDe } from "@/data/knowledgeBaseDataDe";
+import { kbArticlesIt, kbCategoriesIt } from "@/data/knowledgeBaseDataIt";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import KBSearchBar from "@/components/knowledge-base/KBSearchBar";
@@ -26,7 +27,8 @@ const KnowledgeBase = () => {
   const isFr = locale === "fr";
   const isEs = locale === "es";
   const isDe = locale === "de";
-  const cats = isUr ? kbCategoriesUr : isFr ? kbCategoriesFr : isEs ? kbCategoriesEs : isDe ? kbCategoriesDe : kbCategories;
+  const isIt = locale === "it";
+  const cats = isUr ? kbCategoriesUr : isFr ? kbCategoriesFr : isEs ? kbCategoriesEs : isDe ? kbCategoriesDe : isIt ? kbCategoriesIt : kbCategories;
   const getArticles = (catId: KBArticle["category"]) =>
     isUr
       ? kbArticlesUr.filter((a) => a.category === catId)
@@ -36,7 +38,9 @@ const KnowledgeBase = () => {
           ? kbArticlesEs.filter((a) => a.category === catId)
           : isDe
             ? kbArticlesDe.filter((a) => a.category === catId)
-            : getArticlesByCategory(catId);
+            : isIt
+              ? kbArticlesIt.filter((a) => a.category === catId)
+              : getArticlesByCategory(catId);
 
   return (
     <div className="min-h-screen bg-background">

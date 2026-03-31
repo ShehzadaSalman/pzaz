@@ -12,6 +12,7 @@ import { blogPosts as blogPostsFull } from "@/data/blogDataFull";
 import { blogPostsUr } from "@/data/blogDataUr";
 import { blogPostsFr } from "@/data/blogDataFr";
 import { blogPostsDe } from "@/data/blogDataDe";
+import { blogPostsIt } from "@/data/blogDataIt";
 import { useLocale } from "@/hooks/use-locale";
 
 const BlogArticle = () => {
@@ -21,11 +22,12 @@ const BlogArticle = () => {
 
   const isFr = locale === "fr";
   const isDe = locale === "de";
-  const posts = isUr ? blogPostsUr : isFr ? blogPostsFr : isDe ? blogPostsDe : blogPosts;
+  const isIt = locale === "it";
+  const posts = isUr ? blogPostsUr : isFr ? blogPostsFr : isDe ? blogPostsDe : isIt ? blogPostsIt : blogPosts;
   const article = posts.find((post) => post.slug === slug);
 
-  // Full content lookup – Urdu/French/German articles have content inline; English uses blogDataFull
-  const fullArticle = (isUr || isFr || isDe) ? null : blogPostsFull.find((post) => post.slug === slug);
+  // Full content lookup – Urdu/French/German/Italian articles have content inline; English uses blogDataFull
+  const fullArticle = (isUr || isFr || isDe || isIt) ? null : blogPostsFull.find((post) => post.slug === slug);
   const displayArticle = article
     ? { ...article, content: fullArticle?.content || article.content }
     : null;
