@@ -129,8 +129,8 @@ const useNavItems = (t: (key: string) => string, prefix: string) => {
 
   const blogNavItems: NavItem[] = [
     { label: t("nav.products"), to: `${p}/#products`, isHash: true, isDropdown: true, children: sharedChildren.products },
-    { label: t("nav.features"), to: `${p}/script`, isDropdown: true, children: sharedChildren.features },
-    { label: t("nav.solutions"), to: `${p}/film-schools-software`, isDropdown: true, children: sharedChildren.solutions },
+    { label: t("nav.features"), to: `${p}/film-production-tool/script-writing-software`, isDropdown: true, children: sharedChildren.features },
+    { label: t("nav.solutions"), to: `${p}/film-production-solution/film-school-production-software`, isDropdown: true, children: sharedChildren.solutions },
     { label: t("nav.pricing"), to: `${p}/pricing` },
   ];
 
