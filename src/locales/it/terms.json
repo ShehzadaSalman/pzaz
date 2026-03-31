@@ -1,0 +1,40 @@
+{
+  "terms": {
+    "seo_title": "Termini di Servizio | Pzaz",
+    "seo_desc": "Leggi i Termini di Servizio di Pzaz per comprendere i tuoi diritti e responsabilità quando utilizzi la piattaforma di produzione cinematografica Pzaz.",
+    "page_title": "Termini di Servizio Pzaz",
+    "date": "Data di Entrata in Vigore: 13 agosto 2025",
+    "toc_label": "Contenuti",
+    "sections": [
+      { "num": "1", "title": "Benvenuto in Pzaz", "content": "Pzaz è la tua piattaforma per connetterti e collaborare con professionisti dell'industria cinematografica. Accedendo al nostro sito web, alle app o a qualsiasi nostro servizio, accetti questi Termini di Servizio (\"Termini\"). L'uso continuato indica la tua accettazione di eventuali aggiornamenti. Ti preghiamo di rivedere regolarmente questi Termini." },
+      { "num": "2", "title": "Accettazione dei Termini", "content": "Utilizzando Pzaz, accetti di rispettare questi Termini e qualsiasi regola aggiuntiva che potremmo pubblicare. Potremmo modificare questi Termini in qualsiasi momento senza preavviso. L'uso continuato dopo le modifiche costituisce accettazione. Se non sei d'accordo con gli aggiornamenti, devi interrompere immediatamente l'uso dei nostri servizi." },
+      { "num": "3", "title": "Idoneità e Registrazione dell'Account", "content": "Devi avere l'età legale (tipicamente 18+) per stipulare un contratto vincolante. Se utilizzi Pzaz per conto di un'azienda, devi avere l'autorità per farlo. Alla registrazione, devi fornire informazioni accurate e aggiornate. Sei responsabile della protezione delle tue credenziali e di tutte le attività sul tuo account." },
+      { "num": "4", "title": "Servizi e Utilizzo", "content": "Pzaz offre strumenti e servizi per professionisti del cinema, incluse funzionalità di networking e gestione progetti. Potremmo modificare o interrompere qualsiasi nostro servizio senza preavviso.\n\nAccetti di utilizzare i nostri servizi in modo responsabile, legale e in conformità con i nostri Standard sui Contenuti (vedi Sezione 5).\n\nPzaz non è responsabile per qualsiasi perdita di dati o danno derivante da uso improprio, inclusi sabotaggi o cancellazioni non autorizzate da parte di membri del team. Raccomandiamo di implementare misure di sicurezza per salvaguardare il tuo lavoro." },
+      {
+        "num": "5",
+        "title": "Standard sui Contenuti e Usi Proibiti",
+        "content": "Utilizzando Pzaz, accetti di non creare, caricare, condividere o promuovere contenuti che:",
+        "bullets": [
+          { "label": "Sicurezza dei Minori", "text": "raffigurano, promuovono o facilitano abusi sessuali o sfruttamento di minori; coinvolgono adescamento; o raffigurano minori in modo sessuale." },
+          { "label": "Violenza ed Estremismo", "text": "contengono violenza esplicita, gore, tortura o promuovono l'estremismo violento." },
+          { "label": "Contenuti Sessualmente Espliciti", "text": "contengono atti sessualmente espliciti, materiale pornografico o immagini intime non consensuali (NCII)." },
+          { "label": "Condotta d'Odio", "text": "promuovono odio, discriminazione, molestie o violenza contro individui o gruppi basati su razza, etnia, religione, genere, orientamento sessuale, disabilità o caratteristiche protette simili." },
+          { "label": "Autolesionismo", "text": "incoraggiano suicidio, autolesionismo o disturbi alimentari." },
+          { "label": "Violazioni della Privacy", "text": "includono dati personali, immagini o informazioni private di qualcuno senza il suo consenso." },
+          { "label": "Violazione della Proprietà Intellettuale", "text": "violano copyright, marchi o altri diritti di proprietà." },
+          { "label": "Attività Ingannevoli o Fraudolente", "text": "comportano impersonificazione, truffe, falsa rappresentazione di affiliazione o altri atti fraudolenti." }
+        ],
+        "footer": "Applicazione: Utilizziamo strumenti automatizzati e revisione umana per far rispettare questi standard. Le violazioni possono comportare avvertimento, sospensione o terminazione senza preavviso. Dove richiesto dalla legge, segnaleremo contenuti illegali alle autorità competenti."
+      },
+      { "num": "6", "title": "Proprietà dei Contenuti e Licenze", "content": "Quando pubblichi contenuti su Pzaz, ci concedi una licenza mondiale, esente da royalty, non esclusiva per utilizzare, distribuire e visualizzare i tuoi contenuti esclusivamente per fornire e promuovere i nostri servizi.\n\nSei responsabile di assicurarti di avere i diritti per condividere qualsiasi contenuto pubblicato.\n\nPzaz mantiene la proprietà di tutti i contenuti della piattaforma, esclusi i contenuti generati dagli utenti. Non puoi utilizzare i nostri loghi, branding o materiali proprietari senza esplicita autorizzazione." },
+      { "num": "7", "title": "Privacy e Riservatezza", "content": "La tua privacy è importante per noi. Ti preghiamo di consultare la nostra Informativa sulla Privacy per capire come gestiamo le tue informazioni. Se condividiamo informazioni riservate con te, devi mantenerle sicure e non divulgarle senza il nostro consenso.", "privacyLink": true },
+      { "num": "8", "title": "Tariffe, Cancellazione e Terminazione", "content": "Offriamo servizi gratuiti e a pagamento. I tuoi dati di pagamento saranno gestiti in modo sicuro. Puoi cancellare in qualsiasi momento, ma la cancellazione potrebbe comportare la perdita dell'accesso ai tuoi dati — ti preghiamo di fare un backup del tuo lavoro.\n\nCi riserviamo il diritto di terminare il tuo accesso per qualsiasi motivo. Alcune disposizioni sopravvivranno alla terminazione." },
+      { "num": "9", "title": "Garanzie e Responsabilità", "content": "Pzaz è fornito \"così com'è\", senza garanzie di alcun tipo. Non garantiamo servizi ininterrotti o privi di errori. Non siamo responsabili per problemi derivanti dal tuo utilizzo, incluse violazioni della sicurezza, perdita di dati o azioni di terzi." },
+      { "num": "10", "title": "Manleva", "content": "Accetti di manlevare e tenere indenne Pzaz da reclami, danni o spese derivanti dal tuo utilizzo dei nostri servizi o dalla violazione di questi Termini." },
+      { "num": "11", "title": "Risoluzione delle Controversie", "content": "Incoraggiamo la risoluzione informale delle controversie. Se necessario, le controversie saranno risolte attraverso mediazione o arbitrato, non in tribunale." },
+      { "num": "12", "title": "Legge Applicabile e Accordo Completo", "content": "Questi Termini sono regolati dalle leggi del Regno Unito. Costituiscono l'intero accordo tra te e Pzaz. Se una parte risulta non valida, il resto rimane in vigore. Non puoi trasferire i tuoi diritti senza il nostro consenso; noi possiamo trasferire i nostri senza il tuo." },
+      { "num": "13", "title": "Informazioni di Contatto", "content": "Domande? Scrivici a " }
+    ],
+    "privacy_policy_link": "Informativa sulla Privacy"
+  }
+}
