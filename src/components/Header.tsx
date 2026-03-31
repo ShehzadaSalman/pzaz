@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation, Link } from "react-router-dom";
+import { useLocale } from "@/hooks/use-locale";
 import { useTranslation } from "react-i18next";
 import pzazLogo from "@/assets/pzaz-logo.png";
 import LanguageDropdown from "@/components/LanguageDropdown";
