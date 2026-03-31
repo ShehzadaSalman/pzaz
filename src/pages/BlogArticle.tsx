@@ -13,6 +13,7 @@ import { blogPostsUr } from "@/data/blogDataUr";
 import { blogPostsFr } from "@/data/blogDataFr";
 import { blogPostsDe } from "@/data/blogDataDe";
 import { blogPostsIt } from "@/data/blogDataIt";
+import { blogPostsPt } from "@/data/blogDataPt";
 import { useLocale } from "@/hooks/use-locale";
 
 const BlogArticle = () => {
