@@ -13,10 +13,10 @@ const SceneBreakdown = () => {
   return (
     <PageLayout>
       <SEO
-        title="Scene Breakdown – Pzaz | Tag, Organise, Prepare"
+        title="Scene Breakdown Software for Film Production | Plan Every Detail | Pzaz"
         description="Break down scenes, add shots, assign teams, and track progress. Pzaz Scene Breakdown keeps creative intent aligned with what production actually requires."
-        url="https://pzaz.io/scene-breakdown-software"
-        canonical="https://pzaz.io/scene-breakdown-software"
+        url="https://pzaz.io/film-production-tool/scene-breakdown-software"
+        canonical="https://pzaz.io/film-production-tool/scene-breakdown-software"
         keywords={["scene breakdown", "film production", "shot list", "stripboard", "storyboard", "pzaz"]}
       />
       <SceneBreakdownHero />

@@ -65,9 +65,9 @@ const Screenwriters = () => {
   return (
     <PageLayout>
       <SEO
-        title="Screenwriting Software for Writers – Pzaz"
+        title="Screenwriting Software for Film, Video & TV | Write & Collaborate | Pzaz"
         description="A writing environment designed for screenwriters. Stay focused on the story while formatting, collaboration and version management are handled in the background."
-        url="https://pzaz.io/screenwriting-software"
+        url="https://pzaz.io/film-production-solution/screenwriting-software"
         keywords={[
           "screenwriting software",
           "screenplay writing tool",
@@ -76,7 +76,7 @@ const Screenwriters = () => {
           "draft management for writers",
           "screenwriter tools",
         ]}
-        canonical="https://pzaz.io/screenwriting-software"
+        canonical="https://pzaz.io/film-production-solution/screenwriting-software"
       />
 
       {/* ── HERO ──────────────────────────────────────────────────── */}

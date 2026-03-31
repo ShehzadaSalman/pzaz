@@ -85,9 +85,9 @@ const Schools = () => {
   return (
     <PageLayout>
       <SEO
-        title="Pzaz for Schools – Free Filmmaking Platform for Film Education"
+        title="Film Production Software for Schools | Manage Film Projects | Pzaz"
         description="The first filmmaking platform built for film schools. Completely free for schools and students. Replace fragmented tools with one connected production workspace."
-        url="https://pzaz.io/film-schools-software"
+        url="https://pzaz.io/film-production-solution/film-school-production-software"
         keywords={[
           "pzaz for schools",
           "film school platform",
@@ -96,7 +96,7 @@ const Schools = () => {
           "film school collaboration",
           "film education platform",
         ]}
-        canonical="https://pzaz.io/film-schools-software"
+        canonical="https://pzaz.io/film-production-solution/film-school-production-software"
       />
 
       {/* ── HERO ──────────────────────────────────────────────────── */}

@@ -65,9 +65,9 @@ const InvestorsFunding = () => {
   return (
     <PageLayout>
       <SEO
-        title="Film Investment Software for Investors & Funding Partners – Pzaz"
+        title="Film Investment Software | Plan Budgets & Reduce Risks | Pzaz"
         description="Gain visibility, structure and confidence from development through delivery. Review project plans, track production progress and understand financial performance."
-        url="https://pzaz.io/film-investment-software"
+        url="https://pzaz.io/film-production-solution/film-budgeting-software"
         keywords={[
           "film investment software",
           "film funding platform",
@@ -76,7 +76,7 @@ const InvestorsFunding = () => {
           "film financial reporting",
           "film project oversight",
         ]}
-        canonical="https://pzaz.io/film-investment-software"
+        canonical="https://pzaz.io/film-production-solution/film-budgeting-software"
       />
 
       {/* ── HERO ──────────────────────────────────────────────────── */}

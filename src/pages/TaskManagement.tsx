@@ -12,10 +12,10 @@ const TaskManagement = () => {
   return (
     <PageLayout>
       <SEO
-        title="Task Management – Pzaz | Clear Ownership for Film Productions"
+        title="Film Collaboration Software | Align Teams & Workflows | Pzaz"
         description="Keep every department aligned with task management built into the production environment. Assign work, track deadlines, and keep production momentum going with Pzaz."
-        url="https://pzaz.io/production-task-management"
-        canonical="https://pzaz.io/production-task-management"
+        url="https://pzaz.io/film-production-tool/task-management-software"
+        canonical="https://pzaz.io/film-production-tool/task-management-software"
         keywords={["task management", "film production", "production planning", "team coordination", "pzaz"]}
       />
       <TaskManagementHero />

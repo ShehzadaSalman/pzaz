@@ -109,9 +109,9 @@ const Cinematographers = () => {
   return (
     <PageLayout>
       <SEO
-        title="Pzaz for Cinematographers & Storyboard Artists – Visual Planning Platform"
+        title="Software for Cinematographers | Plan Shots & Collaborate | Pzaz"
         description="The all-in-one platform built for cinematographers and storyboard artists. Transform scripts into visual language with storyboarding, shot planning, scene syncing, and AI image generation."
-        url="https://pzaz.io/software-for-cinematographers"
+        url="https://pzaz.io/film-production-solution/software-for-cinematographers"
         keywords={[
           "cinematography planning software",
           "storyboard artist tools",
@@ -120,7 +120,7 @@ const Cinematographers = () => {
           "storyboarding software",
           "scene syncing film production",
         ]}
-        canonical="https://pzaz.io/software-for-cinematographers"
+        canonical="https://pzaz.io/film-production-solution/software-for-cinematographers"
       />
 
       {/* ── HERO ─────────────────────────────────────────────── */}

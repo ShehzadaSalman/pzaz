@@ -68,6 +68,38 @@ const EmpoweringFilmmaking = lazy(() => import("./pages/EmpoweringFilmmaking"));
 const IndieFilmmakers = lazy(() => import("./pages/IndieFilmmakers"));
 const VideoPlayer = lazy(() => import("./pages/VideoPlayer"));
 
+/** Shared product/feature/solution routes used by every locale block */
+const ProductRoutes = () => (
+  <>
+    {/* Products */}
+    <Route path="film-production-software/indie-filmmakers" element={<Indie />} />
+    <Route path="film-production-software/production-planning" element={<Planning />} />
+    <Route path="film-production-software/studio-management" element={<StudioPro />} />
+    <Route path="film-production-software/film-budgeting" element={<Budget />} />
+    <Route path="film-production-software/storyboarding" element={<Storyboard />} />
+    {/* Features */}
+    <Route path="film-production-tool/script-writing-software" element={<Script />} />
+    <Route path="film-production-tool/scene-breakdown-software" element={<SceneBreakdown />} />
+    <Route path="film-production-tool/collaboration-software" element={<CollaborationTools />} />
+    <Route path="film-production-tool/task-management-software" element={<TaskManagement />} />
+    <Route path="film-production-tool/data-sharing-software" element={<FileSharing />} />
+    <Route path="film-production-tool/project-management-software" element={<ProjectManagement />} />
+    {/* Solutions */}
+    <Route path="film-production-solution/filmmaking-software" element={<EmpoweringFilmmaking />} />
+    <Route path="film-production-solution/software-for-indie-filmmakers" element={<IndieFilmmakers />} />
+    <Route path="film-production-solution/film-school-production-software" element={<Schools />} />
+    <Route path="film-production-solution/software-for-directors-producers" element={<DirectorsProducers />} />
+    <Route path="film-production-solution/documentary-filmmaking-software" element={<DocumentaryFilmmakers />} />
+    <Route path="film-production-solution/software-for-cinematographers" element={<Cinematographers />} />
+    <Route path="film-production-solution/creative-agency-production-software" element={<CreativeAgencies />} />
+    <Route path="film-production-solution/film-production-team-software" element={<ProductionTeams />} />
+    <Route path="film-production-solution/screenwriting-software" element={<Screenwriters />} />
+    <Route path="film-production-solution/tv-production-software" element={<TVSeriesCreators />} />
+    <Route path="film-production-solution/film-budgeting-software" element={<InvestorsFunding />} />
+    <Route path="film-production-solution/software-for-production-managers" element={<ProductionManagers />} />
+  </>
+);
+
 /**
  * AppRoutes contains all route definitions. It must be wrapped in a router
  * (BrowserRouter for client, StaticRouter for SSR).
@@ -81,7 +113,6 @@ export const AppRoutes = () => (
         {/* ── Default English routes (no locale prefix) ── */}
         <Route element={<LocaleWrapper />}>
           <Route path="/" element={<Index />} />
-          <Route path="/script" element={<Script />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/sales-team" element={<SalesTeam />} />
@@ -98,55 +129,79 @@ export const AppRoutes = () => (
           <Route path="/shoot" element={<Shoot />} />
           <Route path="/visualise" element={<Visualise />} />
           <Route path="/write" element={<Write />} />
-          {/* Products */}
+          {/* New canonical routes */}
           <Route path="/film-production-software/indie-filmmakers" element={<Indie />} />
-          <Route path="/indie" element={<Navigate to="/film-production-software/indie-filmmakers" replace />} />
-          <Route path="/indie-filmmaking-software" element={<Navigate to="/film-production-software/indie-filmmakers" replace />} />
-          <Route path="/film-budgeting-software" element={<Budget />} />
-          <Route path="/budget" element={<Navigate to="/film-budgeting-software" replace />} />
-          <Route path="/film-preproduction-planning" element={<Planning />} />
-          <Route path="/planning" element={<Navigate to="/film-preproduction-planning" replace />} />
-          <Route path="/studio-pro-software" element={<StudioPro />} />
-          <Route path="/studio-pro" element={<Navigate to="/studio-pro-software" replace />} />
-          <Route path="/storyboard-software" element={<Storyboard />} />
-          <Route path="/storyboard" element={<Navigate to="/storyboard-software" replace />} />
-          {/* Features */}
-          <Route path="/scene-breakdown-software" element={<SceneBreakdown />} />
-          <Route path="/scene-breakdown" element={<Navigate to="/scene-breakdown-software" replace />} />
-          <Route path="/film-collaboration-software" element={<CollaborationTools />} />
-          <Route path="/collaboration-tools" element={<Navigate to="/film-collaboration-software" replace />} />
-          <Route path="/production-task-management" element={<TaskManagement />} />
-          <Route path="/task-management" element={<Navigate to="/production-task-management" replace />} />
-          <Route path="/film-file-sharing-storage" element={<FileSharing />} />
-          <Route path="/file-sharing" element={<Navigate to="/film-file-sharing-storage" replace />} />
-          <Route path="/film-project-management" element={<ProjectManagement />} />
-          <Route path="/project-management" element={<Navigate to="/film-project-management" replace />} />
-          {/* Solutions */}
-          <Route path="/film-schools-software" element={<Schools />} />
-          <Route path="/schools" element={<Navigate to="/film-schools-software" replace />} />
-          <Route path="/software-for-directors-producers" element={<DirectorsProducers />} />
-          <Route path="/directors-producers" element={<Navigate to="/software-for-directors-producers" replace />} />
-          <Route path="/documentary-filmmaking-software" element={<DocumentaryFilmmakers />} />
-          <Route path="/documentary-filmmakers" element={<Navigate to="/documentary-filmmaking-software" replace />} />
-          <Route path="/software-for-cinematographers" element={<Cinematographers />} />
-          <Route path="/cinematographers" element={<Navigate to="/software-for-cinematographers" replace />} />
-          <Route path="/creative-agency-production-software" element={<CreativeAgencies />} />
-          <Route path="/creative-agencies" element={<Navigate to="/creative-agency-production-software" replace />} />
-          <Route path="/film-production-team-software" element={<ProductionTeams />} />
-          <Route path="/production-teams" element={<Navigate to="/film-production-team-software" replace />} />
-          <Route path="/screenwriting-software" element={<Screenwriters />} />
-          <Route path="/tv-series-production-software" element={<TVSeriesCreators />} />
-          <Route path="/film-investment-software" element={<InvestorsFunding />} />
-          <Route path="/software-for-production-managers" element={<ProductionManagers />} />
-          <Route path="/empowering-filmmaking" element={<EmpoweringFilmmaking />} />
-          <Route path="/indie-filmmakers" element={<IndieFilmmakers />} />
+          <Route path="/film-production-software/production-planning" element={<Planning />} />
+          <Route path="/film-production-software/studio-management" element={<StudioPro />} />
+          <Route path="/film-production-software/film-budgeting" element={<Budget />} />
+          <Route path="/film-production-software/storyboarding" element={<Storyboard />} />
+          <Route path="/film-production-tool/script-writing-software" element={<Script />} />
+          <Route path="/film-production-tool/scene-breakdown-software" element={<SceneBreakdown />} />
+          <Route path="/film-production-tool/collaboration-software" element={<CollaborationTools />} />
+          <Route path="/film-production-tool/task-management-software" element={<TaskManagement />} />
+          <Route path="/film-production-tool/data-sharing-software" element={<FileSharing />} />
+          <Route path="/film-production-tool/project-management-software" element={<ProjectManagement />} />
+          <Route path="/film-production-solution/filmmaking-software" element={<EmpoweringFilmmaking />} />
+          <Route path="/film-production-solution/software-for-indie-filmmakers" element={<IndieFilmmakers />} />
+          <Route path="/film-production-solution/film-school-production-software" element={<Schools />} />
+          <Route path="/film-production-solution/software-for-directors-producers" element={<DirectorsProducers />} />
+          <Route path="/film-production-solution/documentary-filmmaking-software" element={<DocumentaryFilmmakers />} />
+          <Route path="/film-production-solution/software-for-cinematographers" element={<Cinematographers />} />
+          <Route path="/film-production-solution/creative-agency-production-software" element={<CreativeAgencies />} />
+          <Route path="/film-production-solution/film-production-team-software" element={<ProductionTeams />} />
+          <Route path="/film-production-solution/screenwriting-software" element={<Screenwriters />} />
+          <Route path="/film-production-solution/tv-production-software" element={<TVSeriesCreators />} />
+          <Route path="/film-production-solution/film-budgeting-software" element={<InvestorsFunding />} />
+          <Route path="/film-production-solution/software-for-production-managers" element={<ProductionManagers />} />
           <Route path="/demo-video" element={<VideoPlayer />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms-of-use" element={<Terms />} />
-          <Route path="/terms" element={<Navigate to="/terms-of-use" replace />} />
+          {/* Blog */}
           <Route path="/producer-blog" element={<Blog />} />
           <Route path="/producer-blog/category/:categorySlug" element={<BlogCategory />} />
           <Route path="/producer-blog/:slug" element={<BlogArticle />} />
+          {/* ── Legacy redirects ── */}
+          <Route path="/indie" element={<Navigate to="/film-production-software/indie-filmmakers" replace />} />
+          <Route path="/indie-filmmaking-software" element={<Navigate to="/film-production-software/indie-filmmakers" replace />} />
+          <Route path="/film-preproduction-planning" element={<Navigate to="/film-production-software/production-planning" replace />} />
+          <Route path="/planning" element={<Navigate to="/film-production-software/production-planning" replace />} />
+          <Route path="/studio-pro-software" element={<Navigate to="/film-production-software/studio-management" replace />} />
+          <Route path="/studio-pro" element={<Navigate to="/film-production-software/studio-management" replace />} />
+          <Route path="/film-budgeting-software" element={<Navigate to="/film-production-software/film-budgeting" replace />} />
+          <Route path="/budget" element={<Navigate to="/film-production-software/film-budgeting" replace />} />
+          <Route path="/storyboard-software" element={<Navigate to="/film-production-software/storyboarding" replace />} />
+          <Route path="/storyboard" element={<Navigate to="/film-production-software/storyboarding" replace />} />
+          <Route path="/script" element={<Navigate to="/film-production-tool/script-writing-software" replace />} />
+          <Route path="/scene-breakdown-software" element={<Navigate to="/film-production-tool/scene-breakdown-software" replace />} />
+          <Route path="/scene-breakdown" element={<Navigate to="/film-production-tool/scene-breakdown-software" replace />} />
+          <Route path="/film-collaboration-software" element={<Navigate to="/film-production-tool/collaboration-software" replace />} />
+          <Route path="/collaboration-tools" element={<Navigate to="/film-production-tool/collaboration-software" replace />} />
+          <Route path="/production-task-management" element={<Navigate to="/film-production-tool/task-management-software" replace />} />
+          <Route path="/task-management" element={<Navigate to="/film-production-tool/task-management-software" replace />} />
+          <Route path="/film-file-sharing-storage" element={<Navigate to="/film-production-tool/data-sharing-software" replace />} />
+          <Route path="/file-sharing" element={<Navigate to="/film-production-tool/data-sharing-software" replace />} />
+          <Route path="/film-project-management" element={<Navigate to="/film-production-tool/project-management-software" replace />} />
+          <Route path="/project-management" element={<Navigate to="/film-production-tool/project-management-software" replace />} />
+          <Route path="/empowering-filmmaking" element={<Navigate to="/film-production-solution/filmmaking-software" replace />} />
+          <Route path="/indie-filmmakers" element={<Navigate to="/film-production-solution/software-for-indie-filmmakers" replace />} />
+          <Route path="/film-schools-software" element={<Navigate to="/film-production-solution/film-school-production-software" replace />} />
+          <Route path="/schools" element={<Navigate to="/film-production-solution/film-school-production-software" replace />} />
+          <Route path="/software-for-directors-producers" element={<Navigate to="/film-production-solution/software-for-directors-producers" replace />} />
+          <Route path="/directors-producers" element={<Navigate to="/film-production-solution/software-for-directors-producers" replace />} />
+          <Route path="/documentary-filmmaking-software" element={<Navigate to="/film-production-solution/documentary-filmmaking-software" replace />} />
+          <Route path="/documentary-filmmakers" element={<Navigate to="/film-production-solution/documentary-filmmaking-software" replace />} />
+          <Route path="/software-for-cinematographers" element={<Navigate to="/film-production-solution/software-for-cinematographers" replace />} />
+          <Route path="/cinematographers" element={<Navigate to="/film-production-solution/software-for-cinematographers" replace />} />
+          <Route path="/creative-agency-production-software" element={<Navigate to="/film-production-solution/creative-agency-production-software" replace />} />
+          <Route path="/creative-agencies" element={<Navigate to="/film-production-solution/creative-agency-production-software" replace />} />
+          <Route path="/film-production-team-software" element={<Navigate to="/film-production-solution/film-production-team-software" replace />} />
+          <Route path="/production-teams" element={<Navigate to="/film-production-solution/film-production-team-software" replace />} />
+          <Route path="/screenwriting-software" element={<Navigate to="/film-production-solution/screenwriting-software" replace />} />
+          <Route path="/tv-series-production-software" element={<Navigate to="/film-production-solution/tv-production-software" replace />} />
+          <Route path="/film-investment-software" element={<Navigate to="/film-production-solution/film-budgeting-software" replace />} />
+          <Route path="/software-for-production-managers" element={<Navigate to="/film-production-solution/software-for-production-managers" replace />} />
+          <Route path="/production-managers" element={<Navigate to="/film-production-solution/software-for-production-managers" replace />} />
+          <Route path="/terms" element={<Navigate to="/terms-of-use" replace />} />
           <Route path="/blog" element={<Navigate to="/producer-blog" replace />} />
           <Route path="/blog/category/:categorySlug" element={<BlogCategory />} />
           <Route path="/blog/:slug" element={<BlogArticle />} />
@@ -155,7 +210,6 @@ export const AppRoutes = () => (
         {/* ── Locale-prefixed routes — /ur/* ── */}
         <Route path="/ur" element={<LocaleWrapper />}>
           <Route index element={<Index />} />
-          <Route path="script" element={<Script />} />
           <Route path="pricing" element={<Pricing />} />
           <Route path="about-us" element={<AboutUs />} />
           <Route path="breakdown" element={<Breakdown />} />
@@ -169,38 +223,13 @@ export const AppRoutes = () => (
           <Route path="shoot" element={<Shoot />} />
           <Route path="visualise" element={<Visualise />} />
           <Route path="write" element={<Write />} />
-          {/* Products */}
-          <Route path="film-production-software/indie-filmmakers" element={<Indie />} />
-          <Route path="film-budgeting-software" element={<Budget />} />
-          <Route path="film-preproduction-planning" element={<Planning />} />
-          <Route path="studio-pro-software" element={<StudioPro />} />
-          <Route path="storyboard-software" element={<Storyboard />} />
-          {/* Features */}
-          <Route path="scene-breakdown-software" element={<SceneBreakdown />} />
-          <Route path="film-collaboration-software" element={<CollaborationTools />} />
-          <Route path="production-task-management" element={<TaskManagement />} />
-          <Route path="film-file-sharing-storage" element={<FileSharing />} />
-          <Route path="film-project-management" element={<ProjectManagement />} />
-          {/* Solutions */}
-          <Route path="film-schools-software" element={<Schools />} />
-          <Route path="software-for-directors-producers" element={<DirectorsProducers />} />
-          <Route path="documentary-filmmaking-software" element={<DocumentaryFilmmakers />} />
-          <Route path="software-for-cinematographers" element={<Cinematographers />} />
-          <Route path="creative-agency-production-software" element={<CreativeAgencies />} />
-          <Route path="film-production-team-software" element={<ProductionTeams />} />
-          <Route path="screenwriting-software" element={<Screenwriters />} />
-          <Route path="tv-series-production-software" element={<TVSeriesCreators />} />
-          <Route path="film-investment-software" element={<InvestorsFunding />} />
-          <Route path="software-for-production-managers" element={<ProductionManagers />} />
-          <Route path="empowering-filmmaking" element={<EmpoweringFilmmaking />} />
-          <Route path="indie-filmmakers" element={<IndieFilmmakers />} />
+          {ProductRoutes()}
           <Route path="demo-video" element={<VideoPlayer />} />
           <Route path="sales-team" element={<SalesTeam />} />
           <Route path="brand" element={<Brand />} />
           <Route path="culture" element={<Culture />} />
           <Route path="privacy" element={<Privacy />} />
           <Route path="terms-of-use" element={<Terms />} />
-          {/* Blog */}
           <Route path="producer-blog" element={<Blog />} />
           <Route path="producer-blog/category/:categorySlug" element={<BlogCategory />} />
           <Route path="producer-blog/:slug" element={<BlogArticle />} />
@@ -210,7 +239,6 @@ export const AppRoutes = () => (
         {/* ── Locale-prefixed routes — /fr/* ── */}
         <Route path="/fr" element={<LocaleWrapper />}>
           <Route index element={<Index />} />
-          <Route path="script" element={<Script />} />
           <Route path="pricing" element={<Pricing />} />
           <Route path="about-us" element={<AboutUs />} />
           <Route path="breakdown" element={<Breakdown />} />
@@ -224,38 +252,13 @@ export const AppRoutes = () => (
           <Route path="shoot" element={<Shoot />} />
           <Route path="visualise" element={<Visualise />} />
           <Route path="write" element={<Write />} />
-          {/* Products */}
-          <Route path="film-production-software/indie-filmmakers" element={<Indie />} />
-          <Route path="film-budgeting-software" element={<Budget />} />
-          <Route path="film-preproduction-planning" element={<Planning />} />
-          <Route path="studio-pro-software" element={<StudioPro />} />
-          <Route path="storyboard-software" element={<Storyboard />} />
-          {/* Features */}
-          <Route path="scene-breakdown-software" element={<SceneBreakdown />} />
-          <Route path="film-collaboration-software" element={<CollaborationTools />} />
-          <Route path="production-task-management" element={<TaskManagement />} />
-          <Route path="film-file-sharing-storage" element={<FileSharing />} />
-          <Route path="film-project-management" element={<ProjectManagement />} />
-          {/* Solutions */}
-          <Route path="film-schools-software" element={<Schools />} />
-          <Route path="software-for-directors-producers" element={<DirectorsProducers />} />
-          <Route path="documentary-filmmaking-software" element={<DocumentaryFilmmakers />} />
-          <Route path="software-for-cinematographers" element={<Cinematographers />} />
-          <Route path="creative-agency-production-software" element={<CreativeAgencies />} />
-          <Route path="film-production-team-software" element={<ProductionTeams />} />
-          <Route path="screenwriting-software" element={<Screenwriters />} />
-          <Route path="tv-series-production-software" element={<TVSeriesCreators />} />
-          <Route path="film-investment-software" element={<InvestorsFunding />} />
-          <Route path="software-for-production-managers" element={<ProductionManagers />} />
-          <Route path="empowering-filmmaking" element={<EmpoweringFilmmaking />} />
-          <Route path="indie-filmmakers" element={<IndieFilmmakers />} />
+          {ProductRoutes()}
           <Route path="demo-video" element={<VideoPlayer />} />
           <Route path="sales-team" element={<SalesTeam />} />
           <Route path="brand" element={<Brand />} />
           <Route path="culture" element={<Culture />} />
           <Route path="privacy" element={<Privacy />} />
           <Route path="terms-of-use" element={<Terms />} />
-          {/* Blog */}
           <Route path="producer-blog" element={<Blog />} />
           <Route path="producer-blog/category/:categorySlug" element={<BlogCategory />} />
           <Route path="producer-blog/:slug" element={<BlogArticle />} />
@@ -265,7 +268,6 @@ export const AppRoutes = () => (
         {/* ── Locale-prefixed routes — /es/* ── */}
         <Route path="/es" element={<LocaleWrapper />}>
           <Route index element={<Index />} />
-          <Route path="script" element={<Script />} />
           <Route path="pricing" element={<Pricing />} />
           <Route path="about-us" element={<AboutUs />} />
           <Route path="breakdown" element={<Breakdown />} />
@@ -279,38 +281,13 @@ export const AppRoutes = () => (
           <Route path="shoot" element={<Shoot />} />
           <Route path="visualise" element={<Visualise />} />
           <Route path="write" element={<Write />} />
-          {/* Products */}
-          <Route path="film-production-software/indie-filmmakers" element={<Indie />} />
-          <Route path="film-budgeting-software" element={<Budget />} />
-          <Route path="film-preproduction-planning" element={<Planning />} />
-          <Route path="studio-pro-software" element={<StudioPro />} />
-          <Route path="storyboard-software" element={<Storyboard />} />
-          {/* Features */}
-          <Route path="scene-breakdown-software" element={<SceneBreakdown />} />
-          <Route path="film-collaboration-software" element={<CollaborationTools />} />
-          <Route path="production-task-management" element={<TaskManagement />} />
-          <Route path="film-file-sharing-storage" element={<FileSharing />} />
-          <Route path="film-project-management" element={<ProjectManagement />} />
-          {/* Solutions */}
-          <Route path="film-schools-software" element={<Schools />} />
-          <Route path="software-for-directors-producers" element={<DirectorsProducers />} />
-          <Route path="documentary-filmmaking-software" element={<DocumentaryFilmmakers />} />
-          <Route path="software-for-cinematographers" element={<Cinematographers />} />
-          <Route path="creative-agency-production-software" element={<CreativeAgencies />} />
-          <Route path="film-production-team-software" element={<ProductionTeams />} />
-          <Route path="screenwriting-software" element={<Screenwriters />} />
-          <Route path="tv-series-production-software" element={<TVSeriesCreators />} />
-          <Route path="film-investment-software" element={<InvestorsFunding />} />
-          <Route path="software-for-production-managers" element={<ProductionManagers />} />
-          <Route path="empowering-filmmaking" element={<EmpoweringFilmmaking />} />
-          <Route path="indie-filmmakers" element={<IndieFilmmakers />} />
+          {ProductRoutes()}
           <Route path="demo-video" element={<VideoPlayer />} />
           <Route path="sales-team" element={<SalesTeam />} />
           <Route path="brand" element={<Brand />} />
           <Route path="culture" element={<Culture />} />
           <Route path="privacy" element={<Privacy />} />
           <Route path="terms-of-use" element={<Terms />} />
-          {/* Blog */}
           <Route path="producer-blog" element={<Blog />} />
           <Route path="producer-blog/category/:categorySlug" element={<BlogCategory />} />
           <Route path="producer-blog/:slug" element={<BlogArticle />} />
@@ -320,7 +297,6 @@ export const AppRoutes = () => (
         {/* ── Locale-prefixed routes — /de/* ── */}
         <Route path="/de" element={<LocaleWrapper />}>
           <Route index element={<Index />} />
-          <Route path="script" element={<Script />} />
           <Route path="pricing" element={<Pricing />} />
           <Route path="about-us" element={<AboutUs />} />
           <Route path="breakdown" element={<Breakdown />} />
@@ -334,38 +310,13 @@ export const AppRoutes = () => (
           <Route path="shoot" element={<Shoot />} />
           <Route path="visualise" element={<Visualise />} />
           <Route path="write" element={<Write />} />
-          {/* Products */}
-          <Route path="film-production-software/indie-filmmakers" element={<Indie />} />
-          <Route path="film-budgeting-software" element={<Budget />} />
-          <Route path="film-preproduction-planning" element={<Planning />} />
-          <Route path="studio-pro-software" element={<StudioPro />} />
-          <Route path="storyboard-software" element={<Storyboard />} />
-          {/* Features */}
-          <Route path="scene-breakdown-software" element={<SceneBreakdown />} />
-          <Route path="film-collaboration-software" element={<CollaborationTools />} />
-          <Route path="production-task-management" element={<TaskManagement />} />
-          <Route path="film-file-sharing-storage" element={<FileSharing />} />
-          <Route path="film-project-management" element={<ProjectManagement />} />
-          {/* Solutions */}
-          <Route path="film-schools-software" element={<Schools />} />
-          <Route path="software-for-directors-producers" element={<DirectorsProducers />} />
-          <Route path="documentary-filmmaking-software" element={<DocumentaryFilmmakers />} />
-          <Route path="software-for-cinematographers" element={<Cinematographers />} />
-          <Route path="creative-agency-production-software" element={<CreativeAgencies />} />
-          <Route path="film-production-team-software" element={<ProductionTeams />} />
-          <Route path="screenwriting-software" element={<Screenwriters />} />
-          <Route path="tv-series-production-software" element={<TVSeriesCreators />} />
-          <Route path="film-investment-software" element={<InvestorsFunding />} />
-          <Route path="software-for-production-managers" element={<ProductionManagers />} />
-          <Route path="empowering-filmmaking" element={<EmpoweringFilmmaking />} />
-          <Route path="indie-filmmakers" element={<IndieFilmmakers />} />
+          {ProductRoutes()}
           <Route path="demo-video" element={<VideoPlayer />} />
           <Route path="sales-team" element={<SalesTeam />} />
           <Route path="brand" element={<Brand />} />
           <Route path="culture" element={<Culture />} />
           <Route path="privacy" element={<Privacy />} />
           <Route path="terms-of-use" element={<Terms />} />
-          {/* Blog */}
           <Route path="producer-blog" element={<Blog />} />
           <Route path="producer-blog/category/:categorySlug" element={<BlogCategory />} />
           <Route path="producer-blog/:slug" element={<BlogArticle />} />

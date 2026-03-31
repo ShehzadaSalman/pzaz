@@ -61,7 +61,6 @@ function getNamespacesForRoute(url: string): string[] {
 
   const map: Record<string, string[]> = {
     "/": ["common", "home"],
-    "/script": ["common", "script"],
     "/pricing": ["common", "pricing"],
     "/about-us": ["common", "about"],
     "/brand": ["common", "brand"],
@@ -69,15 +68,16 @@ function getNamespacesForRoute(url: string): string[] {
     "/privacy": ["common", "privacy"],
     "/terms-of-use": ["common", "terms"],
     "/film-production-software/indie-filmmakers": ["common", "indie"],
-    "/film-budgeting-software": ["common", "budget"],
-    "/film-preproduction-planning": ["common", "planning"],
-    "/studio-pro-software": ["common", "studio-pro"],
-    "/storyboard-software": ["common", "storyboard"],
-    "/scene-breakdown-software": ["common", "scene-breakdown"],
-    "/film-collaboration-software": ["common", "collaboration"],
-    "/production-task-management": ["common", "task-management"],
-    "/film-file-sharing-storage": ["common", "file-sharing"],
-    "/film-project-management": ["common", "project-management"],
+    "/film-production-software/film-budgeting": ["common", "budget"],
+    "/film-production-software/production-planning": ["common", "planning"],
+    "/film-production-software/studio-management": ["common", "studio-pro"],
+    "/film-production-software/storyboarding": ["common", "storyboard"],
+    "/film-production-tool/script-writing-software": ["common", "script"],
+    "/film-production-tool/scene-breakdown-software": ["common", "scene-breakdown"],
+    "/film-production-tool/collaboration-software": ["common", "collaboration"],
+    "/film-production-tool/task-management-software": ["common", "task-management"],
+    "/film-production-tool/data-sharing-software": ["common", "file-sharing"],
+    "/film-production-tool/project-management-software": ["common", "project-management"],
     "/knowledge-base": ["common", "knowledge-base"],
   };
 
@@ -90,18 +90,18 @@ function getNamespacesForRoute(url: string): string[] {
 
   // Solutions pages — each has its own namespace for performance
   const solutionMap: Record<string, string> = {
-    "/film-schools-software": "solutions-schools",
-    "/software-for-directors-producers": "solutions-directors",
-    "/documentary-filmmaking-software": "solutions-documentary",
-    "/software-for-cinematographers": "solutions-cinematographers",
-    "/creative-agency-production-software": "solutions-agencies",
-    "/film-production-team-software": "solutions-teams",
-    "/screenwriting-software": "solutions-screenwriters",
-    "/tv-series-production-software": "solutions-tv-series",
-    "/film-investment-software": "solutions-investors",
-    "/software-for-production-managers": "solutions-prod-managers",
-    "/empowering-filmmaking": "solutions-empowering",
-    "/indie-filmmakers": "solutions-indie-filmmakers",
+    "/film-production-solution/film-school-production-software": "solutions-schools",
+    "/film-production-solution/software-for-directors-producers": "solutions-directors",
+    "/film-production-solution/documentary-filmmaking-software": "solutions-documentary",
+    "/film-production-solution/software-for-cinematographers": "solutions-cinematographers",
+    "/film-production-solution/creative-agency-production-software": "solutions-agencies",
+    "/film-production-solution/film-production-team-software": "solutions-teams",
+    "/film-production-solution/screenwriting-software": "solutions-screenwriters",
+    "/film-production-solution/tv-production-software": "solutions-tv-series",
+    "/film-production-solution/film-budgeting-software": "solutions-investors",
+    "/film-production-solution/software-for-production-managers": "solutions-prod-managers",
+    "/film-production-solution/filmmaking-software": "solutions-empowering",
+    "/film-production-solution/software-for-indie-filmmakers": "solutions-indie-filmmakers",
   };
   for (const [slug, ns] of Object.entries(solutionMap)) {
     if (bare.startsWith(slug)) return ["common", ns];

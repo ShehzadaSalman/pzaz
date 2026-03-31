@@ -60,11 +60,11 @@ const DocumentaryFilmmakers = () => {
   return (
     <PageLayout>
       <SEO
-        title="Pzaz for Documentary Filmmakers – Plan, Adapt, Organize Evolving Stories"
+        title="Documentary Filmmaking Software | Plan & Manage Productions | Pzaz"
         description="The all-in-one platform built for documentary filmmakers."
-        url="https://pzaz.io/documentary-filmmaking-software"
+        url="https://pzaz.io/film-production-solution/documentary-filmmaking-software"
         keywords={["documentary filmmaking platform", "documentary production software", "documentary planning tools"]}
-        canonical="https://pzaz.io/documentary-filmmaking-software"
+        canonical="https://pzaz.io/film-production-solution/documentary-filmmaking-software"
       />
 
       {/* ── HERO ── */}
