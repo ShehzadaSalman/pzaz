@@ -127,7 +127,9 @@ const KnowledgeBaseArticle = () => {
           ? kbArticlesDe.find((a) => a.slug === slug)
           : isIt
             ? kbArticlesIt.find((a) => a.slug === slug)
-            : slug ? getArticleBySlug(slug) : undefined;
+            : isPt
+              ? kbArticlesPt.find((a) => a.slug === slug)
+              : slug ? getArticleBySlug(slug) : undefined;
 
   if (!article) return <NotFound />;
 
