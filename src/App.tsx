@@ -255,7 +255,8 @@ export const AppRoutes = () => (
           <Route path="visualise" element={<Visualise />} />
           <Route path="write" element={<Write />} />
           {ProductRoutes()}
-          <Route path="demo-video" element={<VideoPlayer />} />
+          <Route path="introductory-video" element={<VideoPlayer />} />
+          <Route path="demo-video" element={<Navigate to="/fr/introductory-video" replace />} />
           <Route path="sales-team" element={<SalesTeam />} />
           <Route path="brand" element={<Brand />} />
           <Route path="culture" element={<Culture />} />
