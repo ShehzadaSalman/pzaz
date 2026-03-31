@@ -29,7 +29,7 @@ const BlogArticle = () => {
   const article = posts.find((post) => post.slug === slug);
 
   // Full content lookup – Urdu/French/German/Italian articles have content inline; English uses blogDataFull
-  const fullArticle = (isUr || isFr || isDe || isIt) ? null : blogPostsFull.find((post) => post.slug === slug);
+  const fullArticle = (isUr || isFr || isDe || isIt || isPt) ? null : blogPostsFull.find((post) => post.slug === slug);
   const displayArticle = article
     ? { ...article, content: fullArticle?.content || article.content }
     : null;

@@ -42,7 +42,9 @@ const KnowledgeBase = () => {
             ? kbArticlesDe.filter((a) => a.category === catId)
             : isIt
               ? kbArticlesIt.filter((a) => a.category === catId)
-              : getArticlesByCategory(catId);
+              : isPt
+                ? kbArticlesPt.filter((a) => a.category === catId)
+                : getArticlesByCategory(catId);
 
   return (
     <div className="min-h-screen bg-background">
