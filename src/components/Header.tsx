@@ -155,11 +155,11 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
 
   // Strip locale prefix for page detection
   const bare = location.pathname.replace(/^\/(ur|fr|es|de)(\/|$)/, "/");
-  const isScriptPage = bare === "/script";
+  const isScriptPage = bare === "/film-production-tool/script-writing-software";
   const isIndiePage = bare === "/film-production-software/indie-filmmakers";
-  const isPlanningPage = bare === "/film-preproduction-planning";
-  const isStudioProPage = bare === "/studio-pro-software";
-  const isStoryboardPage = bare === "/storyboard-software";
+  const isPlanningPage = bare === "/film-production-software/production-planning";
+  const isStudioProPage = bare === "/film-production-software/studio-management";
+  const isStoryboardPage = bare === "/film-production-software/storyboarding";
   const isBlogRelated = bare.startsWith("/blog") || bare.startsWith("/producer-blog");
   const isPricingPage = bare === "/pricing";
   const isAboutPage = bare === "/about-us";
@@ -182,12 +182,12 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
 
   const isKnowledgeBase = bare.startsWith("/knowledge-base");
 
-  const isSolutionsActive = isIndiePage || isPlanningPage || isStudioProPage || isStoryboardPage || bare === "/film-budgeting-software";
-  const isSceneBreakdownPage = bare === "/scene-breakdown-software";
-  const isCollaborationToolsPage = bare === "/film-collaboration-software";
-  const isTaskManagementPage = bare === "/production-task-management";
-  const isFileSharingPage = bare === "/film-file-sharing-storage";
-  const isProjectManagementPage = bare === "/film-project-management";
+  const isSolutionsActive = isIndiePage || isPlanningPage || isStudioProPage || isStoryboardPage || bare === "/film-production-software/film-budgeting";
+  const isSceneBreakdownPage = bare === "/film-production-tool/scene-breakdown-software";
+  const isCollaborationToolsPage = bare === "/film-production-tool/collaboration-software";
+  const isTaskManagementPage = bare === "/film-production-tool/task-management-software";
+  const isFileSharingPage = bare === "/film-production-tool/data-sharing-software";
+  const isProjectManagementPage = bare === "/film-production-tool/project-management-software";
   const isFeaturesActive = isScriptPage || isSceneBreakdownPage || isCollaborationToolsPage || isTaskManagementPage || isFileSharingPage || isProjectManagementPage;
 
   const isActive = (item: NavItem) => {
