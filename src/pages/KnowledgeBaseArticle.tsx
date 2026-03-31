@@ -7,6 +7,7 @@ import { kbArticlesFr, kbCategoriesFr } from "@/data/knowledgeBaseDataFr";
 import { kbArticlesEs, kbCategoriesEs } from "@/data/knowledgeBaseDataEs";
 import { kbArticlesDe, kbCategoriesDe } from "@/data/knowledgeBaseDataDe";
 import { kbArticlesIt, kbCategoriesIt } from "@/data/knowledgeBaseDataIt";
+import { kbArticlesPt, kbCategoriesPt } from "@/data/knowledgeBaseDataPt";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import KBSearchBar from "@/components/knowledge-base/KBSearchBar";
@@ -44,6 +45,12 @@ const categoryLabelIt: Record<string, string> = {
   "getting-started": "Per Iniziare",
   "functions": "Funzioni",
   "tools-and-features": "Strumenti e Funzionalità",
+};
+
+const categoryLabelPt: Record<string, string> = {
+  "getting-started": "Para Começar",
+  "functions": "Funções",
+  "tools-and-features": "Ferramentas e Funcionalidades",
 };
 
 const renderContent = (content: string): React.ReactNode[] => {
@@ -107,6 +114,7 @@ const KnowledgeBaseArticle = () => {
   const isEs = locale === "es";
   const isDe = locale === "de";
   const isIt = locale === "it";
+  const isPt = locale === "pt";
   const { t } = useTranslation("knowledge-base");
 
   const article = isUr
@@ -119,7 +127,9 @@ const KnowledgeBaseArticle = () => {
           ? kbArticlesDe.find((a) => a.slug === slug)
           : isIt
             ? kbArticlesIt.find((a) => a.slug === slug)
-            : slug ? getArticleBySlug(slug) : undefined;
+            : isPt
+              ? kbArticlesPt.find((a) => a.slug === slug)
+              : slug ? getArticleBySlug(slug) : undefined;
 
   if (!article) return <NotFound />;
 
@@ -139,11 +149,15 @@ const KnowledgeBaseArticle = () => {
           ? (article.relatedSlugs || [])
               .map((s) => kbArticlesIt.find((a) => a.slug === s))
               .filter((a): a is KBArticle => !!a)
-          : getRelatedArticles(article);
+          : isPt
+            ? (article.relatedSlugs || [])
+                .map((s) => kbArticlesPt.find((a) => a.slug === s))
+                .filter((a): a is KBArticle => !!a)
+            : getRelatedArticles(article);
 
-  const categoryLabel = isUr ? categoryLabelUr : isFr ? categoryLabelFr : isEs ? categoryLabelEs : isIt ? categoryLabelIt : categoryLabelEn;
+  const categoryLabel = isUr ? categoryLabelUr : isFr ? categoryLabelFr : isEs ? categoryLabelEs : isIt ? categoryLabelIt : isPt ? categoryLabelPt : categoryLabelEn;
   const catLabel = categoryLabel[article.category];
-  const cats = isUr ? kbCategoriesUr : isFr ? kbCategoriesFr : isEs ? kbCategoriesEs : isIt ? kbCategoriesIt : kbCategories;
+  const cats = isUr ? kbCategoriesUr : isFr ? kbCategoriesFr : isEs ? kbCategoriesEs : isIt ? kbCategoriesIt : isPt ? kbCategoriesPt : kbCategories;
   const catMeta = cats.find((c) => c.id === article.category);
 
   return (
