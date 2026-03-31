@@ -1,7 +1,7 @@
 import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-export const SUPPORTED_LOCALES = ["en", "ur", "fr", "es", "de", "it"] as const;
+export const SUPPORTED_LOCALES = ["en", "ur", "fr", "es", "de", "it", "pt"] as const;
 export type SupportedLocale = (typeof SUPPORTED_LOCALES)[number];
 
 const RTL_LOCALES: SupportedLocale[] = ["ur"];
