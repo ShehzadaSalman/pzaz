@@ -15,9 +15,9 @@ const Storyboard = () => {
   return (
     <PageLayout>
       <SEO
-        title="Pzaz Storyboard – Edit the Film Before You Make It"
+        title="Storyboard Software for Film & Video | Start Free | Pzaz"
         description="Rapid visual development inside a structured production environment. Generate, iterate and align storyboard shots with AI-assisted tools, animatics, and real-time collaboration."
-        url="https://pzaz.io/storyboard-software"
+        url="https://pzaz.io/film-production-software/storyboarding"
         keywords={[
           "storyboarding software",
           "AI storyboard tool",
@@ -27,7 +27,7 @@ const Storyboard = () => {
           "Pzaz Storyboard",
           "director storyboard app",
         ]}
-        canonical="https://pzaz.io/storyboard-software"
+        canonical="https://pzaz.io/film-production-software/storyboarding"
       />
       <StoryboardHero />
       <StoryboardProblem />

@@ -15,10 +15,10 @@ const CollaborationTools = () => {
   return (
     <PageLayout>
       <SEO
-        title="Collaboration Tools – Pzaz | Film Team Communication"
+        title="Film Collaboration Software | Align Teams & Workflows | Pzaz"
         description="Keep your entire film production team aligned. Pzaz keeps communication, decisions, files, and planning connected inside the production environment."
-        url="https://pzaz.io/film-collaboration-software"
-        canonical="https://pzaz.io/film-collaboration-software"
+        url="https://pzaz.io/film-production-tool/collaboration-software"
+        canonical="https://pzaz.io/film-production-tool/collaboration-software"
         keywords={["film collaboration", "production team tools", "film communication", "pzaz", "production management"]}
       />
       <CollaborationHero />

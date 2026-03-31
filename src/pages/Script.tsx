@@ -16,9 +16,9 @@ const Script = () => {
   return (
     <PageLayout>
       <SEO
-        title="Pzaz Script – AI-Powered Script Breakdown & Production Intelligence"
+        title="Film Script Writing Software | Write, Edit & Collaborate | Pzaz"
         description="Import any screenplay and instantly extract characters, locations, props, and production data. Pzaz Script turns scripts into production-ready breakdowns powered by AI."
-        url="https://pzaz.io/script"
+        url="https://pzaz.io/film-production-tool/script-writing-software"
         keywords={[
           "script breakdown software",
           "AI script analysis",
@@ -29,7 +29,7 @@ const Script = () => {
           "production planning",
           "screenwriting tools",
         ]}
-        canonical="https://pzaz.io/script"
+        canonical="https://pzaz.io/film-production-tool/script-writing-software"
       />
       <ScriptHero />
       <ScriptProblem />

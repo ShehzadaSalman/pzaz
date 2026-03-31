@@ -13,9 +13,9 @@ const StudioPro = () => {
   return (
     <PageLayout>
       <SEO
-        title="Pzaz Studio Pro – Production Infrastructure for Slate Management"
+        title="Production & Studio Management Software | Start Free | Pzaz"
         description="Turn fragmented expansion into structured maturity. Studio Pro establishes shared coordination logic across every production you run — giving executives real visibility across the entire slate."
-        url="https://pzaz.io/studio-pro-software"
+        url="https://pzaz.io/film-production-software/studio-management"
         keywords={[
           "studio production management",
           "slate management software",
@@ -25,7 +25,7 @@ const StudioPro = () => {
           "executive production visibility",
           "production infrastructure",
         ]}
-        canonical="https://pzaz.io/studio-pro-software"
+        canonical="https://pzaz.io/film-production-software/studio-management"
       />
       <StudioProHero />
       <StudioProProblem />

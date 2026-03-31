@@ -13,10 +13,10 @@ const ProjectManagement = () => {
   return (
     <PageLayout>
       <SEO
-        title="Project Management – Pzaz | The Work OS for Filmmakers"
+        title="Film Project Management Software | Plan & Execute Productions | Pzaz"
         description="Stop coordinating a film across scattered tools. Pzaz gives filmmakers one unified environment where scripts, schedules, budgets, tasks, and communication all live together."
-        url="https://pzaz.io/film-project-management"
-        canonical="https://pzaz.io/film-project-management"
+        url="https://pzaz.io/film-production-tool/project-management-software"
+        canonical="https://pzaz.io/film-production-tool/project-management-software"
         keywords={[
           "project management",
           "film production",

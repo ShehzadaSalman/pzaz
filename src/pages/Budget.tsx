@@ -14,9 +14,9 @@ const Budget = () => {
   return (
     <PageLayout>
       <SEO
-        title="Pzaz Budget – Connected Production Budgeting Software"
+        title="Film Budgeting Software for Production Teams | Start Free | Pzaz"
         description="Production budgeting that stays connected to your script, breakdown and schedule. Stop managing financial silos. Start operating with real clarity."
-        url="https://pzaz.io/film-budgeting-software"
+        url="https://pzaz.io/film-production-software/film-budgeting"
         keywords={[
           "production budgeting software",
           "film budget management",
@@ -26,7 +26,7 @@ const Budget = () => {
           "film financial planning",
           "production cost tracking",
         ]}
-        canonical="https://pzaz.io/film-budgeting-software"
+        canonical="https://pzaz.io/film-production-software/film-budgeting"
       />
       <BudgetHero />
       <BudgetProblem />
