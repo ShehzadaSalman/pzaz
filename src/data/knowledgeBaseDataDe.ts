@@ -844,3 +844,24 @@ Lade Mitglieder ein und weise ihnen Rollen zu — vom Administrator bis zum Mita
     relatedSlugs: ["add-and-remove-team-members-filmspace", "roles-permissions-in-pzaz", "manage-section"],
   },
 ];
+
+export const kbCategoriesDe = [
+  {
+    id: "getting-started",
+    title: "Erste Schritte",
+    description: "Alles, was du wissen musst, um mit Pzaz loszulegen.",
+    icon: "🚀",
+  },
+  {
+    id: "functions",
+    title: "Funktionen",
+    description: "Erfahre mehr über die KI-Funktionen von Pzaz und wie du sie nutzt.",
+    icon: "⚡",
+  },
+  {
+    id: "tools-and-features",
+    title: "Werkzeuge & Features",
+    description: "Ausführliche Anleitungen zu jedem Produktionswerkzeug in deinem Workspace.",
+    icon: "🛠️",
+  },
+] as const;
