@@ -8,9 +8,6 @@ const VideoPlayer = () => {
       <section className="min-h-screen bg-background flex flex-col items-center justify-center px-4 py-24">
         <div className="w-full max-w-5xl mx-auto space-y-8">
           <div className="text-center space-y-3">
-            <h1 className="font-lato font-black text-3xl md:text-4xl text-foreground">
-              Pzaz – Demo Video
-            </h1>
             <p className="text-muted-foreground text-lg">
               See how Pzaz transforms the filmmaking process from concept to delivery.
             </p>

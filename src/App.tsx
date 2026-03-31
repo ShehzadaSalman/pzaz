@@ -153,7 +153,7 @@ export const AppRoutes = () => (
           <Route path="/film-production-solution/tv-production-software" element={<TVSeriesCreators />} />
           <Route path="/film-production-solution/film-budgeting-software" element={<InvestorsFunding />} />
           <Route path="/film-production-solution/software-for-production-managers" element={<ProductionManagers />} />
-          <Route path="/demo-video" element={<VideoPlayer />} />
+          <Route path="/introductory-video" element={<VideoPlayer />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms-of-use" element={<Terms />} />
           {/* Blog */}
@@ -201,6 +201,7 @@ export const AppRoutes = () => (
           <Route path="/film-investment-software" element={<Navigate to="/film-production-solution/film-budgeting-software" replace />} />
           <Route path="/software-for-production-managers" element={<Navigate to="/film-production-solution/software-for-production-managers" replace />} />
           <Route path="/production-managers" element={<Navigate to="/film-production-solution/software-for-production-managers" replace />} />
+          <Route path="/demo-video" element={<Navigate to="/introductory-video" replace />} />
           <Route path="/terms" element={<Navigate to="/terms-of-use" replace />} />
           <Route path="/blog" element={<Navigate to="/producer-blog" replace />} />
           <Route path="/blog/category/:categorySlug" element={<BlogCategory />} />
@@ -224,7 +225,8 @@ export const AppRoutes = () => (
           <Route path="visualise" element={<Visualise />} />
           <Route path="write" element={<Write />} />
           {ProductRoutes()}
-          <Route path="demo-video" element={<VideoPlayer />} />
+          <Route path="introductory-video" element={<VideoPlayer />} />
+          <Route path="demo-video" element={<Navigate to="/ur/introductory-video" replace />} />
           <Route path="sales-team" element={<SalesTeam />} />
           <Route path="brand" element={<Brand />} />
           <Route path="culture" element={<Culture />} />
@@ -253,7 +255,8 @@ export const AppRoutes = () => (
           <Route path="visualise" element={<Visualise />} />
           <Route path="write" element={<Write />} />
           {ProductRoutes()}
-          <Route path="demo-video" element={<VideoPlayer />} />
+          <Route path="introductory-video" element={<VideoPlayer />} />
+          <Route path="demo-video" element={<Navigate to="/fr/introductory-video" replace />} />
           <Route path="sales-team" element={<SalesTeam />} />
           <Route path="brand" element={<Brand />} />
           <Route path="culture" element={<Culture />} />
@@ -282,7 +285,8 @@ export const AppRoutes = () => (
           <Route path="visualise" element={<Visualise />} />
           <Route path="write" element={<Write />} />
           {ProductRoutes()}
-          <Route path="demo-video" element={<VideoPlayer />} />
+          <Route path="introductory-video" element={<VideoPlayer />} />
+          <Route path="demo-video" element={<Navigate to="/es/introductory-video" replace />} />
           <Route path="sales-team" element={<SalesTeam />} />
           <Route path="brand" element={<Brand />} />
           <Route path="culture" element={<Culture />} />
@@ -311,7 +315,8 @@ export const AppRoutes = () => (
           <Route path="visualise" element={<Visualise />} />
           <Route path="write" element={<Write />} />
           {ProductRoutes()}
-          <Route path="demo-video" element={<VideoPlayer />} />
+          <Route path="introductory-video" element={<VideoPlayer />} />
+          <Route path="demo-video" element={<Navigate to="/de/introductory-video" replace />} />
           <Route path="sales-team" element={<SalesTeam />} />
           <Route path="brand" element={<Brand />} />
           <Route path="culture" element={<Culture />} />

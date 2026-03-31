@@ -51,7 +51,7 @@ const baseRoutes: string[] = [
   "/breakdown",
   "/imagine",
   "/collaborate",
-  "/demo-video",
+  "/introductory-video",
   // Blog
   "/producer-blog",
   "/producer-blog/category/industry-insights",
