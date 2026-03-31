@@ -234,7 +234,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
                   Studio Pro
                 </span>
               )}
-              {location.pathname === "/film-budgeting-software" && (
+              {bare === "/film-budgeting-software" && (
                 <span className="text-xs font-medium px-2 py-0.5 rounded-full" style={{ color: "#5C28A3", backgroundColor: "#F7F2FD" }}>
                   Budget
                 </span>
