@@ -1,0 +1,89 @@
+{
+  "hero": {
+    "headline1": "As produções audiovisuais raramente falham por falta de criatividade.",
+    "headline2": "Falham porque a informação se desorganiza.",
+    "description_short": "Os guiões mudam. Os calendários alteram-se. Os orçamentos movem-se. As equipas perdem atualizações. O Pzaz mantém o guião, o plano, o orçamento, o cronograma e a equipa perfeitamente sincronizados, do primeiro rascunho à entrega final.",
+    "description_short_more": " As coisas mudam e tudo se atualiza automaticamente. Concentre-se na história enquanto o Pzaz mantém a produção alinhada.",
+    "description_full": "Os guiões mudam. Os calendários alteram-se. Os orçamentos movem-se. As equipas perdem atualizações. O Pzaz mantém o guião, o plano, o orçamento, o cronograma e a equipa perfeitamente sincronizados, do primeiro rascunho à entrega final. As coisas mudam e tudo se atualiza automaticamente.",
+    "description_full2": "Concentre-se na história enquanto o Pzaz mantém a produção alinhada.",
+    "cta_primary": "Começar Grátis",
+    "cta_primary_sub": "Sem cartão de crédito.",
+    "cta_secondary": "Agendar Demo",
+    "cta_secondary_sub": "Operacional em 15 minutos.",
+    "read_more": "ler mais"
+  },
+  "problem": {
+    "pill": "O Problema",
+    "title1": "Os planos mudam.",
+    "title2": "As produções desmoronam.",
+    "description": "Cada vez que a sua equipa troca de ferramenta, o contexto desaparece. Isso resulta em retrabalho, atrasos e pressão orçamental. A produção perde alinhamento.",
+    "card1_title": "Perda de Contexto",
+    "card1_desc": "Alternar entre aplicações desconectadas pode eliminar até 60% do contexto de trabalho.",
+    "card2_title": "Fadiga Digital",
+    "card2_desc": "A troca constante de ferramentas drena o foco e a performance cai até 30%.",
+    "card3_title": "Dados Fragmentados",
+    "card3_desc": "Quando a informação não está conectada, os erros multiplicam-se."
+  },
+  "solution": {
+    "pill": "A Solução",
+    "title1": "Um Ecossistema.",
+    "title2": "Alinhamento Total.",
+    "description": "O Pzaz mantém a realidade criativa, operacional e financeira conectada dentro de um sistema de produção vivo.",
+    "card1": "Trabalhe com clareza,\nnão com caos.",
+    "card2": "Avance rápido\nsem perder\no controlo.",
+    "card3": "Mantenha-se alinhado,\nmesmo quando\nos planos mudam.",
+    "card4": "Entregue sem\npânico de última hora.",
+    "card5": "Proteja as suas margens\ncom menos surpresas.",
+    "insight": "Gira produções que pareçam calmas, <strong>controladas e previsíveis.</strong>"
+  },
+  "ai_context": {
+    "heading": "IA sem contexto é adivinhação.",
+    "para1": "A IA pode gerar respostas impressionantes em segundos. Mas respostas impressionantes não gerem produções. Sem o contexto completo da produção, os resultados não se conectam, as decisões não se propagam e as equipas perdem o alinhamento.",
+    "para2": "É por isso que ferramentas baseadas em IA parecem poderosas, mas ainda deixam as produções fragmentadas. É também por isso que 95% das empresas não conseguem desbloquear valor real com IA.",
+    "para3": "O Pzaz conecta o contexto completo da sua produção para que as suas ferramentas, agentes de IA e equipas trabalhem em harmonia.",
+    "caption": "Está no controlo enquanto a IA assiste. <strong>A produção mantém-se alinhada.</strong>"
+  },
+  "products": {
+    "pill": "Produtos",
+    "title1": "Construído para equipas que",
+    "title2": "entregam sob pressão.",
+    "description": "O Pzaz é construído para equipas de produção que sabem que grandes ideias não são suficientes.",
+    "feature1": "Longas-metragens",
+    "feature2": "Televisão episódica",
+    "feature3": "Animação e produções VFX",
+    "feature4": "Campanhas comerciais e de marca",
+    "feature5": "Séries digitais e verticais",
+    "feature6": "E mais...",
+    "feature_desc": "Quer esteja a gerir uma longa-metragem ou múltiplas produções para clientes, o alinhamento não é opcional. O Pzaz é construído para equipas que precisam de coordenação à escala da produção.",
+    "cta_start": "Começar Grátis",
+    "cta_watch": "Ver Vídeo",
+    "divider": "Comece com tudo —",
+    "divider_sub": "ou apenas com o que precisa.",
+    "most_popular": "Mais Popular",
+    "explore_all": "Explorar Todos os Produtos",
+    "upgrade_note": "Upgrade a qualquer momento. O seu projeto mantém-se intacto.",
+    "budget_name": "Pzaz Budget",
+    "budget_tagline": "Orçamentação profissional e controlo de custos",
+    "budget_desc": "Para produtores e diretores de produção que precisam de clareza e confiança. Transforme o seu guião num orçamento de produção estruturado que se mantém sincronizado à medida que os planos mudam.",
+    "storyboard_name": "Pzaz Storyboard",
+    "storyboard_tagline": "Visualize o filme antes de filmar",
+    "storyboard_desc": "Para realizadores e contadores de histórias visuais. Transforme cenas em storyboards em segundos e refine planos colaborativamente antes do início da produção.",
+    "studio_name": "Pzaz Studio",
+    "studio_tagline": "Sistema de produção tudo-em-um",
+    "studio_desc": "Para produções completas e equipas que precisam de tudo conectado em tempo real. Guião, calendário, orçamento, storyboard e colaboração num único espaço de trabalho ao vivo.",
+    "explore_btn": "Explorar {{name}}"
+  },
+  "integrations": {
+    "pill": "Integrações",
+    "title": "Funciona com as suas ferramentas existentes",
+    "description": "Sem bloqueios. Sem barreiras. Apenas cinema.",
+    "cta": "Contacte-nos"
+  },
+  "cta": {
+    "pill": "Teste grátis de 7 dias",
+    "title": "Gira a Sua Próxima Produção em Sincronia.",
+    "description": "Pare de gerir fragmentação. Comece a operar com alinhamento total.",
+    "primary": "Começar grátis",
+    "secondary": "Agendar uma demo"
+  }
+}
