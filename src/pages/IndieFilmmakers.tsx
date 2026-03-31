@@ -116,9 +116,9 @@ const IndieFilmmakers = () => {
   return (
     <PageLayout>
       <SEO
-        title="The Ultimate Filmmaking Platform for Indie Creators | Pzaz"
+        title="Production Software for Indie Filmmakers | Pzaz"
         description="Pzaz brings the full indie filmmaking process into one intelligent environment — scriptwriting, storyboarding, planning, collaboration and distribution in one place."
-        canonical="https://pzaz.io/indie-filmmakers"
+        canonical="https://pzaz.io/film-production-solution/software-for-indie-filmmakers"
       />
 
       {/* ── Hero ── */}

@@ -255,9 +255,9 @@ const EmpoweringFilmmaking = () => {
   return (
     <PageLayout>
       <SEO
-        title="Empowering Every Aspect of Filmmaking | Pzaz"
+        title="Filmmaking Software for Everyone | Plan & Produce with Pzaz"
         description="Pzaz is designed to support the entire filmmaking ecosystem — from indie filmmakers and screenwriters to production teams, investors and film schools."
-        canonical="https://pzaz.io/empowering-filmmaking"
+        canonical="https://pzaz.io/film-production-solution/filmmaking-software"
       />
 
       {/* ── Hero ── */}

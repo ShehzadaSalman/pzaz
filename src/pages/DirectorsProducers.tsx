@@ -59,11 +59,11 @@ const DirectorsProducers = () => {
   return (
     <PageLayout>
       <SEO
-        title="Pzaz for Directors & Producers – Creative Vision Meets Production Reality"
+        title="Software for Directors & Producers | Plan, Align & Execute | Pzaz"
         description="Keep creative vision and production reality aligned. Pzaz provides a shared production environment where planning, communication and execution remain connected."
-        url="https://pzaz.io/software-for-directors-producers"
+        url="https://pzaz.io/film-production-solution/software-for-directors-producers"
         keywords={["filmmaking platform for directors", "production management for producers", "film production workflow", "director producer collaboration", "production planning software"]}
-        canonical="https://pzaz.io/software-for-directors-producers"
+        canonical="https://pzaz.io/film-production-solution/software-for-directors-producers"
       />
 
       {/* ── HERO ─────────────────────────────────────────────── */}

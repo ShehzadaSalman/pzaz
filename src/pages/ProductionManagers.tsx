@@ -68,10 +68,10 @@ const ProductionManagers = () => {
   return (
     <PageLayout>
       <SEO
-        title="Pzaz for Production Managers – Run Film Productions with Greater Clarity"
+        title="Software for Production Managers | Plan, Track & Deliver Projects | Pzaz"
         description="Keep schedules, teams and logistics aligned from prep to wrap. Pzaz gives production managers a structured workspace where planning, communication and day-to-day execution stay connected."
-        url="https://pzaz.io/software-for-production-managers"
-        canonical="https://pzaz.io/software-for-production-managers"
+        url="https://pzaz.io/film-production-solution/software-for-production-managers"
+        canonical="https://pzaz.io/film-production-solution/software-for-production-managers"
         keywords={[
           "film production manager software",
           "production management tools",

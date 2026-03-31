@@ -65,9 +65,9 @@ const TVSeriesCreators = () => {
   return (
     <PageLayout>
       <SEO
-        title="TV & Series Production Software – Pzaz"
+        title="TV Series Production Software | Plan Episodes & Manage Teams | Pzaz"
         description="The all-in-one platform built for TV & series creators. Plan, write, produce and manage long-form episodic storytelling in one connected workflow."
-        url="https://pzaz.io/tv-series-production-software"
+        url="https://pzaz.io/film-production-solution/tv-production-software"
         keywords={[
           "TV series production software",
           "episodic storytelling platform",
@@ -76,7 +76,7 @@ const TVSeriesCreators = () => {
           "episodic script management",
           "long-form content creation software",
         ]}
-        canonical="https://pzaz.io/tv-series-production-software"
+        canonical="https://pzaz.io/film-production-solution/tv-production-software"
       />
 
       {/* ── HERO ──────────────────────────────────────────────────── */}
