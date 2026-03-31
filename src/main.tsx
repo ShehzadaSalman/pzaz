@@ -50,7 +50,9 @@ const frBlogRoutes = blogPostsFr.map((post) => `/fr/producer-blog/${post.slug}`)
 const esBlogRoutes = blogPosts.map((post) => `/es/producer-blog/${post.slug}`);
 // German blog routes
 const deBlogRoutes = blogPosts.map((post) => `/de/producer-blog/${post.slug}`);
-const allRoutes = new Set([...staticRoutes, ...blogRoutes, ...urBlogRoutes, ...frBlogRoutes, ...esBlogRoutes, ...deBlogRoutes]);
+// Italian blog routes
+const itBlogRoutes = blogPosts.map((post) => `/it/producer-blog/${post.slug}`);
+const allRoutes = new Set([...staticRoutes, ...blogRoutes, ...urBlogRoutes, ...frBlogRoutes, ...esBlogRoutes, ...deBlogRoutes, ...itBlogRoutes]);
 
 /**
  * Map a route path to the i18n namespaces it needs.
