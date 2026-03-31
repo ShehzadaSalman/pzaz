@@ -11,7 +11,7 @@ import enHome from "./locales/en/home.json";
 const getInitialLang = () => {
   if (typeof window === "undefined") return "en";
   const pathSegment = window.location.pathname.split("/")[1];
-  return pathSegment === "ur" ? "ur" : pathSegment === "fr" ? "fr" : pathSegment === "es" ? "es" : pathSegment === "de" ? "de" : "en";
+  return pathSegment === "ur" ? "ur" : pathSegment === "fr" ? "fr" : pathSegment === "es" ? "es" : pathSegment === "de" ? "de" : pathSegment === "it" ? "it" : "en";
 };
 const savedLang = getInitialLang();
 
