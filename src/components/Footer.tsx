@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useLocale } from "@/hooks/use-locale";
 import pzazLogo from "@/assets/pzaz-logo.png";
 
 const socialLinks: Record<string, string> = {
@@ -14,36 +15,38 @@ const socialLinks: Record<string, string> = {
 
 const Footer = () => {
   const { t } = useTranslation('common');
+  const { prefix } = useLocale();
+  const p = prefix;
 
   const footerLinks: Record<string, { label: string; route?: string; social?: string }[]> = {
     [t("footer.product")]: [
-      { label: t("footer.breakdown"), route: "/breakdown" },
-      { label: t("footer.imagine"), route: "/imagine" },
-      { label: t("footer.collaborate"), route: "/collaborate" },
-      { label: t("footer.pzaz_project"), route: "/pzaz-project" },
-      { label: t("footer.sell"), route: "/sell" },
-      { label: t("footer.shoot"), route: "/shoot" },
-      { label: t("footer.visualise"), route: "/visualise" },
-      { label: t("footer.write"), route: "/write" },
+      { label: t("footer.breakdown"), route: `${p}/breakdown` },
+      { label: t("footer.imagine"), route: `${p}/imagine` },
+      { label: t("footer.collaborate"), route: `${p}/collaborate` },
+      { label: t("footer.pzaz_project"), route: `${p}/pzaz-project` },
+      { label: t("footer.sell"), route: `${p}/sell` },
+      { label: t("footer.shoot"), route: `${p}/shoot` },
+      { label: t("footer.visualise"), route: `${p}/visualise` },
+      { label: t("footer.write"), route: `${p}/write` },
     ],
     [t("footer.resources")]: [
-      { label: t("footer.blog"), route: "/producer-blog" },
-      { label: t("footer.pzaz_vs_fd"), route: "/pzaz-vs-final-draft" },
-      { label: t("footer.knowledge_base"), route: "/knowledge-base" },
+      { label: t("footer.blog"), route: `${p}/producer-blog` },
+      { label: t("footer.pzaz_vs_fd"), route: `${p}/pzaz-vs-final-draft` },
+      { label: t("footer.knowledge_base"), route: `${p}/knowledge-base` },
       
     ],
     [t("footer.company")]: [
-      { label: t("footer.sales_team"), route: "/sales-team" },
-      { label: t("footer.brand"), route: "/brand" },
-      { label: t("footer.culture"), route: "/culture" },
-      { label: t("footer.schools"), route: "/film-schools-software" },
-      { label: t("footer.screenwriters"), route: "/screenwriting-software" },
-      { label: t("footer.tv_series"), route: "/tv-series-production-software" },
-      { label: t("footer.investors"), route: "/film-investment-software" },
+      { label: t("footer.sales_team"), route: `${p}/sales-team` },
+      { label: t("footer.brand"), route: `${p}/brand` },
+      { label: t("footer.culture"), route: `${p}/culture` },
+      { label: t("footer.schools"), route: `${p}/film-schools-software` },
+      { label: t("footer.screenwriters"), route: `${p}/screenwriting-software` },
+      { label: t("footer.tv_series"), route: `${p}/tv-series-production-software` },
+      { label: t("footer.investors"), route: `${p}/film-investment-software` },
     ],
     [t("footer.legal")]: [
-      { label: t("footer.privacy"), route: "/privacy" },
-      { label: t("footer.terms"), route: "/terms-of-use" },
+      { label: t("footer.privacy"), route: `${p}/privacy` },
+      { label: t("footer.terms"), route: `${p}/terms-of-use` },
     ],
     [t("footer.social")]: [
       { label: t("footer.youtube"), social: socialLinks["YouTube"] },
@@ -61,7 +64,7 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-6 gap-8 mb-12">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <a href="/" className="flex items-center gap-2 mb-4">
+            <a href={`${p}/`} className="flex items-center gap-2 mb-4">
               <img src={pzazLogo} alt="Pzaz" className="h-8" width="109" height="32" loading="lazy" />
             </a>
           </div>
