@@ -201,6 +201,7 @@ export const AppRoutes = () => (
           <Route path="/film-investment-software" element={<Navigate to="/film-production-solution/film-budgeting-software" replace />} />
           <Route path="/software-for-production-managers" element={<Navigate to="/film-production-solution/software-for-production-managers" replace />} />
           <Route path="/production-managers" element={<Navigate to="/film-production-solution/software-for-production-managers" replace />} />
+          <Route path="/demo-video" element={<Navigate to="/introductory-video" replace />} />
           <Route path="/terms" element={<Navigate to="/terms-of-use" replace />} />
           <Route path="/blog" element={<Navigate to="/producer-blog" replace />} />
           <Route path="/blog/category/:categorySlug" element={<BlogCategory />} />
