@@ -105,12 +105,61 @@ const kbRoutes = kbSlugs.map((s) => `/knowledge-base/${s}`);
 /** Supported non-default locales */
 const locales = ["ur", "fr", "es", "de"];
 
-/** Build all static routes: English base + KB + all locale prefixes */
+/** Legacy paths that redirect — pre-rendered so direct server hits work */
+const legacyRedirects: string[] = [
+  "/demo-video",
+  "/indie",
+  "/indie-filmmaking-software",
+  "/film-preproduction-planning",
+  "/planning",
+  "/studio-pro-software",
+  "/studio-pro",
+  "/film-budgeting-software",
+  "/budget",
+  "/storyboard-software",
+  "/storyboard",
+  "/script",
+  "/scene-breakdown-software",
+  "/scene-breakdown",
+  "/film-collaboration-software",
+  "/collaboration-tools",
+  "/production-task-management",
+  "/task-management",
+  "/film-file-sharing-storage",
+  "/file-sharing",
+  "/film-project-management",
+  "/project-management",
+  "/empowering-filmmaking",
+  "/indie-filmmakers",
+  "/film-schools-software",
+  "/schools",
+  "/software-for-directors-producers",
+  "/directors-producers",
+  "/documentary-filmmaking-software",
+  "/documentary-filmmakers",
+  "/software-for-cinematographers",
+  "/cinematographers",
+  "/creative-agency-production-software",
+  "/creative-agencies",
+  "/film-production-team-software",
+  "/production-teams",
+  "/screenwriting-software",
+  "/tv-series-production-software",
+  "/film-investment-software",
+  "/software-for-production-managers",
+  "/production-managers",
+  "/terms",
+  "/blog",
+];
+
+/** Build all static routes: English base + KB + legacy redirects + all locale prefixes */
 export const staticRoutes: string[] = [
   ...baseRoutes,
   ...kbRoutes,
+  ...legacyRedirects,
   ...locales.flatMap((loc) => [
     ...baseRoutes.map((r) => (r === "/" ? `/${loc}` : `/${loc}${r}`)),
     ...kbRoutes.map((r) => `/${loc}${r}`),
+    ...legacyRedirects.map((r) => `/${loc}${r}`),
   ]),
 ];
