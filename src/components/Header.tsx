@@ -193,7 +193,7 @@ const Header = ({ variant = "fixed" }: HeaderProps) => {
   const isActive = (item: NavItem) => {
     if (item.to === "/about-us") return isAboutPage;
     if (item.to === "/producer-blog") return isBlogRelated;
-    if (item.to === "/script") return isScriptPage;
+    if (item.to.endsWith("/film-production-tool/script-writing-software")) return isScriptPage;
     if (item.to === "/pricing") return isPricingPage;
     if (item.to === "/knowledge-base") return isKnowledgeBase;
     if (item.label === "Products") return isSolutionsActive;
