@@ -328,6 +328,36 @@ export const AppRoutes = () => (
           <Route path="*" element={<NotFound />} />
         </Route>
 
+        {/* ── Locale-prefixed routes — /it/* ── */}
+        <Route path="/it" element={<LocaleWrapper />}>
+          <Route index element={<Index />} />
+          <Route path="pricing" element={<Pricing />} />
+          <Route path="about-us" element={<AboutUs />} />
+          <Route path="breakdown" element={<Breakdown />} />
+          <Route path="imagine" element={<Imagine />} />
+          <Route path="collaborate" element={<Collaborate />} />
+          <Route path="pzaz-vs-final-draft" element={<PzazVsFinalDraft />} />
+          <Route path="knowledge-base" element={<KnowledgeBase />} />
+          <Route path="knowledge-base/:slug" element={<KnowledgeBaseArticle />} />
+          <Route path="pzaz-project" element={<PzazProject />} />
+          <Route path="sell" element={<Sell />} />
+          <Route path="shoot" element={<Shoot />} />
+          <Route path="visualise" element={<Visualise />} />
+          <Route path="write" element={<Write />} />
+          {ProductRoutes()}
+          <Route path="introductory-video" element={<VideoPlayer />} />
+          <Route path="demo-video" element={<Navigate to="/it/introductory-video" replace />} />
+          <Route path="sales-team" element={<SalesTeam />} />
+          <Route path="brand" element={<Brand />} />
+          <Route path="culture" element={<Culture />} />
+          <Route path="privacy" element={<Privacy />} />
+          <Route path="terms-of-use" element={<Terms />} />
+          <Route path="producer-blog" element={<Blog />} />
+          <Route path="producer-blog/category/:categorySlug" element={<BlogCategory />} />
+          <Route path="producer-blog/:slug" element={<BlogArticle />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
