@@ -354,7 +354,7 @@ const IndieFilmmakers = () => {
                       and planning decisions. This accelerates production readiness while allowing
                       creators to remain focused on storytelling.
                     </p>
-                    <Link to="/indie-filmmaking-software#ai">
+                    <Link to="/film-production-software/indie-filmmakers#ai">
                       <Button variant="default" size="sm">
                         Explore AI Features
                       </Button>
