@@ -15,7 +15,7 @@ const Index = () => {
   return (
     <PageLayout>
       <SEO
-        title="Pzaz – Film Production Software for Indie Filmmakers"
+        title="All-in-One Film Production Management Software | Start Free | Pzaz"
         description="Pzaz is the all-in-one film production platform for indie filmmakers. Manage scripts, budgets, schedules, and crew — powered by AI."
         keywords={[
           "film production software",
