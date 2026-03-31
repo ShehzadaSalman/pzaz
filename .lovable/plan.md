@@ -1,64 +1,66 @@
 
 
-## Add German (Deutsch) Language
+## Add Italian (Italiano) Language — Complete in One Session
 
-### Overview
-Follow the exact same pattern used for Spanish. German is LTR like French/Spanish, so no RTL concerns. The work mirrors what was done for `es` — infrastructure wiring, 34 translation JSON files, data files, route registration, and pre-rendering.
-
----
-
-### Phase 1: Infrastructure Wiring (~8 files)
-
-1. **`src/hooks/use-locale.ts`** — Add `"de"` to `SUPPORTED_LOCALES`; update regex `/^\/(ur|fr|es)/` → `/^\/(ur|fr|es|de)/`
-2. **`src/components/LocaleWrapper.tsx`** — No change needed (already dynamic from `SUPPORTED_LOCALES`)
-3. **`src/components/LanguageDropdown.tsx`** — Add `de: "Deutsch"` to `languageLabels`
-4. **`src/i18n.ts`** — Add `"de"` to `getInitialLang()` detection
-5. **`index.html`** — Add `"de"` to the synchronous lang/dir snippet
-6. **`src/App.tsx`** — Add `<Route path="de">` block mirroring the `es` block with all child routes
-7. **`src/routes.ts`** — Add `/de` route block (~90 lines) for pre-rendering
-8. **`src/main.tsx`** — Add `"de"` to the locale loop in `getNamespacesForRoute()`
+### Scope
+Mirror the exact pattern used for German (`de`). Italian is LTR, no RTL concerns. This involves infrastructure wiring (8 files), 34 translation JSON files, 3 data files, and locale registration.
 
 ---
 
-### Phase 2: Translation Files (~34 JSON files in `src/locales/de/`)
+### Phase 1: Infrastructure Wiring (8 files)
 
-Create all files matching the Spanish locale directory:
-
-`common.json`, `home.json`, `script.json`, `pricing.json`, `about.json`, `blog.json`, `brand.json`, `budget.json`, `collaboration.json`, `culture.json`, `file-sharing.json`, `indie.json`, `knowledge-base.json`, `planning.json`, `privacy.json`, `project-management.json`, `scene-breakdown.json`, `storyboard.json`, `studio-pro.json`, `task-management.json`, `terms.json`, `vs-final-draft.json`, plus 12 `solutions-*.json` files.
-
-All translated from English into proper German with professional film industry terminology.
-
----
-
-### Phase 3: Data Files (~3 files)
-
-1. **`src/data/knowledgeBaseDataDe.ts`** — Translate all 34 KB articles (titles, descriptions, body)
-2. **`src/data/blogDataDe.ts`** — Translate 49 blog post metadata (titles, excerpts)
-3. **`src/data/blogContentDe.ts`** — Translate full body content for all 49 blog articles
-
-Update `KnowledgeBase.tsx`, `KnowledgeBaseArticle.tsx`, `BlogArticle.tsx`, and related components to include `de` in their locale selection logic.
+1. **`src/hooks/use-locale.ts`** — Add `"it"` to `SUPPORTED_LOCALES` array
+2. **`src/i18n.ts`** — Add `"it"` to the `getInitialLang` ternary chain
+3. **`index.html`** — Add `seg === 'it' ? 'it'` to the synchronous lang detection script
+4. **`src/components/LanguageDropdown.tsx`** — Add `it: "Italiano"` to `languageLabels`
+5. **`src/routes.ts`** — Add `"it"` to the `locales` array (line 106) and update the locale-strip regex
+6. **`src/main.tsx`** — Add Italian blog routes (`itBlogRoutes`), include in `allRoutes`, update the bare-path regex `^\/(ur|fr|es|de|it)`
+7. **`src/App.tsx`** — Add `it` locale route group (same pattern as `de`), update all locale-strip regexes
+8. **`src/hooks/use-locale.ts`** — Update the regex in `navigateToLocale` from `/(ur|fr|es|de)/` to `/(ur|fr|es|de|it)/`
 
 ---
 
-### Phase 4: Pre-rendering
+### Phase 2: Create 34 Italian Translation JSON Files
 
-All `/de/` routes will be statically rendered to HTML via the existing SSG pipeline — no additional config beyond adding routes to `routes.ts`.
+Create `src/locales/it/` directory with all 34 namespace files, translated from English to professional Italian using film industry terminology:
+
+**Core (5 files):** `common.json`, `home.json`, `pricing.json`, `about.json`, `blog.json`
+
+**Products (5 files):** `indie.json`, `planning.json`, `studio-pro.json`, `budget.json`, `storyboard.json`
+
+**Features/Tools (6 files):** `script.json`, `scene-breakdown.json`, `collaboration.json`, `task-management.json`, `file-sharing.json`, `project-management.json`
+
+**Solutions (12 files):** `solutions-empowering.json`, `solutions-indie-filmmakers.json`, `solutions-schools.json`, `solutions-directors.json`, `solutions-documentary.json`, `solutions-cinematographers.json`, `solutions-agencies.json`, `solutions-teams.json`, `solutions-screenwriters.json`, `solutions-tv-series.json`, `solutions-investors.json`, `solutions-prod-managers.json`
+
+**Remaining (6 files):** `brand.json`, `culture.json`, `privacy.json`, `terms.json`, `vs-final-draft.json`, `knowledge-base.json`
 
 ---
 
-### Estimated Scope
-- ~8 infrastructure file edits
-- ~34 new translation JSON files in `src/locales/de/`
-- ~3 new data files (blog + KB)
-- ~90 new route entries in `routes.ts`
-- ~50 new route entries in `App.tsx`
+### Phase 3: Data Files (3 files)
 
-### Execution Order
-1. Infrastructure wiring (all 8 files)
-2. Core page translations (common, home, script, pricing, about)
-3. Product + feature page translations
-4. Solution page translations (12 split namespace files)
-5. Remaining pages (brand, culture, privacy, terms, vs-final-draft)
-6. KB data + blog data + blog content
-7. Component updates for `de` locale selection
+1. **`src/data/blogDataIt.ts`** — Italian blog metadata (49 posts)
+2. **`src/data/blogContentIt.ts`** — Italian blog article body content
+3. **`src/data/knowledgeBaseDataIt.ts`** — Italian KB articles (34 articles) with categories
+
+---
+
+### Phase 4: Component Updates
+
+- **`src/pages/Blog.tsx`** / **`BlogArticle.tsx`** / **`BlogCategory.tsx`** — Import and wire `blogDataIt` / `blogContentIt` for `it` locale
+- **`src/pages/KnowledgeBase.tsx`** / **`KnowledgeBaseArticle.tsx`** — Import and wire `knowledgeBaseDataIt` for `it` locale
+
+---
+
+### Translation Approach
+- Use professional Italian film industry terminology (e.g., *Sceneggiatura* for Script, *Storyboard*, *Regista* for Director, *Produttore* for Producer, *Responsabile di produzione* for Production Manager)
+- Preserve brand names (Pzaz, Pzaz Indie, etc.) untranslated
+- All translations sourced from the English originals
+
+### Files Changed
+- ~8 infrastructure files
+- ~34 new JSON files in `src/locales/it/`
+- ~3 new data files in `src/data/`
+- ~5 component files updated for Italian locale selection
+
+### Estimated Total: ~50 files created/modified
 
