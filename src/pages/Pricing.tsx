@@ -15,7 +15,7 @@ const Pricing = () => {
     <PricingCartProvider>
       <div className="min-h-screen bg-background">
         <SEO
-          title="Pricing – Pzaz Film Production Software"
+          title="Explore Pricing Plans | Free Plan Available | Sign Up | Pzaz"
           description="Flexible pricing for indie filmmakers and production teams. Individual tools from €19/mo, bundles from €99/mo. Start free and scale as your productions grow."
           url="https://pzaz.io/pricing"
           keywords={[
