@@ -99,8 +99,9 @@ export const AppRoutes = () => (
           <Route path="/visualise" element={<Visualise />} />
           <Route path="/write" element={<Write />} />
           {/* Products */}
-          <Route path="/indie-filmmaking-software" element={<Indie />} />
-          <Route path="/indie" element={<Navigate to="/indie-filmmaking-software" replace />} />
+          <Route path="/film-production-software/indie-filmmakers" element={<Indie />} />
+          <Route path="/indie" element={<Navigate to="/film-production-software/indie-filmmakers" replace />} />
+          <Route path="/indie-filmmaking-software" element={<Navigate to="/film-production-software/indie-filmmakers" replace />} />
           <Route path="/film-budgeting-software" element={<Budget />} />
           <Route path="/budget" element={<Navigate to="/film-budgeting-software" replace />} />
           <Route path="/film-preproduction-planning" element={<Planning />} />
