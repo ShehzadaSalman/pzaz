@@ -10,6 +10,7 @@ const languageLabels: Record<SupportedLocale, string> = {
   es: "Español",
   de: "Deutsch",
   it: "Italiano",
+  pt: "Português",
 };
 
 const HIDDEN_HOSTNAMES = ["pzaz.io", "www.pzaz.io"];
