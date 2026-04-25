@@ -28,6 +28,7 @@ const ArticleContent = ({ article }: ArticleContentProps) => {
   const encodedUrl = encodeURIComponent(shareUrl);
   const encodedText = encodeURIComponent(article.title);
 
+  console.log("Rendering ArticleContent for:", article.title);
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (shareMenuRef.current && !shareMenuRef.current.contains(event.target as Node)) {
